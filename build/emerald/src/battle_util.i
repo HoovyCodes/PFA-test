@@ -5287,6 +5287,8 @@ void MoveDeleterForgetMove(void);
 void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
+
+bool8 CanLearnTutorMove(u16, u8);
 # 11 "src/battle_util.c" 2
 # 1 "include/pokemon.h" 1
 # 12 "src/battle_util.c" 2

@@ -9225,6 +9225,8 @@ extern const u32 gBattleTerrainPalette_StadiumWallace[];
 
 extern const u32 gPokedexInterface_Gfx[];
 extern const u16 gPokedexBgHoenn_Pal[];
+extern const u32 gPokedexMenuRest_Gfx[];
+extern const u32 gPokedexMenuList_Gfx[];
 extern const u32 gPokedexMenu_Gfx[];
 extern const u8 gPokedexList_Tilemap[];
 extern const u8 gPokedexListUnderlay_Tilemap[];
@@ -9233,10 +9235,12 @@ extern const u8 gPokedexStartMenuSearchResults_Tilemap[];
 extern const u16 gPokedexSearchResults_Pal[];
 extern const u16 gPokedexBgNational_Pal[];
 extern const u8 gPokedexInfoScreen_Tilemap[];
+extern const u8 gPokedexStatsScreen_Tilemap[];
 extern const u8 gPokedexCryScreen_Tilemap[];
 extern const u8 gPokedexSizeScreen_Tilemap[];
 extern const u8 gPokedexScreenSelectBarMain_Tilemap[];
 extern const u8 gPokedexScreenSelectBarSubmenu_Tilemap[];
+extern const u8 gPokedexScreenSelectBarSubmenu_Tilemap_Clear[];
 extern const u16 gPokedexCaughtScreen_Pal[];
 extern const u32 gPokedexSearchMenu_Gfx[];
 extern const u32 gPokedexSearchMenuHoenn_Tilemap[];
@@ -12496,12 +12500,58 @@ void TintPalette_GrayScale2(u16 *palette, u16 count);
 void TintPalette_SepiaTone(u16 *palette, u16 count);
 void TintPalette_CustomTone(u16 *palette, u16 count, u16 rTone, u16 gTone, u16 bTone);
 # 11 "src/pokedex_area_screen.c" 2
+# 1 "include/pokedex.h" 1
+
+
+
+extern u8 gUnusedPokedexU8;
+extern void (*gPokedexVBlankCB)(void);
+
+enum
+{
+    DEX_MODE_HOENN,
+    DEX_MODE_NATIONAL
+};
+
+enum
+{
+    FLAG_GET_SEEN,
+    FLAG_GET_CAUGHT,
+    FLAG_SET_SEEN,
+    FLAG_SET_CAUGHT
+};
+
+struct PokedexEntry
+{
+             u8 categoryName[13];
+             u16 height;
+             u16 weight;
+             const u8 *description;
+             u16 unused;
+             u16 pokemonScale;
+             u16 pokemonOffset;
+             u16 trainerScale;
+             u16 trainerOffset;
+};
+
+void ResetPokedex(void);
+u16 GetPokedexHeightWeight(u16 dexNum, u8 data);
+u16 GetNationalPokedexCount(u8);
+u16 GetHoennPokedexCount(u8);
+u8 DisplayCaughtMonDexPage(u16 dexNum, u32 otId, u32 personality);
+s8 GetSetPokedexFlag(u16 nationalNum, u8 caseId);
+u16 CreateMonSpriteFromNationalDexNumber(u16, s16, s16, u16);
+bool16 HasAllHoennMons(void);
+void ResetPokedexScrollPositions(void);
+bool16 HasAllMons(void);
+void CB2_OpenPokedex(void);
+# 12 "src/pokedex_area_screen.c" 2
 # 1 "include/pokedex_area_screen.h" 1
 
 
 
 void ShowPokedexAreaScreen(u16, u8*);
-# 12 "src/pokedex_area_screen.c" 2
+# 13 "src/pokedex_area_screen.c" 2
 # 1 "include/region_map.h" 1
 # 9 "include/region_map.h"
 enum
@@ -12613,7 +12663,7 @@ void sub_8123030(u16 color, u32 coeff);
 void SetRegionMapDataForZoom(void);
 
 extern const struct RegionMapLocation gRegionMapEntries[];
-# 13 "src/pokedex_area_screen.c" 2
+# 14 "src/pokedex_area_screen.c" 2
 # 1 "include/roamer.h" 1
 
 
@@ -12630,7 +12680,7 @@ u8 TryStartRoamerEncounter(void);
 void UpdateRoamerHPStatus(struct Pokemon *mon);
 void SetRoamerInactive(void);
 void GetRoamerLocation(u8 *mapGroup, u8 *mapNum);
-# 14 "src/pokedex_area_screen.c" 2
+# 15 "src/pokedex_area_screen.c" 2
 # 1 "include/sound.h" 1
 
 
@@ -12678,7 +12728,7 @@ void SE12PanpotControl(s8 pan);
 bool8 IsSEPlaying(void);
 bool8 IsBGMPlaying(void);
 bool8 IsSpecialSEPlaying(void);
-# 15 "src/pokedex_area_screen.c" 2
+# 16 "src/pokedex_area_screen.c" 2
 # 1 "gflib/string_util.h" 1
 
 
@@ -12724,7 +12774,7 @@ u8 GetExtCtrlCodeLength(u8 code);
 s32 StringCompareWithoutExtCtrlCodes(const u8 *str1, const u8 *str2);
 void ConvertInternationalString(u8 *s, u8 language);
 void StripExtCtrlCodes(u8 *str);
-# 16 "src/pokedex_area_screen.c" 2
+# 17 "src/pokedex_area_screen.c" 2
 # 1 "include/trig.h" 1
 
 
@@ -12735,7 +12785,7 @@ s16 Sin(s16 index, s16 amplitude);
 s16 Cos(s16 index, s16 amplitude);
 s16 Sin2(u16 angle);
 s16 Cos2(u16 angle);
-# 17 "src/pokedex_area_screen.c" 2
+# 18 "src/pokedex_area_screen.c" 2
 # 1 "include/pokedex_area_region_map.h" 1
 
 
@@ -12752,7 +12802,7 @@ void LoadPokedexAreaMapGfx(const struct PokedexAreaMapTemplate *);
 bool32 sub_81C4E90(void);
 void PokedexAreaMapChangeBgY(u32);
 void FreePokedexAreaMapBgNum(void);
-# 18 "src/pokedex_area_screen.c" 2
+# 19 "src/pokedex_area_screen.c" 2
 # 1 "include/wild_encounter.h" 1
 # 9 "include/wild_encounter.h"
 struct WildPokemon
@@ -12793,21 +12843,21 @@ u16 GetLocalWildMon(bool8 *isWaterMon);
 u16 GetLocalWaterMon(void);
 bool8 UpdateRepelCounter(void);
 bool8 TryDoDoubleWildBattle(void);
-# 19 "src/pokedex_area_screen.c" 2
+# 20 "src/pokedex_area_screen.c" 2
 # 1 "include/constants/maps.h" 1
 
 
 
 # 1 "include/constants/map_groups.h" 1
 # 5 "include/constants/maps.h" 2
-# 20 "src/pokedex_area_screen.c" 2
-# 1 "include/constants/region_map_sections.h" 1
 # 21 "src/pokedex_area_screen.c" 2
-# 1 "include/constants/rgb.h" 1
+# 1 "include/constants/region_map_sections.h" 1
 # 22 "src/pokedex_area_screen.c" 2
-# 1 "include/constants/songs.h" 1
+# 1 "include/constants/rgb.h" 1
 # 23 "src/pokedex_area_screen.c" 2
-# 37 "src/pokedex_area_screen.c"
+# 1 "include/constants/songs.h" 1
+# 24 "src/pokedex_area_screen.c" 2
+# 38 "src/pokedex_area_screen.c"
 struct PokeDexAreaScreenMapIdentity
 {
     u8 mapGroup;
@@ -12891,7 +12941,7 @@ static const u16 sLandmarkData[][2] =
     {0xCA, (((0x500 + 864 - 1) + 1) + 0x7F)},
     {0xD5}
 };
-# 129 "src/pokedex_area_screen.c"
+# 130 "src/pokedex_area_screen.c"
 static const u8 sAreaGlowTilemapMapping[] = {
     [0] = 0x00,
     [(1 << 0)] = 0x01,
@@ -13492,10 +13542,20 @@ static void Task_HandlePokedexAreaScreenInput(u8 taskId)
         if (({(gMain.newKeys) & (0x0002);}))
         {
             gTasks[taskId].data[1] = 1;
-            PlaySE(3);
+            PlaySE(109);
+        }
+        else if (({(gMain.newKeys) & (0x0020);}) || (({(gMain.newKeys) & (0x0200);}) && gSaveBlock2Ptr->optionsButtonMode == 1))
+        {
+            gTasks[taskId].data[1] = 1;
+            PlaySE(109);
         }
         else if (({(gMain.newKeys) & (0x0010);}) || (({(gMain.newKeys) & (0x0100);}) && gSaveBlock2Ptr->optionsButtonMode == 1))
         {
+            if (!GetSetPokedexFlag(SpeciesToNationalPokedexNum(sPokedexAreaScreen->species), FLAG_GET_CAUGHT))
+            {
+                PlaySE(32);
+                return;
+            }
             gTasks[taskId].data[1] = 2;
             PlaySE(109);
         }

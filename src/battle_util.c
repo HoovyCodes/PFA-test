@@ -6427,6 +6427,14 @@ static u16 CalcMoveBasePower(u16 move, u8 battlerAtk, u8 battlerDef)
         break;
     case EFFECT_FLING:
         // todo: program Fling + Unburden interaction
+		//this is a basic fling formula that is NOT game-accurate.
+		if (gBattleMons[battlerAtk].item == ITEM_NONE)
+			basePower=0;
+		else if (gBattleMons[battlerAtk].item == ITEM_IRON_BALL)
+            basePower =130;
+		else
+			basePower =50;
+		gBattleMons[battlerAtk].item = ITEM_NONE;
         break;
     case EFFECT_ERUPTION:
         basePower = gBattleMons[battlerAtk].hp * basePower / gBattleMons[battlerAtk].maxHP;

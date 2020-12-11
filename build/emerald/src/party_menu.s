@@ -7945,6 +7945,7 @@ GetTutorMove:
 .Lfe80:
 	.size	 GetTutorMove,.Lfe80-GetTutorMove
 	.align	2, 0
+	.globl	CanLearnTutorMove
 	.type	 CanLearnTutorMove,function
 	.thumb_func
 CanLearnTutorMove:

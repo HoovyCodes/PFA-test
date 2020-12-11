@@ -3,7 +3,7 @@
 @
 
 BattleFrontier_ExchangeServiceCorner_ObjectEvents:
-	object_event 1, OBJ_EVENT_GFX_TEALA, 0, 4, 4, 0, MOVEMENT_TYPE_FACE_LEFT, 0, 0, TRAINER_TYPE_NONE, 0, BattleFrontier_ExchangeServiceCorner_EventScript_DecorClerk1, 0
+	object_event 1, OBJ_EVENT_GFX_TEALA, 0, 4, 4, 0, MOVEMENT_TYPE_FACE_LEFT, 0, 0, TRAINER_TYPE_NONE, 0, BattleFrontier_ExchangeServiceCorner_EventScript_MoveTutor, 0
 	object_event 2, OBJ_EVENT_GFX_RICH_BOY, 0, 0, 5, 0, MOVEMENT_TYPE_FACE_RIGHT, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_ExchangeServiceCorner_EventScript_RichBoy, 0
 	object_event 3, OBJ_EVENT_GFX_POKEFAN_F, 0, 0, 4, 0, MOVEMENT_TYPE_FACE_DOWN, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_ExchangeServiceCorner_EventScript_PokefanF, 0
 	object_event 4, OBJ_EVENT_GFX_SAILOR, 0, 14, 6, 0, MOVEMENT_TYPE_WANDER_AROUND, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_ExchangeServiceCorner_EventScript_Sailor, 0

@@ -3119,6 +3119,9 @@ void SetDaycareCompatibilityString(void);
 bool8 NameHasGenderSymbol(const u8 *name, u8 genderRatio);
 void ShowDaycareLevelMenu(void);
 void ChooseSendDaycareMon(void);
+
+u8 GetEggMovesSpecies(u16 species, u16 *eggMoves);
+bool8 SpeciesCanLearnEggMove(u16 species, u16 move);
 # 6 "src/field_control_avatar.c" 2
 # 1 "include/faraway_island.h" 1
 

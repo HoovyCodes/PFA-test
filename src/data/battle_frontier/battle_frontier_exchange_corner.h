@@ -16,35 +16,41 @@ static const u16 sFrontierExchangeCorner_Decor1[] =
 static const u16 sFrontierExchangeCorner_Decor2[] =
 { 
     DECOR_LAPRAS_DOLL, 
-    DECOR_SNORLAX_DOLL, 
-    DECOR_VENUSAUR_DOLL, 
-    DECOR_CHARIZARD_DOLL, 
-    DECOR_BLASTOISE_DOLL, 
+    DECOR_PIKA_CUSHION, 
+    DECOR_LAPRAS_DOLL, 
+    DECOR_LAPRAS_DOLL, 
+    DECOR_LAPRAS_DOLL, 
+    DECOR_LAPRAS_DOLL, 
+    DECOR_LAPRAS_DOLL,
     0xFFFF 
 };
 
 static const u16 sFrontierExchangeCorner_Vitamins[] =
 { 
-    ITEM_PROTEIN, 
-    ITEM_CALCIUM, 
-    ITEM_IRON, 
-    ITEM_ZINC, 
-    ITEM_CARBOS, 
-    ITEM_HP_UP, 
+    ITEM_POKE_BALL, 
+    ITEM_GREAT_BALL, 
+    ITEM_ULTRA_BALL, 
+    ITEM_MASTER_BALL, 
     0xFFFF 
 };
 
 static const u16 sFrontierExchangeCorner_HoldItems[] =
 { 
-    ITEM_LEFTOVERS, 
-    ITEM_WHITE_HERB, 
-    ITEM_QUICK_CLAW, 
-    ITEM_MENTAL_HERB, 
-    ITEM_BRIGHT_POWDER, 
-    ITEM_CHOICE_BAND, 
-    ITEM_KINGS_ROCK, 
-    ITEM_FOCUS_BAND, 
-    ITEM_SCOPE_LENS, 
+    ITEM_WHITE_HERB,
+	ITEM_POWER_HERB,
+	ITEM_SCOPE_LENS,
+	ITEM_WIDE_LENS,
+	ITEM_QUICK_CLAW,
+	ITEM_LIFE_ORB,
+	ITEM_CHOICE_BAND,
+	ITEM_CHOICE_SPECS,
+	ITEM_CHOICE_SCARF,
+	ITEM_ROCKY_HELMET,
+	ITEM_WEAKNESS_POLICY,
+	ITEM_ASSAULT_VEST,
+	ITEM_FOCUS_SASH,
+	ITEM_KINGS_ROCK,
+	ITEM_LEFTOVERS,
     0xFFFF 
 };
 
@@ -65,11 +71,13 @@ static const u8 *const sFrontierExchangeCorner_Decor1Descriptions[] =
 
 static const u8 *const sFrontierExchangeCorner_Decor2Descriptions[] = 
 {
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_LargeDollDesc,
+    BattleFrontier_ExchangeServiceCorner_Text_Doll,
+    BattleFrontier_ExchangeServiceCorner_Text_Cushion,
+    BattleFrontier_ExchangeServiceCorner_Text_Contest,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaC,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaB,
+	BattleFrontier_ExchangeServiceCorner_Text_MegaA,
+    BattleFrontier_ExchangeServiceCorner_Text_MegaS,
     gText_Exit
 };
 
@@ -79,21 +87,26 @@ static const u8 *const sFrontierExchangeCorner_VitaminsDescriptions[] =
     BattleFrontier_ExchangeServiceCorner_Text_CalciumDesc,
     BattleFrontier_ExchangeServiceCorner_Text_IronDesc,
     BattleFrontier_ExchangeServiceCorner_Text_ZincDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_CarbosDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_HPUpDesc,
     gText_Exit
 };
 
 static const u8 *const sFrontierExchangeCorner_HoldItemsDescriptions[] = 
 {
-    BattleFrontier_ExchangeServiceCorner_Text_LeftoversDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_WhiteHerbDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_QuickClawDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_MentalHerbDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_BrightpowderDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_ChoiceBandDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_FocusBandDesc,
-    BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc,
+    
+	BattleFrontier_ExchangeServiceCorner_Text_WhiteHerbDesc,
+	BattleFrontier_ExchangeServiceCorner_Text_PowerHerbDesc,
+	BattleFrontier_ExchangeServiceCorner_Text_ScopeLensDesc,
+	BattleFrontier_ExchangeServiceCorner_Text_WideLensDesc,
+	BattleFrontier_ExchangeServiceCorner_Text_QuickClawDesc,
+	BattleFrontier_ExchangeServiceCorner_Text_LifeOrbDesc,
+	BattleFrontier_ExchangeServiceCorner_Text_ChoiceBandDesc,
+	BattleFrontier_ExchangeServiceCorner_Text_ChoiceSpecsDesc,
+	BattleFrontier_ExchangeServiceCorner_Text_ChoiceScarfDesc,
+	BattleFrontier_ExchangeServiceCorner_Text_RockyHelmetDesc,
+	BattleFrontier_ExchangeServiceCorner_Text_WeaknessPolicyDesc,
+	BattleFrontier_ExchangeServiceCorner_Text_AssaultVestDesc,
+	BattleFrontier_ExchangeServiceCorner_Text_FocusSashDesc,
+	BattleFrontier_ExchangeServiceCorner_Text_KingsRockDesc,
+	BattleFrontier_ExchangeServiceCorner_Text_LeftoversDesc,
     gText_Exit
 };

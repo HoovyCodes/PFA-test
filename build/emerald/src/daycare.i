@@ -4091,6 +4091,9 @@ void SetDaycareCompatibilityString(void);
 bool8 NameHasGenderSymbol(const u8 *name, u8 genderRatio);
 void ShowDaycareLevelMenu(void);
 void ChooseSendDaycareMon(void);
+
+u8 GetEggMovesSpecies(u16 species, u16 *eggMoves);
+bool8 SpeciesCanLearnEggMove(u16 species, u16 move);
 # 5 "src/daycare.c" 2
 # 1 "gflib/string_util.h" 1
 
@@ -5472,6 +5475,69 @@ extern const u8 gText_SearchingPleaseWait[];
 extern const u8 gText_SearchCompleted[];
 extern const u8 gText_NoMatchingPkmnWereFound[];
 extern const u8 gText_SelectorArrow[];
+
+extern const u8 gText_Stats_EV[];
+extern const u8 gText_Stats_EV_HP[];
+extern const u8 gText_Stats_EV_Attack[];
+extern const u8 gText_Stats_EV_Defense[];
+extern const u8 gText_Stats_EV_Speed[];
+extern const u8 gText_Stats_EV_SpAtk[];
+extern const u8 gText_Stats_EV_SpDef[];
+extern const u8 gText_Stats_HP[];
+extern const u8 gText_Stats_Attack[];
+extern const u8 gText_Stats_Defense[];
+extern const u8 gText_Stats_Speed[];
+extern const u8 gText_Stats_SpAtk[];
+extern const u8 gText_Stats_SpDef[];
+extern const u8 gText_Stats_EVHP[];
+extern const u8 gText_Stats_EVAttack[];
+extern const u8 gText_Stats_EVDefense[];
+extern const u8 gText_Stats_EVSpeed[];
+extern const u8 gText_Stats_EVSpAtk[];
+extern const u8 gText_Stats_EVSpDef[];
+extern const u8 gText_Stats_MoveSelectedMax[];
+extern const u8 gText_Stats_MoveLevel[];
+extern const u8 gText_Stats_Gender_0[];
+extern const u8 gText_Stats_Gender_12_5[];
+extern const u8 gText_Stats_Gender_25[];
+extern const u8 gText_Stats_Gender_50[];
+extern const u8 gText_Stats_Gender_75[];
+extern const u8 gText_Stats_Gender_87_5[];
+extern const u8 gText_Stats_Gender_100[];
+extern const u8 gText_Stats_Catch[];
+extern const u8 gText_Stats_Exp[];
+extern const u8 gText_Stats_EggCycles[];
+extern const u8 gText_Stats_Growthrate[];
+extern const u8 gText_Stats_Friendship[];
+extern const u8 gText_Stats_MEDIUM_FAST[];
+extern const u8 gText_Stats_ERRATIC[];
+extern const u8 gText_Stats_FLUCTUATING[];
+extern const u8 gText_Stats_MEDIUM_SLOW[];
+extern const u8 gText_Stats_FAST[];
+extern const u8 gText_Stats_SLOW[];
+extern const u8 gText_Stats_ContestHeart[];
+extern const u8 gText_PlusSymbol[];
+extern const u8 gText_Stats_Minus[];
+extern const u8 gText_Stats_eggGroup_g1[];
+extern const u8 gText_Stats_eggGroup_g2[];
+extern const u8 gText_Stats_eggGroup_MONSTER[];
+extern const u8 gText_Stats_eggGroup_WATER_1[];
+extern const u8 gText_Stats_eggGroup_BUG[];
+extern const u8 gText_Stats_eggGroup_FLYING[];
+extern const u8 gText_Stats_eggGroup_FIELD[];
+extern const u8 gText_Stats_eggGroup_FAIRY[];
+extern const u8 gText_Stats_eggGroup_GRASS[];
+extern const u8 gText_Stats_eggGroup_HUMAN_LIKE[];
+extern const u8 gText_Stats_eggGroup_WATER_3[];
+extern const u8 gText_Stats_eggGroup_MINERAL[];
+extern const u8 gText_Stats_eggGroup_AMORPHOUS[];
+extern const u8 gText_Stats_eggGroup_WATER_2[];
+extern const u8 gText_Stats_eggGroup_DITTO[];
+extern const u8 gText_Stats_eggGroup_DRAGON[];
+extern const u8 gText_Stats_eggGroup_UNDISCOVERED[];
+extern const u8 gText_Dex_SEEN[];
+extern const u8 gText_Dex_OWN[];
+
 
 
 extern const u8 gBirchDexRatingText_LessThan10[];
@@ -8025,6 +8091,8 @@ void MoveDeleterForgetMove(void);
 void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
+
+bool8 CanLearnTutorMove(u16, u8);
 # 20 "src/daycare.c" 2
 # 1 "include/list_menu.h" 1
 # 21 "src/daycare.c" 2
@@ -10474,6 +10542,61 @@ static u8 GetEggMoves(struct Pokemon *pokemon, u16 *eggMoves)
     }
 
     return numEggMoves;
+}
+u8 GetEggMovesSpecies(u16 species, u16 *eggMoves)
+{
+    u16 eggMoveIdx;
+    u16 numEggMoves;
+    u16 i;
+
+    numEggMoves = 0;
+    eggMoveIdx = 0;
+    for (i = 0; i < (size_t)(sizeof(gEggMoves) / sizeof((gEggMoves)[0])) - 1; i++)
+    {
+        if (gEggMoves[i] == species + 20000)
+        {
+            eggMoveIdx = i + 1;
+            break;
+        }
+    }
+
+    for (i = 0; i < 10; i++)
+    {
+        if (gEggMoves[eggMoveIdx + i] > 20000)
+        {
+
+            break;
+        }
+
+        eggMoves[i] = gEggMoves[eggMoveIdx + i];
+        numEggMoves++;
+    }
+
+    return numEggMoves;
+}
+bool8 SpeciesCanLearnEggMove(u16 species, u16 move)
+{
+    u16 eggMoveIdx;
+    u16 i;
+    eggMoveIdx = 0;
+    for (i = 0; i < (size_t)(sizeof(gEggMoves) / sizeof((gEggMoves)[0])) - 1; i++)
+    {
+        if (gEggMoves[i] == species + 20000)
+        {
+            eggMoveIdx = i + 1;
+            break;
+        }
+    }
+
+    for (i = 0; i < 10; i++)
+    {
+        if (gEggMoves[eggMoveIdx + i] > 20000)
+            return 0;
+
+        if (move == gEggMoves[eggMoveIdx + i])
+            return 1;
+    }
+    return 0;
 }
 
 static void BuildEggMoveset(struct Pokemon *egg, struct BoxPokemon *father, struct BoxPokemon *mother)

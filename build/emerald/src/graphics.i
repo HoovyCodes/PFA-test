@@ -12746,6 +12746,8 @@ const u16 gPokedexBgHoenn_Pal[] = INCBIN_U16("graphics/pokedex/bg_hoenn.gbapal")
 const u16 gPokedexCaughtScreen_Pal[] = INCBIN_U16("graphics/pokedex/caught_screen.gbapal");
 const u16 gPokedexSearchResults_Pal[] = INCBIN_U16("graphics/pokedex/search_results_bg.gbapal");
 const u16 gPokedexBgNational_Pal[] = INCBIN_U16("graphics/pokedex/bg_national.gbapal");
+const u32 gPokedexMenuRest_Gfx[] = INCBIN_U32("graphics/pokedex/menu_rest.4bpp.lz");
+const u32 gPokedexMenuList_Gfx[] = INCBIN_U32("graphics/pokedex/menu_list.4bpp.lz");
 const u32 gPokedexMenu_Gfx[] = INCBIN_U32("graphics/pokedex/menu.4bpp.lz");
 const u32 gPokedexInterface_Gfx[] = INCBIN_U32("graphics/pokedex/interface.4bpp.lz");
 const u32 gUnused_PokedexNoBall[] = INCBIN_U32("graphics/pokedex/noball_unused.4bpp.lz");
@@ -12756,7 +12758,12 @@ const u32 gPokedexListUnderlay_Tilemap[] = INCBIN_U32("graphics/pokedex/list_und
 const u32 gPokedexSizeScreen_Tilemap[] = INCBIN_U32("graphics/pokedex/size_screen.bin.lz");
 const u32 gPokedexScreenSelectBarMain_Tilemap[] = INCBIN_U32("graphics/pokedex/screen_select_bar_main.bin.lz");
 const u32 gPokedexScreenSelectBarSubmenu_Tilemap[] = INCBIN_U32("graphics/pokedex/screen_select_bar_submenu.bin.lz");
+const u32 gPokedexScreenSelectBarSubmenu_Tilemap_Clear[] = INCBIN_U32("graphics/pokedex/screen_select_bar_submenu_clear.bin.lz");
+
+
+
 const u32 gPokedexInfoScreen_Tilemap[] = INCBIN_U32("graphics/pokedex/info_screen.bin.lz");
+const u32 gPokedexStatsScreen_Tilemap[] = INCBIN_U32("graphics/pokedex/stats_screen.bin.lz");
 const u32 gPokedexCryScreen_Tilemap[] = INCBIN_U32("graphics/pokedex/cry_screen.bin.lz");
 const u16 gPokedexSearchMenu_Pal[] = INCBIN_U16("graphics/pokedex/search_menu.gbapal");
 const u32 gPokedexSearchMenu_Gfx[] = INCBIN_U32("graphics/pokedex/search_menu.4bpp.lz");
@@ -12938,7 +12945,7 @@ const u8 gSlotMachineReelTimePikaAura[] = INCBIN_U8("graphics/slot_machine/pika_
 
 const u8 gSlotMachineReelBackground_Tilemap[] = INCBIN_U8("graphics/slot_machine/reel_background.bin");
 const u8 gSlotMachineReelTimeNumberGap_Gfx[] = INCBIN_U8("graphics/slot_machine/reel_time_number_gap.4bpp");
-# 1901 "src/graphics.c" 2
+# 1908 "src/graphics.c" 2
 
 
 
@@ -13041,7 +13048,7 @@ const u32 gBerryFixGbaTransferError_Tilemap[] = INCBIN_U32("graphics/berry_fix/g
 const u16 gBerryFixWindow_Pal[] = INCBIN_U16("graphics/berry_fix/window.gbapal");
 const u32 gBerryFixWindow_Gfx[] = INCBIN_U32("graphics/berry_fix/window.4bpp.lz");
 const u32 gBerryFixWindow_Tilemap[] = INCBIN_U32("graphics/berry_fix/window.bin.lz");
-# 1980 "src/graphics.c" 2
+# 1987 "src/graphics.c" 2
 
 
 const u16 gTradeMenu_Pal[] = INCBIN_U16("graphics/trade/menu.gbapal");

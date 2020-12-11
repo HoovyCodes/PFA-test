@@ -3346,6 +3346,8 @@ void MoveDeleterForgetMove(void);
 void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
+
+bool8 CanLearnTutorMove(u16, u8);
 # 14 "src/braille_puzzles.c" 2
 # 1 "include/fldeff.h" 1
 

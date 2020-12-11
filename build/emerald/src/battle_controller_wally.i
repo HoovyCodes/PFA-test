@@ -6489,6 +6489,8 @@ void MoveDeleterForgetMove(void);
 void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
+
+bool8 CanLearnTutorMove(u16, u8);
 # 18 "src/battle_controller_wally.c" 2
 # 1 "include/pokeball.h" 1
 # 19 "src/battle_controller_wally.c" 2

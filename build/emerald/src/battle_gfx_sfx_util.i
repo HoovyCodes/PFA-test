@@ -11260,6 +11260,8 @@ extern const u32 gBattleTerrainPalette_StadiumWallace[];
 
 extern const u32 gPokedexInterface_Gfx[];
 extern const u16 gPokedexBgHoenn_Pal[];
+extern const u32 gPokedexMenuRest_Gfx[];
+extern const u32 gPokedexMenuList_Gfx[];
 extern const u32 gPokedexMenu_Gfx[];
 extern const u8 gPokedexList_Tilemap[];
 extern const u8 gPokedexListUnderlay_Tilemap[];
@@ -11268,10 +11270,12 @@ extern const u8 gPokedexStartMenuSearchResults_Tilemap[];
 extern const u16 gPokedexSearchResults_Pal[];
 extern const u16 gPokedexBgNational_Pal[];
 extern const u8 gPokedexInfoScreen_Tilemap[];
+extern const u8 gPokedexStatsScreen_Tilemap[];
 extern const u8 gPokedexCryScreen_Tilemap[];
 extern const u8 gPokedexSizeScreen_Tilemap[];
 extern const u8 gPokedexScreenSelectBarMain_Tilemap[];
 extern const u8 gPokedexScreenSelectBarSubmenu_Tilemap[];
+extern const u8 gPokedexScreenSelectBarSubmenu_Tilemap_Clear[];
 extern const u16 gPokedexCaughtScreen_Pal[];
 extern const u32 gPokedexSearchMenu_Gfx[];
 extern const u32 gPokedexSearchMenuHoenn_Tilemap[];
@@ -14059,6 +14063,8 @@ void MoveDeleterForgetMove(void);
 void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
+
+bool8 CanLearnTutorMove(u16, u8);
 # 19 "src/battle_gfx_sfx_util.c" 2
 # 1 "include/m4a.h" 1
 

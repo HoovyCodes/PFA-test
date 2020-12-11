@@ -39,7 +39,12 @@ BattleFrontier_ReceptionGate_EventScript_ScottScene:: @ 8266229
 	waitmessage
 	msgbox BattleFrontier_ReceptionGate_Text_PlacedTrainerCardInFrontierPass, MSGBOX_DEFAULT
 	setflag FLAG_SYS_FRONTIER_PASS
-	msgbox BattleFrontier_ReceptionGate_Text_EnjoyBattleFrontier, MSGBOX_DEFAULT
+	setflag FLAG_SYS_POKEMON_GET
+	giveitem ITEM_ACRO_BIKE, 1
+	giveitem ITEM_MEGA_BRACELET, 1
+	setvar VAR_0x8004, 5
+	special GiveFrontierBattlePoints
+	msgbox BattleFrontier_ReceptionGate_Text_Apology, MSGBOX_DEFAULT
 	msgbox BattleFrontier_ReceptionGate_Text_IfItIsntPlayerYouCame, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_GREETER, Common_Movement_WalkInPlaceFastestUp
@@ -51,19 +56,31 @@ BattleFrontier_ReceptionGate_EventScript_ScottScene:: @ 8266229
 	applymovement LOCALID_GUIDE, Common_Movement_ExclamationMark
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
-	msgbox BattleFrontier_ReceptionGate_Text_OhMrScottGoodDay, MSGBOX_DEFAULT
-	closemessage
 	applymovement LOCALID_GREETER, BattleFrontier_ReceptionGate_Movement_GreeterFaceScott
 	applymovement LOCALID_GUIDE, BattleFrontier_ReceptionGate_Movement_FacilityGuideFaceScott
 	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_ReceptionGate_Movement_PlayerFaceScott
 	applymovement LOCALID_SCOTT, BattleFrontier_ReceptionGate_Movement_ScottEnter
 	waitmovement 0
 	msgbox BattleFrontier_ReceptionGate_Text_ScottGreatToSeeYouHere, MSGBOX_DEFAULT
+	setvar VAR_0x8004, FEMALE
+	fadescreen FADE_TO_BLACK
+	special StartWallClock
+	waitstate
+	setflag FLAG_SET_WALL_CLOCK
+	delay 30
+	msgbox BattleFrontier_ReceptionGate_Text_Thanks, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_SCOTT, BattleFrontier_ReceptionGate_Movement_ScottExit
 	waitmovement 0
 	removeobject LOCALID_SCOTT
 	releaseall
+	random 5
+	switch VAR_RESULT
+	case 0, Pkmn_1_1
+	case 1, Pkmn_1_2
+	case 2, Pkmn_1_3
+	case 3, Pkmn_1_4
+	case 4, Pkmn_1_5
 	end
 
 BattleFrontier_ReceptionGate_Movement_PlayerApproachCounter: @ 82662D2
@@ -303,45 +320,99 @@ BattleFrontier_ReceptionGate_Text_FirstTimeHereThisWay: @ 8266580
 	.string "Please step this way!$"
 
 BattleFrontier_ReceptionGate_Text_WelcomeToBattleFrontier: @ 82665B2
-	.string "The front lines of POKéMON battling!\n"
-	.string "Welcome to the BATTLE FRONTIER!$"
+	.string "The front lines of Pokémon battling!\n"
+	.string "Welcome to the Battle Frontier!$"
 
 BattleFrontier_ReceptionGate_Text_IssueFrontierPass: @ 82665F7
-	.string "For a first-time visitor, we issue\n"
-	.string "the FRONTIER PASS.\p"
-	.string "It's for use at all the facilities\n"
-	.string "in the BATTLE FRONTIER.\p"
-	.string "Here you are!$"
+	.string "Oh, it's you!\n"
+	.string "We've been expecting you.\p"
+	.string "Professor Birch is running a\n"
+	.string "a little late, but he said not to wait.\p"
+	.string "First off, let me hand\n"
+	.string "you your supplies.\p"
+	.string "There's a decent amount,\n"
+	.string "but let me draw your attention to a few.\p"
+	.string "The Frontier Pass contains\n"
+	.string "a map and allows you to store symbols.\p"
+	.string "Enjoy the free 5 BP on the house.\p"
+	.string "The Gear Bike is perfect for\n"
+	.string "getting around more easily.\p"
+	.string "You can use the R-button\n"
+	.string "to shift gears.\p"
+	.string "Finally, the Mega Bracelet will\n"
+	.string "allow you to wield Mega Evolution.\p"
+	.string "Simply press start\n"
+	.string "when selecting a move.\p"
+	.string "You'll have to buy\n"
+	.string "the Mega Stones yourself, though.\p"
+	.string "Here you are. Use them well!$"
 
 BattleFrontier_ReceptionGate_Text_ObtainedFrontierPass: @ 8266676
 	.string "{PLAYER} obtained\n"
-	.string "the FRONTIER PASS.$"
+	.string "the Frontier Pass.$"
 
 BattleFrontier_ReceptionGate_Text_PlacedTrainerCardInFrontierPass: @ 8266695
-	.string "{PLAYER} placed the TRAINER CARD\n"
-	.string "in the FRONTIER PASS.$"
+	.string "{PLAYER} placed their Trainer Card\n"
+	.string "in the Frontier Pass.$"
+	
+BattleFrontier_ReceptionGate_Text_Apology::
+	.string "I'm sorry about the wait...\p"
+	.string "Mr. Birch has a habit of\n"
+	.string "getting too wrapped up in his work.$"
 
 BattleFrontier_ReceptionGate_Text_EnjoyBattleFrontier: @ 82666C6
 	.string "We hope you enjoy all that the BATTLE\n"
 	.string "FRONTIER has to offer!$"
+	.string "I'm sorry about the wait...\p"
+	.string "Mr. Birch has a habit of\n"
+	.string "getting too wrapped up in his work.$"
 
 BattleFrontier_ReceptionGate_Text_IfItIsntPlayerYouCame: @ 8266703
-	.string "???: Well, if it isn't {PLAYER}{KUN}!\n"
-	.string "You came out here!$"
-
-BattleFrontier_ReceptionGate_Text_OhMrScottGoodDay: @ 8266733
-	.string "GUIDE: Oh! MR. SCOTT, sir!\n"
-	.string "Good day to you, sir!$"
+	.string "???: Sorry, sorry!$"
 
 BattleFrontier_ReceptionGate_Text_ScottGreatToSeeYouHere: @ 8266764
-	.string "SCOTT: It's great to see you here,\n"
-	.string "it really is!\p"
-	.string "I hope you'll take your time and\n"
-	.string "explore everywhere.\p"
-	.string "Naturally, I hope you'll also experience\n"
-	.string "the pure essence of battling.\p"
-	.string "I also have my quarters here, so feel\n"
-	.string "free to visit if you have time.$"
+	.string "Birch: {PLAYER}{KUN}!\n"
+	.string "Great to see you!\p"
+	.string "I just came by to welcome you\n"
+	.string "and to drop off some Pokémon.\p"
+	.string "To be honest, I just grabbed\n"
+	.string "the first four I could find!\p"
+	.string "...\p"
+	.string "Anyway, here you are.\p"
+	.string "You can check their IVS, EVS and stats\n"
+	.string "by pressing L, R, and Start.\p"
+	.string "Additionally, you can use\n"
+	.string "the menu to give them nicknames.\p"
+	.string "Anyway, like I said earlier,\n"
+	.string "your object is to get gold symbols.\p"
+	.string "Seven of them, to be exact.\n"
+	.string "One from each Frontier Brain.\p"
+	.string "It will be quite difficult,\n"
+	.string "but I believe in you.\p"
+	.string "Use the points from each\n"
+	.string "match to purchase new items and Pokémon.\p"
+	.string "However, remember that\n"
+	.string "there is more to life than battling.\p"
+	.string "If you choose to leave\n"
+	.string "the island, use the boat.\p"
+	.string "We've arranged for it to\n"
+	.string "to travel to three places:\p"
+	.string "The Contest Hall, the\n"
+	.string "Game Corner, and your home.\p"
+	.string "If you can, try to become a\n"
+	.string "successful coordinator as well.\p"
+	.string "I've left you something helpful\n"
+	.string "in your PC to get started with that.\p"
+	.string "However, as long as you complete\n"
+	.string "your mission, I'll be satisfied.\p"
+	.string "If you have any other questions,\n"
+	.string "ask someone here at the reception gate.\p"
+	.string "Anyway... This is a bit awkward\n"
+	.string "but do you have the time?$"
+
+BattleFrontier_ReceptionGate_Text_Thanks::
+	.string "Thanks! I'll be seeing\n" 
+	.string "you around, then.$"
 
 BattleFrontier_ReceptionGate_Text_YourGuideToFacilities: @ 8266857
 	.string "I'm your guide to the various facilities\n"
@@ -507,4 +578,84 @@ BattleFrontier_ReceptionGate_Text_BattlePointsInfo: @ 826761C
 	.string "You may trade in your Battle Points\n"
 	.string "for prizes at the EXCHANGE SERVICE\l"
 	.string "CORNER.$"
+	
+	//givecustommon species:req, level:req, item, ball, nature, abilityNum, hpEv, atkEv, defEv, speedEv, spAtkEv, spDefEv, hpIv, atkIv, defIv, speedIv, spAtkIv, spDefIv, move1, move2, move3, move4, isShiny
+Pkmn_1_1::
+	givecustommon SPECIES_ARCHEOPS, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_NAIVE, 0, 0, 252, 0, 252, 0, 0, 0, 31, 0, 31, 31, 0, MOVE_HEAD_SMASH, MOVE_ENDEAVOR, MOVE_STEALTH_ROCK, MOVE_TAUNT, 0
+	givecustommon SPECIES_MILOTIC, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_CALM, 0, 252, 0, 108, 0, 0, 148, 31, 31, 31, 31, 31, 31, MOVE_SCALD, MOVE_RECOVER, MOVE_TOXIC, MOVE_REFRESH, 0
+	random 5
+	switch VAR_RESULT
+	case 0, Pkmn_2_1
+	case 1, Pkmn_2_2
+	case 2, Pkmn_2_3
+	case 3, Pkmn_2_4
+	case 4, Pkmn_2_5
+end
+Pkmn_1_2::
+	givecustommon SPECIES_YANMEGA, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_TIMID, 0, 0, 0, 0, 252, 252, 4, 31, 31, 31, 31, 31, 31, MOVE_BUG_BUZZ, MOVE_AIR_SLASH, MOVE_U_TURN, MOVE_PSYCHIC, 0
+	givecustommon SPECIES_GIGALITH, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_CALM, 1, 252, 0, 4, 0, 0, 252, 31, 31, 31, 31, 31, 31, MOVE_STEALTH_ROCK, MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_TOXIC, 0
+	random 5
+	switch VAR_RESULT
+	case 0, Pkmn_2_1
+	case 1, Pkmn_2_2
+	case 2, Pkmn_2_3
+	case 3, Pkmn_2_4
+	case 4, Pkmn_2_5
+end
+Pkmn_1_3::
+	givecustommon SPECIES_ARCANINE, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_JOLLY, 1, 0, 252, 4, 252, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_FLARE_BLITZ, MOVE_WILD_CHARGE, MOVE_MORNING_SUN, MOVE_EXTREME_SPEED, 0
+	givecustommon SPECIES_SLOWBRO, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_BOLD, 2, 252, 0, 252, 0, 0, 4, 31, 31, 31, 31, 31, 31, MOVE_SCALD, MOVE_PSYSHOCK, MOVE_SLACK_OFF, MOVE_ICE_BEAM, 0
+	random 5
+	switch VAR_RESULT
+	case 0, Pkmn_2_1
+	case 1, Pkmn_2_2
+	case 2, Pkmn_2_3
+	case 3, Pkmn_2_4
+	case 4, Pkmn_2_5
+end
+Pkmn_1_4::
+	givecustommon SPECIES_SALAZZLE, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_TIMID, 2, 8, 0, 0, 252, 248, 0, 31, 31, 31, 31, 31, 31, MOVE_NASTY_PLOT, MOVE_FIRE_BLAST, MOVE_SLUDGE_WAVE, MOVE_DRAGON_PULSE, 0
+	givecustommon SPECIES_ESPEON, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_TIMID, 2, 0, 0, 4, 252, 252, 0, 31, 31, 31, 31, 31, 31, MOVE_CALM_MIND, MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_MORNING_SUN, 0
+	random 5
+	switch VAR_RESULT
+	case 0, Pkmn_2_1
+	case 1, Pkmn_2_2
+	case 2, Pkmn_2_3
+	case 3, Pkmn_2_4
+	case 4, Pkmn_2_5
+end
+Pkmn_1_5::
+	givecustommon SPECIES_METAGROSS, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_ADAMANT, 0, 76, 252, 0, 180, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_STEALTH_ROCK, MOVE_METEOR_MASH, MOVE_EARTHQUAKE, MOVE_EXPLOSION, 0
+	givecustommon SPECIES_SNORLAX, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_CAREFUL, 1, 188, 0, 128, 0, 0, 192, 31, 31, 31, 31, 31, 31, MOVE_CURSE, MOVE_BODY_SLAM, MOVE_REST, MOVE_SLEEP_TALK, 0
+	random 5
+	switch VAR_RESULT
+	case 0, Pkmn_2_1
+	case 1, Pkmn_2_2
+	case 2, Pkmn_2_3
+	case 3, Pkmn_2_4
+	case 4, Pkmn_2_5
+end
+
+
+
+Pkmn_2_1::
+	givecustommon SPECIES_CHANDELURE, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_JOLLY, 0, 0, 0, 4, 252, 252, 0, 31, 31, 31, 31, 31, 31, MOVE_SUBSTITUTE, MOVE_CALM_MIND, MOVE_SHADOW_BALL, MOVE_FLAMETHROWER, 0
+	givecustommon SPECIES_HIPPOWDON, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_IMPISH, 0, 252, 0, 80, 0, 0, 176, 31, 31, 31, 31, 31, 31, MOVE_STEALTH_ROCK, MOVE_EARTHQUAKE, MOVE_SLACK_OFF, MOVE_TOXIC, 0
+end
+Pkmn_2_2::
+	givecustommon SPECIES_CRAWDAUNT, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_JOLLY, 2, 4, 252, 0, 252, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_SWORDS_DANCE, MOVE_CRABHAMMER, MOVE_KNOCK_OFF, MOVE_AQUA_JET, 0
+	givecustommon SPECIES_SYLVEON, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_BOLD, 2, 252, 0, 252, 0, 4, 0, 31, 31, 31, 31, 31, 31, MOVE_HYPER_VOICE, MOVE_WISH, MOVE_PROTECT, MOVE_HEAL_BELL, 0
+end
+Pkmn_2_3::
+	givecustommon SPECIES_TOGEKISS, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_TIMID, 1, 252, 0, 0, 4, 252, 0, 31, 31, 31, 31, 31, 31, MOVE_NASTY_PLOT, MOVE_THUNDER_WAVE, MOVE_AIR_SLASH, MOVE_ROOST, 0
+	givecustommon SPECIES_FROSLASS, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_TIMID, 2, 4, 0, 0, 252, 252, 0, 31, 31, 31, 31, 31, 31, MOVE_SPIKES, MOVE_TAUNT, MOVE_ICY_WIND, MOVE_DESTINY_BOND, 0
+end
+Pkmn_2_4::
+	givecustommon SPECIES_HAXORUS, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_JOLLY, 1, 0, 252, 0, 252, 0, 4, 31, 31, 31, 31, 31, 31, MOVE_SWORDS_DANCE, MOVE_OUTRAGE, MOVE_EARTHQUAKE, MOVE_POISON_JAB, 0
+	givecustommon SPECIES_TENTACRUEL, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_TIMID, 0, 252, 0, 112, 114, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_SCALD, MOVE_RAPID_SPIN, MOVE_HAZE, MOVE_TOXIC_SPIKES, 0
+end
+Pkmn_2_5::
+	givecustommon SPECIES_SCIZOR, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_ADAMANT, 1, 164, 252, 0, 92, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_BULLET_PUNCH, MOVE_U_TURN, MOVE_SUPERPOWER, MOVE_KNOCK_OFF, 0
+	givecustommon SPECIES_CHESNAUGHT, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_IMPISH, 2, 244, 0, 252, 12, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_SPIKES, MOVE_WOOD_HAMMER, MOVE_DRAIN_PUNCH, MOVE_SYNTHESIS, 0
+end
 

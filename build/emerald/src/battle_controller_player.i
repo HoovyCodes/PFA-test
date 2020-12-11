@@ -6512,6 +6512,8 @@ void MoveDeleterForgetMove(void);
 void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
+
+bool8 CanLearnTutorMove(u16, u8);
 # 20 "src/battle_controller_player.c" 2
 # 1 "include/pokeball.h" 1
 # 21 "src/battle_controller_player.c" 2

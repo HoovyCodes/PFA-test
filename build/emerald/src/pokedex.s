@@ -21,8 +21,198 @@ sPokeBallRotation:
 	.size	 sPokedexListItem,4
 sPokedexListItem:
 	.word	0x0
-	.globl	gPokedexOrder_Alphabetical
+	.align	1, 0
+	.type	 sStatsMovesLevelUp,object
+	.size	 sStatsMovesLevelUp,100
+sStatsMovesLevelUp:
+	.short	0x0
+	.space	98
+	.align	1, 0
+	.type	 sStatsMovesEgg,object
+	.size	 sStatsMovesEgg,20
+sStatsMovesEgg:
+	.short	0x0
+	.space	18
+	.align	1, 0
+	.type	 sStatsMovesTMHM,object
+	.size	 sStatsMovesTMHM,116
+sStatsMovesTMHM:
+	.short	0x0
+	.space	114
+	.align	1, 0
+	.type	 sStatsMovesTMHM_ID,object
+	.size	 sStatsMovesTMHM_ID,116
+sStatsMovesTMHM_ID:
+	.short	0x0
+	.space	114
+	.align	1, 0
+	.type	 sStatsMovesTutor,object
+	.size	 sStatsMovesTutor,60
+sStatsMovesTutor:
+	.short	0x0
+	.space	58
 	.section .rodata
+	.align	1, 0
+	.type	 sSplitIcons_Pal,object
+sSplitIcons_Pal:
+	.short	0x5bd1
+	.short	0x1a1e
+	.short	0x14d8
+	.short	0x7e97
+	.short	0x48e9
+	.short	0x7cee
+	.short	0x3eb5
+	.short	0x7fff
+	.short	0x0
+	.short	0x0
+	.short	0x0
+	.short	0x0
+	.short	0x0
+	.short	0x0
+	.short	0x0
+	.short	0x0
+	.size	 sSplitIcons_Pal,32
+	.align	2, 0
+	.type	 sSplitIcons_Gfx,object
+sSplitIcons_Gfx:
+	.word	0x18010
+	.word	-0x7fffffe0
+	.word	0x11111001
+	.word	0x22002100
+	.word	0x21220022
+	.word	0x48220012
+	.word	0x12030011
+	.word	0x111e9011
+	.word	0x111
+	.word	0x122222
+	.word	0x221221
+	.word	0x22112100
+	.word	0x22211100
+	.word	0x2700005d
+	.word	0x20272011
+	.word	0x2837002f
+	.word	-0x7fe1c100
+	.word	0x33708888
+	.word	0x2f102730
+	.word	0x3223710
+	.word	-0x77ff7dde
+	.word	0x76a00888
+	.word	0x30000160
+	.word	0x53003333
+	.word	0x5555
+	.word	0x333555
+	.word	0x444355
+	.word	0x33543510
+	.word	0x33331e90
+	.word	0x55000003
+	.word	0x33003555
+	.word	0x5553
+	.word	0x553444
+	.word	0x534533
+	.word	0x35350000
+	.word	0x45350055
+	.word	0x45000033
+	.word	0x55004453
+	.word	0x83334
+	.word	-0x6fbbbaa8
+	.word	0x5353557f
+	.word	0x54330000
+	.word	0x35440053
+	.word	0x33001354
+	.word	0x54370043
+	.word	0x507ff085
+	.word	0x77700001
+	.word	0x66670077
+	.word	0x66000066
+	.word	0x66007776
+	.word	0x10006667
+	.word	-0x6f89998a
+	.word	0x777771e
+	.word	0x665000
+	.word	0x1a007712
+	.word	0x667666
+	.word	0x6766770e
+	.word	0x10230000
+	.word	0x67100027
+	.word	0x37207658
+	.word	-0x7ff4ff98
+	.word	0x6767777f
+	.word	0x103700f2
+	.word	0x102f0003
+	.word	-0x5f7999c9
+	.word	0x7f
+	.size	 sSplitIcons_Gfx,264
+	.align	2, 0
+	.type	 sOamData_SplitIcons,object
+	.size	 sOamData_SplitIcons,8
+sOamData_SplitIcons:
+	.space	1
+	.byte	0x0
+	.space	1
+	.byte	0x40
+	.space	1
+	.byte	0x0
+	.space	2
+	.align	2, 0
+	.type	 sSpriteSheet_SplitIcons,object
+	.size	 sSpriteSheet_SplitIcons,8
+sSpriteSheet_SplitIcons:
+	.word	sSplitIcons_Gfx
+	.short	0x180
+	.short	0x7534
+	.align	2, 0
+	.type	 sSpritePal_SplitIcons,object
+	.size	 sSpritePal_SplitIcons,8
+sSpritePal_SplitIcons:
+	.word	sSplitIcons_Pal
+	.short	0x7534
+	.space	2
+	.align	2, 0
+	.type	 sSpriteAnim_SplitIcon0,object
+sSpriteAnim_SplitIcon0:
+	.short	0x0
+	.byte	0x0
+	.space	1
+	.short	-0x1
+	.space	2
+	.size	 sSpriteAnim_SplitIcon0,8
+	.align	2, 0
+	.type	 sSpriteAnim_SplitIcon1,object
+sSpriteAnim_SplitIcon1:
+	.short	0x4
+	.byte	0x0
+	.space	1
+	.short	-0x1
+	.space	2
+	.size	 sSpriteAnim_SplitIcon1,8
+	.align	2, 0
+	.type	 sSpriteAnim_SplitIcon2,object
+sSpriteAnim_SplitIcon2:
+	.short	0x8
+	.byte	0x0
+	.space	1
+	.short	-0x1
+	.space	2
+	.size	 sSpriteAnim_SplitIcon2,8
+	.align	2, 0
+	.type	 sSpriteAnimTable_SplitIcons,object
+sSpriteAnimTable_SplitIcons:
+	.word	sSpriteAnim_SplitIcon0
+	.word	sSpriteAnim_SplitIcon1
+	.word	sSpriteAnim_SplitIcon2
+	.size	 sSpriteAnimTable_SplitIcons,12
+	.align	2, 0
+	.type	 sSpriteTemplate_SplitIcons,object
+	.size	 sSpriteTemplate_SplitIcons,24
+sSpriteTemplate_SplitIcons:
+	.short	0x7534
+	.short	0x7534
+	.word	sOamData_SplitIcons
+	.word	sSpriteAnimTable_SplitIcons
+	.word	0x0
+	.word	gDummySpriteAffineAnimTable
+	.word	SpriteCallbackDummy
+	.globl	gPokedexOrder_Alphabetical
 	.align	1, 0
 	.type	 gPokedexOrder_Alphabetical,object
 gPokedexOrder_Alphabetical:
@@ -142420,8 +142610,8 @@ sInfoScreen_WindowTemplates:
 	.byte	0x0
 	.short	0x1
 	.byte	0x2
-	.byte	0x19
-	.byte	0x8
+	.byte	0xf
+	.byte	0x7
 	.byte	0x2
 	.byte	0x2
 	.byte	0xf
@@ -142471,8 +142661,8 @@ sNewEntryInfoScreen_WindowTemplates:
 	.byte	0x0
 	.short	0x1
 	.byte	0x2
-	.byte	0x19
-	.byte	0x8
+	.byte	0xf
+	.byte	0x7
 	.byte	0x2
 	.byte	0x2
 	.byte	0xf
@@ -143516,8 +143706,10 @@ sDexSearchTypeOptions:
 	.word	gTypeNames+0x70
 	.word	gText_DexEmptyString
 	.word	gTypeNames+0x77
+	.word	gText_DexEmptyString
+	.word	gTypeNames+0x7e
 	.space	8
-	.size	 sDexSearchTypeOptions,152
+	.size	 sDexSearchTypeOptions,160
 	.type	 sPokedexModes,object
 sPokedexModes:
 	.byte	0x0
@@ -143552,7 +143744,8 @@ sDexSearchTypeIds:
 	.byte	0xf
 	.byte	0x10
 	.byte	0x11
-	.size	 sDexSearchTypeIds,18
+	.byte	0x12
+	.size	 sDexSearchTypeIds,19
 	.align	2, 0
 	.type	 sSearchOptions,object
 sSearchOptions:
@@ -143567,11 +143760,11 @@ sSearchOptions:
 	.word	sDexSearchTypeOptions
 	.byte	0xa
 	.byte	0xb
-	.short	0x12
+	.short	0x13
 	.word	sDexSearchTypeOptions
 	.byte	0xc
 	.byte	0xd
-	.short	0x12
+	.short	0x13
 	.word	sDexOrderOptions
 	.byte	0x4
 	.byte	0x5
@@ -143808,7 +144001,8 @@ ResetPokedexView:
 	mov	r2, #0x0
 	mov	r1, #0x0
 	strh	r1, [r0]
-	ldr	r3, .L40+0x1c
+	mov	r3, #0xcd
+	lsl	r3, r3, #0x4
 	add	r0, r4, r3
 	strh	r1, [r0]
 	add	r3, r3, #0x2
@@ -143823,7 +144017,7 @@ ResetPokedexView:
 	add	r3, r3, #0x1
 	add	r0, r4, r3
 	strb	r2, [r0]
-	ldr	r2, .L40+0x20
+	ldr	r2, .L40+0x1c
 	add	r0, r4, r2
 	strh	r1, [r0]
 	add	r3, r3, #0x3
@@ -143839,7 +144033,8 @@ ResetPokedexView:
 	add	r0, r4, r2
 	strh	r1, [r0]
 	mov	r3, #0x0
-	ldr	r0, .L40+0x24
+	mov	r0, #0xce
+	lsl	r0, r0, #0x4
 	add	r1, r4, r0
 	mov	r2, #0x0
 .L28:
@@ -143851,38 +144046,38 @@ ResetPokedexView:
 	lsr	r3, r0, #0x10
 	cmp	r3, #0x3
 	bls	.L28	@cond_branch
-	ldr	r1, .L40+0x28
+	mov	r1, #0xcf
+	lsl	r1, r1, #0x4
 	add	r0, r4, r1
-	mov	r1, #0x0
-	strb	r1, [r0]
-	ldr	r2, .L40+0x2c
+	mov	r3, #0x0
+	strb	r3, [r0]
+	ldr	r2, .L40+0x20
 	add	r0, r4, r2
-	strb	r1, [r0]
-	ldr	r0, .L40+0x30
-	add	r3, r4, r0
-	ldrb	r2, [r3]
+	strb	r3, [r0]
+	ldr	r0, .L40+0x24
+	add	r2, r4, r0
+	ldrb	r1, [r2]
 	mov	r0, #0x2
 	neg	r0, r0
-	and	r0, r0, r2
-	strb	r0, [r3]
-	ldr	r2, .L40+0x34
-	add	r0, r4, r2
-	strb	r1, [r0]
-	ldr	r3, .L40+0x38
-	add	r0, r4, r3
-	strb	r1, [r0]
+	and	r0, r0, r1
+	strb	r0, [r2]
+	ldr	r2, .L40+0x28
+	add	r1, r4, r2
+	mov	r0, #0x2
+	strb	r0, [r1]
+	ldr	r1, .L40+0x2c
+	add	r0, r4, r1
+	strb	r3, [r0]
 	add	r2, r2, #0x2
 	add	r0, r4, r2
-	strb	r1, [r0]
-	add	r3, r3, #0x2
-	add	r0, r4, r3
-	strh	r1, [r0]
+	strb	r3, [r0]
+	add	r1, r1, #0x2
+	add	r0, r4, r1
+	strh	r3, [r0]
 	add	r2, r2, #0x3
 	add	r0, r4, r2
-	strh	r1, [r0]
-	mov	r3, #0x0
-	mov	r0, #0xcf
-	lsl	r0, r0, #0x4
+	strh	r3, [r0]
+	ldr	r0, .L40+0x30
 	add	r1, r4, r0
 	mov	r2, #0x0
 .L33:
@@ -143894,7 +144089,7 @@ ResetPokedexView:
 	cmp	r3, #0x7
 	bls	.L33	@cond_branch
 	mov	r3, #0x0
-	ldr	r2, .L40+0x3c
+	ldr	r2, .L40+0x34
 	add	r1, r4, r2
 	mov	r2, #0x0
 .L38:
@@ -143917,16 +144112,14 @@ ResetPokedexView:
 	.word	0xca8
 	.word	0xcaa
 	.word	0xcba
-	.word	0xcc4
-	.word	0xcc6
-	.word	0xccc
+	.word	0xcce
 	.word	0xcd6
-	.word	0xce6
-	.word	0xce7
-	.word	0xce8
-	.word	0xce9
-	.word	0xcea
-	.word	0xcf8
+	.word	0xcf1
+	.word	0xcf2
+	.word	0xcf3
+	.word	0xcf4
+	.word	0xcfa
+	.word	0xd02
 .Lfe4:
 	.size	 ResetPokedexView,.Lfe4-ResetPokedexView
 	.align	2, 0
@@ -143942,17 +144135,17 @@ CB2_OpenPokedex:
 	mov	r1, #0x87
 	lsl	r1, r1, #0x3
 	add	r4, r0, r1
-	ldrb	r0, [r4]
-	cmp	r0, #0x1
+	ldrb	r5, [r4]
+	cmp	r5, #0x1
 	beq	.L51	@cond_branch
-	cmp	r0, #0x1
+	cmp	r5, #0x1
 	ble	.L45	@cond_branch
-	cmp	r0, #0x2
+	cmp	r5, #0x2
 	beq	.L52	@cond_branch
-	cmp	r0, #0x3
-	bne	.LCB414
+	cmp	r5, #0x3
+	bne	.LCB415
 	b	.L56	@long jump
-.LCB414:
+.LCB415:
 .L45:
 	mov	r0, #0x0
 	bl	SetVBlankCallback
@@ -144054,19 +144247,18 @@ CB2_OpenPokedex:
 	.word	gReservedSpritePaletteCount
 .L52:
 	ldr	r4, .L64
-	mov	r0, #0xd0
-	lsl	r0, r0, #0x4
+	ldr	r0, .L64+0x4
 	bl	AllocZeroed
 	str	r0, [r4]
 	bl	ResetPokedexView
-	ldr	r0, .L64+0x4
+	ldr	r0, .L64+0x8
 	mov	r1, #0x0
 	bl	CreateTask
 	ldr	r1, [r4]
-	ldr	r5, .L64+0x8
-	ldr	r0, [r5]
+	ldr	r6, .L64+0xc
+	ldr	r0, [r6]
 	ldrb	r0, [r0, #0x19]
-	ldr	r3, .L64+0xc
+	ldr	r3, .L64+0x10
 	add	r1, r1, r3
 	strh	r0, [r1]
 	bl	IsNationalPokedexEnabled
@@ -144074,38 +144266,37 @@ CB2_OpenPokedex:
 	cmp	r1, #0
 	bne	.L53	@cond_branch
 	ldr	r0, [r4]
-	ldr	r2, .L64+0xc
+	ldr	r2, .L64+0x10
 	add	r0, r0, r2
 	strh	r1, [r0]
 .L53:
 	ldr	r1, [r4]
-	ldr	r0, [r5]
+	ldr	r0, [r6]
 	ldrb	r2, [r0, #0x18]
-	ldr	r3, .L64+0x10
+	ldr	r3, .L64+0x14
 	add	r0, r1, r3
 	strh	r2, [r0]
-	ldr	r0, .L64+0x14
+	ldr	r0, .L64+0x18
 	ldrh	r2, [r0]
 	sub	r3, r3, #0x8
 	add	r0, r1, r3
 	strh	r2, [r0]
-	ldr	r0, .L64+0x18
+	ldr	r0, .L64+0x1c
 	ldrb	r0, [r0]
-	ldr	r2, .L64+0x1c
+	ldr	r2, .L64+0x20
 	add	r1, r1, r2
 	strb	r0, [r1]
 	ldr	r0, [r4]
-	add	r3, r3, #0x3f
+	add	r3, r3, #0x49
 	add	r0, r0, r3
-	mov	r1, #0x0
-	strb	r1, [r0]
+	strb	r5, [r0]
 	bl	IsNationalPokedexEnabled
 	cmp	r0, #0
 	bne	.L54	@cond_branch
 	mov	r0, #0x0
 	bl	GetHoennPokedexCount
 	ldr	r1, [r4]
-	ldr	r2, .L64+0x20
+	ldr	r2, .L64+0x24
 	add	r1, r1, r2
 	strh	r0, [r1]
 	mov	r0, #0x1
@@ -144115,13 +144306,14 @@ CB2_OpenPokedex:
 	.align	2, 0
 .L64:
 	.word	sPokedexView
+	.word	0xd0c
 	.word	Task_OpenPokedexMainPage
 	.word	gSaveBlock2Ptr
 	.word	0xcae
 	.word	0xcb2
 	.word	sLastSelectedPokemon
 	.word	sPokeBallRotation
-	.word	0xcc8
+	.word	0xcd2
 	.word	0xcb6
 .L54:
 	mov	r0, #0x0
@@ -144157,7 +144349,7 @@ CB2_OpenPokedex:
 	.word	0xcb6
 	.word	0xcb8
 	.word	sPokedexView
-	.word	0xcc9
+	.word	0xcd3
 	.word	gMain
 .L56:
 	mov	r0, #0x1
@@ -144247,7 +144439,7 @@ Task_OpenPokedexMainPage:
 	.align	2, 0
 .L73:
 	.word	sPokedexView
-	.word	0xce8
+	.word	0xcf2
 	.word	gTasks
 	.word	Task_HandlePokedexInput
 .Lfe7:
@@ -144285,7 +144477,7 @@ Task_HandlePokedexInput:
 	.align	2, 0
 .L88:
 	.word	sPokedexView
-	.word	0xcee
+	.word	0xcf8
 .L76:
 	ldr	r2, .L90
 	ldrh	r1, [r2, #0x2e]
@@ -144350,7 +144542,7 @@ Task_HandlePokedexInput:
 	.word	gMain
 	.word	0xcaa
 	.word	gSprites
-	.word	0xcc2
+	.word	0xccc
 	.word	SpriteCB_MoveMonForInfoScreen
 	.word	gTasks
 	.word	Task_OpenInfoScreenAfterMonMovement
@@ -144390,9 +144582,9 @@ Task_HandlePokedexInput:
 	.align	2, 0
 .L92:
 	.word	sPokedexView
-	.word	0xcee
-	.word	0xceb
-	.word	0xcec
+	.word	0xcf8
+	.word	0xcf5
+	.word	0xcf6
 	.word	gTasks
 	.word	Task_HandlePokedexStartMenuInput
 .L80:
@@ -144436,7 +144628,7 @@ Task_HandlePokedexInput:
 	ldr	r2, .L94+0x10
 	add	r1, r0, r2
 	ldrh	r2, [r1]
-	sub	r4, r4, #0x1a
+	sub	r4, r4, #0x24
 	add	r1, r0, r4
 	strh	r2, [r1]
 	ldr	r2, .L94+0x14
@@ -144463,8 +144655,8 @@ Task_HandlePokedexInput:
 .L94:
 	.word	gTasks
 	.word	sPokedexView
-	.word	0xcea
-	.word	0xcc8
+	.word	0xcf4
+	.word	0xcd2
 	.word	0xcaa
 	.word	0xcae
 	.word	0xcb2
@@ -144532,7 +144724,7 @@ Task_HandlePokedexInput:
 .L98:
 	.word	sPokedexView
 	.word	0xcaa
-	.word	0xcca
+	.word	0xcd4
 	.word	gTasks
 	.word	Task_WaitForScroll
 .Lfe8:
@@ -144549,8 +144741,7 @@ Task_WaitForScroll:
 	ldr	r1, .L102+0x4
 	add	r0, r2, r1
 	ldrb	r0, [r0]
-	mov	r3, #0xcd
-	lsl	r3, r3, #0x4
+	ldr	r3, .L102+0x8
 	add	r1, r2, r3
 	ldrb	r1, [r1]
 	add	r3, r3, #0x2
@@ -144560,12 +144751,12 @@ Task_WaitForScroll:
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
 	beq	.L101	@cond_branch
-	ldr	r0, .L102+0x8
+	ldr	r0, .L102+0xc
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L102+0xc
+	ldr	r0, .L102+0x10
 	str	r0, [r1]
 .L101:
 	pop	{r4}
@@ -144575,7 +144766,8 @@ Task_WaitForScroll:
 	.align	2, 0
 .L102:
 	.word	sPokedexView
-	.word	0xccb
+	.word	0xcd5
+	.word	0xcda
 	.word	gTasks
 	.word	Task_HandlePokedexInput
 .Lfe9:
@@ -144610,7 +144802,7 @@ Task_HandlePokedexStartMenuInput:
 	.align	2, 0
 .L124:
 	.word	sPokedexView
-	.word	0xcee
+	.word	0xcf8
 .L105:
 	ldr	r5, .L126
 	ldrh	r1, [r5, #0x2e]
@@ -144634,7 +144826,7 @@ Task_HandlePokedexStartMenuInput:
 	.align	2, 0
 .L126:
 	.word	gMain
-	.word	0xcec
+	.word	0xcf6
 .L111:
 	ldr	r4, .L128
 	add	r1, r3, r4
@@ -144648,7 +144840,7 @@ Task_HandlePokedexStartMenuInput:
 	.align	2, 0
 .L128:
 	.word	0xcaa
-	.word	0xcc8
+	.word	0xcd2
 .L112:
 	ldr	r1, .L130
 	add	r2, r3, r1
@@ -144681,7 +144873,7 @@ Task_HandlePokedexStartMenuInput:
 .L130:
 	.word	0xca8
 	.word	0xcaa
-	.word	0xcc8
+	.word	0xcd2
 .L113:
 	mov	r0, #0x1
 	neg	r0, r0
@@ -144727,7 +144919,7 @@ Task_HandlePokedexStartMenuInput:
 	.word	Task_ClosePokedex
 	.word	gMain
 	.word	sPokedexView
-	.word	0xceb
+	.word	0xcf5
 	.word	Task_HandlePokedexInput
 .L116:
 	ldrh	r1, [r2, #0x30]
@@ -144752,7 +144944,7 @@ Task_HandlePokedexStartMenuInput:
 	.align	2, 0
 .L134:
 	.word	sPokedexView
-	.word	0xcec
+	.word	0xcf6
 .L118:
 	ldrh	r1, [r2, #0x30]
 	mov	r0, #0x80
@@ -144779,7 +144971,7 @@ Task_HandlePokedexStartMenuInput:
 	.align	2, 0
 .L136:
 	.word	sPokedexView
-	.word	0xcec
+	.word	0xcf6
 .Lfe10:
 	.size	 Task_HandlePokedexStartMenuInput,.Lfe10-Task_HandlePokedexStartMenuInput
 	.align	2, 0
@@ -144807,14 +144999,15 @@ Task_OpenInfoScreenAfterMonMovement:
 	ldrsh	r0, [r1, r2]
 	cmp	r0, #0x38
 	bne	.L139	@cond_branch
-	ldr	r1, .L140+0xc
+	mov	r1, #0xcf
+	lsl	r1, r1, #0x4
 	add	r0, r3, r1
 	ldrb	r1, [r0]
-	ldr	r2, .L140+0x10
+	ldr	r2, .L140+0xc
 	add	r0, r3, r2
 	strb	r1, [r0]
 	ldr	r1, [r5]
-	sub	r2, r2, #0x3d
+	sub	r2, r2, #0x47
 	add	r0, r1, r2
 	ldrh	r0, [r0]
 	lsl	r0, r0, #0x2
@@ -144822,7 +145015,7 @@ Task_OpenInfoScreenAfterMonMovement:
 	add	r1, r1, r6
 	ldrb	r1, [r1]
 	bl	LoadInfoScreen
-	ldr	r2, .L140+0x14
+	ldr	r2, .L140+0x10
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
@@ -144830,7 +145023,7 @@ Task_OpenInfoScreenAfterMonMovement:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r1, #0x8]
-	ldr	r0, .L140+0x18
+	ldr	r0, .L140+0x14
 	str	r0, [r1]
 .L139:
 	pop	{r4, r5, r6}
@@ -144841,9 +145034,8 @@ Task_OpenInfoScreenAfterMonMovement:
 .L140:
 	.word	gSprites
 	.word	sPokedexView
-	.word	0xcc2
-	.word	0xce6
-	.word	0xce7
+	.word	0xccc
+	.word	0xcf1
 	.word	gTasks
 	.word	Task_WaitForExitInfoScreen
 .Lfe11:
@@ -144871,7 +145063,8 @@ Task_WaitForExitInfoScreen:
 	beq	.L143	@cond_branch
 	ldr	r5, .L146+0x4
 	ldr	r0, [r5]
-	ldr	r1, .L146+0x8
+	mov	r1, #0xcf
+	lsl	r1, r1, #0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x1
@@ -144886,7 +145079,7 @@ Task_WaitForExitInfoScreen:
 	cmp	r0, #0
 	beq	.L145	@cond_branch
 	ldr	r0, [r5]
-	ldr	r2, .L146+0xc
+	ldr	r2, .L146+0x8
 	add	r1, r0, r2
 	ldrh	r1, [r1]
 	lsl	r1, r1, #0x2
@@ -144899,7 +145092,6 @@ Task_WaitForExitInfoScreen:
 .L146:
 	.word	gTasks
 	.word	sPokedexView
-	.word	0xce6
 	.word	0xcaa
 .L143:
 	ldr	r2, .L148
@@ -144927,7 +145119,7 @@ Task_WaitForExitInfoScreen:
 	.word	sPokedexView
 	.word	0xcaa
 	.word	sPokeBallRotation
-	.word	0xcc8
+	.word	0xcd2
 	.word	Task_OpenPokedexMainPage
 .Lfe12:
 	.size	 Task_WaitForExitInfoScreen,.Lfe12-Task_WaitForExitInfoScreen
@@ -144974,22 +145166,23 @@ Task_WaitForExitSearch:
 .L156:
 	.word	gTasks
 	.word	sPokedexView
-	.word	0xcea
+	.word	0xcf4
 	.word	0xcaa
-	.word	0xcc8
+	.word	0xcd2
 	.word	Task_OpenSearchResults
 .L152:
-	ldr	r1, .L158
+	mov	r1, #0xcd
+	lsl	r1, r1, #0x4
 	add	r0, r2, r1
 	ldrh	r1, [r0]
-	ldr	r3, .L158+0x4
+	ldr	r3, .L158
 	add	r0, r2, r3
 	strb	r1, [r0]
 	ldr	r1, [r5]
-	ldr	r2, .L158+0x8
+	ldr	r2, .L158+0x4
 	add	r0, r1, r2
 	ldrh	r2, [r0]
-	sub	r3, r3, #0x1e
+	sub	r3, r3, #0x28
 	add	r0, r1, r3
 	strh	r2, [r0]
 	mov	r2, #0xcb
@@ -145004,18 +145197,18 @@ Task_WaitForExitSearch:
 	cmp	r1, #0
 	bne	.L154	@cond_branch
 	ldr	r0, [r5]
-	ldr	r2, .L158+0xc
+	ldr	r2, .L158+0x8
 	add	r0, r0, r2
 	strh	r1, [r0]
 .L154:
 	ldr	r0, [r5]
-	ldr	r3, .L158+0x10
+	ldr	r3, .L158+0xc
 	add	r1, r0, r3
 	ldrh	r1, [r1]
-	ldr	r2, .L158+0x14
+	ldr	r2, .L158+0x10
 	add	r0, r0, r2
 	strh	r1, [r0]
-	ldr	r0, .L158+0x18
+	ldr	r0, .L158+0x14
 .L155:
 	str	r0, [r6]
 .L151:
@@ -145025,8 +145218,7 @@ Task_WaitForExitSearch:
 .L159:
 	.align	2, 0
 .L158:
-	.word	0xcc6
-	.word	0xcc8
+	.word	0xcd2
 	.word	0xcac
 	.word	0xcae
 	.word	0xcb4
@@ -145133,7 +145325,7 @@ Task_OpenSearchResults:
 	.align	2, 0
 .L167:
 	.word	sPokedexView
-	.word	0xce8
+	.word	0xcf2
 	.word	gTasks
 	.word	Task_HandleSearchResultsInput
 .Lfe15:
@@ -145167,7 +145359,7 @@ Task_HandleSearchResultsInput:
 	.align	2, 0
 .L182:
 	.word	sPokedexView
-	.word	0xcee
+	.word	0xcf8
 .L170:
 	ldr	r2, .L184
 	ldrh	r1, [r2, #0x2e]
@@ -145225,7 +145417,7 @@ Task_HandleSearchResultsInput:
 	.word	gMain
 	.word	0xcaa
 	.word	gSprites
-	.word	0xcc2
+	.word	0xccc
 	.word	SpriteCB_MoveMonForInfoScreen
 	.word	gTasks
 	.word	Task_OpenSearchResultsInfoScreenAfterMonMovement
@@ -145265,9 +145457,9 @@ Task_HandleSearchResultsInput:
 	.align	2, 0
 .L186:
 	.word	sPokedexView
-	.word	0xcee
-	.word	0xceb
-	.word	0xcec
+	.word	0xcf8
+	.word	0xcf5
+	.word	0xcf6
 	.word	gTasks
 	.word	Task_HandleSearchResultsStartMenuInput
 .L174:
@@ -145311,7 +145503,7 @@ Task_HandleSearchResultsInput:
 .L188:
 	.word	gTasks
 	.word	sPokedexView
-	.word	0xcea
+	.word	0xcf4
 	.word	Task_WaitForExitSearch
 .L176:
 	mov	r0, #0x2
@@ -145373,7 +145565,7 @@ Task_HandleSearchResultsInput:
 .L192:
 	.word	sPokedexView
 	.word	0xcaa
-	.word	0xcca
+	.word	0xcd4
 	.word	gTasks
 	.word	Task_WaitForSearchResultsScroll
 .Lfe16:
@@ -145390,8 +145582,7 @@ Task_WaitForSearchResultsScroll:
 	ldr	r1, .L196+0x4
 	add	r0, r2, r1
 	ldrb	r0, [r0]
-	mov	r3, #0xcd
-	lsl	r3, r3, #0x4
+	ldr	r3, .L196+0x8
 	add	r1, r2, r3
 	ldrb	r1, [r1]
 	add	r3, r3, #0x2
@@ -145401,12 +145592,12 @@ Task_WaitForSearchResultsScroll:
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
 	beq	.L195	@cond_branch
-	ldr	r0, .L196+0x8
+	ldr	r0, .L196+0xc
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L196+0xc
+	ldr	r0, .L196+0x10
 	str	r0, [r1]
 .L195:
 	pop	{r4}
@@ -145416,7 +145607,8 @@ Task_WaitForSearchResultsScroll:
 	.align	2, 0
 .L196:
 	.word	sPokedexView
-	.word	0xccb
+	.word	0xcd5
+	.word	0xcda
 	.word	gTasks
 	.word	Task_HandleSearchResultsInput
 .Lfe17:
@@ -145451,16 +145643,16 @@ Task_HandleSearchResultsStartMenuInput:
 	.align	2, 0
 .L218:
 	.word	sPokedexView
-	.word	0xcee
+	.word	0xcf8
 .L199:
 	ldr	r0, .L220
 	ldrh	r1, [r0, #0x2e]
 	mov	r0, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.LCB2345
+	bne	.LCB2344
 	b	.L201	@long jump
-.LCB2345:
+.LCB2344:
 	ldr	r1, .L220+0x4
 	add	r0, r5, r1
 	ldrh	r0, [r0]
@@ -145475,7 +145667,7 @@ Task_HandleSearchResultsStartMenuInput:
 	.align	2, 0
 .L220:
 	.word	gMain
-	.word	0xcec
+	.word	0xcf6
 	.word	.L209
 	.align	2, 0
 	.align	2, 0
@@ -145502,7 +145694,7 @@ Task_HandleSearchResultsStartMenuInput:
 .L222:
 	.word	sPokedexView
 	.word	0xcaa
-	.word	0xcc8
+	.word	0xcd2
 .L206:
 	ldr	r5, .L224
 	ldr	r2, [r5]
@@ -145539,7 +145731,7 @@ Task_HandleSearchResultsStartMenuInput:
 	.word	sPokedexView
 	.word	0xca8
 	.word	0xcaa
-	.word	0xcc8
+	.word	0xcd2
 	.word	gMain
 .L207:
 	mov	r0, #0x1
@@ -145609,7 +145801,7 @@ Task_HandleSearchResultsStartMenuInput:
 	.word	Task_ClosePokedexFromSearchResultsStartMenu
 	.word	gMain
 	.word	sPokedexView
-	.word	0xceb
+	.word	0xcf5
 	.word	Task_HandleSearchResultsInput
 .L210:
 	ldrh	r1, [r2, #0x30]
@@ -145634,7 +145826,7 @@ Task_HandleSearchResultsStartMenuInput:
 	.align	2, 0
 .L230:
 	.word	sPokedexView
-	.word	0xcec
+	.word	0xcf6
 .L212:
 	ldrh	r1, [r2, #0x30]
 	mov	r0, #0x80
@@ -145661,7 +145853,7 @@ Task_HandleSearchResultsStartMenuInput:
 	.align	2, 0
 .L232:
 	.word	sPokedexView
-	.word	0xcec
+	.word	0xcf6
 .Lfe18:
 	.size	 Task_HandleSearchResultsStartMenuInput,.Lfe18-Task_HandleSearchResultsStartMenuInput
 	.align	2, 0
@@ -145689,14 +145881,15 @@ Task_OpenSearchResultsInfoScreenAfterMonMovement:
 	ldrsh	r0, [r1, r2]
 	cmp	r0, #0x38
 	bne	.L235	@cond_branch
-	ldr	r1, .L236+0xc
+	mov	r1, #0xcf
+	lsl	r1, r1, #0x4
 	add	r0, r3, r1
 	ldrb	r1, [r0]
-	ldr	r2, .L236+0x10
+	ldr	r2, .L236+0xc
 	add	r0, r3, r2
 	strb	r1, [r0]
 	ldr	r1, [r5]
-	sub	r2, r2, #0x3d
+	sub	r2, r2, #0x47
 	add	r0, r1, r2
 	ldrh	r0, [r0]
 	lsl	r0, r0, #0x2
@@ -145704,7 +145897,7 @@ Task_OpenSearchResultsInfoScreenAfterMonMovement:
 	add	r1, r1, r4
 	ldrb	r1, [r1]
 	bl	LoadInfoScreen
-	ldr	r2, .L236+0x14
+	ldr	r2, .L236+0x10
 	lsl	r1, r6, #0x2
 	add	r1, r1, r6
 	lsl	r1, r1, #0x3
@@ -145714,9 +145907,9 @@ Task_OpenSearchResultsInfoScreenAfterMonMovement:
 	strh	r0, [r1, #0x8]
 	ldr	r0, [r5]
 	add	r0, r0, r4
-	ldr	r2, .L236+0x18
+	ldr	r2, .L236+0x14
 	strh	r2, [r0]
-	ldr	r0, .L236+0x1c
+	ldr	r0, .L236+0x18
 	str	r0, [r1]
 .L235:
 	pop	{r4, r5, r6}
@@ -145727,9 +145920,8 @@ Task_OpenSearchResultsInfoScreenAfterMonMovement:
 .L236:
 	.word	gSprites
 	.word	sPokedexView
-	.word	0xcc2
-	.word	0xce6
-	.word	0xce7
+	.word	0xccc
+	.word	0xcf1
 	.word	gTasks
 	.word	0xffff
 	.word	Task_WaitForExitSearchResultsInfoScreen
@@ -145758,7 +145950,8 @@ Task_WaitForExitSearchResultsInfoScreen:
 	beq	.L239	@cond_branch
 	ldr	r5, .L242+0x4
 	ldr	r0, [r5]
-	ldr	r1, .L242+0x8
+	mov	r1, #0xcf
+	lsl	r1, r1, #0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x1
@@ -145773,7 +145966,7 @@ Task_WaitForExitSearchResultsInfoScreen:
 	cmp	r0, #0
 	beq	.L241	@cond_branch
 	ldr	r0, [r5]
-	ldr	r2, .L242+0xc
+	ldr	r2, .L242+0x8
 	add	r1, r0, r2
 	ldrh	r1, [r1]
 	lsl	r1, r1, #0x2
@@ -145786,7 +145979,6 @@ Task_WaitForExitSearchResultsInfoScreen:
 .L242:
 	.word	gTasks
 	.word	sPokedexView
-	.word	0xce6
 	.word	0xcaa
 .L239:
 	ldr	r0, .L244
@@ -145816,17 +146008,18 @@ Task_ReturnToPokedexFromSearchResults:
 	bne	.L247	@cond_branch
 	ldr	r4, .L249+0x4
 	ldr	r0, [r4]
-	ldr	r2, .L249+0x8
+	mov	r2, #0xcd
+	lsl	r2, r2, #0x4
 	add	r1, r0, r2
 	ldrh	r1, [r1]
-	ldr	r3, .L249+0xc
+	ldr	r3, .L249+0x8
 	add	r0, r0, r3
 	strb	r1, [r0]
 	ldr	r1, [r4]
-	sub	r2, r2, #0x1a
+	sub	r2, r2, #0x24
 	add	r0, r1, r2
 	ldrh	r2, [r0]
-	sub	r3, r3, #0x1e
+	sub	r3, r3, #0x28
 	add	r0, r1, r3
 	strh	r2, [r0]
 	mov	r2, #0xcb
@@ -145841,23 +146034,23 @@ Task_ReturnToPokedexFromSearchResults:
 	cmp	r1, #0
 	bne	.L248	@cond_branch
 	ldr	r0, [r4]
-	ldr	r2, .L249+0x10
+	ldr	r2, .L249+0xc
 	add	r0, r0, r2
 	strh	r1, [r0]
 .L248:
 	ldr	r0, [r4]
-	ldr	r3, .L249+0x14
+	ldr	r3, .L249+0x10
 	add	r1, r0, r3
 	ldrh	r1, [r1]
-	ldr	r2, .L249+0x18
+	ldr	r2, .L249+0x14
 	add	r0, r0, r2
 	strh	r1, [r0]
-	ldr	r1, .L249+0x1c
+	ldr	r1, .L249+0x18
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L249+0x20
+	ldr	r1, .L249+0x1c
 	str	r1, [r0]
 	bl	ClearMonSprites
 	bl	FreeWindowAndBgBuffers
@@ -145870,8 +146063,7 @@ Task_ReturnToPokedexFromSearchResults:
 .L249:
 	.word	gPaletteFade
 	.word	sPokedexView
-	.word	0xcc6
-	.word	0xcc8
+	.word	0xcd2
 	.word	0xcae
 	.word	0xcb4
 	.word	0xcb2
@@ -145894,17 +146086,18 @@ Task_ClosePokedexFromSearchResultsStartMenu:
 	bne	.L252	@cond_branch
 	ldr	r4, .L254+0x4
 	ldr	r0, [r4]
-	ldr	r2, .L254+0x8
+	mov	r2, #0xcd
+	lsl	r2, r2, #0x4
 	add	r1, r0, r2
 	ldrh	r1, [r1]
-	ldr	r3, .L254+0xc
+	ldr	r3, .L254+0x8
 	add	r0, r0, r3
 	strb	r1, [r0]
 	ldr	r1, [r4]
-	sub	r2, r2, #0x1a
+	sub	r2, r2, #0x24
 	add	r0, r1, r2
 	ldrh	r2, [r0]
-	sub	r3, r3, #0x1e
+	sub	r3, r3, #0x28
 	add	r0, r1, r3
 	strh	r2, [r0]
 	mov	r2, #0xcb
@@ -145919,23 +146112,23 @@ Task_ClosePokedexFromSearchResultsStartMenu:
 	cmp	r1, #0
 	bne	.L253	@cond_branch
 	ldr	r0, [r4]
-	ldr	r2, .L254+0x10
+	ldr	r2, .L254+0xc
 	add	r0, r0, r2
 	strh	r1, [r0]
 .L253:
 	ldr	r0, [r4]
-	ldr	r3, .L254+0x14
+	ldr	r3, .L254+0x10
 	add	r1, r0, r3
 	ldrh	r1, [r1]
-	ldr	r2, .L254+0x18
+	ldr	r2, .L254+0x14
 	add	r0, r0, r2
 	strh	r1, [r0]
-	ldr	r1, .L254+0x1c
+	ldr	r1, .L254+0x18
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L254+0x20
+	ldr	r1, .L254+0x1c
 	str	r1, [r0]
 .L252:
 	pop	{r4, r5}
@@ -145946,8 +146139,7 @@ Task_ClosePokedexFromSearchResultsStartMenu:
 .L254:
 	.word	gPaletteFade
 	.word	sPokedexView
-	.word	0xcc6
-	.word	0xcc8
+	.word	0xcd2
 	.word	0xcae
 	.word	0xcb4
 	.word	0xcb2
@@ -145999,27 +146191,28 @@ LoadPokedexListPage:
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
 	cmp	r6, #0
-	beq	.LCB3019
+	beq	.LCB3018
 	b	.L257	@long jump
-.LCB3019:
+.LCB3018:
 	mov	r0, #0x0
 	bl	SetVBlankCallback
 	ldr	r4, .L280+0x4
 	ldr	r0, [r4]
-	ldr	r1, .L280+0x8
+	mov	r1, #0xcf
+	lsl	r1, r1, #0x4
 	add	r0, r0, r1
 	strb	r5, [r0]
 	mov	r0, #0x0
 	bl	ResetOtherVideoRegisters
 	ldr	r0, [r4]
-	ldr	r2, .L280+0xc
+	ldr	r2, .L280+0x8
 	add	r0, r0, r2
 	ldrb	r1, [r0]
 	mov	r0, #0x1a
 	bl	SetGpuReg
 	mov	r0, #0x0
 	bl	ResetBgsAndClearDma3BusyFlags
-	ldr	r1, .L280+0x10
+	ldr	r1, .L280+0xc
 	mov	r0, #0x0
 	mov	r2, #0x4
 	bl	InitBgsFromTemplates
@@ -146045,26 +146238,26 @@ LoadPokedexListPage:
 	add	r1, r0, #0
 	mov	r0, #0x0
 	bl	SetBgTilemapBuffer
-	ldr	r1, .L280+0x14
+	ldr	r1, .L280+0x10
 	mov	r2, #0x80
 	lsl	r2, r2, #0x6
 	str	r6, [sp]
 	mov	r0, #0x3
 	mov	r3, #0x0
 	bl	DecompressAndLoadBgGfxUsingHeap
-	ldr	r1, .L280+0x18
+	ldr	r1, .L280+0x14
 	mov	r0, #0x1
 	mov	r2, #0x0
 	mov	r3, #0x0
 	bl	CopyToBgTilemapBuffer
-	ldr	r1, .L280+0x1c
+	ldr	r1, .L280+0x18
 	mov	r0, #0x3
 	mov	r2, #0x0
 	mov	r3, #0x0
 	bl	CopyToBgTilemapBuffer
 	cmp	r5, #0
 	bne	.L261	@cond_branch
-	ldr	r1, .L280+0x20
+	ldr	r1, .L280+0x1c
 	mov	r3, #0xa0
 	lsl	r3, r3, #0x2
 	mov	r0, #0x0
@@ -146076,10 +146269,9 @@ LoadPokedexListPage:
 .L280:
 	.word	gPaletteFade
 	.word	sPokedexView
-	.word	0xce6
-	.word	0xcc9
+	.word	0xcd3
 	.word	sPokedex_BgTemplate
-	.word	gPokedexMenu_Gfx
+	.word	gPokedexMenuList_Gfx
 	.word	gPokedexList_Tilemap
 	.word	gPokedexListUnderlay_Tilemap
 	.word	gPokedexStartMenuMain_Tilemap
@@ -146108,7 +146300,7 @@ LoadPokedexListPage:
 .L282:
 	.word	gPokedexStartMenuSearchResults_Tilemap
 	.word	sPokedexView
-	.word	0xce8
+	.word	0xcf2
 .L263:
 	ldr	r3, .L284
 	ldr	r1, [r3]
@@ -146145,7 +146337,7 @@ LoadPokedexListPage:
 	.align	2, 0
 .L284:
 	.word	sPokedexView
-	.word	0xce8
+	.word	0xcf2
 	.word	sPokemonList_WindowTemplate
 	.word	gMain
 .L265:
@@ -146216,7 +146408,7 @@ LoadPokedexListPage:
 	.word	sPokedexView
 	.word	0xcae
 	.word	0xcaa
-	.word	0xceb
+	.word	0xcf5
 .L269:
 	mov	r0, #0x1
 	neg	r0, r0
@@ -146455,9 +146647,9 @@ CreatePokedexList:
 	str	r4, [sp, #0x4]
 .L314:
 	cmp	r6, #0x5
-	bls	.LCB3602
+	bls	.LCB3601
 	b	.L321	@long jump
-.LCB3602:
+.LCB3601:
 	lsl	r0, r6, #0x2
 	ldr	r1, .L390
 	add	r0, r0, r1
@@ -146483,9 +146675,9 @@ CreatePokedexList:
 	mov	r4, #0x0
 	ldr	r0, [sp]
 	cmp	r4, r0
-	bcc	.LCB3628
+	bcc	.LCB3627
 	b	.L321	@long jump
-.LCB3628:
+.LCB3627:
 	ldr	r6, .L392
 	mov	r2, #0x1
 	mov	r8, r2
@@ -146559,9 +146751,9 @@ CreatePokedexList:
 	mov	r9, r5
 	ldr	r0, [sp]
 	cmp	r4, r0
-	bcc	.LCB3735
+	bcc	.LCB3734
 	b	.L321	@long jump
-.LCB3735:
+.LCB3734:
 	ldr	r6, .L394
 	mov	r3, #0x1
 	mov	r8, r3
@@ -147114,9 +147306,9 @@ CreateMonListEntry:
 	cmp	r0, #0x1
 	ble	.L410	@cond_branch
 	cmp	r0, #0x2
-	bne	.LCB4449
+	bne	.LCB4448
 	b	.L427	@long jump
-.LCB4449:
+.LCB4448:
 .L410:
 	sub	r0, r1, #0x5
 	lsl	r0, r0, #0x10
@@ -147145,7 +147337,7 @@ CreateMonListEntry:
 	mov	r2, r9
 	lsl	r1, r2, #0x19
 	lsr	r1, r1, #0x18
-	mov	r0, #0x11
+	mov	r0, #0x2
 	add	r2, r7, #0
 	bl	ClearMonListEntry
 	b	.L417
@@ -147158,7 +147350,7 @@ CreateMonListEntry:
 	mov	r3, r9
 	lsl	r0, r3, #0x19
 	lsr	r4, r0, #0x18
-	mov	r0, #0x11
+	mov	r0, #0x2
 	add	r1, r4, #0
 	add	r2, r7, #0
 	bl	ClearMonListEntry
@@ -147170,7 +147362,7 @@ CreateMonListEntry:
 	cmp	r0, #0
 	beq	.L418	@cond_branch
 	add	r0, r5, #0
-	mov	r1, #0x12
+	mov	r1, #0x3
 	add	r2, r4, #0
 	add	r3, r7, #0
 	bl	CreateMonDexNum
@@ -147180,7 +147372,7 @@ CreateMonListEntry:
 	ldrb	r0, [r0, #0x2]
 	lsl	r0, r0, #0x1e
 	lsr	r0, r0, #0x1f
-	mov	r1, #0x11
+	mov	r1, #0x2
 	add	r2, r4, #0
 	add	r3, r7, #0
 	bl	CreateCaughtBall
@@ -147188,23 +147380,23 @@ CreateMonListEntry:
 	ldr	r0, [r3]
 	add	r0, r0, r6
 	ldrh	r0, [r0]
-	mov	r1, #0x16
+	mov	r1, #0x7
 	add	r2, r4, #0
 	bl	CreateMonName
 	b	.L417
 .L418:
 	add	r0, r5, #0
-	mov	r1, #0x12
+	mov	r1, #0x3
 	add	r2, r4, #0
 	add	r3, r7, #0
 	bl	CreateMonDexNum
 	mov	r0, #0x0
-	mov	r1, #0x11
+	mov	r1, #0x2
 	add	r2, r4, #0
 	add	r3, r7, #0
 	bl	CreateCaughtBall
 	mov	r0, #0x0
-	mov	r1, #0x16
+	mov	r1, #0x7
 	add	r2, r4, #0
 	bl	CreateMonName
 .L417:
@@ -147250,7 +147442,7 @@ CreateMonListEntry:
 .L440:
 	.word	sPokedexView
 	.word	0xffff
-	.word	0xccc
+	.word	0xcd6
 .L422:
 	ldr	r1, .L442
 	add	r0, r3, r1
@@ -147258,7 +147450,7 @@ CreateMonListEntry:
 	ldrsh	r1, [r0, r2]
 	lsl	r1, r1, #0x19
 	lsr	r1, r1, #0x18
-	mov	r0, #0x11
+	mov	r0, #0x2
 	add	r2, r7, #0
 	bl	ClearMonListEntry
 	ldr	r1, [r6]
@@ -147274,7 +147466,7 @@ CreateMonListEntry:
 	lsl	r2, r2, #0x19
 	lsr	r2, r2, #0x18
 	add	r0, r5, #0
-	mov	r1, #0x12
+	mov	r1, #0x3
 	add	r3, r7, #0
 	bl	CreateMonDexNum
 	ldr	r1, [r6]
@@ -147288,7 +147480,7 @@ CreateMonListEntry:
 	ldrsh	r2, [r1, r3]
 	lsl	r2, r2, #0x19
 	lsr	r2, r2, #0x18
-	mov	r1, #0x11
+	mov	r1, #0x2
 	add	r3, r7, #0
 	bl	CreateCaughtBall
 	ldr	r1, [r6]
@@ -147304,7 +147496,7 @@ CreateMonListEntry:
 .L443:
 	.align	2, 0
 .L442:
-	.word	0xccc
+	.word	0xcd6
 .L425:
 	ldr	r2, .L444
 	add	r0, r1, r2
@@ -147313,7 +147505,7 @@ CreateMonListEntry:
 	lsl	r2, r2, #0x19
 	lsr	r2, r2, #0x18
 	add	r0, r5, #0
-	mov	r1, #0x12
+	mov	r1, #0x3
 	add	r3, r7, #0
 	bl	CreateMonDexNum
 	ldr	r0, [r6]
@@ -147324,7 +147516,7 @@ CreateMonListEntry:
 	lsl	r2, r2, #0x19
 	lsr	r2, r2, #0x18
 	mov	r0, #0x0
-	mov	r1, #0x11
+	mov	r1, #0x2
 	add	r3, r7, #0
 	bl	CreateCaughtBall
 	ldr	r0, [r6]
@@ -147336,13 +147528,13 @@ CreateMonListEntry:
 	lsr	r2, r2, #0x18
 	mov	r0, #0x0
 .L437:
-	mov	r1, #0x16
+	mov	r1, #0x7
 	bl	CreateMonName
 	b	.L408
 .L445:
 	.align	2, 0
 .L444:
-	.word	0xccc
+	.word	0xcd6
 .L427:
 	add	r0, r1, #0x5
 	lsl	r0, r0, #0x10
@@ -147379,7 +147571,7 @@ CreateMonListEntry:
 	lsl	r1, r2, #0x19
 .L436:
 	lsr	r1, r1, #0x18
-	mov	r0, #0x11
+	mov	r0, #0x2
 	add	r2, r7, #0
 	bl	ClearMonListEntry
 	b	.L408
@@ -147387,12 +147579,12 @@ CreateMonListEntry:
 	.align	2, 0
 .L446:
 	.word	sPokedexView
-	.word	0xccc
+	.word	0xcd6
 	.word	0xffff
 .L429:
 	lsl	r0, r2, #0x19
 	lsr	r4, r0, #0x18
-	mov	r0, #0x11
+	mov	r0, #0x2
 	add	r1, r4, #0
 	add	r2, r7, #0
 	bl	ClearMonListEntry
@@ -147404,7 +147596,7 @@ CreateMonListEntry:
 	cmp	r0, #0
 	beq	.L432	@cond_branch
 	add	r0, r5, #0
-	mov	r1, #0x12
+	mov	r1, #0x3
 	add	r2, r4, #0
 	add	r3, r7, #0
 	bl	CreateMonDexNum
@@ -147414,7 +147606,7 @@ CreateMonListEntry:
 	ldrb	r0, [r0, #0x2]
 	lsl	r0, r0, #0x1e
 	lsr	r0, r0, #0x1f
-	mov	r1, #0x11
+	mov	r1, #0x2
 	add	r2, r4, #0
 	add	r3, r7, #0
 	bl	CreateCaughtBall
@@ -147422,23 +147614,23 @@ CreateMonListEntry:
 	ldr	r0, [r2]
 	add	r0, r0, r6
 	ldrh	r0, [r0]
-	mov	r1, #0x16
+	mov	r1, #0x7
 	add	r2, r4, #0
 	bl	CreateMonName
 	b	.L408
 .L432:
 	add	r0, r5, #0
-	mov	r1, #0x12
+	mov	r1, #0x3
 	add	r2, r4, #0
 	add	r3, r7, #0
 	bl	CreateMonDexNum
 	mov	r0, #0x0
-	mov	r1, #0x11
+	mov	r1, #0x2
 	add	r2, r4, #0
 	add	r3, r7, #0
 	bl	CreateCaughtBall
 	mov	r0, #0x0
-	mov	r1, #0x16
+	mov	r1, #0x7
 	add	r2, r4, #0
 	bl	CreateMonName
 .L408:
@@ -147699,7 +147891,7 @@ CreateMonSpritesAtPos:
 	ldr	r4, .L474+0xc
 	cmp	r0, r4
 	beq	.L471	@cond_branch
-	mov	r1, #0x60
+	mov	r1, #0x92
 	mov	r2, #0x50
 	bl	CreatePokedexMonSprite
 	lsl	r0, r0, #0x18
@@ -147723,7 +147915,7 @@ CreateMonSpritesAtPos:
 	lsr	r0, r0, #0x10
 	cmp	r0, r4
 	beq	.L472	@cond_branch
-	mov	r1, #0x60
+	mov	r1, #0x92
 	mov	r2, #0x50
 	bl	CreatePokedexMonSprite
 	lsl	r0, r0, #0x18
@@ -147749,7 +147941,7 @@ CreateMonSpritesAtPos:
 	lsr	r0, r0, #0x10
 	cmp	r0, r4
 	beq	.L473	@cond_branch
-	mov	r1, #0x60
+	mov	r1, #0x92
 	mov	r2, #0x50
 	bl	CreatePokedexMonSprite
 	lsl	r0, r0, #0x18
@@ -147802,13 +147994,13 @@ CreateMonSpritesAtPos:
 	.word	sPokedexView
 	.word	0xcba
 	.word	0xffff
-	.word	0xcc2
+	.word	0xccc
 	.word	gSprites
 	.word	SpriteCB_PokedexListMonSprite
 	.word	0xffe0
-	.word	0xcc9
-	.word	0xccc
-	.word	0xcce
+	.word	0xcd3
+	.word	0xcd6
+	.word	0xcd8
 .Lfe33:
 	.size	 CreateMonSpritesAtPos,.Lfe33-CreateMonSpritesAtPos
 	.align	2, 0
@@ -147831,9 +148023,9 @@ UpdateDexListScroll:
 	ldrb	r3, [r2]
 	add	r7, r0, #0
 	cmp	r3, #0
-	bne	.LCB5363
+	bne	.LCB5362
 	b	.L477	@long jump
-.LCB5363:
+.LCB5362:
 	sub	r0, r3, #0x1
 	strb	r0, [r2]
 	cmp	r4, #0x1
@@ -147845,7 +148037,7 @@ UpdateDexListScroll:
 	.align	2, 0
 .L497:
 	.word	sPokedexView
-	.word	0xcca
+	.word	0xcd4
 .L479:
 	mov	r3, #0x0
 	ldr	r4, .L499
@@ -147915,11 +148107,11 @@ UpdateDexListScroll:
 	.word	0xffff
 	.word	gSprites
 	.word	0xcba
-	.word	0xcca
-	.word	0xcc9
+	.word	0xcd4
+	.word	0xcd3
+	.word	0xcd8
+	.word	0xcd2
 	.word	0xcce
-	.word	0xcc8
-	.word	0xcc4
 .L486:
 	mov	r3, #0x0
 	ldr	r2, .L501
@@ -147991,11 +148183,11 @@ UpdateDexListScroll:
 	.word	0xffff
 	.word	gSprites
 	.word	0xcba
-	.word	0xcca
-	.word	0xcc9
+	.word	0xcd4
+	.word	0xcd3
+	.word	0xcd8
+	.word	0xcd2
 	.word	0xcce
-	.word	0xcc8
-	.word	0xcc4
 .L477:
 	ldr	r4, .L503
 	add	r2, r1, r4
@@ -148020,8 +148212,8 @@ UpdateDexListScroll:
 .L504:
 	.align	2, 0
 .L503:
-	.word	0xcc9
-	.word	0xccc
+	.word	0xcd3
+	.word	0xcd6
 .Lfe34:
 	.size	 UpdateDexListScroll,.Lfe34-UpdateDexListScroll
 	.align	2, 0
@@ -148050,8 +148242,8 @@ CreateScrollingPokemonSprite:
 	.align	2, 0
 .L518:
 	.word	sPokedexView
-	.word	0xccc
-	.word	0xcce
+	.word	0xcd6
+	.word	0xcd8
 .L507:
 	sub	r0, r3, #0x1
 	lsl	r0, r0, #0x10
@@ -148063,7 +148255,7 @@ CreateScrollingPokemonSprite:
 	cmp	r1, r0
 	beq	.L508	@cond_branch
 	add	r0, r1, #0
-	mov	r1, #0x60
+	mov	r1, #0x92
 	mov	r2, #0x50
 	bl	CreatePokedexMonSprite
 	lsl	r0, r0, #0x18
@@ -148111,7 +148303,7 @@ CreateScrollingPokemonSprite:
 	cmp	r1, r0
 	beq	.L512	@cond_branch
 	add	r0, r1, #0
-	mov	r1, #0x60
+	mov	r1, #0x92
 	mov	r2, #0x50
 	bl	CreatePokedexMonSprite
 	lsl	r0, r0, #0x18
@@ -148291,7 +148483,7 @@ TryDoPokedexScroll:
 .L550:
 	.word	sPokedexView
 	.word	0xca8
-	.word	0xcc8
+	.word	0xcd2
 .L529:
 	ldrh	r1, [r2, #0x2e]
 	mov	r0, #0x10
@@ -148357,8 +148549,8 @@ TryDoPokedexScroll:
 .L552:
 	.word	sPokedexView
 	.word	0xca8
-	.word	0xcc8
-	.word	0xcd4
+	.word	0xcd2
+	.word	0xcde
 .L542:
 	ldr	r1, .L554
 	ldr	r6, .L554+0x4
@@ -148381,17 +148573,16 @@ TryDoPokedexScroll:
 	mov	r8, r2
 	add	r0, r1, r2
 	strh	r3, [r0]
-	mov	r4, #0xcd
-	lsl	r4, r4, #0x4
+	ldr	r4, .L554+0x18
 	add	r0, r1, r4
 	strh	r5, [r0]
-	ldr	r3, .L554+0x18
+	ldr	r3, .L554+0x1c
 	add	r1, r1, r3
 	mov	r0, sl
 	strb	r0, [r1]
 	ldr	r2, [r6]
 	lsr	r5, r5, #0x1
-	ldr	r1, .L554+0x1c
+	ldr	r1, .L554+0x20
 	add	r0, r2, r1
 	strh	r5, [r0]
 	add	r3, r2, r3
@@ -148423,12 +148614,13 @@ TryDoPokedexScroll:
 .L554:
 	.word	sScrollMonIncrements
 	.word	sPokedexView
-	.word	0xcd4
+	.word	0xcde
 	.word	sScrollTimers
-	.word	0xcca
-	.word	0xcd2
-	.word	0xccb
-	.word	0xcc4
+	.word	0xcd4
+	.word	0xcdc
+	.word	0xcda
+	.word	0xcd5
+	.word	0xcce
 .Lfe36:
 	.size	 TryDoPokedexScroll,.Lfe36-TryDoPokedexScroll
 	.align	2, 0
@@ -148482,7 +148674,7 @@ UpdateSelectedMonSpriteId:
 	.word	gSprites
 	.word	0xffff
 	.word	0xcba
-	.word	0xcc2
+	.word	0xccc
 .Lfe37:
 	.size	 UpdateSelectedMonSpriteId,.Lfe37-UpdateSelectedMonSpriteId
 	.align	2, 0
@@ -148557,7 +148749,7 @@ TryDoInfoScreenScroll:
 .L590:
 	.align	2, 0
 .L589:
-	.word	0xcc8
+	.word	0xcd2
 .L585:
 	add	r4, r2, #0
 	b	.L577
@@ -148625,7 +148817,7 @@ TryDoInfoScreenScroll:
 	.word	0xca8
 	.word	sPokedexView
 	.word	0xcaa
-	.word	0xcc8
+	.word	0xcd2
 .L574:
 	mov	r0, #0x0
 .L583:
@@ -148819,32 +149011,31 @@ CreatePokedexMonSprite:
 	.thumb_func
 CreateInterfaceSprites:
 	push	{r4, r5, r6, r7, lr}
-	mov	r7, sl
-	mov	r6, r9
-	mov	r5, r8
-	push	{r5, r6, r7}
-	mov	r8, r0
-	lsl	r0, r0, #0x18
-	lsr	r0, r0, #0x18
-	mov	r8, r0
-	ldr	r4, .L659
-	add	r0, r4, #0
-	mov	r1, #0xb8
+	mov	r7, r9
+	mov	r6, r8
+	push	{r6, r7}
+	add	sp, sp, #-0x4
+	add	r4, r0, #0
+	lsl	r4, r4, #0x18
+	lsr	r4, r4, #0x18
+	ldr	r5, .L659
+	add	r0, r5, #0
+	mov	r1, #0xa
 	mov	r2, #0x4
 	mov	r3, #0x0
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	ldr	r1, .L659+0x4
-	mov	sl, r1
+	ldr	r0, .L659+0x4
+	mov	r9, r0
 	lsl	r0, r7, #0x4
 	add	r0, r0, r7
 	lsl	r0, r0, #0x2
-	add	r0, r0, sl
+	add	r0, r0, r9
 	mov	r1, #0x0
 	strh	r1, [r0, #0x30]
-	add	r0, r4, #0
-	mov	r1, #0xb8
+	add	r0, r5, #0
+	mov	r1, #0xa
 	mov	r2, #0x9c
 	mov	r3, #0x0
 	bl	CreateSprite
@@ -148853,7 +149044,7 @@ CreateInterfaceSprites:
 	lsl	r0, r7, #0x4
 	add	r0, r0, r7
 	lsl	r0, r0, #0x2
-	add	r0, r0, sl
+	add	r0, r0, r9
 	mov	r1, #0x1
 	strh	r1, [r0, #0x30]
 	add	r0, r0, #0x3f
@@ -148862,133 +149053,33 @@ CreateInterfaceSprites:
 	orr	r1, r1, r2
 	strb	r1, [r0]
 	ldr	r0, .L659+0x8
-	mov	r1, #0xe6
+	mov	r1, #0x8
 	mov	r2, #0x14
 	mov	r3, #0x0
 	bl	CreateSprite
-	ldr	r5, .L659+0xc
-	add	r0, r5, #0
-	mov	r1, #0x10
-	mov	r2, #0x78
-	mov	r3, #0x0
-	bl	CreateSprite
-	add	r0, r5, #0
-	mov	r1, #0x30
-	mov	r2, #0x78
-	mov	r3, #0x0
-	bl	CreateSprite
-	lsl	r0, r0, #0x18
-	lsr	r7, r0, #0x18
-	lsl	r0, r7, #0x4
-	add	r0, r0, r7
-	lsl	r0, r0, #0x2
-	add	r0, r0, sl
-	mov	r1, #0x3
-	bl	StartSpriteAnim
-	add	r0, r5, #0
-	mov	r1, #0x10
-	mov	r2, #0x90
-	mov	r3, #0x0
-	bl	CreateSprite
-	lsl	r0, r0, #0x18
-	lsr	r7, r0, #0x18
-	lsl	r4, r7, #0x4
-	add	r4, r4, r7
-	lsl	r4, r4, #0x2
-	add	r4, r4, sl
-	add	r0, r4, #0
-	mov	r1, #0x2
-	bl	StartSpriteAnim
-	mov	r0, #0x80
-	mov	r9, r0
-	mov	r1, r9
-	strh	r1, [r4, #0x32]
-	add	r0, r5, #0
-	mov	r1, #0x30
-	mov	r2, #0x90
-	mov	r3, #0x0
-	bl	CreateSprite
-	lsl	r0, r0, #0x18
-	lsr	r7, r0, #0x18
-	lsl	r0, r7, #0x4
-	add	r0, r0, r7
-	lsl	r0, r0, #0x2
-	add	r0, r0, sl
-	mov	r1, #0x1
-	bl	StartSpriteAnim
-	ldr	r6, .L659+0x10
-	add	r0, r6, #0
-	mov	r1, #0x0
-	mov	r2, #0x50
-	mov	r3, #0x2
-	bl	CreateSprite
-	lsl	r0, r0, #0x18
-	lsr	r7, r0, #0x18
-	lsl	r1, r7, #0x4
-	add	r1, r1, r7
-	lsl	r1, r1, #0x2
-	add	r1, r1, sl
-	ldrb	r2, [r1, #0x1]
-	mov	r4, #0x4
-	neg	r4, r4
-	add	r0, r4, #0
-	and	r0, r0, r2
-	mov	r5, #0x1
-	orr	r0, r0, r5
-	strb	r0, [r1, #0x1]
-	ldrb	r2, [r1, #0x3]
-	mov	r0, #0x3f
-	neg	r0, r0
-	and	r0, r0, r2
-	mov	r2, #0x3c
-	orr	r0, r0, r2
-	strb	r0, [r1, #0x3]
-	mov	r0, #0x1e
-	strh	r0, [r1, #0x2e]
-	mov	r0, #0x0
-	strh	r0, [r1, #0x30]
-	add	r0, r6, #0
-	mov	r1, #0x0
-	mov	r2, #0x50
-	mov	r3, #0x2
-	bl	CreateSprite
-	lsl	r0, r0, #0x18
-	lsr	r7, r0, #0x18
-	lsl	r1, r7, #0x4
-	add	r1, r1, r7
-	lsl	r1, r1, #0x2
-	add	r1, r1, sl
-	ldrb	r0, [r1, #0x1]
-	and	r4, r4, r0
-	orr	r4, r4, r5
-	strb	r4, [r1, #0x1]
-	ldrb	r0, [r1, #0x3]
-	mov	r2, #0x3e
-	orr	r0, r0, r2
-	strb	r0, [r1, #0x3]
-	mov	r0, #0x1f
-	strh	r0, [r1, #0x2e]
-	mov	r0, r9
-	strh	r0, [r1, #0x30]
-	mov	r1, r8
-	cmp	r1, #0
-	beq	.LCB6837
+	cmp	r4, #0
+	beq	.LCB6718
 	b	.L624	@long jump
-.LCB6837:
+.LCB6718:
 	bl	IsNationalPokedexEnabled
 	cmp	r0, #0
-	beq	.LCB6842
+	beq	.LCB6723
 	b	.L625	@long jump
-.LCB6842:
-	ldr	r4, .L659+0x14
+.LCB6723:
+	ldr	r0, .L659+0xc
+	mov	r1, #0xcc
+	mov	r2, #0x15
+	mov	r3, #0x1
+	bl	CreateSprite
+	ldr	r4, .L659+0x10
 	add	r0, r4, #0
-	mov	r1, #0x20
-	mov	r2, #0x28
+	mov	r1, #0xcc
+	mov	r2, #0x26
 	mov	r3, #0x1
 	bl	CreateSprite
 	add	r0, r4, #0
-	mov	r1, #0x20
-	mov	r2, #0x48
+	mov	r1, #0xcc
+	mov	r2, #0x31
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
@@ -148996,21 +149087,21 @@ CreateInterfaceSprites:
 	lsl	r0, r7, #0x4
 	add	r0, r0, r7
 	lsl	r0, r0, #0x2
-	add	r0, r0, sl
+	add	r0, r0, r9
 	mov	r1, #0x1
 	bl	StartSpriteAnim
-	mov	r0, #0x0
-	mov	r8, r0
-	ldr	r0, .L659+0x18
-	mov	r1, #0x18
-	mov	r2, #0x30
+	mov	r1, #0x0
+	mov	r8, r1
+	ldr	r0, .L659+0x14
+	mov	r1, #0xd8
+	mov	r2, #0x20
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	ldr	r0, .L659+0x1c
+	ldr	r0, .L659+0x18
 	ldr	r0, [r0]
-	ldr	r1, .L659+0x20
+	ldr	r1, .L659+0x1c
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	mov	r1, #0x64
@@ -149020,7 +149111,7 @@ CreateInterfaceSprites:
 	lsl	r0, r7, #0x4
 	add	r0, r0, r7
 	lsl	r0, r0, #0x2
-	mov	r1, sl
+	mov	r1, r9
 	add	r4, r0, r1
 	lsl	r1, r5, #0x18
 	lsr	r1, r1, #0x18
@@ -149037,10 +149128,9 @@ CreateInterfaceSprites:
 	.word	sScrollArrowSpriteTemplate
 	.word	gSprites
 	.word	sScrollBarSpriteTemplate
-	.word	sInterfaceTextSpriteTemplate
-	.word	sRotatingPokeBallSpriteTemplate
+	.word	sHoennNationalTextSpriteTemplate
 	.word	sSeenOwnTextSpriteTemplate
-	.word	sHoennDexSeenOwnNumberSpriteTemplate
+	.word	sNationalDexSeenOwnNumberSpriteTemplate
 	.word	sPokedexView
 	.word	0xcb6
 .L626:
@@ -149052,8 +149142,8 @@ CreateInterfaceSprites:
 	strb	r1, [r0]
 .L627:
 	ldr	r0, .L661
-	mov	r1, #0x20
-	mov	r2, #0x30
+	mov	r1, #0xe0
+	mov	r2, #0x20
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
@@ -149089,7 +149179,7 @@ CreateInterfaceSprites:
 .L662:
 	.align	2, 0
 .L661:
-	.word	sHoennDexSeenOwnNumberSpriteTemplate
+	.word	sNationalDexSeenOwnNumberSpriteTemplate
 	.word	sPokedexView
 	.word	0xcb6
 	.word	gSprites
@@ -149107,8 +149197,8 @@ CreateInterfaceSprites:
 .L630:
 	ldr	r6, .L663+0x4
 	add	r0, r6, #0
-	mov	r1, #0x28
-	mov	r2, #0x30
+	mov	r1, #0xe8
+	mov	r2, #0x20
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
@@ -149136,8 +149226,8 @@ CreateInterfaceSprites:
 	mov	r0, #0x0
 	mov	r8, r0
 	add	r0, r6, #0
-	mov	r1, #0x18
-	mov	r2, #0x50
+	mov	r1, #0xd8
+	mov	r2, #0x2a
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
@@ -149167,7 +149257,7 @@ CreateInterfaceSprites:
 	.align	2, 0
 .L663:
 	.word	gSprites
-	.word	sHoennDexSeenOwnNumberSpriteTemplate
+	.word	sNationalDexSeenOwnNumberSpriteTemplate
 	.word	sPokedexView
 	.word	0xcb6
 	.word	0xcb8
@@ -149180,8 +149270,8 @@ CreateInterfaceSprites:
 	strb	r1, [r0]
 .L632:
 	ldr	r0, .L665
-	mov	r1, #0x20
-	mov	r2, #0x50
+	mov	r1, #0xe0
+	mov	r2, #0x2a
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
@@ -149217,7 +149307,7 @@ CreateInterfaceSprites:
 .L666:
 	.align	2, 0
 .L665:
-	.word	sHoennDexSeenOwnNumberSpriteTemplate
+	.word	sNationalDexSeenOwnNumberSpriteTemplate
 	.word	sPokedexView
 	.word	0xcb8
 	.word	gSprites
@@ -149234,8 +149324,8 @@ CreateInterfaceSprites:
 	strb	r1, [r0]
 .L635:
 	ldr	r0, .L667+0x4
-	mov	r1, #0x28
-	mov	r2, #0x50
+	mov	r1, #0xe8
+	mov	r2, #0x2a
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
@@ -149265,38 +149355,25 @@ CreateInterfaceSprites:
 	.align	2, 0
 .L667:
 	.word	gSprites
-	.word	sHoennDexSeenOwnNumberSpriteTemplate
+	.word	sNationalDexSeenOwnNumberSpriteTemplate
 	.word	sPokedexView
 	.word	0xcb8
 .L625:
-	ldr	r4, .L669
-	add	r0, r4, #0
-	mov	r1, #0x20
-	mov	r2, #0x28
+	ldr	r5, .L669
+	add	r0, r5, #0
+	mov	r1, #0xcc
+	mov	r2, #0x15
 	mov	r3, #0x1
 	bl	CreateSprite
-	add	r0, r4, #0
-	mov	r1, #0x20
-	mov	r2, #0x4c
-	mov	r3, #0x1
-	bl	CreateSprite
-	lsl	r0, r0, #0x18
-	lsr	r7, r0, #0x18
-	lsl	r0, r7, #0x4
-	add	r0, r0, r7
-	lsl	r0, r0, #0x2
-	add	r0, r0, sl
-	mov	r1, #0x1
-	bl	StartSpriteAnim
 	ldr	r4, .L669+0x4
 	add	r0, r4, #0
-	mov	r1, #0x11
-	mov	r2, #0x2d
+	mov	r1, #0xcc
+	mov	r2, #0x26
 	mov	r3, #0x1
 	bl	CreateSprite
 	add	r0, r4, #0
-	mov	r1, #0x11
-	mov	r2, #0x37
+	mov	r1, #0xcc
+	mov	r2, #0x31
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
@@ -149304,25 +149381,38 @@ CreateInterfaceSprites:
 	lsl	r0, r7, #0x4
 	add	r0, r0, r7
 	lsl	r0, r0, #0x2
-	add	r0, r0, sl
+	add	r0, r0, r9
+	mov	r1, #0x1
+	bl	StartSpriteAnim
+	add	r0, r5, #0
+	mov	r1, #0xcc
+	mov	r2, #0x36
+	mov	r3, #0x1
+	bl	CreateSprite
+	lsl	r0, r0, #0x18
+	lsr	r7, r0, #0x18
+	lsl	r0, r7, #0x4
+	add	r0, r0, r7
+	lsl	r0, r0, #0x2
+	add	r0, r0, r9
 	mov	r1, #0x1
 	bl	StartSpriteAnim
 	add	r0, r4, #0
-	mov	r1, #0x11
+	mov	r1, #0xcc
+	mov	r2, #0x47
+	mov	r3, #0x1
+	bl	CreateSprite
+	add	r0, r4, #0
+	mov	r1, #0xcc
 	mov	r2, #0x51
 	mov	r3, #0x1
 	bl	CreateSprite
-	add	r0, r4, #0
-	mov	r1, #0x11
-	mov	r2, #0x5b
-	mov	r3, #0x1
-	bl	CreateSprite
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
 	lsl	r0, r7, #0x4
 	add	r0, r0, r7
 	lsl	r0, r0, #0x2
-	add	r0, r0, sl
+	add	r0, r0, r9
 	mov	r1, #0x1
 	bl	StartSpriteAnim
 	mov	r0, #0x0
@@ -149332,8 +149422,8 @@ CreateInterfaceSprites:
 	mov	r0, #0x0
 	mov	r8, r0
 	ldr	r0, .L669+0x8
-	mov	r1, #0x28
-	mov	r2, #0x2d
+	mov	r1, #0xd8
+	mov	r2, #0x20
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
@@ -149346,7 +149436,7 @@ CreateInterfaceSprites:
 	lsl	r0, r7, #0x4
 	add	r0, r0, r7
 	lsl	r0, r0, #0x2
-	mov	r1, sl
+	mov	r1, r9
 	add	r4, r0, r1
 	lsl	r1, r5, #0x18
 	lsr	r1, r1, #0x18
@@ -149360,8 +149450,8 @@ CreateInterfaceSprites:
 .L670:
 	.align	2, 0
 .L669:
-	.word	sSeenOwnTextSpriteTemplate
 	.word	sHoennNationalTextSpriteTemplate
+	.word	sSeenOwnTextSpriteTemplate
 	.word	sNationalDexSeenOwnNumberSpriteTemplate
 .L637:
 	add	r0, r4, #0
@@ -149372,8 +149462,8 @@ CreateInterfaceSprites:
 	strb	r1, [r0]
 .L638:
 	ldr	r0, .L671
-	mov	r1, #0x30
-	mov	r2, #0x2d
+	mov	r1, #0xe0
+	mov	r2, #0x20
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
@@ -149421,8 +149511,8 @@ CreateInterfaceSprites:
 .L641:
 	ldr	r5, .L673+0x4
 	add	r0, r5, #0
-	mov	r1, #0x38
-	mov	r2, #0x2d
+	mov	r1, #0xe8
+	mov	r2, #0x20
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
@@ -149443,20 +149533,20 @@ CreateInterfaceSprites:
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
 	bl	StartSpriteAnim
+	mov	r0, #0x1
+	bl	GetHoennPokedexCount
+	lsl	r0, r0, #0x10
+	lsr	r6, r0, #0x10
 	mov	r0, #0x0
 	mov	r8, r0
 	add	r0, r5, #0
-	mov	r1, #0x28
-	mov	r2, #0x37
+	mov	r1, #0xd8
+	mov	r2, #0x2a
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	ldr	r0, .L673+0x8
-	ldr	r0, [r0]
-	ldr	r1, .L673+0xc
-	add	r0, r0, r1
-	ldrh	r0, [r0]
+	add	r0, r6, #0
 	mov	r1, #0x64
 	bl	__udivsi3
 	lsl	r0, r0, #0x10
@@ -149471,16 +149561,14 @@ CreateInterfaceSprites:
 	bl	StartSpriteAnim
 	cmp	r5, #0
 	beq	.L642	@cond_branch
-	mov	r0, #0x1
-	mov	r8, r0
+	mov	r1, #0x1
+	mov	r8, r1
 	b	.L643
 .L674:
 	.align	2, 0
 .L673:
 	.word	gSprites
 	.word	sNationalDexSeenOwnNumberSpriteTemplate
-	.word	sPokedexView
-	.word	0xcb6
 .L642:
 	add	r0, r4, #0
 	add	r0, r0, #0x3e
@@ -149490,17 +149578,13 @@ CreateInterfaceSprites:
 	strb	r1, [r0]
 .L643:
 	ldr	r0, .L675
-	mov	r1, #0x30
-	mov	r2, #0x37
+	mov	r1, #0xe0
+	mov	r2, #0x2a
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	ldr	r0, .L675+0x4
-	ldr	r0, [r0]
-	ldr	r1, .L675+0x8
-	add	r0, r0, r1
-	ldrh	r0, [r0]
+	add	r0, r6, #0
 	mov	r1, #0x64
 	bl	__umodsi3
 	lsl	r0, r0, #0x10
@@ -149518,7 +149602,7 @@ CreateInterfaceSprites:
 	lsl	r0, r7, #0x4
 	add	r0, r0, r7
 	lsl	r0, r0, #0x2
-	ldr	r1, .L675+0xc
+	ldr	r1, .L675+0x4
 	add	r0, r0, r1
 	lsl	r1, r5, #0x18
 	lsr	r1, r1, #0x18
@@ -149528,8 +149612,6 @@ CreateInterfaceSprites:
 	.align	2, 0
 .L675:
 	.word	sNationalDexSeenOwnNumberSpriteTemplate
-	.word	sPokedexView
-	.word	0xcb6
 	.word	gSprites
 .L644:
 	ldr	r1, .L677
@@ -149545,17 +149627,13 @@ CreateInterfaceSprites:
 .L646:
 	ldr	r5, .L677+0x4
 	add	r0, r5, #0
-	mov	r1, #0x38
-	mov	r2, #0x37
+	mov	r1, #0xe8
+	mov	r2, #0x2a
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	ldr	r0, .L677+0x8
-	ldr	r0, [r0]
-	ldr	r1, .L677+0xc
-	add	r0, r0, r1
-	ldrh	r0, [r0]
+	add	r0, r6, #0
 	mov	r1, #0x64
 	bl	__umodsi3
 	lsl	r0, r0, #0x10
@@ -149571,20 +149649,20 @@ CreateInterfaceSprites:
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
 	bl	StartSpriteAnim
-	mov	r0, #0x1
-	bl	GetHoennPokedexCount
-	lsl	r0, r0, #0x10
-	lsr	r6, r0, #0x10
-	mov	r0, #0x0
-	mov	r8, r0
+	mov	r1, #0x0
+	mov	r8, r1
 	add	r0, r5, #0
-	mov	r1, #0x28
-	mov	r2, #0x51
+	mov	r1, #0xd8
+	mov	r2, #0x41
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	add	r0, r6, #0
+	ldr	r0, .L677+0x8
+	ldr	r0, [r0]
+	ldr	r1, .L677+0xc
+	add	r0, r0, r1
+	ldrh	r0, [r0]
 	mov	r1, #0x64
 	bl	__udivsi3
 	lsl	r0, r0, #0x10
@@ -149599,8 +149677,8 @@ CreateInterfaceSprites:
 	bl	StartSpriteAnim
 	cmp	r5, #0
 	beq	.L647	@cond_branch
-	mov	r1, #0x1
-	mov	r8, r1
+	mov	r0, #0x1
+	mov	r8, r0
 	b	.L648
 .L678:
 	.align	2, 0
@@ -149618,13 +149696,17 @@ CreateInterfaceSprites:
 	strb	r1, [r0]
 .L648:
 	ldr	r0, .L679
-	mov	r1, #0x30
-	mov	r2, #0x51
+	mov	r1, #0xe0
+	mov	r2, #0x41
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	add	r0, r6, #0
+	ldr	r0, .L679+0x4
+	ldr	r0, [r0]
+	ldr	r1, .L679+0x8
+	add	r0, r0, r1
+	ldrh	r0, [r0]
 	mov	r1, #0x64
 	bl	__umodsi3
 	lsl	r0, r0, #0x10
@@ -149642,7 +149724,7 @@ CreateInterfaceSprites:
 	lsl	r0, r7, #0x4
 	add	r0, r0, r7
 	lsl	r0, r0, #0x2
-	ldr	r1, .L679+0x4
+	ldr	r1, .L679+0xc
 	add	r0, r0, r1
 	lsl	r1, r5, #0x18
 	lsr	r1, r1, #0x18
@@ -149652,6 +149734,8 @@ CreateInterfaceSprites:
 	.align	2, 0
 .L679:
 	.word	sNationalDexSeenOwnNumberSpriteTemplate
+	.word	sPokedexView
+	.word	0xcb6
 	.word	gSprites
 .L649:
 	ldr	r1, .L681
@@ -149665,15 +149749,19 @@ CreateInterfaceSprites:
 	orr	r1, r1, r2
 	strb	r1, [r0]
 .L651:
-	ldr	r5, .L681+0x4
-	add	r0, r5, #0
-	mov	r1, #0x38
-	mov	r2, #0x51
+	ldr	r6, .L681+0x4
+	add	r0, r6, #0
+	mov	r1, #0xe8
+	mov	r2, #0x41
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	add	r0, r6, #0
+	ldr	r5, .L681+0x8
+	ldr	r0, [r5]
+	ldr	r1, .L681+0xc
+	add	r0, r0, r1
+	ldrh	r0, [r0]
 	mov	r1, #0x64
 	bl	__umodsi3
 	lsl	r0, r0, #0x10
@@ -149689,18 +149777,17 @@ CreateInterfaceSprites:
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
 	bl	StartSpriteAnim
-	mov	r1, #0x0
-	mov	r8, r1
-	add	r0, r5, #0
-	mov	r1, #0x28
-	mov	r2, #0x5b
+	mov	r0, #0x0
+	mov	r8, r0
+	add	r0, r6, #0
+	mov	r1, #0xd8
+	mov	r2, #0x4b
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	ldr	r0, .L681+0x8
-	ldr	r0, [r0]
-	ldr	r1, .L681+0xc
+	ldr	r0, [r5]
+	ldr	r1, .L681+0x10
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	mov	r1, #0x64
@@ -149726,6 +149813,7 @@ CreateInterfaceSprites:
 	.word	gSprites
 	.word	sNationalDexSeenOwnNumberSpriteTemplate
 	.word	sPokedexView
+	.word	0xcb6
 	.word	0xcb8
 .L652:
 	add	r0, r4, #0
@@ -149736,8 +149824,8 @@ CreateInterfaceSprites:
 	strb	r1, [r0]
 .L653:
 	ldr	r0, .L683
-	mov	r1, #0x30
-	mov	r2, #0x5b
+	mov	r1, #0xe0
+	mov	r2, #0x4b
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
@@ -149790,8 +149878,8 @@ CreateInterfaceSprites:
 	strb	r1, [r0]
 .L656:
 	ldr	r0, .L685+0x4
-	mov	r1, #0x38
-	mov	r2, #0x5b
+	mov	r1, #0xe8
+	mov	r2, #0x4b
 	mov	r3, #0x1
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
@@ -149849,17 +149937,17 @@ CreateInterfaceSprites:
 	lsl	r0, r7, #0x4
 	add	r0, r0, r7
 	lsl	r0, r0, #0x2
-	add	r0, r0, sl
+	add	r0, r0, r9
 .L658:
 	add	r0, r0, #0x3e
 	ldrb	r1, [r0]
 	mov	r2, #0x4
 	orr	r1, r1, r2
 	strb	r1, [r0]
-	pop	{r3, r4, r5}
+	add	sp, sp, #0x4
+	pop	{r3, r4}
 	mov	r8, r3
 	mov	r9, r4
-	mov	sl, r5
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
@@ -149884,7 +149972,8 @@ SpriteCB_SeenOwnInfo:
 	add	r1, r0, #0
 	ldr	r0, .L692
 	ldr	r0, [r0]
-	ldr	r2, .L692+0x4
+	mov	r2, #0xcf
+	lsl	r2, r2, #0x4
 	add	r0, r0, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
@@ -149898,7 +149987,6 @@ SpriteCB_SeenOwnInfo:
 	.align	2, 0
 .L692:
 	.word	sPokedexView
-	.word	0xce6
 .Lfe44:
 	.size	 SpriteCB_SeenOwnInfo,.Lfe44-SpriteCB_SeenOwnInfo
 	.align	2, 0
@@ -149929,15 +150017,14 @@ SpriteCB_MoveMonForInfoScreen:
 	ldrsh	r0, [r2, r3]
 	cmp	r0, #0x30
 	ble	.L696	@cond_branch
-	sub	r0, r1, #0x1
+	sub	r0, r1, #0x4
 	strh	r0, [r2, #0x20]
 .L696:
-	ldrh	r1, [r2, #0x20]
-	mov	r3, #0x20
-	ldrsh	r0, [r2, r3]
+	mov	r1, #0x20
+	ldrsh	r0, [r2, r1]
 	cmp	r0, #0x2f
 	bgt	.L697	@cond_branch
-	add	r0, r1, #0x1
+	mov	r0, #0x30
 	strh	r0, [r2, #0x20]
 .L697:
 	ldrh	r1, [r2, #0x22]
@@ -149945,15 +150032,14 @@ SpriteCB_MoveMonForInfoScreen:
 	ldrsh	r0, [r2, r3]
 	cmp	r0, #0x38
 	ble	.L698	@cond_branch
-	sub	r0, r1, #0x1
+	sub	r0, r1, #0x4
 	strh	r0, [r2, #0x22]
 .L698:
-	ldrh	r1, [r2, #0x22]
-	mov	r3, #0x22
-	ldrsh	r0, [r2, r3]
+	mov	r1, #0x22
+	ldrsh	r0, [r2, r1]
 	cmp	r0, #0x37
 	bgt	.L700	@cond_branch
-	add	r0, r1, #0x1
+	mov	r0, #0x38
 	strh	r0, [r2, #0x22]
 	b	.L700
 .L702:
@@ -149984,7 +150070,8 @@ SpriteCB_PokedexListMonSprite:
 	lsr	r6, r0, #0x18
 	ldr	r7, .L714
 	ldr	r1, [r7]
-	ldr	r2, .L714+0x4
+	mov	r2, #0xcf
+	lsl	r2, r2, #0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
@@ -149992,7 +150079,7 @@ SpriteCB_PokedexListMonSprite:
 	cmp	r0, #0x3
 	beq	.L706	@cond_branch
 	lsl	r5, r6, #0x1
-	ldr	r4, .L714+0x8
+	ldr	r4, .L714+0x4
 	add	r0, r1, r4
 	add	r0, r0, r5
 	ldrh	r0, [r0]
@@ -150005,7 +150092,6 @@ SpriteCB_PokedexListMonSprite:
 	.align	2, 0
 .L714:
 	.word	sPokedexView
-	.word	0xce6
 	.word	0xcba
 .L706:
 	ldr	r2, .L716
@@ -150135,7 +150221,8 @@ SpriteCB_Scrollbar:
 	add	r4, r0, #0
 	ldr	r1, .L723
 	ldr	r0, [r1]
-	ldr	r2, .L723+0x4
+	mov	r2, #0xcf
+	lsl	r2, r2, #0x4
 	add	r0, r0, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
@@ -150149,7 +150236,6 @@ SpriteCB_Scrollbar:
 	.align	2, 0
 .L723:
 	.word	sPokedexView
-	.word	0xce6
 .L721:
 	ldr	r2, [r1]
 	ldr	r1, .L725
@@ -150183,7 +150269,8 @@ SpriteCB_ScrollArrow:
 	add	r3, r0, #0
 	ldr	r1, .L743
 	ldr	r0, [r1]
-	ldr	r2, .L743+0x4
+	mov	r2, #0xcf
+	lsl	r2, r2, #0x4
 	add	r0, r0, r2
 	ldrb	r0, [r0]
 	add	r5, r1, #0
@@ -150198,7 +150285,6 @@ SpriteCB_ScrollArrow:
 	.align	2, 0
 .L743:
 	.word	sPokedexView
-	.word	0xce6
 .L728:
 	mov	r1, #0x30
 	ldrsh	r0, [r3, r1]
@@ -150310,7 +150396,7 @@ SpriteCB_ScrollArrow:
 	.align	2, 0
 .L749:
 	.word	gSineTable
-	.word	0xceb
+	.word	0xcf5
 .L737:
 	ldrb	r0, [r2]
 	mov	r1, #0x4
@@ -150331,7 +150417,8 @@ SpriteCB_DexListInterfaceText:
 	add	r1, r0, #0
 	ldr	r0, .L753
 	ldr	r0, [r0]
-	ldr	r2, .L753+0x4
+	mov	r2, #0xcf
+	lsl	r2, r2, #0x4
 	add	r0, r0, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
@@ -150347,7 +150434,6 @@ SpriteCB_DexListInterfaceText:
 	.align	2, 0
 .L753:
 	.word	sPokedexView
-	.word	0xce6
 .Lfe49:
 	.size	 SpriteCB_DexListInterfaceText,.Lfe49-SpriteCB_DexListInterfaceText
 	.align	2, 0
@@ -150359,7 +150445,8 @@ SpriteCB_RotatingPokeBall:
 	add	r6, r0, #0
 	ldr	r1, .L760
 	ldr	r0, [r1]
-	ldr	r2, .L760+0x4
+	mov	r2, #0xcf
+	lsl	r2, r2, #0x4
 	add	r0, r0, r2
 	ldrb	r0, [r0]
 	add	r7, r1, #0
@@ -150374,7 +150461,6 @@ SpriteCB_RotatingPokeBall:
 	.align	2, 0
 .L760:
 	.word	sPokedexView
-	.word	0xce6
 .L756:
 	ldr	r0, [r7]
 	ldr	r5, .L762
@@ -150445,7 +150531,7 @@ SpriteCB_RotatingPokeBall:
 .L763:
 	.align	2, 0
 .L762:
-	.word	0xcc8
+	.word	0xcd2
 	.word	gSineTable
 .Lfe50:
 	.size	 SpriteCB_RotatingPokeBall,.Lfe50-SpriteCB_RotatingPokeBall
@@ -150457,7 +150543,8 @@ SpriteCB_DexListStartMenuCursor:
 	add	r3, r0, #0
 	ldr	r1, .L772
 	ldr	r0, [r1]
-	ldr	r2, .L772+0x4
+	mov	r2, #0xcf
+	lsl	r2, r2, #0x4
 	add	r0, r0, r2
 	ldrb	r2, [r0]
 	cmp	r2, #0
@@ -150471,10 +150558,10 @@ SpriteCB_DexListStartMenuCursor:
 	.align	2, 0
 .L772:
 	.word	sPokedexView
-	.word	0xce6
 .L765:
 	ldr	r4, [r1]
-	ldr	r1, .L774
+	mov	r1, #0xcf
+	lsl	r1, r1, #0x4
 	add	r0, r4, r1
 	ldrb	r0, [r0]
 	mov	r1, #0x60
@@ -150482,7 +150569,7 @@ SpriteCB_DexListStartMenuCursor:
 	bne	.L767	@cond_branch
 	mov	r1, #0x50
 .L767:
-	ldr	r2, .L774+0x4
+	ldr	r2, .L774
 	add	r0, r4, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
@@ -150500,12 +150587,12 @@ SpriteCB_DexListStartMenuCursor:
 	neg	r0, r0
 	and	r0, r0, r1
 	strb	r0, [r2]
-	ldr	r1, .L774+0x8
+	ldr	r1, .L774+0x4
 	add	r0, r4, r1
 	ldrh	r0, [r0]
 	lsl	r0, r0, #0x4
 	strh	r0, [r3, #0x26]
-	ldr	r1, .L774+0xc
+	ldr	r1, .L774+0x8
 	ldrh	r2, [r3, #0x32]
 	lsl	r0, r2, #0x18
 	lsr	r0, r0, #0x17
@@ -150525,9 +150612,8 @@ SpriteCB_DexListStartMenuCursor:
 .L775:
 	.align	2, 0
 .L774:
-	.word	0xce6
-	.word	0xceb
-	.word	0xcec
+	.word	0xcf5
+	.word	0xcf6
 	.word	gSineTable
 .L769:
 	add	r0, r3, #0
@@ -150579,21 +150665,127 @@ PrintInfoScreenText:
 .Lfe52:
 	.size	 PrintInfoScreenText,.Lfe52-PrintInfoScreenText
 	.align	2, 0
+	.type	 PrintInfoScreenTextWhite,function
+	.thumb_func
+PrintInfoScreenTextWhite:
+	push	{r4, r5, lr}
+	add	sp, sp, #-0x18
+	add	r5, r1, #0
+	add	r3, r2, #0
+	lsl	r5, r5, #0x18
+	lsr	r5, r5, #0x18
+	lsl	r3, r3, #0x18
+	lsr	r3, r3, #0x18
+	add	r1, sp, #0x14
+	mov	r4, #0x0
+	strb	r4, [r1]
+	add	r2, r1, #0
+	mov	r1, #0x1
+	strb	r1, [r2, #0x1]
+	mov	r1, #0xf
+	strb	r1, [r2, #0x2]
+	str	r4, [sp]
+	str	r4, [sp, #0x4]
+	str	r2, [sp, #0x8]
+	sub	r1, r1, #0x10
+	str	r1, [sp, #0xc]
+	str	r0, [sp, #0x10]
+	mov	r0, #0x0
+	mov	r1, #0x1
+	add	r2, r5, #0
+	bl	AddTextPrinterParameterized4
+	add	sp, sp, #0x18
+	pop	{r4, r5}
+	pop	{r0}
+	bx	r0
+.Lfe53:
+	.size	 PrintInfoScreenTextWhite,.Lfe53-PrintInfoScreenTextWhite
+	.align	2, 0
+	.type	 PrintInfoScreenTextSmall,function
+	.thumb_func
+PrintInfoScreenTextSmall:
+	push	{r4, r5, lr}
+	add	sp, sp, #-0x18
+	add	r5, r1, #0
+	add	r3, r2, #0
+	lsl	r5, r5, #0x18
+	lsr	r5, r5, #0x18
+	lsl	r3, r3, #0x18
+	lsr	r3, r3, #0x18
+	add	r1, sp, #0x14
+	mov	r4, #0x0
+	strb	r4, [r1]
+	add	r2, r1, #0
+	mov	r1, #0xf
+	strb	r1, [r2, #0x1]
+	mov	r1, #0x3
+	strb	r1, [r2, #0x2]
+	str	r4, [sp]
+	str	r4, [sp, #0x4]
+	str	r2, [sp, #0x8]
+	str	r4, [sp, #0xc]
+	str	r0, [sp, #0x10]
+	mov	r0, #0x0
+	mov	r1, #0x0
+	add	r2, r5, #0
+	bl	AddTextPrinterParameterized4
+	add	sp, sp, #0x18
+	pop	{r4, r5}
+	pop	{r0}
+	bx	r0
+.Lfe54:
+	.size	 PrintInfoScreenTextSmall,.Lfe54-PrintInfoScreenTextSmall
+	.align	2, 0
+	.type	 PrintInfoScreenTextSmallWhite,function
+	.thumb_func
+PrintInfoScreenTextSmallWhite:
+	push	{r4, r5, lr}
+	add	sp, sp, #-0x18
+	add	r5, r1, #0
+	add	r3, r2, #0
+	lsl	r5, r5, #0x18
+	lsr	r5, r5, #0x18
+	lsl	r3, r3, #0x18
+	lsr	r3, r3, #0x18
+	add	r1, sp, #0x14
+	mov	r4, #0x0
+	strb	r4, [r1]
+	add	r2, r1, #0
+	mov	r1, #0x1
+	strb	r1, [r2, #0x1]
+	mov	r1, #0xf
+	strb	r1, [r2, #0x2]
+	str	r4, [sp]
+	str	r4, [sp, #0x4]
+	str	r2, [sp, #0x8]
+	str	r4, [sp, #0xc]
+	str	r0, [sp, #0x10]
+	mov	r0, #0x0
+	mov	r1, #0x0
+	add	r2, r5, #0
+	bl	AddTextPrinterParameterized4
+	add	sp, sp, #0x18
+	pop	{r4, r5}
+	pop	{r0}
+	bx	r0
+.Lfe55:
+	.size	 PrintInfoScreenTextSmallWhite,.Lfe55-PrintInfoScreenTextSmallWhite
+	.align	2, 0
 	.type	 LoadInfoScreen,function
 	.thumb_func
 LoadInfoScreen:
 	push	{r4, r5, lr}
 	lsl	r4, r1, #0x18
 	lsr	r4, r4, #0x18
-	ldr	r1, .L778
+	ldr	r1, .L781
 	str	r0, [r1]
-	ldr	r0, .L778+0x4
+	ldr	r0, .L781+0x4
 	mov	r1, #0x0
 	bl	CreateTask
 	add	r5, r0, #0
 	lsl	r5, r5, #0x18
 	lsr	r5, r5, #0x18
-	ldr	r1, .L778+0x8
+	ldr	r1, .L781+0x8
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
@@ -150609,7 +150801,7 @@ LoadInfoScreen:
 	strh	r1, [r0, #0x12]
 	mov	r0, #0x0
 	bl	ResetBgsAndClearDma3BusyFlags
-	ldr	r1, .L778+0xc
+	ldr	r1, .L781+0xc
 	mov	r0, #0x0
 	mov	r2, #0x4
 	bl	InitBgsFromTemplates
@@ -150635,23 +150827,23 @@ LoadInfoScreen:
 	add	r1, r0, #0
 	mov	r0, #0x0
 	bl	SetBgTilemapBuffer
-	ldr	r0, .L778+0x10
+	ldr	r0, .L781+0x10
 	bl	InitWindows
 	bl	DeactivateAllTextPrinters
 	add	r0, r5, #0
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-.L779:
+.L782:
 	.align	2, 0
-.L778:
+.L781:
 	.word	sPokedexListItem
 	.word	Task_LoadInfoScreen
 	.word	gTasks
 	.word	sInfoScreen_BgTemplate
 	.word	sInfoScreen_WindowTemplates
-.Lfe53:
-	.size	 LoadInfoScreen,.Lfe53-LoadInfoScreen
+.Lfe56:
+	.size	 LoadInfoScreen,.Lfe56-LoadInfoScreen
 	.align	2, 0
 	.type	 IsInfoScreenScrolling,function
 	.thumb_func
@@ -150659,7 +150851,7 @@ IsInfoScreenScrolling:
 	push	{lr}
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r2, .L784
+	ldr	r2, .L787
 	lsl	r1, r0, #0x2
 	add	r1, r1, r0
 	lsl	r1, r1, #0x3
@@ -150667,25 +150859,25 @@ IsInfoScreenScrolling:
 	mov	r2, #0x8
 	ldrsh	r0, [r1, r2]
 	cmp	r0, #0
-	bne	.L781	@cond_branch
+	bne	.L784	@cond_branch
 	ldr	r1, [r1]
-	ldr	r0, .L784+0x4
+	ldr	r0, .L787+0x4
 	cmp	r1, r0
-	bne	.L781	@cond_branch
+	bne	.L784	@cond_branch
 	mov	r0, #0x0
-	b	.L783
-.L785:
+	b	.L786
+.L788:
 	.align	2, 0
-.L784:
+.L787:
 	.word	gTasks
 	.word	Task_HandleInfoScreenInput
-.L781:
+.L784:
 	mov	r0, #0x1
-.L783:
+.L786:
 	pop	{r1}
 	bx	r1
-.Lfe54:
-	.size	 IsInfoScreenScrolling,.Lfe54-IsInfoScreenScrolling
+.Lfe57:
+	.size	 IsInfoScreenScrolling,.Lfe57-IsInfoScreenScrolling
 	.align	2, 0
 	.type	 sub_80BE9F8,function
 	.thumb_func
@@ -150693,9 +150885,9 @@ sub_80BE9F8:
 	add	r2, r0, #0
 	lsl	r0, r1, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r1, .L787
+	ldr	r1, .L790
 	str	r2, [r1]
-	ldr	r2, .L787+0x4
+	ldr	r2, .L790+0x4
 	lsl	r1, r0, #0x2
 	add	r1, r1, r0
 	lsl	r1, r1, #0x3
@@ -150707,13 +150899,13 @@ sub_80BE9F8:
 	strh	r3, [r1, #0xc]
 	strh	r3, [r1, #0xe]
 	bx	lr
-.L788:
+.L791:
 	.align	2, 0
-.L787:
+.L790:
 	.word	sPokedexListItem
 	.word	gTasks
-.Lfe55:
-	.size	 sub_80BE9F8,.Lfe55-sub_80BE9F8
+.Lfe58:
+	.size	 sub_80BE9F8,.Lfe58-sub_80BE9F8
 	.align	2, 0
 	.type	 Task_LoadInfoScreen,function
 	.thumb_func
@@ -150722,60 +150914,61 @@ Task_LoadInfoScreen:
 	add	sp, sp, #-0x4
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r1, .L818
+	ldr	r1, .L817
 	mov	r2, #0x87
 	lsl	r2, r2, #0x3
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	add	r5, r1, #0
 	cmp	r0, #0xa
-	bhi	.L792	@cond_branch
+	bhi	.L795	@cond_branch
 	lsl	r0, r0, #0x2
-	ldr	r1, .L818+0x4
+	ldr	r1, .L817+0x4
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L819:
-	.align	2, 0
 .L818:
+	.align	2, 0
+.L817:
 	.word	gMain
 	.word	.L815
 	.align	2, 0
 	.align	2, 0
 .L815:
-	.word	.L792
-	.word	.L796
-	.word	.L797
-	.word	.L798
+	.word	.L795
 	.word	.L799
+	.word	.L800
+	.word	.L801
 	.word	.L802
-	.word	.L804
+	.word	.L805
 	.word	.L807
-	.word	.L808
-	.word	.L812
+	.word	.L810
+	.word	.L811
+	.word	.L813
 	.word	.L814
-.L792:
-	ldr	r0, .L820
+.L795:
+	ldr	r0, .L819
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.LCB9015
-	b	.L790	@long jump
-.LCB9015:
-	ldr	r0, .L820+0x4
+	beq	.LCB9019
+	b	.L793	@long jump
+.LCB9019:
+	ldr	r0, .L819+0x4
 	ldr	r0, [r0]
-	ldr	r3, .L820+0x8
+	mov	r3, #0xcf
+	lsl	r3, r3, #0x4
 	add	r0, r0, r3
 	mov	r6, #0x1
 	strb	r6, [r0]
-	ldr	r1, .L820+0xc
+	ldr	r1, .L819+0x8
 	ldr	r0, [r5, #0xc]
 	str	r0, [r1]
 	mov	r0, #0x0
 	bl	SetVBlankCallback
 	mov	r2, #0x0
-	ldr	r1, .L820+0x10
+	ldr	r1, .L819+0xc
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
@@ -150783,36 +150976,35 @@ Task_LoadInfoScreen:
 	mov	r3, #0xa
 	ldrsh	r0, [r1, r3]
 	cmp	r0, #0
-	beq	.L794	@cond_branch
+	beq	.L797	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x5
-.L794:
+.L797:
 	mov	r3, #0xc
 	ldrsh	r0, [r1, r3]
 	cmp	r0, #0
-	beq	.L795	@cond_branch
+	beq	.L798	@cond_branch
 	mov	r1, #0x80
 	lsl	r1, r1, #0x2
 	add	r0, r1, #0
 	orr	r2, r2, r0
-.L795:
+.L798:
 	add	r0, r2, #0
 	bl	ResetOtherVideoRegisters
 	mov	r2, #0x87
 	lsl	r2, r2, #0x3
 	add	r0, r5, r2
 	strb	r6, [r0]
-	b	.L790
-.L821:
-	.align	2, 0
+	b	.L793
 .L820:
+	.align	2, 0
+.L819:
 	.word	gPaletteFade
 	.word	sPokedexView
-	.word	0xce6
 	.word	gPokedexVBlankCB
 	.word	gTasks
-.L796:
-	ldr	r1, .L822
+.L799:
+	ldr	r1, .L821
 	mov	r2, #0x80
 	lsl	r2, r2, #0x6
 	mov	r0, #0x0
@@ -150820,7 +151012,7 @@ Task_LoadInfoScreen:
 	mov	r0, #0x3
 	mov	r3, #0x0
 	bl	DecompressAndLoadBgGfxUsingHeap
-	ldr	r1, .L822+0x4
+	ldr	r1, .L821+0x4
 	mov	r0, #0x3
 	mov	r2, #0x0
 	mov	r3, #0x0
@@ -150832,7 +151024,7 @@ Task_LoadInfoScreen:
 	bl	PutWindowTilemap
 	mov	r0, #0x1
 	bl	PutWindowTilemap
-	ldr	r0, .L822+0x8
+	ldr	r0, .L821+0x8
 	ldr	r0, [r0]
 	ldrh	r1, [r0]
 	mov	r0, #0x1
@@ -150840,59 +151032,73 @@ Task_LoadInfoScreen:
 	mov	r0, #0x1
 	mov	r1, #0x2
 	bl	CopyWindowToVram
-	ldr	r1, .L822+0xc
+	ldr	r1, .L821+0xc
 	mov	r3, #0x87
 	lsl	r3, r3, #0x3
 	add	r1, r1, r3
 	b	.L816
-.L823:
-	.align	2, 0
 .L822:
+	.align	2, 0
+.L821:
 	.word	gPokedexMenu_Gfx
 	.word	gPokedexInfoScreen_Tilemap
 	.word	sPokedexListItem
 	.word	gMain
-.L797:
+.L800:
 	mov	r0, #0xd
 	bl	LoadScreenSelectBarMain
-	ldr	r4, .L824
-	ldr	r0, [r4]
-	ldr	r1, .L824+0x4
+	ldr	r0, .L823
+	ldr	r0, [r0]
+	ldr	r1, .L823+0x4
 	add	r0, r0, r1
-	ldrb	r0, [r0]
-	mov	r1, #0xd
-	bl	HighlightScreenSelectBarItem
-	ldr	r0, [r4]
-	ldr	r2, .L824+0x8
-	add	r0, r0, r2
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1f
 	lsr	r0, r0, #0x1f
 	bl	LoadPokedexBgPalette
-	ldr	r1, .L824+0xc
-	mov	r3, #0x87
-	lsl	r3, r3, #0x3
-	add	r1, r1, r3
+	ldr	r1, .L823+0x8
+	mov	r2, #0x87
+	lsl	r2, r2, #0x3
+	add	r1, r1, r2
 	b	.L816
-.L825:
-	.align	2, 0
 .L824:
+	.align	2, 0
+.L823:
 	.word	sPokedexView
-	.word	0xce9
-	.word	0xce8
+	.word	0xcf2
 	.word	gMain
-.L798:
-	mov	r0, #0x87
-	lsl	r0, r0, #0x3
-	add	r1, r5, r0
+.L801:
+	ldr	r2, .L825
+	ldr	r0, [r2]
+	ldr	r3, .L825+0x4
+	add	r0, r0, r3
+	mov	r1, #0xff
+	strb	r1, [r0]
+	ldr	r0, [r2]
+	ldr	r1, .L825+0x8
+	add	r0, r0, r1
+	mov	r1, #0x1
+	neg	r1, r1
+	strb	r1, [r0]
+	bl	CreateTypeIconSprites
+	ldr	r1, .L825+0xc
+	mov	r2, #0x87
+	lsl	r2, r2, #0x3
+	add	r1, r1, r2
 	b	.L816
-.L799:
-	ldr	r4, .L826
+.L826:
+	.align	2, 0
+.L825:
+	.word	sPokedexView
+	.word	0xcc2
+	.word	0xcc3
+	.word	gMain
+.L802:
+	ldr	r4, .L827
 	ldr	r3, [r4]
 	ldrh	r0, [r3]
-	ldr	r1, .L826+0x4
+	ldr	r1, .L827+0x4
 	ldr	r1, [r1]
-	ldr	r2, .L826+0x8
+	ldr	r2, .L827+0x8
 	add	r1, r1, r2
 	ldrh	r2, [r1]
 	neg	r1, r2
@@ -150908,12 +151114,12 @@ Task_LoadInfoScreen:
 	mov	r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L801	@cond_branch
-	ldr	r0, .L826+0xc
+	bne	.L804	@cond_branch
+	ldr	r0, .L827+0xc
 	mov	r1, #0x31
 	mov	r2, #0x1e
 	bl	LoadPalette
-.L801:
+.L804:
 	mov	r0, #0x0
 	mov	r1, #0x3
 	bl	CopyWindowToVram
@@ -150923,21 +151129,21 @@ Task_LoadInfoScreen:
 	bl	CopyBgTilemapBufferToVram
 	mov	r0, #0x3
 	bl	CopyBgTilemapBufferToVram
-	ldr	r1, .L826+0x10
+	ldr	r1, .L827+0x10
 	mov	r3, #0x87
 	lsl	r3, r3, #0x3
 	add	r1, r1, r3
 	b	.L816
-.L827:
+.L828:
 	.align	2, 0
-.L826:
+.L827:
 	.word	sPokedexListItem
 	.word	sPokedexView
 	.word	0xcae
 	.word	gPlttBufferUnfaded+0x2
 	.word	gMain
-.L802:
-	ldr	r0, .L828
+.L805:
+	ldr	r0, .L829
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
@@ -150945,8 +151151,8 @@ Task_LoadInfoScreen:
 	mov	r1, #0xa
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L803	@cond_branch
-	ldr	r0, .L828+0x4
+	bne	.L806	@cond_branch
+	ldr	r0, .L829+0x4
 	ldr	r0, [r0]
 	ldrh	r0, [r0]
 	mov	r1, #0x30
@@ -150954,7 +151160,7 @@ Task_LoadInfoScreen:
 	mov	r3, #0x0
 	bl	CreateMonSpriteFromNationalDexNumber
 	strh	r0, [r4, #0x10]
-	ldr	r2, .L828+0x8
+	ldr	r2, .L829+0x8
 	mov	r3, #0x10
 	ldrsh	r0, [r4, r3]
 	lsl	r1, r0, #0x4
@@ -150966,22 +151172,22 @@ Task_LoadInfoScreen:
 	neg	r0, r0
 	and	r0, r0, r2
 	strb	r0, [r1, #0x5]
-.L803:
-	ldr	r1, .L828+0xc
+.L806:
+	ldr	r1, .L829+0xc
 	mov	r0, #0x87
 	lsl	r0, r0, #0x3
 	add	r1, r1, r0
 	b	.L816
-.L829:
+.L830:
 	.align	2, 0
-.L828:
+.L829:
 	.word	gTasks
 	.word	sPokedexListItem
 	.word	gSprites
 	.word	gMain
-.L804:
+.L807:
 	mov	r3, #0x0
-	ldr	r0, .L830
+	ldr	r0, .L831
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
@@ -150989,14 +151195,14 @@ Task_LoadInfoScreen:
 	mov	r2, #0xc
 	ldrsh	r0, [r1, r2]
 	cmp	r0, #0
-	beq	.L805	@cond_branch
+	beq	.L808	@cond_branch
 	mov	r3, #0x14
-.L805:
+.L808:
 	mov	r2, #0xa
 	ldrsh	r0, [r1, r2]
 	cmp	r0, #0
-	beq	.L806	@cond_branch
-	ldr	r2, .L830+0x4
+	beq	.L809	@cond_branch
+	ldr	r2, .L831+0x4
 	mov	r0, #0x10
 	ldrsh	r1, [r1, r0]
 	lsl	r0, r1, #0x4
@@ -151009,24 +151215,29 @@ Task_LoadInfoScreen:
 	mov	r0, #0x1
 	lsl	r0, r0, r1
 	orr	r3, r3, r0
-.L806:
+.L809:
 	mvn	r0, r3
 	mov	r1, #0x0
 	str	r1, [sp]
 	mov	r2, #0x10
 	mov	r3, #0x0
 	bl	BeginNormalPaletteFade
-	ldr	r0, .L830+0x8
+	ldr	r0, .L831+0x8
 	ldr	r0, [r0]
 	bl	SetVBlankCallback
-	b	.L817
-.L831:
+	ldr	r1, .L831+0xc
+	mov	r2, #0x87
+	lsl	r2, r2, #0x3
+	add	r1, r1, r2
+	b	.L816
+.L832:
 	.align	2, 0
-.L830:
+.L831:
 	.word	gTasks
 	.word	gSprites
 	.word	gPokedexVBlankCB
-.L807:
+	.word	gMain
+.L810:
 	mov	r0, #0x50
 	mov	r1, #0x0
 	bl	SetGpuReg
@@ -151048,80 +151259,41 @@ Task_LoadInfoScreen:
 	bl	ShowBg
 	mov	r0, #0x3
 	bl	ShowBg
-	ldr	r1, .L832
+	ldr	r1, .L833
 	mov	r3, #0x87
 	lsl	r3, r3, #0x3
 	add	r1, r1, r3
 	b	.L816
-.L833:
+.L834:
 	.align	2, 0
-.L832:
+.L833:
 	.word	gMain
-.L808:
-	ldr	r0, .L834
+.L811:
+	ldr	r0, .L835
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L790	@cond_branch
+	bne	.L793	@cond_branch
 	mov	r0, #0x87
 	lsl	r0, r0, #0x3
-	add	r2, r5, r0
-	ldrb	r0, [r2]
-	add	r3, r0, #0x1
-	strb	r3, [r2]
-	ldr	r1, .L834+0x4
-	lsl	r0, r4, #0x2
-	add	r0, r0, r4
-	lsl	r0, r0, #0x3
-	add	r0, r0, r1
-	mov	r1, #0xe
-	ldrsh	r0, [r0, r1]
-	cmp	r0, #0
-	bne	.L810	@cond_branch
-	bl	StopCryAndClearCrySongs
-	ldr	r0, .L834+0x8
-	ldr	r0, [r0]
-	ldrh	r0, [r0]
-	bl	NationalPokedexNumToSpecies
-	lsl	r0, r0, #0x10
-	lsr	r0, r0, #0x10
-	mov	r1, #0x0
-	mov	r2, #0x7d
-	mov	r3, #0xa
-	bl	PlayCry2
-	b	.L790
-.L835:
+	add	r1, r5, r0
+	b	.L816
+.L836:
 	.align	2, 0
-.L834:
+.L835:
 	.word	gPaletteFade
-	.word	gTasks
-	.word	sPokedexListItem
-.L810:
-	add	r0, r3, #0x1
-	strb	r0, [r2]
-	b	.L790
-.L812:
-	bl	IsCryPlayingOrClearCrySongs
-	lsl	r0, r0, #0x18
-	cmp	r0, #0
-	bne	.L790	@cond_branch
-.L817:
-	ldr	r1, .L836
+.L813:
 	mov	r2, #0x87
 	lsl	r2, r2, #0x3
-	add	r1, r1, r2
+	add	r1, r5, r2
 .L816:
 	ldrb	r0, [r1]
 	add	r0, r0, #0x1
 	strb	r0, [r1]
-	b	.L790
-.L837:
-	.align	2, 0
-.L836:
-	.word	gMain
+	b	.L793
 .L814:
-	ldr	r1, .L838
+	ldr	r1, .L837
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
@@ -151133,24 +151305,24 @@ Task_LoadInfoScreen:
 	mov	r1, #0x1
 	strh	r1, [r0, #0xc]
 	strh	r1, [r0, #0xe]
-	ldr	r1, .L838+0x4
+	ldr	r1, .L837+0x4
 	str	r1, [r0]
 	mov	r3, #0x87
 	lsl	r3, r3, #0x3
 	add	r0, r5, r3
 	strb	r2, [r0]
-.L790:
+.L793:
 	add	sp, sp, #0x4
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L839:
-	.align	2, 0
 .L838:
+	.align	2, 0
+.L837:
 	.word	gTasks
 	.word	Task_HandleInfoScreenInput
-.Lfe56:
-	.size	 Task_LoadInfoScreen,.Lfe56-Task_LoadInfoScreen
+.Lfe59:
+	.size	 Task_LoadInfoScreen,.Lfe59-Task_LoadInfoScreen
 	.align	2, 0
 	.type	 FreeInfoScreenWindowAndBgBuffers,function
 	.thumb_func
@@ -151160,31 +151332,31 @@ FreeInfoScreenWindowAndBgBuffers:
 	mov	r0, #0x0
 	bl	GetBgTilemapBuffer
 	cmp	r0, #0
+	beq	.L840	@cond_branch
+	bl	Free
+.L840:
+	mov	r0, #0x1
+	bl	GetBgTilemapBuffer
+	cmp	r0, #0
 	beq	.L841	@cond_branch
 	bl	Free
 .L841:
-	mov	r0, #0x1
+	mov	r0, #0x2
 	bl	GetBgTilemapBuffer
 	cmp	r0, #0
 	beq	.L842	@cond_branch
 	bl	Free
 .L842:
-	mov	r0, #0x2
+	mov	r0, #0x3
 	bl	GetBgTilemapBuffer
 	cmp	r0, #0
 	beq	.L843	@cond_branch
 	bl	Free
 .L843:
-	mov	r0, #0x3
-	bl	GetBgTilemapBuffer
-	cmp	r0, #0
-	beq	.L844	@cond_branch
-	bl	Free
-.L844:
 	pop	{r0}
 	bx	r0
-.Lfe57:
-	.size	 FreeInfoScreenWindowAndBgBuffers,.Lfe57-FreeInfoScreenWindowAndBgBuffers
+.Lfe60:
+	.size	 FreeInfoScreenWindowAndBgBuffers,.Lfe60-FreeInfoScreenWindowAndBgBuffers
 	.align	2, 0
 	.type	 Task_HandleInfoScreenInput,function
 	.thumb_func
@@ -151193,15 +151365,15 @@ Task_HandleInfoScreenInput:
 	add	sp, sp, #-0x4
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r2, .L865
+	ldr	r2, .L849
 	lsl	r1, r0, #0x2
 	add	r1, r1, r0
 	lsl	r1, r1, #0x3
-	add	r4, r1, r2
+	add	r5, r1, r2
 	mov	r0, #0x8
-	ldrsh	r5, [r4, r0]
-	cmp	r5, #0
-	beq	.L846	@cond_branch
+	ldrsh	r2, [r5, r0]
+	cmp	r2, #0
+	beq	.L845	@cond_branch
 	mov	r0, #0x1
 	neg	r0, r0
 	mov	r1, #0x0
@@ -151209,236 +151381,95 @@ Task_HandleInfoScreenInput:
 	mov	r2, #0x0
 	mov	r3, #0x10
 	bl	BeginNormalPaletteFade
-	ldr	r0, .L865+0x4
-	str	r0, [r4]
+	ldr	r0, .L849+0x4
+	str	r0, [r5]
 	mov	r0, #0x6c
 	bl	PlaySE
-	b	.L845
-.L866:
+	b	.L844
+.L850:
 	.align	2, 0
-.L865:
+.L849:
 	.word	gTasks
 	.word	Task_LoadInfoScreenWaitForFade
-.L846:
-	ldr	r1, .L867
-	ldrh	r2, [r1, #0x2e]
+.L845:
+	ldr	r0, .L851
+	ldrh	r1, [r0, #0x2e]
 	mov	r0, #0x2
-	and	r0, r0, r2
+	and	r0, r0, r1
 	lsl	r0, r0, #0x10
 	lsr	r3, r0, #0x10
 	cmp	r3, #0
-	beq	.L847	@cond_branch
+	beq	.L846	@cond_branch
 	mov	r0, #0x1
 	neg	r0, r0
-	str	r5, [sp]
-	b	.L863
-.L868:
-	.align	2, 0
-.L867:
-	.word	gMain
-.L847:
-	mov	r0, #0x1
-	and	r0, r0, r2
-	cmp	r0, #0
-	beq	.L848	@cond_branch
-	ldr	r5, .L869
-	ldr	r0, [r5]
-	ldr	r1, .L869+0x4
-	add	r0, r0, r1
-	ldrb	r1, [r0]
-	cmp	r1, #0x1
-	beq	.L851	@cond_branch
-	cmp	r1, #0x1
-	bgt	.L858	@cond_branch
-	cmp	r1, #0
-	beq	.L850	@cond_branch
-	b	.L845
-.L870:
-	.align	2, 0
-.L869:
-	.word	sPokedexView
-	.word	0xce9
-.L858:
-	cmp	r1, #0x2
-	beq	.L852	@cond_branch
-	cmp	r1, #0x3
-	beq	.L855	@cond_branch
-	b	.L845
-.L850:
-	mov	r0, #0x15
-	neg	r0, r0
-	str	r3, [sp]
+	str	r2, [sp]
 	mov	r1, #0x0
 	mov	r2, #0x0
 	mov	r3, #0x10
 	bl	BeginNormalPaletteFade
-	ldr	r0, [r5]
-	ldr	r3, .L871
-	add	r0, r0, r3
-	mov	r1, #0x1
-	b	.L864
-.L872:
-	.align	2, 0
-.L871:
-	.word	0xcea
-.L851:
-	mov	r0, #0x15
-	neg	r0, r0
-	str	r3, [sp]
-	mov	r1, #0x0
-	mov	r2, #0x0
-	mov	r3, #0x10
-	bl	BeginNormalPaletteFade
-	ldr	r0, [r5]
-	ldr	r1, .L873
-	add	r0, r0, r1
-	mov	r1, #0x2
-	b	.L864
-.L874:
-	.align	2, 0
-.L873:
-	.word	0xcea
-.L852:
-	ldr	r0, .L875
-	ldr	r0, [r0]
-	ldrb	r0, [r0, #0x2]
-	and	r1, r1, r0
-	cmp	r1, #0
-	bne	.L853	@cond_branch
-	mov	r0, #0x20
-	bl	PlaySE
-	b	.L845
-.L876:
-	.align	2, 0
-.L875:
-	.word	sPokedexListItem
-.L853:
-	mov	r0, #0x15
-	neg	r0, r0
-	str	r3, [sp]
-	mov	r1, #0x0
-	mov	r2, #0x0
-	mov	r3, #0x10
-	bl	BeginNormalPaletteFade
-	ldr	r0, [r5]
-	ldr	r3, .L877
-	add	r0, r0, r3
-	mov	r1, #0x3
-.L864:
-	strb	r1, [r0]
-	ldr	r0, .L877+0x4
-	str	r0, [r4]
-	mov	r0, #0x15
-	bl	PlaySE
-	b	.L845
-.L878:
-	.align	2, 0
-.L877:
-	.word	0xcea
-	.word	Task_SwitchScreensFromInfoScreen
-.L855:
-	mov	r0, #0x1
-	neg	r0, r0
-	str	r3, [sp]
-.L863:
-	mov	r1, #0x0
-	mov	r2, #0x0
-	mov	r3, #0x10
-	bl	BeginNormalPaletteFade
-	ldr	r0, .L879
-	str	r0, [r4]
+	ldr	r0, .L851+0x4
+	str	r0, [r5]
 	mov	r0, #0x3
 	bl	PlaySE
-	b	.L845
-.L880:
+	b	.L844
+.L852:
 	.align	2, 0
-.L879:
+.L851:
+	.word	gMain
 	.word	Task_ExitInfoScreen
-.L848:
-	mov	r0, #0x20
-	and	r0, r0, r2
-	cmp	r0, #0
-	bne	.L860	@cond_branch
-	mov	r0, #0x80
-	lsl	r0, r0, #0x2
-	and	r0, r0, r2
-	cmp	r0, #0
-	beq	.L859	@cond_branch
-	ldr	r0, .L881
-	ldr	r0, [r0]
-	ldrb	r0, [r0, #0x13]
-	cmp	r0, #0x1
-	bne	.L859	@cond_branch
-.L860:
-	ldr	r3, .L881+0x4
-	ldr	r0, [r3]
-	ldr	r4, .L881+0x8
-	add	r2, r0, r4
-	ldrb	r0, [r2]
-	cmp	r0, #0
-	beq	.L859	@cond_branch
-	sub	r0, r0, #0x1
-	strb	r0, [r2]
-	ldr	r0, [r3]
-	add	r0, r0, r4
-	ldrb	r0, [r0]
-	mov	r1, #0xd
-	bl	HighlightScreenSelectBarItem
-	mov	r0, #0x6d
-	bl	PlaySE
-	b	.L845
-.L882:
-	.align	2, 0
-.L881:
-	.word	gSaveBlock2Ptr
-	.word	sPokedexView
-	.word	0xce9
-.L859:
-	ldrh	r1, [r1, #0x2e]
+.L846:
 	mov	r0, #0x10
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L862	@cond_branch
+	bne	.L848	@cond_branch
 	mov	r0, #0x80
 	lsl	r0, r0, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L845	@cond_branch
-	ldr	r0, .L883
+	beq	.L844	@cond_branch
+	ldr	r0, .L853
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x13]
 	cmp	r0, #0x1
-	bne	.L845	@cond_branch
-.L862:
-	ldr	r2, .L883+0x4
-	ldr	r0, [r2]
-	ldr	r3, .L883+0x8
-	add	r1, r0, r3
-	ldrb	r0, [r1]
-	cmp	r0, #0x2
-	bhi	.L845	@cond_branch
-	add	r0, r0, #0x1
-	strb	r0, [r1]
-	ldr	r0, [r2]
-	add	r0, r0, r3
-	ldrb	r0, [r0]
-	mov	r1, #0xd
-	bl	HighlightScreenSelectBarItem
-	mov	r0, #0x6d
+	bne	.L844	@cond_branch
+.L848:
+	ldr	r4, .L853+0x4
+	ldr	r0, [r4]
+	ldr	r1, .L853+0x8
+	add	r0, r0, r1
+	mov	r1, #0x2
+	strb	r1, [r0]
+	mov	r0, #0x15
+	neg	r0, r0
+	str	r3, [sp]
+	mov	r1, #0x0
+	mov	r2, #0x0
+	mov	r3, #0x10
+	bl	BeginNormalPaletteFade
+	ldr	r0, [r4]
+	ldr	r1, .L853+0xc
+	add	r0, r0, r1
+	mov	r1, #0x1
+	strb	r1, [r0]
+	ldr	r0, .L853+0x10
+	str	r0, [r5]
+	mov	r0, #0x15
 	bl	PlaySE
-.L845:
+.L844:
 	add	sp, sp, #0x4
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L884:
+.L854:
 	.align	2, 0
-.L883:
+.L853:
 	.word	gSaveBlock2Ptr
 	.word	sPokedexView
-	.word	0xce9
-.Lfe58:
-	.size	 Task_HandleInfoScreenInput,.Lfe58-Task_HandleInfoScreenInput
+	.word	0xcf3
+	.word	0xcf4
+	.word	Task_SwitchScreensFromInfoScreen
+.Lfe61:
+	.size	 Task_HandleInfoScreenInput,.Lfe61-Task_HandleInfoScreenInput
 	.align	2, 0
 	.type	 Task_SwitchScreensFromInfoScreen,function
 	.thumb_func
@@ -151446,62 +151477,62 @@ Task_SwitchScreensFromInfoScreen:
 	push	{r4, lr}
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
-	ldr	r0, .L895
+	ldr	r0, .L865
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L886	@cond_branch
-	ldr	r1, .L895+0x4
+	bne	.L856	@cond_branch
+	ldr	r1, .L865+0x4
 	lsl	r0, r2, #0x2
 	add	r0, r0, r2
 	lsl	r0, r0, #0x3
 	add	r4, r0, r1
 	ldrh	r0, [r4, #0x10]
 	bl	FreeAndDestroyMonPicSprite
-	ldr	r0, .L895+0x8
+	ldr	r0, .L865+0x8
 	ldr	r0, [r0]
-	ldr	r1, .L895+0xc
+	ldr	r1, .L865+0xc
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x2
-	beq	.L890	@cond_branch
+	beq	.L860	@cond_branch
 	cmp	r0, #0x2
-	ble	.L889	@cond_branch
+	ble	.L859	@cond_branch
 	cmp	r0, #0x3
-	beq	.L891	@cond_branch
-.L889:
-	ldr	r0, .L895+0x10
-	b	.L894
-.L896:
+	beq	.L861	@cond_branch
+.L859:
+	ldr	r0, .L865+0x10
+	b	.L864
+.L866:
 	.align	2, 0
-.L895:
+.L865:
 	.word	gPaletteFade
 	.word	gTasks
 	.word	sPokedexView
-	.word	0xcea
+	.word	0xcf4
 	.word	Task_LoadAreaScreen
-.L890:
-	ldr	r0, .L897
-	b	.L894
-.L898:
+.L860:
+	ldr	r0, .L867
+	b	.L864
+.L868:
 	.align	2, 0
-.L897:
+.L867:
 	.word	Task_LoadCryScreen
-.L891:
-	ldr	r0, .L899
-.L894:
+.L861:
+	ldr	r0, .L869
+.L864:
 	str	r0, [r4]
-.L886:
+.L856:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L900:
+.L870:
 	.align	2, 0
-.L899:
+.L869:
 	.word	Task_LoadSizeScreen
-.Lfe59:
-	.size	 Task_SwitchScreensFromInfoScreen,.Lfe59-Task_SwitchScreensFromInfoScreen
+.Lfe62:
+	.size	 Task_SwitchScreensFromInfoScreen,.Lfe62-Task_SwitchScreensFromInfoScreen
 	.align	2, 0
 	.type	 Task_LoadInfoScreenWaitForFade,function
 	.thumb_func
@@ -151509,33 +151540,33 @@ Task_LoadInfoScreenWaitForFade:
 	push	{r4, lr}
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
-	ldr	r0, .L903
+	ldr	r0, .L873
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L902	@cond_branch
-	ldr	r0, .L903+0x4
+	bne	.L872	@cond_branch
+	ldr	r0, .L873+0x4
 	lsl	r4, r2, #0x2
 	add	r4, r4, r2
 	lsl	r4, r4, #0x3
 	add	r4, r4, r0
 	ldrh	r0, [r4, #0x10]
 	bl	FreeAndDestroyMonPicSprite
-	ldr	r0, .L903+0x8
+	ldr	r0, .L873+0x8
 	str	r0, [r4]
-.L902:
+.L872:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L904:
+.L874:
 	.align	2, 0
-.L903:
+.L873:
 	.word	gPaletteFade
 	.word	gTasks
 	.word	Task_LoadInfoScreen
-.Lfe60:
-	.size	 Task_LoadInfoScreenWaitForFade,.Lfe60-Task_LoadInfoScreenWaitForFade
+.Lfe63:
+	.size	 Task_LoadInfoScreenWaitForFade,.Lfe63-Task_LoadInfoScreenWaitForFade
 	.align	2, 0
 	.type	 Task_ExitInfoScreen,function
 	.thumb_func
@@ -151543,13 +151574,13 @@ Task_ExitInfoScreen:
 	push	{r4, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r0, .L907
+	ldr	r0, .L877
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L906	@cond_branch
-	ldr	r0, .L907+0x4
+	bne	.L876	@cond_branch
+	ldr	r0, .L877+0x4
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
@@ -151559,17 +151590,17 @@ Task_ExitInfoScreen:
 	bl	FreeInfoScreenWindowAndBgBuffers
 	add	r0, r4, #0
 	bl	DestroyTask
-.L906:
+.L876:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L908:
+.L878:
 	.align	2, 0
-.L907:
+.L877:
 	.word	gPaletteFade
 	.word	gTasks
-.Lfe61:
-	.size	 Task_ExitInfoScreen,.Lfe61-Task_ExitInfoScreen
+.Lfe64:
+	.size	 Task_ExitInfoScreen,.Lfe64-Task_ExitInfoScreen
 	.align	2, 0
 	.type	 Task_LoadAreaScreen,function
 	.thumb_func
@@ -151577,33 +151608,32 @@ Task_LoadAreaScreen:
 	push	{r4, r5, r6, r7, lr}
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-	ldr	r2, .L918
+	ldr	r2, .L888
 	mov	r0, #0x87
 	lsl	r0, r0, #0x3
 	add	r7, r2, r0
 	ldrb	r0, [r7]
 	cmp	r0, #0x1
-	beq	.L914	@cond_branch
+	beq	.L884	@cond_branch
 	cmp	r0, #0x1
-	ble	.L912	@cond_branch
+	ble	.L882	@cond_branch
 	cmp	r0, #0x2
-	beq	.L915	@cond_branch
-.L912:
-	ldr	r0, .L918+0x4
+	beq	.L885	@cond_branch
+.L882:
+	ldr	r0, .L888+0x4
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
-	lsl	r0, r0, #0x18
-	lsr	r5, r0, #0x18
-	cmp	r5, #0
-	bne	.L910	@cond_branch
-	ldr	r4, .L918+0x8
+	cmp	r0, #0
+	bne	.L880	@cond_branch
+	ldr	r4, .L888+0x8
 	ldr	r0, [r4]
-	ldr	r1, .L918+0xc
+	mov	r1, #0xcf
+	lsl	r1, r1, #0x4
 	add	r0, r0, r1
 	mov	r1, #0x5
 	strb	r1, [r0]
-	ldr	r1, .L918+0x10
+	ldr	r1, .L888+0xc
 	ldr	r0, [r2, #0xc]
 	str	r0, [r1]
 	mov	r0, #0x0
@@ -151612,30 +151642,27 @@ Task_LoadAreaScreen:
 	lsl	r0, r0, #0x2
 	bl	ResetOtherVideoRegisters
 	ldr	r0, [r4]
-	ldr	r1, .L918+0x14
+	ldr	r1, .L888+0x10
 	add	r0, r0, r1
-	strb	r5, [r0]
+	mov	r1, #0x2
+	strb	r1, [r0]
 	mov	r0, #0x1
 	strb	r0, [r7]
-	b	.L910
-.L919:
+	b	.L880
+.L889:
 	.align	2, 0
-.L918:
+.L888:
 	.word	gMain
 	.word	gPaletteFade
 	.word	sPokedexView
-	.word	0xce6
 	.word	gPokedexVBlankCB
-	.word	0xce9
-.L914:
+	.word	0xcf3
+.L884:
 	mov	r0, #0xd
 	bl	LoadScreenSelectBarSubmenu
-	mov	r0, #0x0
-	mov	r1, #0xd
-	bl	HighlightSubmenuScreenSelectBarItem
-	ldr	r0, .L920
+	ldr	r0, .L890
 	ldr	r0, [r0]
-	ldr	r1, .L920+0x4
+	ldr	r1, .L890+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1f
@@ -151648,25 +151675,25 @@ Task_LoadAreaScreen:
 	ldrb	r0, [r7]
 	add	r0, r0, #0x1
 	strb	r0, [r7]
-	b	.L910
-.L921:
+	b	.L880
+.L891:
 	.align	2, 0
-.L920:
+.L890:
 	.word	sPokedexView
-	.word	0xce8
-.L915:
-	ldr	r0, .L922
+	.word	0xcf2
+.L885:
+	ldr	r0, .L892
 	ldr	r0, [r0]
 	ldrh	r0, [r0]
 	bl	NationalPokedexNumToSpecies
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
-	ldr	r5, .L922+0x4
+	ldr	r5, .L892+0x4
 	ldr	r1, [r5]
-	ldr	r4, .L922+0x8
+	ldr	r4, .L892+0x8
 	add	r1, r1, r4
 	bl	ShowPokedexAreaScreen
-	ldr	r0, .L922+0xc
+	ldr	r0, .L892+0xc
 	ldr	r0, [r0]
 	bl	SetVBlankCallback
 	ldr	r0, [r5]
@@ -151674,28 +151701,28 @@ Task_LoadAreaScreen:
 	mov	r1, #0x0
 	strb	r1, [r0]
 	strb	r1, [r7]
-	ldr	r1, .L922+0x10
+	ldr	r1, .L892+0x10
 	lsl	r0, r6, #0x2
 	add	r0, r0, r6
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L922+0x14
+	ldr	r1, .L892+0x14
 	str	r1, [r0]
-.L910:
+.L880:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L923:
+.L893:
 	.align	2, 0
-.L922:
+.L892:
 	.word	sPokedexListItem
 	.word	sPokedexView
-	.word	0xcea
+	.word	0xcf4
 	.word	gPokedexVBlankCB
 	.word	gTasks
 	.word	Task_WaitForAreaScreenInput
-.Lfe62:
-	.size	 Task_LoadAreaScreen,.Lfe62-Task_LoadAreaScreen
+.Lfe65:
+	.size	 Task_LoadAreaScreen,.Lfe65-Task_LoadAreaScreen
 	.align	2, 0
 	.type	 Task_WaitForAreaScreenInput,function
 	.thumb_func
@@ -151703,32 +151730,32 @@ Task_WaitForAreaScreenInput:
 	push	{lr}
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
-	ldr	r0, .L926
+	ldr	r0, .L896
 	ldr	r0, [r0]
-	ldr	r1, .L926+0x4
+	ldr	r1, .L896+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L925	@cond_branch
-	ldr	r0, .L926+0x8
+	beq	.L895	@cond_branch
+	ldr	r0, .L896+0x8
 	lsl	r1, r2, #0x2
 	add	r1, r1, r2
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L926+0xc
+	ldr	r0, .L896+0xc
 	str	r0, [r1]
-.L925:
+.L895:
 	pop	{r0}
 	bx	r0
-.L927:
+.L897:
 	.align	2, 0
-.L926:
+.L896:
 	.word	sPokedexView
-	.word	0xcea
+	.word	0xcf4
 	.word	gTasks
 	.word	Task_SwitchScreensFromAreaScreen
-.Lfe63:
-	.size	 Task_WaitForAreaScreenInput,.Lfe63-Task_WaitForAreaScreenInput
+.Lfe66:
+	.size	 Task_WaitForAreaScreenInput,.Lfe66-Task_WaitForAreaScreenInput
 	.align	2, 0
 	.type	 Task_SwitchScreensFromAreaScreen,function
 	.thumb_func
@@ -151736,56 +151763,70 @@ Task_SwitchScreensFromAreaScreen:
 	push	{lr}
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
-	ldr	r0, .L936
+	ldr	r0, .L908
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L929	@cond_branch
-	ldr	r0, .L936+0x4
+	bne	.L899	@cond_branch
+	ldr	r0, .L908+0x4
 	ldr	r0, [r0]
-	ldr	r1, .L936+0x8
+	ldr	r1, .L908+0x8
 	add	r0, r0, r1
-	ldrb	r0, [r0]
-	cmp	r0, #0x1
-	beq	.L932	@cond_branch
-	cmp	r0, #0x2
-	beq	.L933	@cond_branch
-.L932:
-	ldr	r0, .L936+0xc
+	ldrb	r1, [r0]
+	cmp	r1, #0x1
+	beq	.L902	@cond_branch
+	cmp	r1, #0x2
+	beq	.L903	@cond_branch
+.L902:
+	ldr	r0, .L908+0xc
 	lsl	r1, r2, #0x2
 	add	r1, r1, r2
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L936+0x10
-	b	.L935
-.L937:
+	ldr	r0, .L908+0x10
+	b	.L907
+.L909:
 	.align	2, 0
-.L936:
+.L908:
 	.word	gPaletteFade
 	.word	sPokedexView
-	.word	0xcea
+	.word	0xcf4
 	.word	gTasks
 	.word	Task_LoadInfoScreen
-.L933:
-	ldr	r0, .L938
+.L903:
+	ldr	r0, .L910
+	ldr	r0, [r0]
+	ldrb	r0, [r0, #0x2]
+	and	r1, r1, r0
+	cmp	r1, #0
+	bne	.L904	@cond_branch
+	mov	r0, #0x20
+	bl	PlaySE
+	b	.L899
+.L911:
+	.align	2, 0
+.L910:
+	.word	sPokedexListItem
+.L904:
+	ldr	r0, .L912
 	lsl	r1, r2, #0x2
 	add	r1, r1, r2
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L938+0x4
-.L935:
+	ldr	r0, .L912+0x4
+.L907:
 	str	r0, [r1]
-.L929:
+.L899:
 	pop	{r0}
 	bx	r0
-.L939:
+.L913:
 	.align	2, 0
-.L938:
+.L912:
 	.word	gTasks
-	.word	Task_LoadCryScreen
-.Lfe64:
-	.size	 Task_SwitchScreensFromAreaScreen,.Lfe64-Task_SwitchScreensFromAreaScreen
+	.word	Task_LoadStatsScreen
+.Lfe67:
+	.size	 Task_SwitchScreensFromAreaScreen,.Lfe67-Task_SwitchScreensFromAreaScreen
 	.align	2, 0
 	.type	 Task_LoadCryScreen,function
 	.thumb_func
@@ -151794,57 +151835,58 @@ Task_LoadCryScreen:
 	add	sp, sp, #-0x14
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r1, .L960
+	ldr	r1, .L934
 	mov	r2, #0x87
 	lsl	r2, r2, #0x3
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	add	r2, r1, #0
 	cmp	r0, #0xa
-	bhi	.L943	@cond_branch
+	bhi	.L917	@cond_branch
 	lsl	r0, r0, #0x2
-	ldr	r1, .L960+0x4
+	ldr	r1, .L934+0x4
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L961:
+.L935:
 	.align	2, 0
-.L960:
+.L934:
 	.word	gMain
-	.word	.L957
+	.word	.L931
 	.align	2, 0
 	.align	2, 0
-.L957:
-	.word	.L943
-	.word	.L945
-	.word	.L946
-	.word	.L947
-	.word	.L948
-	.word	.L949
-	.word	.L950
-	.word	.L952
-	.word	.L954
-	.word	.L955
-	.word	.L956
-.L943:
-	ldr	r0, .L962
+.L931:
+	.word	.L917
+	.word	.L919
+	.word	.L920
+	.word	.L921
+	.word	.L922
+	.word	.L923
+	.word	.L924
+	.word	.L926
+	.word	.L928
+	.word	.L929
+	.word	.L930
+.L917:
+	ldr	r0, .L936
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.LCB10373
-	b	.L941	@long jump
-.LCB10373:
-	ldr	r0, .L962+0x4
+	beq	.LCB10164
+	b	.L915	@long jump
+.LCB10164:
+	ldr	r0, .L936+0x4
 	bl	m4aMPlayStop
-	ldr	r5, .L962+0x8
+	ldr	r5, .L936+0x8
 	ldr	r0, [r5]
-	ldr	r3, .L962+0xc
+	mov	r3, #0xcf
+	lsl	r3, r3, #0x4
 	add	r0, r0, r3
 	mov	r1, #0x6
 	strb	r1, [r0]
-	ldr	r1, .L962+0x10
-	ldr	r4, .L962+0x14
+	ldr	r1, .L936+0xc
+	ldr	r4, .L936+0x10
 	ldr	r0, [r4, #0xc]
 	str	r0, [r1]
 	mov	r0, #0x0
@@ -151853,27 +151895,27 @@ Task_LoadCryScreen:
 	lsl	r0, r0, #0x2
 	bl	ResetOtherVideoRegisters
 	ldr	r0, [r5]
-	ldr	r1, .L962+0x18
+	ldr	r1, .L936+0x14
 	add	r0, r0, r1
-	mov	r1, #0x1
+	mov	r1, #0x3
 	strb	r1, [r0]
 	mov	r2, #0x87
 	lsl	r2, r2, #0x3
 	add	r4, r4, r2
-	strb	r1, [r4]
-	b	.L941
-.L963:
+	mov	r0, #0x1
+	strb	r0, [r4]
+	b	.L915
+.L937:
 	.align	2, 0
-.L962:
+.L936:
 	.word	gPaletteFade
 	.word	gMPlayInfo_BGM
 	.word	sPokedexView
-	.word	0xce6
 	.word	gPokedexVBlankCB
 	.word	gMain
-	.word	0xce9
-.L945:
-	ldr	r1, .L964
+	.word	0xcf3
+.L919:
+	ldr	r1, .L938
 	mov	r2, #0x80
 	lsl	r2, r2, #0x6
 	mov	r0, #0x0
@@ -151881,7 +151923,7 @@ Task_LoadCryScreen:
 	mov	r0, #0x3
 	mov	r3, #0x0
 	bl	DecompressAndLoadBgGfxUsingHeap
-	ldr	r1, .L964+0x4
+	ldr	r1, .L938+0x4
 	mov	r0, #0x3
 	mov	r2, #0x0
 	mov	r3, #0x0
@@ -151895,87 +151937,84 @@ Task_LoadCryScreen:
 	bl	PutWindowTilemap
 	mov	r0, #0x2
 	bl	PutWindowTilemap
-	ldr	r1, .L964+0x8
+	ldr	r1, .L938+0x8
 	mov	r3, #0x87
 	lsl	r3, r3, #0x3
 	add	r1, r1, r3
-	b	.L958
-.L965:
+	b	.L932
+.L939:
 	.align	2, 0
-.L964:
-	.word	gPokedexMenu_Gfx
+.L938:
+	.word	gPokedexMenuRest_Gfx
 	.word	gPokedexCryScreen_Tilemap
 	.word	gMain
-.L946:
+.L920:
 	mov	r0, #0xd
-	bl	LoadScreenSelectBarSubmenu
-	mov	r0, #0x1
-	mov	r1, #0xd
-	bl	HighlightSubmenuScreenSelectBarItem
-	ldr	r0, .L966
+	bl	LoadScreenSelectBarMain
+	ldr	r0, .L940
 	ldr	r0, [r0]
-	ldr	r4, .L966+0x4
+	ldr	r4, .L940+0x4
 	add	r0, r0, r4
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1f
 	lsr	r0, r0, #0x1f
 	bl	LoadPokedexBgPalette
-	b	.L959
-.L967:
+	b	.L933
+.L941:
 	.align	2, 0
-.L966:
+.L940:
 	.word	sPokedexView
-	.word	0xce8
-.L947:
+	.word	0xcf2
+.L921:
 	bl	ResetPaletteFade
-	ldr	r1, .L968
+	ldr	r1, .L942
 	mov	r2, #0x87
 	lsl	r2, r2, #0x3
 	add	r1, r1, r2
-	b	.L958
-.L969:
+	b	.L932
+.L943:
 	.align	2, 0
-.L968:
+.L942:
 	.word	gMain
-.L948:
-	ldr	r0, .L970
+.L922:
+	ldr	r0, .L944
 	mov	r1, #0x52
 	mov	r2, #0x21
 	bl	PrintInfoScreenText
-	ldr	r0, .L970+0x4
+	ldr	r0, .L944+0x4
 	ldr	r0, [r0]
 	ldrh	r1, [r0]
 	mov	r0, #0x0
 	mov	r2, #0x52
 	mov	r3, #0x31
 	bl	PrintCryScreenSpeciesName
-	ldr	r1, .L970+0x8
+	ldr	r1, .L944+0x8
 	mov	r3, #0x87
 	lsl	r3, r3, #0x3
 	add	r1, r1, r3
-	b	.L958
-.L971:
+	b	.L932
+.L945:
 	.align	2, 0
-.L970:
+.L944:
 	.word	gText_CryOf
 	.word	sPokedexListItem
 	.word	gMain
-.L949:
-	ldr	r0, .L972
+.L923:
+	ldr	r0, .L946
 	ldr	r0, [r0]
 	ldrh	r0, [r0]
 	mov	r1, #0x30
 	mov	r2, #0x38
 	mov	r3, #0x0
 	bl	CreateMonSpriteFromNationalDexNumber
-	ldr	r2, .L972+0x4
+	ldr	r2, .L946+0x4
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r2
 	mov	r3, #0x0
 	strh	r0, [r1, #0x10]
-	ldr	r2, .L972+0x8
+	ldr	r2, .L946+0x8
 	mov	r4, #0x10
 	ldrsh	r0, [r1, r4]
 	lsl	r1, r0, #0x4
@@ -151987,40 +152026,40 @@ Task_LoadCryScreen:
 	neg	r0, r0
 	and	r0, r0, r2
 	strb	r0, [r1, #0x5]
-	ldr	r0, .L972+0xc
+	ldr	r0, .L946+0xc
 	strb	r3, [r0]
-	b	.L959
-.L973:
+	b	.L933
+.L947:
 	.align	2, 0
-.L972:
+.L946:
 	.word	sPokedexListItem
 	.word	gTasks
 	.word	gSprites
 	.word	gDexCryScreenState
-.L950:
-	ldr	r1, .L974
+.L924:
+	ldr	r1, .L948
 	ldr	r0, [sp, #0x4]
 	and	r0, r0, r1
-	ldr	r1, .L974+0x4
+	ldr	r1, .L948+0x4
 	orr	r0, r0, r1
-	ldr	r1, .L974+0x8
+	ldr	r1, .L948+0x8
 	and	r0, r0, r1
 	mov	r1, #0xf8
 	lsl	r1, r1, #0xd
 	orr	r0, r0, r1
-	ldr	r1, .L974+0xc
+	ldr	r1, .L948+0xc
 	and	r0, r0, r1
 	mov	r1, #0x80
 	lsl	r1, r1, #0x14
 	orr	r0, r0, r1
 	str	r0, [sp, #0x4]
-	ldr	r1, .L974+0x10
+	ldr	r1, .L948+0x10
 	ldr	r0, [sp, #0x8]
 	and	r0, r0, r1
 	mov	r1, #0xf0
 	lsl	r1, r1, #0x5
 	orr	r0, r0, r1
-	ldr	r1, .L974+0x14
+	ldr	r1, .L948+0x14
 	and	r0, r0, r1
 	mov	r1, #0xc
 	orr	r0, r0, r1
@@ -152030,10 +152069,10 @@ Task_LoadCryScreen:
 	bl	LoadCryWaveformWindow
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.LCB10621
-	b	.L941	@long jump
-.LCB10621:
-	ldr	r1, .L974+0x18
+	bne	.LCB10410
+	b	.L915	@long jump
+.LCB10410:
+	ldr	r1, .L948+0x18
 	mov	r2, #0x87
 	lsl	r2, r2, #0x3
 	add	r1, r1, r2
@@ -152041,12 +152080,12 @@ Task_LoadCryScreen:
 	add	r0, r0, #0x1
 	mov	r2, #0x0
 	strb	r0, [r1]
-	ldr	r0, .L974+0x1c
+	ldr	r0, .L948+0x1c
 	strb	r2, [r0]
-	b	.L941
-.L975:
+	b	.L915
+.L949:
 	.align	2, 0
-.L974:
+.L948:
 	.word	-0x10000
 	.word	0x4020
 	.word	-0xff0001
@@ -152055,21 +152094,21 @@ Task_LoadCryScreen:
 	.word	-0x100
 	.word	gMain
 	.word	gDexCryScreenState
-.L952:
-	ldr	r1, .L976
+.L926:
+	ldr	r1, .L950
 	ldr	r0, [sp, #0xc]
 	and	r0, r0, r1
 	mov	r1, #0x90
 	lsl	r1, r1, #0x14
 	orr	r0, r0, r1
 	str	r0, [sp, #0xc]
-	ldr	r2, .L976+0x4
+	ldr	r2, .L950+0x4
 	add	r0, sp, #0xc
 	ldr	r1, [r0, #0x4]
 	and	r1, r1, r2
 	mov	r2, #0x12
 	orr	r1, r1, r2
-	ldr	r2, .L976+0x8
+	ldr	r2, .L950+0x8
 	and	r1, r1, r2
 	mov	r2, #0xc0
 	lsl	r2, r2, #0x2
@@ -152079,15 +152118,15 @@ Task_LoadCryScreen:
 	bl	LoadCryMeter
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L953	@cond_branch
-	ldr	r1, .L976+0xc
+	beq	.L927	@cond_branch
+	ldr	r1, .L950+0xc
 	mov	r3, #0x87
 	lsl	r3, r3, #0x3
 	add	r1, r1, r3
 	ldrb	r0, [r1]
 	add	r0, r0, #0x1
 	strb	r0, [r1]
-.L953:
+.L927:
 	mov	r0, #0x3
 	mov	r1, #0x2
 	bl	CopyWindowToVram
@@ -152102,15 +152141,15 @@ Task_LoadCryScreen:
 	bl	CopyBgTilemapBufferToVram
 	mov	r0, #0x3
 	bl	CopyBgTilemapBufferToVram
-	b	.L941
-.L977:
+	b	.L915
+.L951:
 	.align	2, 0
-.L976:
+.L950:
 	.word	0xffffff
 	.word	-0x100
 	.word	-0xff01
 	.word	gMain
-.L954:
+.L928:
 	mov	r0, #0x15
 	neg	r0, r0
 	mov	r1, #0x0
@@ -152118,20 +152157,20 @@ Task_LoadCryScreen:
 	mov	r2, #0x10
 	mov	r3, #0x0
 	bl	BeginNormalPaletteFade
-	ldr	r0, .L978
+	ldr	r0, .L952
 	ldr	r0, [r0]
 	bl	SetVBlankCallback
-	ldr	r1, .L978+0x4
+	ldr	r1, .L952+0x4
 	mov	r4, #0x87
 	lsl	r4, r4, #0x3
 	add	r1, r1, r4
-	b	.L958
-.L979:
+	b	.L932
+.L953:
 	.align	2, 0
-.L978:
+.L952:
 	.word	gPokedexVBlankCB
 	.word	gMain
-.L955:
+.L929:
 	mov	r0, #0x50
 	mov	r1, #0x0
 	bl	SetGpuReg
@@ -152153,24 +152192,24 @@ Task_LoadCryScreen:
 	bl	ShowBg
 	mov	r0, #0x3
 	bl	ShowBg
-.L959:
-	ldr	r1, .L980
+.L933:
+	ldr	r1, .L954
 	mov	r0, #0x87
 	lsl	r0, r0, #0x3
 	add	r1, r1, r0
-.L958:
+.L932:
 	ldrb	r0, [r1]
 	add	r0, r0, #0x1
 	strb	r0, [r1]
-	b	.L941
-.L981:
+	b	.L915
+.L955:
 	.align	2, 0
-.L980:
+.L954:
 	.word	gMain
-.L956:
-	ldr	r0, .L982
+.L930:
+	ldr	r0, .L956
 	ldr	r0, [r0]
-	ldr	r1, .L982+0x4
+	ldr	r1, .L956+0x4
 	add	r0, r0, r1
 	mov	r1, #0x0
 	strb	r1, [r0]
@@ -152178,27 +152217,27 @@ Task_LoadCryScreen:
 	lsl	r3, r3, #0x3
 	add	r0, r2, r3
 	strb	r1, [r0]
-	ldr	r1, .L982+0x8
+	ldr	r1, .L956+0x8
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L982+0xc
+	ldr	r1, .L956+0xc
 	str	r1, [r0]
-.L941:
+.L915:
 	add	sp, sp, #0x14
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L983:
+.L957:
 	.align	2, 0
-.L982:
+.L956:
 	.word	sPokedexView
-	.word	0xcea
+	.word	0xcf4
 	.word	gTasks
 	.word	Task_HandleCryScreenInput
-.Lfe65:
-	.size	 Task_LoadCryScreen,.Lfe65-Task_LoadCryScreen
+.Lfe68:
+	.size	 Task_LoadCryScreen,.Lfe68-Task_LoadCryScreen
 	.align	2, 0
 	.type	 Task_HandleCryScreenInput,function
 	.thumb_func
@@ -152212,53 +152251,53 @@ Task_HandleCryScreenInput:
 	bl	IsCryPlaying
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L985	@cond_branch
+	beq	.L959	@cond_branch
 	mov	r0, #0x1
 	bl	LoadPlayArrowPalette
-	b	.L986
-.L985:
+	b	.L960
+.L959:
 	mov	r0, #0x0
 	bl	LoadPlayArrowPalette
-.L986:
-	ldr	r1, .L997
+.L960:
+	ldr	r1, .L971
 	ldrh	r2, [r1, #0x2e]
 	mov	r0, #0x1
 	and	r0, r0, r2
 	add	r5, r1, #0
 	cmp	r0, #0
-	beq	.L987	@cond_branch
+	beq	.L961	@cond_branch
 	mov	r0, #0x1
 	bl	LoadPlayArrowPalette
-	ldr	r0, .L997+0x4
+	ldr	r0, .L971+0x4
 	ldr	r0, [r0]
 	ldrh	r0, [r0]
 	bl	NationalPokedexNumToSpecies
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	bl	CryScreenPlayButton
-	b	.L984
-.L998:
+	b	.L958
+.L972:
 	.align	2, 0
-.L997:
+.L971:
 	.word	gMain
 	.word	sPokedexListItem
-.L987:
-	ldr	r0, .L999
+.L961:
+	ldr	r0, .L973
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
 	cmp	r1, #0
-	beq	.LCB10892
-	b	.L984	@long jump
-.LCB10892:
+	beq	.LCB10681
+	b	.L958	@long jump
+.LCB10681:
 	mov	r0, #0x2
 	and	r0, r0, r2
 	lsl	r0, r0, #0x10
 	lsr	r3, r0, #0x10
 	cmp	r3, #0
-	beq	.L990	@cond_branch
+	beq	.L964	@cond_branch
 	mov	r0, #0x15
 	neg	r0, r0
 	str	r1, [sp]
@@ -152266,49 +152305,49 @@ Task_HandleCryScreenInput:
 	mov	r2, #0x0
 	mov	r3, #0x10
 	bl	BeginNormalPaletteFade
-	ldr	r0, .L999+0x4
+	ldr	r0, .L973+0x4
 	bl	m4aMPlayContinue
-	ldr	r0, .L999+0x8
+	ldr	r0, .L973+0x8
 	ldr	r0, [r0]
-	ldr	r1, .L999+0xc
+	ldr	r1, .L973+0xc
 	add	r0, r0, r1
 	mov	r1, #0x1
 	strb	r1, [r0]
-	ldr	r1, .L999+0x10
+	ldr	r1, .L973+0x10
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L999+0x14
+	ldr	r1, .L973+0x14
 	str	r1, [r0]
 	mov	r0, #0x3
 	bl	PlaySE
-	b	.L984
-.L1000:
+	b	.L958
+.L974:
 	.align	2, 0
-.L999:
+.L973:
 	.word	gPaletteFade
 	.word	gMPlayInfo_BGM
 	.word	sPokedexView
-	.word	0xcea
+	.word	0xcf4
 	.word	gTasks
 	.word	Task_SwitchScreensFromCryScreen
-.L990:
+.L964:
 	mov	r0, #0x20
 	and	r0, r0, r2
 	cmp	r0, #0
-	bne	.L992	@cond_branch
+	bne	.L966	@cond_branch
 	mov	r0, #0x80
 	lsl	r0, r0, #0x2
 	and	r0, r0, r2
 	cmp	r0, #0
-	beq	.L991	@cond_branch
-	ldr	r0, .L1001
+	beq	.L965	@cond_branch
+	ldr	r0, .L975
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x13]
 	cmp	r0, #0x1
-	bne	.L991	@cond_branch
-.L992:
+	bne	.L965	@cond_branch
+.L966:
 	mov	r0, #0x15
 	neg	r0, r0
 	str	r3, [sp]
@@ -152316,66 +152355,66 @@ Task_HandleCryScreenInput:
 	mov	r2, #0x0
 	mov	r3, #0x10
 	bl	BeginNormalPaletteFade
-	ldr	r0, .L1001+0x4
+	ldr	r0, .L975+0x4
 	bl	m4aMPlayContinue
-	ldr	r0, .L1001+0x8
+	ldr	r0, .L975+0x8
 	ldr	r0, [r0]
-	ldr	r1, .L1001+0xc
+	ldr	r1, .L975+0xc
 	add	r0, r0, r1
 	mov	r1, #0x2
 	strb	r1, [r0]
-	ldr	r1, .L1001+0x10
+	ldr	r1, .L975+0x10
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1001+0x14
+	ldr	r1, .L975+0x14
 	str	r1, [r0]
 	mov	r0, #0x6d
 	bl	PlaySE
-	b	.L984
-.L1002:
+	b	.L958
+.L976:
 	.align	2, 0
-.L1001:
+.L975:
 	.word	gSaveBlock2Ptr
 	.word	gMPlayInfo_BGM
 	.word	sPokedexView
-	.word	0xcea
+	.word	0xcf4
 	.word	gTasks
 	.word	Task_SwitchScreensFromCryScreen
-.L991:
+.L965:
 	ldrh	r1, [r5, #0x2e]
 	mov	r0, #0x10
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L994	@cond_branch
+	bne	.L968	@cond_branch
 	mov	r0, #0x80
 	lsl	r0, r0, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L984	@cond_branch
-	ldr	r0, .L1003
+	beq	.L958	@cond_branch
+	ldr	r0, .L977
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x13]
 	cmp	r0, #0x1
-	bne	.L984	@cond_branch
-.L994:
-	ldr	r0, .L1003+0x4
+	bne	.L958	@cond_branch
+.L968:
+	ldr	r0, .L977+0x4
 	ldr	r0, [r0]
 	ldrb	r1, [r0, #0x2]
 	mov	r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L995	@cond_branch
+	bne	.L969	@cond_branch
 	mov	r0, #0x20
 	bl	PlaySE
-	b	.L984
-.L1004:
+	b	.L958
+.L978:
 	.align	2, 0
-.L1003:
+.L977:
 	.word	gSaveBlock2Ptr
 	.word	sPokedexListItem
-.L995:
+.L969:
 	mov	r0, #0x15
 	neg	r0, r0
 	mov	r1, #0x0
@@ -152383,38 +152422,38 @@ Task_HandleCryScreenInput:
 	mov	r2, #0x0
 	mov	r3, #0x10
 	bl	BeginNormalPaletteFade
-	ldr	r0, .L1005
+	ldr	r0, .L979
 	bl	m4aMPlayContinue
-	ldr	r0, .L1005+0x4
+	ldr	r0, .L979+0x4
 	ldr	r0, [r0]
-	ldr	r1, .L1005+0x8
+	ldr	r1, .L979+0x8
 	add	r0, r0, r1
 	mov	r1, #0x3
 	strb	r1, [r0]
-	ldr	r1, .L1005+0xc
+	ldr	r1, .L979+0xc
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1005+0x10
+	ldr	r1, .L979+0x10
 	str	r1, [r0]
 	mov	r0, #0x6d
 	bl	PlaySE
-.L984:
+.L958:
 	add	sp, sp, #0x4
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1006:
+.L980:
 	.align	2, 0
-.L1005:
+.L979:
 	.word	gMPlayInfo_BGM
 	.word	sPokedexView
-	.word	0xcea
+	.word	0xcf4
 	.word	gTasks
 	.word	Task_SwitchScreensFromCryScreen
-.Lfe66:
-	.size	 Task_HandleCryScreenInput,.Lfe66-Task_HandleCryScreenInput
+.Lfe69:
+	.size	 Task_HandleCryScreenInput,.Lfe69-Task_HandleCryScreenInput
 	.align	2, 0
 	.type	 Task_SwitchScreensFromCryScreen,function
 	.thumb_func
@@ -152422,63 +152461,63 @@ Task_SwitchScreensFromCryScreen:
 	push	{r4, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r0, .L1017
+	ldr	r0, .L991
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1008	@cond_branch
+	bne	.L982	@cond_branch
 	bl	FreeCryScreen
-	ldr	r1, .L1017+0x4
+	ldr	r1, .L991+0x4
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r4, r0, r1
 	ldrh	r0, [r4, #0x10]
 	bl	FreeAndDestroyMonPicSprite
-	ldr	r0, .L1017+0x8
+	ldr	r0, .L991+0x8
 	ldr	r0, [r0]
-	ldr	r1, .L1017+0xc
+	ldr	r1, .L991+0xc
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x2
-	beq	.L1012	@cond_branch
+	beq	.L986	@cond_branch
 	cmp	r0, #0x2
-	ble	.L1011	@cond_branch
+	ble	.L985	@cond_branch
 	cmp	r0, #0x3
-	beq	.L1013	@cond_branch
-.L1011:
-	ldr	r0, .L1017+0x10
-	b	.L1016
-.L1018:
+	beq	.L987	@cond_branch
+.L985:
+	ldr	r0, .L991+0x10
+	b	.L990
+.L992:
 	.align	2, 0
-.L1017:
+.L991:
 	.word	gPaletteFade
 	.word	gTasks
 	.word	sPokedexView
-	.word	0xcea
+	.word	0xcf4
 	.word	Task_LoadInfoScreen
-.L1012:
-	ldr	r0, .L1019
-	b	.L1016
-.L1020:
+.L986:
+	ldr	r0, .L993
+	b	.L990
+.L994:
 	.align	2, 0
-.L1019:
-	.word	Task_LoadAreaScreen
-.L1013:
-	ldr	r0, .L1021
-.L1016:
+.L993:
+	.word	Task_LoadStatsScreen
+.L987:
+	ldr	r0, .L995
+.L990:
 	str	r0, [r4]
-.L1008:
+.L982:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1022:
+.L996:
 	.align	2, 0
-.L1021:
+.L995:
 	.word	Task_LoadSizeScreen
-.Lfe67:
-	.size	 Task_SwitchScreensFromCryScreen,.Lfe67-Task_SwitchScreensFromCryScreen
+.Lfe70:
+	.size	 Task_SwitchScreensFromCryScreen,.Lfe70-Task_SwitchScreensFromCryScreen
 	.align	2, 0
 	.type	 LoadPlayArrowPalette,function
 	.thumb_func
@@ -152487,16 +152526,16 @@ LoadPlayArrowPalette:
 	add	sp, sp, #-0x4
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1024	@cond_branch
-	ldr	r1, .L1027
-	b	.L1026
-.L1028:
+	beq	.L998	@cond_branch
+	ldr	r1, .L1001
+	b	.L1000
+.L1002:
 	.align	2, 0
-.L1027:
+.L1001:
 	.word	0x392
-.L1024:
-	ldr	r1, .L1029
-.L1026:
+.L998:
+	ldr	r1, .L1003
+.L1000:
 	mov	r0, sp
 	strh	r1, [r0]
 	mov	r0, sp
@@ -152506,12 +152545,12 @@ LoadPlayArrowPalette:
 	add	sp, sp, #0x4
 	pop	{r0}
 	bx	r0
-.L1030:
+.L1004:
 	.align	2, 0
-.L1029:
+.L1003:
 	.word	0x2af
-.Lfe68:
-	.size	 LoadPlayArrowPalette,.Lfe68-LoadPlayArrowPalette
+.Lfe71:
+	.size	 LoadPlayArrowPalette,.Lfe71-LoadPlayArrowPalette
 	.align	2, 0
 	.type	 Task_LoadSizeScreen,function
 	.thumb_func
@@ -152520,53 +152559,54 @@ Task_LoadSizeScreen:
 	add	sp, sp, #-0x44
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	ldr	r1, .L1049
+	ldr	r1, .L1023
 	mov	r2, #0x87
 	lsl	r2, r2, #0x3
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	add	r5, r1, #0
 	cmp	r0, #0x9
-	bhi	.L1034	@cond_branch
+	bhi	.L1008	@cond_branch
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1049+0x4
+	ldr	r1, .L1023+0x4
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L1050:
+.L1024:
 	.align	2, 0
-.L1049:
+.L1023:
 	.word	gMain
-	.word	.L1046
+	.word	.L1020
 	.align	2, 0
 	.align	2, 0
-.L1046:
-	.word	.L1034
-	.word	.L1036
-	.word	.L1037
-	.word	.L1038
-	.word	.L1039
-	.word	.L1040
-	.word	.L1041
-	.word	.L1042
-	.word	.L1043
-	.word	.L1044
-.L1034:
-	ldr	r0, .L1051
+.L1020:
+	.word	.L1008
+	.word	.L1010
+	.word	.L1011
+	.word	.L1012
+	.word	.L1013
+	.word	.L1014
+	.word	.L1015
+	.word	.L1016
+	.word	.L1017
+	.word	.L1018
+.L1008:
+	ldr	r0, .L1025
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.LCB11283
-	b	.L1032	@long jump
-.LCB11283:
-	ldr	r4, .L1051+0x4
+	beq	.LCB11072
+	b	.L1006	@long jump
+.LCB11072:
+	ldr	r4, .L1025+0x4
 	ldr	r0, [r4]
-	ldr	r1, .L1051+0x8
+	mov	r1, #0xcf
+	lsl	r1, r1, #0x4
 	add	r0, r0, r1
 	mov	r1, #0x7
 	strb	r1, [r0]
-	ldr	r1, .L1051+0xc
+	ldr	r1, .L1025+0x8
 	ldr	r0, [r5, #0xc]
 	str	r0, [r1]
 	mov	r0, #0x0
@@ -152575,26 +152615,25 @@ Task_LoadSizeScreen:
 	lsl	r0, r0, #0x2
 	bl	ResetOtherVideoRegisters
 	ldr	r0, [r4]
-	ldr	r2, .L1051+0x10
+	ldr	r2, .L1025+0xc
 	add	r0, r0, r2
-	mov	r1, #0x2
+	mov	r1, #0x4
 	strb	r1, [r0]
 	mov	r0, #0x87
 	lsl	r0, r0, #0x3
 	add	r1, r5, r0
 	mov	r0, #0x1
 	strb	r0, [r1]
-	b	.L1032
-.L1052:
+	b	.L1006
+.L1026:
 	.align	2, 0
-.L1051:
+.L1025:
 	.word	gPaletteFade
 	.word	sPokedexView
-	.word	0xce6
 	.word	gPokedexVBlankCB
-	.word	0xce9
-.L1036:
-	ldr	r1, .L1053
+	.word	0xcf3
+.L1010:
+	ldr	r1, .L1027
 	mov	r2, #0x80
 	lsl	r2, r2, #0x6
 	mov	r0, #0x0
@@ -152602,7 +152641,7 @@ Task_LoadSizeScreen:
 	mov	r0, #0x3
 	mov	r3, #0x0
 	bl	DecompressAndLoadBgGfxUsingHeap
-	ldr	r1, .L1053+0x4
+	ldr	r1, .L1027+0x4
 	mov	r0, #0x3
 	mov	r2, #0x0
 	mov	r3, #0x0
@@ -152612,37 +152651,34 @@ Task_LoadSizeScreen:
 	bl	FillWindowPixelBuffer
 	mov	r0, #0x0
 	bl	PutWindowTilemap
-	b	.L1047
-.L1054:
+	b	.L1021
+.L1028:
 	.align	2, 0
-.L1053:
-	.word	gPokedexMenu_Gfx
+.L1027:
+	.word	gPokedexMenuRest_Gfx
 	.word	gPokedexSizeScreen_Tilemap
-.L1037:
+.L1011:
 	mov	r0, #0xd
-	bl	LoadScreenSelectBarSubmenu
-	mov	r0, #0x2
-	mov	r1, #0xd
-	bl	HighlightSubmenuScreenSelectBarItem
-	ldr	r0, .L1055
+	bl	LoadScreenSelectBarMain
+	ldr	r0, .L1029
 	ldr	r0, [r0]
-	ldr	r1, .L1055+0x4
+	ldr	r1, .L1029+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1f
 	lsr	r0, r0, #0x1f
 	bl	LoadPokedexBgPalette
-	b	.L1047
-.L1056:
+	b	.L1021
+.L1030:
 	.align	2, 0
-.L1055:
+.L1029:
 	.word	sPokedexView
-	.word	0xce8
-.L1038:
-	ldr	r1, .L1057
+	.word	0xcf2
+.L1012:
+	ldr	r1, .L1031
 	add	r0, sp, #0x4
 	bl	StringCopy
-	ldr	r0, .L1057+0x4
+	ldr	r0, .L1031+0x4
 	ldr	r1, [r0]
 	add	r0, sp, #0x4
 	bl	StringAppend
@@ -152656,22 +152692,22 @@ Task_LoadSizeScreen:
 	add	r0, sp, #0x4
 	mov	r2, #0x79
 	bl	PrintInfoScreenText
-	ldr	r1, .L1057+0x8
+	ldr	r1, .L1031+0x8
 	mov	r0, #0x87
 	lsl	r0, r0, #0x3
 	add	r1, r1, r0
-	b	.L1048
-.L1058:
+	b	.L1022
+.L1032:
 	.align	2, 0
-.L1057:
+.L1031:
 	.word	gText_SizeComparedTo
 	.word	gSaveBlock2Ptr
 	.word	gMain
-.L1039:
+.L1013:
 	bl	ResetPaletteFade
-	b	.L1047
-.L1040:
-	ldr	r0, .L1059
+	b	.L1021
+.L1014:
+	ldr	r0, .L1033
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x8]
 	bl	PlayerGenderToFrontTrainerPicId
@@ -152683,7 +152719,7 @@ Task_LoadSizeScreen:
 	bl	CreateSizeScreenTrainerPic
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-	ldr	r0, .L1059+0x4
+	ldr	r0, .L1033+0x4
 	lsl	r4, r6, #0x4
 	add	r4, r4, r6
 	lsl	r4, r4, #0x2
@@ -152707,8 +152743,8 @@ Task_LoadSizeScreen:
 	neg	r0, r0
 	and	r0, r0, r1
 	strb	r0, [r4, #0x5]
-	ldr	r3, .L1059+0x8
-	ldr	r0, .L1059+0xc
+	ldr	r3, .L1033+0x8
+	ldr	r0, .L1033+0xc
 	ldr	r2, [r0]
 	ldrh	r1, [r2]
 	lsl	r0, r1, #0x3
@@ -152728,27 +152764,27 @@ Task_LoadSizeScreen:
 	mov	r2, #0x0
 	mov	r3, #0x0
 	bl	SetOamMatrix
-	ldr	r0, .L1059+0x10
+	ldr	r0, .L1033+0x10
 	ldrb	r1, [r4, #0x5]
 	lsr	r1, r1, #0x4
 	add	r1, r1, #0x10
 	lsl	r1, r1, #0x4
 	mov	r2, #0x20
 	bl	LoadPalette
-	ldr	r1, .L1059+0x14
+	ldr	r1, .L1033+0x14
 	lsl	r0, r7, #0x2
 	add	r0, r0, r7
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
 	strh	r6, [r0, #0x12]
-	ldr	r1, .L1059+0x18
+	ldr	r1, .L1033+0x18
 	mov	r0, #0x87
 	lsl	r0, r0, #0x3
 	add	r1, r1, r0
-	b	.L1048
-.L1060:
+	b	.L1022
+.L1034:
 	.align	2, 0
-.L1059:
+.L1033:
 	.word	gSaveBlock2Ptr
 	.word	gSprites
 	.word	gPokedexEntries
@@ -152756,8 +152792,8 @@ Task_LoadSizeScreen:
 	.word	sSizeScreenSilhouette_Pal
 	.word	gTasks
 	.word	gMain
-.L1041:
-	ldr	r5, .L1061
+.L1015:
+	ldr	r5, .L1035
 	ldr	r0, [r5]
 	ldrh	r0, [r0]
 	mov	r1, #0x58
@@ -152766,7 +152802,7 @@ Task_LoadSizeScreen:
 	bl	CreateMonSpriteFromNationalDexNumber
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-	ldr	r0, .L1061+0x4
+	ldr	r0, .L1035+0x4
 	lsl	r4, r6, #0x4
 	add	r4, r4, r6
 	lsl	r4, r4, #0x2
@@ -152790,7 +152826,7 @@ Task_LoadSizeScreen:
 	neg	r0, r0
 	and	r0, r0, r1
 	strb	r0, [r4, #0x5]
-	ldr	r3, .L1061+0x8
+	ldr	r3, .L1035+0x8
 	ldr	r2, [r5]
 	ldrh	r1, [r2]
 	lsl	r0, r1, #0x3
@@ -152810,14 +152846,14 @@ Task_LoadSizeScreen:
 	mov	r2, #0x0
 	mov	r3, #0x0
 	bl	SetOamMatrix
-	ldr	r0, .L1061+0xc
+	ldr	r0, .L1035+0xc
 	ldrb	r1, [r4, #0x5]
 	lsr	r1, r1, #0x4
 	add	r1, r1, #0x10
 	lsl	r1, r1, #0x4
 	mov	r2, #0x20
 	bl	LoadPalette
-	ldr	r1, .L1061+0x10
+	ldr	r1, .L1035+0x10
 	lsl	r0, r7, #0x2
 	add	r0, r0, r7
 	lsl	r0, r0, #0x3
@@ -152832,16 +152868,16 @@ Task_LoadSizeScreen:
 	bl	CopyBgTilemapBufferToVram
 	mov	r0, #0x3
 	bl	CopyBgTilemapBufferToVram
-	b	.L1047
-.L1062:
+	b	.L1021
+.L1036:
 	.align	2, 0
-.L1061:
+.L1035:
 	.word	sPokedexListItem
 	.word	gSprites
 	.word	gPokedexEntries
 	.word	sSizeScreenSilhouette_Pal
 	.word	gTasks
-.L1042:
+.L1016:
 	mov	r0, #0x15
 	neg	r0, r0
 	mov	r1, #0x0
@@ -152849,20 +152885,20 @@ Task_LoadSizeScreen:
 	mov	r2, #0x10
 	mov	r3, #0x0
 	bl	BeginNormalPaletteFade
-	ldr	r0, .L1063
+	ldr	r0, .L1037
 	ldr	r0, [r0]
 	bl	SetVBlankCallback
-	ldr	r1, .L1063+0x4
+	ldr	r1, .L1037+0x4
 	mov	r0, #0x87
 	lsl	r0, r0, #0x3
 	add	r1, r1, r0
-	b	.L1048
-.L1064:
+	b	.L1022
+.L1038:
 	.align	2, 0
-.L1063:
+.L1037:
 	.word	gPokedexVBlankCB
 	.word	gMain
-.L1043:
+.L1017:
 	mov	r0, #0x50
 	mov	r1, #0x0
 	bl	SetGpuReg
@@ -152884,60 +152920,60 @@ Task_LoadSizeScreen:
 	bl	ShowBg
 	mov	r0, #0x3
 	bl	ShowBg
-.L1047:
-	ldr	r1, .L1065
+.L1021:
+	ldr	r1, .L1039
 	mov	r2, #0x87
 	lsl	r2, r2, #0x3
 	add	r1, r1, r2
-.L1048:
+.L1022:
 	ldrb	r0, [r1]
 	add	r0, r0, #0x1
 	strb	r0, [r1]
-	b	.L1032
-.L1066:
+	b	.L1006
+.L1040:
 	.align	2, 0
-.L1065:
+.L1039:
 	.word	gMain
-.L1044:
-	ldr	r0, .L1067
+.L1018:
+	ldr	r0, .L1041
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	cmp	r2, #0
-	bne	.L1032	@cond_branch
-	ldr	r0, .L1067+0x4
+	bne	.L1006	@cond_branch
+	ldr	r0, .L1041+0x4
 	ldr	r0, [r0]
-	ldr	r1, .L1067+0x8
+	ldr	r1, .L1041+0x8
 	add	r0, r0, r1
 	strb	r2, [r0]
 	mov	r1, #0x87
 	lsl	r1, r1, #0x3
 	add	r0, r5, r1
 	strb	r2, [r0]
-	ldr	r1, .L1067+0xc
+	ldr	r1, .L1041+0xc
 	lsl	r0, r7, #0x2
 	add	r0, r0, r7
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1067+0x10
+	ldr	r1, .L1041+0x10
 	str	r1, [r0]
-.L1032:
+.L1006:
 	add	sp, sp, #0x44
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1068:
+.L1042:
 	.align	2, 0
-.L1067:
+.L1041:
 	.word	gPaletteFade
 	.word	sPokedexView
-	.word	0xcea
+	.word	0xcf4
 	.word	gTasks
 	.word	Task_HandleSizeScreenInput
-.Lfe69:
-	.size	 Task_LoadSizeScreen,.Lfe69-Task_LoadSizeScreen
+.Lfe72:
+	.size	 Task_LoadSizeScreen,.Lfe72-Task_LoadSizeScreen
 	.align	2, 0
 	.type	 Task_HandleSizeScreenInput,function
 	.thumb_func
@@ -152947,14 +152983,14 @@ Task_HandleSizeScreenInput:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	add	r5, r4, #0
-	ldr	r0, .L1074
+	ldr	r0, .L1048
 	ldrh	r1, [r0, #0x2e]
 	mov	r0, #0x2
 	and	r0, r0, r1
 	lsl	r0, r0, #0x10
 	lsr	r2, r0, #0x10
 	cmp	r2, #0
-	beq	.L1070	@cond_branch
+	beq	.L1044	@cond_branch
 	mov	r0, #0x15
 	neg	r0, r0
 	mov	r1, #0x0
@@ -152962,46 +152998,46 @@ Task_HandleSizeScreenInput:
 	mov	r2, #0x0
 	mov	r3, #0x10
 	bl	BeginNormalPaletteFade
-	ldr	r0, .L1074+0x4
+	ldr	r0, .L1048+0x4
 	ldr	r0, [r0]
-	ldr	r1, .L1074+0x8
+	ldr	r1, .L1048+0x8
 	add	r0, r0, r1
 	mov	r1, #0x1
 	strb	r1, [r0]
-	ldr	r1, .L1074+0xc
+	ldr	r1, .L1048+0xc
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1074+0x10
+	ldr	r1, .L1048+0x10
 	str	r1, [r0]
 	mov	r0, #0x3
 	bl	PlaySE
-	b	.L1071
-.L1075:
+	b	.L1045
+.L1049:
 	.align	2, 0
-.L1074:
+.L1048:
 	.word	gMain
 	.word	sPokedexView
-	.word	0xcea
+	.word	0xcf4
 	.word	gTasks
 	.word	Task_SwitchScreensFromSizeScreen
-.L1070:
+.L1044:
 	mov	r0, #0x20
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1073	@cond_branch
+	bne	.L1047	@cond_branch
 	mov	r0, #0x80
 	lsl	r0, r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1071	@cond_branch
-	ldr	r0, .L1076
+	beq	.L1045	@cond_branch
+	ldr	r0, .L1050
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x13]
 	cmp	r0, #0x1
-	bne	.L1071	@cond_branch
-.L1073:
+	bne	.L1045	@cond_branch
+.L1047:
 	mov	r0, #0x15
 	neg	r0, r0
 	str	r2, [sp]
@@ -153009,36 +153045,36 @@ Task_HandleSizeScreenInput:
 	mov	r2, #0x0
 	mov	r3, #0x10
 	bl	BeginNormalPaletteFade
-	ldr	r0, .L1076+0x4
+	ldr	r0, .L1050+0x4
 	ldr	r0, [r0]
-	ldr	r1, .L1076+0x8
+	ldr	r1, .L1050+0x8
 	add	r0, r0, r1
 	mov	r1, #0x2
 	strb	r1, [r0]
-	ldr	r1, .L1076+0xc
+	ldr	r1, .L1050+0xc
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1076+0x10
+	ldr	r1, .L1050+0x10
 	str	r1, [r0]
 	mov	r0, #0x6d
 	bl	PlaySE
-.L1071:
+.L1045:
 	add	sp, sp, #0x4
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1077:
+.L1051:
 	.align	2, 0
-.L1076:
+.L1050:
 	.word	gSaveBlock2Ptr
 	.word	sPokedexView
-	.word	0xcea
+	.word	0xcf4
 	.word	gTasks
 	.word	Task_SwitchScreensFromSizeScreen
-.Lfe70:
-	.size	 Task_HandleSizeScreenInput,.Lfe70-Task_HandleSizeScreenInput
+.Lfe73:
+	.size	 Task_HandleSizeScreenInput,.Lfe73-Task_HandleSizeScreenInput
 	.align	2, 0
 	.type	 Task_SwitchScreensFromSizeScreen,function
 	.thumb_func
@@ -153046,13 +153082,13 @@ Task_SwitchScreensFromSizeScreen:
 	push	{r4, lr}
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
-	ldr	r0, .L1086
+	ldr	r0, .L1060
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1079	@cond_branch
-	ldr	r1, .L1086+0x4
+	bne	.L1053	@cond_branch
+	ldr	r1, .L1060+0x4
 	lsl	r0, r2, #0x2
 	add	r0, r0, r2
 	lsl	r0, r0, #0x3
@@ -153061,76 +153097,80 @@ Task_SwitchScreensFromSizeScreen:
 	bl	FreeAndDestroyMonPicSprite
 	ldrh	r0, [r4, #0x12]
 	bl	FreeAndDestroyTrainerPicSprite
-	ldr	r0, .L1086+0x8
+	ldr	r0, .L1060+0x8
 	ldr	r0, [r0]
-	ldr	r1, .L1086+0xc
+	ldr	r1, .L1060+0xc
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x1
-	beq	.L1082	@cond_branch
+	beq	.L1056	@cond_branch
 	cmp	r0, #0x2
-	beq	.L1083	@cond_branch
-.L1082:
-	ldr	r0, .L1086+0x10
-	b	.L1085
-.L1087:
+	beq	.L1057	@cond_branch
+.L1056:
+	ldr	r0, .L1060+0x10
+	b	.L1059
+.L1061:
 	.align	2, 0
-.L1086:
+.L1060:
 	.word	gPaletteFade
 	.word	gTasks
 	.word	sPokedexView
-	.word	0xcea
+	.word	0xcf4
 	.word	Task_LoadInfoScreen
-.L1083:
-	ldr	r0, .L1088
-.L1085:
+.L1057:
+	ldr	r0, .L1062
+.L1059:
 	str	r0, [r4]
-.L1079:
+.L1053:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1089:
+.L1063:
 	.align	2, 0
-.L1088:
+.L1062:
 	.word	Task_LoadCryScreen
-.Lfe71:
-	.size	 Task_SwitchScreensFromSizeScreen,.Lfe71-Task_SwitchScreensFromSizeScreen
+.Lfe74:
+	.size	 Task_SwitchScreensFromSizeScreen,.Lfe74-Task_SwitchScreensFromSizeScreen
 	.align	2, 0
 	.type	 LoadScreenSelectBarMain,function
 	.thumb_func
 LoadScreenSelectBarMain:
 	push	{lr}
-	ldr	r1, .L1091
+	ldr	r1, .L1065
 	mov	r0, #0x1
 	mov	r2, #0x0
 	mov	r3, #0x0
 	bl	CopyToBgTilemapBuffer
+	mov	r0, #0x1
+	bl	CopyBgTilemapBufferToVram
 	pop	{r0}
 	bx	r0
-.L1092:
+.L1066:
 	.align	2, 0
-.L1091:
-	.word	gPokedexScreenSelectBarMain_Tilemap
-.Lfe72:
-	.size	 LoadScreenSelectBarMain,.Lfe72-LoadScreenSelectBarMain
+.L1065:
+	.word	gPokedexScreenSelectBarSubmenu_Tilemap_Clear
+.Lfe75:
+	.size	 LoadScreenSelectBarMain,.Lfe75-LoadScreenSelectBarMain
 	.align	2, 0
 	.type	 LoadScreenSelectBarSubmenu,function
 	.thumb_func
 LoadScreenSelectBarSubmenu:
 	push	{lr}
-	ldr	r1, .L1094
+	ldr	r1, .L1068
 	mov	r0, #0x1
 	mov	r2, #0x0
 	mov	r3, #0x0
 	bl	CopyToBgTilemapBuffer
+	mov	r0, #0x1
+	bl	CopyBgTilemapBufferToVram
 	pop	{r0}
 	bx	r0
-.L1095:
+.L1069:
 	.align	2, 0
-.L1094:
+.L1068:
 	.word	gPokedexScreenSelectBarSubmenu_Tilemap
-.Lfe73:
-	.size	 LoadScreenSelectBarSubmenu,.Lfe73-LoadScreenSelectBarSubmenu
+.Lfe76:
+	.size	 LoadScreenSelectBarSubmenu,.Lfe76-LoadScreenSelectBarSubmenu
 	.align	2, 0
 	.type	 HighlightScreenSelectBarItem,function
 	.thumb_func
@@ -153145,7 +153185,7 @@ HighlightScreenSelectBarItem:
 	bl	GetBgTilemapBuffer
 	add	r7, r0, #0
 	mov	r1, #0x0
-.L1100:
+.L1074:
 	lsl	r0, r1, #0x3
 	sub	r0, r0, r1
 	add	r0, r0, #0x1
@@ -153154,14 +153194,14 @@ HighlightScreenSelectBarItem:
 	mov	r3, #0x80
 	lsl	r3, r3, #0x7
 	cmp	r1, r8
-	bne	.L1102	@cond_branch
+	bne	.L1076	@cond_branch
 	mov	r3, #0x80
 	lsl	r3, r3, #0x6
-.L1102:
+.L1076:
 	mov	r2, #0x0
 	add	r6, r1, #0x1
-	ldr	r4, .L1113
-.L1110:
+	ldr	r4, .L1087
+.L1084:
 	add	r1, r5, r2
 	lsl	r1, r1, #0x1
 	add	r1, r1, r7
@@ -153178,11 +153218,11 @@ HighlightScreenSelectBarItem:
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	cmp	r2, #0x6
-	bls	.L1110	@cond_branch
+	bls	.L1084	@cond_branch
 	lsl	r0, r6, #0x18
 	lsr	r1, r0, #0x18
-	cmp	r1, #0x3
-	bls	.L1100	@cond_branch
+	cmp	r1, #0x5
+	bls	.L1074	@cond_branch
 	mov	r0, #0x1
 	bl	CopyBgTilemapBufferToVram
 	pop	{r3}
@@ -153190,12 +153230,12 @@ HighlightScreenSelectBarItem:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1114:
+.L1088:
 	.align	2, 0
-.L1113:
+.L1087:
 	.word	0xfff
-.Lfe74:
-	.size	 HighlightScreenSelectBarItem,.Lfe74-HighlightScreenSelectBarItem
+.Lfe77:
+	.size	 HighlightScreenSelectBarItem,.Lfe77-HighlightScreenSelectBarItem
 	.align	2, 0
 	.type	 HighlightSubmenuScreenSelectBarItem,function
 	.thumb_func
@@ -153210,28 +153250,28 @@ HighlightSubmenuScreenSelectBarItem:
 	bl	GetBgTilemapBuffer
 	add	r7, r0, #0
 	mov	r1, #0x0
-.L1119:
+.L1093:
 	lsl	r0, r1, #0x3
 	sub	r0, r0, r1
 	add	r0, r0, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
 	cmp	r1, r8
-	beq	.L1124	@cond_branch
+	beq	.L1098	@cond_branch
 	cmp	r1, #0x3
-	bne	.L1123	@cond_branch
-.L1124:
+	bne	.L1097	@cond_branch
+.L1098:
 	mov	r3, #0x80
 	lsl	r3, r3, #0x6
-	b	.L1121
-.L1123:
+	b	.L1095
+.L1097:
 	mov	r3, #0x80
 	lsl	r3, r3, #0x7
-.L1121:
+.L1095:
 	mov	r2, #0x0
 	add	r5, r1, #0x1
-	ldr	r4, .L1134
-.L1131:
+	ldr	r4, .L1108
+.L1105:
 	add	r1, r6, r2
 	lsl	r1, r1, #0x1
 	add	r1, r1, r7
@@ -153248,11 +153288,11 @@ HighlightSubmenuScreenSelectBarItem:
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	cmp	r2, #0x6
-	bls	.L1131	@cond_branch
+	bls	.L1105	@cond_branch
 	lsl	r0, r5, #0x18
 	lsr	r1, r0, #0x18
 	cmp	r1, #0x3
-	bls	.L1119	@cond_branch
+	bls	.L1093	@cond_branch
 	mov	r0, #0x1
 	bl	CopyBgTilemapBufferToVram
 	pop	{r3}
@@ -153260,12 +153300,12 @@ HighlightSubmenuScreenSelectBarItem:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1135:
+.L1109:
 	.align	2, 0
-.L1134:
+.L1108:
 	.word	0xfff
-.Lfe75:
-	.size	 HighlightSubmenuScreenSelectBarItem,.Lfe75-HighlightSubmenuScreenSelectBarItem
+.Lfe78:
+	.size	 HighlightSubmenuScreenSelectBarItem,.Lfe78-HighlightSubmenuScreenSelectBarItem
 	.align	2, 0
 	.globl	DisplayCaughtMonDexPage
 	.type	 DisplayCaughtMonDexPage,function
@@ -153277,12 +153317,12 @@ DisplayCaughtMonDexPage:
 	add	r6, r2, #0
 	lsl	r4, r4, #0x10
 	lsr	r4, r4, #0x10
-	ldr	r0, .L1137
+	ldr	r0, .L1111
 	mov	r1, #0x0
 	bl	CreateTask
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r2, .L1137+0x4
+	ldr	r2, .L1111+0x4
 	lsl	r1, r0, #0x2
 	add	r1, r1, r0
 	lsl	r1, r1, #0x3
@@ -153299,13 +153339,13 @@ DisplayCaughtMonDexPage:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.L1138:
+.L1112:
 	.align	2, 0
-.L1137:
+.L1111:
 	.word	Task_DisplayCaughtMonDexPage
 	.word	gTasks
-.Lfe76:
-	.size	 DisplayCaughtMonDexPage,.Lfe76-DisplayCaughtMonDexPage
+.Lfe79:
+	.size	 DisplayCaughtMonDexPage,.Lfe79-DisplayCaughtMonDexPage
 	.align	2, 0
 	.type	 Task_DisplayCaughtMonDexPage,function
 	.thumb_func
@@ -153314,7 +153354,7 @@ Task_DisplayCaughtMonDexPage:
 	add	sp, sp, #-0x4
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
-	ldr	r1, .L1154
+	ldr	r1, .L1128
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
@@ -153324,38 +153364,38 @@ Task_DisplayCaughtMonDexPage:
 	ldrsh	r0, [r0, r2]
 	add	r2, r1, #0
 	cmp	r0, #0x6
-	bhi	.L1142	@cond_branch
+	bhi	.L1116	@cond_branch
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1154+0x4
+	ldr	r1, .L1128+0x4
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L1155:
+.L1129:
 	.align	2, 0
-.L1154:
+.L1128:
 	.word	gTasks
-	.word	.L1151
+	.word	.L1125
 	.align	2, 0
 	.align	2, 0
-.L1151:
-	.word	.L1142
-	.word	.L1144
-	.word	.L1145
-	.word	.L1146
-	.word	.L1147
-	.word	.L1148
-	.word	.L1149
-.L1142:
-	ldr	r0, .L1156
+.L1125:
+	.word	.L1116
+	.word	.L1118
+	.word	.L1119
+	.word	.L1120
+	.word	.L1121
+	.word	.L1122
+	.word	.L1123
+.L1116:
+	ldr	r0, .L1130
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.LCB12265
-	b	.L1140	@long jump
-.LCB12265:
-	ldr	r1, .L1156+0x4
-	ldr	r0, .L1156+0x8
+	beq	.LCB12055
+	b	.L1114	@long jump
+.LCB12055:
+	ldr	r1, .L1130+0x4
+	ldr	r0, .L1130+0x8
 	ldr	r0, [r0, #0xc]
 	str	r0, [r1]
 	mov	r0, #0x0
@@ -153365,7 +153405,7 @@ Task_DisplayCaughtMonDexPage:
 	bl	ResetOtherVideoRegisters
 	mov	r0, #0x0
 	bl	ResetBgsAndClearDma3BusyFlags
-	ldr	r1, .L1156+0xc
+	ldr	r1, .L1130+0xc
 	mov	r0, #0x0
 	mov	r2, #0x2
 	bl	InitBgsFromTemplates
@@ -153381,28 +153421,28 @@ Task_DisplayCaughtMonDexPage:
 	add	r1, r0, #0
 	mov	r0, #0x2
 	bl	SetBgTilemapBuffer
-	ldr	r0, .L1156+0x10
+	ldr	r0, .L1130+0x10
 	bl	InitWindows
 	bl	DeactivateAllTextPrinters
-	ldr	r1, .L1156+0x14
+	ldr	r1, .L1130+0x14
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
 	mov	r1, #0x1
 	strh	r1, [r0, #0x8]
-	b	.L1140
-.L1157:
+	b	.L1114
+.L1131:
 	.align	2, 0
-.L1156:
+.L1130:
 	.word	gPaletteFade
 	.word	gPokedexVBlankCB
 	.word	gMain
 	.word	sNewEntryInfoScreen_BgTemplate
 	.word	sNewEntryInfoScreen_WindowTemplates
 	.word	gTasks
-.L1144:
-	ldr	r1, .L1158
+.L1118:
+	ldr	r1, .L1132
 	mov	r2, #0x80
 	lsl	r2, r2, #0x6
 	mov	r0, #0x0
@@ -153410,7 +153450,7 @@ Task_DisplayCaughtMonDexPage:
 	mov	r0, #0x3
 	mov	r3, #0x0
 	bl	DecompressAndLoadBgGfxUsingHeap
-	ldr	r1, .L1158+0x4
+	ldr	r1, .L1132+0x4
 	mov	r0, #0x3
 	mov	r2, #0x0
 	mov	r3, #0x0
@@ -153422,7 +153462,7 @@ Task_DisplayCaughtMonDexPage:
 	bl	PutWindowTilemap
 	mov	r0, #0x1
 	bl	PutWindowTilemap
-	ldr	r0, .L1158+0x8
+	ldr	r0, .L1132+0x8
 	lsl	r4, r5, #0x2
 	add	r4, r4, r5
 	lsl	r4, r4, #0x3
@@ -153439,20 +153479,20 @@ Task_DisplayCaughtMonDexPage:
 	ldrh	r0, [r4, #0x8]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x8]
-	b	.L1140
-.L1159:
+	b	.L1114
+.L1133:
 	.align	2, 0
-.L1158:
+.L1132:
 	.word	gPokedexMenu_Gfx
 	.word	gPokedexInfoScreen_Tilemap
 	.word	gTasks
-.L1145:
+.L1119:
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r2
-	b	.L1152
-.L1146:
+	b	.L1126
+.L1120:
 	bl	IsNationalPokedexEnabled
 	add	r1, r0, #0
 	add	r0, r4, #0
@@ -153466,8 +153506,8 @@ Task_DisplayCaughtMonDexPage:
 	bl	CopyBgTilemapBufferToVram
 	mov	r0, #0x3
 	bl	CopyBgTilemapBufferToVram
-	b	.L1153
-.L1147:
+	b	.L1127
+.L1121:
 	add	r0, r4, #0
 	mov	r1, #0x30
 	mov	r2, #0x38
@@ -153476,7 +153516,7 @@ Task_DisplayCaughtMonDexPage:
 	add	r4, r0, #0
 	lsl	r4, r4, #0x18
 	lsr	r4, r4, #0x18
-	ldr	r0, .L1160
+	ldr	r0, .L1134
 	lsl	r1, r4, #0x4
 	add	r1, r1, r4
 	lsl	r1, r1, #0x2
@@ -153493,23 +153533,23 @@ Task_DisplayCaughtMonDexPage:
 	mov	r2, #0x10
 	mov	r3, #0x0
 	bl	BeginNormalPaletteFade
-	ldr	r0, .L1160+0x4
+	ldr	r0, .L1134+0x4
 	ldr	r0, [r0]
 	bl	SetVBlankCallback
-	ldr	r1, .L1160+0x8
+	ldr	r1, .L1134+0x8
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
 	strh	r4, [r0, #0xe]
-	b	.L1152
-.L1161:
+	b	.L1126
+.L1135:
 	.align	2, 0
-.L1160:
+.L1134:
 	.word	gSprites
 	.word	gPokedexVBlankCB
 	.word	gTasks
-.L1148:
+.L1122:
 	mov	r0, #0x50
 	mov	r1, #0x0
 	bl	SetGpuReg
@@ -153527,57 +153567,57 @@ Task_DisplayCaughtMonDexPage:
 	bl	ShowBg
 	mov	r0, #0x3
 	bl	ShowBg
-.L1153:
-	ldr	r1, .L1162
+.L1127:
+	ldr	r1, .L1136
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-.L1152:
+.L1126:
 	ldrh	r1, [r0, #0x8]
 	add	r1, r1, #0x1
 	strh	r1, [r0, #0x8]
-	b	.L1140
-.L1163:
+	b	.L1114
+.L1137:
 	.align	2, 0
-.L1162:
+.L1136:
 	.word	gTasks
-.L1149:
-	ldr	r0, .L1164
+.L1123:
+	ldr	r0, .L1138
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
 	cmp	r6, #0
-	bne	.L1140	@cond_branch
+	bne	.L1114	@cond_branch
 	add	r0, r4, #0
 	bl	NationalPokedexNumToSpecies
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	mov	r1, #0x0
 	bl	PlayCry1
-	ldr	r1, .L1164+0x4
+	ldr	r1, .L1138+0x4
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
 	strh	r6, [r0, #0xc]
-	ldr	r1, .L1164+0x8
+	ldr	r1, .L1138+0x8
 	str	r1, [r0]
-.L1140:
+.L1114:
 	add	sp, sp, #0x4
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1165:
+.L1139:
 	.align	2, 0
-.L1164:
+.L1138:
 	.word	gPaletteFade
 	.word	gTasks
 	.word	Task_HandleCaughtMonPageInput
-.Lfe77:
-	.size	 Task_DisplayCaughtMonDexPage,.Lfe77-Task_DisplayCaughtMonDexPage
+.Lfe80:
+	.size	 Task_DisplayCaughtMonDexPage,.Lfe80-Task_DisplayCaughtMonDexPage
 	.align	2, 0
 	.type	 Task_HandleCaughtMonPageInput,function
 	.thumb_func
@@ -153586,20 +153626,20 @@ Task_HandleCaughtMonPageInput:
 	add	sp, sp, #-0x4
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r0, .L1171
+	ldr	r0, .L1145
 	ldrh	r1, [r0, #0x2e]
 	mov	r0, #0x3
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1167	@cond_branch
-	ldr	r0, .L1171+0x4
+	beq	.L1141	@cond_branch
+	ldr	r0, .L1145+0x4
 	mov	r1, #0x0
 	str	r1, [sp]
 	mov	r2, #0x0
 	mov	r3, #0x10
 	bl	BeginNormalPaletteFade
-	ldr	r3, .L1171+0x8
-	ldr	r0, .L1171+0xc
+	ldr	r3, .L1145+0x8
+	ldr	r0, .L1145+0xc
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
@@ -153611,22 +153651,22 @@ Task_HandleCaughtMonPageInput:
 	lsl	r0, r0, #0x2
 	add	r3, r3, #0x1c
 	add	r0, r0, r3
-	ldr	r2, .L1171+0x10
+	ldr	r2, .L1145+0x10
 	str	r2, [r0]
-	ldr	r0, .L1171+0x14
+	ldr	r0, .L1145+0x14
 	str	r0, [r1]
-	b	.L1168
-.L1172:
+	b	.L1142
+.L1146:
 	.align	2, 0
-.L1171:
+.L1145:
 	.word	gMain
 	.word	0xffff
 	.word	gSprites
 	.word	gTasks
 	.word	SpriteCB_SlideCaughtMonToCenter
 	.word	Task_ExitCaughtMonPage
-.L1167:
-	ldr	r1, .L1173
+.L1141:
+	ldr	r1, .L1147
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
@@ -153637,33 +153677,33 @@ Task_HandleCaughtMonPageInput:
 	mov	r0, #0x10
 	and	r1, r1, r0
 	cmp	r1, #0
-	beq	.L1169	@cond_branch
-	ldr	r0, .L1173+0x4
+	beq	.L1143	@cond_branch
+	ldr	r0, .L1147+0x4
 	mov	r1, #0x31
 	mov	r2, #0xe
 	bl	LoadPalette
-	b	.L1168
-.L1174:
+	b	.L1142
+.L1148:
 	.align	2, 0
-.L1173:
+.L1147:
 	.word	gTasks
 	.word	gPokedexBgHoenn_Pal+0x2
-.L1169:
-	ldr	r0, .L1175
+.L1143:
+	ldr	r0, .L1149
 	mov	r1, #0x31
 	mov	r2, #0xe
 	bl	LoadPalette
-.L1168:
+.L1142:
 	add	sp, sp, #0x4
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1176:
+.L1150:
 	.align	2, 0
-.L1175:
+.L1149:
 	.word	gPokedexCaughtScreen_Pal+0x2
-.Lfe78:
-	.size	 Task_HandleCaughtMonPageInput,.Lfe78-Task_HandleCaughtMonPageInput
+.Lfe81:
+	.size	 Task_HandleCaughtMonPageInput,.Lfe81-Task_HandleCaughtMonPageInput
 	.align	2, 0
 	.type	 Task_ExitCaughtMonPage,function
 	.thumb_func
@@ -153671,12 +153711,12 @@ Task_ExitCaughtMonPage:
 	push	{r4, r5, r6, lr}
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-	ldr	r0, .L1181
+	ldr	r0, .L1155
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1178	@cond_branch
+	bne	.L1152	@cond_branch
 	mov	r1, #0x82
 	lsl	r1, r1, #0x5
 	mov	r0, #0x0
@@ -153685,16 +153725,16 @@ Task_ExitCaughtMonPage:
 	mov	r0, #0x2
 	bl	GetBgTilemapBuffer
 	cmp	r0, #0
-	beq	.L1179	@cond_branch
+	beq	.L1153	@cond_branch
 	bl	Free
-.L1179:
+.L1153:
 	mov	r0, #0x3
 	bl	GetBgTilemapBuffer
 	cmp	r0, #0
-	beq	.L1180	@cond_branch
+	beq	.L1154	@cond_branch
 	bl	Free
-.L1180:
-	ldr	r0, .L1181+0x4
+.L1154:
+	ldr	r0, .L1155+0x4
 	lsl	r4, r6, #0x2
 	add	r4, r4, r6
 	lsl	r4, r4, #0x3
@@ -153711,7 +153751,7 @@ Task_ExitCaughtMonPage:
 	lsl	r2, r2, #0x10
 	ldrh	r3, [r4, #0x24]
 	orr	r2, r2, r3
-	ldr	r5, .L1181+0x8
+	ldr	r5, .L1155+0x8
 	mov	r3, #0xe
 	ldrsh	r4, [r4, r3]
 	lsl	r3, r4, #0x4
@@ -153731,18 +153771,18 @@ Task_ExitCaughtMonPage:
 	bl	LoadCompressedPalette
 	add	r0, r6, #0
 	bl	DestroyTask
-.L1178:
+.L1152:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1182:
+.L1156:
 	.align	2, 0
-.L1181:
+.L1155:
 	.word	gPaletteFade
 	.word	gTasks
 	.word	gSprites
-.Lfe79:
-	.size	 Task_ExitCaughtMonPage,.Lfe79-Task_ExitCaughtMonPage
+.Lfe82:
+	.size	 Task_ExitCaughtMonPage,.Lfe82-Task_ExitCaughtMonPage
 	.align	2, 0
 	.type	 SpriteCB_SlideCaughtMonToCenter,function
 	.thumb_func
@@ -153753,78 +153793,316 @@ SpriteCB_SlideCaughtMonToCenter:
 	mov	r3, #0x20
 	ldrsh	r0, [r1, r3]
 	cmp	r0, #0x77
-	bgt	.L1184	@cond_branch
+	bgt	.L1158	@cond_branch
 	add	r0, r2, #0x2
 	strh	r0, [r1, #0x20]
-.L1184:
+.L1158:
 	ldrh	r2, [r1, #0x20]
 	mov	r3, #0x20
 	ldrsh	r0, [r1, r3]
 	cmp	r0, #0x78
-	ble	.L1185	@cond_branch
+	ble	.L1159	@cond_branch
 	sub	r0, r2, #0x2
 	strh	r0, [r1, #0x20]
-.L1185:
+.L1159:
 	ldrh	r2, [r1, #0x22]
 	mov	r3, #0x22
 	ldrsh	r0, [r1, r3]
 	cmp	r0, #0x4f
-	bgt	.L1186	@cond_branch
+	bgt	.L1160	@cond_branch
 	add	r0, r2, #0x1
 	strh	r0, [r1, #0x22]
-.L1186:
+.L1160:
 	ldrh	r2, [r1, #0x22]
 	mov	r3, #0x22
 	ldrsh	r0, [r1, r3]
 	cmp	r0, #0x50
-	ble	.L1187	@cond_branch
+	ble	.L1161	@cond_branch
 	sub	r0, r2, #0x1
 	strh	r0, [r1, #0x22]
-.L1187:
+.L1161:
 	pop	{r0}
 	bx	r0
-.Lfe80:
-	.size	 SpriteCB_SlideCaughtMonToCenter,.Lfe80-SpriteCB_SlideCaughtMonToCenter
+.Lfe83:
+	.size	 SpriteCB_SlideCaughtMonToCenter,.Lfe83-SpriteCB_SlideCaughtMonToCenter
+	.align	2, 0
+	.type	 SetSpriteInvisibility,function
+	.thumb_func
+SetSpriteInvisibility:
+	push	{r4, lr}
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	lsl	r1, r1, #0x18
+	lsr	r1, r1, #0x18
+	ldr	r3, .L1163
+	ldr	r2, .L1163+0x4
+	ldr	r2, [r2]
+	ldr	r4, .L1163+0x8
+	add	r2, r2, r4
+	add	r2, r2, r0
+	ldrb	r0, [r2]
+	lsl	r2, r0, #0x4
+	add	r2, r2, r0
+	lsl	r2, r2, #0x2
+	add	r2, r2, r3
+	add	r2, r2, #0x3e
+	mov	r0, #0x1
+	and	r1, r1, r0
+	lsl	r1, r1, #0x2
+	ldrb	r3, [r2]
+	mov	r0, #0x5
+	neg	r0, r0
+	and	r0, r0, r3
+	orr	r0, r0, r1
+	strb	r0, [r2]
+	pop	{r4}
+	pop	{r0}
+	bx	r0
+.L1164:
+	.align	2, 0
+.L1163:
+	.word	gSprites
+	.word	sPokedexView
+	.word	0xcc2
+.Lfe84:
+	.size	 SetSpriteInvisibility,.Lfe84-SetSpriteInvisibility
+	.section .rodata
+	.type	 sMoveTypeToOamPaletteNum,object
+	.size	 sMoveTypeToOamPaletteNum,24
+sMoveTypeToOamPaletteNum:
+	.byte	0xd
+	.byte	0xd
+	.byte	0xe
+	.byte	0xe
+	.byte	0xd
+	.byte	0xd
+	.byte	0xf
+	.byte	0xe
+	.byte	0xd
+	.byte	0xf
+	.byte	0xd
+	.byte	0xe
+	.byte	0xf
+	.byte	0xd
+	.byte	0xe
+	.byte	0xe
+	.byte	0xf
+	.byte	0xd
+	.byte	0xe
+	.byte	0xd
+	.byte	0xe
+	.byte	0xe
+	.byte	0xf
+	.byte	0xd
+.text
+	.align	2, 0
+	.type	 SetTypeIconPosAndPal,function
+	.thumb_func
+SetTypeIconPosAndPal:
+	push	{r4, r5, r6, lr}
+	mov	r6, r8
+	push	{r6}
+	add	sp, sp, #-0x4
+	add	r5, r0, #0
+	add	r6, r1, #0
+	mov	r8, r2
+	lsl	r5, r5, #0x18
+	lsr	r5, r5, #0x18
+	lsl	r6, r6, #0x18
+	lsr	r6, r6, #0x18
+	mov	r0, r8
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	mov	r8, r0
+	lsl	r3, r3, #0x18
+	lsr	r3, r3, #0x18
+	ldr	r0, .L1166
+	ldr	r0, [r0]
+	ldr	r1, .L1166+0x4
+	add	r0, r0, r1
+	add	r0, r0, r3
+	ldrb	r0, [r0]
+	lsl	r4, r0, #0x4
+	add	r4, r4, r0
+	lsl	r4, r4, #0x2
+	ldr	r0, .L1166+0x8
+	add	r4, r4, r0
+	add	r0, r4, #0
+	add	r1, r5, #0
+	str	r3, [sp]
+	bl	StartSpriteAnim
+	ldr	r0, .L1166+0xc
+	add	r5, r5, r0
+	ldrb	r1, [r5]
+	lsl	r1, r1, #0x4
+	ldrb	r2, [r4, #0x5]
+	mov	r0, #0xf
+	and	r0, r0, r2
+	orr	r0, r0, r1
+	strb	r0, [r4, #0x5]
+	add	r6, r6, #0x10
+	strh	r6, [r4, #0x20]
+	mov	r0, #0x8
+	add	r8, r8, r0
+	mov	r1, r8
+	strh	r1, [r4, #0x22]
+	ldr	r3, [sp]
+	add	r0, r3, #0
+	mov	r1, #0x0
+	bl	SetSpriteInvisibility
+	add	sp, sp, #0x4
+	pop	{r3}
+	mov	r8, r3
+	pop	{r4, r5, r6}
+	pop	{r0}
+	bx	r0
+.L1167:
+	.align	2, 0
+.L1166:
+	.word	sPokedexView
+	.word	0xcc2
+	.word	gSprites
+	.word	sMoveTypeToOamPaletteNum
+.Lfe85:
+	.size	 SetTypeIconPosAndPal,.Lfe85-SetTypeIconPosAndPal
+	.align	2, 0
+	.type	 PrintCurrentSpeciesTypeInfo,function
+	.thumb_func
+PrintCurrentSpeciesTypeInfo:
+	push	{r4, r5, lr}
+	ldr	r0, .L1172
+	ldr	r0, [r0]
+	ldrh	r0, [r0]
+	bl	NationalPokedexNumToSpecies
+	add	r4, r0, #0
+	lsl	r4, r4, #0x10
+	lsr	r4, r4, #0x10
+	add	r0, r4, #0
+	bl	SpeciesToNationalPokedexNum
+	ldr	r1, .L1172+0x4
+	lsl	r0, r4, #0x3
+	add	r0, r0, r4
+	lsl	r0, r0, #0x2
+	add	r0, r0, r1
+	ldrb	r1, [r0, #0x6]
+	ldrb	r5, [r0, #0x7]
+	cmp	r4, #0
+	bne	.L1169	@cond_branch
+	mov	r5, #0x9
+	mov	r1, #0x9
+.L1169:
+	cmp	r1, r5
+	bne	.L1170	@cond_branch
+	add	r0, r5, #0
+	mov	r1, #0x93
+	mov	r2, #0x30
+	mov	r3, #0x0
+	bl	SetTypeIconPosAndPal
+	mov	r0, #0x1
+	mov	r1, #0x1
+	bl	SetSpriteInvisibility
+	b	.L1171
+.L1173:
+	.align	2, 0
+.L1172:
+	.word	sPokedexListItem
+	.word	gBaseStats
+.L1170:
+	add	r0, r1, #0
+	mov	r1, #0x93
+	mov	r2, #0x30
+	mov	r3, #0x0
+	bl	SetTypeIconPosAndPal
+	add	r0, r5, #0
+	mov	r1, #0xb4
+	mov	r2, #0x30
+	mov	r3, #0x1
+	bl	SetTypeIconPosAndPal
+.L1171:
+	pop	{r4, r5}
+	pop	{r0}
+	bx	r0
+.Lfe86:
+	.size	 PrintCurrentSpeciesTypeInfo,.Lfe86-PrintCurrentSpeciesTypeInfo
+	.align	2, 0
+	.type	 CreateTypeIconSprites,function
+	.thumb_func
+CreateTypeIconSprites:
+	push	{r4, r5, lr}
+	ldr	r0, .L1181
+	bl	LoadCompressedSpriteSheet
+	ldr	r0, .L1181+0x4
+	mov	r1, #0xe8
+	lsl	r1, r1, #0x1
+	mov	r2, #0x60
+	bl	LoadCompressedPalette
+	mov	r4, #0x0
+	ldr	r5, .L1181+0x8
+.L1178:
+	ldr	r0, [r5]
+	ldr	r1, .L1181+0xc
+	add	r0, r0, r1
+	add	r0, r0, r4
+	ldrb	r0, [r0]
+	cmp	r0, #0xff
+	bne	.L1179	@cond_branch
+	ldr	r0, .L1181+0x10
+	mov	r1, #0xa
+	mov	r2, #0xa
+	mov	r3, #0x2
+	bl	CreateSprite
+	ldr	r1, [r5]
+	ldr	r2, .L1181+0xc
+	add	r1, r1, r2
+	add	r1, r1, r4
+	strb	r0, [r1]
+.L1179:
+	add	r0, r4, #0
+	mov	r1, #0x1
+	bl	SetSpriteInvisibility
+	add	r0, r4, #0x1
+	lsl	r0, r0, #0x18
+	lsr	r4, r0, #0x18
+	cmp	r4, #0x1
+	bls	.L1178	@cond_branch
+	pop	{r4, r5}
+	pop	{r0}
+	bx	r0
+.L1182:
+	.align	2, 0
+.L1181:
+	.word	sSpriteSheet_MoveTypes
+	.word	gMoveTypes_Pal
+	.word	sPokedexView
+	.word	0xcc2
+	.word	sSpriteTemplate_MoveTypes
+.Lfe87:
+	.size	 CreateTypeIconSprites,.Lfe87-CreateTypeIconSprites
 	.align	2, 0
 	.type	 PrintMonInfo,function
 	.thumb_func
 PrintMonInfo:
 	push	{r4, r5, r6, r7, lr}
+	mov	r7, r8
+	push	{r7}
 	add	sp, sp, #-0x40
 	add	r6, r0, #0
 	add	r5, r1, #0
 	add	r7, r2, #0
-	cmp	r3, #0
-	beq	.L1189	@cond_branch
-	ldr	r4, .L1200
-	mov	r0, #0x1
-	add	r1, r4, #0
-	mov	r2, #0xf0
-	bl	GetStringCenterAlignXOffset
-	add	r1, r0, #0
-	lsl	r1, r1, #0x18
-	lsr	r1, r1, #0x18
-	add	r0, r4, #0
-	mov	r2, #0x0
-	bl	PrintInfoScreenText
-.L1189:
+	mov	r8, r3
 	cmp	r5, #0
-	bne	.L1190	@cond_branch
+	bne	.L1184	@cond_branch
 	lsl	r4, r6, #0x10
 	lsr	r0, r4, #0x10
 	bl	NationalToHoennOrder
 	lsl	r0, r0, #0x10
 	lsr	r5, r0, #0x10
-	b	.L1191
-.L1201:
-	.align	2, 0
-.L1200:
-	.word	gText_PokedexRegistration
-.L1190:
+	b	.L1185
+.L1184:
 	add	r5, r6, #0
 	lsl	r4, r6, #0x10
-.L1191:
-	ldr	r1, .L1202
+.L1185:
+	ldr	r1, .L1195
 	mov	r0, sp
 	bl	StringCopy
 	add	r1, r5, #0
@@ -153832,109 +154110,109 @@ PrintMonInfo:
 	mov	r3, #0x3
 	bl	ConvertIntToDecimalStringN
 	mov	r0, sp
-	mov	r1, #0x60
-	mov	r2, #0x19
-	bl	PrintInfoScreenText
+	mov	r1, #0x7b
+	mov	r2, #0x11
+	bl	PrintInfoScreenTextWhite
 	lsr	r0, r4, #0x10
 	bl	NationalPokedexNumToSpecies
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
 	cmp	r1, #0
-	beq	.L1192	@cond_branch
+	beq	.L1186	@cond_branch
 	mov	r0, #0xb
 	mul	r1, r1, r0
-	ldr	r0, .L1202+0x4
+	ldr	r0, .L1195+0x4
 	add	r0, r1, r0
-	b	.L1193
-.L1203:
+	b	.L1187
+.L1196:
 	.align	2, 0
-.L1202:
+.L1195:
 	.word	gText_NumberClear01
 	.word	gSpeciesNames
-.L1192:
-	ldr	r0, .L1204
-.L1193:
-	mov	r1, #0x84
-	mov	r2, #0x19
-	bl	PrintInfoScreenText
+.L1186:
+	ldr	r0, .L1197
+.L1187:
+	mov	r1, #0x9d
+	mov	r2, #0x11
+	bl	PrintInfoScreenTextWhite
 	cmp	r7, #0
-	beq	.L1194	@cond_branch
+	beq	.L1188	@cond_branch
 	add	r4, sp, #0x10
 	add	r0, r6, #0
 	add	r1, r4, #0
 	bl	CopyMonCategoryText
 	add	r0, r4, #0
-	b	.L1195
-.L1205:
+	b	.L1189
+.L1198:
 	.align	2, 0
-.L1204:
+.L1197:
 	.word	sText_TenDashes2
-.L1194:
-	ldr	r0, .L1206
-.L1195:
-	mov	r1, #0x64
-	mov	r2, #0x29
+.L1188:
+	ldr	r0, .L1199
+.L1189:
+	mov	r1, #0x7b
+	mov	r2, #0x1f
 	bl	PrintInfoScreenText
-	ldr	r0, .L1206+0x4
-	mov	r1, #0x60
-	mov	r2, #0x39
+	ldr	r0, .L1199+0x4
+	mov	r1, #0x9b
+	mov	r2, #0x40
 	bl	PrintInfoScreenText
-	ldr	r0, .L1206+0x8
-	mov	r1, #0x60
-	mov	r2, #0x49
+	ldr	r0, .L1199+0x8
+	mov	r1, #0x9b
+	mov	r2, #0x4d
 	bl	PrintInfoScreenText
 	cmp	r7, #0
-	beq	.L1196	@cond_branch
-	ldr	r0, .L1206+0xc
+	beq	.L1190	@cond_branch
+	ldr	r0, .L1199+0xc
 	lsl	r4, r6, #0x3
 	add	r4, r4, r6
 	lsl	r4, r4, #0x2
 	add	r4, r4, r0
 	ldrh	r0, [r4, #0xe]
-	mov	r1, #0x81
-	mov	r2, #0x39
+	mov	r1, #0xb4
+	mov	r2, #0x40
 	bl	PrintMonHeight
 	ldrh	r0, [r4, #0x10]
-	mov	r1, #0x81
-	mov	r2, #0x49
+	mov	r1, #0xb4
+	mov	r2, #0x4d
 	bl	PrintMonWeight
-	b	.L1197
-.L1207:
+	b	.L1191
+.L1200:
 	.align	2, 0
-.L1206:
+.L1199:
 	.word	gText_5MarksPokemon
 	.word	gText_HTHeight
 	.word	gText_WTWeight
 	.word	gPokedexEntries
-.L1196:
-	ldr	r0, .L1208
-	mov	r1, #0x81
-	mov	r2, #0x39
+.L1190:
+	ldr	r0, .L1201
+	mov	r1, #0xb4
+	mov	r2, #0x40
 	bl	PrintInfoScreenText
-	ldr	r0, .L1208+0x4
-	mov	r1, #0x81
-	mov	r2, #0x49
+	ldr	r0, .L1201+0x4
+	mov	r1, #0xb4
+	mov	r2, #0x4d
 	bl	PrintInfoScreenText
-.L1197:
+.L1191:
 	cmp	r7, #0
-	beq	.L1198	@cond_branch
-	ldr	r1, .L1208+0x8
+	beq	.L1192	@cond_branch
+	ldr	r1, .L1201+0x8
 	lsl	r0, r6, #0x3
 	add	r0, r0, r6
 	lsl	r0, r0, #0x2
 	add	r1, r1, #0x14
 	add	r0, r0, r1
 	ldr	r4, [r0]
-	b	.L1199
-.L1209:
+	b	.L1193
+.L1202:
 	.align	2, 0
-.L1208:
+.L1201:
 	.word	gText_UnkHeight
 	.word	gText_UnkWeight
 	.word	gPokedexEntries
-.L1198:
-	ldr	r4, .L1210
-.L1199:
+.L1192:
+	ldr	r4, .L1203
+.L1193:
 	mov	r0, #0x1
 	add	r1, r4, #0
 	mov	r2, #0xf0
@@ -153943,18 +154221,27 @@ PrintMonInfo:
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
 	add	r0, r4, #0
-	mov	r2, #0x5f
+	mov	r2, #0x5d
 	bl	PrintInfoScreenText
+	cmp	r7, #0
+	beq	.L1194	@cond_branch
+	mov	r0, r8
+	cmp	r0, #0
+	bne	.L1194	@cond_branch
+	bl	PrintCurrentSpeciesTypeInfo
+.L1194:
 	add	sp, sp, #0x40
+	pop	{r3}
+	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1211:
+.L1204:
 	.align	2, 0
-.L1210:
+.L1203:
 	.word	gExpandedPlaceholder_PokedexDescription
-.Lfe81:
-	.size	 PrintMonInfo,.Lfe81-PrintMonInfo
+.Lfe88:
+	.size	 PrintMonInfo,.Lfe88-PrintMonInfo
 	.align	2, 0
 	.type	 PrintMonHeight,function
 	.thumb_func
@@ -153972,7 +154259,7 @@ PrintMonHeight:
 	lsl	r2, r2, #0x18
 	lsr	r2, r2, #0x18
 	mov	r8, r2
-	ldr	r1, .L1216
+	ldr	r1, .L1209
 	mul	r0, r0, r1
 	mov	r1, #0xfe
 	bl	__divsi3
@@ -153980,9 +154267,9 @@ PrintMonHeight:
 	mov	r1, #0xa
 	bl	__umodsi3
 	cmp	r0, #0x4
-	bls	.L1213	@cond_branch
+	bls	.L1206	@cond_branch
 	add	r7, r7, #0xa
-.L1213:
+.L1206:
 	add	r0, r7, #0
 	mov	r1, #0x78
 	bl	__udivsi3
@@ -154005,7 +154292,7 @@ PrintMonHeight:
 	bl	__udivsi3
 	add	r2, r0, #0
 	cmp	r2, #0
-	bne	.L1214	@cond_branch
+	bne	.L1207	@cond_branch
 	mov	r1, sp
 	add	r1, r1, #0x2
 	mov	r0, #0x12
@@ -154015,12 +154302,12 @@ PrintMonHeight:
 	add	r0, r6, #0
 	add	r0, r0, #0xa1
 	strb	r0, [r1]
-	b	.L1215
-.L1217:
+	b	.L1208
+.L1210:
 	.align	2, 0
-.L1216:
+.L1209:
 	.word	0x2710
-.L1214:
+.L1207:
 	mov	r1, sp
 	add	r1, r1, #0x2
 	mov	r0, #0xc
@@ -154036,7 +154323,7 @@ PrintMonHeight:
 	bl	__umodsi3
 	add	r0, r0, #0xa1
 	strb	r0, [r4]
-.L1215:
+.L1208:
 	add	r1, r5, #0
 	add	r0, r1, #0x1
 	lsl	r0, r0, #0x18
@@ -154088,8 +154375,8 @@ PrintMonHeight:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.Lfe82:
-	.size	 PrintMonHeight,.Lfe82-PrintMonHeight
+.Lfe89:
+	.size	 PrintMonHeight,.Lfe89-PrintMonHeight
 	.align	2, 0
 	.type	 PrintMonWeight,function
 	.thumb_func
@@ -154108,17 +154395,17 @@ PrintMonWeight:
 	lsl	r2, r2, #0x18
 	lsr	r2, r2, #0x18
 	str	r2, [sp, #0x10]
-	ldr	r5, .L1226
+	ldr	r5, .L1219
 	mul	r0, r0, r5
-	ldr	r1, .L1226+0x4
+	ldr	r1, .L1219+0x4
 	bl	__divsi3
 	add	r7, r0, #0
 	mov	r1, #0xa
 	bl	__umodsi3
 	cmp	r0, #0x4
-	bls	.L1219	@cond_branch
+	bls	.L1212	@cond_branch
 	add	r7, r7, #0xa
-.L1219:
+.L1212:
 	mov	r0, #0x0
 	mov	r8, r0
 	mov	r4, sp
@@ -154130,39 +154417,39 @@ PrintMonWeight:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0xa1
-	bne	.L1220	@cond_branch
+	bne	.L1213	@cond_branch
 	mov	r6, #0x1
 	mov	r1, sp
 	mov	r0, #0x77
 	strb	r0, [r1]
-	b	.L1221
-.L1227:
+	b	.L1214
+.L1220:
 	.align	2, 0
-.L1226:
+.L1219:
 	.word	0x186a0
 	.word	0x11b8
-.L1220:
+.L1213:
 	mov	r1, #0x1
 	mov	r8, r1
 	mov	r6, #0x1
-.L1221:
-	ldr	r1, .L1228
+.L1214:
+	ldr	r1, .L1221
 	add	r0, r7, #0
 	bl	__umodsi3
 	add	r7, r0, #0
 	mov	r4, sp
 	add	r4, r4, #0x1
-	ldr	r1, .L1228+0x4
+	ldr	r1, .L1221+0x4
 	bl	__udivsi3
 	add	r0, r0, #0xa1
 	strb	r0, [r4]
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0xa1
-	bne	.L1222	@cond_branch
+	bne	.L1215	@cond_branch
 	mov	r2, r8
 	cmp	r2, #0
-	bne	.L1222	@cond_branch
+	bne	.L1215	@cond_branch
 	add	r1, r6, #0
 	add	r0, r1, #0x1
 	lsl	r0, r0, #0x18
@@ -154170,20 +154457,20 @@ PrintMonWeight:
 	add	r1, r1, sp
 	mov	r0, #0x77
 	strb	r0, [r1]
-	b	.L1223
-.L1229:
+	b	.L1216
+.L1222:
 	.align	2, 0
-.L1228:
+.L1221:
 	.word	0x186a0
 	.word	0x2710
-.L1222:
+.L1215:
 	mov	r3, #0x1
 	mov	r8, r3
 	add	r0, r6, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-.L1223:
-	ldr	r1, .L1230
+.L1216:
+	ldr	r1, .L1223
 	add	r0, r7, #0
 	bl	__umodsi3
 	add	r7, r0, #0
@@ -154198,10 +154485,10 @@ PrintMonWeight:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0xa1
-	bne	.L1224	@cond_branch
+	bne	.L1217	@cond_branch
 	mov	r1, r8
 	cmp	r1, #0
-	bne	.L1224	@cond_branch
+	bne	.L1217	@cond_branch
 	add	r1, r6, #0
 	add	r0, r1, #0x1
 	lsl	r0, r0, #0x18
@@ -154209,16 +154496,16 @@ PrintMonWeight:
 	add	r1, r1, sp
 	mov	r0, #0x77
 	strb	r0, [r1]
-	b	.L1225
-.L1231:
-	.align	2, 0
-.L1230:
-	.word	0x2710
+	b	.L1218
 .L1224:
+	.align	2, 0
+.L1223:
+	.word	0x2710
+.L1217:
 	add	r0, r6, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-.L1225:
+.L1218:
 	mov	r1, #0xfa
 	lsl	r1, r1, #0x2
 	add	r0, r7, #0
@@ -154316,8 +154603,8 @@ PrintMonWeight:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.Lfe83:
-	.size	 PrintMonWeight,.Lfe83-PrintMonWeight
+.Lfe90:
+	.size	 PrintMonWeight,.Lfe90-PrintMonWeight
 	.align	2, 0
 	.globl	GetPokedexCategoryName
 	.type	 GetPokedexCategoryName,function
@@ -154329,15 +154616,15 @@ GetPokedexCategoryName:
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1233
+	ldr	r1, .L1226
 	add	r0, r0, r1
 	bx	lr
-.L1234:
+.L1227:
 	.align	2, 0
-.L1233:
+.L1226:
 	.word	gPokedexEntries
-.Lfe84:
-	.size	 GetPokedexCategoryName,.Lfe84-GetPokedexCategoryName
+.Lfe91:
+	.size	 GetPokedexCategoryName,.Lfe91-GetPokedexCategoryName
 	.align	2, 0
 	.globl	GetPokedexHeightWeight
 	.type	 GetPokedexHeightWeight,function
@@ -154349,40 +154636,40 @@ GetPokedexHeightWeight:
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
 	cmp	r1, #0
-	beq	.L1237	@cond_branch
+	beq	.L1230	@cond_branch
 	cmp	r1, #0x1
-	beq	.L1238	@cond_branch
+	beq	.L1231	@cond_branch
 	mov	r0, #0x1
-	b	.L1241
-.L1237:
-	ldr	r0, .L1243
+	b	.L1234
+.L1230:
+	ldr	r0, .L1236
 	lsl	r1, r2, #0x3
 	add	r1, r1, r2
 	lsl	r1, r1, #0x2
 	add	r1, r1, r0
 	ldrh	r0, [r1, #0xe]
-	b	.L1242
-.L1244:
+	b	.L1235
+.L1237:
 	.align	2, 0
-.L1243:
+.L1236:
 	.word	gPokedexEntries
-.L1238:
-	ldr	r0, .L1245
+.L1231:
+	ldr	r0, .L1238
 	lsl	r1, r2, #0x3
 	add	r1, r1, r2
 	lsl	r1, r1, #0x2
 	add	r1, r1, r0
 	ldrh	r0, [r1, #0x10]
-.L1242:
-.L1241:
+.L1235:
+.L1234:
 	pop	{r1}
 	bx	r1
-.L1246:
+.L1239:
 	.align	2, 0
-.L1245:
+.L1238:
 	.word	gPokedexEntries
-.Lfe85:
-	.size	 GetPokedexHeightWeight,.Lfe85-GetPokedexHeightWeight
+.Lfe92:
+	.size	 GetPokedexHeightWeight,.Lfe92-GetPokedexHeightWeight
 	.align	2, 0
 	.globl	GetSetPokedexFlag
 	.type	 GetSetPokedexFlag,function
@@ -154394,7 +154681,7 @@ GetSetPokedexFlag:
 	lsr	r2, r1, #0x18
 	add	r5, r2, #0
 	mov	r6, #0x0
-	ldr	r1, .L1260
+	ldr	r1, .L1253
 	add	r0, r0, r1
 	lsr	r4, r0, #0x13
 	mov	r1, #0xe0
@@ -154404,37 +154691,37 @@ GetSetPokedexFlag:
 	mov	r3, #0x1
 	lsl	r3, r3, r1
 	cmp	r2, #0x1
-	beq	.L1251	@cond_branch
+	beq	.L1244	@cond_branch
 	cmp	r2, #0x1
-	bgt	.L1257	@cond_branch
+	bgt	.L1250	@cond_branch
 	cmp	r2, #0
-	beq	.L1249	@cond_branch
-	b	.L1248
-.L1261:
+	beq	.L1242	@cond_branch
+	b	.L1241
+.L1254:
 	.align	2, 0
-.L1260:
+.L1253:
 	.word	-0x10000
-.L1257:
+.L1250:
 	cmp	r5, #0x2
-	beq	.L1253	@cond_branch
+	beq	.L1246	@cond_branch
 	cmp	r5, #0x3
-	beq	.L1254	@cond_branch
-	b	.L1248
-.L1249:
-	ldr	r0, .L1262
+	beq	.L1247	@cond_branch
+	b	.L1241
+.L1242:
+	ldr	r0, .L1255
 	ldr	r0, [r0]
-	ldr	r1, .L1262+0x4
-	b	.L1258
-.L1263:
+	ldr	r1, .L1255+0x4
+	b	.L1251
+.L1256:
 	.align	2, 0
-.L1262:
+.L1255:
 	.word	gSaveBlock1Ptr
 	.word	0x3598
-.L1251:
-	ldr	r0, .L1264
+.L1244:
+	ldr	r0, .L1257
 	ldr	r0, [r0]
-	ldr	r1, .L1264+0x4
-.L1258:
+	ldr	r1, .L1257+0x4
+.L1251:
 	add	r0, r0, r1
 	add	r0, r0, r4
 	ldrb	r1, [r0]
@@ -154442,44 +154729,44 @@ GetSetPokedexFlag:
 	neg	r0, r1
 	orr	r0, r0, r1
 	lsr	r6, r0, #0x1f
-	b	.L1248
-.L1265:
+	b	.L1241
+.L1258:
 	.align	2, 0
-.L1264:
+.L1257:
 	.word	gSaveBlock1Ptr
 	.word	0x35fe
-.L1253:
-	ldr	r0, .L1266
+.L1246:
+	ldr	r0, .L1259
 	ldr	r0, [r0]
-	ldr	r1, .L1266+0x4
-	b	.L1259
-.L1267:
+	ldr	r1, .L1259+0x4
+	b	.L1252
+.L1260:
 	.align	2, 0
-.L1266:
+.L1259:
 	.word	gSaveBlock1Ptr
 	.word	0x3598
-.L1254:
-	ldr	r0, .L1268
+.L1247:
+	ldr	r0, .L1261
 	ldr	r0, [r0]
-	ldr	r1, .L1268+0x4
-.L1259:
+	ldr	r1, .L1261+0x4
+.L1252:
 	add	r0, r0, r1
 	add	r0, r0, r4
 	ldrb	r1, [r0]
 	orr	r3, r3, r1
 	strb	r3, [r0]
-.L1248:
+.L1241:
 	add	r0, r6, #0
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.L1269:
+.L1262:
 	.align	2, 0
-.L1268:
+.L1261:
 	.word	gSaveBlock1Ptr
 	.word	0x35fe
-.Lfe86:
-	.size	 GetSetPokedexFlag,.Lfe86-GetSetPokedexFlag
+.Lfe93:
+	.size	 GetSetPokedexFlag,.Lfe93-GetSetPokedexFlag
 	.align	2, 0
 	.globl	GetNationalPokedexCount
 	.type	 GetNationalPokedexCount,function
@@ -154492,43 +154779,43 @@ GetNationalPokedexCount:
 	mov	r0, #0x0
 	mov	r7, #0xca
 	lsl	r7, r7, #0x2
-.L1274:
+.L1267:
 	cmp	r6, #0
-	beq	.L1276	@cond_branch
+	beq	.L1269	@cond_branch
 	cmp	r6, #0x1
-	beq	.L1278	@cond_branch
+	beq	.L1271	@cond_branch
 	add	r4, r0, #0x1
-	b	.L1273
-.L1276:
+	b	.L1266
+.L1269:
 	add	r4, r0, #0x1
 	lsl	r0, r4, #0x10
 	lsr	r0, r0, #0x10
 	mov	r1, #0x0
-	b	.L1283
-.L1278:
+	b	.L1276
+.L1271:
 	add	r4, r0, #0x1
 	lsl	r0, r4, #0x10
 	lsr	r0, r0, #0x10
 	mov	r1, #0x1
-.L1283:
+.L1276:
 	bl	GetSetPokedexFlag
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1273	@cond_branch
+	beq	.L1266	@cond_branch
 	add	r0, r5, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r5, r0, #0x10
-.L1273:
+.L1266:
 	lsl	r0, r4, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, r7
-	bls	.L1274	@cond_branch
+	bls	.L1267	@cond_branch
 	add	r0, r5, #0
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.Lfe87:
-	.size	 GetNationalPokedexCount,.Lfe87-GetNationalPokedexCount
+.Lfe94:
+	.size	 GetNationalPokedexCount,.Lfe94-GetNationalPokedexCount
 	.align	2, 0
 	.globl	GetHoennPokedexCount
 	.type	 GetHoennPokedexCount,function
@@ -154539,14 +154826,14 @@ GetHoennPokedexCount:
 	lsr	r6, r0, #0x18
 	mov	r5, #0x0
 	mov	r0, #0x0
-.L1288:
+.L1281:
 	cmp	r6, #0
-	beq	.L1290	@cond_branch
+	beq	.L1283	@cond_branch
 	cmp	r6, #0x1
-	beq	.L1292	@cond_branch
+	beq	.L1285	@cond_branch
 	add	r4, r0, #0x1
-	b	.L1287
-.L1290:
+	b	.L1280
+.L1283:
 	add	r4, r0, #0x1
 	lsl	r0, r4, #0x10
 	lsr	r0, r0, #0x10
@@ -154554,8 +154841,8 @@ GetHoennPokedexCount:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	mov	r1, #0x0
-	b	.L1297
-.L1292:
+	b	.L1290
+.L1285:
 	add	r4, r0, #0x1
 	lsl	r0, r4, #0x10
 	lsr	r0, r0, #0x10
@@ -154563,25 +154850,25 @@ GetHoennPokedexCount:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	mov	r1, #0x1
-.L1297:
+.L1290:
 	bl	GetSetPokedexFlag
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1287	@cond_branch
+	beq	.L1280	@cond_branch
 	add	r0, r5, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r5, r0, #0x10
-.L1287:
+.L1280:
 	lsl	r0, r4, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0xd3
-	bls	.L1288	@cond_branch
+	bls	.L1281	@cond_branch
 	add	r0, r5, #0
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.Lfe88:
-	.size	 GetHoennPokedexCount,.Lfe88-GetHoennPokedexCount
+.Lfe95:
+	.size	 GetHoennPokedexCount,.Lfe95-GetHoennPokedexCount
 	.align	2, 0
 	.globl	GetKantoPokedexCount
 	.type	 GetKantoPokedexCount,function
@@ -154592,43 +154879,43 @@ GetKantoPokedexCount:
 	lsr	r6, r0, #0x18
 	mov	r5, #0x0
 	mov	r0, #0x0
-.L1302:
+.L1295:
 	cmp	r6, #0
-	beq	.L1304	@cond_branch
+	beq	.L1297	@cond_branch
 	cmp	r6, #0x1
-	beq	.L1306	@cond_branch
+	beq	.L1299	@cond_branch
 	add	r4, r0, #0x1
-	b	.L1301
-.L1304:
+	b	.L1294
+.L1297:
 	add	r4, r0, #0x1
 	lsl	r0, r4, #0x10
 	lsr	r0, r0, #0x10
 	mov	r1, #0x0
-	b	.L1311
-.L1306:
+	b	.L1304
+.L1299:
 	add	r4, r0, #0x1
 	lsl	r0, r4, #0x10
 	lsr	r0, r0, #0x10
 	mov	r1, #0x1
-.L1311:
+.L1304:
 	bl	GetSetPokedexFlag
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1301	@cond_branch
+	beq	.L1294	@cond_branch
 	add	r0, r5, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r5, r0, #0x10
-.L1301:
+.L1294:
 	lsl	r0, r4, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x96
-	bls	.L1302	@cond_branch
+	bls	.L1295	@cond_branch
 	add	r0, r5, #0
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.Lfe89:
-	.size	 GetKantoPokedexCount,.Lfe89-GetKantoPokedexCount
+.Lfe96:
+	.size	 GetKantoPokedexCount,.Lfe96-GetKantoPokedexCount
 	.align	2, 0
 	.globl	HasAllHoennMons
 	.type	 HasAllHoennMons,function
@@ -154636,7 +154923,7 @@ GetKantoPokedexCount:
 HasAllHoennMons:
 	push	{r4, lr}
 	mov	r0, #0x0
-.L1316:
+.L1309:
 	add	r0, r0, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
@@ -154648,20 +154935,20 @@ HasAllHoennMons:
 	bl	GetSetPokedexFlag
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L1315	@cond_branch
+	bne	.L1308	@cond_branch
 	mov	r0, #0x0
-	b	.L1319
-.L1315:
+	b	.L1312
+.L1308:
 	add	r0, r4, #0
 	cmp	r0, #0xd1
-	bls	.L1316	@cond_branch
+	bls	.L1309	@cond_branch
 	mov	r0, #0x1
-.L1319:
+.L1312:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-.Lfe90:
-	.size	 HasAllHoennMons,.Lfe90-HasAllHoennMons
+.Lfe97:
+	.size	 HasAllHoennMons,.Lfe97-HasAllHoennMons
 	.align	2, 0
 	.globl	HasAllKantoMons
 	.type	 HasAllKantoMons,function
@@ -154669,7 +154956,7 @@ HasAllHoennMons:
 HasAllKantoMons:
 	push	{r4, lr}
 	mov	r0, #0x0
-.L1324:
+.L1317:
 	add	r0, r0, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
@@ -154678,20 +154965,20 @@ HasAllKantoMons:
 	bl	GetSetPokedexFlag
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L1323	@cond_branch
+	bne	.L1316	@cond_branch
 	mov	r0, #0x0
-	b	.L1327
-.L1323:
+	b	.L1320
+.L1316:
 	add	r0, r4, #0
 	cmp	r0, #0x95
-	bls	.L1324	@cond_branch
+	bls	.L1317	@cond_branch
 	mov	r0, #0x1
-.L1327:
+.L1320:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-.Lfe91:
-	.size	 HasAllKantoMons,.Lfe91-HasAllKantoMons
+.Lfe98:
+	.size	 HasAllKantoMons,.Lfe98-HasAllKantoMons
 	.align	2, 0
 	.globl	HasAllMons
 	.type	 HasAllMons,function
@@ -154699,7 +154986,7 @@ HasAllKantoMons:
 HasAllMons:
 	push	{r4, r5, lr}
 	mov	r0, #0x0
-.L1332:
+.L1325:
 	add	r0, r0, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
@@ -154708,12 +154995,12 @@ HasAllMons:
 	bl	GetSetPokedexFlag
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1348	@cond_branch
+	beq	.L1341	@cond_branch
 	add	r0, r4, #0
 	cmp	r0, #0x95
-	bls	.L1332	@cond_branch
+	bls	.L1325	@cond_branch
 	mov	r0, #0x97
-.L1338:
+.L1331:
 	add	r0, r0, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
@@ -154722,13 +155009,13 @@ HasAllMons:
 	bl	GetSetPokedexFlag
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1348	@cond_branch
+	beq	.L1341	@cond_branch
 	add	r0, r4, #0
 	cmp	r0, #0xf7
-	bls	.L1338	@cond_branch
+	bls	.L1331	@cond_branch
 	mov	r0, #0xfb
-	ldr	r5, .L1349
-.L1344:
+	ldr	r5, .L1342
+.L1337:
 	add	r0, r0, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
@@ -154737,25 +155024,25 @@ HasAllMons:
 	bl	GetSetPokedexFlag
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L1343	@cond_branch
-.L1348:
+	bne	.L1336	@cond_branch
+.L1341:
 	mov	r0, #0x0
-	b	.L1347
-.L1350:
-	.align	2, 0
-.L1349:
-	.word	0x326
+	b	.L1340
 .L1343:
+	.align	2, 0
+.L1342:
+	.word	0x326
+.L1336:
 	add	r0, r4, #0
 	cmp	r0, r5
-	bls	.L1344	@cond_branch
+	bls	.L1337	@cond_branch
 	mov	r0, #0x1
-.L1347:
+.L1340:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-.Lfe92:
-	.size	 HasAllMons,.Lfe92-HasAllMons
+.Lfe99:
+	.size	 HasAllMons,.Lfe99-HasAllMons
 	.align	2, 0
 	.type	 ResetOtherVideoRegisters,function
 	.thumb_func
@@ -154769,7 +155056,7 @@ ResetOtherVideoRegisters:
 	add	r0, r4, #0
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1352	@cond_branch
+	bne	.L1345	@cond_branch
 	mov	r0, #0x0
 	bl	ClearGpuRegBits
 	mov	r0, #0x8
@@ -154781,13 +155068,13 @@ ResetOtherVideoRegisters:
 	mov	r0, #0x12
 	mov	r1, #0x0
 	bl	SetGpuReg
-.L1352:
+.L1345:
 	mov	r1, #0x80
 	lsl	r1, r1, #0x2
 	add	r0, r4, #0
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1353	@cond_branch
+	bne	.L1346	@cond_branch
 	mov	r0, #0x0
 	bl	ClearGpuRegBits
 	mov	r0, #0xa
@@ -154799,13 +155086,13 @@ ResetOtherVideoRegisters:
 	mov	r0, #0x16
 	mov	r1, #0x0
 	bl	SetGpuReg
-.L1353:
+.L1346:
 	mov	r1, #0x80
 	lsl	r1, r1, #0x3
 	add	r0, r4, #0
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1354	@cond_branch
+	bne	.L1347	@cond_branch
 	mov	r0, #0x0
 	bl	ClearGpuRegBits
 	mov	r0, #0xc
@@ -154817,13 +155104,13 @@ ResetOtherVideoRegisters:
 	mov	r0, #0x1a
 	mov	r1, #0x0
 	bl	SetGpuReg
-.L1354:
+.L1347:
 	mov	r1, #0x80
 	lsl	r1, r1, #0x4
 	add	r0, r4, #0
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1355	@cond_branch
+	bne	.L1348	@cond_branch
 	mov	r0, #0x0
 	bl	ClearGpuRegBits
 	mov	r0, #0xe
@@ -154835,29 +155122,29 @@ ResetOtherVideoRegisters:
 	mov	r0, #0x1e
 	mov	r1, #0x0
 	bl	SetGpuReg
-.L1355:
+.L1348:
 	mov	r1, #0x80
 	lsl	r1, r1, #0x5
 	and	r5, r5, r1
 	cmp	r5, #0
-	bne	.L1356	@cond_branch
+	bne	.L1349	@cond_branch
 	mov	r0, #0x0
 	bl	ClearGpuRegBits
 	bl	ResetSpriteData
 	bl	FreeAllSpritePalettes
-	ldr	r1, .L1357
+	ldr	r1, .L1350
 	mov	r0, #0x8
 	strb	r0, [r1]
-.L1356:
+.L1349:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1358:
+.L1351:
 	.align	2, 0
-.L1357:
+.L1350:
 	.word	gReservedSpritePaletteCount
-.Lfe93:
-	.size	 ResetOtherVideoRegisters,.Lfe93-ResetOtherVideoRegisters
+.Lfe100:
+	.size	 ResetOtherVideoRegisters,.Lfe100-ResetOtherVideoRegisters
 	.align	2, 0
 	.type	 PrintInfoSubMenuText,function
 	.thumb_func
@@ -154890,8 +155177,8 @@ PrintInfoSubMenuText:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.Lfe94:
-	.size	 PrintInfoSubMenuText,.Lfe94-PrintInfoSubMenuText
+.Lfe101:
+	.size	 PrintInfoSubMenuText,.Lfe101-PrintInfoSubMenuText
 	.align	2, 0
 	.type	 UnusedPrintNum,function
 	.thumb_func
@@ -154955,8 +155242,8 @@ UnusedPrintNum:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.Lfe95:
-	.size	 UnusedPrintNum,.Lfe95-UnusedPrintNum
+.Lfe102:
+	.size	 UnusedPrintNum,.Lfe102-UnusedPrintNum
 	.align	2, 0
 	.type	 PrintCryScreenSpeciesName,function
 	.thumb_func
@@ -154976,7 +155263,7 @@ PrintCryScreenSpeciesName:
 	lsr	r6, r3, #0x18
 	mov	r4, #0x0
 	mov	r2, #0xff
-.L1365:
+.L1358:
 	mov	r1, sp
 	add	r0, r1, r4
 	ldrb	r1, [r0]
@@ -154986,24 +155273,24 @@ PrintCryScreenSpeciesName:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0xa
-	bls	.L1365	@cond_branch
+	bls	.L1358	@cond_branch
 	add	r0, r5, #0
 	bl	NationalPokedexNumToSpecies
 	add	r5, r0, #0
 	cmp	r5, #0
-	beq	.L1375	@cond_branch
+	beq	.L1368	@cond_branch
 	mov	r4, #0x0
-	ldr	r2, .L1383
+	ldr	r2, .L1376
 	mov	r0, #0xb
 	mov	r1, r5
 	mul	r1, r1, r0
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0xff
-	beq	.L1367	@cond_branch
+	beq	.L1360	@cond_branch
 	add	r3, r2, #0
 	add	r2, r1, #0
-.L1372:
+.L1365:
 	mov	r0, sp
 	add	r1, r0, r4
 	add	r0, r4, r2
@@ -155017,18 +155304,18 @@ PrintCryScreenSpeciesName:
 	add	r0, r0, r3
 	ldrb	r0, [r0]
 	cmp	r0, #0xff
-	beq	.L1367	@cond_branch
+	beq	.L1360	@cond_branch
 	cmp	r4, #0x9
-	bls	.L1372	@cond_branch
-	b	.L1367
-.L1384:
+	bls	.L1365	@cond_branch
+	b	.L1360
+.L1377:
 	.align	2, 0
-.L1383:
+.L1376:
 	.word	gSpeciesNames
-.L1375:
+.L1368:
 	mov	r4, #0x0
 	mov	r1, #0xae
-.L1379:
+.L1372:
 	mov	r2, sp
 	add	r0, r2, r4
 	strb	r1, [r0]
@@ -155036,8 +155323,8 @@ PrintCryScreenSpeciesName:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x4
-	bls	.L1379	@cond_branch
-.L1367:
+	bls	.L1372	@cond_branch
+.L1360:
 	mov	r0, r8
 	mov	r1, sp
 	add	r2, r7, #0
@@ -155050,8 +155337,8 @@ PrintCryScreenSpeciesName:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.Lfe96:
-	.size	 PrintCryScreenSpeciesName,.Lfe96-PrintCryScreenSpeciesName
+.Lfe103:
+	.size	 PrintCryScreenSpeciesName,.Lfe103-PrintCryScreenSpeciesName
 	.align	2, 0
 	.type	 UnusedPrintMonName,function
 	.thumb_func
@@ -155068,7 +155355,7 @@ UnusedPrintMonName:
 	lsr	r5, r3, #0x18
 	mov	r2, #0x0
 	mov	r1, #0x0
-.L1389:
+.L1382:
 	mov	r3, sp
 	add	r0, r3, r2
 	strb	r1, [r0]
@@ -155076,26 +155363,26 @@ UnusedPrintMonName:
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	cmp	r2, #0xa
-	bls	.L1389	@cond_branch
+	bls	.L1382	@cond_branch
 	mov	r3, #0x0
 	ldrb	r0, [r4]
 	cmp	r0, #0
-	beq	.L1392	@cond_branch
-.L1393:
+	beq	.L1385	@cond_branch
+.L1386:
 	add	r0, r3, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r3, r0, #0x18
 	add	r0, r4, r3
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L1392	@cond_branch
+	beq	.L1385	@cond_branch
 	cmp	r3, #0xa
-	bls	.L1393	@cond_branch
-.L1392:
+	bls	.L1386	@cond_branch
+.L1385:
 	mov	r2, #0x0
 	cmp	r2, r3
-	bcs	.L1398	@cond_branch
-.L1400:
+	bcs	.L1391	@cond_branch
+.L1393:
 	add	r0, r2, #0
 	add	r0, r0, #0xb
 	sub	r0, r0, r3
@@ -155108,8 +155395,8 @@ UnusedPrintMonName:
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	cmp	r2, r3
-	bcc	.L1400	@cond_branch
-.L1398:
+	bcc	.L1393	@cond_branch
+.L1391:
 	mov	r1, sp
 	mov	r0, #0xff
 	strb	r0, [r1, #0xb]
@@ -155121,8 +155408,8 @@ UnusedPrintMonName:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.Lfe97:
-	.size	 UnusedPrintMonName,.Lfe97-UnusedPrintMonName
+.Lfe104:
+	.size	 UnusedPrintMonName,.Lfe104-UnusedPrintMonName
 	.align	2, 0
 	.type	 UnusedPrintDecimalNum,function
 	.thumb_func
@@ -155148,17 +155435,17 @@ UnusedPrintDecimalNum:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L1403	@cond_branch
+	bne	.L1396	@cond_branch
 	mov	r1, sp
 	mov	r0, #0x77
 	strb	r0, [r1]
-	b	.L1404
-.L1403:
+	b	.L1397
+.L1396:
 	mov	r1, sp
 	add	r0, r0, #0xa1
 	strb	r0, [r1]
 	mov	r5, #0x1
-.L1404:
+.L1397:
 	mov	r1, #0xfa
 	lsl	r1, r1, #0x2
 	add	r0, r4, #0
@@ -155170,16 +155457,16 @@ UnusedPrintDecimalNum:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L1405	@cond_branch
+	bne	.L1398	@cond_branch
 	cmp	r5, #0
-	bne	.L1405	@cond_branch
+	bne	.L1398	@cond_branch
 	mov	r1, sp
 	mov	r0, #0x77
-	b	.L1407
-.L1405:
+	b	.L1400
+.L1398:
 	mov	r1, sp
 	add	r0, r0, #0xa1
-.L1407:
+.L1400:
 	strb	r0, [r1, #0x1]
 	mov	r5, sp
 	mov	r1, #0xfa
@@ -155220,8 +155507,8 @@ UnusedPrintDecimalNum:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.Lfe98:
-	.size	 UnusedPrintDecimalNum,.Lfe98-UnusedPrintDecimalNum
+.Lfe105:
+	.size	 UnusedPrintDecimalNum,.Lfe105-UnusedPrintDecimalNum
 	.align	2, 0
 	.type	 PrintFootprint,function
 	.thumb_func
@@ -155242,7 +155529,7 @@ PrintFootprint:
 	mov	r1, #0x0
 	mov	r2, #0x80
 	bl	memset
-	ldr	r5, .L1423
+	ldr	r5, .L1416
 	add	r0, r4, #0
 	bl	NationalPokedexNumToSpecies
 	lsl	r0, r0, #0x10
@@ -155252,20 +155539,20 @@ PrintFootprint:
 	mov	ip, r0
 	mov	r5, #0x0
 	cmp	r0, #0
-	beq	.L1409	@cond_branch
+	beq	.L1402	@cond_branch
 	mov	r1, #0x0
 	mov	r0, #0x1
 	mov	r9, r0
 	mov	r7, #0x2
 	mov	r2, #0x20
 	mov	r8, r2
-.L1413:
+.L1406:
 	mov	r2, ip
 	add	r0, r2, r1
 	ldrb	r3, [r0]
 	mov	r4, #0x0
 	add	r6, r1, #0x1
-.L1417:
+.L1410:
 	lsl	r2, r4, #0x1
 	add	r0, r3, #0
 	asr	r0, r0, r2
@@ -155279,21 +155566,21 @@ PrintFootprint:
 	lsl	r0, r0, r2
 	and	r0, r0, r3
 	cmp	r0, #0
-	beq	.L1420	@cond_branch
+	beq	.L1413	@cond_branch
 	mov	r2, r8
 	orr	r1, r1, r2
-.L1420:
+.L1413:
 	mov	r2, sp
 	add	r0, r2, r5
 	strb	r1, [r0]
 	add	r5, r5, #0x1
 	add	r4, r4, #0x1
 	cmp	r4, #0x3
-	bls	.L1417	@cond_branch
+	bls	.L1410	@cond_branch
 	add	r1, r6, #0
 	cmp	r1, #0x1f
-	bls	.L1413	@cond_branch
-.L1409:
+	bls	.L1406	@cond_branch
+.L1402:
 	mov	r0, sl
 	mov	r1, sp
 	mov	r2, #0x80
@@ -155307,12 +155594,12 @@ PrintFootprint:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1424:
+.L1417:
 	.align	2, 0
-.L1423:
+.L1416:
 	.word	gMonFootprintTable
-.Lfe99:
-	.size	 PrintFootprint,.Lfe99-PrintFootprint
+.Lfe106:
+	.size	 PrintFootprint,.Lfe106-PrintFootprint
 	.align	2, 0
 	.globl	sub_80C0DC0
 	.type	 sub_80C0DC0,function
@@ -155323,23 +155610,23 @@ sub_80C0DC0:
 	lsl	r1, r1, #0x10
 	lsr	r1, r1, #0x10
 	lsr	r0, r0, #0x5
-	ldr	r2, .L1426
+	ldr	r2, .L1419
 	add	r3, r0, r2
 	mov	r4, #0xf0
 	lsl	r4, r4, #0x8
 	add	r2, r1, r4
 	strh	r2, [r3]
-	ldr	r2, .L1426+0x4
+	ldr	r2, .L1419+0x4
 	add	r3, r0, r2
 	add	r4, r4, #0x1
 	add	r2, r1, r4
 	strh	r2, [r3]
-	ldr	r2, .L1426+0x8
+	ldr	r2, .L1419+0x8
 	add	r3, r0, r2
 	add	r4, r4, #0x1
 	add	r2, r1, r4
 	strh	r2, [r3]
-	ldr	r2, .L1426+0xc
+	ldr	r2, .L1419+0xc
 	add	r0, r0, r2
 	add	r4, r4, #0x1
 	add	r1, r1, r4
@@ -155347,15 +155634,15 @@ sub_80C0DC0:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1427:
+.L1420:
 	.align	2, 0
-.L1426:
+.L1419:
 	.word	0x6000232
 	.word	0x6000234
 	.word	0x6000272
 	.word	0x6000274
-.Lfe100:
-	.size	 sub_80C0DC0,.Lfe100-sub_80C0DC0
+.Lfe107:
+	.size	 sub_80C0DC0,.Lfe107-sub_80C0DC0
 	.align	2, 0
 	.type	 GetNextPosition,function
 	.thumb_func
@@ -155371,52 +155658,52 @@ GetNextPosition:
 	lsl	r3, r3, #0x10
 	lsr	r3, r3, #0x10
 	cmp	r4, #0x1
-	beq	.L1430	@cond_branch
+	beq	.L1423	@cond_branch
 	cmp	r4, #0x1
-	bgt	.L1442	@cond_branch
+	bgt	.L1435	@cond_branch
 	cmp	r4, #0
-	beq	.L1432	@cond_branch
-	b	.L1429
-.L1442:
-	cmp	r5, #0x2
-	beq	.L1437	@cond_branch
-	cmp	r5, #0x3
-	beq	.L1434	@cond_branch
-	b	.L1429
-.L1430:
-	cmp	r0, r2
-	bls	.L1429	@cond_branch
-	sub	r0, r0, #0x1
-	b	.L1443
-.L1432:
-	cmp	r0, r3
-	bcs	.L1429	@cond_branch
-	b	.L1444
-.L1434:
-	cmp	r0, r2
-	bls	.L1435	@cond_branch
-	sub	r0, r0, #0x1
-	b	.L1443
+	beq	.L1425	@cond_branch
+	b	.L1422
 .L1435:
-	add	r0, r3, #0
-	b	.L1429
-.L1437:
+	cmp	r5, #0x2
+	beq	.L1430	@cond_branch
+	cmp	r5, #0x3
+	beq	.L1427	@cond_branch
+	b	.L1422
+.L1423:
+	cmp	r0, r2
+	bls	.L1422	@cond_branch
+	sub	r0, r0, #0x1
+	b	.L1436
+.L1425:
 	cmp	r0, r3
-	bcs	.L1438	@cond_branch
-.L1444:
+	bcs	.L1422	@cond_branch
+	b	.L1437
+.L1427:
+	cmp	r0, r2
+	bls	.L1428	@cond_branch
+	sub	r0, r0, #0x1
+	b	.L1436
+.L1428:
+	add	r0, r3, #0
+	b	.L1422
+.L1430:
+	cmp	r0, r3
+	bcs	.L1431	@cond_branch
+.L1437:
 	add	r0, r0, #0x1
-.L1443:
+.L1436:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
-	b	.L1429
-.L1438:
+	b	.L1422
+.L1431:
 	add	r0, r2, #0
-.L1429:
+.L1422:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-.Lfe101:
-	.size	 GetNextPosition,.Lfe101-GetNextPosition
+.Lfe108:
+	.size	 GetNextPosition,.Lfe108-GetNextPosition
 	.align	2, 0
 	.type	 GetPokedexMonPersonality,function
 	.thumb_func
@@ -155425,35 +155712,35 @@ GetPokedexMonPersonality:
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
 	cmp	r1, #0xc9
-	beq	.L1452	@cond_branch
-	ldr	r0, .L1453
+	beq	.L1445	@cond_branch
+	ldr	r0, .L1446
 	cmp	r1, r0
-	bne	.L1446	@cond_branch
-	ldr	r0, .L1453+0x4
+	bne	.L1439	@cond_branch
+	ldr	r0, .L1446+0x4
 	ldr	r0, [r0]
 	ldr	r0, [r0, #0x20]
-	b	.L1451
-.L1454:
+	b	.L1444
+.L1447:
 	.align	2, 0
-.L1453:
+.L1446:
 	.word	0x147
 	.word	gSaveBlock2Ptr
-.L1452:
-	ldr	r0, .L1455
+.L1445:
+	ldr	r0, .L1448
 	ldr	r0, [r0]
 	ldr	r0, [r0, #0x1c]
-	b	.L1451
-.L1456:
+	b	.L1444
+.L1449:
 	.align	2, 0
-.L1455:
+.L1448:
 	.word	gSaveBlock2Ptr
-.L1446:
+.L1439:
 	mov	r0, #0xff
-.L1451:
+.L1444:
 	pop	{r1}
 	bx	r1
-.Lfe102:
-	.size	 GetPokedexMonPersonality,.Lfe102-GetPokedexMonPersonality
+.Lfe109:
+	.size	 GetPokedexMonPersonality,.Lfe109-GetPokedexMonPersonality
 	.align	2, 0
 	.globl	CreateMonSpriteFromNationalDexNumber
 	.type	 CreateMonSpriteFromNationalDexNumber,function
@@ -155487,7 +155774,7 @@ CreateMonSpriteFromNationalDexNumber:
 	lsl	r6, r6, #0x18
 	lsr	r6, r6, #0x18
 	str	r6, [sp, #0x8]
-	ldr	r0, .L1458
+	ldr	r0, .L1451
 	str	r0, [sp, #0xc]
 	ldr	r1, [sp, #0x10]
 	add	r0, r1, #0
@@ -155500,12 +155787,12 @@ CreateMonSpriteFromNationalDexNumber:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.L1459:
+.L1452:
 	.align	2, 0
-.L1458:
+.L1451:
 	.word	0xffff
-.Lfe103:
-	.size	 CreateMonSpriteFromNationalDexNumber,.Lfe103-CreateMonSpriteFromNationalDexNumber
+.Lfe110:
+	.size	 CreateMonSpriteFromNationalDexNumber,.Lfe110-CreateMonSpriteFromNationalDexNumber
 	.align	2, 0
 	.type	 CreateSizeScreenTrainerPic,function
 	.thumb_func
@@ -155523,7 +155810,7 @@ CreateSizeScreenTrainerPic:
 	lsl	r3, r3, #0x18
 	lsr	r3, r3, #0x18
 	str	r3, [sp]
-	ldr	r1, .L1461
+	ldr	r1, .L1454
 	str	r1, [sp, #0x4]
 	mov	r1, #0x1
 	add	r2, r4, #0
@@ -155535,12 +155822,71 @@ CreateSizeScreenTrainerPic:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-.L1462:
+.L1455:
 	.align	2, 0
-.L1461:
+.L1454:
 	.word	0xffff
-.Lfe104:
-	.size	 CreateSizeScreenTrainerPic,.Lfe104-CreateSizeScreenTrainerPic
+.Lfe111:
+	.size	 CreateSizeScreenTrainerPic,.Lfe111-CreateSizeScreenTrainerPic
+	.align	2, 0
+	.globl	SpeciesCanLearnLvlUpMove
+	.type	 SpeciesCanLearnLvlUpMove,function
+	.thumb_func
+SpeciesCanLearnLvlUpMove:
+	push	{r4, r5, r6, r7, lr}
+	lsl	r0, r0, #0x10
+	lsl	r1, r1, #0x10
+	lsr	r5, r1, #0x10
+	mov	r4, #0x0
+	ldr	r2, .L1465
+	lsr	r3, r0, #0xe
+	add	r0, r3, r2
+	ldr	r0, [r0]
+	ldrh	r0, [r0]
+	ldr	r1, .L1465+0x4
+	cmp	r0, r1
+	beq	.L1458	@cond_branch
+	add	r7, r2, #0
+	ldr	r0, .L1465+0x8
+	mov	ip, r0
+	add	r6, r1, #0
+.L1460:
+	add	r0, r3, r7
+	ldr	r2, [r0]
+	lsl	r0, r4, #0x2
+	add	r0, r0, r2
+	ldrh	r1, [r0]
+	mov	r0, ip
+	and	r0, r0, r1
+	cmp	r5, r0
+	bne	.L1459	@cond_branch
+	mov	r0, #0x1
+	b	.L1464
+.L1466:
+	.align	2, 0
+.L1465:
+	.word	gLevelUpLearnsets
+	.word	0xffff
+	.word	0x1ff
+.L1459:
+	add	r0, r4, #0x1
+	lsl	r0, r0, #0x10
+	lsr	r4, r0, #0x10
+	cmp	r4, #0x13
+	bhi	.L1458	@cond_branch
+	lsl	r0, r4, #0x2
+	add	r0, r0, r2
+	ldrh	r0, [r0]
+	cmp	r0, r6
+	bne	.L1460	@cond_branch
+.L1458:
+	mov	r0, #0x0
+.L1464:
+	pop	{r4, r5, r6, r7}
+	pop	{r1}
+	bx	r1
+.Lfe112:
+	.size	 SpeciesCanLearnLvlUpMove,.Lfe112-SpeciesCanLearnLvlUpMove
 	.align	2, 0
 	.type	 DoPokedexSearch,function
 	.thumb_func
@@ -155550,15 +155896,16 @@ DoPokedexSearch:
 	mov	r6, r9
 	mov	r5, r8
 	push	{r5, r6, r7}
-	add	sp, sp, #-0x14
-	ldr	r4, [sp, #0x34]
-	ldr	r5, [sp, #0x38]
+	add	sp, sp, #-0x1c
+	ldr	r4, [sp, #0x3c]
+	ldr	r5, [sp, #0x40]
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
 	lsl	r2, r2, #0x18
-	lsr	r7, r2, #0x18
+	lsr	r2, r2, #0x18
+	mov	r8, r2
 	lsl	r3, r3, #0x18
 	lsr	r3, r3, #0x18
 	str	r3, [sp, #0x4]
@@ -155567,371 +155914,545 @@ DoPokedexSearch:
 	str	r4, [sp, #0x8]
 	lsl	r5, r5, #0x18
 	lsr	r5, r5, #0x18
-	mov	sl, r5
+	str	r5, [sp, #0xc]
 	bl	CreatePokedexList
-	mov	r5, #0x0
 	mov	r6, #0x0
+	mov	r7, #0x0
 	mov	r4, #0xca
 	lsl	r4, r4, #0x2
-	ldr	r3, .L1514
-.L1467:
+	ldr	r3, .L1541
+.L1471:
 	ldr	r2, [r3]
-	lsl	r0, r5, #0x2
+	lsl	r0, r6, #0x2
 	add	r1, r2, r0
 	ldrb	r0, [r1, #0x2]
 	lsl	r0, r0, #0x1f
 	cmp	r0, #0
-	beq	.L1466	@cond_branch
-	lsl	r0, r6, #0x2
+	beq	.L1470	@cond_branch
+	lsl	r0, r7, #0x2
 	add	r0, r2, r0
 	ldr	r1, [r1]
 	str	r1, [r0]
+	add	r0, r7, #0x1
+	lsl	r0, r0, #0x10
+	lsr	r7, r0, #0x10
+.L1470:
 	add	r0, r6, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r6, r0, #0x10
-.L1466:
-	add	r0, r5, #0x1
-	lsl	r0, r0, #0x10
-	lsr	r5, r0, #0x10
-	cmp	r5, r4
-	bls	.L1467	@cond_branch
-	ldr	r1, .L1514
+	cmp	r6, r4
+	bls	.L1471	@cond_branch
+	ldr	r1, .L1541
 	ldr	r0, [r1]
-	ldr	r2, .L1514+0x4
+	ldr	r2, .L1541+0x4
 	add	r0, r0, r2
-	add	r1, r6, #0
-	strh	r6, [r0]
-	cmp	r7, #0xff
-	beq	.L1470	@cond_branch
-	mov	r5, #0x0
-	lsl	r0, r1, #0x10
+	add	r1, r7, #0
+	strh	r7, [r0]
+	mov	r5, r8
+	cmp	r5, #0xff
+	beq	.L1474	@cond_branch
 	mov	r6, #0x0
+	lsl	r0, r1, #0x10
+	mov	r7, #0x0
 	cmp	r0, #0
-	beq	.L1472	@cond_branch
-	lsl	r7, r7, #0x2
-	ldr	r0, .L1514+0x8
+	beq	.L1476	@cond_branch
+	lsl	r5, r5, #0x2
+	mov	r8, r5
+	ldr	r0, .L1541+0x8
 	add	r0, r0, #0x3
-	add	r0, r7, r0
-	str	r0, [sp, #0xc]
-	ldr	r0, .L1514+0x8
-	add	r0, r0, r7
-	mov	r9, r0
-.L1474:
-	ldr	r1, .L1514
+	add	r0, r0, r8
+	str	r0, [sp, #0x10]
+	ldr	r0, .L1541+0x8
+	add	r0, r0, r8
+	mov	sl, r0
+.L1478:
+	ldr	r1, .L1541
 	ldr	r0, [r1]
-	lsl	r4, r5, #0x2
+	lsl	r4, r6, #0x2
 	add	r0, r0, r4
 	ldrh	r0, [r0]
 	bl	NationalPokedexNumToSpecies
 	lsl	r0, r0, #0x10
-	lsr	r2, r0, #0x10
-	ldr	r1, .L1514+0xc
+	lsr	r5, r0, #0x10
+	ldr	r1, .L1541+0xc
 	mov	r0, #0xb
-	mul	r0, r0, r2
+	mul	r0, r0, r5
 	add	r0, r0, r1
 	ldrb	r2, [r0]
 	add	r3, r2, #0
-	mov	r0, r9
-	ldrb	r0, [r0]
-	cmp	r2, r0
-	bcc	.L1477	@cond_branch
-	mov	r1, r9
+	mov	r5, sl
+	ldrb	r5, [r5]
+	cmp	r2, r5
+	bcc	.L1481	@cond_branch
+	mov	r1, sl
 	ldrb	r0, [r1]
-	ldr	r1, .L1514+0x8
+	ldr	r1, .L1541+0x8
 	add	r1, r1, #0x1
-	add	r1, r7, r1
+	add	r1, r1, r8
 	ldrb	r1, [r1]
 	add	r0, r0, r1
 	cmp	r2, r0
-	blt	.L1476	@cond_branch
-.L1477:
-	ldr	r0, .L1514+0x8
+	blt	.L1480	@cond_branch
+.L1481:
+	ldr	r0, .L1541+0x8
 	add	r0, r0, #0x2
-	add	r0, r7, r0
+	add	r0, r0, r8
 	ldrb	r2, [r0]
 	cmp	r3, r2
-	bcc	.L1473	@cond_branch
+	bcc	.L1477	@cond_branch
 	ldrb	r1, [r0]
-	ldr	r2, [sp, #0xc]
-	ldrb	r0, [r2]
+	ldr	r5, [sp, #0x10]
+	ldrb	r0, [r5]
 	add	r1, r1, r0
 	cmp	r3, r1
-	bge	.L1473	@cond_branch
-.L1476:
-	ldr	r2, .L1514
+	bge	.L1477	@cond_branch
+.L1480:
+	ldr	r2, .L1541
 	ldr	r0, [r2]
-	lsl	r1, r6, #0x2
+	lsl	r1, r7, #0x2
 	add	r1, r0, r1
 	add	r0, r0, r4
 	ldr	r0, [r0]
 	str	r0, [r1]
+	add	r0, r7, #0x1
+	lsl	r0, r0, #0x10
+	lsr	r7, r0, #0x10
+.L1477:
 	add	r0, r6, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r6, r0, #0x10
-.L1473:
-	add	r0, r5, #0x1
-	lsl	r0, r0, #0x10
-	lsr	r5, r0, #0x10
-	ldr	r1, .L1514
+	ldr	r1, .L1541
 	ldr	r0, [r1]
-	ldr	r2, .L1514+0x4
-	add	r0, r0, r2
-	ldrh	r0, [r0]
-	cmp	r5, r0
-	bcc	.L1474	@cond_branch
-.L1472:
-	ldr	r1, .L1514
-	ldr	r0, [r1]
-	ldr	r2, .L1514+0x4
-	add	r0, r0, r2
-	strh	r6, [r0]
-.L1470:
-	ldr	r0, [sp, #0x4]
-	cmp	r0, #0xff
-	beq	.L1479	@cond_branch
-	mov	r5, #0x0
-	mov	r6, #0x0
-	ldr	r1, .L1514
-	ldr	r0, [r1]
-	ldr	r2, .L1514+0x4
+	ldr	r2, .L1541+0x4
 	add	r0, r0, r2
 	ldrh	r0, [r0]
 	cmp	r6, r0
-	bcs	.L1481	@cond_branch
-	add	r7, r1, #0
-	ldr	r0, .L1514+0x10
-	mov	r8, r0
-.L1483:
-	ldr	r0, [r7]
-	lsl	r4, r5, #0x2
+	bcc	.L1478	@cond_branch
+.L1476:
+	ldr	r5, .L1541
+	ldr	r0, [r5]
+	ldr	r1, .L1541+0x4
+	add	r0, r0, r1
+	strh	r7, [r0]
+.L1474:
+	ldr	r2, [sp, #0x4]
+	cmp	r2, #0xff
+	beq	.L1483	@cond_branch
+	mov	r6, #0x0
+	mov	r7, #0x0
+	ldr	r5, .L1541
+	ldr	r0, [r5]
+	ldr	r1, .L1541+0x4
+	add	r0, r0, r1
+	ldrh	r0, [r0]
+	cmp	r7, r0
+	bcs	.L1485	@cond_branch
+	add	r2, r5, #0
+	ldr	r5, .L1541+0x10
+	mov	r8, r5
+.L1487:
+	ldr	r0, [r2]
+	lsl	r4, r6, #0x2
 	add	r0, r0, r4
 	ldrh	r0, [r0]
+	str	r2, [sp, #0x14]
 	bl	NationalPokedexNumToSpecies
 	lsl	r0, r0, #0x10
-	lsr	r2, r0, #0x10
-	lsl	r0, r2, #0x3
-	add	r0, r0, r2
+	lsr	r5, r0, #0x10
+	lsl	r0, r5, #0x3
+	add	r0, r0, r5
 	lsl	r0, r0, #0x2
 	add	r0, r0, r8
 	ldrb	r0, [r0, #0x1f]
 	lsl	r0, r0, #0x19
 	lsr	r0, r0, #0x19
+	ldr	r2, [sp, #0x14]
 	ldr	r1, [sp, #0x4]
 	cmp	r1, r0
-	bne	.L1482	@cond_branch
-	ldr	r0, [r7]
-	lsl	r1, r6, #0x2
+	bne	.L1486	@cond_branch
+	ldr	r0, [r2]
+	lsl	r1, r7, #0x2
 	add	r1, r0, r1
 	add	r0, r0, r4
 	ldr	r0, [r0]
 	str	r0, [r1]
+	add	r0, r7, #0x1
+	lsl	r0, r0, #0x10
+	lsr	r7, r0, #0x10
+.L1486:
 	add	r0, r6, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r6, r0, #0x10
-.L1482:
-	add	r0, r5, #0x1
-	lsl	r0, r0, #0x10
-	lsr	r5, r0, #0x10
-	ldr	r0, [r7]
-	ldr	r2, .L1514+0x4
-	add	r0, r0, r2
-	ldrh	r0, [r0]
-	cmp	r5, r0
-	bcc	.L1483	@cond_branch
-.L1481:
-	ldr	r1, .L1514
-	ldr	r0, [r1]
-	ldr	r2, .L1514+0x4
-	add	r0, r0, r2
-	strh	r6, [r0]
-.L1479:
-	ldr	r0, [sp, #0x8]
-	cmp	r0, #0xff
-	bne	.L1488	@cond_branch
-	mov	r1, sl
-	cmp	r1, #0xff
-	bne	.LCB15340
-	b	.L1486	@long jump
-.LCB15340:
-	mov	r2, sl
-	str	r2, [sp, #0x8]
-	mov	r0, #0xff
-	mov	sl, r0
-.L1488:
-	mov	r1, sl
-	cmp	r1, #0xff
-	bne	.L1489	@cond_branch
-	mov	r5, #0x0
-	mov	r6, #0x0
-	ldr	r2, .L1514
 	ldr	r0, [r2]
-	ldr	r1, .L1514+0x4
-	add	r0, r0, r1
+	ldr	r5, .L1541+0x4
+	add	r0, r0, r5
 	ldrh	r0, [r0]
 	cmp	r6, r0
-	bcs	.L1498	@cond_branch
-	add	r3, r2, #0
-	mov	r7, sp
-	mov	r8, r2
-.L1493:
+	bcc	.L1487	@cond_branch
+.L1485:
+	ldr	r1, .L1541
+	ldr	r0, [r1]
+	ldr	r2, .L1541+0x4
+	add	r0, r0, r2
+	strh	r7, [r0]
+.L1483:
+	ldr	r5, [sp, #0x8]
+	cmp	r5, #0xff
+	bne	.L1492	@cond_branch
+	ldr	r0, [sp, #0xc]
+	cmp	r0, #0xff
+	bne	.LCB15474
+	b	.L1490	@long jump
+.LCB15474:
+	str	r0, [sp, #0x8]
+	mov	r1, #0xff
+	str	r1, [sp, #0xc]
+.L1492:
+	ldr	r2, [sp, #0xc]
+	cmp	r2, #0xff
+	bne	.L1493	@cond_branch
+	mov	r6, #0x0
+	mov	r7, #0x0
+	ldr	r5, .L1541
+	ldr	r0, [r5]
+	ldr	r1, .L1541+0x4
+	add	r0, r0, r1
+	ldrh	r0, [r0]
+	cmp	r7, r0
+	bcc	.LCB15501
+	b	.L1502	@long jump
+.LCB15501:
+	add	r3, r5, #0
+	mov	r2, sp
+	mov	r8, r5
+.L1497:
 	ldr	r0, [r3]
-	lsl	r4, r5, #0x2
+	lsl	r4, r6, #0x2
 	add	r1, r0, r4
 	ldrb	r0, [r1, #0x2]
 	lsl	r0, r0, #0x1e
 	cmp	r0, #0
-	bge	.L1492	@cond_branch
+	bge	.L1496	@cond_branch
 	ldrh	r0, [r1]
-	str	r3, [sp, #0x10]
+	str	r2, [sp, #0x14]
+	str	r3, [sp, #0x18]
 	bl	NationalPokedexNumToSpecies
 	lsl	r0, r0, #0x10
-	lsr	r2, r0, #0x10
-	ldr	r1, .L1514+0x10
-	lsl	r0, r2, #0x3
-	add	r0, r0, r2
+	lsr	r5, r0, #0x10
+	ldr	r1, .L1541+0x10
+	lsl	r0, r5, #0x3
+	add	r0, r0, r5
 	lsl	r0, r0, #0x2
 	add	r0, r0, r1
 	ldrb	r1, [r0, #0x6]
-	strb	r1, [r7]
+	ldr	r2, [sp, #0x14]
+	strb	r1, [r2]
 	ldrb	r0, [r0, #0x7]
-	strb	r0, [r7, #0x1]
-	ldr	r3, [sp, #0x10]
-	ldr	r2, [sp, #0x8]
-	cmp	r1, r2
-	beq	.L1496	@cond_branch
-	cmp	r0, r2
-	bne	.L1492	@cond_branch
-.L1496:
+	strb	r0, [r2, #0x1]
+	ldr	r3, [sp, #0x18]
+	ldr	r5, [sp, #0x8]
+	cmp	r1, r5
+	beq	.L1500	@cond_branch
+	cmp	r0, r5
+	bne	.L1496	@cond_branch
+.L1500:
 	ldr	r0, [r3]
-	lsl	r1, r6, #0x2
+	lsl	r1, r7, #0x2
 	add	r1, r0, r1
 	add	r0, r0, r4
 	ldr	r0, [r0]
 	str	r0, [r1]
+	add	r0, r7, #0x1
+	lsl	r0, r0, #0x10
+	lsr	r7, r0, #0x10
+.L1496:
 	add	r0, r6, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r6, r0, #0x10
-.L1492:
-	add	r0, r5, #0x1
-	lsl	r0, r0, #0x10
-	lsr	r5, r0, #0x10
 	mov	r1, r8
 	ldr	r0, [r1]
-	ldr	r2, .L1514+0x4
-	add	r0, r0, r2
+	ldr	r5, .L1541+0x4
+	add	r0, r0, r5
 	ldrh	r0, [r0]
-	cmp	r5, r0
-	bcc	.L1493	@cond_branch
-	b	.L1498
-.L1515:
+	cmp	r6, r0
+	bcc	.L1497	@cond_branch
+	b	.L1502
+.L1542:
 	.align	2, 0
-.L1514:
+.L1541:
 	.word	sPokedexView
 	.word	0xca8
 	.word	sLetterSearchRanges
 	.word	gSpeciesNames
 	.word	gBaseStats
-.L1489:
-	mov	r5, #0x0
+.L1493:
 	mov	r6, #0x0
-	ldr	r1, .L1516
+	mov	r7, #0x0
+	ldr	r1, .L1543
 	ldr	r0, [r1]
-	ldr	r2, .L1516+0x4
+	ldr	r2, .L1543+0x4
 	add	r0, r0, r2
 	ldrh	r0, [r0]
-	cmp	r6, r0
-	bcs	.L1498	@cond_branch
-	mov	r7, sp
-.L1502:
+	cmp	r7, r0
+	bcs	.L1502	@cond_branch
+	mov	r3, sp
+.L1506:
 	ldr	r0, [r1]
-	lsl	r1, r5, #0x2
+	lsl	r1, r6, #0x2
 	add	r2, r0, r1
 	ldrb	r0, [r2, #0x2]
 	lsl	r0, r0, #0x1e
 	add	r4, r1, #0
 	cmp	r0, #0
-	bge	.L1501	@cond_branch
+	bge	.L1505	@cond_branch
 	ldrh	r0, [r2]
+	str	r3, [sp, #0x18]
 	bl	NationalPokedexNumToSpecies
 	lsl	r0, r0, #0x10
-	lsr	r2, r0, #0x10
-	ldr	r1, .L1516+0x8
-	lsl	r0, r2, #0x3
-	add	r0, r0, r2
+	lsr	r5, r0, #0x10
+	ldr	r1, .L1543+0x8
+	lsl	r0, r5, #0x3
+	add	r0, r0, r5
 	lsl	r0, r0, #0x2
 	add	r0, r0, r1
 	ldrb	r1, [r0, #0x6]
-	strb	r1, [r7]
+	ldr	r3, [sp, #0x18]
+	strb	r1, [r3]
 	ldrb	r0, [r0, #0x7]
-	strb	r0, [r7, #0x1]
-	ldr	r2, [sp, #0x8]
-	cmp	r1, r2
-	bne	.L1506	@cond_branch
-	cmp	r0, sl
-	beq	.L1505	@cond_branch
-.L1506:
-	cmp	r1, sl
-	bne	.L1501	@cond_branch
+	strb	r0, [r3, #0x1]
+	ldr	r5, [sp, #0x8]
+	cmp	r1, r5
+	bne	.L1510	@cond_branch
+	ldr	r2, [sp, #0xc]
+	cmp	r0, r2
+	beq	.L1509	@cond_branch
+.L1510:
+	ldr	r5, [sp, #0xc]
+	cmp	r1, r5
+	bne	.L1505	@cond_branch
 	ldr	r1, [sp, #0x8]
 	cmp	r0, r1
-	bne	.L1501	@cond_branch
-.L1505:
-	ldr	r2, .L1516
+	bne	.L1505	@cond_branch
+.L1509:
+	ldr	r2, .L1543
 	ldr	r0, [r2]
-	lsl	r1, r6, #0x2
+	lsl	r1, r7, #0x2
 	add	r1, r0, r1
 	add	r0, r0, r4
 	ldr	r0, [r0]
 	str	r0, [r1]
+	add	r0, r7, #0x1
+	lsl	r0, r0, #0x10
+	lsr	r7, r0, #0x10
+.L1505:
 	add	r0, r6, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r6, r0, #0x10
-.L1501:
-	add	r0, r5, #0x1
-	lsl	r0, r0, #0x10
-	lsr	r5, r0, #0x10
-	ldr	r1, .L1516
+	ldr	r1, .L1543
 	ldr	r0, [r1]
-	ldr	r2, .L1516+0x4
+	ldr	r2, .L1543+0x4
 	add	r0, r0, r2
 	ldrh	r0, [r0]
+	cmp	r6, r0
+	bcc	.L1506	@cond_branch
+.L1502:
+	ldr	r5, .L1543
+	ldr	r0, [r5]
+	ldr	r1, .L1543+0x4
+	add	r0, r0, r1
+	strh	r7, [r0]
+.L1490:
+	ldr	r0, .L1543+0xc
+	cmp	r0, r0
+	bne	.LCB15708
+	b	.L1512	@long jump
+.LCB15708:
+	mov	r2, #0xff
+	mov	sl, r2
+	mov	r6, #0x0
+	ldr	r0, .L1543+0x10
+	add	r1, r0, #0
+	ldr	r5, .L1543+0xc
+	ldrh	r0, [r1]
 	cmp	r5, r0
-	bcc	.L1502	@cond_branch
-.L1498:
-	ldr	r1, .L1516
+	bne	.L1515	@cond_branch
+	mov	sl, r6
+	b	.L1514
+.L1544:
+	.align	2, 0
+.L1543:
+	.word	sPokedexView
+	.word	0xca8
+	.word	gBaseStats
+	.word	0xffff
+	.word	gTutorMoves
+.L1515:
+	add	r0, r6, #0x1
+	lsl	r0, r0, #0x10
+	lsr	r6, r0, #0x10
+	cmp	r6, #0x1d
+	bhi	.L1514	@cond_branch
+	lsl	r0, r6, #0x1
+	add	r0, r0, r1
+	ldr	r2, .L1545
+	ldrh	r0, [r0]
+	cmp	r2, r0
+	bne	.L1515	@cond_branch
+	lsl	r0, r6, #0x18
+	lsr	r0, r0, #0x18
+	mov	sl, r0
+.L1514:
+	mov	r5, #0xff
+	mov	r9, r5
+	mov	r6, #0x0
+	b	.L1519
+.L1546:
+	.align	2, 0
+.L1545:
+	.word	0xffff
+.L1521:
+	add	r0, r6, #0x1
+	lsl	r0, r0, #0x10
+	lsr	r6, r0, #0x10
+.L1519:
+	cmp	r6, #0x39
+	bhi	.L1520	@cond_branch
+	mov	r1, #0xf1
+	lsl	r1, r1, #0x1
+	add	r0, r6, r1
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
+	bl	ItemIdToBattleMoveId
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
+	ldr	r2, .L1547
+	cmp	r2, r0
+	bne	.L1521	@cond_branch
+	add	r0, r6, #0
+	add	r0, r0, #0xe2
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	mov	r9, r0
+.L1520:
+	mov	r6, #0x0
+	mov	r7, #0x0
+	ldr	r2, .L1547+0x4
+	ldr	r0, [r2]
+	ldr	r5, .L1547+0x8
+	add	r0, r0, r5
+	ldrh	r0, [r0]
+	cmp	r7, r0
+	bcs	.L1526	@cond_branch
+	add	r0, r2, #0
+	mov	r8, r0
+.L1528:
+	mov	r1, r8
 	ldr	r0, [r1]
-	ldr	r2, .L1516+0x4
+	lsl	r4, r6, #0x2
+	add	r0, r0, r4
+	ldrh	r0, [r0]
+	str	r2, [sp, #0x14]
+	bl	NationalPokedexNumToSpecies
+	lsl	r0, r0, #0x10
+	lsr	r5, r0, #0x10
+	add	r0, r5, #0
+	ldr	r1, .L1547
+	bl	SpeciesCanLearnLvlUpMove
+	lsl	r0, r0, #0x18
+	ldr	r2, [sp, #0x14]
+	cmp	r0, #0
+	beq	.L1529	@cond_branch
+	ldr	r0, [r2]
+	b	.L1540
+.L1548:
+	.align	2, 0
+.L1547:
+	.word	0xffff
+	.word	sPokedexView
+	.word	0xca8
+.L1529:
+	add	r0, r5, #0
+	mov	r1, r9
+	bl	CanSpeciesLearnTMHM
+	cmp	r0, #0
+	beq	.L1530	@cond_branch
+	mov	r2, r8
+	ldr	r0, [r2]
+	b	.L1540
+.L1530:
+	add	r0, r5, #0
+	mov	r1, sl
+	bl	CanLearnTutorMove
+	lsl	r0, r0, #0x18
+	cmp	r0, #0
+	beq	.L1531	@cond_branch
+	mov	r5, r8
+	ldr	r0, [r5]
+	b	.L1540
+.L1531:
+	add	r0, r5, #0
+	ldr	r1, .L1549
+	bl	SpeciesCanLearnEggMove
+	lsl	r0, r0, #0x18
+	cmp	r0, #0
+	beq	.L1527	@cond_branch
+	mov	r1, r8
+	ldr	r0, [r1]
+.L1540:
+	lsl	r1, r7, #0x2
+	add	r1, r0, r1
+	add	r0, r0, r4
+	ldr	r0, [r0]
+	str	r0, [r1]
+	add	r0, r7, #0x1
+	lsl	r0, r0, #0x10
+	lsr	r7, r0, #0x10
+.L1527:
+	add	r0, r6, #0x1
+	lsl	r0, r0, #0x10
+	lsr	r6, r0, #0x10
+	ldr	r2, .L1549+0x4
+	ldr	r0, [r2]
+	ldr	r5, .L1549+0x8
+	add	r0, r0, r5
+	ldrh	r0, [r0]
+	cmp	r6, r0
+	bcc	.L1528	@cond_branch
+.L1526:
+	ldr	r1, .L1549+0x4
+	ldr	r0, [r1]
+	ldr	r2, .L1549+0x8
 	add	r0, r0, r2
-	strh	r6, [r0]
-.L1486:
-	ldr	r1, .L1516
-	ldr	r0, [r1]
-	ldr	r2, .L1516+0x4
+	strh	r7, [r0]
+.L1512:
+	ldr	r5, .L1549+0x4
+	ldr	r0, [r5]
+	ldr	r2, .L1549+0x8
 	add	r1, r0, r2
 	ldrh	r0, [r1]
 	cmp	r0, #0
-	beq	.L1508	@cond_branch
-	add	r5, r0, #0
+	beq	.L1534	@cond_branch
+	add	r6, r0, #0
 	mov	r0, #0xca
 	lsl	r0, r0, #0x2
-	cmp	r5, r0
-	bhi	.L1508	@cond_branch
-	ldr	r4, .L1516
-	mov	r1, #0x2
+	cmp	r6, r0
+	bhi	.L1534	@cond_branch
+	add	r4, r5, #0
+	mov	r5, #0x2
+	neg	r5, r5
+	mov	sl, r5
+	mov	r1, #0x3
 	neg	r1, r1
-	mov	sl, r1
-	mov	r2, #0x3
-	neg	r2, r2
-	mov	r9, r2
+	mov	r9, r1
 	mov	r8, r0
-	ldr	r0, .L1516+0xc
-	add	r7, r0, #0
-.L1512:
+	ldr	r2, .L1549
+	add	r5, r2, #0
+.L1538:
 	ldr	r1, [r4]
-	lsl	r3, r5, #0x2
+	lsl	r3, r6, #0x2
 	add	r1, r1, r3
 	ldrh	r0, [r1]
-	orr	r0, r0, r7
+	orr	r0, r0, r5
 	strh	r0, [r1]
 	ldrb	r2, [r1, #0x2]
 	mov	r0, sl
@@ -155943,14 +156464,14 @@ DoPokedexSearch:
 	mov	r0, r9
 	and	r0, r0, r2
 	strb	r0, [r1, #0x2]
-	add	r0, r5, #0x1
+	add	r0, r6, #0x1
 	lsl	r0, r0, #0x10
-	lsr	r5, r0, #0x10
-	cmp	r5, r8
-	bls	.L1512	@cond_branch
-.L1508:
-	add	r0, r6, #0
-	add	sp, sp, #0x14
+	lsr	r6, r0, #0x10
+	cmp	r6, r8
+	bls	.L1538	@cond_branch
+.L1534:
+	add	r0, r7, #0
+	add	sp, sp, #0x1c
 	pop	{r3, r4, r5}
 	mov	r8, r3
 	mov	r9, r4
@@ -155958,33 +156479,32 @@ DoPokedexSearch:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.L1517:
+.L1550:
 	.align	2, 0
-.L1516:
+.L1549:
+	.word	0xffff
 	.word	sPokedexView
 	.word	0xca8
-	.word	gBaseStats
-	.word	0xffff
-.Lfe105:
-	.size	 DoPokedexSearch,.Lfe105-DoPokedexSearch
+.Lfe113:
+	.size	 DoPokedexSearch,.Lfe113-DoPokedexSearch
 	.align	2, 0
 	.type	 LoadSearchMenu,function
 	.thumb_func
 LoadSearchMenu:
 	push	{lr}
-	ldr	r0, .L1519
+	ldr	r0, .L1552
 	mov	r1, #0x0
 	bl	CreateTask
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	pop	{r1}
 	bx	r1
-.L1520:
+.L1553:
 	.align	2, 0
-.L1519:
+.L1552:
 	.word	Task_LoadSearchMenu
-.Lfe106:
-	.size	 LoadSearchMenu,.Lfe106-LoadSearchMenu
+.Lfe114:
+	.size	 LoadSearchMenu,.Lfe114-LoadSearchMenu
 	.align	2, 0
 	.type	 PrintSearchText,function
 	.thumb_func
@@ -156019,8 +156539,8 @@ PrintSearchText:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.Lfe107:
-	.size	 PrintSearchText,.Lfe107-PrintSearchText
+.Lfe115:
+	.size	 PrintSearchText,.Lfe115-PrintSearchText
 	.align	2, 0
 	.type	 ClearSearchMenuRect,function
 	.thumb_func
@@ -156048,8 +156568,8 @@ ClearSearchMenuRect:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.Lfe108:
-	.size	 ClearSearchMenuRect,.Lfe108-ClearSearchMenuRect
+.Lfe116:
+	.size	 ClearSearchMenuRect,.Lfe116-ClearSearchMenuRect
 	.align	2, 0
 	.type	 Task_LoadSearchMenu,function
 	.thumb_func
@@ -156058,46 +156578,47 @@ Task_LoadSearchMenu:
 	add	sp, sp, #-0x4
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r1, .L1543
+	ldr	r1, .L1576
 	mov	r2, #0x87
 	lsl	r2, r2, #0x3
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	add	r3, r1, #0
 	cmp	r0, #0x4
-	bhi	.L1526	@cond_branch
+	bhi	.L1559	@cond_branch
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1543+0x4
+	ldr	r1, .L1576+0x4
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L1544:
+.L1577:
 	.align	2, 0
-.L1543:
+.L1576:
 	.word	gMain
-	.word	.L1540
+	.word	.L1573
 	.align	2, 0
 	.align	2, 0
-.L1540:
-	.word	.L1526
-	.word	.L1530
-	.word	.L1536
-	.word	.L1537
-	.word	.L1538
-.L1526:
-	ldr	r0, .L1545
+.L1573:
+	.word	.L1559
+	.word	.L1563
+	.word	.L1569
+	.word	.L1570
+	.word	.L1571
+.L1559:
+	ldr	r0, .L1578
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	cmp	r5, #0
-	beq	.LCB15783
-	b	.L1524	@long jump
-.LCB15783:
-	ldr	r0, .L1545+0x4
+	beq	.LCB16150
+	b	.L1557	@long jump
+.LCB16150:
+	ldr	r0, .L1578+0x4
 	ldr	r0, [r0]
-	ldr	r1, .L1545+0x8
+	mov	r1, #0xcf
+	lsl	r1, r1, #0x4
 	add	r0, r0, r1
 	mov	r1, #0x2
 	strb	r1, [r0]
@@ -156105,7 +156626,7 @@ Task_LoadSearchMenu:
 	bl	ResetOtherVideoRegisters
 	mov	r0, #0x0
 	bl	ResetBgsAndClearDma3BusyFlags
-	ldr	r1, .L1545+0xc
+	ldr	r1, .L1578+0x8
 	mov	r0, #0x0
 	mov	r2, #0x4
 	bl	InitBgsFromTemplates
@@ -156131,12 +156652,12 @@ Task_LoadSearchMenu:
 	add	r1, r0, #0
 	mov	r0, #0x0
 	bl	SetBgTilemapBuffer
-	ldr	r0, .L1545+0x10
+	ldr	r0, .L1578+0xc
 	bl	InitWindows
 	bl	DeactivateAllTextPrinters
 	mov	r0, #0x0
 	bl	PutWindowTilemap
-	ldr	r1, .L1545+0x14
+	ldr	r1, .L1578+0x10
 	mov	r2, #0x80
 	lsl	r2, r2, #0x6
 	str	r5, [sp]
@@ -156145,51 +156666,50 @@ Task_LoadSearchMenu:
 	bl	DecompressAndLoadBgGfxUsingHeap
 	bl	IsNationalPokedexEnabled
 	cmp	r0, #0
-	bne	.L1528	@cond_branch
-	ldr	r1, .L1545+0x18
+	bne	.L1561	@cond_branch
+	ldr	r1, .L1578+0x14
 	mov	r0, #0x3
 	mov	r2, #0x0
 	mov	r3, #0x0
 	bl	CopyToBgTilemapBuffer
-	b	.L1529
-.L1546:
+	b	.L1562
+.L1579:
 	.align	2, 0
-.L1545:
+.L1578:
 	.word	gPaletteFade
 	.word	sPokedexView
-	.word	0xce6
 	.word	sSearchMenu_BgTemplate
 	.word	sSearchMenu_WindowTemplate
 	.word	gPokedexSearchMenu_Gfx
 	.word	gPokedexSearchMenuHoenn_Tilemap
-.L1528:
-	ldr	r1, .L1547
+.L1561:
+	ldr	r1, .L1580
 	mov	r0, #0x3
 	mov	r2, #0x0
 	mov	r3, #0x0
 	bl	CopyToBgTilemapBuffer
-.L1529:
-	ldr	r0, .L1547+0x4
+.L1562:
+	ldr	r0, .L1580+0x4
 	mov	r1, #0x1
 	mov	r2, #0x7e
 	bl	LoadPalette
-	ldr	r0, .L1547+0x8
+	ldr	r0, .L1580+0x8
 	mov	r2, #0x87
 	lsl	r2, r2, #0x3
 	add	r0, r0, r2
 	mov	r1, #0x1
 	strb	r1, [r0]
-	b	.L1524
-.L1548:
+	b	.L1557
+.L1581:
 	.align	2, 0
-.L1547:
+.L1580:
 	.word	gPokedexSearchMenuNational_Tilemap
 	.word	gPokedexSearchMenu_Pal+0x2
 	.word	gMain
-.L1530:
-	ldr	r0, .L1549
+.L1563:
+	ldr	r0, .L1582
 	bl	LoadCompressedSpriteSheet
-	ldr	r0, .L1549+0x4
+	ldr	r0, .L1582+0x4
 	bl	LoadSpritePalettes
 	add	r0, r4, #0
 	bl	CreateSearchParameterScrollArrows
@@ -156197,9 +156717,9 @@ Task_LoadSearchMenu:
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r2, r0, #0x3
-	ldr	r5, .L1549+0x8
+	ldr	r5, .L1582+0x8
 	mov	r3, #0x0
-.L1534:
+.L1567:
 	lsl	r0, r1, #0x1
 	add	r0, r0, r2
 	add	r0, r0, r5
@@ -156208,7 +156728,7 @@ Task_LoadSearchMenu:
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
 	cmp	r1, #0xf
-	bls	.L1534	@cond_branch
+	bls	.L1567	@cond_branch
 	add	r0, r4, #0
 	bl	SetDefaultSearchModeAndOrder
 	mov	r0, #0x0
@@ -156224,14 +156744,14 @@ Task_LoadSearchMenu:
 	bl	CopyBgTilemapBufferToVram
 	mov	r0, #0x3
 	bl	CopyBgTilemapBufferToVram
-	b	.L1541
-.L1550:
+	b	.L1574
+.L1583:
 	.align	2, 0
-.L1549:
+.L1582:
 	.word	sInterfaceSpriteSheet
 	.word	sInterfaceSpritePalette
 	.word	gTasks+0x8
-.L1536:
+.L1569:
 	mov	r0, #0x1
 	neg	r0, r0
 	mov	r1, #0x0
@@ -156239,16 +156759,16 @@ Task_LoadSearchMenu:
 	mov	r2, #0x10
 	mov	r3, #0x0
 	bl	BeginNormalPaletteFade
-	ldr	r1, .L1551
+	ldr	r1, .L1584
 	mov	r2, #0x87
 	lsl	r2, r2, #0x3
 	add	r1, r1, r2
-	b	.L1542
-.L1552:
+	b	.L1575
+.L1585:
 	.align	2, 0
-.L1551:
+.L1584:
 	.word	gMain
-.L1537:
+.L1570:
 	mov	r0, #0x50
 	mov	r1, #0x0
 	bl	SetGpuReg
@@ -156270,53 +156790,53 @@ Task_LoadSearchMenu:
 	bl	ShowBg
 	mov	r0, #0x3
 	bl	ShowBg
-.L1541:
-	ldr	r1, .L1553
+.L1574:
+	ldr	r1, .L1586
 	mov	r0, #0x87
 	lsl	r0, r0, #0x3
 	add	r1, r1, r0
-.L1542:
+.L1575:
 	ldrb	r0, [r1]
 	add	r0, r0, #0x1
 	strb	r0, [r1]
-	b	.L1524
-.L1554:
+	b	.L1557
+.L1587:
 	.align	2, 0
-.L1553:
+.L1586:
 	.word	gMain
-.L1538:
-	ldr	r0, .L1555
+.L1571:
+	ldr	r0, .L1588
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	cmp	r2, #0
-	bne	.L1524	@cond_branch
-	ldr	r1, .L1555+0x4
+	bne	.L1557	@cond_branch
+	ldr	r1, .L1588+0x4
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1555+0x8
+	ldr	r1, .L1588+0x8
 	str	r1, [r0]
 	mov	r1, #0x87
 	lsl	r1, r1, #0x3
 	add	r0, r3, r1
 	strb	r2, [r0]
-.L1524:
+.L1557:
 	add	sp, sp, #0x4
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1556:
+.L1589:
 	.align	2, 0
-.L1555:
+.L1588:
 	.word	gPaletteFade
 	.word	gTasks
 	.word	Task_SwitchToSearchMenuTopBar
-.Lfe109:
-	.size	 Task_LoadSearchMenu,.Lfe109-Task_LoadSearchMenu
+.Lfe117:
+	.size	 Task_LoadSearchMenu,.Lfe117-Task_LoadSearchMenu
 	.align	2, 0
 	.type	 FreeSearchWindowAndBgBuffers,function
 	.thumb_func
@@ -156326,31 +156846,31 @@ FreeSearchWindowAndBgBuffers:
 	mov	r0, #0x0
 	bl	GetBgTilemapBuffer
 	cmp	r0, #0
-	beq	.L1558	@cond_branch
+	beq	.L1591	@cond_branch
 	bl	Free
-.L1558:
+.L1591:
 	mov	r0, #0x1
 	bl	GetBgTilemapBuffer
 	cmp	r0, #0
-	beq	.L1559	@cond_branch
+	beq	.L1592	@cond_branch
 	bl	Free
-.L1559:
+.L1592:
 	mov	r0, #0x2
 	bl	GetBgTilemapBuffer
 	cmp	r0, #0
-	beq	.L1560	@cond_branch
+	beq	.L1593	@cond_branch
 	bl	Free
-.L1560:
+.L1593:
 	mov	r0, #0x3
 	bl	GetBgTilemapBuffer
 	cmp	r0, #0
-	beq	.L1561	@cond_branch
+	beq	.L1594	@cond_branch
 	bl	Free
-.L1561:
+.L1594:
 	pop	{r0}
 	bx	r0
-.Lfe110:
-	.size	 FreeSearchWindowAndBgBuffers,.Lfe110-FreeSearchWindowAndBgBuffers
+.Lfe118:
+	.size	 FreeSearchWindowAndBgBuffers,.Lfe118-FreeSearchWindowAndBgBuffers
 	.align	2, 0
 	.type	 Task_SwitchToSearchMenuTopBar,function
 	.thumb_func
@@ -156359,7 +156879,7 @@ Task_SwitchToSearchMenuTopBar:
 	add	r4, r0, #0
 	lsl	r4, r4, #0x18
 	lsr	r4, r4, #0x18
-	ldr	r0, .L1563
+	ldr	r0, .L1596
 	lsl	r5, r4, #0x2
 	add	r5, r5, r4
 	lsl	r5, r5, #0x3
@@ -156373,18 +156893,18 @@ Task_SwitchToSearchMenuTopBar:
 	bl	CopyWindowToVram
 	mov	r0, #0x3
 	bl	CopyBgTilemapBufferToVram
-	ldr	r0, .L1563+0x4
+	ldr	r0, .L1596+0x4
 	str	r0, [r5]
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1564:
+.L1597:
 	.align	2, 0
-.L1563:
+.L1596:
 	.word	gTasks
 	.word	Task_HandleSearchTopBarInput
-.Lfe111:
-	.size	 Task_SwitchToSearchMenuTopBar,.Lfe111-Task_SwitchToSearchMenuTopBar
+.Lfe119:
+	.size	 Task_SwitchToSearchMenuTopBar,.Lfe119-Task_SwitchToSearchMenuTopBar
 	.align	2, 0
 	.type	 Task_HandleSearchTopBarInput,function
 	.thumb_func
@@ -156392,34 +156912,34 @@ Task_HandleSearchTopBarInput:
 	push	{r4, r5, lr}
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
-	ldr	r0, .L1578
+	ldr	r0, .L1611
 	ldrh	r1, [r0, #0x2e]
 	mov	r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1566	@cond_branch
+	beq	.L1599	@cond_branch
 	mov	r0, #0x3
 	bl	PlaySE
-	ldr	r0, .L1578+0x4
+	ldr	r0, .L1611+0x4
 	lsl	r1, r5, #0x2
 	add	r1, r1, r5
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L1578+0x8
+	ldr	r0, .L1611+0x8
 	str	r0, [r1]
-	b	.L1565
-.L1579:
+	b	.L1598
+.L1612:
 	.align	2, 0
-.L1578:
+.L1611:
 	.word	gMain
 	.word	gTasks
 	.word	Task_ExitSearch
-.L1566:
+.L1599:
 	mov	r0, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1567	@cond_branch
-	ldr	r1, .L1580
+	beq	.L1600	@cond_branch
+	ldr	r1, .L1613
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
@@ -156427,54 +156947,54 @@ Task_HandleSearchTopBarInput:
 	mov	r0, #0x8
 	ldrsh	r4, [r5, r0]
 	cmp	r4, #0x1
-	beq	.L1570	@cond_branch
+	beq	.L1603	@cond_branch
 	cmp	r4, #0x1
-	bgt	.L1574	@cond_branch
+	bgt	.L1607	@cond_branch
 	cmp	r4, #0
-	beq	.L1569	@cond_branch
-	b	.L1565
-.L1581:
+	beq	.L1602	@cond_branch
+	b	.L1598
+.L1614:
 	.align	2, 0
-.L1580:
+.L1613:
 	.word	gTasks
-.L1574:
+.L1607:
 	cmp	r4, #0x2
-	beq	.L1571	@cond_branch
-	b	.L1565
-.L1569:
+	beq	.L1604	@cond_branch
+	b	.L1598
+.L1602:
 	mov	r0, #0x15
 	bl	PlaySE
 	strh	r4, [r5, #0xa]
-	b	.L1577
-.L1570:
+	b	.L1610
+.L1603:
 	mov	r0, #0x15
 	bl	PlaySE
 	mov	r0, #0x4
 	strh	r0, [r5, #0xa]
-.L1577:
-	ldr	r0, .L1582
+.L1610:
+	ldr	r0, .L1615
 	str	r0, [r5]
-	b	.L1565
-.L1583:
+	b	.L1598
+.L1616:
 	.align	2, 0
-.L1582:
+.L1615:
 	.word	Task_SwitchToSearchMenu
-.L1571:
+.L1604:
 	mov	r0, #0x3
 	bl	PlaySE
-	ldr	r0, .L1584
+	ldr	r0, .L1617
 	str	r0, [r5]
-	b	.L1565
-.L1585:
+	b	.L1598
+.L1618:
 	.align	2, 0
-.L1584:
+.L1617:
 	.word	Task_ExitSearch
-.L1567:
+.L1600:
 	mov	r0, #0x20
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1575	@cond_branch
-	ldr	r0, .L1586
+	beq	.L1608	@cond_branch
+	ldr	r0, .L1619
 	lsl	r1, r5, #0x2
 	add	r1, r1, r5
 	lsl	r1, r1, #0x3
@@ -156482,7 +157002,7 @@ Task_HandleSearchTopBarInput:
 	mov	r1, #0x8
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	ble	.L1575	@cond_branch
+	ble	.L1608	@cond_branch
 	mov	r0, #0x6d
 	bl	PlaySE
 	ldrh	r0, [r4, #0x8]
@@ -156496,14 +157016,14 @@ Task_HandleSearchTopBarInput:
 	bl	CopyWindowToVram
 	mov	r0, #0x3
 	bl	CopyBgTilemapBufferToVram
-.L1575:
-	ldr	r0, .L1586+0x4
+.L1608:
+	ldr	r0, .L1619+0x4
 	ldrh	r1, [r0, #0x2e]
 	mov	r0, #0x10
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1565	@cond_branch
-	ldr	r0, .L1586
+	beq	.L1598	@cond_branch
+	ldr	r0, .L1619
 	lsl	r1, r5, #0x2
 	add	r1, r1, r5
 	lsl	r1, r1, #0x3
@@ -156511,7 +157031,7 @@ Task_HandleSearchTopBarInput:
 	mov	r1, #0x8
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x1
-	bgt	.L1565	@cond_branch
+	bgt	.L1598	@cond_branch
 	mov	r0, #0x6d
 	bl	PlaySE
 	ldrh	r0, [r4, #0x8]
@@ -156525,17 +157045,17 @@ Task_HandleSearchTopBarInput:
 	bl	CopyWindowToVram
 	mov	r0, #0x3
 	bl	CopyBgTilemapBufferToVram
-.L1565:
+.L1598:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1587:
+.L1620:
 	.align	2, 0
-.L1586:
+.L1619:
 	.word	gTasks
 	.word	gMain
-.Lfe112:
-	.size	 Task_HandleSearchTopBarInput,.Lfe112-Task_HandleSearchTopBarInput
+.Lfe120:
+	.size	 Task_HandleSearchTopBarInput,.Lfe120-Task_HandleSearchTopBarInput
 	.align	2, 0
 	.type	 Task_SwitchToSearchMenu,function
 	.thumb_func
@@ -156544,7 +157064,7 @@ Task_SwitchToSearchMenu:
 	add	r4, r0, #0
 	lsl	r4, r4, #0x18
 	lsr	r4, r4, #0x18
-	ldr	r0, .L1589
+	ldr	r0, .L1622
 	lsl	r5, r4, #0x2
 	add	r5, r5, r4
 	lsl	r5, r5, #0x3
@@ -156559,18 +157079,18 @@ Task_SwitchToSearchMenu:
 	bl	CopyWindowToVram
 	mov	r0, #0x3
 	bl	CopyBgTilemapBufferToVram
-	ldr	r0, .L1589+0x4
+	ldr	r0, .L1622+0x4
 	str	r0, [r5]
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1590:
+.L1623:
 	.align	2, 0
-.L1589:
+.L1622:
 	.word	gTasks
 	.word	Task_HandleSearchMenuInput
-.Lfe113:
-	.size	 Task_SwitchToSearchMenu,.Lfe113-Task_SwitchToSearchMenu
+.Lfe121:
+	.size	 Task_SwitchToSearchMenu,.Lfe121-Task_SwitchToSearchMenu
 	.align	2, 0
 	.type	 Task_HandleSearchMenuInput,function
 	.thumb_func
@@ -156578,7 +157098,7 @@ Task_HandleSearchMenuInput:
 	push	{r4, r5, r6, r7, lr}
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
-	ldr	r1, .L1609
+	ldr	r1, .L1642
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
@@ -156586,60 +157106,60 @@ Task_HandleSearchMenuInput:
 	mov	r1, #0x8
 	ldrsh	r0, [r0, r1]
 	cmp	r0, #0
-	beq	.L1592	@cond_branch
+	beq	.L1625	@cond_branch
 	bl	IsNationalPokedexEnabled
-	ldr	r6, .L1609+0x4
+	ldr	r6, .L1642+0x4
 	cmp	r0, #0
-	bne	.L1595	@cond_branch
-	ldr	r6, .L1609+0x8
-	b	.L1595
-.L1610:
+	bne	.L1628	@cond_branch
+	ldr	r6, .L1642+0x8
+	b	.L1628
+.L1643:
 	.align	2, 0
-.L1609:
+.L1642:
 	.word	gTasks
 	.word	sSearchMovementMap_ShiftNatDex
 	.word	sSearchMovementMap_ShiftHoennDex
-.L1592:
+.L1625:
 	bl	IsNationalPokedexEnabled
-	ldr	r6, .L1611
+	ldr	r6, .L1644
 	cmp	r0, #0
-	bne	.L1595	@cond_branch
-	ldr	r6, .L1611+0x4
-.L1595:
-	ldr	r0, .L1611+0x8
+	bne	.L1628	@cond_branch
+	ldr	r6, .L1644+0x4
+.L1628:
+	ldr	r0, .L1644+0x8
 	ldrh	r1, [r0, #0x2e]
 	mov	r0, #0x2
 	and	r0, r0, r1
 	lsl	r0, r0, #0x10
 	lsr	r3, r0, #0x10
 	cmp	r3, #0
-	beq	.L1598	@cond_branch
+	beq	.L1631	@cond_branch
 	mov	r0, #0x17
 	bl	PlaySE
 	add	r0, r5, #0
 	bl	SetDefaultSearchModeAndOrder
-	ldr	r0, .L1611+0xc
+	ldr	r0, .L1644+0xc
 	lsl	r1, r5, #0x2
 	add	r1, r1, r5
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L1611+0x10
+	ldr	r0, .L1644+0x10
 	str	r0, [r1]
-	b	.L1591
-.L1612:
+	b	.L1624
+.L1645:
 	.align	2, 0
-.L1611:
+.L1644:
 	.word	sSearchMovementMap_SearchNatDex
 	.word	sSearchMovementMap_SearchHoennDex
 	.word	gMain
 	.word	gTasks
 	.word	Task_SwitchToSearchMenuTopBar
-.L1598:
+.L1631:
 	mov	r0, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1599	@cond_branch
-	ldr	r0, .L1613
+	beq	.L1632	@cond_branch
+	ldr	r0, .L1646
 	lsl	r1, r5, #0x2
 	add	r1, r1, r5
 	lsl	r1, r1, #0x3
@@ -156647,38 +157167,39 @@ Task_HandleSearchMenuInput:
 	mov	r2, #0xa
 	ldrsh	r0, [r6, r2]
 	cmp	r0, #0x6
-	bne	.L1600	@cond_branch
+	bne	.L1633	@cond_branch
 	mov	r1, #0x8
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0
-	beq	.L1601	@cond_branch
-	ldr	r1, .L1613+0x4
+	beq	.L1634	@cond_branch
+	ldr	r1, .L1646+0x4
 	mov	r0, #0x40
 	strb	r0, [r1]
-	ldr	r7, .L1613+0x8
+	ldr	r7, .L1646+0x8
 	ldr	r1, [r7]
-	ldr	r0, .L1613+0xc
+	mov	r0, #0xcd
+	lsl	r0, r0, #0x4
 	add	r2, r1, r0
 	mov	r0, #0x40
 	strh	r0, [r2]
-	ldr	r0, .L1613+0x10
+	ldr	r0, .L1646+0xc
 	strh	r3, [r0]
-	ldr	r2, .L1613+0x14
+	ldr	r2, .L1646+0x10
 	add	r1, r1, r2
 	strh	r3, [r1]
 	add	r0, r5, #0
 	mov	r1, #0x5
 	bl	GetSearchModeSelection
-	ldr	r4, .L1613+0x18
+	ldr	r4, .L1646+0x14
 	ldr	r1, [r4]
 	strb	r0, [r1, #0x19]
 	bl	IsNationalPokedexEnabled
 	cmp	r0, #0
-	bne	.L1602	@cond_branch
+	bne	.L1635	@cond_branch
 	ldr	r1, [r4]
 	mov	r0, #0x0
 	strb	r0, [r1, #0x19]
-.L1602:
+.L1635:
 	ldr	r0, [r7]
 	ldr	r1, [r4]
 	ldrb	r1, [r1, #0x19]
@@ -156694,58 +157215,57 @@ Task_HandleSearchMenuInput:
 	ldr	r0, [r7]
 	ldr	r1, [r4]
 	ldrb	r1, [r1, #0x18]
-	ldr	r2, .L1613+0x1c
+	ldr	r2, .L1646+0x18
 	add	r0, r0, r2
 	strh	r1, [r0]
 	mov	r0, #0x3
 	bl	PlaySE
-	ldr	r0, .L1613+0x20
+	ldr	r0, .L1646+0x1c
 	str	r0, [r6]
-	b	.L1591
-.L1614:
+	b	.L1624
+.L1647:
 	.align	2, 0
-.L1613:
+.L1646:
 	.word	gTasks
 	.word	sPokeBallRotation
 	.word	sPokedexView
-	.word	0xcc6
 	.word	sLastSelectedPokemon
 	.word	0xcac
 	.word	gSaveBlock2Ptr
 	.word	0xcb4
 	.word	Task_ExitSearch
-.L1601:
-	ldr	r0, .L1615
+.L1634:
+	ldr	r0, .L1648
 	bl	EraseAndPrintSearchTextBox
-	ldr	r0, .L1615+0x4
+	ldr	r0, .L1648+0x4
 	str	r0, [r6]
 	mov	r0, #0x70
 	bl	PlaySE
 	mov	r0, #0x0
 	mov	r1, #0x2
 	bl	CopyWindowToVram
-	b	.L1591
-.L1616:
+	b	.L1624
+.L1649:
 	.align	2, 0
-.L1615:
+.L1648:
 	.word	gText_SearchingPleaseWait
 	.word	Task_StartPokedexSearch
-.L1600:
+.L1633:
 	mov	r0, #0x15
 	bl	PlaySE
-	ldr	r0, .L1617
+	ldr	r0, .L1650
 	str	r0, [r6]
-	b	.L1591
-.L1618:
+	b	.L1624
+.L1651:
 	.align	2, 0
-.L1617:
+.L1650:
 	.word	Task_SelectSearchMenuItem
-.L1599:
+.L1632:
 	mov	r0, #0x20
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1605	@cond_branch
-	ldr	r1, .L1619
+	beq	.L1638	@cond_branch
+	ldr	r1, .L1652
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
@@ -156756,7 +157276,7 @@ Task_HandleSearchMenuInput:
 	add	r0, r0, r6
 	ldrb	r0, [r0]
 	cmp	r0, #0xff
-	beq	.L1605	@cond_branch
+	beq	.L1638	@cond_branch
 	mov	r0, #0x5
 	bl	PlaySE
 	mov	r2, #0xa
@@ -156772,14 +157292,14 @@ Task_HandleSearchMenuInput:
 	bl	CopyWindowToVram
 	mov	r0, #0x3
 	bl	CopyBgTilemapBufferToVram
-.L1605:
-	ldr	r0, .L1619+0x4
+.L1638:
+	ldr	r0, .L1652+0x4
 	ldrh	r1, [r0, #0x2e]
 	mov	r0, #0x10
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1606	@cond_branch
-	ldr	r1, .L1619
+	beq	.L1639	@cond_branch
+	ldr	r1, .L1652
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
@@ -156790,7 +157310,7 @@ Task_HandleSearchMenuInput:
 	add	r0, r0, r6
 	ldrb	r0, [r0, #0x1]
 	cmp	r0, #0xff
-	beq	.L1606	@cond_branch
+	beq	.L1639	@cond_branch
 	mov	r0, #0x5
 	bl	PlaySE
 	mov	r2, #0xa
@@ -156806,14 +157326,14 @@ Task_HandleSearchMenuInput:
 	bl	CopyWindowToVram
 	mov	r0, #0x3
 	bl	CopyBgTilemapBufferToVram
-.L1606:
-	ldr	r0, .L1619+0x4
+.L1639:
+	ldr	r0, .L1652+0x4
 	ldrh	r1, [r0, #0x2e]
 	mov	r0, #0x40
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1607	@cond_branch
-	ldr	r1, .L1619
+	beq	.L1640	@cond_branch
+	ldr	r1, .L1652
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
@@ -156824,7 +157344,7 @@ Task_HandleSearchMenuInput:
 	add	r0, r0, r6
 	ldrb	r0, [r0, #0x2]
 	cmp	r0, #0xff
-	beq	.L1607	@cond_branch
+	beq	.L1640	@cond_branch
 	mov	r0, #0x5
 	bl	PlaySE
 	mov	r2, #0xa
@@ -156840,14 +157360,14 @@ Task_HandleSearchMenuInput:
 	bl	CopyWindowToVram
 	mov	r0, #0x3
 	bl	CopyBgTilemapBufferToVram
-.L1607:
-	ldr	r0, .L1619+0x4
+.L1640:
+	ldr	r0, .L1652+0x4
 	ldrh	r1, [r0, #0x2e]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1591	@cond_branch
-	ldr	r1, .L1619
+	beq	.L1624	@cond_branch
+	ldr	r1, .L1652
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
@@ -156858,7 +157378,7 @@ Task_HandleSearchMenuInput:
 	add	r0, r0, r6
 	ldrb	r0, [r0, #0x3]
 	cmp	r0, #0xff
-	beq	.L1591	@cond_branch
+	beq	.L1624	@cond_branch
 	mov	r0, #0x5
 	bl	PlaySE
 	mov	r2, #0xa
@@ -156874,17 +157394,17 @@ Task_HandleSearchMenuInput:
 	bl	CopyWindowToVram
 	mov	r0, #0x3
 	bl	CopyBgTilemapBufferToVram
-.L1591:
+.L1624:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1620:
+.L1653:
 	.align	2, 0
-.L1619:
+.L1652:
 	.word	gTasks
 	.word	gMain
-.Lfe114:
-	.size	 Task_HandleSearchMenuInput,.Lfe114-Task_HandleSearchMenuInput
+.Lfe122:
+	.size	 Task_HandleSearchMenuInput,.Lfe122-Task_HandleSearchMenuInput
 	.align	2, 0
 	.type	 Task_StartPokedexSearch,function
 	.thumb_func
@@ -156946,12 +157466,12 @@ Task_StartPokedexSearch:
 	mov	r2, r8
 	add	r3, r6, #0
 	bl	DoPokedexSearch
-	ldr	r1, .L1622
+	ldr	r1, .L1655
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1622+0x4
+	ldr	r1, .L1655+0x4
 	str	r1, [r0]
 	add	sp, sp, #0x8
 	pop	{r3, r4, r5}
@@ -156961,13 +157481,13 @@ Task_StartPokedexSearch:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1623:
+.L1656:
 	.align	2, 0
-.L1622:
+.L1655:
 	.word	gTasks
 	.word	Task_WaitAndCompleteSearch
-.Lfe115:
-	.size	 Task_StartPokedexSearch,.Lfe115-Task_StartPokedexSearch
+.Lfe123:
+	.size	 Task_StartPokedexSearch,.Lfe123-Task_StartPokedexSearch
 	.align	2, 0
 	.type	 Task_WaitAndCompleteSearch,function
 	.thumb_func
@@ -156978,53 +157498,53 @@ Task_WaitAndCompleteSearch:
 	bl	IsSEPlaying
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L1625	@cond_branch
-	ldr	r0, .L1628
+	bne	.L1658	@cond_branch
+	ldr	r0, .L1661
 	ldr	r0, [r0]
-	ldr	r1, .L1628+0x4
+	ldr	r1, .L1661+0x4
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	beq	.L1626	@cond_branch
+	beq	.L1659	@cond_branch
 	mov	r0, #0x1f
 	bl	PlaySE
-	ldr	r0, .L1628+0x8
+	ldr	r0, .L1661+0x8
 	bl	EraseAndPrintSearchTextBox
-	b	.L1627
-.L1629:
+	b	.L1660
+.L1662:
 	.align	2, 0
-.L1628:
+.L1661:
 	.word	sPokedexView
 	.word	0xca8
 	.word	gText_SearchCompleted
-.L1626:
+.L1659:
 	mov	r0, #0x20
 	bl	PlaySE
-	ldr	r0, .L1630
+	ldr	r0, .L1663
 	bl	EraseAndPrintSearchTextBox
-.L1627:
-	ldr	r0, .L1630+0x4
+.L1660:
+	ldr	r0, .L1663+0x4
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L1630+0x8
+	ldr	r0, .L1663+0x8
 	str	r0, [r1]
 	mov	r0, #0x0
 	mov	r1, #0x2
 	bl	CopyWindowToVram
-.L1625:
+.L1658:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1631:
+.L1664:
 	.align	2, 0
-.L1630:
+.L1663:
 	.word	gText_NoMatchingPkmnWereFound
 	.word	gTasks
 	.word	Task_SearchCompleteWaitForInput
-.Lfe116:
-	.size	 Task_WaitAndCompleteSearch,.Lfe116-Task_WaitAndCompleteSearch
+.Lfe124:
+	.size	 Task_WaitAndCompleteSearch,.Lfe124-Task_WaitAndCompleteSearch
 	.align	2, 0
 	.type	 Task_SearchCompleteWaitForInput,function
 	.thumb_func
@@ -157033,20 +157553,20 @@ Task_SearchCompleteWaitForInput:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	add	r2, r4, #0
-	ldr	r0, .L1636
+	ldr	r0, .L1669
 	ldrh	r1, [r0, #0x2e]
 	mov	r0, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1633	@cond_branch
-	ldr	r5, .L1636+0x4
+	beq	.L1666	@cond_branch
+	ldr	r5, .L1669+0x4
 	ldr	r1, [r5]
-	ldr	r3, .L1636+0x8
+	ldr	r3, .L1669+0x8
 	add	r0, r1, r3
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	beq	.L1634	@cond_branch
-	ldr	r0, .L1636+0xc
+	beq	.L1667	@cond_branch
+	ldr	r0, .L1669+0xc
 	add	r1, r1, r0
 	mov	r0, #0x1
 	strb	r0, [r1]
@@ -157056,7 +157576,7 @@ Task_SearchCompleteWaitForInput:
 	ldr	r1, [r5]
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r2, .L1636+0x10
+	ldr	r2, .L1669+0x10
 	add	r1, r1, r2
 	strh	r0, [r1]
 	add	r0, r4, #0
@@ -157065,51 +157585,51 @@ Task_SearchCompleteWaitForInput:
 	ldr	r1, [r5]
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r3, .L1636+0x14
+	ldr	r3, .L1669+0x14
 	add	r1, r1, r3
 	strh	r0, [r1]
-	ldr	r1, .L1636+0x18
+	ldr	r1, .L1669+0x18
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1636+0x1c
+	ldr	r1, .L1669+0x1c
 	str	r1, [r0]
 	mov	r0, #0x3
 	bl	PlaySE
-	b	.L1633
-.L1637:
+	b	.L1666
+.L1670:
 	.align	2, 0
-.L1636:
+.L1669:
 	.word	gMain
 	.word	sPokedexView
 	.word	0xca8
-	.word	0xcea
+	.word	0xcf4
 	.word	0xcae
 	.word	0xcb2
 	.word	gTasks
 	.word	Task_ExitSearch
-.L1634:
-	ldr	r0, .L1638
+.L1667:
+	ldr	r0, .L1671
 	lsl	r1, r2, #0x2
 	add	r1, r1, r2
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L1638+0x4
+	ldr	r0, .L1671+0x4
 	str	r0, [r1]
 	mov	r0, #0x17
 	bl	PlaySE
-.L1633:
+.L1666:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1639:
+.L1672:
 	.align	2, 0
-.L1638:
+.L1671:
 	.word	gTasks
 	.word	Task_SwitchToSearchMenu
-.Lfe117:
-	.size	 Task_SearchCompleteWaitForInput,.Lfe117-Task_SearchCompleteWaitForInput
+.Lfe125:
+	.size	 Task_SearchCompleteWaitForInput,.Lfe125-Task_SearchCompleteWaitForInput
 	.align	2, 0
 	.type	 Task_SelectSearchMenuItem,function
 	.thumb_func
@@ -157120,7 +157640,7 @@ Task_SelectSearchMenuItem:
 	lsr	r5, r5, #0x18
 	mov	r0, #0x0
 	bl	DrawOrEraseSearchParameterBox
-	ldr	r2, .L1641
+	ldr	r2, .L1674
 	lsl	r1, r5, #0x2
 	add	r1, r1, r5
 	lsl	r1, r1, #0x3
@@ -157128,7 +157648,7 @@ Task_SelectSearchMenuItem:
 	ldrb	r0, [r6, #0xa]
 	add	r2, r2, #0x8
 	add	r1, r1, r2
-	ldr	r2, .L1641+0x4
+	ldr	r2, .L1674+0x4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r2
 	ldrb	r4, [r0, #0x4]
@@ -157145,7 +157665,7 @@ Task_SelectSearchMenuItem:
 	bl	PrintSearchParameterText
 	ldrh	r0, [r4]
 	bl	PrintSelectorArrow
-	ldr	r0, .L1641+0x8
+	ldr	r0, .L1674+0x8
 	str	r0, [r6]
 	mov	r0, #0x0
 	mov	r1, #0x2
@@ -157155,14 +157675,14 @@ Task_SelectSearchMenuItem:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1642:
+.L1675:
 	.align	2, 0
-.L1641:
+.L1674:
 	.word	gTasks
 	.word	sSearchOptions
 	.word	Task_HandleSearchParameterInput
-.Lfe118:
-	.size	 Task_SelectSearchMenuItem,.Lfe118-Task_SelectSearchMenuItem
+.Lfe126:
+	.size	 Task_SelectSearchMenuItem,.Lfe126-Task_SelectSearchMenuItem
 	.align	2, 0
 	.type	 Task_HandleSearchParameterInput,function
 	.thumb_func
@@ -157172,13 +157692,13 @@ Task_HandleSearchParameterInput:
 	push	{r7}
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	ldr	r3, .L1659
+	ldr	r3, .L1692
 	lsl	r2, r7, #0x2
 	add	r2, r2, r7
 	lsl	r2, r2, #0x3
 	add	r5, r2, r3
 	ldrb	r1, [r5, #0xa]
-	ldr	r0, .L1659+0x4
+	ldr	r0, .L1692+0x4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
 	ldr	r0, [r1]
@@ -157195,30 +157715,30 @@ Task_HandleSearchParameterInput:
 	sub	r0, r0, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r2, r0, #0x10
-	ldr	r0, .L1659+0x8
+	ldr	r0, .L1692+0x8
 	mov	ip, r0
 	ldrh	r1, [r0, #0x2e]
 	mov	r0, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1644	@cond_branch
+	beq	.L1677	@cond_branch
 	mov	r0, #0x15
 	bl	PlaySE
 	bl	ClearSearchParameterBoxText
 	mov	r0, #0x1
 	bl	DrawOrEraseSearchParameterBox
-	b	.L1658
-.L1660:
+	b	.L1691
+.L1693:
 	.align	2, 0
-.L1659:
+.L1692:
 	.word	gTasks
 	.word	sSearchOptions
 	.word	gMain
-.L1644:
+.L1677:
 	mov	r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1645	@cond_branch
+	beq	.L1678	@cond_branch
 	mov	r0, #0x17
 	bl	PlaySE
 	bl	ClearSearchParameterBoxText
@@ -157228,41 +157748,41 @@ Task_HandleSearchParameterInput:
 	strh	r0, [r4]
 	ldrh	r0, [r5, #0x26]
 	strh	r0, [r6]
-.L1658:
-	ldr	r0, .L1661
+.L1691:
+	ldr	r0, .L1694
 	str	r0, [r5]
 	mov	r0, #0x0
 	mov	r1, #0x2
 	bl	CopyWindowToVram
 	mov	r0, #0x3
 	bl	CopyBgTilemapBufferToVram
-	b	.L1643
-.L1662:
+	b	.L1676
+.L1695:
 	.align	2, 0
-.L1661:
+.L1694:
 	.word	Task_SwitchToSearchMenu
-.L1645:
+.L1678:
 	mov	r3, #0x0
 	mov	r0, ip
 	ldrh	r1, [r0, #0x30]
 	mov	r0, #0x40
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1646	@cond_branch
+	beq	.L1679	@cond_branch
 	ldrh	r0, [r4]
 	cmp	r0, #0
-	beq	.L1647	@cond_branch
+	beq	.L1680	@cond_branch
 	bl	EraseSelectorArrow
 	ldrh	r0, [r4]
 	sub	r0, r0, #0x1
 	strh	r0, [r4]
 	ldrh	r0, [r4]
 	bl	PrintSelectorArrow
-	b	.L1656
-.L1647:
+	b	.L1689
+.L1680:
 	ldrh	r0, [r6]
 	cmp	r0, #0
-	beq	.L1648	@cond_branch
+	beq	.L1681	@cond_branch
 	sub	r0, r0, #0x1
 	strh	r0, [r6]
 	add	r0, r7, #0
@@ -157270,10 +157790,10 @@ Task_HandleSearchParameterInput:
 	ldrh	r0, [r4]
 	bl	PrintSelectorArrow
 	mov	r3, #0x1
-.L1648:
+.L1681:
 	cmp	r3, #0
-	beq	.L1643	@cond_branch
-.L1656:
+	beq	.L1676	@cond_branch
+.L1689:
 	mov	r0, #0x5
 	bl	PlaySE
 	ldrh	r0, [r4]
@@ -157286,31 +157806,31 @@ Task_HandleSearchParameterInput:
 	mov	r0, #0x0
 	mov	r1, #0x2
 	bl	CopyWindowToVram
-	b	.L1643
-.L1646:
+	b	.L1676
+.L1679:
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1643	@cond_branch
+	beq	.L1676	@cond_branch
 	ldrh	r0, [r4]
 	cmp	r0, #0x4
-	bhi	.L1652	@cond_branch
+	bhi	.L1685	@cond_branch
 	cmp	r0, r2
-	bcs	.L1652	@cond_branch
+	bcs	.L1685	@cond_branch
 	bl	EraseSelectorArrow
 	ldrh	r0, [r4]
 	add	r0, r0, #0x1
 	strh	r0, [r4]
 	ldrh	r0, [r4]
 	bl	PrintSelectorArrow
-	b	.L1657
-.L1652:
+	b	.L1690
+.L1685:
 	cmp	r2, #0x5
-	bls	.L1653	@cond_branch
+	bls	.L1686	@cond_branch
 	ldrh	r1, [r6]
 	sub	r0, r2, #0x5
 	cmp	r1, r0
-	bge	.L1653	@cond_branch
+	bge	.L1686	@cond_branch
 	add	r0, r1, #0x1
 	strh	r0, [r6]
 	add	r0, r7, #0
@@ -157318,10 +157838,10 @@ Task_HandleSearchParameterInput:
 	mov	r0, #0x5
 	bl	PrintSelectorArrow
 	mov	r3, #0x1
-.L1653:
+.L1686:
 	cmp	r3, #0
-	beq	.L1643	@cond_branch
-.L1657:
+	beq	.L1676	@cond_branch
+.L1690:
 	mov	r0, #0x5
 	bl	PlaySE
 	ldrh	r0, [r4]
@@ -157334,14 +157854,14 @@ Task_HandleSearchParameterInput:
 	mov	r0, #0x0
 	mov	r1, #0x2
 	bl	CopyWindowToVram
-.L1643:
+.L1676:
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.Lfe119:
-	.size	 Task_HandleSearchParameterInput,.Lfe119-Task_HandleSearchParameterInput
+.Lfe127:
+	.size	 Task_HandleSearchParameterInput,.Lfe127-Task_HandleSearchParameterInput
 	.align	2, 0
 	.type	 Task_ExitSearch,function
 	.thumb_func
@@ -157358,24 +157878,24 @@ Task_ExitSearch:
 	mov	r2, #0x0
 	mov	r3, #0x10
 	bl	BeginNormalPaletteFade
-	ldr	r1, .L1664
+	ldr	r1, .L1697
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1664+0x4
+	ldr	r1, .L1697+0x4
 	str	r1, [r0]
 	add	sp, sp, #0x4
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1665:
+.L1698:
 	.align	2, 0
-.L1664:
+.L1697:
 	.word	gTasks
 	.word	Task_ExitSearchWaitForFade
-.Lfe120:
-	.size	 Task_ExitSearch,.Lfe120-Task_ExitSearch
+.Lfe128:
+	.size	 Task_ExitSearch,.Lfe128-Task_ExitSearch
 	.align	2, 0
 	.type	 Task_ExitSearchWaitForFade,function
 	.thumb_func
@@ -157383,25 +157903,25 @@ Task_ExitSearchWaitForFade:
 	push	{r4, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r0, .L1668
+	ldr	r0, .L1701
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1667	@cond_branch
+	bne	.L1700	@cond_branch
 	bl	FreeSearchWindowAndBgBuffers
 	add	r0, r4, #0
 	bl	DestroyTask
-.L1667:
+.L1700:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1669:
+.L1702:
 	.align	2, 0
-.L1668:
+.L1701:
 	.word	gPaletteFade
-.Lfe121:
-	.size	 Task_ExitSearchWaitForFade,.Lfe121-Task_ExitSearchWaitForFade
+.Lfe129:
+	.size	 Task_ExitSearchWaitForFade,.Lfe129-Task_ExitSearchWaitForFade
 	.align	2, 0
 	.globl	SetSearchRectHighlight
 	.type	 SetSearchRectHighlight,function
@@ -157425,12 +157945,12 @@ SetSearchRectHighlight:
 	add	r2, r0, #0
 	mov	r3, #0x0
 	cmp	r3, r4
-	bcs	.L1672	@cond_branch
+	bcs	.L1705	@cond_branch
 	lsl	r0, r5, #0x6
 	add	r7, r0, r2
-	ldr	r5, .L1676
+	ldr	r5, .L1709
 	lsl	r2, r6, #0xc
-.L1674:
+.L1707:
 	mov	r0, r8
 	add	r1, r0, r3
 	lsl	r1, r1, #0x1
@@ -157448,19 +157968,19 @@ SetSearchRectHighlight:
 	lsl	r0, r0, #0x10
 	lsr	r3, r0, #0x10
 	cmp	r3, r4
-	bcc	.L1674	@cond_branch
-.L1672:
+	bcc	.L1707	@cond_branch
+.L1705:
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1677:
+.L1710:
 	.align	2, 0
-.L1676:
+.L1709:
 	.word	0xfff
-.Lfe122:
-	.size	 SetSearchRectHighlight,.Lfe122-SetSearchRectHighlight
+.Lfe130:
+	.size	 SetSearchRectHighlight,.Lfe130-SetSearchRectHighlight
 	.align	2, 0
 	.type	 DrawSearchMenuItemBgHighlight,function
 	.thumb_func
@@ -157478,43 +157998,43 @@ DrawSearchMenuItemBgHighlight:
 	lsl	r2, r2, #0x1
 	orr	r5, r5, r2
 	cmp	r4, #0xa
-	bhi	.L1679	@cond_branch
+	bhi	.L1712	@cond_branch
 	lsl	r0, r4, #0x2
-	ldr	r1, .L1697
+	ldr	r1, .L1730
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L1698:
+.L1731:
 	.align	2, 0
-.L1697:
-	.word	.L1693
+.L1730:
+	.word	.L1726
 	.align	2, 0
 	.align	2, 0
-.L1693:
-	.word	.L1682
-	.word	.L1682
-	.word	.L1682
-	.word	.L1686
-	.word	.L1686
-	.word	.L1688
-	.word	.L1688
-	.word	.L1686
-	.word	.L1686
-	.word	.L1690
-	.word	.L1689
-.L1682:
-	ldr	r1, .L1699
+.L1726:
+	.word	.L1715
+	.word	.L1715
+	.word	.L1715
+	.word	.L1719
+	.word	.L1719
+	.word	.L1721
+	.word	.L1721
+	.word	.L1719
+	.word	.L1719
+	.word	.L1723
+	.word	.L1722
+.L1715:
+	ldr	r1, .L1732
 	lsl	r0, r4, #0x3
 	add	r0, r0, r1
 	ldrb	r1, [r0, #0x4]
 	ldrb	r2, [r0, #0x5]
-	b	.L1695
-.L1700:
+	b	.L1728
+.L1733:
 	.align	2, 0
-.L1699:
+.L1732:
 	.word	sSearchMenuTopBarItems
-.L1686:
-	ldr	r2, .L1701
+.L1719:
+	ldr	r2, .L1734
 	sub	r1, r4, #0x3
 	lsl	r0, r1, #0x1
 	add	r0, r0, r1
@@ -157525,8 +158045,8 @@ DrawSearchMenuItemBgHighlight:
 	ldrb	r3, [r0, #0x6]
 	add	r0, r5, #0
 	bl	SetSearchRectHighlight
-.L1688:
-	ldr	r2, .L1701
+.L1721:
+	ldr	r2, .L1734
 	sub	r1, r4, #0x3
 	lsl	r0, r1, #0x1
 	add	r0, r0, r1
@@ -157535,26 +158055,26 @@ DrawSearchMenuItemBgHighlight:
 	ldrb	r1, [r0, #0x7]
 	ldrb	r2, [r0, #0x8]
 	ldrb	r3, [r0, #0x9]
-	b	.L1696
-.L1702:
+	b	.L1729
+.L1735:
 	.align	2, 0
-.L1701:
+.L1734:
 	.word	sSearchMenuItems
-.L1689:
-	ldr	r0, .L1703
+.L1722:
+	ldr	r0, .L1736
 	ldrb	r1, [r0, #0x1c]
 	ldrb	r2, [r0, #0x1d]
 	ldrb	r3, [r0, #0x1e]
-	b	.L1696
-.L1704:
+	b	.L1729
+.L1737:
 	.align	2, 0
-.L1703:
+.L1736:
 	.word	sSearchMenuItems
-.L1690:
+.L1723:
 	bl	IsNationalPokedexEnabled
 	cmp	r0, #0
-	bne	.L1691	@cond_branch
-	ldr	r2, .L1705
+	bne	.L1724	@cond_branch
+	ldr	r2, .L1738
 	sub	r1, r4, #0x3
 	lsl	r0, r1, #0x1
 	add	r0, r0, r1
@@ -157565,18 +158085,18 @@ DrawSearchMenuItemBgHighlight:
 	sub	r2, r2, #0x2
 	lsl	r2, r2, #0x18
 	lsr	r2, r2, #0x18
-.L1695:
+.L1728:
 	ldrb	r3, [r0, #0x6]
-.L1696:
+.L1729:
 	add	r0, r5, #0
 	bl	SetSearchRectHighlight
-	b	.L1679
-.L1706:
+	b	.L1712
+.L1739:
 	.align	2, 0
-.L1705:
+.L1738:
 	.word	sSearchMenuItems
-.L1691:
-	ldr	r2, .L1707
+.L1724:
+	ldr	r2, .L1740
 	sub	r1, r4, #0x3
 	lsl	r0, r1, #0x1
 	add	r0, r0, r1
@@ -157587,16 +158107,16 @@ DrawSearchMenuItemBgHighlight:
 	ldrb	r3, [r0, #0x6]
 	add	r0, r5, #0
 	bl	SetSearchRectHighlight
-.L1679:
+.L1712:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1708:
+.L1741:
 	.align	2, 0
-.L1707:
+.L1740:
 	.word	sSearchMenuItems
-.Lfe123:
-	.size	 DrawSearchMenuItemBgHighlight,.Lfe123-DrawSearchMenuItemBgHighlight
+.Lfe131:
+	.size	 DrawSearchMenuItemBgHighlight,.Lfe131-DrawSearchMenuItemBgHighlight
 	.align	2, 0
 	.type	 SetInitialSearchMenuBgHighlights,function
 	.thumb_func
@@ -157606,17 +158126,17 @@ SetInitialSearchMenuBgHighlights:
 	lsr	r0, r0, #0x18
 	add	r1, r0, #0
 	cmp	r0, #0x1
-	beq	.L1712	@cond_branch
+	beq	.L1745	@cond_branch
 	cmp	r0, #0x1
-	bgt	.L1716	@cond_branch
+	bgt	.L1749	@cond_branch
 	cmp	r0, #0
-	beq	.L1711	@cond_branch
-	b	.L1710
-.L1716:
+	beq	.L1744	@cond_branch
+	b	.L1743
+.L1749:
 	cmp	r1, #0x2
-	beq	.L1713	@cond_branch
-	b	.L1710
-.L1711:
+	beq	.L1746	@cond_branch
+	b	.L1743
+.L1744:
 	mov	r0, #0x0
 	mov	r1, #0x0
 	mov	r2, #0x0
@@ -157648,8 +158168,8 @@ SetInitialSearchMenuBgHighlights:
 	mov	r0, #0x6
 	mov	r1, #0x1
 	mov	r2, #0x0
-	b	.L1717
-.L1712:
+	b	.L1750
+.L1745:
 	mov	r0, #0x0
 	mov	r1, #0x1
 	mov	r2, #0x0
@@ -157681,7 +158201,7 @@ SetInitialSearchMenuBgHighlights:
 	mov	r0, #0x6
 	mov	r1, #0x1
 	mov	r2, #0x1
-.L1717:
+.L1750:
 	bl	DrawSearchMenuItemBgHighlight
 	mov	r0, #0x7
 	mov	r1, #0x1
@@ -157695,8 +158215,8 @@ SetInitialSearchMenuBgHighlights:
 	mov	r1, #0x1
 	mov	r2, #0x0
 	bl	DrawSearchMenuItemBgHighlight
-	b	.L1710
-.L1713:
+	b	.L1743
+.L1746:
 	mov	r0, #0x0
 	mov	r1, #0x1
 	mov	r2, #0x0
@@ -157741,11 +158261,11 @@ SetInitialSearchMenuBgHighlights:
 	mov	r1, #0x1
 	mov	r2, #0x1
 	bl	DrawSearchMenuItemBgHighlight
-.L1710:
+.L1743:
 	pop	{r0}
 	bx	r0
-.Lfe124:
-	.size	 SetInitialSearchMenuBgHighlights,.Lfe124-SetInitialSearchMenuBgHighlights
+.Lfe132:
+	.size	 SetInitialSearchMenuBgHighlights,.Lfe132-SetInitialSearchMenuBgHighlights
 	.align	2, 0
 	.type	 HighlightSelectedSearchTopBarItem,function
 	.thumb_func
@@ -157756,7 +158276,7 @@ HighlightSelectedSearchTopBarItem:
 	lsr	r4, r4, #0x18
 	add	r0, r4, #0
 	bl	SetInitialSearchMenuBgHighlights
-	ldr	r0, .L1719
+	ldr	r0, .L1752
 	lsl	r4, r4, #0x3
 	add	r4, r4, r0
 	ldr	r0, [r4]
@@ -157764,12 +158284,12 @@ HighlightSelectedSearchTopBarItem:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1720:
+.L1753:
 	.align	2, 0
-.L1719:
+.L1752:
 	.word	sSearchMenuTopBarItems
-.Lfe125:
-	.size	 HighlightSelectedSearchTopBarItem,.Lfe125-HighlightSelectedSearchTopBarItem
+.Lfe133:
+	.size	 HighlightSelectedSearchTopBarItem,.Lfe133-HighlightSelectedSearchTopBarItem
 	.align	2, 0
 	.type	 HighlightSelectedSearchMenuItem,function
 	.thumb_func
@@ -157781,63 +158301,63 @@ HighlightSelectedSearchMenuItem:
 	lsr	r4, r1, #0x18
 	bl	SetInitialSearchMenuBgHighlights
 	cmp	r4, #0x6
-	bhi	.L1722	@cond_branch
+	bhi	.L1755	@cond_branch
 	lsl	r0, r4, #0x2
-	ldr	r1, .L1733
+	ldr	r1, .L1766
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L1734:
+.L1767:
 	.align	2, 0
-.L1733:
-	.word	.L1730
+.L1766:
+	.word	.L1763
 	.align	2, 0
 	.align	2, 0
-.L1730:
-	.word	.L1723
-	.word	.L1724
-	.word	.L1725
-	.word	.L1726
-	.word	.L1727
-	.word	.L1728
-	.word	.L1729
-.L1723:
+.L1763:
+	.word	.L1756
+	.word	.L1757
+	.word	.L1758
+	.word	.L1759
+	.word	.L1760
+	.word	.L1761
+	.word	.L1762
+.L1756:
 	mov	r0, #0x3
-	b	.L1732
-.L1724:
+	b	.L1765
+.L1757:
 	mov	r0, #0x4
-	b	.L1732
-.L1725:
+	b	.L1765
+.L1758:
 	mov	r0, #0xa
 	mov	r1, #0x0
 	mov	r2, #0x0
 	bl	DrawSearchMenuItemBgHighlight
 	mov	r0, #0x5
-	b	.L1732
-.L1726:
+	b	.L1765
+.L1759:
 	mov	r0, #0xa
 	mov	r1, #0x0
 	mov	r2, #0x0
 	bl	DrawSearchMenuItemBgHighlight
 	mov	r0, #0x6
-	b	.L1732
-.L1727:
+	b	.L1765
+.L1760:
 	mov	r0, #0x7
-	b	.L1732
-.L1728:
+	b	.L1765
+.L1761:
 	mov	r0, #0x8
-.L1732:
+.L1765:
 	mov	r1, #0x0
 	mov	r2, #0x0
 	bl	DrawSearchMenuItemBgHighlight
-	b	.L1722
-.L1729:
+	b	.L1755
+.L1762:
 	mov	r0, #0x9
 	mov	r1, #0x0
 	mov	r2, #0x0
 	bl	DrawSearchMenuItemBgHighlight
-.L1722:
-	ldr	r0, .L1735
+.L1755:
+	ldr	r0, .L1768
 	lsl	r1, r4, #0x1
 	add	r1, r1, r4
 	lsl	r1, r1, #0x2
@@ -157847,12 +158367,12 @@ HighlightSelectedSearchMenuItem:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1736:
+.L1769:
 	.align	2, 0
-.L1735:
+.L1768:
 	.word	sSearchMenuItems
-.Lfe126:
-	.size	 HighlightSelectedSearchMenuItem,.Lfe126-HighlightSelectedSearchMenuItem
+.Lfe134:
+	.size	 HighlightSelectedSearchMenuItem,.Lfe134-HighlightSelectedSearchMenuItem
 	.align	2, 0
 	.type	 PrintSelectedSearchParameters,function
 	.thumb_func
@@ -157866,7 +158386,7 @@ PrintSelectedSearchParameters:
 	mov	r2, #0x60
 	mov	r3, #0x50
 	bl	ClearSearchMenuRect
-	ldr	r1, .L1739
+	ldr	r1, .L1772
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
@@ -157875,7 +158395,7 @@ PrintSelectedSearchParameters:
 	ldrh	r1, [r5, #0x14]
 	add	r0, r0, r1
 	lsl	r0, r0, #0x10
-	ldr	r1, .L1739+0x4
+	ldr	r1, .L1772+0x4
 	lsr	r0, r0, #0xd
 	add	r1, r1, #0x4
 	add	r0, r0, r1
@@ -157887,7 +158407,7 @@ PrintSelectedSearchParameters:
 	ldrh	r1, [r5, #0x18]
 	add	r0, r0, r1
 	lsl	r0, r0, #0x10
-	ldr	r1, .L1739+0x8
+	ldr	r1, .L1772+0x8
 	lsr	r0, r0, #0xd
 	add	r1, r1, #0x4
 	add	r0, r0, r1
@@ -157899,7 +158419,7 @@ PrintSelectedSearchParameters:
 	ldrh	r1, [r5, #0x1c]
 	add	r0, r0, r1
 	lsl	r0, r0, #0x10
-	ldr	r4, .L1739+0xc
+	ldr	r4, .L1772+0xc
 	lsr	r0, r0, #0xd
 	add	r4, r4, #0x4
 	add	r0, r0, r4
@@ -157921,7 +158441,7 @@ PrintSelectedSearchParameters:
 	ldrh	r1, [r5, #0x10]
 	add	r0, r0, r1
 	lsl	r0, r0, #0x10
-	ldr	r1, .L1739+0x10
+	ldr	r1, .L1772+0x10
 	lsr	r0, r0, #0xd
 	add	r1, r1, #0x4
 	add	r0, r0, r1
@@ -157931,12 +158451,12 @@ PrintSelectedSearchParameters:
 	bl	PrintSearchText
 	bl	IsNationalPokedexEnabled
 	cmp	r0, #0
-	beq	.L1738	@cond_branch
+	beq	.L1771	@cond_branch
 	ldrh	r0, [r5, #0xe]
 	ldrh	r5, [r5, #0xc]
 	add	r0, r0, r5
 	lsl	r0, r0, #0x10
-	ldr	r1, .L1739+0x14
+	ldr	r1, .L1772+0x14
 	lsr	r0, r0, #0xd
 	add	r1, r1, #0x4
 	add	r0, r0, r1
@@ -157944,21 +158464,21 @@ PrintSelectedSearchParameters:
 	mov	r1, #0x2d
 	mov	r2, #0x51
 	bl	PrintSearchText
-.L1738:
+.L1771:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1740:
+.L1773:
 	.align	2, 0
-.L1739:
+.L1772:
 	.word	gTasks
 	.word	sDexSearchNameOptions
 	.word	sDexSearchColorOptions
 	.word	sDexSearchTypeOptions
 	.word	sDexOrderOptions
 	.word	sDexModeOptions
-.Lfe127:
-	.size	 PrintSelectedSearchParameters,.Lfe127-PrintSelectedSearchParameters
+.Lfe135:
+	.size	 PrintSelectedSearchParameters,.Lfe135-PrintSelectedSearchParameters
 	.align	2, 0
 	.type	 DrawOrEraseSearchParameterBox,function
 	.thumb_func
@@ -157971,14 +158491,14 @@ DrawOrEraseSearchParameterBox:
 	bl	GetBgTilemapBuffer
 	add	r5, r0, #0
 	cmp	r4, #0
-	bne	.L1742	@cond_branch
-	ldr	r1, .L1774
+	bne	.L1775	@cond_branch
+	ldr	r1, .L1807
 	add	r0, r1, #0
 	strh	r0, [r5, #0x22]
 	mov	r1, #0x12
-	ldr	r0, .L1774+0x4
+	ldr	r0, .L1807+0x4
 	add	r2, r0, #0
-.L1746:
+.L1779:
 	lsl	r0, r1, #0x1
 	add	r0, r0, r5
 	strh	r2, [r0]
@@ -157986,19 +158506,19 @@ DrawOrEraseSearchParameterBox:
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
 	cmp	r1, #0x1e
-	bls	.L1746	@cond_branch
+	bls	.L1779	@cond_branch
 	mov	r2, #0x1
-	ldr	r1, .L1774+0x8
+	ldr	r1, .L1807+0x8
 	add	r6, r1, #0
 	mov	r4, #0x2
-.L1751:
+.L1784:
 	lsl	r0, r2, #0x6
 	add	r0, r0, r5
 	strh	r6, [r0, #0x22]
 	mov	r1, #0x12
 	add	r3, r2, #0x1
 	add	r2, r0, #0
-.L1755:
+.L1788:
 	lsl	r0, r1, #0x1
 	add	r0, r0, r2
 	strh	r4, [r0]
@@ -158006,12 +158526,12 @@ DrawOrEraseSearchParameterBox:
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
 	cmp	r1, #0x1e
-	bls	.L1755	@cond_branch
+	bls	.L1788	@cond_branch
 	lsl	r0, r3, #0x10
 	lsr	r2, r0, #0x10
 	cmp	r2, #0xc
-	bls	.L1751	@cond_branch
-	ldr	r2, .L1774+0xc
+	bls	.L1784	@cond_branch
+	ldr	r2, .L1807+0xc
 	add	r1, r5, r2
 	add	r2, r2, #0xa9
 	add	r0, r2, #0
@@ -158020,7 +158540,7 @@ DrawOrEraseSearchParameterBox:
 	mov	r3, #0xd0
 	lsl	r3, r3, #0x2
 	mov	r2, #0xd
-.L1761:
+.L1794:
 	lsl	r0, r1, #0x1
 	add	r0, r0, r5
 	add	r0, r0, r3
@@ -158029,24 +158549,24 @@ DrawOrEraseSearchParameterBox:
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
 	cmp	r1, #0x1e
-	bls	.L1761	@cond_branch
-	b	.L1763
-.L1775:
+	bls	.L1794	@cond_branch
+	b	.L1796
+.L1808:
 	.align	2, 0
-.L1774:
+.L1807:
 	.word	0xc0b
 	.word	0x80d
 	.word	0x40a
 	.word	0x362
-.L1742:
+.L1775:
 	mov	r2, #0x0
 	mov	r4, #0x4f
-.L1767:
+.L1800:
 	mov	r1, #0x11
 	lsl	r0, r2, #0x6
 	add	r3, r2, #0x1
 	add	r2, r0, r5
-.L1771:
+.L1804:
 	lsl	r0, r1, #0x1
 	add	r0, r0, r2
 	strh	r4, [r0]
@@ -158054,17 +158574,17 @@ DrawOrEraseSearchParameterBox:
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
 	cmp	r1, #0x1d
-	bls	.L1771	@cond_branch
+	bls	.L1804	@cond_branch
 	lsl	r0, r3, #0x10
 	lsr	r2, r0, #0x10
 	cmp	r2, #0xd
-	bls	.L1767	@cond_branch
-.L1763:
+	bls	.L1800	@cond_branch
+.L1796:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.Lfe128:
-	.size	 DrawOrEraseSearchParameterBox,.Lfe128-DrawOrEraseSearchParameterBox
+.Lfe136:
+	.size	 DrawOrEraseSearchParameterBox,.Lfe136-DrawOrEraseSearchParameterBox
 	.align	2, 0
 	.type	 PrintSearchParameterText,function
 	.thumb_func
@@ -158074,8 +158594,8 @@ PrintSearchParameterText:
 	push	{r7}
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r4, .L1784
-	ldr	r3, .L1784+0x4
+	ldr	r4, .L1817
+	ldr	r3, .L1817+0x4
 	lsl	r2, r0, #0x2
 	add	r2, r2, r0
 	lsl	r2, r2, #0x3
@@ -158097,13 +158617,13 @@ PrintSearchParameterText:
 	bl	ClearSearchParameterBoxText
 	mov	r5, #0x0
 	ldrh	r4, [r7]
-	b	.L1783
-.L1785:
+	b	.L1816
+.L1818:
 	.align	2, 0
-.L1784:
+.L1817:
 	.word	sSearchOptions
 	.word	gTasks
-.L1780:
+.L1813:
 	add	r0, r1, r6
 	ldr	r1, [r0, #0x4]
 	add	r0, r5, #0
@@ -158115,14 +158635,14 @@ PrintSearchParameterText:
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
 	cmp	r5, #0x5
-	bhi	.L1778	@cond_branch
-.L1783:
+	bhi	.L1811	@cond_branch
+.L1816:
 	lsl	r1, r4, #0x3
 	add	r0, r1, r6
 	ldr	r0, [r0, #0x4]
 	cmp	r0, #0
-	bne	.L1780	@cond_branch
-.L1778:
+	bne	.L1813	@cond_branch
+.L1811:
 	mov	r1, r8
 	ldrh	r0, [r1]
 	ldrh	r1, [r7]
@@ -158136,8 +158656,8 @@ PrintSearchParameterText:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.Lfe129:
-	.size	 PrintSearchParameterText,.Lfe129-PrintSearchParameterText
+.Lfe137:
+	.size	 PrintSearchParameterText,.Lfe137-PrintSearchParameterText
 	.align	2, 0
 	.type	 GetSearchModeSelection,function
 	.thumb_func
@@ -158150,9 +158670,9 @@ GetSearchModeSelection:
 	lsl	r1, r0, #0x2
 	add	r1, r1, r0
 	lsl	r1, r1, #0x3
-	ldr	r0, .L1806
+	ldr	r0, .L1839
 	add	r1, r1, r0
-	ldr	r2, .L1806+0x4
+	ldr	r2, .L1839+0x4
 	lsl	r0, r3, #0x3
 	add	r0, r0, r2
 	ldrb	r2, [r0, #0x4]
@@ -158167,76 +158687,76 @@ GetSearchModeSelection:
 	lsl	r0, r0, #0x10
 	lsr	r2, r0, #0x10
 	cmp	r3, #0x5
-	bhi	.L1788	@cond_branch
+	bhi	.L1821	@cond_branch
 	lsl	r0, r3, #0x2
-	ldr	r1, .L1806+0x8
+	ldr	r1, .L1839+0x8
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L1807:
+.L1840:
 	.align	2, 0
-.L1806:
+.L1839:
 	.word	gTasks+0x8
 	.word	sSearchOptions
-	.word	.L1799
+	.word	.L1832
 	.align	2, 0
 	.align	2, 0
-.L1799:
-	.word	.L1791
-	.word	.L1794
-	.word	.L1798
-	.word	.L1798
-	.word	.L1790
-	.word	.L1789
-.L1788:
+.L1832:
+	.word	.L1824
+	.word	.L1827
+	.word	.L1831
+	.word	.L1831
+	.word	.L1823
+	.word	.L1822
+.L1821:
 	mov	r0, #0x0
-	b	.L1800
-.L1789:
-	ldr	r0, .L1808
-	b	.L1802
-.L1809:
+	b	.L1833
+.L1822:
+	ldr	r0, .L1841
+	b	.L1835
+.L1842:
 	.align	2, 0
-.L1808:
+.L1841:
 	.word	sPokedexModes
-.L1790:
-	ldr	r0, .L1810
-	b	.L1802
-.L1811:
+.L1823:
+	ldr	r0, .L1843
+	b	.L1835
+.L1844:
 	.align	2, 0
-.L1810:
+.L1843:
 	.word	sOrderOptions
-.L1791:
+.L1824:
 	cmp	r2, #0
-	beq	.L1804	@cond_branch
+	beq	.L1837	@cond_branch
 	lsl	r0, r2, #0x18
 	lsr	r0, r0, #0x18
-	b	.L1805
-.L1794:
+	b	.L1838
+.L1827:
 	cmp	r2, #0
-	bne	.L1795	@cond_branch
-.L1804:
+	bne	.L1828	@cond_branch
+.L1837:
 	mov	r0, #0xff
-	b	.L1800
-.L1795:
+	b	.L1833
+.L1828:
 	sub	r0, r2, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	b	.L1805
-.L1798:
-	ldr	r0, .L1812
-.L1802:
+	b	.L1838
+.L1831:
+	ldr	r0, .L1845
+.L1835:
 	add	r0, r2, r0
 	ldrb	r0, [r0]
-.L1805:
-.L1800:
+.L1838:
+.L1833:
 	pop	{r1}
 	bx	r1
-.L1813:
+.L1846:
 	.align	2, 0
-.L1812:
+.L1845:
 	.word	sDexSearchTypeIds
-.Lfe130:
-	.size	 GetSearchModeSelection,.Lfe130-GetSearchModeSelection
+.Lfe138:
+	.size	 GetSearchModeSelection,.Lfe138-GetSearchModeSelection
 	.align	2, 0
 	.type	 SetDefaultSearchModeAndOrder,function
 	.thumb_func
@@ -158244,7 +158764,7 @@ SetDefaultSearchModeAndOrder:
 	push	{r4, r5, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r1, .L1829
+	ldr	r1, .L1862
 	ldr	r0, [r1]
 	mov	r2, #0xcb
 	lsl	r2, r2, #0x4
@@ -158252,70 +158772,70 @@ SetDefaultSearchModeAndOrder:
 	ldrh	r0, [r0]
 	add	r5, r1, #0
 	cmp	r0, #0
-	beq	.L1817	@cond_branch
+	beq	.L1850	@cond_branch
 	cmp	r0, #0x1
-	beq	.L1818	@cond_branch
-.L1817:
+	beq	.L1851	@cond_branch
+.L1850:
 	mov	r3, #0x0
-	b	.L1815
-.L1830:
+	b	.L1848
+.L1863:
 	.align	2, 0
-.L1829:
+.L1862:
 	.word	sPokedexView
-.L1818:
+.L1851:
 	mov	r3, #0x1
-.L1815:
-	ldr	r1, .L1831
+.L1848:
+	ldr	r1, .L1864
 	lsl	r2, r4, #0x2
 	add	r0, r2, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
 	strh	r3, [r0, #0xc]
 	ldr	r0, [r5]
-	ldr	r3, .L1831+0x4
+	ldr	r3, .L1864+0x4
 	add	r0, r0, r3
 	ldrh	r0, [r0]
 	add	r5, r1, #0
 	cmp	r0, #0x5
-	bhi	.L1822	@cond_branch
+	bhi	.L1855	@cond_branch
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1831+0x8
+	ldr	r1, .L1864+0x8
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L1832:
+.L1865:
 	.align	2, 0
-.L1831:
+.L1864:
 	.word	gTasks
 	.word	0xcb4
-	.word	.L1828
+	.word	.L1861
 	.align	2, 0
 	.align	2, 0
-.L1828:
-	.word	.L1822
-	.word	.L1823
-	.word	.L1824
-	.word	.L1825
-	.word	.L1826
-	.word	.L1827
-.L1822:
+.L1861:
+	.word	.L1855
+	.word	.L1856
+	.word	.L1857
+	.word	.L1858
+	.word	.L1859
+	.word	.L1860
+.L1855:
 	mov	r3, #0x0
-	b	.L1820
-.L1823:
+	b	.L1853
+.L1856:
 	mov	r3, #0x1
-	b	.L1820
-.L1824:
+	b	.L1853
+.L1857:
 	mov	r3, #0x2
-	b	.L1820
-.L1825:
+	b	.L1853
+.L1858:
 	mov	r3, #0x3
-	b	.L1820
-.L1826:
+	b	.L1853
+.L1859:
 	mov	r3, #0x4
-	b	.L1820
-.L1827:
+	b	.L1853
+.L1860:
 	mov	r3, #0x5
-.L1820:
+.L1853:
 	add	r0, r2, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r5
@@ -158323,8 +158843,8 @@ SetDefaultSearchModeAndOrder:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.Lfe131:
-	.size	 SetDefaultSearchModeAndOrder,.Lfe131-SetDefaultSearchModeAndOrder
+.Lfe139:
+	.size	 SetDefaultSearchModeAndOrder,.Lfe139-SetDefaultSearchModeAndOrder
 	.align	2, 0
 	.type	 SearchParamCantScrollUp,function
 	.thumb_func
@@ -158332,7 +158852,7 @@ SearchParamCantScrollUp:
 	push	{lr}
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r3, .L1837
+	ldr	r3, .L1870
 	lsl	r1, r0, #0x2
 	add	r1, r1, r0
 	lsl	r1, r1, #0x3
@@ -158340,7 +158860,7 @@ SearchParamCantScrollUp:
 	ldrb	r2, [r0, #0xa]
 	add	r3, r3, #0x8
 	add	r1, r1, r3
-	ldr	r0, .L1837+0x4
+	ldr	r0, .L1870+0x4
 	lsl	r2, r2, #0x3
 	add	r2, r2, r0
 	ldrb	r0, [r2, #0x5]
@@ -158351,24 +158871,24 @@ SearchParamCantScrollUp:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x5
-	bls	.L1834	@cond_branch
+	bls	.L1867	@cond_branch
 	ldrh	r0, [r1]
 	cmp	r0, #0
-	beq	.L1834	@cond_branch
+	beq	.L1867	@cond_branch
 	mov	r0, #0x0
-	b	.L1836
-.L1838:
+	b	.L1869
+.L1871:
 	.align	2, 0
-.L1837:
+.L1870:
 	.word	gTasks
 	.word	sSearchOptions
-.L1834:
+.L1867:
 	mov	r0, #0x1
-.L1836:
+.L1869:
 	pop	{r1}
 	bx	r1
-.Lfe132:
-	.size	 SearchParamCantScrollUp,.Lfe132-SearchParamCantScrollUp
+.Lfe140:
+	.size	 SearchParamCantScrollUp,.Lfe140-SearchParamCantScrollUp
 	.align	2, 0
 	.type	 SearchParamCantScrollDown,function
 	.thumb_func
@@ -158376,7 +158896,7 @@ SearchParamCantScrollDown:
 	push	{lr}
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r3, .L1843
+	ldr	r3, .L1876
 	lsl	r1, r0, #0x2
 	add	r1, r1, r0
 	lsl	r1, r1, #0x3
@@ -158384,7 +158904,7 @@ SearchParamCantScrollDown:
 	ldrb	r2, [r0, #0xa]
 	add	r3, r3, #0x8
 	add	r1, r1, r3
-	ldr	r0, .L1843+0x4
+	ldr	r0, .L1876+0x4
 	lsl	r2, r2, #0x3
 	add	r2, r2, r0
 	ldrb	r0, [r2, #0x5]
@@ -158395,32 +158915,32 @@ SearchParamCantScrollDown:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x5
-	bls	.L1840	@cond_branch
+	bls	.L1873	@cond_branch
 	ldrh	r1, [r1]
 	sub	r0, r0, #0x5
 	cmp	r1, r0
-	bge	.L1840	@cond_branch
+	bge	.L1873	@cond_branch
 	mov	r0, #0x0
-	b	.L1842
-.L1844:
+	b	.L1875
+.L1877:
 	.align	2, 0
-.L1843:
+.L1876:
 	.word	gTasks
 	.word	sSearchOptions
-.L1840:
+.L1873:
 	mov	r0, #0x1
-.L1842:
+.L1875:
 	pop	{r1}
 	bx	r1
-.Lfe133:
-	.size	 SearchParamCantScrollDown,.Lfe133-SearchParamCantScrollDown
+.Lfe141:
+	.size	 SearchParamCantScrollDown,.Lfe141-SearchParamCantScrollDown
 	.align	2, 0
 	.type	 SpriteCB_SearchParameterScrollArrow,function
 	.thumb_func
 SpriteCB_SearchParameterScrollArrow:
 	push	{r4, lr}
 	add	r4, r0, #0
-	ldr	r2, .L1856
+	ldr	r2, .L1889
 	mov	r0, #0x2e
 	ldrsh	r1, [r4, r0]
 	lsl	r0, r1, #0x2
@@ -158428,53 +158948,53 @@ SpriteCB_SearchParameterScrollArrow:
 	lsl	r0, r0, #0x3
 	add	r0, r0, r2
 	ldr	r1, [r0]
-	ldr	r0, .L1856+0x4
+	ldr	r0, .L1889+0x4
 	cmp	r1, r0
-	bne	.L1846	@cond_branch
+	bne	.L1879	@cond_branch
 	mov	r1, #0x30
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	beq	.L1847	@cond_branch
+	beq	.L1880	@cond_branch
 	ldrh	r0, [r4, #0x2e]
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	bl	SearchParamCantScrollDown
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1851	@cond_branch
+	beq	.L1884	@cond_branch
 	add	r2, r4, #0
 	add	r2, r2, #0x3e
 	ldrb	r0, [r2]
 	mov	r1, #0x4
 	orr	r0, r0, r1
-	b	.L1855
-.L1857:
+	b	.L1888
+.L1890:
 	.align	2, 0
-.L1856:
+.L1889:
 	.word	gTasks
 	.word	Task_HandleSearchParameterInput
-.L1847:
+.L1880:
 	ldrh	r0, [r4, #0x2e]
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	bl	SearchParamCantScrollUp
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1851	@cond_branch
+	beq	.L1884	@cond_branch
 	add	r2, r4, #0
 	add	r2, r2, #0x3e
 	ldrb	r0, [r2]
 	mov	r1, #0x4
 	orr	r0, r0, r1
-	b	.L1855
-.L1851:
+	b	.L1888
+.L1884:
 	add	r2, r4, #0
 	add	r2, r2, #0x3e
 	ldrb	r1, [r2]
 	mov	r0, #0x5
 	neg	r0, r0
 	and	r0, r0, r1
-.L1855:
+.L1888:
 	strb	r0, [r2]
 	ldrh	r2, [r4, #0x32]
 	mov	r1, #0x30
@@ -158482,38 +159002,38 @@ SpriteCB_SearchParameterScrollArrow:
 	lsl	r0, r0, #0x7
 	add	r0, r2, r0
 	lsl	r0, r0, #0x18
-	ldr	r1, .L1858
+	ldr	r1, .L1891
 	lsr	r0, r0, #0x17
 	add	r0, r0, r1
 	mov	r1, #0x0
 	ldrsh	r0, [r0, r1]
 	cmp	r0, #0
-	bge	.L1853	@cond_branch
+	bge	.L1886	@cond_branch
 	add	r0, r0, #0x7f
-.L1853:
+.L1886:
 	asr	r0, r0, #0x7
 	strh	r0, [r4, #0x26]
 	add	r0, r2, #0
 	add	r0, r0, #0x8
 	strh	r0, [r4, #0x32]
-	b	.L1854
-.L1859:
+	b	.L1887
+.L1892:
 	.align	2, 0
-.L1858:
+.L1891:
 	.word	gSineTable
-.L1846:
+.L1879:
 	add	r0, r4, #0
 	add	r0, r0, #0x3e
 	ldrb	r1, [r0]
 	mov	r2, #0x4
 	orr	r1, r1, r2
 	strb	r1, [r0]
-.L1854:
+.L1887:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.Lfe134:
-	.size	 SpriteCB_SearchParameterScrollArrow,.Lfe134-SpriteCB_SearchParameterScrollArrow
+.Lfe142:
+	.size	 SpriteCB_SearchParameterScrollArrow,.Lfe142-SpriteCB_SearchParameterScrollArrow
 	.align	2, 0
 	.type	 CreateSearchParameterScrollArrows,function
 	.thumb_func
@@ -158525,7 +159045,7 @@ CreateSearchParameterScrollArrows:
 	add	r5, r0, #0
 	lsl	r5, r5, #0x18
 	lsr	r5, r5, #0x18
-	ldr	r6, .L1861
+	ldr	r6, .L1894
 	add	r0, r6, #0
 	mov	r1, #0xb8
 	mov	r2, #0x4
@@ -158533,7 +159053,7 @@ CreateSearchParameterScrollArrows:
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r4, .L1861+0x4
+	ldr	r4, .L1894+0x4
 	lsl	r1, r0, #0x4
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -158545,7 +159065,7 @@ CreateSearchParameterScrollArrows:
 	add	r0, r0, r4
 	mov	r9, r0
 	add	r1, r1, r9
-	ldr	r0, .L1861+0x8
+	ldr	r0, .L1894+0x8
 	mov	r8, r0
 	str	r0, [r1]
 	add	r0, r6, #0
@@ -158576,14 +159096,14 @@ CreateSearchParameterScrollArrows:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1862:
+.L1895:
 	.align	2, 0
-.L1861:
+.L1894:
 	.word	sScrollArrowSpriteTemplate
 	.word	gSprites
 	.word	SpriteCB_SearchParameterScrollArrow
-.Lfe135:
-	.size	 CreateSearchParameterScrollArrows,.Lfe135-CreateSearchParameterScrollArrows
+.Lfe143:
+	.size	 CreateSearchParameterScrollArrows,.Lfe143-CreateSearchParameterScrollArrows
 	.align	2, 0
 	.type	 EraseAndPrintSearchTextBox,function
 	.thumb_func
@@ -158602,8 +159122,8 @@ EraseAndPrintSearchTextBox:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.Lfe136:
-	.size	 EraseAndPrintSearchTextBox,.Lfe136-EraseAndPrintSearchTextBox
+.Lfe144:
+	.size	 EraseAndPrintSearchTextBox,.Lfe144-EraseAndPrintSearchTextBox
 	.align	2, 0
 	.type	 EraseSelectorArrow,function
 	.thumb_func
@@ -158618,27 +159138,27 @@ EraseSelectorArrow:
 	bl	ClearSearchMenuRect
 	pop	{r0}
 	bx	r0
-.Lfe137:
-	.size	 EraseSelectorArrow,.Lfe137-EraseSelectorArrow
+.Lfe145:
+	.size	 EraseSelectorArrow,.Lfe145-EraseSelectorArrow
 	.align	2, 0
 	.type	 PrintSelectorArrow,function
 	.thumb_func
 PrintSelectorArrow:
 	push	{lr}
 	add	r2, r0, #0
-	ldr	r0, .L1866
+	ldr	r0, .L1899
 	lsl	r2, r2, #0x4
 	add	r2, r2, #0x9
 	mov	r1, #0x90
 	bl	PrintSearchText
 	pop	{r0}
 	bx	r0
-.L1867:
+.L1900:
 	.align	2, 0
-.L1866:
+.L1899:
 	.word	gText_SelectorArrow
-.Lfe138:
-	.size	 PrintSelectorArrow,.Lfe138-PrintSelectorArrow
+.Lfe146:
+	.size	 PrintSelectorArrow,.Lfe146-PrintSelectorArrow
 	.align	2, 0
 	.type	 PrintSearchParameterTitle,function
 	.thumb_func
@@ -158652,8 +159172,8 @@ PrintSearchParameterTitle:
 	bl	PrintSearchText
 	pop	{r0}
 	bx	r0
-.Lfe139:
-	.size	 PrintSearchParameterTitle,.Lfe139-PrintSearchParameterTitle
+.Lfe147:
+	.size	 PrintSearchParameterTitle,.Lfe147-PrintSearchParameterTitle
 	.align	2, 0
 	.type	 ClearSearchParameterBoxText,function
 	.thumb_func
@@ -158666,8 +159186,3129 @@ ClearSearchParameterBoxText:
 	bl	ClearSearchMenuRect
 	pop	{r0}
 	bx	r0
-.Lfe140:
-	.size	 ClearSearchParameterBoxText,.Lfe140-ClearSearchParameterBoxText
+.Lfe148:
+	.size	 ClearSearchParameterBoxText,.Lfe148-ClearSearchParameterBoxText
+	.align	2, 0
+	.type	 Task_LoadStatsScreen,function
+	.thumb_func
+Task_LoadStatsScreen:
+	push	{r4, r5, r6, lr}
+	add	sp, sp, #-0xc
+	lsl	r0, r0, #0x18
+	lsr	r6, r0, #0x18
+	ldr	r1, .L1930
+	mov	r2, #0x87
+	lsl	r2, r2, #0x3
+	add	r0, r1, r2
+	ldrb	r0, [r0]
+	add	r4, r1, #0
+	cmp	r0, #0xb
+	bhi	.L1906	@cond_branch
+	lsl	r0, r0, #0x2
+	ldr	r1, .L1930+0x4
+	add	r0, r0, r1
+	ldr	r0, [r0]
+	mov	pc, r0
+.L1931:
+	.align	2, 0
+.L1930:
+	.word	gMain
+	.word	.L1928
+	.align	2, 0
+	.align	2, 0
+.L1928:
+	.word	.L1906
+	.word	.L1910
+	.word	.L1911
+	.word	.L1912
+	.word	.L1913
+	.word	.L1915
+	.word	.L1917
+	.word	.L1920
+	.word	.L1923
+	.word	.L1924
+	.word	.L1926
+	.word	.L1927
+.L1906:
+	ldr	r0, .L1932
+	ldrb	r1, [r0, #0x7]
+	mov	r0, #0x80
+	and	r0, r0, r1
+	cmp	r0, #0
+	beq	.LCB19365
+	b	.L1904	@long jump
+.LCB19365:
+	ldr	r0, .L1932+0x4
+	ldr	r0, [r0]
+	mov	r3, #0xcf
+	lsl	r3, r3, #0x4
+	add	r0, r0, r3
+	mov	r5, #0x1
+	strb	r5, [r0]
+	ldr	r1, .L1932+0x8
+	ldr	r0, [r4, #0xc]
+	str	r0, [r1]
+	mov	r0, #0x0
+	bl	SetVBlankCallback
+	mov	r2, #0x0
+	ldr	r1, .L1932+0xc
+	lsl	r0, r6, #0x2
+	add	r0, r0, r6
+	lsl	r0, r0, #0x3
+	add	r1, r0, r1
+	mov	r3, #0xa
+	ldrsh	r0, [r1, r3]
+	cmp	r0, #0
+	beq	.L1908	@cond_branch
+	mov	r2, #0x80
+	lsl	r2, r2, #0x5
+.L1908:
+	mov	r3, #0xc
+	ldrsh	r0, [r1, r3]
+	cmp	r0, #0
+	beq	.L1909	@cond_branch
+	mov	r1, #0x80
+	lsl	r1, r1, #0x2
+	add	r0, r1, #0
+	orr	r2, r2, r0
+.L1909:
+	add	r0, r2, #0
+	bl	ResetOtherVideoRegisters
+	mov	r2, #0x87
+	lsl	r2, r2, #0x3
+	add	r0, r4, r2
+	strb	r5, [r0]
+	b	.L1904
+.L1933:
+	.align	2, 0
+.L1932:
+	.word	gPaletteFade
+	.word	sPokedexView
+	.word	gPokedexVBlankCB
+	.word	gTasks
+.L1910:
+	ldr	r1, .L1934
+	mov	r2, #0x80
+	lsl	r2, r2, #0x6
+	mov	r0, #0x0
+	str	r0, [sp]
+	mov	r0, #0x3
+	mov	r3, #0x0
+	bl	DecompressAndLoadBgGfxUsingHeap
+	ldr	r1, .L1934+0x4
+	mov	r0, #0x3
+	mov	r2, #0x0
+	mov	r3, #0x0
+	bl	CopyToBgTilemapBuffer
+	mov	r0, #0x0
+	mov	r1, #0x0
+	bl	FillWindowPixelBuffer
+	mov	r0, #0x0
+	bl	PutWindowTilemap
+	mov	r0, #0x0
+	mov	r1, #0x3
+	bl	CopyWindowToVram
+	mov	r0, #0x1
+	bl	CopyBgTilemapBufferToVram
+	mov	r0, #0x2
+	bl	CopyBgTilemapBufferToVram
+	mov	r0, #0x3
+	bl	CopyBgTilemapBufferToVram
+	ldr	r1, .L1934+0x8
+	mov	r3, #0x87
+	lsl	r3, r3, #0x3
+	add	r1, r1, r3
+	b	.L1929
+.L1935:
+	.align	2, 0
+.L1934:
+	.word	gPokedexMenu_Gfx
+	.word	gPokedexStatsScreen_Tilemap
+	.word	gMain
+.L1911:
+	mov	r0, #0xd
+	bl	LoadScreenSelectBarMain
+	ldr	r0, .L1936
+	ldr	r0, [r0]
+	ldr	r1, .L1936+0x4
+	add	r0, r0, r1
+	ldrb	r0, [r0]
+	lsl	r0, r0, #0x1f
+	lsr	r0, r0, #0x1f
+	bl	LoadPokedexBgPalette
+	ldr	r1, .L1936+0x8
+	mov	r2, #0x87
+	lsl	r2, r2, #0x3
+	add	r1, r1, r2
+	b	.L1929
+.L1937:
+	.align	2, 0
+.L1936:
+	.word	sPokedexView
+	.word	0xcf2
+	.word	gMain
+.L1912:
+	ldr	r4, .L1938
+	ldr	r0, [r4]
+	ldr	r3, .L1938+0x4
+	add	r0, r0, r3
+	mov	r1, #0xff
+	strb	r1, [r0]
+	ldr	r0, [r4]
+	ldr	r1, .L1938+0x8
+	add	r0, r0, r1
+	mov	r1, #0x1
+	neg	r1, r1
+	strb	r1, [r0]
+	bl	CreateTypeIconSprites
+	ldr	r0, [r4]
+	ldr	r2, .L1938+0xc
+	add	r0, r0, r2
+	mov	r1, #0x1
+	neg	r1, r1
+	strb	r1, [r0]
+	ldr	r0, .L1938+0x10
+	mov	r1, #0xe8
+	lsl	r1, r1, #0x1
+	mov	r2, #0x60
+	bl	LoadCompressedPalette
+	ldr	r0, .L1938+0x14
+	bl	LoadCompressedSpriteSheet
+	ldr	r0, .L1938+0x18
+	bl	LoadSpritePalette
+	ldr	r1, .L1938+0x1c
+	mov	r3, #0x87
+	lsl	r3, r3, #0x3
+	add	r1, r1, r3
+	b	.L1929
+.L1939:
+	.align	2, 0
+.L1938:
+	.word	sPokedexView
+	.word	0xcc2
+	.word	0xcc3
+	.word	0xcc7
+	.word	gMoveTypes_Pal
+	.word	sSpriteSheet_SplitIcons
+	.word	sSpritePal_SplitIcons
+	.word	gMain
+.L1913:
+	ldr	r3, .L1940
+	ldr	r1, [r3]
+	ldr	r0, .L1940+0x4
+	add	r4, r1, r0
+	mov	r2, #0x0
+	mov	r0, #0x0
+	strh	r0, [r4]
+	ldr	r0, .L1940+0x8
+	add	r1, r1, r0
+	strb	r2, [r1]
+	ldr	r0, [r3]
+	ldr	r1, .L1940+0xc
+	add	r0, r0, r1
+	strb	r2, [r0]
+	ldr	r0, [r3]
+	add	r1, r1, #0x1
+	add	r0, r0, r1
+	strb	r2, [r0]
+	ldr	r0, [r3]
+	ldr	r3, .L1940+0x10
+	add	r0, r0, r3
+	strb	r2, [r0]
+	bl	CalculateMoves
+	lsl	r0, r0, #0x18
+	cmp	r0, #0
+	bne	.LCB19598
+	b	.L1904	@long jump
+.LCB19598:
+	ldr	r1, .L1940+0x14
+	mov	r0, #0x87
+	lsl	r0, r0, #0x3
+	add	r1, r1, r0
+	b	.L1929
+.L1941:
+	.align	2, 0
+.L1940:
+	.word	sPokedexView
+	.word	0xcc4
+	.word	0xcc6
+	.word	0xcc8
+	.word	0xcca
+	.word	gMain
+.L1915:
+	ldr	r1, .L1942
+	lsl	r0, r6, #0x2
+	add	r0, r0, r6
+	lsl	r0, r0, #0x3
+	add	r5, r0, r1
+	mov	r1, #0xa
+	ldrsh	r6, [r5, r1]
+	cmp	r6, #0
+	bne	.L1916	@cond_branch
+	bl	FreeMonIconPalettes
+	ldr	r4, .L1942+0x4
+	ldr	r0, [r4]
+	ldrh	r0, [r0]
+	bl	NationalPokedexNumToSpecies
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
+	bl	LoadMonIconPalette
+	ldr	r0, [r4]
+	ldrh	r0, [r0]
+	bl	NationalPokedexNumToSpecies
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
+	ldr	r1, .L1942+0x8
+	mov	r2, #0x4
+	str	r2, [sp]
+	str	r6, [sp, #0x4]
+	mov	r2, #0x1
+	str	r2, [sp, #0x8]
+	mov	r2, #0x11
+	mov	r3, #0x1f
+	bl	CreateMonIcon
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	strh	r0, [r5, #0x10]
+	ldr	r2, .L1942+0xc
+	mov	r3, #0x10
+	ldrsh	r0, [r5, r3]
+	lsl	r1, r0, #0x4
+	add	r1, r1, r0
+	lsl	r1, r1, #0x2
+	add	r1, r1, r2
+	ldrb	r2, [r1, #0x5]
+	mov	r0, #0xd
+	neg	r0, r0
+	and	r0, r0, r2
+	strb	r0, [r1, #0x5]
+.L1916:
+	ldr	r1, .L1942+0x10
+	mov	r0, #0x87
+	lsl	r0, r0, #0x3
+	add	r1, r1, r0
+	b	.L1929
+.L1943:
+	.align	2, 0
+.L1942:
+	.word	gTasks
+	.word	sPokedexListItem
+	.word	SpriteCB_MonIcon
+	.word	gSprites
+	.word	gMain
+.L1917:
+	ldr	r1, .L1944
+	lsl	r0, r6, #0x2
+	add	r0, r0, r6
+	lsl	r0, r0, #0x3
+	add	r0, r0, r1
+	mov	r4, #0x0
+	strh	r4, [r0, #0x12]
+	ldr	r5, .L1944+0x4
+	ldr	r3, [r5]
+	ldrh	r1, [r3]
+	ldr	r0, .L1944+0x8
+	ldr	r0, [r0]
+	ldr	r2, .L1944+0xc
+	add	r0, r0, r2
+	ldrh	r0, [r0]
+	neg	r2, r0
+	orr	r2, r2, r0
+	lsr	r2, r2, #0x1f
+	ldr	r3, [r3]
+	lsl	r3, r3, #0xe
+	lsr	r3, r3, #0x1f
+	str	r4, [sp]
+	add	r0, r6, #0
+	bl	PrintMonStats
+	add	r0, r6, #0
+	bl	PrintMonStatsToggle
+	ldr	r0, [r5]
+	ldrb	r1, [r0, #0x2]
+	mov	r0, #0x2
+	and	r0, r0, r1
+	cmp	r0, #0
+	bne	.L1919	@cond_branch
+	ldr	r0, .L1944+0x10
+	mov	r1, #0x31
+	mov	r2, #0x1e
+	bl	LoadPalette
+.L1919:
+	ldr	r1, .L1944+0x14
+	mov	r3, #0x87
+	lsl	r3, r3, #0x3
+	add	r1, r1, r3
+	b	.L1929
+.L1945:
+	.align	2, 0
+.L1944:
+	.word	gTasks
+	.word	sPokedexListItem
+	.word	sPokedexView
+	.word	0xcae
+	.word	gPlttBufferUnfaded+0x2
+	.word	gMain
+.L1920:
+	mov	r3, #0x0
+	ldr	r0, .L1946
+	lsl	r1, r6, #0x2
+	add	r1, r1, r6
+	lsl	r1, r1, #0x3
+	add	r1, r1, r0
+	mov	r2, #0xc
+	ldrsh	r0, [r1, r2]
+	cmp	r0, #0
+	beq	.L1921	@cond_branch
+	mov	r3, #0x14
+.L1921:
+	mov	r2, #0xa
+	ldrsh	r0, [r1, r2]
+	cmp	r0, #0
+	beq	.L1922	@cond_branch
+	ldr	r2, .L1946+0x4
+	mov	r0, #0x10
+	ldrsh	r1, [r1, r0]
+	lsl	r0, r1, #0x4
+	add	r0, r0, r1
+	lsl	r0, r0, #0x2
+	add	r0, r0, r2
+	ldrb	r1, [r0, #0x5]
+	lsr	r1, r1, #0x4
+	add	r1, r1, #0x10
+	mov	r0, #0x1
+	lsl	r0, r0, r1
+	orr	r3, r3, r0
+.L1922:
+	mvn	r0, r3
+	mov	r1, #0x0
+	str	r1, [sp]
+	mov	r2, #0x10
+	mov	r3, #0x0
+	bl	BeginNormalPaletteFade
+	ldr	r0, .L1946+0x8
+	ldr	r0, [r0]
+	bl	SetVBlankCallback
+	ldr	r1, .L1946+0xc
+	mov	r2, #0x87
+	lsl	r2, r2, #0x3
+	add	r1, r1, r2
+	b	.L1929
+.L1947:
+	.align	2, 0
+.L1946:
+	.word	gTasks
+	.word	gSprites
+	.word	gPokedexVBlankCB
+	.word	gMain
+.L1923:
+	mov	r0, #0x50
+	mov	r1, #0x0
+	bl	SetGpuReg
+	mov	r0, #0x52
+	mov	r1, #0x0
+	bl	SetGpuReg
+	mov	r0, #0x54
+	mov	r1, #0x0
+	bl	SetGpuReg
+	mov	r1, #0x82
+	lsl	r1, r1, #0x5
+	mov	r0, #0x0
+	bl	SetGpuReg
+	mov	r0, #0x0
+	bl	HideBg
+	mov	r0, #0x1
+	bl	ShowBg
+	mov	r0, #0x2
+	bl	ShowBg
+	mov	r0, #0x3
+	bl	ShowBg
+	ldr	r1, .L1948
+	mov	r3, #0x87
+	lsl	r3, r3, #0x3
+	add	r1, r1, r3
+	b	.L1929
+.L1949:
+	.align	2, 0
+.L1948:
+	.word	gMain
+.L1924:
+	ldr	r0, .L1950
+	ldrb	r1, [r0, #0x7]
+	mov	r0, #0x80
+	and	r0, r0, r1
+	cmp	r0, #0
+	bne	.L1904	@cond_branch
+	mov	r0, #0x87
+	lsl	r0, r0, #0x3
+	add	r1, r4, r0
+	b	.L1929
+.L1951:
+	.align	2, 0
+.L1950:
+	.word	gPaletteFade
+.L1926:
+	mov	r2, #0x87
+	lsl	r2, r2, #0x3
+	add	r1, r4, r2
+.L1929:
+	ldrb	r0, [r1]
+	add	r0, r0, #0x1
+	strb	r0, [r1]
+	b	.L1904
+.L1927:
+	ldr	r1, .L1952
+	lsl	r0, r6, #0x2
+	add	r0, r0, r6
+	lsl	r0, r0, #0x3
+	add	r0, r0, r1
+	mov	r2, #0x0
+	mov	r1, #0x0
+	strh	r1, [r0, #0x8]
+	strh	r1, [r0, #0xa]
+	mov	r1, #0x1
+	strh	r1, [r0, #0xc]
+	ldr	r1, .L1952+0x4
+	str	r1, [r0]
+	mov	r3, #0x87
+	lsl	r3, r3, #0x3
+	add	r0, r4, r3
+	strb	r2, [r0]
+.L1904:
+	add	sp, sp, #0xc
+	pop	{r4, r5, r6}
+	pop	{r0}
+	bx	r0
+.L1953:
+	.align	2, 0
+.L1952:
+	.word	gTasks
+	.word	Task_HandleStatsScreenInput
+.Lfe149:
+	.size	 Task_LoadStatsScreen,.Lfe149-Task_LoadStatsScreen
+	.align	2, 0
+	.type	 FreeStatsScreenWindowAndBgBuffers,function
+	.thumb_func
+FreeStatsScreenWindowAndBgBuffers:
+	push	{lr}
+	bl	FreeAllWindowBuffers
+	mov	r0, #0x0
+	bl	GetBgTilemapBuffer
+	cmp	r0, #0
+	beq	.L1955	@cond_branch
+	bl	Free
+.L1955:
+	mov	r0, #0x1
+	bl	GetBgTilemapBuffer
+	cmp	r0, #0
+	beq	.L1956	@cond_branch
+	bl	Free
+.L1956:
+	mov	r0, #0x2
+	bl	GetBgTilemapBuffer
+	cmp	r0, #0
+	beq	.L1957	@cond_branch
+	bl	Free
+.L1957:
+	mov	r0, #0x3
+	bl	GetBgTilemapBuffer
+	cmp	r0, #0
+	beq	.L1958	@cond_branch
+	bl	Free
+.L1958:
+	pop	{r0}
+	bx	r0
+.Lfe150:
+	.size	 FreeStatsScreenWindowAndBgBuffers,.Lfe150-FreeStatsScreenWindowAndBgBuffers
+	.align	2, 0
+	.type	 Task_HandleStatsScreenInput,function
+	.thumb_func
+Task_HandleStatsScreenInput:
+	push	{r4, r5, r6, lr}
+	add	sp, sp, #-0x4
+	lsl	r0, r0, #0x18
+	lsr	r5, r0, #0x18
+	ldr	r0, .L1972
+	ldrh	r1, [r0, #0x2e]
+	mov	r4, #0x1
+	add	r0, r4, #0
+	and	r0, r0, r1
+	cmp	r0, #0
+	beq	.L1960	@cond_branch
+	mov	r0, #0x6d
+	bl	PlaySE
+	ldr	r0, .L1972+0x4
+	lsl	r1, r5, #0x2
+	add	r1, r1, r5
+	lsl	r1, r1, #0x3
+	add	r1, r1, r0
+	mov	r2, #0x12
+	ldrsh	r0, [r1, r2]
+	cmp	r0, #0
+	bne	.L1961	@cond_branch
+	strh	r4, [r1, #0x12]
+	b	.L1962
+.L1973:
+	.align	2, 0
+.L1972:
+	.word	gMain
+	.word	gTasks
+.L1961:
+	mov	r0, #0x0
+	strh	r0, [r1, #0x12]
+.L1962:
+	add	r0, r5, #0
+	bl	PrintMonStatsToggle
+	add	r0, r5, #0
+	bl	DestroyMoveIcon
+	add	r0, r5, #0
+	mov	r1, #0x1
+	bl	PrintMoveNameAndInfo
+.L1960:
+	ldr	r2, .L1974
+	ldrh	r1, [r2, #0x2e]
+	mov	r0, #0x2
+	and	r0, r0, r1
+	cmp	r0, #0
+	beq	.L1963	@cond_branch
+	mov	r0, #0x1
+	neg	r0, r0
+	mov	r1, #0x0
+	str	r1, [sp]
+	mov	r2, #0x0
+	mov	r3, #0x10
+	bl	BeginNormalPaletteFade
+	ldr	r1, .L1974+0x4
+	lsl	r0, r5, #0x2
+	add	r0, r0, r5
+	lsl	r0, r0, #0x3
+	add	r0, r0, r1
+	ldr	r1, .L1974+0x8
+	str	r1, [r0]
+	mov	r0, #0x3
+	bl	PlaySE
+	b	.L1959
+.L1975:
+	.align	2, 0
+.L1974:
+	.word	gMain
+	.word	gTasks
+	.word	Task_ExitStatsScreen
+.L1963:
+	ldrh	r1, [r2, #0x30]
+	mov	r0, #0x40
+	and	r0, r0, r1
+	cmp	r0, #0
+	beq	.L1964	@cond_branch
+	ldr	r0, .L1976
+	ldr	r0, [r0]
+	ldr	r3, .L1976+0x4
+	add	r1, r0, r3
+	ldrh	r0, [r1]
+	cmp	r0, #0
+	beq	.L1964	@cond_branch
+	sub	r0, r0, #0x1
+	strh	r0, [r1]
+	mov	r0, #0x5
+	bl	PlaySE
+	add	r0, r5, #0
+	bl	DestroyMoveIcon
+	add	r0, r5, #0
+	mov	r1, #0x0
+	bl	PrintMoveNameAndInfo
+.L1964:
+	ldr	r0, .L1976+0x8
+	ldrh	r1, [r0, #0x30]
+	mov	r0, #0x80
+	and	r0, r0, r1
+	cmp	r0, #0
+	beq	.L1965	@cond_branch
+	ldr	r0, .L1976
+	ldr	r0, [r0]
+	ldr	r1, .L1976+0x4
+	add	r2, r0, r1
+	ldrh	r1, [r2]
+	ldr	r3, .L1976+0xc
+	add	r0, r0, r3
+	ldrb	r0, [r0]
+	sub	r0, r0, #0x1
+	cmp	r1, r0
+	bge	.L1965	@cond_branch
+	add	r0, r1, #0x1
+	strh	r0, [r2]
+	mov	r0, #0x5
+	bl	PlaySE
+	add	r0, r5, #0
+	bl	DestroyMoveIcon
+	add	r0, r5, #0
+	mov	r1, #0x0
+	bl	PrintMoveNameAndInfo
+.L1965:
+	ldr	r0, .L1976+0x8
+	ldrh	r1, [r0, #0x2e]
+	mov	r0, #0x20
+	and	r0, r0, r1
+	cmp	r0, #0
+	bne	.L1967	@cond_branch
+	mov	r0, #0x80
+	lsl	r0, r0, #0x2
+	and	r0, r0, r1
+	cmp	r0, #0
+	beq	.L1966	@cond_branch
+	ldr	r0, .L1976+0x10
+	ldr	r0, [r0]
+	ldrb	r0, [r0, #0x13]
+	cmp	r0, #0x1
+	bne	.L1966	@cond_branch
+.L1967:
+	ldr	r4, .L1976
+	ldr	r0, [r4]
+	ldr	r1, .L1976+0x14
+	add	r0, r0, r1
+	mov	r1, #0x0
+	strb	r1, [r0]
+	mov	r0, #0x15
+	neg	r0, r0
+	str	r1, [sp]
+	mov	r2, #0x0
+	mov	r3, #0x10
+	bl	BeginNormalPaletteFade
+	ldr	r0, [r4]
+	ldr	r2, .L1976+0x18
+	add	r0, r0, r2
+	mov	r1, #0x1
+	strb	r1, [r0]
+	ldr	r1, .L1976+0x1c
+	lsl	r0, r5, #0x2
+	add	r0, r0, r5
+	lsl	r0, r0, #0x3
+	add	r0, r0, r1
+	ldr	r1, .L1976+0x20
+	str	r1, [r0]
+	mov	r0, #0x15
+	bl	PlaySE
+.L1966:
+	ldr	r0, .L1976+0x8
+	ldrh	r1, [r0, #0x2e]
+	mov	r0, #0x10
+	and	r0, r0, r1
+	cmp	r0, #0
+	bne	.L1969	@cond_branch
+	mov	r0, #0x80
+	lsl	r0, r0, #0x1
+	and	r0, r0, r1
+	cmp	r0, #0
+	beq	.L1959	@cond_branch
+	ldr	r0, .L1976+0x10
+	ldr	r0, [r0]
+	ldrb	r0, [r0, #0x13]
+	cmp	r0, #0x1
+	bne	.L1959	@cond_branch
+.L1969:
+	ldr	r0, .L1976+0x24
+	ldr	r0, [r0]
+	ldrb	r1, [r0, #0x2]
+	mov	r6, #0x2
+	add	r0, r6, #0
+	and	r0, r0, r1
+	cmp	r0, #0
+	bne	.L1970	@cond_branch
+	mov	r0, #0x20
+	bl	PlaySE
+	b	.L1959
+.L1977:
+	.align	2, 0
+.L1976:
+	.word	sPokedexView
+	.word	0xcc4
+	.word	gMain
+	.word	0xcc6
+	.word	gSaveBlock2Ptr
+	.word	0xcf3
+	.word	0xcf4
+	.word	gTasks
+	.word	Task_SwitchScreensFromStatsScreen
+	.word	sPokedexListItem
+.L1970:
+	ldr	r4, .L1978
+	ldr	r0, [r4]
+	ldr	r3, .L1978+0x4
+	add	r0, r0, r3
+	mov	r1, #0x0
+	strb	r6, [r0]
+	mov	r0, #0x15
+	neg	r0, r0
+	str	r1, [sp]
+	mov	r2, #0x0
+	mov	r3, #0x10
+	bl	BeginNormalPaletteFade
+	ldr	r0, [r4]
+	ldr	r1, .L1978+0x8
+	add	r0, r0, r1
+	strb	r6, [r0]
+	ldr	r1, .L1978+0xc
+	lsl	r0, r5, #0x2
+	add	r0, r0, r5
+	lsl	r0, r0, #0x3
+	add	r0, r0, r1
+	ldr	r1, .L1978+0x10
+	str	r1, [r0]
+	mov	r0, #0x15
+	bl	PlaySE
+.L1959:
+	add	sp, sp, #0x4
+	pop	{r4, r5, r6}
+	pop	{r0}
+	bx	r0
+.L1979:
+	.align	2, 0
+.L1978:
+	.word	sPokedexView
+	.word	0xcf3
+	.word	0xcf4
+	.word	gTasks
+	.word	Task_SwitchScreensFromStatsScreen
+.Lfe151:
+	.size	 Task_HandleStatsScreenInput,.Lfe151-Task_HandleStatsScreenInput
+	.align	2, 0
+	.type	 DestroyMoveIcon,function
+	.thumb_func
+DestroyMoveIcon:
+	push	{r4, r5, lr}
+	add	r5, r0, #0
+	lsl	r5, r5, #0x18
+	lsr	r5, r5, #0x18
+	ldr	r4, .L1981
+	add	r0, r4, #0
+	bl	FreeSpriteTilesByTag
+	add	r0, r4, #0
+	bl	FreeSpritePaletteByTag
+	ldr	r0, .L1981+0x4
+	lsl	r4, r5, #0x2
+	add	r4, r4, r5
+	lsl	r4, r4, #0x3
+	add	r4, r4, r0
+	mov	r0, #0xe
+	ldrsh	r1, [r4, r0]
+	lsl	r0, r1, #0x4
+	add	r0, r0, r1
+	lsl	r0, r0, #0x2
+	ldr	r5, .L1981+0x8
+	add	r0, r0, r5
+	bl	FreeSpriteOamMatrix
+	mov	r0, #0xe
+	ldrsh	r1, [r4, r0]
+	lsl	r0, r1, #0x4
+	add	r0, r0, r1
+	lsl	r0, r0, #0x2
+	add	r0, r0, r5
+	bl	DestroySprite
+	pop	{r4, r5}
+	pop	{r0}
+	bx	r0
+.L1982:
+	.align	2, 0
+.L1981:
+	.word	0xfdf3
+	.word	gTasks
+	.word	gSprites
+.Lfe152:
+	.size	 DestroyMoveIcon,.Lfe152-DestroyMoveIcon
+	.align	2, 0
+	.type	 CalculateMoves,function
+	.thumb_func
+CalculateMoves:
+	push	{r4, r5, r6, r7, lr}
+	mov	r7, sl
+	mov	r6, r9
+	mov	r5, r8
+	push	{r5, r6, r7}
+	add	sp, sp, #-0x4
+	ldr	r0, .L1996
+	ldr	r0, [r0]
+	ldrh	r0, [r0]
+	bl	NationalPokedexNumToSpecies
+	lsl	r0, r0, #0x10
+	lsr	r7, r0, #0x10
+	ldr	r1, .L1996+0x4
+	add	r0, r7, #0
+	bl	GetEggMovesSpecies
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	str	r0, [sp]
+	ldr	r1, .L1996+0x8
+	add	r0, r7, #0
+	bl	GetLevelUpMovesBySpecies
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	mov	sl, r0
+	mov	r0, #0x0
+	mov	r8, r0
+	mov	r4, #0x0
+	ldr	r1, .L1996+0xc
+	mov	r9, r1
+	ldr	r5, .L1996+0x10
+.L1987:
+	add	r0, r7, #0
+	add	r1, r4, #0
+	bl	CanLearnTutorMove
+	lsl	r0, r0, #0x18
+	cmp	r0, #0
+	beq	.L1986	@cond_branch
+	mov	r3, r8
+	lsl	r1, r3, #0x1
+	add	r1, r1, r9
+	lsl	r0, r4, #0x1
+	add	r0, r0, r5
+	ldrh	r0, [r0]
+	strh	r0, [r1]
+	mov	r0, r8
+	add	r0, r0, #0x1
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	mov	r8, r0
+.L1986:
+	add	r0, r4, #0x1
+	lsl	r0, r0, #0x18
+	lsr	r4, r0, #0x18
+	cmp	r4, #0x1d
+	bls	.L1987	@cond_branch
+	mov	r5, #0x0
+	ldr	r0, [sp]
+	add	r0, r0, sl
+	mov	r9, r0
+.L1993:
+	add	r0, r7, #0
+	add	r1, r5, #0
+	bl	CanSpeciesLearnTMHM
+	cmp	r0, #0
+	beq	.L1992	@cond_branch
+	mov	r1, #0xf1
+	lsl	r1, r1, #0x1
+	add	r4, r5, r1
+	add	r0, r4, #0
+	bl	ItemIdToBattleMoveId
+	ldr	r1, .L1996+0x14
+	lsl	r2, r6, #0x1
+	add	r1, r2, r1
+	strh	r0, [r1]
+	ldr	r0, .L1996+0x18
+	add	r2, r2, r0
+	strh	r4, [r2]
+	add	r0, r6, #0x1
+	lsl	r0, r0, #0x18
+	lsr	r6, r0, #0x18
+.L1992:
+	add	r0, r5, #0x1
+	lsl	r0, r0, #0x18
+	lsr	r5, r0, #0x18
+	cmp	r5, #0x39
+	bls	.L1993	@cond_branch
+	mov	r3, r9
+	add	r1, r3, r6
+	add	r1, r1, r8
+	ldr	r2, .L1996+0x1c
+	ldr	r0, [r2]
+	ldr	r3, .L1996+0x20
+	add	r0, r0, r3
+	strb	r1, [r0]
+	ldr	r0, [r2]
+	ldr	r1, .L1996+0x24
+	add	r0, r0, r1
+	mov	r3, sp
+	ldrb	r3, [r3]
+	strb	r3, [r0]
+	ldr	r0, [r2]
+	add	r1, r1, #0x1
+	add	r0, r0, r1
+	mov	r3, sl
+	strb	r3, [r0]
+	ldr	r0, [r2]
+	add	r1, r1, #0x1
+	add	r0, r0, r1
+	strb	r6, [r0]
+	ldr	r0, [r2]
+	ldr	r3, .L1996+0x28
+	add	r0, r0, r3
+	mov	r1, r8
+	strb	r1, [r0]
+	mov	r0, #0x1
+	add	sp, sp, #0x4
+	pop	{r3, r4, r5}
+	mov	r8, r3
+	mov	r9, r4
+	mov	sl, r5
+	pop	{r4, r5, r6, r7}
+	pop	{r1}
+	bx	r1
+.L1997:
+	.align	2, 0
+.L1996:
+	.word	sPokedexListItem
+	.word	sStatsMovesEgg
+	.word	sStatsMovesLevelUp
+	.word	sStatsMovesTutor
+	.word	gTutorMoves
+	.word	sStatsMovesTMHM
+	.word	sStatsMovesTMHM_ID
+	.word	sPokedexView
+	.word	0xcc6
+	.word	0xcc8
+	.word	0xccb
+.Lfe153:
+	.size	 CalculateMoves,.Lfe153-CalculateMoves
+	.align	2, 0
+	.type	 PrintMoveNameAndInfo,function
+	.thumb_func
+PrintMoveNameAndInfo:
+	push	{r4, r5, r6, r7, lr}
+	mov	r7, sl
+	mov	r6, r9
+	mov	r5, r8
+	push	{r5, r6, r7}
+	add	sp, sp, #-0x2c
+	add	r4, r1, #0
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	str	r0, [sp, #0x8]
+	lsl	r4, r4, #0x18
+	lsr	r4, r4, #0x18
+	ldr	r0, .L2033
+	ldr	r0, [r0]
+	ldr	r2, .L2033+0x4
+	add	r1, r0, r2
+	ldrb	r5, [r1]
+	ldr	r3, .L2033+0x8
+	add	r1, r0, r3
+	ldrb	r7, [r1]
+	add	r2, r2, #0x2
+	add	r1, r0, r2
+	ldrb	r1, [r1]
+	mov	r9, r1
+	add	r3, r3, #0x2
+	add	r1, r0, r3
+	ldrb	r1, [r1]
+	str	r1, [sp, #0xc]
+	sub	r2, r2, #0x6
+	add	r1, r0, r2
+	ldrb	r1, [r1]
+	mov	sl, r1
+	sub	r3, r3, #0x5
+	add	r0, r0, r3
+	ldrb	r0, [r0]
+	str	r0, [sp, #0x10]
+	mov	r0, #0x65
+	mov	r8, r0
+	ldr	r0, .L2033+0xc
+	ldr	r0, [r0]
+	ldrh	r0, [r0]
+	bl	NationalPokedexNumToSpecies
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
+	str	r0, [sp, #0x14]
+	cmp	r4, #0
+	bne	.L1999	@cond_branch
+	mov	r0, #0x8b
+	str	r0, [sp]
+	mov	r0, #0x4e
+	str	r0, [sp, #0x4]
+	mov	r0, #0x0
+	mov	r1, #0x0
+	mov	r2, #0x64
+	mov	r3, #0x13
+	bl	FillWindowPixelRect
+	b	.L2000
+.L2034:
+	.align	2, 0
+.L2033:
+	.word	sPokedexView
+	.word	0xcc8
+	.word	0xcc9
+	.word	sPokedexListItem
+.L1999:
+	mov	r0, #0x8b
+	str	r0, [sp]
+	mov	r0, #0x37
+	str	r0, [sp, #0x4]
+	mov	r0, #0x0
+	mov	r1, #0x0
+	mov	r2, #0x64
+	mov	r3, #0x30
+	bl	FillWindowPixelRect
+.L2000:
+	cmp	sl, r5
+	bcs	.L2001	@cond_branch
+	ldr	r1, .L2035
+	ldr	r0, .L2035+0x4
+	ldr	r0, [r0]
+	ldr	r2, .L2035+0x8
+	add	r0, r0, r2
+	ldrh	r0, [r0]
+	lsl	r0, r0, #0x1
+	add	r0, r0, r1
+	ldrh	r6, [r0]
+	ldr	r0, .L2035+0xc
+	mov	r1, #0xd
+	mul	r1, r1, r6
+	ldr	r2, .L2035+0x10
+	add	r1, r1, r2
+	bl	StringCopy
+	ldr	r0, .L2035+0x14
+	ldr	r2, .L2035+0x18
+	sub	r1, r6, #0x1
+	lsl	r1, r1, #0x2
+	add	r1, r1, r2
+	ldr	r1, [r1]
+	bl	StringCopy
+	ldr	r0, .L2035+0x1c
+	mov	r1, r8
+	add	r1, r1, #0x71
+	mov	r2, #0x13
+	add	r2, r2, #0x9
+	bl	PrintInfoScreenTextSmall
+	mov	r5, #0xe2
+	b	.L2002
+.L2036:
+	.align	2, 0
+.L2035:
+	.word	sStatsMovesEgg
+	.word	sPokedexView
+	.word	0xcc4
+	.word	gStringVar3
+	.word	gMoveNames
+	.word	gStringVar4
+	.word	gMoveDescriptionPointers
+	.word	gText_ThreeDashes
+.L2001:
+	add	r0, r5, r7
+	cmp	sl, r0
+	bge	.L2003	@cond_branch
+	ldr	r1, .L2037
+	ldr	r0, .L2037+0x4
+	ldr	r0, [r0]
+	ldr	r3, .L2037+0x8
+	add	r0, r0, r3
+	ldrh	r0, [r0]
+	sub	r0, r0, r5
+	lsl	r0, r0, #0x1
+	add	r0, r0, r1
+	ldrh	r6, [r0]
+	ldr	r0, .L2037+0xc
+	mov	r1, #0xd
+	mul	r1, r1, r6
+	ldr	r2, .L2037+0x10
+	add	r1, r1, r2
+	bl	StringCopy
+	ldr	r0, .L2037+0x14
+	ldr	r2, .L2037+0x18
+	sub	r1, r6, #0x1
+	lsl	r1, r1, #0x2
+	add	r1, r1, r2
+	ldr	r1, [r1]
+	bl	StringCopy
+	ldr	r0, .L2037+0x1c
+	ldr	r2, [sp, #0x14]
+	lsl	r1, r2, #0x2
+	add	r1, r1, r0
+	mov	r3, sl
+	sub	r0, r3, r5
+	ldr	r1, [r1]
+	lsl	r0, r0, #0x2
+	add	r0, r0, r1
+	ldrb	r1, [r0, #0x2]
+	ldr	r5, .L2037+0x20
+	add	r0, r5, #0
+	mov	r2, #0x0
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	ldr	r0, .L2037+0x24
+	mov	r4, r8
+	add	r4, r4, #0x71
+	mov	r2, #0x13
+	add	r2, r2, #0x3
+	add	r1, r4, #0
+	bl	PrintInfoScreenTextSmall
+	mov	r2, #0x13
+	add	r2, r2, #0xe
+	add	r0, r5, #0
+	add	r1, r4, #0
+	bl	PrintInfoScreenTextSmall
+	mov	r5, #0xd6
+	b	.L2002
+.L2038:
+	.align	2, 0
+.L2037:
+	.word	sStatsMovesLevelUp
+	.word	sPokedexView
+	.word	0xcc4
+	.word	gStringVar3
+	.word	gMoveNames
+	.word	gStringVar4
+	.word	gMoveDescriptionPointers
+	.word	gLevelUpLearnsets
+	.word	gStringVar1
+	.word	gText_Stats_MoveLevel
+.L2003:
+	add	r0, r0, r9
+	cmp	sl, r0
+	bge	.L2005	@cond_branch
+	ldr	r1, .L2039
+	ldr	r0, .L2039+0x4
+	ldr	r0, [r0]
+	ldr	r2, .L2039+0x8
+	add	r0, r0, r2
+	ldrh	r0, [r0]
+	sub	r0, r0, r5
+	sub	r0, r0, r7
+	lsl	r0, r0, #0x1
+	add	r0, r0, r1
+	ldrh	r6, [r0]
+	ldr	r0, .L2039+0xc
+	mov	r1, #0xd
+	mul	r1, r1, r6
+	ldr	r2, .L2039+0x10
+	add	r1, r1, r2
+	bl	StringCopy
+	ldr	r0, .L2039+0x14
+	ldr	r2, .L2039+0x18
+	sub	r1, r6, #0x1
+	lsl	r1, r1, #0x2
+	add	r1, r1, r2
+	ldr	r1, [r1]
+	bl	StringCopy
+	ldr	r0, .L2039+0x1c
+	mov	r3, sl
+	sub	r4, r3, r5
+	sub	r4, r4, r7
+	lsl	r4, r4, #0x1
+	add	r4, r4, r0
+	ldrh	r0, [r4]
+	ldr	r5, .L2039+0x20
+	add	r1, r5, #0
+	bl	CopyItemName
+	mov	r1, r8
+	add	r1, r1, #0x71
+	mov	r2, #0x13
+	add	r2, r2, #0x9
+	add	r0, r5, #0
+	bl	PrintInfoScreenTextSmall
+	ldrh	r5, [r4]
+	b	.L2002
+.L2040:
+	.align	2, 0
+.L2039:
+	.word	sStatsMovesTMHM
+	.word	sPokedexView
+	.word	0xcc4
+	.word	gStringVar3
+	.word	gMoveNames
+	.word	gStringVar4
+	.word	gMoveDescriptionPointers
+	.word	sStatsMovesTMHM_ID
+	.word	gStringVar1
+.L2005:
+	ldr	r1, [sp, #0xc]
+	add	r0, r0, r1
+	cmp	sl, r0
+	bge	.L2007	@cond_branch
+	ldr	r1, .L2041
+	ldr	r0, .L2041+0x4
+	ldr	r0, [r0]
+	ldr	r2, .L2041+0x8
+	add	r0, r0, r2
+	ldrh	r0, [r0]
+	sub	r0, r0, r5
+	sub	r0, r0, r7
+	mov	r3, r9
+	sub	r0, r0, r3
+	lsl	r0, r0, #0x1
+	add	r0, r0, r1
+	ldrh	r6, [r0]
+	ldr	r0, .L2041+0xc
+	mov	r1, #0xd
+	mul	r1, r1, r6
+	ldr	r2, .L2041+0x10
+	add	r1, r1, r2
+	bl	StringCopy
+	ldr	r0, .L2041+0x14
+	ldr	r2, .L2041+0x18
+	sub	r1, r6, #0x1
+	lsl	r1, r1, #0x2
+	add	r1, r1, r2
+	ldr	r1, [r1]
+	bl	StringCopy
+	ldr	r0, .L2041+0x1c
+	mov	r1, r8
+	add	r1, r1, #0x71
+	mov	r2, #0x13
+	add	r2, r2, #0x9
+	bl	PrintInfoScreenTextSmall
+	ldr	r5, .L2041+0x20
+	b	.L2002
+.L2042:
+	.align	2, 0
+.L2041:
+	.word	sStatsMovesTutor
+	.word	sPokedexView
+	.word	0xcc4
+	.word	gStringVar3
+	.word	gMoveNames
+	.word	gStringVar4
+	.word	gMoveDescriptionPointers
+	.word	gText_ThreeDashes
+	.word	0x22b
+.L2007:
+	ldr	r0, .L2043
+	ldr	r1, .L2043+0x4
+	bl	StringCopy
+	mov	r5, #0x1
+.L2002:
+	ldr	r4, .L2043+0x8
+	add	r0, r4, #0
+	add	r1, r4, #0
+	mov	r2, #0x0
+	mov	r3, #0x14
+	bl	StringCopyPadded
+	mov	r2, #0x13
+	add	r2, r2, #0x11
+	add	r0, r4, #0
+	mov	r1, r8
+	bl	PrintInfoScreenTextSmall
+	ldr	r2, .L2043+0xc
+	ldr	r0, [sp, #0x8]
+	lsl	r1, r0, #0x2
+	add	r0, r1, r0
+	lsl	r0, r0, #0x3
+	add	r0, r0, r2
+	mov	r2, #0x12
+	ldrsh	r0, [r0, r2]
+	str	r1, [sp, #0x18]
+	cmp	r0, #0
+	bne	.L2009	@cond_branch
+	ldr	r0, .L2043
+	mov	r2, #0x13
+	add	r2, r2, #0x22
+	mov	r1, r8
+	bl	PrintInfoScreenTextSmall
+	b	.L2010
+.L2044:
+	.align	2, 0
+.L2043:
+	.word	gStringVar4
+	.word	gText_CommunicationError
+	.word	gStringVar3
+	.word	gTasks
+.L2009:
+	ldr	r2, .L2045
+	ldr	r1, .L2045+0x4
+	lsl	r0, r6, #0x3
+	add	r0, r0, r1
+	ldrb	r0, [r0]
+	lsl	r0, r0, #0x2
+	add	r0, r0, r2
+	ldr	r0, [r0]
+	mov	r2, #0x13
+	add	r2, r2, #0x22
+	mov	r1, r8
+	bl	PrintInfoScreenTextSmall
+.L2010:
+	ldr	r1, .L2045+0x8
+	add	r0, r1, #0
+	add	r2, r5, #0
+	bl	AddItemIconSprite
+	ldr	r1, .L2045+0xc
+	ldr	r3, [sp, #0x18]
+	ldr	r2, [sp, #0x8]
+	add	r5, r3, r2
+	lsl	r5, r5, #0x3
+	add	r5, r5, r1
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	strh	r0, [r5, #0xe]
+	ldr	r3, .L2045+0x10
+	mov	r9, r3
+	mov	r0, #0xe
+	ldrsh	r1, [r5, r0]
+	lsl	r0, r1, #0x4
+	add	r0, r0, r1
+	lsl	r0, r0, #0x2
+	add	r0, r0, r9
+	mov	r1, #0xcb
+	strh	r1, [r0, #0x24]
+	mov	r2, #0xe
+	ldrsh	r1, [r5, r2]
+	lsl	r0, r1, #0x4
+	add	r0, r0, r1
+	lsl	r0, r0, #0x2
+	add	r0, r0, r9
+	mov	r1, #0x27
+	strh	r1, [r0, #0x26]
+	mov	r3, #0xe
+	ldrsh	r0, [r5, r3]
+	lsl	r1, r0, #0x4
+	add	r1, r1, r0
+	lsl	r1, r1, #0x2
+	add	r1, r1, r9
+	ldrb	r2, [r1, #0x5]
+	mov	r0, #0xd
+	neg	r0, r0
+	and	r0, r0, r2
+	strb	r0, [r1, #0x5]
+	ldr	r7, .L2045+0x14
+	mov	r1, sl
+	add	r1, r1, #0x1
+	add	r0, r7, #0
+	mov	r2, #0x1
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	ldr	r0, .L2045+0x18
+	ldr	r1, [sp, #0x10]
+	mov	r2, #0x1
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	ldr	r1, .L2045+0x1c
+	add	r0, r7, #0
+	bl	StringExpandPlaceholders
+	mov	r1, r8
+	sub	r1, r1, #0x1
+	lsl	r1, r1, #0x18
+	lsr	r1, r1, #0x18
+	mov	r4, #0x13
+	add	r4, r4, #0x1
+	add	r0, r7, #0
+	add	r2, r4, #0
+	bl	PrintInfoScreenTextSmallWhite
+	mov	r1, #0x12
+	ldrsh	r0, [r5, r1]
+	str	r4, [sp, #0x1c]
+	cmp	r0, #0
+	bne	.L2011	@cond_branch
+	ldr	r0, .L2045+0x20
+	mov	r1, r8
+	add	r1, r1, #0x3
+	mov	r4, #0x13
+	add	r4, r4, #0x40
+	add	r2, r4, #0
+	bl	PrintInfoScreenTextSmall
+	ldr	r1, .L2045+0x24
+	lsl	r2, r6, #0x2
+	add	r0, r2, r6
+	lsl	r0, r0, #0x2
+	add	r1, r0, r1
+	ldrb	r0, [r1, #0x2]
+	mov	r9, r4
+	mov	sl, r2
+	cmp	r0, #0x1
+	bhi	.L2012	@cond_branch
+	ldr	r1, .L2045+0x28
+	add	r0, r7, #0
+	bl	StringCopy
+	b	.L2013
+.L2046:
+	.align	2, 0
+.L2045:
+	.word	gContestEffectDescriptionPointers
+	.word	gContestMoves
+	.word	0xfdf3
+	.word	gTasks
+	.word	gSprites
+	.word	gStringVar1
+	.word	gStringVar2
+	.word	gText_Stats_MoveSelectedMax
+	.word	gText_Power
+	.word	gBattleMoves
+	.word	gText_ThreeDashes
+.L2012:
+	ldrb	r1, [r1, #0x2]
+	add	r0, r7, #0
+	mov	r2, #0x1
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+.L2013:
+	ldr	r5, .L2047
+	mov	r1, r8
+	add	r1, r1, #0x30
+	mov	r4, r9
+	add	r0, r5, #0
+	add	r2, r4, #0
+	bl	PrintInfoScreenTextSmall
+	bl	DestroySplitIcon
+	add	r0, r6, #0
+	bl	GetBattleMoveSplit
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	bl	ShowSplitIcon
+	ldr	r0, .L2047+0x4
+	mov	r1, r8
+	add	r1, r1, #0x45
+	add	r2, r4, #0
+	bl	PrintInfoScreenTextSmall
+	ldr	r1, .L2047+0x8
+	mov	r2, sl
+	add	r0, r2, r6
+	lsl	r0, r0, #0x2
+	add	r2, r0, r1
+	ldrb	r0, [r2, #0x4]
+	cmp	r0, #0
+	bne	.L2014	@cond_branch
+	ldr	r1, .L2047+0xc
+	add	r0, r5, #0
+	bl	StringCopy
+	b	.L2015
+.L2048:
+	.align	2, 0
+.L2047:
+	.word	gStringVar1
+	.word	gText_Accuracy2
+	.word	gBattleMoves
+	.word	gText_ThreeDashes
+.L2014:
+	ldrb	r1, [r2, #0x4]
+	add	r0, r5, #0
+	mov	r2, #0x1
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+.L2015:
+	ldr	r0, .L2049
+	mov	r1, r8
+	add	r1, r1, #0x75
+	mov	r2, r9
+	bl	PrintInfoScreenTextSmall
+	mov	r3, #0x32
+	add	r8, r8, r3
+	b	.L2016
+.L2050:
+	.align	2, 0
+.L2049:
+	.word	gStringVar1
+.L2011:
+	bl	DestroySplitIcon
+	ldr	r0, .L2051
+	ldr	r0, [r0]
+	ldr	r1, .L2051+0x4
+	add	r0, r0, r1
+	ldrb	r1, [r0]
+	lsl	r0, r1, #0x4
+	add	r0, r0, r1
+	lsl	r0, r0, #0x2
+	add	r0, r0, r9
+	add	r0, r0, #0x3e
+	ldrb	r1, [r0]
+	mov	r2, #0x4
+	orr	r1, r1, r2
+	strb	r1, [r0]
+	ldr	r0, .L2051+0x8
+	mov	r1, r8
+	add	r1, r1, #0x3
+	mov	r4, #0x13
+	add	r4, r4, #0x40
+	add	r2, r4, #0
+	bl	PrintInfoScreenTextSmall
+	mov	r5, #0x0
+	ldr	r2, .L2051+0xc
+	ldr	r0, .L2051+0x10
+	lsl	r1, r6, #0x3
+	add	r0, r1, r0
+	ldrb	r0, [r0]
+	lsl	r0, r0, #0x2
+	add	r0, r0, r2
+	ldrb	r2, [r0, #0x1]
+	str	r1, [sp, #0x20]
+	mov	r9, r4
+	cmp	r2, #0xff
+	beq	.L2017	@cond_branch
+	add	r0, r2, #0
+	mov	r1, #0xa
+	bl	__udivsi3
+	lsl	r0, r0, #0x18
+	lsr	r2, r0, #0x18
+.L2017:
+	mov	r1, #0x0
+	mov	r3, #0x30
+	add	r3, r3, r8
+	mov	sl, r3
+	mov	r0, r8
+	add	r0, r0, #0x45
+	str	r0, [sp, #0x24]
+	mov	r3, r8
+	add	r3, r3, #0x7a
+	str	r3, [sp, #0x28]
+	mov	r0, #0x32
+	add	r8, r8, r0
+.L2021:
+	cmp	r2, #0xff
+	beq	.L2020	@cond_branch
+	cmp	r1, r2
+	bcs	.L2020	@cond_branch
+	add	r0, r5, #0x1
+	lsl	r0, r0, #0x18
+	lsr	r5, r0, #0x18
+.L2020:
+	add	r0, r1, #0x1
+	lsl	r0, r0, #0x18
+	lsr	r1, r0, #0x18
+	cmp	r1, #0x7
+	bls	.L2021	@cond_branch
+	ldr	r7, .L2051+0x14
+	add	r0, r7, #0
+	add	r1, r5, #0
+	mov	r2, #0x1
+	mov	r3, #0x1
+	bl	ConvertIntToDecimalStringN
+	ldr	r4, .L2051+0x18
+	ldr	r1, .L2051+0x1c
+	add	r0, r4, #0
+	bl	StringCopy
+	add	r0, r4, #0
+	add	r1, r7, #0
+	bl	StringAppend
+	mov	r1, sl
+	mov	r5, r9
+	add	r0, r4, #0
+	add	r2, r5, #0
+	bl	PrintInfoScreenTextSmall
+	ldr	r0, .L2051+0x20
+	ldr	r1, [sp, #0x24]
+	add	r2, r5, #0
+	bl	PrintInfoScreenTextSmall
+	mov	r4, #0x0
+	ldr	r1, .L2051+0xc
+	ldr	r0, .L2051+0x10
+	ldr	r2, [sp, #0x20]
+	add	r0, r2, r0
+	ldrb	r0, [r0]
+	lsl	r0, r0, #0x2
+	add	r0, r0, r1
+	ldrb	r2, [r0, #0x2]
+	cmp	r2, #0xff
+	beq	.L2024	@cond_branch
+	add	r0, r2, #0
+	mov	r1, #0xa
+	bl	__udivsi3
+	lsl	r0, r0, #0x18
+	lsr	r2, r0, #0x18
+.L2024:
+	mov	r1, #0x0
+	add	r5, r7, #0
+.L2028:
+	cmp	r2, #0xff
+	beq	.L2027	@cond_branch
+	cmp	r1, r2
+	bcs	.L2027	@cond_branch
+	add	r0, r4, #0x1
+	lsl	r0, r0, #0x18
+	lsr	r4, r0, #0x18
+.L2027:
+	add	r0, r1, #0x1
+	lsl	r0, r0, #0x18
+	lsr	r1, r0, #0x18
+	cmp	r1, #0x7
+	bls	.L2028	@cond_branch
+	add	r0, r5, #0
+	add	r1, r4, #0
+	mov	r2, #0x1
+	mov	r3, #0x1
+	bl	ConvertIntToDecimalStringN
+	ldr	r4, .L2051+0x18
+	ldr	r1, .L2051+0x24
+	add	r0, r4, #0
+	bl	StringCopy
+	add	r0, r4, #0
+	add	r1, r5, #0
+	bl	StringAppend
+	ldr	r1, [sp, #0x28]
+	mov	r2, r9
+	add	r0, r4, #0
+	bl	PrintInfoScreenTextSmall
+.L2016:
+	ldr	r0, .L2051+0x28
+	ldr	r3, [sp, #0x18]
+	ldr	r2, [sp, #0x8]
+	add	r1, r3, r2
+	lsl	r1, r1, #0x3
+	add	r1, r1, r0
+	mov	r3, #0x12
+	ldrsh	r0, [r1, r3]
+	cmp	r0, #0
+	bne	.L2031	@cond_branch
+	ldr	r1, .L2051+0x2c
+	lsl	r0, r6, #0x2
+	add	r0, r0, r6
+	lsl	r0, r0, #0x2
+	add	r0, r0, r1
+	ldrb	r0, [r0, #0x3]
+	mov	r1, r8
+	ldr	r2, [sp, #0x1c]
+	mov	r3, #0x0
+	bl	SetTypeIconPosAndPal
+	mov	r0, #0x1
+	mov	r1, #0x1
+	bl	SetSpriteInvisibility
+	b	.L2032
+.L2052:
+	.align	2, 0
+.L2051:
+	.word	sPokedexView
+	.word	0xcc7
+	.word	gText_Appeal
+	.word	gContestEffects
+	.word	gContestMoves
+	.word	gStringVar1
+	.word	gStringVar2
+	.word	gText_PlusSymbol
+	.word	gText_Jam
+	.word	gText_Stats_Minus
+	.word	gTasks
+	.word	gBattleMoves
+.L2031:
+	ldr	r1, .L2053
+	lsl	r0, r6, #0x3
+	add	r0, r0, r1
+	ldrb	r0, [r0, #0x1]
+	lsl	r0, r0, #0x1d
+	lsr	r0, r0, #0x5
+	mov	r1, #0x98
+	lsl	r1, r1, #0x15
+	add	r0, r0, r1
+	lsr	r0, r0, #0x18
+	mov	r1, r8
+	ldr	r2, [sp, #0x1c]
+	mov	r3, #0x1
+	bl	SetTypeIconPosAndPal
+	mov	r0, #0x0
+	mov	r1, #0x1
+	bl	SetSpriteInvisibility
+.L2032:
+	add	sp, sp, #0x2c
+	pop	{r3, r4, r5}
+	mov	r8, r3
+	mov	r9, r4
+	mov	sl, r5
+	pop	{r4, r5, r6, r7}
+	pop	{r0}
+	bx	r0
+.L2054:
+	.align	2, 0
+.L2053:
+	.word	gContestMoves
+.Lfe154:
+	.size	 PrintMoveNameAndInfo,.Lfe154-PrintMoveNameAndInfo
+	.align	2, 0
+	.type	 PrintMonStats,function
+	.thumb_func
+PrintMonStats:
+	push	{r4, r5, r6, r7, lr}
+	add	sp, sp, #-0x4c
+	add	r6, r1, #0
+	add	r4, r2, #0
+	lsl	r0, r0, #0x18
+	lsr	r7, r0, #0x18
+	ldr	r0, .L2072
+	ldr	r0, [r0]
+	ldrh	r0, [r0]
+	bl	NationalPokedexNumToSpecies
+	lsl	r0, r0, #0x10
+	lsr	r5, r0, #0x10
+	mov	r0, #0xb
+	mul	r0, r0, r5
+	ldr	r1, .L2072+0x4
+	add	r0, r0, r1
+	mov	r1, #0x26
+	mov	r2, #0x10
+	bl	PrintInfoScreenTextSmall
+	cmp	r4, #0
+	bne	.L2056	@cond_branch
+	lsl	r0, r6, #0x10
+	lsr	r0, r0, #0x10
+	bl	NationalToHoennOrder
+	lsl	r0, r0, #0x10
+	lsr	r4, r0, #0x10
+	b	.L2057
+.L2073:
+	.align	2, 0
+.L2072:
+	.word	sPokedexListItem
+	.word	gSpeciesNames
+.L2056:
+	add	r4, r6, #0
+.L2057:
+	ldr	r1, .L2074
+	mov	r0, sp
+	bl	StringCopy
+	add	r1, r4, #0
+	mov	r2, #0x2
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	mov	r0, sp
+	mov	r1, #0x26
+	mov	r2, #0x1a
+	bl	PrintInfoScreenTextSmall
+	ldr	r1, .L2074+0x4
+	lsl	r0, r5, #0x3
+	add	r0, r0, r5
+	lsl	r0, r0, #0x2
+	add	r0, r0, r1
+	ldrb	r0, [r0, #0x12]
+	cmp	r0, #0x7f
+	beq	.L2062	@cond_branch
+	cmp	r0, #0x7f
+	bgt	.L2068	@cond_branch
+	cmp	r0, #0x1f
+	beq	.L2060	@cond_branch
+	cmp	r0, #0x1f
+	bgt	.L2069	@cond_branch
+	cmp	r0, #0
+	beq	.L2059	@cond_branch
+	b	.L2066
+.L2075:
+	.align	2, 0
+.L2074:
+	.word	gText_NumberClear01
+	.word	gBaseStats
+.L2069:
+	cmp	r0, #0x3f
+	beq	.L2061	@cond_branch
+	b	.L2066
+.L2068:
+	cmp	r0, #0xdf
+	beq	.L2064	@cond_branch
+	cmp	r0, #0xdf
+	bgt	.L2070	@cond_branch
+	cmp	r0, #0xbf
+	beq	.L2063	@cond_branch
+	b	.L2066
+.L2070:
+	cmp	r0, #0xfe
+	beq	.L2065	@cond_branch
+	b	.L2066
+.L2059:
+	ldr	r0, .L2076
+	b	.L2071
+.L2077:
+	.align	2, 0
+.L2076:
+	.word	gText_Stats_Gender_0
+.L2060:
+	ldr	r0, .L2078
+	b	.L2071
+.L2079:
+	.align	2, 0
+.L2078:
+	.word	gText_Stats_Gender_12_5
+.L2061:
+	ldr	r0, .L2080
+	b	.L2071
+.L2081:
+	.align	2, 0
+.L2080:
+	.word	gText_Stats_Gender_25
+.L2062:
+	ldr	r0, .L2082
+	b	.L2071
+.L2083:
+	.align	2, 0
+.L2082:
+	.word	gText_Stats_Gender_50
+.L2063:
+	ldr	r0, .L2084
+	b	.L2071
+.L2085:
+	.align	2, 0
+.L2084:
+	.word	gText_Stats_Gender_75
+.L2064:
+	ldr	r0, .L2086
+	b	.L2071
+.L2087:
+	.align	2, 0
+.L2086:
+	.word	gText_Stats_Gender_87_5
+.L2065:
+	ldr	r0, .L2088
+.L2071:
+	mov	r1, #0x26
+	mov	r2, #0x24
+	bl	PrintInfoScreenTextSmall
+	b	.L2058
+.L2089:
+	.align	2, 0
+.L2088:
+	.word	gText_Stats_Gender_100
+.L2066:
+	ldr	r0, .L2090
+	mov	r1, #0x26
+	mov	r2, #0x24
+	bl	PrintInfoScreenTextSmall
+.L2058:
+	add	r0, r7, #0
+	mov	r1, #0x0
+	bl	PrintMoveNameAndInfo
+	add	sp, sp, #0x4c
+	pop	{r4, r5, r6, r7}
+	pop	{r0}
+	bx	r0
+.L2091:
+	.align	2, 0
+.L2090:
+	.word	gText_ThreeDashes
+.Lfe155:
+	.size	 PrintMonStats,.Lfe155-PrintMonStats
+	.align	2, 0
+	.type	 PrintMonStatsToggle,function
+	.thumb_func
+PrintMonStatsToggle:
+	push	{r4, r5, r6, r7, lr}
+	mov	r7, sl
+	mov	r6, r9
+	mov	r5, r8
+	push	{r5, r6, r7}
+	add	sp, sp, #-0x40
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	str	r0, [sp, #0x34]
+	mov	r0, #0x8
+	mov	sl, r0
+	ldr	r0, .L2149
+	ldr	r0, [r0]
+	ldrh	r0, [r0]
+	bl	NationalPokedexNumToSpecies
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
+	mov	r9, r0
+	mov	r0, #0x5a
+	str	r0, [sp]
+	mov	r0, #0x64
+	str	r0, [sp, #0x4]
+	mov	r0, #0x0
+	mov	r1, #0x0
+	mov	r2, #0x8
+	mov	r3, #0x34
+	bl	FillWindowPixelRect
+	mov	r0, #0x82
+	str	r0, [sp]
+	mov	r0, #0x3a
+	str	r0, [sp, #0x4]
+	mov	r0, #0x0
+	mov	r1, #0x0
+	mov	r2, #0x65
+	mov	r3, #0x63
+	bl	FillWindowPixelRect
+	ldr	r1, .L2149+0x4
+	ldr	r2, [sp, #0x34]
+	lsl	r0, r2, #0x2
+	add	r0, r0, r2
+	lsl	r0, r0, #0x3
+	add	r0, r0, r1
+	mov	r3, #0x12
+	ldrsh	r0, [r0, r3]
+	cmp	r0, #0
+	bne	.L2093	@cond_branch
+	ldr	r0, .L2149+0x8
+	mov	r1, #0x8
+	mov	r2, #0x34
+	bl	PrintInfoScreenTextSmall
+	add	r4, sp, #0x24
+	ldr	r0, .L2149+0xc
+	mov	r1, r9
+	lsl	r6, r1, #0x3
+	add	r5, r6, r1
+	lsl	r5, r5, #0x2
+	add	r5, r5, r0
+	ldrb	r1, [r5]
+	add	r0, r4, #0
+	mov	r2, #0x1
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	add	r0, r4, #0
+	mov	r1, #0x1f
+	mov	r2, #0x34
+	bl	PrintInfoScreenTextSmall
+	ldr	r0, .L2149+0x10
+	mov	r1, #0x33
+	mov	r2, #0x34
+	bl	PrintInfoScreenTextSmall
+	ldrb	r1, [r5, #0x3]
+	add	r0, r4, #0
+	mov	r2, #0x1
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	add	r0, r4, #0
+	mov	r1, #0x4e
+	mov	r2, #0x34
+	bl	PrintInfoScreenTextSmall
+	ldr	r0, .L2149+0x14
+	mov	r1, #0x8
+	mov	r2, #0x3f
+	bl	PrintInfoScreenTextSmall
+	ldrb	r1, [r5, #0x1]
+	add	r0, r4, #0
+	mov	r2, #0x1
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	add	r0, r4, #0
+	mov	r1, #0x1f
+	mov	r2, #0x3f
+	bl	PrintInfoScreenTextSmall
+	ldr	r0, .L2149+0x18
+	mov	r1, #0x33
+	mov	r2, #0x3f
+	bl	PrintInfoScreenTextSmall
+	ldrb	r1, [r5, #0x4]
+	add	r0, r4, #0
+	mov	r2, #0x1
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	add	r0, r4, #0
+	mov	r1, #0x4e
+	mov	r2, #0x3f
+	bl	PrintInfoScreenTextSmall
+	ldr	r0, .L2149+0x1c
+	mov	r1, #0x8
+	mov	r2, #0x4a
+	bl	PrintInfoScreenTextSmall
+	ldrb	r1, [r5, #0x2]
+	add	r0, r4, #0
+	mov	r2, #0x1
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	add	r0, r4, #0
+	mov	r1, #0x1f
+	mov	r2, #0x4a
+	bl	PrintInfoScreenTextSmall
+	ldr	r0, .L2149+0x20
+	mov	r1, #0x33
+	mov	r2, #0x4a
+	bl	PrintInfoScreenTextSmall
+	ldrb	r1, [r5, #0x5]
+	add	r0, r4, #0
+	mov	r2, #0x1
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	add	r0, r4, #0
+	mov	r1, #0x4e
+	mov	r2, #0x4a
+	bl	PrintInfoScreenTextSmall
+	mov	r8, r6
+	b	.L2094
+.L2150:
+	.align	2, 0
+.L2149:
+	.word	sPokedexListItem
+	.word	gTasks
+	.word	gText_Stats_HP
+	.word	gBaseStats
+	.word	gText_Stats_Speed
+	.word	gText_Stats_Attack
+	.word	gText_Stats_SpAtk
+	.word	gText_Stats_Defense
+	.word	gText_Stats_SpDef
+.L2093:
+	ldr	r0, .L2151
+	mov	r1, #0x8
+	mov	r2, #0x34
+	bl	PrintInfoScreenTextSmall
+	add	r4, sp, #0x24
+	ldr	r0, .L2151+0x4
+	mov	r2, r9
+	lsl	r2, r2, #0x3
+	mov	r8, r2
+	mov	r6, r8
+	add	r6, r6, r9
+	lsl	r6, r6, #0x2
+	add	r6, r6, r0
+	ldrb	r5, [r6, #0xc]
+	lsl	r1, r5, #0x1e
+	lsr	r1, r1, #0x1e
+	add	r0, r4, #0
+	mov	r2, #0x1
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	add	r0, r4, #0
+	mov	r1, #0x1f
+	mov	r2, #0x34
+	bl	PrintInfoScreenTextSmall
+	ldr	r0, .L2151+0x8
+	mov	r1, #0x33
+	mov	r2, #0x34
+	bl	PrintInfoScreenTextSmall
+	lsr	r1, r5, #0x6
+	add	r0, r4, #0
+	mov	r2, #0x1
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	add	r0, r4, #0
+	mov	r1, #0x4e
+	mov	r2, #0x34
+	bl	PrintInfoScreenTextSmall
+	ldr	r0, .L2151+0xc
+	mov	r1, #0x8
+	mov	r2, #0x3f
+	bl	PrintInfoScreenTextSmall
+	lsl	r1, r5, #0x1c
+	lsr	r1, r1, #0x1e
+	add	r0, r4, #0
+	mov	r2, #0x1
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	add	r0, r4, #0
+	mov	r1, #0x1f
+	mov	r2, #0x3f
+	bl	PrintInfoScreenTextSmall
+	ldr	r0, .L2151+0x10
+	mov	r1, #0x33
+	mov	r2, #0x3f
+	bl	PrintInfoScreenTextSmall
+	ldrb	r6, [r6, #0xd]
+	lsl	r1, r6, #0x1e
+	lsr	r1, r1, #0x1e
+	add	r0, r4, #0
+	mov	r2, #0x1
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	add	r0, r4, #0
+	mov	r1, #0x4e
+	mov	r2, #0x3f
+	bl	PrintInfoScreenTextSmall
+	ldr	r0, .L2151+0x14
+	mov	r1, #0x8
+	mov	r2, #0x4a
+	bl	PrintInfoScreenTextSmall
+	lsl	r5, r5, #0x1a
+	lsr	r5, r5, #0x1e
+	add	r0, r4, #0
+	add	r1, r5, #0
+	mov	r2, #0x1
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	add	r0, r4, #0
+	mov	r1, #0x1f
+	mov	r2, #0x4a
+	bl	PrintInfoScreenTextSmall
+	ldr	r0, .L2151+0x18
+	mov	r1, #0x33
+	mov	r2, #0x4a
+	bl	PrintInfoScreenTextSmall
+	lsl	r6, r6, #0x1c
+	lsr	r6, r6, #0x1e
+	add	r0, r4, #0
+	add	r1, r6, #0
+	mov	r2, #0x1
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	add	r0, r4, #0
+	mov	r1, #0x4e
+	mov	r2, #0x4a
+	bl	PrintInfoScreenTextSmall
+.L2094:
+	mov	r7, #0x0
+	ldr	r2, .L2151+0x1c
+	ldr	r3, [sp, #0x34]
+	lsl	r1, r3, #0x2
+	add	r0, r1, r3
+	lsl	r0, r0, #0x3
+	add	r0, r0, r2
+	mov	r2, #0x12
+	ldrsh	r0, [r0, r2]
+	str	r1, [sp, #0x3c]
+	cmp	r0, #0
+	beq	.LCB22028
+	b	.L2095	@long jump
+.LCB22028:
+	ldr	r0, .L2151+0x20
+	mov	r1, sl
+	mov	r2, #0x56
+	bl	PrintInfoScreenTextSmall
+	ldr	r5, .L2151+0x24
+	ldr	r1, .L2151+0x4
+	mov	r0, r8
+	add	r0, r0, r9
+	lsl	r0, r0, #0x2
+	add	r6, r0, r1
+	ldrh	r1, [r6, #0xa]
+	add	r0, r5, #0
+	mov	r2, #0x1
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	mov	r4, sl
+	add	r4, r4, #0x46
+	add	r0, r5, #0
+	add	r1, r4, #0
+	mov	r2, #0x56
+	bl	PrintInfoScreenTextSmall
+	ldr	r0, .L2151+0x28
+	mov	r5, #0xb
+	add	r5, r5, #0x56
+	mov	r1, sl
+	add	r2, r5, #0
+	bl	PrintInfoScreenTextSmall
+	ldrb	r1, [r6, #0x14]
+	add	r0, sp, #0x8
+	mov	r2, #0x1
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	mov	r0, #0x0
+	add	r1, sp, #0x8
+	mov	r2, #0x5d
+	bl	GetStringRightAlignXOffset
+	lsl	r1, r0, #0x18
+	lsr	r1, r1, #0x18
+	add	r0, sp, #0x8
+	add	r2, r5, #0
+	bl	PrintInfoScreenTextSmall
+	mov	r7, #0x2
+	ldrb	r0, [r6, #0x16]
+	str	r4, [sp, #0x38]
+	cmp	r0, #0xf
+	beq	.L2097	@cond_branch
+	ldrb	r0, [r6, #0x17]
+	cmp	r0, #0xf
+	bne	.L2096	@cond_branch
+.L2097:
+	ldr	r0, .L2151+0x2c
+	mov	r3, #0xb
+	lsl	r4, r3, #0x19
+	mov	r1, #0xac
+	lsl	r1, r1, #0x17
+	add	r4, r4, r1
+	lsr	r4, r4, #0x18
+	mov	r1, sl
+	add	r2, r4, #0
+	bl	PrintInfoScreenTextSmall
+	ldr	r0, .L2151+0x30
+	mov	r1, #0x4e
+	add	r2, r4, #0
+	bl	PrintInfoScreenTextSmall
+	b	.L2098
+.L2152:
+	.align	2, 0
+.L2151:
+	.word	gText_Stats_EVHP
+	.word	gBaseStats
+	.word	gText_Stats_EVSpeed
+	.word	gText_Stats_EVAttack
+	.word	gText_Stats_EVSpAtk
+	.word	gText_Stats_EVDefense
+	.word	gText_Stats_EVSpDef
+	.word	gTasks
+	.word	gText_Stats_Exp
+	.word	gStringVar1
+	.word	gText_Stats_Friendship
+	.word	gText_Stats_EggCycles
+	.word	gText_ThreeDashes
+.L2096:
+	ldr	r0, .L2153
+	mov	r2, #0xb
+	lsl	r4, r2, #0x19
+	mov	r3, #0xac
+	lsl	r3, r3, #0x17
+	add	r4, r4, r3
+	lsr	r4, r4, #0x18
+	mov	r1, sl
+	add	r2, r4, #0
+	bl	PrintInfoScreenTextSmall
+	ldrb	r1, [r6, #0x13]
+	add	r0, sp, #0x8
+	mov	r2, #0x1
+	mov	r3, #0x2
+	bl	ConvertIntToDecimalStringN
+	mov	r0, #0x0
+	add	r1, sp, #0x8
+	mov	r2, #0x5d
+	bl	GetStringRightAlignXOffset
+	lsl	r1, r0, #0x18
+	lsr	r1, r1, #0x18
+	add	r0, sp, #0x8
+	add	r2, r4, #0
+	bl	PrintInfoScreenTextSmall
+.L2098:
+	add	r0, r7, #0x1
+	lsl	r0, r0, #0x18
+	lsr	r7, r0, #0x18
+	ldr	r0, .L2153+0x4
+	mov	r1, #0xb
+	mov	r4, r1
+	mul	r4, r4, r7
+	add	r4, r4, #0x56
+	lsl	r4, r4, #0x18
+	lsr	r4, r4, #0x18
+	mov	r1, sl
+	add	r2, r4, #0
+	bl	PrintInfoScreenTextSmall
+	ldr	r6, .L2153+0x8
+	ldr	r0, .L2153+0xc
+	mov	r5, r8
+	add	r5, r5, r9
+	lsl	r5, r5, #0x2
+	add	r5, r5, r0
+	ldrb	r1, [r5, #0x8]
+	add	r0, r6, #0
+	mov	r2, #0x1
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	ldr	r1, [sp, #0x38]
+	add	r0, r6, #0
+	add	r2, r4, #0
+	bl	PrintInfoScreenTextSmall
+	add	r0, r7, #0x1
+	lsl	r0, r0, #0x18
+	lsr	r7, r0, #0x18
+	ldr	r0, .L2153+0x10
+	mov	r3, #0xb
+	mov	r2, r3
+	mul	r2, r2, r7
+	add	r2, r2, #0x56
+	lsl	r2, r2, #0x18
+	lsr	r2, r2, #0x18
+	mov	r1, sl
+	bl	PrintInfoScreenTextSmall
+	ldrb	r0, [r5, #0x15]
+	cmp	r0, #0x5
+	bhi	.L2099	@cond_branch
+	lsl	r0, r0, #0x2
+	ldr	r1, .L2153+0x14
+	add	r0, r0, r1
+	ldr	r0, [r0]
+	mov	pc, r0
+.L2154:
+	.align	2, 0
+.L2153:
+	.word	gText_Stats_EggCycles
+	.word	gText_Stats_Catch
+	.word	gStringVar1
+	.word	gBaseStats
+	.word	gText_Stats_Growthrate
+	.word	.L2107
+	.align	2, 0
+	.align	2, 0
+.L2107:
+	.word	.L2100
+	.word	.L2101
+	.word	.L2102
+	.word	.L2103
+	.word	.L2104
+	.word	.L2105
+.L2100:
+	ldr	r1, .L2155
+	b	.L2148
+.L2156:
+	.align	2, 0
+.L2155:
+	.word	gText_Stats_MEDIUM_FAST
+.L2101:
+	ldr	r1, .L2157
+	b	.L2148
+.L2158:
+	.align	2, 0
+.L2157:
+	.word	gText_Stats_ERRATIC
+.L2102:
+	ldr	r1, .L2159
+	b	.L2148
+.L2160:
+	.align	2, 0
+.L2159:
+	.word	gText_Stats_FLUCTUATING
+.L2103:
+	ldr	r1, .L2161
+	b	.L2148
+.L2162:
+	.align	2, 0
+.L2161:
+	.word	gText_Stats_MEDIUM_SLOW
+.L2104:
+	ldr	r1, .L2163
+.L2148:
+	add	r0, sp, #0x8
+	bl	StringCopy
+	b	.L2099
+.L2164:
+	.align	2, 0
+.L2163:
+	.word	gText_Stats_FAST
+.L2105:
+	ldr	r1, .L2165
+	add	r0, sp, #0x8
+	bl	StringCopy
+.L2099:
+	mov	r0, #0x0
+	add	r1, sp, #0x8
+	mov	r2, #0x5d
+	bl	GetStringRightAlignXOffset
+	lsl	r1, r0, #0x18
+	lsr	r1, r1, #0x18
+	mov	r0, #0xb
+	mov	r2, r0
+	mul	r2, r2, r7
+	add	r2, r2, #0x56
+	lsl	r2, r2, #0x18
+	lsr	r2, r2, #0x18
+	add	r0, sp, #0x8
+	bl	PrintInfoScreenTextSmall
+	b	.L2108
+.L2166:
+	.align	2, 0
+.L2165:
+	.word	gText_Stats_SLOW
+.L2095:
+	ldr	r0, .L2167
+	mov	r1, sl
+	mov	r2, #0x56
+	bl	PrintInfoScreenTextSmall
+	ldr	r1, .L2167+0x4
+	mov	r0, r8
+	add	r0, r0, r9
+	lsl	r0, r0, #0x2
+	add	r0, r0, r1
+	ldrb	r0, [r0, #0x16]
+	sub	r0, r0, #0x1
+	cmp	r0, #0xe
+	bls	.LCB22345
+	b	.L2109	@long jump
+.LCB22345:
+	lsl	r0, r0, #0x2
+	ldr	r1, .L2167+0x8
+	add	r0, r0, r1
+	ldr	r0, [r0]
+	mov	pc, r0
+.L2168:
+	.align	2, 0
+.L2167:
+	.word	gText_Stats_eggGroup_g1
+	.word	gBaseStats
+	.word	.L2125
+	.align	2, 0
+	.align	2, 0
+.L2125:
+	.word	.L2110
+	.word	.L2111
+	.word	.L2112
+	.word	.L2113
+	.word	.L2114
+	.word	.L2115
+	.word	.L2116
+	.word	.L2117
+	.word	.L2118
+	.word	.L2119
+	.word	.L2120
+	.word	.L2121
+	.word	.L2122
+	.word	.L2123
+	.word	.L2124
+.L2110:
+	ldr	r0, .L2169
+	ldr	r1, .L2169+0x4
+	bl	StringCopy
+	b	.L2109
+.L2170:
+	.align	2, 0
+.L2169:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_MONSTER
+.L2111:
+	ldr	r0, .L2171
+	ldr	r1, .L2171+0x4
+	bl	StringCopy
+	b	.L2109
+.L2172:
+	.align	2, 0
+.L2171:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_WATER_1
+.L2112:
+	ldr	r0, .L2173
+	ldr	r1, .L2173+0x4
+	bl	StringCopy
+	b	.L2109
+.L2174:
+	.align	2, 0
+.L2173:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_BUG
+.L2113:
+	ldr	r0, .L2175
+	ldr	r1, .L2175+0x4
+	bl	StringCopy
+	b	.L2109
+.L2176:
+	.align	2, 0
+.L2175:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_FLYING
+.L2114:
+	ldr	r0, .L2177
+	ldr	r1, .L2177+0x4
+	bl	StringCopy
+	b	.L2109
+.L2178:
+	.align	2, 0
+.L2177:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_FIELD
+.L2115:
+	ldr	r0, .L2179
+	ldr	r1, .L2179+0x4
+	bl	StringCopy
+	b	.L2109
+.L2180:
+	.align	2, 0
+.L2179:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_FAIRY
+.L2116:
+	ldr	r0, .L2181
+	ldr	r1, .L2181+0x4
+	bl	StringCopy
+	b	.L2109
+.L2182:
+	.align	2, 0
+.L2181:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_GRASS
+.L2117:
+	ldr	r0, .L2183
+	ldr	r1, .L2183+0x4
+	bl	StringCopy
+	b	.L2109
+.L2184:
+	.align	2, 0
+.L2183:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_HUMAN_LIKE
+.L2118:
+	ldr	r0, .L2185
+	ldr	r1, .L2185+0x4
+	bl	StringCopy
+	b	.L2109
+.L2186:
+	.align	2, 0
+.L2185:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_WATER_3
+.L2119:
+	ldr	r0, .L2187
+	ldr	r1, .L2187+0x4
+	bl	StringCopy
+	b	.L2109
+.L2188:
+	.align	2, 0
+.L2187:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_MINERAL
+.L2120:
+	ldr	r0, .L2189
+	ldr	r1, .L2189+0x4
+	bl	StringCopy
+	b	.L2109
+.L2190:
+	.align	2, 0
+.L2189:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_AMORPHOUS
+.L2121:
+	ldr	r0, .L2191
+	ldr	r1, .L2191+0x4
+	bl	StringCopy
+	b	.L2109
+.L2192:
+	.align	2, 0
+.L2191:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_WATER_2
+.L2122:
+	ldr	r0, .L2193
+	ldr	r1, .L2193+0x4
+	bl	StringCopy
+	b	.L2109
+.L2194:
+	.align	2, 0
+.L2193:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_DITTO
+.L2123:
+	ldr	r0, .L2195
+	ldr	r1, .L2195+0x4
+	bl	StringCopy
+	b	.L2109
+.L2196:
+	.align	2, 0
+.L2195:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_DRAGON
+.L2124:
+	ldr	r0, .L2197
+	ldr	r1, .L2197+0x4
+	bl	StringCopy
+.L2109:
+	ldr	r0, .L2197
+	mov	r4, sl
+	add	r4, r4, #0x25
+	mov	r1, #0xb
+	mov	r2, r1
+	mul	r2, r2, r7
+	add	r2, r2, #0x56
+	lsl	r2, r2, #0x18
+	lsr	r2, r2, #0x18
+	add	r1, r4, #0
+	bl	PrintInfoScreenTextSmall
+	add	r0, r7, #0x1
+	lsl	r0, r0, #0x18
+	lsr	r7, r0, #0x18
+	ldr	r0, .L2197+0x8
+	mov	r3, #0xb
+	mov	r2, r3
+	mul	r2, r2, r7
+	add	r2, r2, #0x56
+	lsl	r2, r2, #0x18
+	lsr	r2, r2, #0x18
+	mov	r1, sl
+	bl	PrintInfoScreenTextSmall
+	ldr	r1, .L2197+0xc
+	mov	r0, r8
+	add	r0, r0, r9
+	lsl	r0, r0, #0x2
+	add	r0, r0, r1
+	ldrb	r0, [r0, #0x17]
+	sub	r0, r0, #0x1
+	cmp	r0, #0xe
+	bls	.LCB22621
+	b	.L2127	@long jump
+.LCB22621:
+	lsl	r0, r0, #0x2
+	ldr	r1, .L2197+0x10
+	add	r0, r0, r1
+	ldr	r0, [r0]
+	mov	pc, r0
+.L2198:
+	.align	2, 0
+.L2197:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_UNDISCOVERED
+	.word	gText_Stats_eggGroup_g2
+	.word	gBaseStats
+	.word	.L2143
+	.align	2, 0
+	.align	2, 0
+.L2143:
+	.word	.L2128
+	.word	.L2129
+	.word	.L2130
+	.word	.L2131
+	.word	.L2132
+	.word	.L2133
+	.word	.L2134
+	.word	.L2135
+	.word	.L2136
+	.word	.L2137
+	.word	.L2138
+	.word	.L2139
+	.word	.L2140
+	.word	.L2141
+	.word	.L2142
+.L2128:
+	ldr	r0, .L2199
+	ldr	r1, .L2199+0x4
+	bl	StringCopy
+	b	.L2127
+.L2200:
+	.align	2, 0
+.L2199:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_MONSTER
+.L2129:
+	ldr	r0, .L2201
+	ldr	r1, .L2201+0x4
+	bl	StringCopy
+	b	.L2127
+.L2202:
+	.align	2, 0
+.L2201:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_WATER_1
+.L2130:
+	ldr	r0, .L2203
+	ldr	r1, .L2203+0x4
+	bl	StringCopy
+	b	.L2127
+.L2204:
+	.align	2, 0
+.L2203:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_BUG
+.L2131:
+	ldr	r0, .L2205
+	ldr	r1, .L2205+0x4
+	bl	StringCopy
+	b	.L2127
+.L2206:
+	.align	2, 0
+.L2205:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_FLYING
+.L2132:
+	ldr	r0, .L2207
+	ldr	r1, .L2207+0x4
+	bl	StringCopy
+	b	.L2127
+.L2208:
+	.align	2, 0
+.L2207:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_FIELD
+.L2133:
+	ldr	r0, .L2209
+	ldr	r1, .L2209+0x4
+	bl	StringCopy
+	b	.L2127
+.L2210:
+	.align	2, 0
+.L2209:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_FAIRY
+.L2134:
+	ldr	r0, .L2211
+	ldr	r1, .L2211+0x4
+	bl	StringCopy
+	b	.L2127
+.L2212:
+	.align	2, 0
+.L2211:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_GRASS
+.L2135:
+	ldr	r0, .L2213
+	ldr	r1, .L2213+0x4
+	bl	StringCopy
+	b	.L2127
+.L2214:
+	.align	2, 0
+.L2213:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_HUMAN_LIKE
+.L2136:
+	ldr	r0, .L2215
+	ldr	r1, .L2215+0x4
+	bl	StringCopy
+	b	.L2127
+.L2216:
+	.align	2, 0
+.L2215:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_WATER_3
+.L2137:
+	ldr	r0, .L2217
+	ldr	r1, .L2217+0x4
+	bl	StringCopy
+	b	.L2127
+.L2218:
+	.align	2, 0
+.L2217:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_MINERAL
+.L2138:
+	ldr	r0, .L2219
+	ldr	r1, .L2219+0x4
+	bl	StringCopy
+	b	.L2127
+.L2220:
+	.align	2, 0
+.L2219:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_AMORPHOUS
+.L2139:
+	ldr	r0, .L2221
+	ldr	r1, .L2221+0x4
+	bl	StringCopy
+	b	.L2127
+.L2222:
+	.align	2, 0
+.L2221:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_WATER_2
+.L2140:
+	ldr	r0, .L2223
+	ldr	r1, .L2223+0x4
+	bl	StringCopy
+	b	.L2127
+.L2224:
+	.align	2, 0
+.L2223:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_DITTO
+.L2141:
+	ldr	r0, .L2225
+	ldr	r1, .L2225+0x4
+	bl	StringCopy
+	b	.L2127
+.L2226:
+	.align	2, 0
+.L2225:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_DRAGON
+.L2142:
+	ldr	r0, .L2227
+	ldr	r1, .L2227+0x4
+	bl	StringCopy
+.L2127:
+	ldr	r0, .L2227
+	add	r1, r4, #0
+	mov	r3, #0xb
+	mov	r2, r3
+	mul	r2, r2, r7
+	add	r2, r2, #0x56
+	lsl	r2, r2, #0x18
+	lsr	r2, r2, #0x18
+	bl	PrintInfoScreenTextSmall
+.L2108:
+	ldr	r0, .L2227+0x8
+	ldr	r2, [sp, #0x3c]
+	ldr	r3, [sp, #0x34]
+	add	r1, r2, r3
+	lsl	r1, r1, #0x3
+	add	r1, r1, r0
+	mov	r2, #0x12
+	ldrsh	r0, [r1, r2]
+	cmp	r0, #0
+	bne	.L2145	@cond_branch
+	ldr	r1, .L2227+0xc
+	mov	r0, r8
+	add	r0, r0, r9
+	lsl	r0, r0, #0x2
+	add	r6, r0, r1
+	ldrb	r5, [r6, #0x18]
+	mov	r3, #0xd
+	mov	r8, r3
+	mov	r0, r8
+	mul	r0, r0, r5
+	ldr	r7, .L2227+0x10
+	add	r0, r0, r7
+	mov	r1, #0x65
+	mov	r2, #0x63
+	bl	PrintInfoScreenTextSmallWhite
+	ldr	r0, .L2227+0x14
+	mov	r9, r0
+	lsl	r0, r5, #0x2
+	add	r0, r0, r9
+	ldr	r0, [r0]
+	mov	r2, #0x63
+	add	r2, r2, #0xe
+	mov	r1, #0x65
+	bl	PrintInfoScreenTextSmall
+	ldrh	r0, [r6, #0x1a]
+	cmp	r0, #0
+	beq	.L2147	@cond_branch
+	add	r4, r0, #0
+	mov	r0, r8
+	mul	r0, r0, r4
+	add	r0, r0, r7
+	mov	r2, #0x63
+	add	r2, r2, #0x1e
+	mov	r1, #0x65
+	bl	PrintInfoScreenTextSmallWhite
+	lsl	r4, r4, #0x2
+	add	r4, r4, r9
+	ldr	r0, [r4]
+	mov	r2, #0x63
+	add	r2, r2, #0x2c
+	mov	r1, #0x65
+	bl	PrintInfoScreenTextSmall
+	b	.L2147
+.L2228:
+	.align	2, 0
+.L2227:
+	.word	gStringVar1
+	.word	gText_Stats_eggGroup_UNDISCOVERED
+	.word	gTasks
+	.word	gBaseStats
+	.word	gAbilityNames
+	.word	gAbilityDescriptionPointers
+.L2145:
+	ldr	r1, .L2229
+	mov	r0, r8
+	add	r0, r0, r9
+	lsl	r0, r0, #0x2
+	add	r0, r0, r1
+	ldrb	r5, [r0, #0x1c]
+	mov	r0, #0xd
+	mul	r0, r0, r5
+	ldr	r1, .L2229+0x4
+	add	r0, r0, r1
+	mov	r1, #0x65
+	mov	r2, #0x63
+	bl	PrintInfoScreenTextSmallWhite
+	ldr	r1, .L2229+0x8
+	lsl	r0, r5, #0x2
+	add	r0, r0, r1
+	ldr	r0, [r0]
+	mov	r2, #0x63
+	add	r2, r2, #0xe
+	mov	r1, #0x65
+	bl	PrintInfoScreenTextSmall
+.L2147:
+	add	sp, sp, #0x40
+	pop	{r3, r4, r5}
+	mov	r8, r3
+	mov	r9, r4
+	mov	sl, r5
+	pop	{r4, r5, r6, r7}
+	pop	{r0}
+	bx	r0
+.L2230:
+	.align	2, 0
+.L2229:
+	.word	gBaseStats
+	.word	gAbilityNames
+	.word	gAbilityDescriptionPointers
+.Lfe156:
+	.size	 PrintMonStatsToggle,.Lfe156-PrintMonStatsToggle
+	.align	2, 0
+	.type	 Task_SwitchScreensFromStatsScreen,function
+	.thumb_func
+Task_SwitchScreensFromStatsScreen:
+	push	{r4, r5, lr}
+	lsl	r0, r0, #0x18
+	lsr	r5, r0, #0x18
+	ldr	r0, .L2239
+	ldrb	r1, [r0, #0x7]
+	mov	r0, #0x80
+	and	r0, r0, r1
+	cmp	r0, #0
+	bne	.L2232	@cond_branch
+	ldr	r4, .L2239+0x4
+	add	r0, r4, #0
+	bl	FreeSpriteTilesByTag
+	add	r0, r4, #0
+	bl	FreeSpritePaletteByTag
+	ldr	r1, .L2239+0x8
+	lsl	r0, r5, #0x2
+	add	r0, r0, r5
+	lsl	r0, r0, #0x3
+	add	r5, r0, r1
+	mov	r0, #0xe
+	ldrsh	r1, [r5, r0]
+	lsl	r0, r1, #0x4
+	add	r0, r0, r1
+	lsl	r0, r0, #0x2
+	ldr	r4, .L2239+0xc
+	add	r0, r0, r4
+	bl	FreeSpriteOamMatrix
+	mov	r0, #0xe
+	ldrsh	r1, [r5, r0]
+	lsl	r0, r1, #0x4
+	add	r0, r0, r1
+	lsl	r0, r0, #0x2
+	add	r0, r0, r4
+	bl	DestroySprite
+	bl	FreeMonIconPalettes
+	mov	r0, #0x10
+	ldrsh	r1, [r5, r0]
+	lsl	r0, r1, #0x4
+	add	r0, r0, r1
+	lsl	r0, r0, #0x2
+	add	r0, r0, r4
+	bl	FreeAndDestroyMonIconSprite
+	ldrh	r0, [r5, #0x10]
+	bl	FreeAndDestroyMonPicSprite
+	ldr	r0, .L2239+0x10
+	ldr	r0, [r0]
+	ldr	r1, .L2239+0x14
+	add	r0, r0, r1
+	ldrb	r0, [r0]
+	cmp	r0, #0x1
+	beq	.L2234	@cond_branch
+	cmp	r0, #0x2
+	beq	.L2235	@cond_branch
+	ldr	r0, .L2239+0x18
+	b	.L2238
+.L2240:
+	.align	2, 0
+.L2239:
+	.word	gPaletteFade
+	.word	0xfdf3
+	.word	gTasks
+	.word	gSprites
+	.word	sPokedexView
+	.word	0xcf4
+	.word	Task_LoadInfoScreen
+.L2234:
+	ldr	r0, .L2241
+	b	.L2238
+.L2242:
+	.align	2, 0
+.L2241:
+	.word	Task_LoadAreaScreen
+.L2235:
+	ldr	r0, .L2243
+.L2238:
+	str	r0, [r5]
+.L2232:
+	pop	{r4, r5}
+	pop	{r0}
+	bx	r0
+.L2244:
+	.align	2, 0
+.L2243:
+	.word	Task_LoadCryScreen
+.Lfe157:
+	.size	 Task_SwitchScreensFromStatsScreen,.Lfe157-Task_SwitchScreensFromStatsScreen
+	.align	2, 0
+	.type	 Task_ExitStatsScreen,function
+	.thumb_func
+Task_ExitStatsScreen:
+	push	{r4, r5, r6, lr}
+	lsl	r0, r0, #0x18
+	lsr	r6, r0, #0x18
+	ldr	r0, .L2247
+	ldrb	r1, [r0, #0x7]
+	mov	r0, #0x80
+	and	r0, r0, r1
+	cmp	r0, #0
+	bne	.L2246	@cond_branch
+	ldr	r4, .L2247+0x4
+	add	r0, r4, #0
+	bl	FreeSpriteTilesByTag
+	add	r0, r4, #0
+	bl	FreeSpritePaletteByTag
+	ldr	r0, .L2247+0x8
+	lsl	r4, r6, #0x2
+	add	r4, r4, r6
+	lsl	r4, r4, #0x3
+	add	r4, r4, r0
+	mov	r0, #0xe
+	ldrsh	r1, [r4, r0]
+	lsl	r0, r1, #0x4
+	add	r0, r0, r1
+	lsl	r0, r0, #0x2
+	ldr	r5, .L2247+0xc
+	add	r0, r0, r5
+	bl	FreeSpriteOamMatrix
+	mov	r0, #0xe
+	ldrsh	r1, [r4, r0]
+	lsl	r0, r1, #0x4
+	add	r0, r0, r1
+	lsl	r0, r0, #0x2
+	add	r0, r0, r5
+	bl	DestroySprite
+	bl	FreeMonIconPalettes
+	mov	r0, #0x10
+	ldrsh	r1, [r4, r0]
+	lsl	r0, r1, #0x4
+	add	r0, r0, r1
+	lsl	r0, r0, #0x2
+	add	r0, r0, r5
+	bl	FreeAndDestroyMonIconSprite
+	ldrh	r0, [r4, #0x10]
+	bl	FreeAndDestroyMonPicSprite
+	bl	FreeInfoScreenWindowAndBgBuffers
+	add	r0, r6, #0
+	bl	DestroyTask
+.L2246:
+	pop	{r4, r5, r6}
+	pop	{r0}
+	bx	r0
+.L2248:
+	.align	2, 0
+.L2247:
+	.word	gPaletteFade
+	.word	0xfdf3
+	.word	gTasks
+	.word	gSprites
+.Lfe158:
+	.size	 Task_ExitStatsScreen,.Lfe158-Task_ExitStatsScreen
+	.align	2, 0
+	.type	 ShowSplitIcon,function
+	.thumb_func
+ShowSplitIcon:
+	push	{r4, r5, r6, lr}
+	add	r6, r0, #0
+	ldr	r4, .L2251
+	ldr	r0, [r4]
+	ldr	r5, .L2251+0x4
+	add	r0, r0, r5
+	ldrb	r0, [r0]
+	cmp	r0, #0xff
+	bne	.L2250	@cond_branch
+	ldr	r0, .L2251+0x8
+	mov	r1, #0x8b
+	mov	r2, #0x5a
+	mov	r3, #0x0
+	bl	CreateSprite
+	ldr	r1, [r4]
+	add	r1, r1, r5
+	strb	r0, [r1]
+.L2250:
+	ldr	r3, .L2251+0xc
+	ldr	r0, [r4]
+	add	r0, r0, r5
+	ldrb	r1, [r0]
+	lsl	r0, r1, #0x4
+	add	r0, r0, r1
+	lsl	r0, r0, #0x2
+	add	r0, r0, r3
+	add	r0, r0, #0x3e
+	ldrb	r2, [r0]
+	mov	r1, #0x5
+	neg	r1, r1
+	and	r1, r1, r2
+	strb	r1, [r0]
+	ldr	r0, [r4]
+	add	r0, r0, r5
+	ldrb	r1, [r0]
+	lsl	r0, r1, #0x4
+	add	r0, r0, r1
+	lsl	r0, r0, #0x2
+	add	r0, r0, r3
+	lsl	r1, r6, #0x18
+	lsr	r1, r1, #0x18
+	bl	StartSpriteAnim
+	ldr	r0, [r4]
+	add	r0, r0, r5
+	ldrb	r0, [r0]
+	pop	{r4, r5, r6}
+	pop	{r1}
+	bx	r1
+.L2252:
+	.align	2, 0
+.L2251:
+	.word	sPokedexView
+	.word	0xcc7
+	.word	sSpriteTemplate_SplitIcons
+	.word	gSprites
+.Lfe159:
+	.size	 ShowSplitIcon,.Lfe159-ShowSplitIcon
+	.align	2, 0
+	.type	 DestroySplitIcon,function
+	.thumb_func
+DestroySplitIcon:
+	push	{r4, r5, lr}
+	ldr	r5, .L2255
+	ldr	r0, [r5]
+	ldr	r4, .L2255+0x4
+	add	r1, r0, r4
+	ldrb	r0, [r1]
+	cmp	r0, #0xff
+	beq	.L2254	@cond_branch
+	add	r1, r0, #0
+	lsl	r0, r1, #0x4
+	add	r0, r0, r1
+	lsl	r0, r0, #0x2
+	ldr	r1, .L2255+0x8
+	add	r0, r0, r1
+	bl	DestroySprite
+.L2254:
+	ldr	r0, [r5]
+	add	r0, r0, r4
+	mov	r1, #0xff
+	strb	r1, [r0]
+	pop	{r4, r5}
+	pop	{r0}
+	bx	r0
+.L2256:
+	.align	2, 0
+.L2255:
+	.word	sPokedexView
+	.word	0xcc7
+	.word	gSprites
+.Lfe160:
+	.size	 DestroySplitIcon,.Lfe160-DestroySplitIcon
 	.comm	gUnusedPokedexU8, 4	@ 1
 	.comm	gPokedexVBlankCB, 4	@ 4
 .text

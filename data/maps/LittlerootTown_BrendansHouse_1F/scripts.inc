@@ -9,9 +9,6 @@ LittlerootTown_BrendansHouse_1F_MapScripts:: @ 81F7755
 	.byte 0
 
 LittlerootTown_BrendansHouse_1F_OnLoad: @ 81F7765
-	compare VAR_LITTLEROOT_INTRO_STATE, 6
-	call_if_lt LittlerootTown_BrendansHouse_1F_EventScript_SetMovingBoxes
-	call_if_set FLAG_RECEIVED_RUNNING_SHOES, LittlerootTown_BrendansHouse_1F_EventScript_CheckShowShoesManual
 	end
 
 LittlerootTown_BrendansHouse_1F_EventScript_SetMovingBoxes:: @ 81F777A
@@ -298,6 +295,25 @@ LittlerootTown_BrendansHouse_1F_Movement_BrendanGoUpstairs2: @ 81F7A16
 	walk_up
 	walk_up
 	step_end
+	
+BH_EventScript_TimeToGo::
+	lock
+	faceplayer
+	msgbox GC_Text_Leaving, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq BHEventScript_Leaving
+	release
+	end
+	
+BHEventScript_Leaving::
+	warp MAP_BATTLE_FRONTIER_OUTSIDE_WEST, -1, 19, 67
+	waitstate
+	release
+	end
+	
+BH_Text_Leaving:
+	.string "Would you like to\n"
+	.string "return to the Battle Frontier?$"
 
 PlayersHouse_1F_Text_IsntItNiceInHere: @ 81F7A1C
 	.string "MOM: See, {PLAYER}?\n"
@@ -362,9 +378,15 @@ PlayersHouse_1F_Text_GotDadsBadgeHeresSomethingFromMom: @ 81F7D73
 	.string "Then here's something from your MOM!$"
 
 PlayersHouse_1F_Text_DontPushYourselfTooHard: @ 81F7DBE
-	.string "Don't push yourself too hard, dear.\n"
-	.string "You can always come home.\p"
-	.string "Go for it, honey!$"
+	.string "It's so good to see you, {PLAYER}!\n"
+	.string "Are you enjoying the Battle Frontier?\p"
+	.string "I hear that you can buy\n"
+	.string "cute decorations there!\p"
+	.string "Also, I have your TV set to\n"
+	.string "the famous trainers channel.\p"
+	.string "Make sure to watch!\p"
+	.string "Love you!$"
+
 
 PlayersHouse_1F_Text_IsThatAPokenav: @ 81F7E0E
 	.string "MOM: What is that, honey? A POKéNAV?\n"

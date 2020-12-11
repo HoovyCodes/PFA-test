@@ -40022,6 +40022,7 @@ sSpriteAnimTable_MoveTypes:
 	.word	sSpriteAnim_CategoryCute
 	.word	sSpriteAnim_CategorySmart
 	.word	sSpriteAnim_CategoryTough
+	.globl	sSpriteSheet_MoveTypes
 	.align	2, 0
 	.type	 sSpriteSheet_MoveTypes,object
 	.size	 sSpriteSheet_MoveTypes,8
@@ -40029,6 +40030,7 @@ sSpriteSheet_MoveTypes:
 	.word	gMoveTypes_Gfx
 	.short	0x1800
 	.short	0x7532
+	.globl	sSpriteTemplate_MoveTypes
 	.align	2, 0
 	.type	 sSpriteTemplate_MoveTypes,object
 	.size	 sSpriteTemplate_MoveTypes,24
@@ -50240,6 +50242,7 @@ CreateMoveTypeIcons:
 .Lfe118:
 	.size	 CreateMoveTypeIcons,.Lfe118-CreateMoveTypeIcons
 	.align	2, 0
+	.globl	SetTypeSpritePosAndPal
 	.type	 SetTypeSpritePosAndPal,function
 	.thumb_func
 SetTypeSpritePosAndPal:

@@ -14,52 +14,71 @@ BattleFrontier_OutsideWest_MapScripts:: @ 823D3E1
 BattleFrontier_OutsideWest_OnTransition: @ 823D3E7
 	setvar VAR_BRAVO_TRAINER_BATTLE_TOWER_ON, 0
 	setflag FLAG_HIDE_BATTLE_TOWER_REPORTER
+	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_SYS_B_DASH
+	setflag FLAG_SYS_NATIONAL_DEX
+	setflag FLAG_SYS_TV_LATIAS_LATIOS
+	special EnableNationalPokedex
+	call FillPokedex
 	end
 
 BattleFrontier_OutsideWest_EventScript_FerryAttendant:: @ 823D3F0
 	lock
 	faceplayer
+	compare VAR_HAS_ENTERED_BATTLE_FRONTIER, 0
+	goto_if_eq Too_Young
 	msgbox BattleFrontier_OutsideWest_Text_MayISeeYourTicket, MSGBOX_DEFAULT
-	checkitem ITEM_SS_TICKET, 1
-	compare VAR_RESULT, FALSE
-	goto_if_eq BattleFrontier_OutsideWest_EventScript_NoSSTicket
 	message BattleFrontier_OutsideWest_Text_WhereWouldYouLikeToGo
 	waitmessage
 	goto BattleFrontier_OutsideWest_EventScript_ChooseFerryDestination
 	end
 
 BattleFrontier_OutsideWest_EventScript_ChooseFerryDestination:: @ 823D416
-	multichoicedefault 18, 6, MULTI_SSTIDAL_BATTLE_FRONTIER, 2, 0
+	multichoicedefault 18, 6, MULTI_SSTIDAL_BATTLE_FRONTIER, 0, 0
 	switch VAR_RESULT
-	case 0, BattleFrontier_OutsideWest_EventScript_FerryToSlateport
-	case 1, BattleFrontier_OutsideWest_EventScript_FerryToLilycove
-	case 2, BattleFrontier_OutsideWest_EventScript_CancelFerrySelect
+	case 0, BattleFrontier_OutsideWest_EventScript_FerryToContest
+	case 1, BattleFrontier_OutsideWest_EventScript_FerryToCorner
+	case 2, BattleFrontier_OutsideWest_EventScript_FerryToBase
+	case 3, BattleFrontier_OutsideWest_EventScript_CancelFerrySelect
 	case MULTI_B_PRESSED, BattleFrontier_OutsideWest_EventScript_CancelFerrySelect
 	end
-
-BattleFrontier_OutsideWest_EventScript_NoSSTicket:: @ 823D44E
-	msgbox BattleFrontier_OutsideWest_Text_MustHaveTicketToBoard, MSGBOX_DEFAULT
-	release
+	
+Too_Young::
+	lock
+	faceplayer
+	msgbox BattleFrontier_OutsideWest_Text_TY, MSGBOX_DEFAULT
+	closemessage
 	end
-
-BattleFrontier_OutsideWest_EventScript_FerryToSlateport:: @ 823D458
+	
+BattleFrontier_OutsideWest_EventScript_FerryToContest:: @ 823D458
 	msgbox BattleFrontier_OutsideWest_Text_SlateportItIs, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq BattleFrontier_OutsideWest_EventScript_ChooseNewFerryDestination
 	msgbox BattleFrontier_OutsideWest_Text_PleaseBoardFerry, MSGBOX_DEFAULT
 	call BattleFrontier_OutsideWest_EventScript_BoardFerry
-	warp MAP_SLATEPORT_CITY_HARBOR, 255, 8, 11
+	warp MAP_LILYCOVE_CITY_CONTEST_LOBBY, -1, 14, 10
 	waitstate
 	release
 	end
 
-BattleFrontier_OutsideWest_EventScript_FerryToLilycove:: @ 823D483
+BattleFrontier_OutsideWest_EventScript_FerryToCorner::
 	msgbox BattleFrontier_OutsideWest_Text_LilycoveItIs, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq BattleFrontier_OutsideWest_EventScript_ChooseNewFerryDestination
 	msgbox BattleFrontier_OutsideWest_Text_PleaseBoardFerry, MSGBOX_DEFAULT
 	call BattleFrontier_OutsideWest_EventScript_BoardFerry
-	warp MAP_LILYCOVE_CITY_HARBOR, 255, 8, 11
+	warp MAP_MAUVILLE_CITY_GAME_CORNER, -1, 11, 9
+	waitstate
+	release
+	end
+	
+BattleFrontier_OutsideWest_EventScript_FerryToBase:: 
+	msgbox BattleFrontier_OutsideWest_Text_3rdItIs, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq BattleFrontier_OutsideWest_EventScript_ChooseNewFerryDestination
+	msgbox BattleFrontier_OutsideWest_Text_PleaseBoardFerry, MSGBOX_DEFAULT
+	call BattleFrontier_OutsideWest_EventScript_BoardFerry
+	warp MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F, -1, 8, 7
 	waitstate
 	release
 	end
@@ -318,7 +337,16 @@ BattleFrontier_OutsideWest_EventScript_Man4:: @ 823D6D7
 BattleFrontier_OutsideWest_EventScript_PokefanF:: @ 823D6EE
 	msgbox BattleFrontier_OutsideWest_Text_MonWithLongTailInFrontier, MSGBOX_NPC
 	end
+	
+BattleFrontier_OutsideWest_Text_TY:
+	.string "Please get acquainted with the\n"
+	.string "Battle Frontier before returning.$\p"
 
+BattleFrontier_OutsideWest_Text_CC:
+	.string "Oh, before you can go to the\n"
+	.string "Game Corner, you need a Coin Case.\p"
+	.string "Allow me to provide you with one.$"
+	
 BattleFrontier_OutsideWest_Text_BattleDomeSign: @ 823D6F7
 	.string "This is the BATTLE DOME!\n"
 	.string "Your path to the invincible superstar!$"
@@ -352,10 +380,13 @@ BattleFrontier_OutsideWest_Text_WhereWouldYouLikeToGo: @ 823D89D
 	.string "And where would you like to go?$"
 
 BattleFrontier_OutsideWest_Text_SlateportItIs: @ 823D8F2
-	.string "SLATEPORT CITY it is, then!$"
+	.string "Off to the Lilycove Contest Hall, then!$"
 
 BattleFrontier_OutsideWest_Text_LilycoveItIs: @ 823D90E
-	.string "LILYCOVE CITY it is, then!$"
+	.string "Off to the Game Corner, then!$"
+	
+BattleFrontier_OutsideWest_Text_3rdItIs:
+	.string "Off to your hometown, then!$"
 
 BattleFrontier_OutsideWest_Text_SailWithUsAnotherTime: @ 823D929
 	.string "Please sail with us another time!$"
@@ -535,4 +566,8 @@ BattleFrontier_OutsideWest_Text_MonWithLongTailInFrontier: @ 823E5A5
 	.string "It must be adorable. I'm sure of it…\p"
 	.string "Oh, challenges can wait. I feel driven\n"
 	.string "to find the delightful creature!$"
+Give_CC:
+	.string "Ah, first!\p"
+	.string "Let me give you this Coin Case.\p"
+	
 

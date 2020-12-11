@@ -4252,6 +4252,9 @@ void SetDaycareCompatibilityString(void);
 bool8 NameHasGenderSymbol(const u8 *name, u8 genderRatio);
 void ShowDaycareLevelMenu(void);
 void ChooseSendDaycareMon(void);
+
+u8 GetEggMovesSpecies(u16 species, u16 *eggMoves);
+bool8 SpeciesCanLearnEggMove(u16 species, u16 move);
 # 7 "src/script_pokemon_util.c" 2
 # 1 "include/decompress.h" 1
 
@@ -6154,6 +6157,8 @@ void MoveDeleterForgetMove(void);
 void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
+
+bool8 CanLearnTutorMove(u16, u8);
 # 17 "src/script_pokemon_util.c" 2
 # 1 "include/pokedex.h" 1
 

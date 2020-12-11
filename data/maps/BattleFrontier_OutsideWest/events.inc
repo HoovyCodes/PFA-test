@@ -33,20 +33,21 @@ BattleFrontier_OutsideWest_MapWarps:
 	warp_def 19, 17, 0, 0, MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY
 	warp_def 11, 38, 0, 0, MAP_BATTLE_FRONTIER_BATTLE_FACTORY_LOBBY
 	warp_def 45, 44, 0, 0, MAP_BATTLE_FRONTIER_LOUNGE2
-	warp_def 51, 51, 0, 0, MAP_BATTLE_FRONTIER_MART
+	warp_def 51, 61, 0, 0, MAP_BATTLE_FRONTIER_MART
 	warp_def 44, 5, 0, 0, MAP_BATTLE_FRONTIER_SCOTTS_HOUSE
 	warp_def 53, 44, 0, 0, MAP_BATTLE_FRONTIER_LOUNGE4
 	warp_def 5, 20, 0, 0, MAP_BATTLE_FRONTIER_LOUNGE7
 	warp_def 26, 65, 0, 0, MAP_BATTLE_FRONTIER_RECEPTION_GATE
 	warp_def 26, 61, 0, 1, MAP_BATTLE_FRONTIER_RECEPTION_GATE
-	warp_def 39, 55, 0, 0, MAP_ARTISAN_CAVE_B1F
+	warp_def 50, 61, 0, 0, MAP_ARTISAN_CAVE_B1F
+	warp_def 0, 0, 0, 0, MAP_BATTLE_FRONTIER_OUTSIDE_WEST
 
 BattleFrontier_OutsideWest_MapBGEvents:
 	bg_event 15, 18, 0, BG_EVENT_PLAYER_FACING_ANY, BattleFrontier_OutsideWest_EventScript_BattleDomeSign
 	bg_event 45, 30, 0, BG_EVENT_PLAYER_FACING_ANY, BattleFrontier_OutsideWest_EventScript_BattlePikeSign
 	bg_event 16, 43, 0, BG_EVENT_PLAYER_FACING_ANY, BattleFrontier_OutsideWest_EventScript_BattleFactorySign
-	bg_event 52, 51, 0, BG_EVENT_PLAYER_FACING_ANY, Common_EventScript_ShowPokemartSign
-	bg_event 53, 51, 0, BG_EVENT_PLAYER_FACING_ANY, Common_EventScript_ShowPokemartSign
+	bg_event 47, 60, 0, BG_EVENT_PLAYER_FACING_ANY, Common_EventScript_ShowPokemartSign
+	bg_event 47, 62, 0, BG_EVENT_PLAYER_FACING_ANY, Common_EventScript_ShowPokemartSign
 
 BattleFrontier_OutsideWest_MapEvents::
 	map_events BattleFrontier_OutsideWest_ObjectEvents, BattleFrontier_OutsideWest_MapWarps, 0x0, BattleFrontier_OutsideWest_MapBGEvents

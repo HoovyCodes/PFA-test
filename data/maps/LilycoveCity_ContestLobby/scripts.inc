@@ -1021,7 +1021,26 @@ LilycoveCity_ContestLobby_EventScript_LittleGirlHaveCase:: @ 821AD06
 	msgbox LilycoveCity_ContestLobby_Text_MakePokeblocksDifferentBerries, MSGBOX_DEFAULT
 	release
 	end
-
+	
+LilycoveCity_ContestLobby_EventScript_TimeToGo::
+	lock
+	faceplayer
+	msgbox ContestHall_Text_Leaving, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq CH_OutsideWest_EventScript_Leaving
+	release
+	end
+	
+CH_OutsideWest_EventScript_Leaving::
+	warp MAP_BATTLE_FRONTIER_OUTSIDE_WEST, -1, 19, 67
+	waitstate
+	release
+	end
+	
+ContestHall_Text_Leaving:
+	.string "Would you like to\n"
+	.string "return to the Battle Frontier?$"
+	
 LilycoveCity_ContestLobby_Text_LadyGaveMePokeblockCase: @ 821AD10
 	.string "Yippee!\p"
 	.string "The lady at the reception counter\n"

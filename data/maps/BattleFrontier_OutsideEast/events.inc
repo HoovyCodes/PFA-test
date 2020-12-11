@@ -16,19 +16,18 @@ BattleFrontier_OutsideEast_ObjectEvents:
 	object_event 11, OBJ_EVENT_GFX_TWIN, 0, 18, 40, 0, MOVEMENT_TYPE_LOOK_AROUND, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Twin, 0
 	object_event 12, OBJ_EVENT_GFX_MAN_1, 0, 17, 40, 0, MOVEMENT_TYPE_FACE_RIGHT, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Man2, 0
 	object_event 13, OBJ_EVENT_GFX_ZIGZAGOON_2, 0, 40, 56, 3, MOVEMENT_TYPE_LOOK_AROUND, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Zigzagoon, 0
-	object_event 14, OBJ_EVENT_GFX_SUDOWOODO, 0, 54, 62, 3, MOVEMENT_TYPE_FACE_DOWN, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Sudowoodo, FLAG_HIDE_BATTLE_FRONTIER_SUDOWOODO
-	object_event 15, OBJ_EVENT_GFX_MANIAC, 0, 42, 34, 3, MOVEMENT_TYPE_LOOK_AROUND, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Maniac1, 0
-	object_event 16, OBJ_EVENT_GFX_GIRL_3, 0, 51, 53, 3, MOVEMENT_TYPE_WANDER_AROUND, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Girl, 0
-	object_event 17, OBJ_EVENT_GFX_PSYCHIC_M, 0, 62, 18, 0, MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_RIGHT_UP_LEFT, 2, 6, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_PsychicM, 0
-	object_event 18, OBJ_EVENT_GFX_MAN_3, 0, 11, 21, 0, MOVEMENT_TYPE_LOOK_AROUND, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Man3, 0
-	object_event 19, OBJ_EVENT_GFX_WOMAN_5, 0, 10, 21, 0, MOVEMENT_TYPE_FACE_RIGHT, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Woman1, 0
-	object_event 20, OBJ_EVENT_GFX_WOMAN_5, 0, 16, 30, 0, MOVEMENT_TYPE_WANDER_AROUND, 3, 2, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Woman2, 0
-	object_event 21, OBJ_EVENT_GFX_BLACK_BELT, 0, 33, 14, 0, MOVEMENT_TYPE_FACE_UP, 0, 0, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_BlackBelt2, 0
-	object_event 22, OBJ_EVENT_GFX_MANIAC, 0, 54, 31, 0, MOVEMENT_TYPE_FACE_LEFT, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Maniac2, 0
-	object_event 23, OBJ_EVENT_GFX_WOMAN_4, 0, 54, 32, 0, MOVEMENT_TYPE_FACE_UP, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Woman3, 0
-	object_event 24, OBJ_EVENT_GFX_OLD_WOMAN, 0, 58, 55, 3, MOVEMENT_TYPE_FACE_DOWN_AND_LEFT, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_OldWoman, 0
-	object_event 25, OBJ_EVENT_GFX_GENTLEMAN, 0, 48, 41, 0, MOVEMENT_TYPE_FACE_UP, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Gentleman, 0
-	object_event 26, OBJ_EVENT_GFX_CAMPER, 0, 29, 14, 0, MOVEMENT_TYPE_FACE_UP, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Camper, 0
+	object_event 14, OBJ_EVENT_GFX_MANIAC, 0, 42, 34, 3, MOVEMENT_TYPE_LOOK_AROUND, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Maniac1, 0
+	object_event 15, OBJ_EVENT_GFX_GIRL_3, 0, 51, 53, 3, MOVEMENT_TYPE_WANDER_AROUND, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Girl, 0
+	object_event 16, OBJ_EVENT_GFX_PSYCHIC_M, 0, 62, 18, 0, MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_RIGHT_UP_LEFT, 2, 6, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_PsychicM, 0
+	object_event 17, OBJ_EVENT_GFX_MAN_3, 0, 11, 21, 0, MOVEMENT_TYPE_LOOK_AROUND, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Man3, 0
+	object_event 18, OBJ_EVENT_GFX_WOMAN_5, 0, 10, 21, 0, MOVEMENT_TYPE_FACE_RIGHT, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Woman1, 0
+	object_event 19, OBJ_EVENT_GFX_WOMAN_5, 0, 16, 30, 0, MOVEMENT_TYPE_WANDER_AROUND, 3, 2, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Woman2, 0
+	object_event 20, OBJ_EVENT_GFX_BLACK_BELT, 0, 33, 14, 0, MOVEMENT_TYPE_FACE_UP, 0, 0, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_BlackBelt2, 0
+	object_event 21, OBJ_EVENT_GFX_MANIAC, 0, 54, 31, 0, MOVEMENT_TYPE_FACE_LEFT, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Maniac2, 0
+	object_event 22, OBJ_EVENT_GFX_WOMAN_4, 0, 54, 32, 0, MOVEMENT_TYPE_FACE_UP, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Woman3, 0
+	object_event 23, OBJ_EVENT_GFX_OLD_WOMAN, 0, 58, 55, 3, MOVEMENT_TYPE_FACE_DOWN_AND_LEFT, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_OldWoman, 0
+	object_event 24, OBJ_EVENT_GFX_GENTLEMAN, 0, 48, 41, 0, MOVEMENT_TYPE_FACE_UP, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Gentleman, 0
+	object_event 25, OBJ_EVENT_GFX_CAMPER, 0, 29, 14, 0, MOVEMENT_TYPE_FACE_UP, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_OutsideEast_EventScript_Camper, 0
 
 BattleFrontier_OutsideEast_MapWarps:
 	warp_def 16, 14, 0, 0, MAP_BATTLE_FRONTIER_BATTLE_TOWER_LOBBY
@@ -44,7 +43,6 @@ BattleFrontier_OutsideEast_MapWarps:
 	warp_def 14, 51, 0, 0, MAP_BATTLE_FRONTIER_LOUNGE8
 	warp_def 21, 45, 0, 0, MAP_BATTLE_FRONTIER_LOUNGE9
 	warp_def 3, 51, 0, 0, MAP_BATTLE_FRONTIER_POKEMON_CENTER_1F
-	warp_def 28, 7, 0, 0, MAP_ARTISAN_CAVE_1F
 
 BattleFrontier_OutsideEast_MapBGEvents:
 	bg_event 13, 17, 0, BG_EVENT_PLAYER_FACING_ANY, BattleFrontier_OutsideEast_EventScript_BattleTowerSign

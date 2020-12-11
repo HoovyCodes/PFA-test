@@ -4575,6 +4575,8 @@ void MoveDeleterForgetMove(void);
 void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
+
+bool8 CanLearnTutorMove(u16, u8);
 # 12 "src/battle_pike.c" 2
 # 1 "gflib/malloc.h" 1
 # 15 "gflib/malloc.h"

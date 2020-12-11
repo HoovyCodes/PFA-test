@@ -364,7 +364,7 @@
     },
     {
       "x": 51,
-      "y": 51,
+      "y": 61,
       "elevation": 0,
       "dest_map": "MAP_BATTLE_FRONTIER_MART",
       "dest_warp_id": 0
@@ -405,14 +405,23 @@
       "dest_warp_id": 1
     },
     {
-      "x": 39,
-      "y": 55,
+      "x": 50,
+      "y": 61,
       "elevation": 0,
       "dest_map": "MAP_ARTISAN_CAVE_B1F",
       "dest_warp_id": 0
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_BATTLE_FRONTIER_OUTSIDE_WEST",
+      "dest_warp_id": 0
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",
@@ -440,16 +449,16 @@
     },
     {
       "type": "sign",
-      "x": 52,
-      "y": 51,
+      "x": 47,
+      "y": 60,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Common_EventScript_ShowPokemartSign"
     },
     {
       "type": "sign",
-      "x": 53,
-      "y": 51,
+      "x": 47,
+      "y": 62,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Common_EventScript_ShowPokemartSign"

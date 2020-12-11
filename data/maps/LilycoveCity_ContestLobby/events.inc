@@ -28,10 +28,9 @@ LilycoveCity_ContestLobby_ObjectEvents:
 	object_event 23, OBJ_EVENT_GFX_NINJA_BOY, 0, 26, 3, 3, MOVEMENT_TYPE_FACE_DOWN, 1, 1, TRAINER_TYPE_NONE, 0, LilycoveCity_ContestLobby_EventScript_BlendMasterOnlooker1, FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER
 	object_event 24, OBJ_EVENT_GFX_OLD_MAN, 0, 26, 5, 3, MOVEMENT_TYPE_FACE_RIGHT, 1, 1, TRAINER_TYPE_NONE, 0, LilycoveCity_ContestLobby_EventScript_BlendMaster, FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER
 	object_event 25, OBJ_EVENT_GFX_LITTLE_GIRL, 0, 9, 10, 3, MOVEMENT_TYPE_FACE_RIGHT, 2, 2, TRAINER_TYPE_NONE, 0, LilycoveCity_ContestLobby_EventScript_LittleGirl, 0
+	object_event 26, OBJ_EVENT_GFX_BEAUTY, 0, 14, 11, 0, MOVEMENT_TYPE_FACE_UP, 0, 0, TRAINER_TYPE_NONE, 0, LilycoveCity_ContestLobby_EventScript_TimeToGo, 0
 
 LilycoveCity_ContestLobby_MapWarps:
-	warp_def 14, 11, 0, 4, MAP_LILYCOVE_CITY
-	warp_def 15, 11, 0, 4, MAP_LILYCOVE_CITY
 	warp_def 9, 1, 0, 0, MAP_LILYCOVE_CITY_CONTEST_HALL
 	warp_def 21, 1, 0, 1, MAP_LILYCOVE_CITY_CONTEST_HALL
 

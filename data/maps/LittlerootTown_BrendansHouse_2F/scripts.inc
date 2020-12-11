@@ -6,6 +6,7 @@ LittlerootTown_BrendansHouse_2F_MapScripts:: @ 81F83E3
 	.byte 0
 
 LittlerootTown_BrendansHouse_2F_OnTransition: @ 81F83EE
+	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F
 	compare VAR_LITTLEROOT_RIVAL_STATE, 2
 	call_if_lt LittlerootTown_BrendansHouse_2F_EventScript_CheckSetReadyToMeetBrendan
 	compare VAR_LITTLEROOT_RIVAL_STATE, 3
@@ -15,7 +16,7 @@ LittlerootTown_BrendansHouse_2F_OnTransition: @ 81F83EE
 	call SecretBase_EventScript_SetDecorationFlags
 	setvar VAR_SECRET_BASE_INITIALIZED, 0
 	end
-
+	
 LittlerootTown_BrendansHouse_2F_EventScript_CheckShouldUpdateBrendanPos:: @ 81F841A
 	goto_if_set FLAG_MET_RIVAL_LILYCOVE, LittlerootTown_BrendansHouse_2F_EventScript_TryUpdateBrendanPos
 	compare VAR_BIRCH_LAB_STATE, 2
@@ -282,9 +283,66 @@ PlayersHouse_2F_EventScript_Notebook:: @ 81F8656
 	msgbox PlayersHouse_2F_Text_Notebook, MSGBOX_SIGN
 	end
 
-PlayersHouse_2F_EventScript_GameCube:: @ 81F865F
-	msgbox PlayersHouse_2F_Text_ItsAGameCube, MSGBOX_SIGN
+PlayersHouse_2F_EventScript_GameCube:: 
+	lock
+	faceplayer
+	msgbox TTV_Q, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq RANDOM_FIGHT
+	release
 	end
+	
+
+RANDOM_FIGHT::
+	random 7
+    switch VAR_RESULT
+    case 0, FightRed
+    case 1, FightBlue
+	case 2, FightLance
+    case 3, FightSteven
+	case 4, FightWallace
+    case 5, FightCynthia
+	case 6, FightAlder
+	end
+	
+FightRed::
+	trainerbattle_single TRAINER_SAWYER_1, FIGHT_START, FIGHT_END, FightRed
+	release
+	end
+FightBlue::
+	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_1, FIGHT_START, FIGHT_END, FightBlue
+	release
+	end
+FightLance::
+	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_2, FIGHT_START, FIGHT_END, FightLance
+	release
+	end
+FightSteven::
+	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_3, FIGHT_START, FIGHT_END, FightSteven
+	release
+	end
+FightWallace::
+	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_4, FIGHT_START, FIGHT_END, FightWallace
+	release
+	end
+FightCynthia::
+	trainerbattle_single TRAINER_GRUNT_SEAFLOOR_CAVERN_1, FIGHT_START, FIGHT_END, FightCynthia
+	release
+	end
+FightAlder::
+	trainerbattle_single TRAINER_GRUNT_SEAFLOOR_CAVERN_2, FIGHT_START, FIGHT_END, FightAlder
+	release
+	end
+	
+TTV_Q:
+	.string "Would you like to\n"
+	.string "challege a famous trainer?$"
+	
+FIGHT_START:
+	.string "Prepare yourself!$"
+	
+FIGHT_END:
+	.string "Good job!$"
 
 PlayersHouse_2F_Text_ClockIsStopped: @ 81F8668
 	.string "The clock is stopped…\p"
