@@ -1,6 +1,5 @@
 	.align 2
 gScriptCmdTable:: @ 81DB67C
-<<<<<<< HEAD
 	.4byte ScrCmd_nop      	                @ 0x00
 	.4byte ScrCmd_nop1                      @ 0x01
 	.4byte ScrCmd_end      	                @ 0x02

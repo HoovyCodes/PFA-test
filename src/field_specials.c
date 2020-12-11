@@ -2348,7 +2348,7 @@ void ShowScrollableMultichoice(void)
             break;
         case SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_2:
             task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-            task->tNumItems = 6;
+            task->tNumItems = 8;
             task->tLeft = 14;
             task->tTop = 1;
             task->tWidth = 15;
@@ -2358,7 +2358,7 @@ void ShowScrollableMultichoice(void)
             break;
         case SCROLL_MULTI_BF_EXCHANGE_CORNER_VITAMIN_VENDOR:
             task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-            task->tNumItems = 7;
+            task->tNumItems = 5;
             task->tLeft = 14;
             task->tTop = 1;
             task->tWidth = 15;
@@ -2368,7 +2368,7 @@ void ShowScrollableMultichoice(void)
             break;
         case SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR:
             task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-            task->tNumItems = 10;
+            task->tNumItems = 16;
             task->tLeft = 14;
             task->tTop = 1;
             task->tWidth = 15;
@@ -2482,34 +2482,40 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     },
     [SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_2] =
     {
-        gText_LaprasDoll128BP,
-        gText_SnorlaxDoll128BP,
-        gText_VenusaurDoll256BP,
-        gText_CharizardDoll256BP,
-        gText_BlastoiseDoll256BP,
+        gText_Dolls,
+        gText_Cushions,
+        gText_Contest,
+        gText_MegaC,
+        gText_MegaB,
+		gText_MegaA,
+        gText_MegaS,
         gText_Exit
     },
     [SCROLL_MULTI_BF_EXCHANGE_CORNER_VITAMIN_VENDOR] =
     {
-        gText_Protein1BP,
-        gText_Calcium1BP,
-        gText_Iron1BP,
-        gText_Zinc1BP,
-        gText_Carbos1BP,
-        gText_HpUp1BP,
+        gText_NUPoke,
+        gText_RUPoke,
+        gText_UUPoke,
+        gText_OUPoke,
         gText_Exit
     },
     [SCROLL_MULTI_BF_EXCHANGE_CORNER_HOLD_ITEM_VENDOR] =
     {
-        gText_Leftovers48BP,
-        gText_WhiteHerb48BP,
-        gText_QuickClaw48BP,
-        gText_MentalHerb48BP,
-        gText_BrightPowder64BP,
-        gText_ChoiceBand64BP,
-        gText_KingsRock64BP,
-        gText_FocusBand64BP,
-        gText_ScopeLens64BP,
+        gText_WhiteHerbBP,
+		gText_PowerHerbBP,
+		gText_ScopeLensBP,
+		gText_WideLensBP,
+		gText_QuickClawBP,
+		gText_LifeOrbBP,
+		gText_ChoiceBandBP,
+		gText_ChoiceSpecsBP,
+		gText_ChoiceScarfBP,
+		gText_RockyHelmetBP,
+		gText_WeaknessPolicyBP,
+		gText_AssaultVestBP,
+		gText_FocusSashBP,
+		gText_KingsRockBP,
+		gText_LeftoversBP,
         gText_Exit
     },
     [SCROLL_MULTI_BERRY_POWDER_VENDOR] =
@@ -4369,3 +4375,92 @@ u8 Script_TryGainNewFanFromCounter(void)
 {
     return TryGainNewFanFromCounter(gSpecialVar_0x8004);
 }
+
+/*void MaxIvs(void)
+{
+    SetMonData(&gPlayerParty[0], MON_DATA_HP_IV, 31);
+	SetMonData(&gPlayerParty[0], MON_DATA_ATK_IV, 31);
+	SetMonData(&gPlayerParty[0], MON_DATA_DEF_IV, 31);
+	SetMonData(&gPlayerParty[0], MON_DATA_SPEED_IV, 31);
+	SetMonData(&gPlayerParty[0], MON_DATA_SPATK_IV, 31);
+	SetMonData(&gPlayerParty[0], MON_DATA_SPDEF_IV, 31);
+    CalculateMonStats(&gPlayerParty[0]);
+	SetMonData(&gPlayerParty[1], MON_DATA_HP_IV, 31);
+	SetMonData(&gPlayerParty[1], MON_DATA_ATK_IV, 31);
+	SetMonData(&gPlayerParty[1], MON_DATA_DEF_IV, 31);
+	SetMonData(&gPlayerParty[1], MON_DATA_SPEED_IV, 31);
+	SetMonData(&gPlayerParty[1], MON_DATA_SPATK_IV, 31);
+	SetMonData(&gPlayerParty[1], MON_DATA_SPDEF_IV, 31);
+    CalculateMonStats(&gPlayerParty[1]);
+	SetMonData(&gPlayerParty[2], MON_DATA_HP_IV, 31);
+	SetMonData(&gPlayerParty[2], MON_DATA_ATK_IV, 31);
+	SetMonData(&gPlayerParty[2], MON_DATA_DEF_IV, 31);
+	SetMonData(&gPlayerParty[2], MON_DATA_SPEED_IV, 31);
+	SetMonData(&gPlayerParty[2], MON_DATA_SPATK_IV, 31);
+	SetMonData(&gPlayerParty[2], MON_DATA_SPDEF_IV, 31);
+    CalculateMonStats(&gPlayerParty[2]);
+	SetMonData(&gPlayerParty[3], MON_DATA_HP_IV, 31);
+	SetMonData(&gPlayerParty[3], MON_DATA_ATK_IV, 31);
+	SetMonData(&gPlayerParty[3], MON_DATA_DEF_IV, 31);
+	SetMonData(&gPlayerParty[3], MON_DATA_SPEED_IV, 31);
+	SetMonData(&gPlayerParty[3], MON_DATA_SPATK_IV, 31);
+	SetMonData(&gPlayerParty[3], MON_DATA_SPDEF_IV, 31);
+    CalculateMonStats(&gPlayerParty[3]);
+	SetMonData(&gPlayerParty[4], MON_DATA_HP_IV, 31);
+	SetMonData(&gPlayerParty[4], MON_DATA_ATK_IV, 31);
+	SetMonData(&gPlayerParty[4], MON_DATA_DEF_IV, 31);
+	SetMonData(&gPlayerParty[4], MON_DATA_SPEED_IV, 31);
+	SetMonData(&gPlayerParty[4], MON_DATA_SPATK_IV, 31);
+	SetMonData(&gPlayerParty[4], MON_DATA_SPDEF_IV, 31);
+    CalculateMonStats(&gPlayerParty[4]);
+	SetMonData(&gPlayerParty[5], MON_DATA_HP_IV, 31);
+	SetMonData(&gPlayerParty[5], MON_DATA_ATK_IV, 31);
+	SetMonData(&gPlayerParty[5], MON_DATA_DEF_IV, 31);
+	SetMonData(&gPlayerParty[5], MON_DATA_SPEED_IV, 31);
+	SetMonData(&gPlayerParty[5], MON_DATA_SPATK_IV, 31);
+	SetMonData(&gPlayerParty[5], MON_DATA_SPDEF_IV, 31);
+    CalculateMonStats(&gPlayerParty[5]);
+	SetMonData(&gPlayerParty[6], MON_DATA_HP_IV, 31);
+	SetMonData(&gPlayerParty[6], MON_DATA_ATK_IV, 31);
+	SetMonData(&gPlayerParty[6], MON_DATA_DEF_IV, 31);
+	SetMonData(&gPlayerParty[6], MON_DATA_SPEED_IV, 31);
+	SetMonData(&gPlayerParty[6], MON_DATA_SPATK_IV, 31);
+	SetMonData(&gPlayerParty[6], MON_DATA_SPDEF_IV, 31);
+    CalculateMonStats(&gPlayerParty[6]);
+}*/
+
+void SetEvs(void)
+{
+    u8 HpEv = gSpecialVar_0x8000;
+    u8 AtkEv = gSpecialVar_0x8001;
+    u8 DefEv = gSpecialVar_0x8002;
+	u8 SpdEv = gSpecialVar_0x8003;
+	u8 SpAtkEv = gSpecialVar_0x8005;
+	u8 SpDefEv = gSpecialVar_0x8006;
+    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_HP_EV, &HpEv);
+	SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_ATK_EV, &AtkEv);
+	SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_DEF_EV, &DefEv);
+	SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPEED_EV, &SpdEv);
+	SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPATK_EV, &SpAtkEv);
+	SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPDEF_EV, &SpDefEv);
+    CalculateMonStats(&gPlayerParty[gSpecialVar_0x8004]);
+}
+void SetMoves(void)
+{
+    u8 Move1 = gSpecialVar_0x8000;
+    u8 Move2 = gSpecialVar_0x8001;
+    u8 Move3 = gSpecialVar_0x8002;
+	u8 Move4 = gSpecialVar_0x8003;
+    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_MOVE1, &Move1);
+	SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_MOVE2, &Move2);
+	SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_MOVE3, &Move3);
+	SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_MOVE4, &Move4);
+    CalculateMonStats(&gPlayerParty[gSpecialVar_0x8004]);
+}
+void SetNature(void)
+{
+	u8 Nature = gSpecialVar_0x8000;
+	SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_PERSONALITY, &Nature);
+	CalculateMonStats(&gPlayerParty[gSpecialVar_0x8004]);
+}
+

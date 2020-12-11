@@ -102,7 +102,7 @@ void AgbMain()
     CheckForFlashMemory();
     InitMainCallbacks();
     InitMapMusic();
-    SeedRngWithRtc(); see comment at SeedRngWithRtc declaration below
+    SeedRngWithRtc(); 
     ClearDma3Requests();
     ResetBgs();
     SetDefaultFontsPointer();

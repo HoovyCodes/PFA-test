@@ -485,7 +485,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
 		//.ivs = 31
     },
 	[FRONTIER_MON_ALOLAN_GOLEM_1] = {
-        .species = SPECIES_ALOLAN_GOLEM,
+        .species = SPECIES_GOLEM_ALOLAN,
         .moves = {MOVE_WILD_CHARGE, MOVE_EARTHQUAKE, MOVE_ROCK_BLAST, MOVE_DOUBLE_EDGE},
         .itemTableId = BATTLE_FRONTIER_ITEM_AIR_BALLOON,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_SPEED,
@@ -494,7 +494,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
 		//.ivs = 31
     },
 	[FRONTIER_MON_ALOLAN_GOLEM_2] = {
-        .species = SPECIES_ALOLAN_GOLEM,
+        .species = SPECIES_GOLEM_ALOLAN,
         .moves = {MOVE_VOLT_SWITCH, MOVE_EARTHQUAKE, MOVE_STONE_EDGE, MOVE_FIRE_PUNCH},
         .itemTableId = BATTLE_FRONTIER_ITEM_CHOICE_BAND,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_SPEED,
@@ -1080,7 +1080,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
 		//.ivs = 31
     },
 	[FRONTIER_MON_ALOLAN_RATICATE] = {
-        .species = SPECIES_ALOLAN_RATICATE,
+        .species = SPECIES_RATICATE_ALOLAN,
         .moves = {MOVE_SWORDS_DANCE, MOVE_DOUBLE_EDGE, MOVE_KNOCK_OFF, MOVE_SUCKER_PUNCH},
         .itemTableId = BATTLE_FRONTIER_ITEM_SILK_SCARF,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_SPEED,
@@ -1317,7 +1317,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
 		//.ivs = 31
     },
 	[FRONTIER_MON_ALOLAN_DUGTRIO_1] = {
-        .species = SPECIES_ALOLAN_DUGTRIO,
+        .species = SPECIES_DUGTRIO_ALOLAN,
         .moves = {MOVE_EARTHQUAKE, MOVE_IRON_HEAD, MOVE_SUBSTITUTE, MOVE_TOXIC},
         .itemTableId = BATTLE_FRONTIER_ITEM_LEFTOVERS,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_SPEED,
@@ -1326,7 +1326,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
 		//.ivs = 31
     },
 	[FRONTIER_MON_ALOLAN_DUGTRIO_2] = {
-        .species = SPECIES_ALOLAN_DUGTRIO,
+        .species = SPECIES_DUGTRIO_ALOLAN,
         .moves = {MOVE_DIG, MOVE_IRON_HEAD, MOVE_ROCK_SLIDE, MOVE_SANDSTORM},
         .itemTableId = BATTLE_FRONTIER_ITEM_EXPERT_BELT,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_SPEED,
@@ -1596,7 +1596,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
 		//.ivs = 31
     },
 	[FRONTIER_MON_ALOLAN_PERSIAN] = {
-        .species = SPECIES_ALOLAN_PERSIAN,
+        .species = SPECIES_PERSIAN_ALOLAN,
         .moves = {MOVE_NASTY_PLOT, MOVE_DARK_PULSE, MOVE_PARTING_SHOT, MOVE_THUNDERBOLT},
         .itemTableId = BATTLE_FRONTIER_ITEM_BLACK_GLASSES,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_SP_ATTACK,
@@ -1632,7 +1632,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
 		//.ivs = 31
     },
 	[FRONTIER_MON_ALOLAN_RAICHU_1] = {
-        .species = SPECIES_ALOLAN_RAICHU,
+        .species = SPECIES_RAICHU_ALOLAN,
         .moves = {MOVE_NASTY_PLOT, MOVE_THUNDERBOLT, MOVE_PSYSHOCK, MOVE_FOCUS_BLAST},
         .itemTableId = BATTLE_FRONTIER_ITEM_LIFE_ORB,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_SPEED,
@@ -1641,7 +1641,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
 		//.ivs = 31
     },
 	[FRONTIER_MON_ALOLAN_RAICHU_2] = {
-        .species = SPECIES_ALOLAN_RAICHU,
+        .species = SPECIES_RAICHU_ALOLAN,
         .moves = {MOVE_NASTY_PLOT, MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_GRASS_KNOT},
         .itemTableId = BATTLE_FRONTIER_ITEM_FOCUS_SASH,
         .evSpread = F_EV_SPREAD_SP_ATTACK | F_EV_SPREAD_SPEED,
@@ -1686,7 +1686,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
 		//.ivs = 31
     },
 	[FRONTIER_MON_ALOLAN_SANDSLASH_1] = {
-        .species = SPECIES_ALOLAN_SANDSLASH,
+        .species = SPECIES_SANDSLASH_ALOLAN,
         .moves = {MOVE_ICICLE_CRASH, MOVE_IRON_HEAD, MOVE_EARTHQUAKE, MOVE_KNOCK_OFF},
         .itemTableId = BATTLE_FRONTIER_ITEM_CHOICE_SCARF,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_SPEED,
@@ -1695,7 +1695,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
 		//.ivs = 31
     },
 	[FRONTIER_MON_ALOLAN_SANDSLASH_2] = {
-        .species = SPECIES_ALOLAN_SANDSLASH,
+        .species = SPECIES_SANDSLASH_ALOLAN,
         .moves = {MOVE_COUNTER, MOVE_DEFENSE_CURL, MOVE_ICE_BALL, MOVE_GYRO_BALL},
         .itemTableId = BATTLE_FRONTIER_ITEM_FOCUS_SASH,
         .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_DEFENSE,
@@ -2173,7 +2173,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
 		//.ivs = 31
     },
 	[FRONTIER_MON_ALOLAN_EXEGGUTOR_1] = {
-        .species = SPECIES_ALOLAN_EXEGGUTOR,
+        .species = SPECIES_EXEGGUTOR_ALOLAN,
         .moves = {MOVE_DRACO_METEOR, MOVE_LEAF_STORM, MOVE_FLAMETHROWER, MOVE_GIGA_DRAIN},
         .itemTableId = BATTLE_FRONTIER_ITEM_CHOICE_SPECS,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_SP_ATTACK,
@@ -2182,7 +2182,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
 		//.ivs = 31
     },
 	[FRONTIER_MON_ALOLAN_EXEGGUTOR_2] = {
-        .species = SPECIES_ALOLAN_EXEGGUTOR,
+        .species = SPECIES_EXEGGUTOR_ALOLAN,
         .moves = {MOVE_DRAGON_HAMMER, MOVE_EARTHQUAKE, MOVE_BRICK_BREAK, MOVE_WOOD_HAMMER},
         .itemTableId = BATTLE_FRONTIER_ITEM_ASSAULT_VEST,
         .evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_ATTACK,
@@ -3255,7 +3255,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
         //.ivs = 31
     },
 [FRONTIER_MON_ALOLAN_MAROWAK_1] = {
-        .species = SPECIES_ALOLAN_MAROWAK,
+        .species = SPECIES_MAROWAK_ALOLAN,
         .moves = {MOVE_FLARE_BLITZ, MOVE_SHADOW_BONE, MOVE_SWORDS_DANCE, MOVE_LOW_KICK},
         .itemTableId = BATTLE_FRONTIER_ITEM_THICK_CLUB,
         .evSpread = F_EV_SPREAD_HP | F_EV_SPREAD_ATTACK,
@@ -3264,7 +3264,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
         //.ivs = 31
     },
 [FRONTIER_MON_ALOLAN_MAROWAK_2] = {
-        .species = SPECIES_ALOLAN_MAROWAK,
+        .species = SPECIES_MAROWAK_ALOLAN,
         .moves = {MOVE_WILL_O_WISP, MOVE_HEX, MOVE_THUNDER, MOVE_RAIN_DANCE},
         .itemTableId = BATTLE_FRONTIER_ITEM_AIR_BALLOON,
         .evSpread = F_EV_SPREAD_DEFENSE | F_EV_SPREAD_ATTACK,
@@ -4237,7 +4237,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
         //.ivs = 31
     },
 [FRONTIER_MON_ALOLAN_MUK_1] = {
-        .species = SPECIES_ALOLAN_MUK,
+        .species = SPECIES_MUK_ALOLAN,
         .moves = {MOVE_PURSUIT, MOVE_GUNK_SHOT, MOVE_KNOCK_OFF, MOVE_FIRE_PUNCH},
         .itemTableId = BATTLE_FRONTIER_ITEM_ASSAULT_VEST,
         .evSpread = F_EV_SPREAD_HP | F_EV_SPREAD_ATTACK,
@@ -4246,7 +4246,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
         //.ivs = 31
     },
 [FRONTIER_MON_ALOLAN_MUK_2] = {
-        .species = SPECIES_ALOLAN_MUK,
+        .species = SPECIES_MUK_ALOLAN,
         .moves = {MOVE_MINIMIZE, MOVE_SNARL, MOVE_ACID_SPRAY, MOVE_REST},
         .itemTableId = BATTLE_FRONTIER_ITEM_AIR_BALLOON,
         .evSpread = F_EV_SPREAD_HP | F_EV_SPREAD_ATTACK,
@@ -4625,7 +4625,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
         //.ivs = 31
     },
 [FRONTIER_MON_ALOLAN_NINETALES_1] = {
-        .species = SPECIES_ALOLAN_NINETALES,
+        .species = SPECIES_NINETALES_ALOLAN,
         .moves = {MOVE_AURORA_VEIL, MOVE_FREEZE_DRY, MOVE_HYPNOSIS, MOVE_HAIL},
         .itemTableId = BATTLE_FRONTIER_ITEM_LIGHT_CLAY,
         .evSpread = F_EV_SPREAD_HP | F_EV_SPREAD_SPEED,
@@ -4634,7 +4634,7 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
         //.ivs = 31
     },
 [FRONTIER_MON_ALOLAN_NINETALES_2] = {
-        .species = SPECIES_ALOLAN_NINETALES,
+        .species = SPECIES_NINETALES_ALOLAN,
         .moves = {MOVE_FREEZE_DRY, MOVE_DAZZLING_GLEAM, MOVE_EXTRASENSORY, MOVE_ICE_SHARD},
         .itemTableId = BATTLE_FRONTIER_ITEM_WIDE_LENS,
         .evSpread = F_EV_SPREAD_HP | F_EV_SPREAD_SPEED,

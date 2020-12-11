@@ -374,8 +374,8 @@ BattleFrontier_Exchange_Service_Corner_Text_GiveNU::
 		goto BattleFrontier_Exchange_Service_Corner_Text_PokeLeave
 		end
 	GiveNU14::
-		givecustommon SPECIES_ALOLAN_EXEGGUTOR, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_MODEST, 0, 0, 0, 0, 252, 252, 4, 31, 31, 31, 31, 31, 31, MOVE_DRACO_METEOR, MOVE_LEAF_STORM, MOVE_FLAMETHROWER, MOVE_GIGA_DRAIN, 0
-		setvar VAR_0x8004, SPECIES_ALOLAN_EXEGGUTOR
+		givecustommon SPECIES_EXEGGUTOR_ALOLAN, 100, ITEM_NONE, ITEM_POKE_BALL, NATURE_MODEST, 0, 0, 0, 0, 252, 252, 4, 31, 31, 31, 31, 31, 31, MOVE_DRACO_METEOR, MOVE_LEAF_STORM, MOVE_FLAMETHROWER, MOVE_GIGA_DRAIN, 0
+		setvar VAR_0x8004, SPECIES_EXEGGUTOR_ALOLAN
 		goto BattleFrontier_Exchange_Service_Corner_Text_PokeLeave
 		end
 	GiveNU15::
@@ -795,8 +795,8 @@ BattleFrontier_Exchange_Service_Corner_Text_GiveRU::
         goto BattleFrontier_Exchange_Service_Corner_Text_PokeLeave
     end
     GiveRU27::
-        setvar VAR_0x8004, SPECIES_ALOLAN_MAROWAK,
-        givecustommon SPECIES_ALOLAN_MAROWAK, 100, ITEM_NONE, ITEM_GREAT_BALL, NATURE_ADAMANT, 2, 212, 252, 0, 44, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_FLARE_BLITZ, MOVE_SHADOW_BONE, MOVE_SWORDS_DANCE, MOVE_LOW_KICK, 0
+        setvar VAR_0x8004, SPECIES_MAROWAK_ALOLAN,
+        givecustommon SPECIES_MAROWAK_ALOLAN, 100, ITEM_NONE, ITEM_GREAT_BALL, NATURE_ADAMANT, 2, 212, 252, 0, 44, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_FLARE_BLITZ, MOVE_SHADOW_BONE, MOVE_SWORDS_DANCE, MOVE_LOW_KICK, 0
         goto BattleFrontier_Exchange_Service_Corner_Text_PokeLeave
     end
     GiveRU28::
@@ -1143,8 +1143,8 @@ BattleFrontier_Exchange_Service_Corner_Text_GiveUU::
         goto BattleFrontier_Exchange_Service_Corner_Text_PokeLeave
     end
     GiveUU25::
-        setvar VAR_0x8004, SPECIES_ALOLAN_MUK
-        givecustommon SPECIES_ALOLAN_MUK, 100, ITEM_NONE, ITEM_ULTRA_BALL, NATURE_ADAMANT, 0, 4, 252, 0, 0, 0, 252, 31, 31, 31, 31, 31, 31, MOVE_PURSUIT, MOVE_GUNK_SHOT, MOVE_KNOCK_OFF, MOVE_FIRE_PUNCH, 0
+        setvar VAR_0x8004, SPECIES_MUK_ALOLAN
+        givecustommon SPECIES_MUK_ALOLAN, 100, ITEM_NONE, ITEM_ULTRA_BALL, NATURE_ADAMANT, 0, 4, 252, 0, 0, 0, 252, 31, 31, 31, 31, 31, 31, MOVE_PURSUIT, MOVE_GUNK_SHOT, MOVE_KNOCK_OFF, MOVE_FIRE_PUNCH, 0
         goto BattleFrontier_Exchange_Service_Corner_Text_PokeLeave
     end
     GiveUU26::
@@ -1248,8 +1248,8 @@ BattleFrontier_Exchange_Service_Corner_Text_GiveUU::
         goto BattleFrontier_Exchange_Service_Corner_Text_PokeLeave
     end
     GiveUU46::
-        setvar VAR_0x8004, SPECIES_ALOLAN_NINETALES
-        givecustommon SPECIES_ALOLAN_NINETALES, 100, ITEM_NONE, ITEM_ULTRA_BALL, NATURE_TIMID, 2, 248, 0, 0, 252, 8, 0, 31, 31, 31, 31, 31, 31, MOVE_AURORA_VEIL, MOVE_FREEZE_DRY, MOVE_HYPNOSIS, MOVE_HAIL, 0
+        setvar VAR_0x8004, SPECIES_NINETALES_ALOLAN
+        givecustommon SPECIES_NINETALES_ALOLAN, 100, ITEM_NONE, ITEM_ULTRA_BALL, NATURE_TIMID, 2, 248, 0, 0, 252, 8, 0, 31, 31, 31, 31, 31, 31, MOVE_AURORA_VEIL, MOVE_FREEZE_DRY, MOVE_HYPNOSIS, MOVE_HAIL, 0
         goto BattleFrontier_Exchange_Service_Corner_Text_PokeLeave
     end
     GiveUU47::

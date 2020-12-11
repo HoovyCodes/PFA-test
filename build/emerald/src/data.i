@@ -2356,6 +2356,7 @@ bool8 HasTwoFramesAnimation(u16 species);
 struct Unknown_806F160_Struct *sub_806F2AC(u8 id, u8 arg1);
 void sub_806F47C(u8 id);
 u8 *sub_806F4F8(u8 id, u8 arg1);
+void CreateShinyMonWithNature(struct Pokemon *mon, u16 species, u8 level, u8 nature);
 # 535 "include/global.h" 2
 
 struct WarpData
@@ -4115,6 +4116,7 @@ struct TrainerMonItemCustomMoves
 {
     u16 iv;
     u8 lvl;
+ u8 evs[6];
     u16 species;
     u16 heldItem;
     u16 moves[4];
@@ -44220,64 +44222,360 @@ const u32 gUnknown830AF4C[] =
 };
 
 # 1 "src/data/trainer_parties.h" 1
-static const struct TrainerMonNoItemDefaultMoves sParty_Sawyer1[] = {
+static const struct TrainerMonItemCustomMoves sParty_Sawyer1[] = {
     {
-    .iv = 0,
-    .lvl = 21,
-    .species = 74,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout1[] = {
-    {
-    .iv = 0,
-    .lvl = 32,
-    .species = 261,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout2[] = {
-    {
-    .iv = 0,
-    .lvl = 31,
-    .species = 41,
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0, 0},
+    .species = 25,
+    .heldItem = 275,
+    .moves = {344, 231, 280, 252}
     },
     {
-    .iv = 0,
-    .lvl = 31,
-    .species = 318,
+    .iv = 255,
+    .lvl = 100,
+ .evs = {255, 0, 0, 0, 0, 255},
+    .species = 3,
+    .heldItem = 212,
+    .moves = {437, 89, 188, 79}
+    },
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 0, 255, 0},
+    .species = 6,
+    .heldItem = 410,
+    .moves = {7, 411, 403, 406}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 0, 255, 255, 0},
+    .species = 9,
+    .heldItem = 266,
+    .moves = {323, 56, 59, 411}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {255, 0, 255, 0, 0, 0},
+    .species = 143,
+    .heldItem = 215,
+    .moves = {34, 89, 242, 402}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {255, 0, 0, 0, 0, 255},
+    .species = 131,
+    .heldItem = 153,
+    .moves = {58, 56, 420, 85}
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout3[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntAquaHideout1[] = {
     {
-    .iv = 0,
-    .lvl = 32,
-    .species = 41,
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0, 0},
+    .species = 142,
+    .heldItem = 218,
+    .moves = {444, 89, 423, 126}
+    },
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {255, 0, 0, 0, 255, 0},
+    .species = 103,
+    .heldItem = 282,
+    .moves = {437, 452, 428, 73}
+    },
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0, 0},
+    .species = 130,
+    .heldItem = 418,
+    .moves = {127, 89, 423, 200}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 0, 255, 255, 0},
+    .species = 65,
+    .heldItem = 268,
+    .moves = {94, 411, 247, 115}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0, 0},
+    .species = 59,
+    .heldItem = 274,
+    .moves = {394, 528, 370, 245}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 255, 0, 0, 0},
+    .species = 68,
+    .heldItem = 212,
+    .moves = {276, 444, 7, 418}
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntAquaHideout4[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntAquaHideout2[] = {
     {
-    .iv = 0,
-    .lvl = 32,
-    .species = 318,
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0, 0},
+    .species = 149,
+    .heldItem = 268,
+    .moves = {245, 8, 7, 434}
+    },
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0, 0},
+    .species = 373,
+    .heldItem = 435,
+    .moves = {337, 89, 444, 242}
+    },
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 0, 255, 255, 0},
+    .species = 230,
+    .heldItem = 227,
+    .moves = {57, 58, 430, 406}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0, 0},
+    .species = 612,
+    .heldItem = 266,
+    .moves = {200, 276, 89, 157}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 0, 255, 255, 0},
+    .species = 715,
+    .heldItem = 282,
+    .moves = {434, 53, 586, 411}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 0, 255, 255, 0},
+    .species = 330,
+    .heldItem = 265,
+    .moves = {434, 414, 369, 76}
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern1[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntAquaHideout3[] = {
     {
-    .iv = 0,
-    .lvl = 36,
-    .species = 261,
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 255, 0, 0, 0},
+    .species = 376,
+    .heldItem = 179,
+    .moves = {428, 359, 89, 418}
+    },
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 255, 0, 0, 0},
+    .species = 306,
+    .heldItem = 400,
+    .moves = {457, 89, 419, 368}
+    },
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0, 0},
+    .species = 530,
+    .heldItem = 268,
+    .moves = {89, 404, 157, 201}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0, 0},
+    .species = 567,
+    .heldItem = 153,
+    .moves = {457, 512, 98, 89}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {255, 0, 0, 0,0, 255},
+    .species = 346,
+    .heldItem = 274,
+    .moves = {444, 402, 89, 201}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {255, 0, 255, 0,0, 0},
+    .species = 348,
+    .heldItem = 212,
+    .moves = {404, 350, 89, 276}
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern2[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntAquaHideout4[] = {
     {
-    .iv = 0,
-    .lvl = 36,
-    .species = 318,
+    .iv = 255,
+    .lvl = 100,
+ .evs = {255, 0, 255, 0, 0, 0},
+    .species = 350,
+    .heldItem = 293,
+    .moves = {503, 196, 156, 214}
+    },
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0, 0},
+    .species = 319,
+    .heldItem = 268,
+    .moves = {56, 242, 428, 453}
+    },
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {255, 0, 255, 0, 0, 0},
+    .species = 365,
+    .heldItem = 229,
+    .moves = {57, 59, 281, 329}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 0, 255, 255, 0},
+    .species = 272,
+    .heldItem = 282,
+    .moves = {57, 411, 202, 240}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 0, 0,255, 255},
+    .species = 260,
+    .heldItem = 441,
+    .moves = {330, 58, 414, 411}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 255, 255,0, 0},
+    .species = 121,
+    .heldItem = 274,
+    .moves = {57, 94, 85, 324}
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_GruntSeafloorCavern1[] = {
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0, 0},
+    .species = 445,
+    .heldItem = 414,
+    .moves = {200, 89, 444, 14}
+    },
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 255, 0, 0, 0},
+    .species = 442,
+    .heldItem = 293,
+    .moves = {389, 182, 261, 220}
+    },
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 255, 255, 0, 0},
+    .species = 407,
+    .heldItem = 212,
+    .moves = {437, 188, 247, 79}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 0, 255, 255, 0},
+    .species = 468,
+    .heldItem = 229,
+    .moves = {403, 396, 247, 447}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0, 0},
+    .species = 448,
+    .heldItem = 282,
+    .moves = {370, 399, 444, 245}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {255, 0, 0, 0,0, 255},
+    .species = 471,
+    .heldItem = 266,
+    .moves = {58, 247, 324, 352}
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_GruntSeafloorCavern2[] = {
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 0, 255, 255, 0},
+    .species = 637,
+    .heldItem = 190,
+    .moves = {257, 405, 94, 483}
+    },
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 255, 0, 0, 0},
+    .species = 534,
+    .heldItem = 282,
+    .moves = {359, 371, 444, 183}
+    },
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {255, 0, 0, 0, 0, 255},
+    .species = 579,
+    .heldItem = 229,
+    .moves = {94, 115, 92, 113}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255,0, 0},
+    .species = 553,
+    .heldItem = 274,
+    .moves = {89, 242, 444, 200}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 0, 255, 255, 0},
+    .species = 609,
+    .heldItem = 266,
+    .moves = {53, 94, 247, 412}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {255, 255, 0, 0,0, 0},
+    .species = 628,
+    .heldItem = 218,
+    .moves = {413, 276, 157, 369}
     }
 };
 
@@ -45043,6 +45341,7 @@ static const struct TrainerMonItemCustomMoves sParty_Randall[] = {
     {
     .iv = 255,
     .lvl = 26,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 277,
     .heldItem = 0,
     .moves = {98, 97, 17, 0}
@@ -45053,6 +45352,7 @@ static const struct TrainerMonItemCustomMoves sParty_Parker[] = {
     {
     .iv = 255,
     .lvl = 26,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 327,
     .heldItem = 0,
     .moves = {298, 146, 264, 0}
@@ -45063,6 +45363,7 @@ static const struct TrainerMonItemCustomMoves sParty_George[] = {
     {
     .iv = 255,
     .lvl = 26,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 287,
     .heldItem = 153,
     .moves = {303, 68, 247, 0}
@@ -45073,6 +45374,7 @@ static const struct TrainerMonItemCustomMoves sParty_Berke[] = {
     {
     .iv = 255,
     .lvl = 26,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 288,
     .heldItem = 0,
     .moves = {116, 163, 0, 0}
@@ -45335,6 +45637,7 @@ static const struct TrainerMonItemCustomMoves sParty_Mary[] = {
     {
     .iv = 255,
     .lvl = 26,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 301,
     .heldItem = 0,
     .moves = {185, 351, 0, 0}
@@ -45345,6 +45648,7 @@ static const struct TrainerMonItemCustomMoves sParty_Alexia[] = {
     {
     .iv = 255,
     .lvl = 26,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 40,
     .heldItem = 0,
     .moves = {111, 38, 247, 0}
@@ -45355,6 +45659,7 @@ static const struct TrainerMonItemCustomMoves sParty_Jody[] = {
     {
     .iv = 255,
     .lvl = 26,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 335,
     .heldItem = 0,
     .moves = {14, 163, 0, 0}
@@ -45683,6 +45988,7 @@ static const struct TrainerMonItemCustomMoves sParty_Daphne[] = {
     {
     .iv = 100,
     .lvl = 39,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 370,
     .heldItem = 124,
     .moves = {213, 186, 175, 352}
@@ -45690,6 +45996,7 @@ static const struct TrainerMonItemCustomMoves sParty_Daphne[] = {
     {
     .iv = 100,
     .lvl = 39,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 370,
     .heldItem = 124,
     .moves = {213, 219, 36, 352}
@@ -45718,6 +46025,7 @@ static const struct TrainerMonItemCustomMoves sParty_Cindy2[] = {
     {
     .iv = 0,
     .lvl = 11,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 263,
     .heldItem = 124,
     .moves = {33, 39, 0, 0}
@@ -45773,6 +46081,7 @@ static const struct TrainerMonItemCustomMoves sParty_Cindy6[] = {
     {
     .iv = 40,
     .lvl = 36,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 264,
     .heldItem = 124,
     .moves = {154, 300, 316, 28}
@@ -45990,6 +46299,7 @@ static const struct TrainerMonItemCustomMoves sParty_Winston5[] = {
     {
     .iv = 0,
     .lvl = 36,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 264,
     .heldItem = 124,
     .moves = {154, 300, 316, 28}
@@ -47438,6 +47748,7 @@ static const struct TrainerMonItemCustomMoves sParty_Sidney[] = {
     {
     .iv = 250,
     .lvl = 46,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 262,
     .heldItem = 0,
     .moves = {46, 38, 28, 242}
@@ -47445,6 +47756,7 @@ static const struct TrainerMonItemCustomMoves sParty_Sidney[] = {
     {
     .iv = 250,
     .lvl = 48,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 275,
     .heldItem = 0,
     .moves = {259, 104, 207, 326}
@@ -47452,6 +47764,7 @@ static const struct TrainerMonItemCustomMoves sParty_Sidney[] = {
     {
     .iv = 250,
     .lvl = 46,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 332,
     .heldItem = 0,
     .moves = {73, 185, 302, 178}
@@ -47459,6 +47772,7 @@ static const struct TrainerMonItemCustomMoves sParty_Sidney[] = {
     {
     .iv = 250,
     .lvl = 48,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 342,
     .heldItem = 0,
     .moves = {57, 14, 70, 263}
@@ -47466,6 +47780,7 @@ static const struct TrainerMonItemCustomMoves sParty_Sidney[] = {
     {
     .iv = 255,
     .lvl = 49,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 359,
     .heldItem = 153,
     .moves = {332, 157, 14, 163}
@@ -47476,6 +47791,7 @@ static const struct TrainerMonItemCustomMoves sParty_Phoebe[] = {
     {
     .iv = 250,
     .lvl = 48,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 356,
     .heldItem = 0,
     .moves = {325, 109, 174, 182}
@@ -47483,6 +47799,7 @@ static const struct TrainerMonItemCustomMoves sParty_Phoebe[] = {
     {
     .iv = 250,
     .lvl = 49,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 354,
     .heldItem = 0,
     .moves = {247, 288, 261, 185}
@@ -47490,6 +47807,7 @@ static const struct TrainerMonItemCustomMoves sParty_Phoebe[] = {
     {
     .iv = 250,
     .lvl = 50,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 302,
     .heldItem = 0,
     .moves = {247, 104, 101, 185}
@@ -47497,6 +47815,7 @@ static const struct TrainerMonItemCustomMoves sParty_Phoebe[] = {
     {
     .iv = 250,
     .lvl = 49,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 354,
     .heldItem = 0,
     .moves = {247, 94, 85, 263}
@@ -47504,6 +47823,7 @@ static const struct TrainerMonItemCustomMoves sParty_Phoebe[] = {
     {
     .iv = 255,
     .lvl = 51,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 356,
     .heldItem = 153,
     .moves = {247, 58, 157, 89}
@@ -47514,6 +47834,7 @@ static const struct TrainerMonItemCustomMoves sParty_Glacia[] = {
     {
     .iv = 250,
     .lvl = 50,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 364,
     .heldItem = 0,
     .moves = {227, 34, 258, 301}
@@ -47521,6 +47842,7 @@ static const struct TrainerMonItemCustomMoves sParty_Glacia[] = {
     {
     .iv = 250,
     .lvl = 50,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 362,
     .heldItem = 0,
     .moves = {113, 242, 196, 58}
@@ -47528,6 +47850,7 @@ static const struct TrainerMonItemCustomMoves sParty_Glacia[] = {
     {
     .iv = 250,
     .lvl = 52,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 364,
     .heldItem = 0,
     .moves = {213, 38, 258, 59}
@@ -47542,6 +47865,7 @@ static const struct TrainerMonItemCustomMoves sParty_Glacia[] = {
     {
     .iv = 255,
     .lvl = 53,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 365,
     .heldItem = 153,
     .moves = {57, 34, 58, 329}
@@ -47552,6 +47876,7 @@ static const struct TrainerMonItemCustomMoves sParty_Drake[] = {
     {
     .iv = 250,
     .lvl = 52,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 372,
     .heldItem = 0,
     .moves = {317, 337, 182, 38}
@@ -47559,6 +47884,7 @@ static const struct TrainerMonItemCustomMoves sParty_Drake[] = {
     {
     .iv = 250,
     .lvl = 54,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 334,
     .heldItem = 0,
     .moves = {38, 225, 349, 332}
@@ -47566,6 +47892,7 @@ static const struct TrainerMonItemCustomMoves sParty_Drake[] = {
     {
     .iv = 250,
     .lvl = 53,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 230,
     .heldItem = 0,
     .moves = {108, 349, 57, 34}
@@ -47573,6 +47900,7 @@ static const struct TrainerMonItemCustomMoves sParty_Drake[] = {
     {
     .iv = 250,
     .lvl = 53,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 330,
     .heldItem = 0,
     .moves = {53, 242, 225, 89}
@@ -47580,6 +47908,7 @@ static const struct TrainerMonItemCustomMoves sParty_Drake[] = {
     {
     .iv = 255,
     .lvl = 55,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 373,
     .heldItem = 153,
     .moves = {53, 337, 157, 242}
@@ -47590,6 +47919,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     {
     .iv = 100,
     .lvl = 12,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 74,
     .heldItem = 0,
     .moves = {33, 111, 88, 317}
@@ -47597,6 +47927,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     {
     .iv = 100,
     .lvl = 12,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 74,
     .heldItem = 0,
     .moves = {33, 111, 88, 317}
@@ -47604,6 +47935,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     {
     .iv = 200,
     .lvl = 15,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 299,
     .heldItem = 150,
     .moves = {335, 106, 33, 317}
@@ -47614,6 +47946,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly1[] = {
     {
     .iv = 100,
     .lvl = 16,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 66,
     .heldItem = 0,
     .moves = {2, 67, 69, 339}
@@ -47621,6 +47954,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly1[] = {
     {
     .iv = 100,
     .lvl = 16,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 307,
     .heldItem = 0,
     .moves = {264, 113, 115, 339}
@@ -47628,6 +47962,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly1[] = {
     {
     .iv = 200,
     .lvl = 19,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 296,
     .heldItem = 153,
     .moves = {292, 233, 179, 339}
@@ -47638,6 +47973,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
     {
     .iv = 200,
     .lvl = 20,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 100,
     .heldItem = 0,
     .moves = {205, 209, 120, 351}
@@ -47645,6 +47981,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
     {
     .iv = 200,
     .lvl = 20,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 309,
     .heldItem = 0,
     .moves = {351, 43, 98, 336}
@@ -47652,6 +47989,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
     {
     .iv = 220,
     .lvl = 22,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 82,
     .heldItem = 0,
     .moves = {48, 351, 86, 49}
@@ -47659,6 +47997,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
     {
     .iv = 250,
     .lvl = 24,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 310,
     .heldItem = 153,
     .moves = {98, 86, 351, 336}
@@ -47669,6 +48008,7 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
     {
     .iv = 200,
     .lvl = 24,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 322,
     .heldItem = 0,
     .moves = {315, 36, 222, 241}
@@ -47676,6 +48016,7 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
     {
     .iv = 200,
     .lvl = 24,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 218,
     .heldItem = 0,
     .moves = {315, 123, 113, 241}
@@ -47683,6 +48024,7 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
     {
     .iv = 250,
     .lvl = 26,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 323,
     .heldItem = 0,
     .moves = {315, 33, 241, 213}
@@ -47690,6 +48032,7 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
     {
     .iv = 250,
     .lvl = 29,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 324,
     .heldItem = 212,
     .moves = {315, 241, 34, 213}
@@ -47700,6 +48043,7 @@ static const struct TrainerMonItemCustomMoves sParty_Norman1[] = {
     {
     .iv = 200,
     .lvl = 27,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 327,
     .heldItem = 0,
     .moves = {298, 60, 263, 227}
@@ -47707,6 +48051,7 @@ static const struct TrainerMonItemCustomMoves sParty_Norman1[] = {
     {
     .iv = 200,
     .lvl = 27,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 288,
     .heldItem = 0,
     .moves = {163, 263, 227, 185}
@@ -47714,6 +48059,7 @@ static const struct TrainerMonItemCustomMoves sParty_Norman1[] = {
     {
     .iv = 200,
     .lvl = 29,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 264,
     .heldItem = 0,
     .moves = {163, 187, 263, 29}
@@ -47721,6 +48067,7 @@ static const struct TrainerMonItemCustomMoves sParty_Norman1[] = {
     {
     .iv = 250,
     .lvl = 31,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 289,
     .heldItem = 153,
     .moves = {68, 281, 263, 185}
@@ -47731,6 +48078,7 @@ static const struct TrainerMonItemCustomMoves sParty_Winona1[] = {
     {
     .iv = 210,
     .lvl = 29,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 333,
     .heldItem = 0,
     .moves = {195, 119, 219, 332}
@@ -47738,6 +48086,7 @@ static const struct TrainerMonItemCustomMoves sParty_Winona1[] = {
     {
     .iv = 210,
     .lvl = 29,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 357,
     .heldItem = 0,
     .moves = {241, 332, 76, 235}
@@ -47752,6 +48101,7 @@ static const struct TrainerMonItemCustomMoves sParty_Winona1[] = {
     {
     .iv = 220,
     .lvl = 31,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 227,
     .heldItem = 0,
     .moves = {28, 31, 211, 332}
@@ -47759,6 +48109,7 @@ static const struct TrainerMonItemCustomMoves sParty_Winona1[] = {
     {
     .iv = 255,
     .lvl = 33,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 334,
     .heldItem = 150,
     .moves = {89, 225, 349, 332}
@@ -47769,6 +48120,7 @@ static const struct TrainerMonItemCustomMoves sParty_TateAndLiza1[] = {
     {
     .iv = 250,
     .lvl = 41,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 344,
     .heldItem = 0,
     .moves = {89, 246, 94, 113}
@@ -47776,6 +48128,7 @@ static const struct TrainerMonItemCustomMoves sParty_TateAndLiza1[] = {
     {
     .iv = 250,
     .lvl = 41,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 178,
     .heldItem = 0,
     .moves = {94, 241, 109, 347}
@@ -47783,6 +48136,7 @@ static const struct TrainerMonItemCustomMoves sParty_TateAndLiza1[] = {
     {
     .iv = 250,
     .lvl = 42,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 337,
     .heldItem = 153,
     .moves = {113, 94, 95, 347}
@@ -47790,6 +48144,7 @@ static const struct TrainerMonItemCustomMoves sParty_TateAndLiza1[] = {
     {
     .iv = 250,
     .lvl = 42,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 338,
     .heldItem = 153,
     .moves = {241, 76, 94, 53}
@@ -47800,6 +48155,7 @@ static const struct TrainerMonItemCustomMoves sParty_Juan1[] = {
     {
     .iv = 200,
     .lvl = 41,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 370,
     .heldItem = 0,
     .moves = {352, 213, 186, 175}
@@ -47807,6 +48163,7 @@ static const struct TrainerMonItemCustomMoves sParty_Juan1[] = {
     {
     .iv = 200,
     .lvl = 41,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 340,
     .heldItem = 0,
     .moves = {240, 352, 133, 89}
@@ -47814,6 +48171,7 @@ static const struct TrainerMonItemCustomMoves sParty_Juan1[] = {
     {
     .iv = 200,
     .lvl = 43,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 364,
     .heldItem = 0,
     .moves = {227, 34, 62, 352}
@@ -47821,6 +48179,7 @@ static const struct TrainerMonItemCustomMoves sParty_Juan1[] = {
     {
     .iv = 200,
     .lvl = 43,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 342,
     .heldItem = 0,
     .moves = {352, 152, 269, 43}
@@ -47828,6 +48187,7 @@ static const struct TrainerMonItemCustomMoves sParty_Juan1[] = {
     {
     .iv = 250,
     .lvl = 46,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 230,
     .heldItem = 145,
     .moves = {352, 104, 58, 156}
@@ -48116,6 +48476,7 @@ static const struct TrainerMonItemCustomMoves sParty_Colton[] = {
     {
     .iv = 0,
     .lvl = 22,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 300,
     .heldItem = 150,
     .moves = {274, 204, 185, 215}
@@ -48123,6 +48484,7 @@ static const struct TrainerMonItemCustomMoves sParty_Colton[] = {
     {
     .iv = 0,
     .lvl = 36,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 300,
     .heldItem = 150,
     .moves = {274, 204, 185, 215}
@@ -48130,6 +48492,7 @@ static const struct TrainerMonItemCustomMoves sParty_Colton[] = {
     {
     .iv = 0,
     .lvl = 40,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 300,
     .heldItem = 150,
     .moves = {274, 204, 185, 215}
@@ -48137,6 +48500,7 @@ static const struct TrainerMonItemCustomMoves sParty_Colton[] = {
     {
     .iv = 0,
     .lvl = 12,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 300,
     .heldItem = 150,
     .moves = {274, 204, 185, 215}
@@ -48144,6 +48508,7 @@ static const struct TrainerMonItemCustomMoves sParty_Colton[] = {
     {
     .iv = 0,
     .lvl = 30,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 300,
     .heldItem = 150,
     .moves = {274, 204, 185, 215}
@@ -48151,6 +48516,7 @@ static const struct TrainerMonItemCustomMoves sParty_Colton[] = {
     {
     .iv = 0,
     .lvl = 42,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 301,
     .heldItem = 150,
     .moves = {274, 204, 185, 215}
@@ -48637,6 +49003,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wallace[] = {
     {
     .iv = 255,
     .lvl = 57,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 321,
     .heldItem = 0,
     .moves = {240, 323, 38, 59}
@@ -48644,6 +49011,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wallace[] = {
     {
     .iv = 255,
     .lvl = 55,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 73,
     .heldItem = 0,
     .moves = {92, 56, 188, 58}
@@ -48651,6 +49019,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wallace[] = {
     {
     .iv = 255,
     .lvl = 56,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 272,
     .heldItem = 0,
     .moves = {202, 57, 73, 104}
@@ -48658,6 +49027,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wallace[] = {
     {
     .iv = 255,
     .lvl = 56,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 340,
     .heldItem = 0,
     .moves = {89, 57, 133, 63}
@@ -48665,6 +49035,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wallace[] = {
     {
     .iv = 255,
     .lvl = 56,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 130,
     .heldItem = 0,
     .moves = {349, 89, 63, 57}
@@ -48672,6 +49043,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wallace[] = {
     {
     .iv = 255,
     .lvl = 58,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 350,
     .heldItem = 153,
     .moves = {105, 57, 58, 92}
@@ -49644,6 +50016,7 @@ static const struct TrainerMonItemCustomMoves sParty_Dianne[] = {
     {
     .iv = 0,
     .lvl = 43,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 344,
     .heldItem = 0,
     .moves = {285, 89, 0, 0}
@@ -49651,6 +50024,7 @@ static const struct TrainerMonItemCustomMoves sParty_Dianne[] = {
     {
     .iv = 0,
     .lvl = 43,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 171,
     .heldItem = 0,
     .moves = {85, 89, 0, 0}
@@ -49784,6 +50158,7 @@ static const struct TrainerMonItemCustomMoves sParty_Lao5[] = {
     {
     .iv = 40,
     .lvl = 33,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 109,
     .heldItem = 0,
     .moves = {139, 33, 124, 0}
@@ -49791,6 +50166,7 @@ static const struct TrainerMonItemCustomMoves sParty_Lao5[] = {
     {
     .iv = 40,
     .lvl = 33,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 109,
     .heldItem = 0,
     .moves = {139, 33, 124, 120}
@@ -49798,6 +50174,7 @@ static const struct TrainerMonItemCustomMoves sParty_Lao5[] = {
     {
     .iv = 40,
     .lvl = 33,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 109,
     .heldItem = 0,
     .moves = {139, 33, 124, 120}
@@ -49805,6 +50182,7 @@ static const struct TrainerMonItemCustomMoves sParty_Lao5[] = {
     {
     .iv = 40,
     .lvl = 35,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 110,
     .heldItem = 223,
     .moves = {33, 124, 0, 0}
@@ -50765,6 +51143,7 @@ static const struct TrainerMonItemCustomMoves sParty_Annika[] = {
     {
     .iv = 100,
     .lvl = 39,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 349,
     .heldItem = 150,
     .moves = {175, 352, 216, 213}
@@ -50772,6 +51151,7 @@ static const struct TrainerMonItemCustomMoves sParty_Annika[] = {
     {
     .iv = 100,
     .lvl = 39,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 349,
     .heldItem = 150,
     .moves = {175, 352, 216, 213}
@@ -50834,6 +51214,7 @@ static const struct TrainerMonItemCustomMoves sParty_Marley[] = {
     {
     .iv = 255,
     .lvl = 34,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 310,
     .heldItem = 0,
     .moves = {44, 46, 86, 85}
@@ -51925,6 +52306,7 @@ static const struct TrainerMonItemCustomMoves sParty_Athena[] = {
     {
     .iv = 100,
     .lvl = 32,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 310,
     .heldItem = 0,
     .moves = {87, 86, 98, 0}
@@ -51932,6 +52314,7 @@ static const struct TrainerMonItemCustomMoves sParty_Athena[] = {
     {
     .iv = 100,
     .lvl = 32,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 264,
     .heldItem = 0,
     .moves = {57, 168, 0, 0}
@@ -54524,6 +54907,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne2[] = {
     {
     .iv = 255,
     .lvl = 32,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 76,
     .heldItem = 0,
     .moves = {182, 205, 222, 153}
@@ -54531,6 +54915,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne2[] = {
     {
     .iv = 255,
     .lvl = 35,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 140,
     .heldItem = 153,
     .moves = {14, 58, 57, 157}
@@ -54538,6 +54923,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne2[] = {
     {
     .iv = 255,
     .lvl = 35,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 95,
     .heldItem = 0,
     .moves = {231, 153, 46, 157}
@@ -54545,6 +54931,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne2[] = {
     {
     .iv = 255,
     .lvl = 37,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 299,
     .heldItem = 153,
     .moves = {104, 153, 182, 157}
@@ -54555,6 +54942,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne3[] = {
     {
     .iv = 255,
     .lvl = 37,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 138,
     .heldItem = 0,
     .moves = {182, 58, 157, 57}
@@ -54562,6 +54950,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne3[] = {
     {
     .iv = 255,
     .lvl = 37,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 76,
     .heldItem = 0,
     .moves = {182, 205, 222, 153}
@@ -54569,6 +54958,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne3[] = {
     {
     .iv = 255,
     .lvl = 40,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 141,
     .heldItem = 153,
     .moves = {14, 58, 57, 157}
@@ -54576,6 +54966,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne3[] = {
     {
     .iv = 255,
     .lvl = 40,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 95,
     .heldItem = 0,
     .moves = {231, 153, 46, 157}
@@ -54583,6 +54974,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne3[] = {
     {
     .iv = 255,
     .lvl = 42,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 299,
     .heldItem = 153,
     .moves = {104, 153, 182, 157}
@@ -54593,6 +54985,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne4[] = {
     {
     .iv = 255,
     .lvl = 42,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 139,
     .heldItem = 0,
     .moves = {182, 58, 157, 57}
@@ -54600,6 +54993,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne4[] = {
     {
     .iv = 255,
     .lvl = 42,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 76,
     .heldItem = 0,
     .moves = {182, 205, 89, 153}
@@ -54614,6 +55008,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne4[] = {
     {
     .iv = 255,
     .lvl = 45,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 95,
     .heldItem = 0,
     .moves = {231, 153, 46, 157}
@@ -54621,6 +55016,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne4[] = {
     {
     .iv = 255,
     .lvl = 47,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 299,
     .heldItem = 153,
     .moves = {104, 153, 182, 157}
@@ -54631,6 +55027,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne5[] = {
     {
     .iv = 255,
     .lvl = 47,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 142,
     .heldItem = 0,
     .moves = {157, 63, 48, 182}
@@ -54638,6 +55035,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne5[] = {
     {
     .iv = 255,
     .lvl = 47,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 76,
     .heldItem = 0,
     .moves = {264, 205, 89, 153}
@@ -54645,6 +55043,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne5[] = {
     {
     .iv = 255,
     .lvl = 47,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 139,
     .heldItem = 0,
     .moves = {182, 58, 157, 57}
@@ -54652,6 +55051,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne5[] = {
     {
     .iv = 255,
     .lvl = 50,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 141,
     .heldItem = 153,
     .moves = {14, 58, 57, 157}
@@ -54659,6 +55059,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne5[] = {
     {
     .iv = 255,
     .lvl = 50,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 208,
     .heldItem = 0,
     .moves = {231, 153, 46, 157}
@@ -54666,6 +55067,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne5[] = {
     {
     .iv = 255,
     .lvl = 52,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 299,
     .heldItem = 153,
     .moves = {104, 153, 182, 157}
@@ -54676,6 +55078,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly2[] = {
     {
     .iv = 255,
     .lvl = 33,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 68,
     .heldItem = 153,
     .moves = {2, 157, 264, 339}
@@ -54683,6 +55086,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly2[] = {
     {
     .iv = 255,
     .lvl = 33,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 307,
     .heldItem = 0,
     .moves = {94, 113, 115, 264}
@@ -54690,6 +55094,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly2[] = {
     {
     .iv = 255,
     .lvl = 35,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 237,
     .heldItem = 0,
     .moves = {228, 68, 182, 167}
@@ -54697,6 +55102,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly2[] = {
     {
     .iv = 255,
     .lvl = 37,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 297,
     .heldItem = 153,
     .moves = {252, 264, 187, 89}
@@ -54707,6 +55113,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly3[] = {
     {
     .iv = 255,
     .lvl = 38,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 68,
     .heldItem = 153,
     .moves = {2, 157, 264, 339}
@@ -54714,6 +55121,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly3[] = {
     {
     .iv = 255,
     .lvl = 38,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 308,
     .heldItem = 0,
     .moves = {94, 113, 115, 264}
@@ -54721,6 +55129,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly3[] = {
     {
     .iv = 255,
     .lvl = 40,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 237,
     .heldItem = 0,
     .moves = {228, 68, 182, 167}
@@ -54728,6 +55137,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly3[] = {
     {
     .iv = 255,
     .lvl = 42,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 297,
     .heldItem = 153,
     .moves = {252, 264, 187, 89}
@@ -54738,6 +55148,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly4[] = {
     {
     .iv = 255,
     .lvl = 40,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 107,
     .heldItem = 0,
     .moves = {327, 182, 7, 8}
@@ -54745,6 +55156,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly4[] = {
     {
     .iv = 255,
     .lvl = 43,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 68,
     .heldItem = 153,
     .moves = {2, 157, 264, 339}
@@ -54752,6 +55164,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly4[] = {
     {
     .iv = 255,
     .lvl = 43,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 308,
     .heldItem = 0,
     .moves = {264, 113, 115, 94}
@@ -54759,6 +55172,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly4[] = {
     {
     .iv = 255,
     .lvl = 45,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 237,
     .heldItem = 0,
     .moves = {228, 68, 182, 167}
@@ -54766,6 +55180,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly4[] = {
     {
     .iv = 255,
     .lvl = 47,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 297,
     .heldItem = 153,
     .moves = {252, 264, 187, 89}
@@ -54776,6 +55191,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly5[] = {
     {
     .iv = 255,
     .lvl = 46,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 106,
     .heldItem = 0,
     .moves = {25, 264, 89, 339}
@@ -54783,6 +55199,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly5[] = {
     {
     .iv = 255,
     .lvl = 46,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 107,
     .heldItem = 0,
     .moves = {327, 182, 7, 8}
@@ -54790,6 +55207,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly5[] = {
     {
     .iv = 255,
     .lvl = 48,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 68,
     .heldItem = 153,
     .moves = {238, 157, 264, 339}
@@ -54797,6 +55215,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly5[] = {
     {
     .iv = 255,
     .lvl = 48,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 308,
     .heldItem = 0,
     .moves = {264, 113, 115, 94}
@@ -54804,6 +55223,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly5[] = {
     {
     .iv = 255,
     .lvl = 50,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 237,
     .heldItem = 0,
     .moves = {228, 68, 182, 167}
@@ -54811,6 +55231,7 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly5[] = {
     {
     .iv = 255,
     .lvl = 52,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 297,
     .heldItem = 153,
     .moves = {252, 264, 187, 89}
@@ -54821,6 +55242,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson2[] = {
     {
     .iv = 255,
     .lvl = 36,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 179,
     .heldItem = 0,
     .moves = {87, 182, 86, 113}
@@ -54828,6 +55250,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson2[] = {
     {
     .iv = 255,
     .lvl = 36,
+ .evs = {0, 0, 0, 255, 0, 255},
     .species = 101,
     .heldItem = 0,
     .moves = {205, 87, 153, 240}
@@ -54835,14 +55258,16 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson2[] = {
     {
     .iv = 255,
     .lvl = 38,
-    .species = 82,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 82,
     .heldItem = 153,
     .moves = {48, 182, 87, 240}
     },
     {
     .iv = 255,
     .lvl = 40,
-    .species = 310,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 310,
     .heldItem = 153,
     .moves = {44, 86, 87, 182}
     }
@@ -54852,35 +55277,40 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson3[] = {
     {
     .iv = 255,
     .lvl = 39,
-    .species = 25,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 25,
     .heldItem = 0,
     .moves = {87, 21, 240, 351}
     },
     {
     .iv = 255,
     .lvl = 41,
-    .species = 180,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 180,
     .heldItem = 0,
     .moves = {87, 182, 86, 113}
     },
     {
     .iv = 255,
     .lvl = 41,
-    .species = 101,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 101,
     .heldItem = 0,
     .moves = {205, 87, 153, 240}
     },
     {
     .iv = 255,
     .lvl = 43,
-    .species = 82,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 82,
     .heldItem = 153,
     .moves = {48, 182, 87, 240}
     },
     {
     .iv = 255,
     .lvl = 45,
-    .species = 310,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 310,
     .heldItem = 153,
     .moves = {44, 86, 87, 182}
     }
@@ -54890,35 +55320,40 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson4[] = {
     {
     .iv = 255,
     .lvl = 44,
-    .species = 26,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 26,
     .heldItem = 0,
     .moves = {87, 21, 240, 182}
     },
     {
     .iv = 255,
     .lvl = 46,
-    .species = 181,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 181,
     .heldItem = 0,
     .moves = {87, 182, 86, 113}
     },
     {
     .iv = 255,
     .lvl = 46,
-    .species = 101,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 101,
     .heldItem = 0,
     .moves = {205, 87, 153, 240}
     },
     {
     .iv = 255,
     .lvl = 48,
-    .species = 82,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 82,
     .heldItem = 153,
     .moves = {48, 182, 87, 240}
     },
     {
     .iv = 255,
     .lvl = 50,
-    .species = 310,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 310,
     .heldItem = 153,
     .moves = {44, 86, 87, 182}
     }
@@ -54928,42 +55363,48 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson5[] = {
     {
     .iv = 255,
     .lvl = 50,
-    .species = 125,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 125,
     .heldItem = 0,
     .moves = {129, 264, 9, 113}
     },
     {
     .iv = 255,
     .lvl = 51,
-    .species = 26,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 26,
     .heldItem = 0,
     .moves = {87, 21, 240, 182}
     },
     {
     .iv = 255,
     .lvl = 51,
-    .species = 181,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 181,
     .heldItem = 0,
     .moves = {87, 182, 86, 113}
     },
     {
     .iv = 255,
     .lvl = 53,
-    .species = 101,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 101,
     .heldItem = 0,
     .moves = {205, 87, 153, 240}
     },
     {
     .iv = 255,
     .lvl = 53,
-    .species = 82,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 82,
     .heldItem = 153,
     .moves = {48, 182, 87, 240}
     },
     {
     .iv = 255,
     .lvl = 55,
-    .species = 310,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 310,
     .heldItem = 153,
     .moves = {44, 86, 87, 182}
     }
@@ -54973,28 +55414,32 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery2[] = {
     {
     .iv = 255,
     .lvl = 38,
-    .species = 219,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 219,
     .heldItem = 212,
     .moves = {315, 213, 113, 157}
     },
     {
     .iv = 255,
     .lvl = 36,
-    .species = 77,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 77,
     .heldItem = 0,
     .moves = {53, 213, 76, 340}
     },
     {
     .iv = 255,
     .lvl = 38,
-    .species = 323,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 323,
     .heldItem = 212,
     .moves = {315, 241, 89, 213}
     },
     {
     .iv = 255,
     .lvl = 40,
-    .species = 324,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 324,
     .heldItem = 212,
     .moves = {315, 241, 153, 213}
     }
@@ -55004,35 +55449,40 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery3[] = {
     {
     .iv = 255,
     .lvl = 41,
-    .species = 58,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 58,
     .heldItem = 0,
     .moves = {270, 53, 46, 241}
     },
     {
     .iv = 255,
     .lvl = 43,
-    .species = 219,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 219,
     .heldItem = 212,
     .moves = {315, 213, 113, 157}
     },
     {
     .iv = 255,
     .lvl = 41,
-    .species = 77,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 77,
     .heldItem = 0,
     .moves = {53, 213, 76, 340}
     },
     {
     .iv = 255,
     .lvl = 43,
-    .species = 323,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 323,
     .heldItem = 212,
     .moves = {315, 241, 89, 213}
     },
     {
     .iv = 255,
     .lvl = 45,
-    .species = 324,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 324,
     .heldItem = 212,
     .moves = {315, 241, 153, 213}
     }
@@ -55042,42 +55492,48 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery4[] = {
     {
     .iv = 255,
     .lvl = 46,
-    .species = 228,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 228,
     .heldItem = 0,
     .moves = {46, 76, 269, 241}
     },
     {
     .iv = 255,
     .lvl = 46,
-    .species = 58,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 58,
     .heldItem = 0,
     .moves = {270, 53, 241, 46}
     },
     {
     .iv = 255,
     .lvl = 48,
-    .species = 219,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 219,
     .heldItem = 212,
     .moves = {315, 213, 113, 157}
     },
     {
     .iv = 255,
     .lvl = 46,
-    .species = 78,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 78,
     .heldItem = 0,
     .moves = {53, 213, 76, 340}
     },
     {
     .iv = 255,
     .lvl = 48,
-    .species = 323,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 323,
     .heldItem = 212,
     .moves = {315, 241, 89, 213}
     },
     {
     .iv = 255,
     .lvl = 50,
-    .species = 324,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 324,
     .heldItem = 212,
     .moves = {315, 241, 153, 213}
     }
@@ -55087,42 +55543,48 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery5[] = {
     {
     .iv = 255,
     .lvl = 51,
-    .species = 59,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 59,
     .heldItem = 0,
     .moves = {270, 53, 241, 46}
     },
     {
     .iv = 255,
     .lvl = 53,
-    .species = 219,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 219,
     .heldItem = 212,
     .moves = {315, 213, 113, 157}
     },
     {
     .iv = 255,
     .lvl = 51,
-    .species = 229,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 229,
     .heldItem = 0,
     .moves = {46, 76, 269, 241}
     },
     {
     .iv = 255,
     .lvl = 51,
-    .species = 78,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 78,
     .heldItem = 0,
     .moves = {53, 213, 76, 340}
     },
     {
     .iv = 255,
     .lvl = 53,
-    .species = 323,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 323,
     .heldItem = 212,
     .moves = {315, 241, 89, 213}
     },
     {
     .iv = 255,
     .lvl = 55,
-    .species = 324,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 324,
     .heldItem = 212,
     .moves = {315, 241, 153, 213}
     }
@@ -55132,28 +55594,32 @@ static const struct TrainerMonItemCustomMoves sParty_Norman2[] = {
     {
     .iv = 255,
     .lvl = 42,
-    .species = 113,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 113,
     .heldItem = 0,
     .moves = {113, 47, 285, 264}
     },
     {
     .iv = 255,
     .lvl = 42,
-    .species = 289,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 289,
     .heldItem = 153,
     .moves = {59, 247, 38, 126}
     },
     {
     .iv = 255,
     .lvl = 43,
-    .species = 327,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 327,
     .heldItem = 0,
     .moves = {298, 285, 263, 95}
     },
     {
     .iv = 255,
     .lvl = 45,
-    .species = 289,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 289,
     .heldItem = 153,
     .moves = {63, 53, 85, 247}
     }
@@ -55163,35 +55629,40 @@ static const struct TrainerMonItemCustomMoves sParty_Norman3[] = {
     {
     .iv = 255,
     .lvl = 47,
-    .species = 289,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 289,
     .heldItem = 153,
     .moves = {59, 247, 38, 126}
     },
     {
     .iv = 255,
     .lvl = 47,
-    .species = 113,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 113,
     .heldItem = 0,
     .moves = {113, 47, 285, 264}
     },
     {
     .iv = 255,
     .lvl = 45,
-    .species = 115,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 115,
     .heldItem = 0,
     .moves = {252, 146, 203, 179}
     },
     {
     .iv = 255,
     .lvl = 48,
-    .species = 327,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 327,
     .heldItem = 0,
     .moves = {298, 285, 263, 95}
     },
     {
     .iv = 255,
     .lvl = 50,
-    .species = 289,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 289,
     .heldItem = 153,
     .moves = {63, 53, 85, 247}
     }
@@ -55201,35 +55672,40 @@ static const struct TrainerMonItemCustomMoves sParty_Norman4[] = {
     {
     .iv = 255,
     .lvl = 52,
-    .species = 289,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 289,
     .heldItem = 153,
     .moves = {59, 247, 38, 126}
     },
     {
     .iv = 255,
     .lvl = 52,
-    .species = 242,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 242,
     .heldItem = 0,
     .moves = {113, 47, 285, 264}
     },
     {
     .iv = 255,
     .lvl = 50,
-    .species = 115,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 115,
     .heldItem = 0,
     .moves = {252, 146, 203, 179}
     },
     {
     .iv = 255,
     .lvl = 53,
-    .species = 327,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 327,
     .heldItem = 0,
     .moves = {298, 285, 263, 95}
     },
     {
     .iv = 255,
     .lvl = 55,
-    .species = 289,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 289,
     .heldItem = 153,
     .moves = {63, 53, 85, 247}
     }
@@ -55239,42 +55715,48 @@ static const struct TrainerMonItemCustomMoves sParty_Norman5[] = {
     {
     .iv = 255,
     .lvl = 57,
-    .species = 289,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 289,
     .heldItem = 153,
     .moves = {59, 247, 38, 126}
     },
     {
     .iv = 255,
     .lvl = 57,
-    .species = 242,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 242,
     .heldItem = 0,
     .moves = {182, 47, 285, 264}
     },
     {
     .iv = 255,
     .lvl = 55,
-    .species = 115,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 115,
     .heldItem = 0,
     .moves = {252, 146, 203, 179}
     },
     {
     .iv = 255,
     .lvl = 57,
-    .species = 128,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 128,
     .heldItem = 0,
     .moves = {36, 182, 126, 89}
     },
     {
     .iv = 255,
     .lvl = 58,
-    .species = 327,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 327,
     .heldItem = 0,
     .moves = {298, 285, 263, 95}
     },
     {
     .iv = 255,
     .lvl = 60,
-    .species = 289,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 289,
     .heldItem = 153,
     .moves = {63, 53, 85, 247}
     }
@@ -55284,35 +55766,40 @@ static const struct TrainerMonItemCustomMoves sParty_Winona2[] = {
     {
     .iv = 255,
     .lvl = 40,
-    .species = 147,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 147,
     .heldItem = 153,
     .moves = {86, 85, 182, 58}
     },
     {
     .iv = 255,
     .lvl = 38,
-    .species = 357,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 357,
     .heldItem = 0,
     .moves = {241, 332, 76, 89}
     },
     {
     .iv = 255,
     .lvl = 41,
-    .species = 279,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 279,
     .heldItem = 0,
     .moves = {57, 48, 182, 332}
     },
     {
     .iv = 255,
     .lvl = 43,
-    .species = 227,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 227,
     .heldItem = 0,
     .moves = {18, 191, 211, 332}
     },
     {
     .iv = 255,
     .lvl = 45,
-    .species = 334,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 334,
     .heldItem = 145,
     .moves = {332, 156, 349, 89}
     }
@@ -55322,42 +55809,48 @@ static const struct TrainerMonItemCustomMoves sParty_Winona3[] = {
     {
     .iv = 255,
     .lvl = 43,
-    .species = 163,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 163,
     .heldItem = 0,
     .moves = {95, 94, 115, 138}
     },
     {
     .iv = 255,
     .lvl = 43,
-    .species = 357,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 357,
     .heldItem = 0,
     .moves = {241, 332, 76, 89}
     },
     {
     .iv = 255,
     .lvl = 45,
-    .species = 148,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 148,
     .heldItem = 153,
     .moves = {86, 85, 182, 58}
     },
     {
     .iv = 255,
     .lvl = 46,
-    .species = 279,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 279,
     .heldItem = 0,
     .moves = {57, 48, 182, 332}
     },
     {
     .iv = 255,
     .lvl = 48,
-    .species = 227,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 227,
     .heldItem = 0,
     .moves = {18, 191, 211, 332}
     },
     {
     .iv = 255,
     .lvl = 50,
-    .species = 334,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 334,
     .heldItem = 145,
     .moves = {332, 156, 349, 89}
     }
@@ -55367,42 +55860,48 @@ static const struct TrainerMonItemCustomMoves sParty_Winona4[] = {
     {
     .iv = 255,
     .lvl = 48,
-    .species = 164,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 164,
     .heldItem = 0,
     .moves = {95, 94, 115, 138}
     },
     {
     .iv = 255,
     .lvl = 49,
-    .species = 357,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 357,
     .heldItem = 0,
     .moves = {241, 332, 76, 89}
     },
     {
     .iv = 255,
     .lvl = 50,
-    .species = 148,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 148,
     .heldItem = 153,
     .moves = {86, 85, 182, 58}
     },
     {
     .iv = 255,
     .lvl = 51,
-    .species = 279,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 279,
     .heldItem = 0,
     .moves = {57, 48, 182, 332}
     },
     {
     .iv = 255,
     .lvl = 53,
-    .species = 227,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 227,
     .heldItem = 0,
     .moves = {18, 191, 211, 332}
     },
     {
     .iv = 255,
     .lvl = 55,
-    .species = 334,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 334,
     .heldItem = 145,
     .moves = {332, 156, 349, 89}
     }
@@ -55412,42 +55911,48 @@ static const struct TrainerMonItemCustomMoves sParty_Winona5[] = {
     {
     .iv = 255,
     .lvl = 53,
-    .species = 164,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 164,
     .heldItem = 0,
     .moves = {95, 94, 115, 138}
     },
     {
     .iv = 255,
     .lvl = 54,
-    .species = 357,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 357,
     .heldItem = 0,
     .moves = {241, 332, 76, 89}
     },
     {
     .iv = 255,
     .lvl = 55,
-    .species = 279,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 279,
     .heldItem = 0,
     .moves = {57, 48, 182, 332}
     },
     {
     .iv = 255,
     .lvl = 55,
-    .species = 149,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 149,
     .heldItem = 153,
     .moves = {63, 85, 89, 58}
     },
     {
     .iv = 255,
     .lvl = 58,
-    .species = 227,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 227,
     .heldItem = 0,
     .moves = {18, 191, 211, 332}
     },
     {
     .iv = 255,
     .lvl = 60,
-    .species = 334,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 334,
     .heldItem = 145,
     .moves = {143, 156, 349, 89}
     }
@@ -55457,35 +55962,40 @@ static const struct TrainerMonItemCustomMoves sParty_TateAndLiza2[] = {
     {
     .iv = 255,
     .lvl = 48,
-    .species = 79,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 79,
     .heldItem = 0,
     .moves = {281, 94, 347, 182}
     },
     {
     .iv = 255,
     .lvl = 49,
-    .species = 344,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 344,
     .heldItem = 0,
     .moves = {89, 246, 94, 113}
     },
     {
     .iv = 255,
     .lvl = 49,
-    .species = 178,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 178,
     .heldItem = 145,
     .moves = {94, 156, 109, 347}
     },
     {
     .iv = 255,
     .lvl = 50,
-    .species = 337,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 337,
     .heldItem = 145,
     .moves = {89, 94, 156, 347}
     },
     {
     .iv = 255,
     .lvl = 50,
-    .species = 338,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 338,
     .heldItem = 153,
     .moves = {241, 76, 94, 53}
     }
@@ -55495,42 +56005,48 @@ static const struct TrainerMonItemCustomMoves sParty_TateAndLiza3[] = {
     {
     .iv = 255,
     .lvl = 53,
-    .species = 96,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 96,
     .heldItem = 0,
     .moves = {95, 138, 29, 182}
     },
     {
     .iv = 255,
     .lvl = 53,
-    .species = 79,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 79,
     .heldItem = 0,
     .moves = {281, 94, 347, 182}
     },
     {
     .iv = 255,
     .lvl = 54,
-    .species = 344,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 344,
     .heldItem = 0,
     .moves = {89, 153, 94, 113}
     },
     {
     .iv = 255,
     .lvl = 54,
-    .species = 178,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 178,
     .heldItem = 145,
     .moves = {94, 156, 109, 347}
     },
     {
     .iv = 255,
     .lvl = 55,
-    .species = 337,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 337,
     .heldItem = 145,
     .moves = {89, 94, 156, 347}
     },
     {
     .iv = 255,
     .lvl = 55,
-    .species = 338,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 338,
     .heldItem = 153,
     .moves = {241, 76, 94, 53}
     }
@@ -55540,42 +56056,48 @@ static const struct TrainerMonItemCustomMoves sParty_TateAndLiza4[] = {
     {
     .iv = 255,
     .lvl = 58,
-    .species = 97,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 97,
     .heldItem = 0,
     .moves = {95, 138, 29, 182}
     },
     {
     .iv = 255,
     .lvl = 59,
-    .species = 344,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 344,
     .heldItem = 0,
     .moves = {89, 153, 94, 113}
     },
     {
     .iv = 255,
     .lvl = 58,
-    .species = 79,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 79,
     .heldItem = 0,
     .moves = {281, 94, 347, 182}
     },
     {
     .iv = 255,
     .lvl = 59,
-    .species = 178,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 178,
     .heldItem = 145,
     .moves = {94, 156, 109, 347}
     },
     {
     .iv = 255,
     .lvl = 60,
-    .species = 337,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 337,
     .heldItem = 145,
     .moves = {89, 94, 156, 347}
     },
     {
     .iv = 255,
     .lvl = 60,
-    .species = 338,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 338,
     .heldItem = 153,
     .moves = {241, 76, 94, 53}
     }
@@ -55585,42 +56107,48 @@ static const struct TrainerMonItemCustomMoves sParty_TateAndLiza5[] = {
     {
     .iv = 255,
     .lvl = 63,
-    .species = 97,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 97,
     .heldItem = 0,
     .moves = {95, 138, 29, 182}
     },
     {
     .iv = 255,
     .lvl = 64,
-    .species = 344,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 344,
     .heldItem = 0,
     .moves = {89, 153, 94, 113}
     },
     {
     .iv = 255,
     .lvl = 63,
-    .species = 199,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 199,
     .heldItem = 0,
     .moves = {281, 94, 347, 182}
     },
     {
     .iv = 255,
     .lvl = 64,
-    .species = 178,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 178,
     .heldItem = 145,
     .moves = {94, 156, 109, 347}
     },
     {
     .iv = 255,
     .lvl = 65,
-    .species = 337,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 337,
     .heldItem = 145,
     .moves = {89, 94, 156, 347}
     },
     {
     .iv = 255,
     .lvl = 65,
-    .species = 338,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 338,
     .heldItem = 153,
     .moves = {241, 76, 94, 53}
     }
@@ -55630,35 +56158,40 @@ static const struct TrainerMonItemCustomMoves sParty_Juan2[] = {
     {
     .iv = 255,
     .lvl = 46,
-    .species = 60,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 60,
     .heldItem = 0,
     .moves = {95, 240, 182, 56}
     },
     {
     .iv = 255,
     .lvl = 46,
-    .species = 340,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 340,
     .heldItem = 0,
     .moves = {240, 352, 104, 90}
     },
     {
     .iv = 255,
     .lvl = 48,
-    .species = 365,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 365,
     .heldItem = 0,
     .moves = {352, 34, 182, 58}
     },
     {
     .iv = 255,
     .lvl = 48,
-    .species = 342,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 342,
     .heldItem = 145,
     .moves = {156, 152, 269, 104}
     },
     {
     .iv = 255,
     .lvl = 51,
-    .species = 230,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 230,
     .heldItem = 145,
     .moves = {352, 104, 58, 156}
     }
@@ -55668,35 +56201,40 @@ static const struct TrainerMonItemCustomMoves sParty_Juan3[] = {
     {
     .iv = 255,
     .lvl = 50,
-    .species = 61,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 61,
     .heldItem = 0,
     .moves = {95, 240, 182, 56}
     },
     {
     .iv = 255,
     .lvl = 51,
-    .species = 340,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 340,
     .heldItem = 0,
     .moves = {240, 352, 104, 90}
     },
     {
     .iv = 255,
     .lvl = 53,
-    .species = 365,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 365,
     .heldItem = 0,
     .moves = {352, 34, 182, 58}
     },
     {
     .iv = 255,
     .lvl = 53,
-    .species = 342,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 342,
     .heldItem = 145,
     .moves = {156, 12, 269, 104}
     },
     {
     .iv = 255,
     .lvl = 56,
-    .species = 230,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 230,
     .heldItem = 145,
     .moves = {352, 104, 58, 156}
     }
@@ -55706,42 +56244,48 @@ static const struct TrainerMonItemCustomMoves sParty_Juan4[] = {
     {
     .iv = 255,
     .lvl = 56,
-    .species = 131,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 131,
     .heldItem = 0,
     .moves = {56, 195, 58, 109}
     },
     {
     .iv = 255,
     .lvl = 58,
-    .species = 340,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 340,
     .heldItem = 0,
     .moves = {240, 352, 104, 90}
     },
     {
     .iv = 255,
     .lvl = 56,
-    .species = 61,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 61,
     .heldItem = 0,
     .moves = {95, 240, 182, 56}
     },
     {
     .iv = 255,
     .lvl = 58,
-    .species = 365,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 365,
     .heldItem = 0,
     .moves = {352, 34, 182, 58}
     },
     {
     .iv = 255,
     .lvl = 58,
-    .species = 342,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 342,
     .heldItem = 145,
     .moves = {156, 12, 269, 104}
     },
     {
     .iv = 255,
     .lvl = 61,
-    .species = 230,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 230,
     .heldItem = 145,
     .moves = {352, 104, 58, 156}
     }
@@ -55751,42 +56295,48 @@ static const struct TrainerMonItemCustomMoves sParty_Juan5[] = {
     {
     .iv = 255,
     .lvl = 61,
-    .species = 131,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 131,
     .heldItem = 0,
     .moves = {56, 195, 58, 109}
     },
     {
     .iv = 255,
     .lvl = 63,
-    .species = 340,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 340,
     .heldItem = 0,
     .moves = {240, 352, 104, 90}
     },
     {
     .iv = 255,
     .lvl = 61,
-    .species = 186,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 186,
     .heldItem = 0,
     .moves = {95, 240, 56, 195}
     },
     {
     .iv = 255,
     .lvl = 63,
-    .species = 365,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 365,
     .heldItem = 0,
     .moves = {352, 34, 182, 329}
     },
     {
     .iv = 255,
     .lvl = 63,
-    .species = 342,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 342,
     .heldItem = 145,
     .moves = {156, 12, 269, 104}
     },
     {
     .iv = 255,
     .lvl = 66,
-    .species = 230,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 230,
     .heldItem = 145,
     .moves = {352, 104, 58, 156}
     }
@@ -55796,14 +56346,16 @@ static const struct TrainerMonItemCustomMoves sParty_Angelo[] = {
     {
     .iv = 100,
     .lvl = 17,
-    .species = 314,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 314,
     .heldItem = 0,
     .moves = {351, 98, 204, 0}
     },
     {
     .iv = 100,
     .lvl = 17,
-    .species = 313,
+    .evs = {0, 0, 0, 255, 0, 255},
+.species = 313,
     .heldItem = 0,
     .moves = {351, 98, 109, 0}
     }
@@ -56725,6 +57277,7 @@ const u8 gTrainerClassNames[][13] = {
     [0x3f] = _("PIKE QUEEN"),
     [0x40] = _("PYRAMID KING"),
     [0x41] = _("{PKMN} TRAINER"),
+ [0x42] = _("COPY OF"),
 };
 # 441 "src/data.c" 2
 # 1 "src/data/trainers.h" 1
@@ -56745,100 +57298,100 @@ const struct Trainer gTrainers[] = {
 
     [1] =
     {
-        .partyFlags = 0,
-        .trainerClass = 0x2,
+        .partyFlags = (1 << 1) | (1 << 0),
+        .trainerClass = 0x42,
         .encounterMusic_gender = 11,
-        .trainerPic = 0,
-        .trainerName = _("SAWYER"),
+        .trainerPic = 89,
+        .trainerName = _("RED"),
         .items = {},
         .doubleBattle = 0,
-        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2),
+        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3),
         .partySize = (size_t)(sizeof(sParty_Sawyer1) / sizeof((sParty_Sawyer1)[0])),
-        .party = {.NoItemDefaultMoves = sParty_Sawyer1},
+        .party = {.ItemCustomMoves = sParty_Sawyer1},
     },
 
     [2] =
     {
-        .partyFlags = 0,
-        .trainerClass = 0x3,
+  .partyFlags = (1 << 1) | (1 << 0),
+        .trainerClass = 0x42,
         .encounterMusic_gender = 6,
-        .trainerPic = 1,
-        .trainerName = _("GRUNT"),
+        .trainerPic = 89,
+        .trainerName = _("BLUE"),
         .items = {},
         .doubleBattle = 0,
-        .aiFlags = (1 << 0),
+        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3),
         .partySize = (size_t)(sizeof(sParty_GruntAquaHideout1) / sizeof((sParty_GruntAquaHideout1)[0])),
-        .party = {.NoItemDefaultMoves = sParty_GruntAquaHideout1},
+        .party = {.ItemCustomMoves = sParty_GruntAquaHideout1},
     },
 
     [3] =
     {
-        .partyFlags = 0,
-        .trainerClass = 0x3,
+  .partyFlags = (1 << 1) | (1 << 0),
+        .trainerClass = 0x42,
         .encounterMusic_gender = 6,
-        .trainerPic = 1,
-        .trainerName = _("GRUNT"),
+        .trainerPic = 89,
+        .trainerName = _("LANCE"),
         .items = {},
         .doubleBattle = 0,
-        .aiFlags = (1 << 0),
+        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3),
         .partySize = (size_t)(sizeof(sParty_GruntAquaHideout2) / sizeof((sParty_GruntAquaHideout2)[0])),
-        .party = {.NoItemDefaultMoves = sParty_GruntAquaHideout2},
+        .party = {.ItemCustomMoves = sParty_GruntAquaHideout2},
     },
 
     [4] =
     {
-        .partyFlags = 0,
-        .trainerClass = 0x3,
+  .partyFlags = (1 << 1) | (1 << 0),
+        .trainerClass = 0x42,
         .encounterMusic_gender = 6,
-        .trainerPic = 1,
-        .trainerName = _("GRUNT"),
+        .trainerPic = 89,
+        .trainerName = _("STEVEN"),
         .items = {},
         .doubleBattle = 0,
-        .aiFlags = (1 << 0),
+        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3),
         .partySize = (size_t)(sizeof(sParty_GruntAquaHideout3) / sizeof((sParty_GruntAquaHideout3)[0])),
-        .party = {.NoItemDefaultMoves = sParty_GruntAquaHideout3},
+        .party = {.ItemCustomMoves = sParty_GruntAquaHideout3},
     },
 
     [5] =
     {
-        .partyFlags = 0,
-        .trainerClass = 0x3,
+  .partyFlags = (1 << 1) | (1 << 0),
+        .trainerClass = 0x42,
         .encounterMusic_gender = 6,
-        .trainerPic = 1,
-        .trainerName = _("GRUNT"),
+        .trainerPic = 89,
+        .trainerName = _("WALLACE"),
         .items = {},
         .doubleBattle = 0,
-        .aiFlags = (1 << 0),
+        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3),
         .partySize = (size_t)(sizeof(sParty_GruntAquaHideout4) / sizeof((sParty_GruntAquaHideout4)[0])),
-        .party = {.NoItemDefaultMoves = sParty_GruntAquaHideout4},
+        .party = {.ItemCustomMoves = sParty_GruntAquaHideout4},
     },
 
     [6] =
     {
-        .partyFlags = 0,
-        .trainerClass = 0x3,
+  .partyFlags = (1 << 1) | (1 << 0),
+        .trainerClass = 0x42,
         .encounterMusic_gender = 6,
-        .trainerPic = 1,
-        .trainerName = _("GRUNT"),
+        .trainerPic = 90,
+        .trainerName = _("CYNTHIA"),
         .items = {},
         .doubleBattle = 0,
-        .aiFlags = (1 << 0),
+        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3),
         .partySize = (size_t)(sizeof(sParty_GruntSeafloorCavern1) / sizeof((sParty_GruntSeafloorCavern1)[0])),
-        .party = {.NoItemDefaultMoves = sParty_GruntSeafloorCavern1},
+        .party = {.ItemCustomMoves = sParty_GruntSeafloorCavern1},
     },
 
     [7] =
     {
-        .partyFlags = 0,
-        .trainerClass = 0x3,
+  .partyFlags = (1 << 1) | (1 << 0),
+        .trainerClass = 0x42,
         .encounterMusic_gender = 6,
-        .trainerPic = 1,
-        .trainerName = _("GRUNT"),
+        .trainerPic = 89,
+        .trainerName = _("ALDER"),
         .items = {},
         .doubleBattle = 0,
-        .aiFlags = (1 << 0),
+        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3),
         .partySize = (size_t)(sizeof(sParty_GruntSeafloorCavern2) / sizeof((sParty_GruntSeafloorCavern2)[0])),
-        .party = {.NoItemDefaultMoves = sParty_GruntSeafloorCavern2},
+        .party = {.ItemCustomMoves = sParty_GruntSeafloorCavern2},
     },
 
     [8] =

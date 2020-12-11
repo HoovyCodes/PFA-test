@@ -1899,7 +1899,6 @@ static void FillTrainerParty(u16 trainerId, u8 firstMonId, u8 monCount)
 
         SetMonData(&gEnemyParty[i + firstMonId], MON_DATA_FRIENDSHIP, &friendship);
         SetMonData(&gEnemyParty[i + firstMonId], MON_DATA_HELD_ITEM, &gBattleFrontierHeldItems[gFacilityTrainerMons[monId].itemTableId]);
-		SetMonData(&gEnemyParty[i + firstMonId], MON_DATA_ABILITY_NUM, &gFacilityTrainerMons[monId].ability);
 
         // The pokemon was successfully added to the trainer's party, so it's safe to move on to
         // the next party slot.
@@ -1937,7 +1936,6 @@ static void Unused_CreateApprenticeMons(u16 trainerId, u8 firstMonId)
         }
         SetMonData(&gEnemyParty[firstMonId + i], MON_DATA_FRIENDSHIP, &friendship);
         SetMonData(&gEnemyParty[firstMonId + i], MON_DATA_HELD_ITEM, &apprentice->party[i].item);
-		SetMonData(&gEnemyParty[i + firstMonId], MON_DATA_ABILITY_NUM, &gFacilityTrainerMons[monId].ability);
     }
 }
 
@@ -2026,7 +2024,6 @@ static void FillFactoryFrontierTrainerParty(u16 trainerId, u8 firstMonId)
 
         SetMonData(&gEnemyParty[firstMonId + i], MON_DATA_FRIENDSHIP, &friendship);
         SetMonData(&gEnemyParty[firstMonId + i], MON_DATA_HELD_ITEM, &gBattleFrontierHeldItems[gFacilityTrainerMons[monId].itemTableId]);
-		SetMonData(&gEnemyParty[i + firstMonId], MON_DATA_ABILITY_NUM, &gFacilityTrainerMons[monId].ability);
     }
 }
 
@@ -2059,7 +2056,6 @@ static void FillFactoryTentTrainerParty(u16 trainerId, u8 firstMonId)
 
         SetMonData(&gEnemyParty[firstMonId + i], MON_DATA_FRIENDSHIP, &friendship);
         SetMonData(&gEnemyParty[firstMonId + i], MON_DATA_HELD_ITEM, &gBattleFrontierHeldItems[gFacilityTrainerMons[monId].itemTableId]);
-		SetMonData(&gEnemyParty[i + firstMonId], MON_DATA_ABILITY_NUM, &gFacilityTrainerMons[monId].ability);
     }
 }
 
@@ -3255,7 +3251,6 @@ static void FillPartnerParty(u16 trainerId)
             }
             SetMonData(&gPlayerParty[MULTI_PARTY_SIZE + i], MON_DATA_FRIENDSHIP, &friendship);
             SetMonData(&gPlayerParty[MULTI_PARTY_SIZE + i], MON_DATA_HELD_ITEM, &gBattleFrontierHeldItems[gFacilityTrainerMons[monId].itemTableId]);
-			SetMonData(&gPlayerParty[MULTI_PARTY_SIZE + i], MON_DATA_ABILITY_NUM, &gFacilityTrainerMons[monId].ability);
             for (j = 0; j < PLAYER_NAME_LENGTH + 1; j++)
                 trainerName[j] = gFacilityTrainers[trainerId].trainerName[j];
             SetMonData(&gPlayerParty[MULTI_PARTY_SIZE + i], MON_DATA_OT_NAME, &trainerName);
@@ -3514,6 +3509,22 @@ s32 GetHighestLevelInPlayerParty(void)
 static u8 GetFrontierTrainerFixedIvs(u16 trainerId)
 {
     u8 fixedIv;
+
+    if (trainerId <= FRONTIER_TRAINER_JILL)         // 0 - 99
+        fixedIv = 3;
+    else if (trainerId <= FRONTIER_TRAINER_CHLOE)   // 100 - 119
+        fixedIv = 6;
+    else if (trainerId <= FRONTIER_TRAINER_SOFIA)   // 120 - 139
+        fixedIv = 9;
+    else if (trainerId <= FRONTIER_TRAINER_JAZLYN)  // 140 - 159
+        fixedIv = 12;
+    else if (trainerId <= FRONTIER_TRAINER_ALISON)  // 160 - 179
+        fixedIv = 15;
+    else if (trainerId <= FRONTIER_TRAINER_LAMAR)   // 180 - 199
+        fixedIv = 18;
+    else if (trainerId <= FRONTIER_TRAINER_TESS)    // 200 - 219
+        fixedIv = 21;
+    else                                            // 220+ (- 299)
         fixedIv = 31;
 
     return fixedIv;
@@ -3670,7 +3681,6 @@ static void FillTentTrainerParty_(u16 trainerId, u8 firstMonId, u8 monCount)
 
         SetMonData(&gEnemyParty[i + firstMonId], MON_DATA_FRIENDSHIP, &friendship);
         SetMonData(&gEnemyParty[i + firstMonId], MON_DATA_HELD_ITEM, &gBattleFrontierHeldItems[gFacilityTrainerMons[monId].itemTableId]);
-		SetMonData(&gEnemyParty[i + firstMonId], MON_DATA_ABILITY_NUM, &gFacilityTrainerMons[monId].ability);
 
         // The pokemon was successfully added to the trainer's party, so it's safe to move on to
         // the next party slot.
