@@ -1,6 +1,6 @@
-# 1 "src/field_weather_effect.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/field_weather_effect.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/field_weather_effect.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -3148,6 +3148,13 @@ void ClearIllusionMon(u32 battlerId);
 bool32 SetIllusionMon(struct Pokemon *mon, u32 battlerId);
 bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
 u8 GetBattleMoveSplit(u32 moveId);
+bool32 CanSleep(u8 battlerId);
+bool32 CanBePoisoned(u8 battlerId);
+bool32 CanBeBurned(u8 battlerId);
+bool32 CanBeParalyzed(u8 battlerId);
+bool32 CanBeFrozen(u8 battlerId);
+bool32 CanBeConfused(u8 battlerId);
+bool32 IsBattlerTerrainAffected(u8 battlerId, u32 terrainFlag);
 # 9 "include/battle.h" 2
 # 1 "include/battle_script_commands.h" 1
 # 9 "include/battle_script_commands.h"
@@ -3813,8 +3820,9 @@ struct BattleStruct
     u8 sameMoveTurns[4];
     u16 moveEffect2;
     u16 changedSpecies[6];
+ u8 abilityPopUpSpriteIds[4][2];
 };
-# 579 "include/battle.h"
+# 580 "include/battle.h"
 struct BattleScripting
 {
     s32 painSplitHp;
@@ -3850,6 +3858,7 @@ struct BattleScripting
     u16 moveEffect;
     u16 multihitMoveEffect;
     u8 illusionNickHack;
+    bool8 fixedPopup;
 };
 
 
@@ -3924,6 +3933,7 @@ struct BattleBarInfo
     s32 oldValue;
     s32 receivedValue;
     s32 currValue;
+ u8 oddFrame;
 };
 
 struct BattleSpriteData
@@ -6217,7 +6227,7 @@ void Snow_InitVars(void)
     gWeatherPtr->weatherGfxLoaded = 0;
     gWeatherPtr->gammaTargetIndex = 3;
     gWeatherPtr->gammaStepDelay = 20;
-    gWeatherPtr->targetSnowflakeSpriteCount = 16;
+    gWeatherPtr->targetSnowflakeSpriteCount = 32;
     gWeatherPtr->snowflakeVisibleCounter = 0;
 }
 
@@ -6407,34 +6417,8 @@ static void UpdateSnowflakeSprite(struct Sprite *sprite)
         sprite->pos1.x = 242 - (gSpriteCoordOffsetX + sprite->centerToCornerVecX);
     else if (x > 242)
         sprite->pos1.x = -3 - (gSpriteCoordOffsetX + sprite->centerToCornerVecX);
-
-    y = (sprite->pos1.y + sprite->centerToCornerVecY + gSpriteCoordOffsetY) & 0xFF;
-    if (y > 163 && y < 171)
-    {
-        sprite->pos1.y = 250 - (gSpriteCoordOffsetY + sprite->centerToCornerVecY);
-        sprite->data[0] = sprite->pos1.y * 128;
-        sprite->data[5] = 0;
-        sprite->data[6] = 220;
-    }
-    else if (y > 242 && y < 250)
-    {
-        sprite->pos1.y = 163;
-        sprite->data[0] = sprite->pos1.y * 128;
-        sprite->data[5] = 0;
-        sprite->data[6] = 220;
-        sprite->invisible = 1;
-        sprite->callback = WaitSnowflakeSprite;
-    }
-
-    if (++sprite->data[5] == sprite->data[6])
-    {
-        InitSnowflakeSpriteMovement(sprite);
-        sprite->pos1.y = 250;
-        sprite->invisible = 1;
-        sprite->callback = WaitSnowflakeSprite;
-    }
 }
-# 1014 "src/field_weather_effect.c"
+# 988 "src/field_weather_effect.c"
 void Thunderstorm_InitVars(void)
 {
     gWeatherPtr->initStep = 0;
@@ -7104,7 +7088,7 @@ static void UpdateAshSprite(struct Sprite *sprite)
         sprite->pos1.x &= 0x1FF;
     }
 }
-# 1693 "src/field_weather_effect.c"
+# 1667 "src/field_weather_effect.c"
 static void UpdateFogDiagonalMovement(void);
 static void CreateFogDiagonalSprites(void);
 static void DestroyFogDiagonalSprites(void);
@@ -7305,7 +7289,7 @@ static void UpdateFogDiagonalSprite(struct Sprite *sprite)
         sprite->pos1.x &= 0x1FF;
     }
 }
-# 1901 "src/field_weather_effect.c"
+# 1875 "src/field_weather_effect.c"
 static void UpdateSandstormWaveIndex(void);
 static void UpdateSandstormMovement(void);
 static void CreateSandstormSprites(void);
@@ -7490,7 +7474,7 @@ static const struct SpriteSheet sSandstormSpriteSheet =
     .size = sizeof(gWeatherSandstormTiles),
     .tag = 0x1204,
 };
-# 2096 "src/field_weather_effect.c"
+# 2070 "src/field_weather_effect.c"
 static void CreateSandstormSprites(void)
 {
     u16 i;
@@ -7592,7 +7576,7 @@ static void UpdateSandstormSwirlSprite(struct Sprite *sprite)
         sprite->data[0]++;
     }
 }
-# 2210 "src/field_weather_effect.c"
+# 2184 "src/field_weather_effect.c"
 void Shade_InitVars(void)
 {
     gWeatherPtr->initStep = 0;
@@ -7776,7 +7760,7 @@ static void UpdateBubbleSprite(struct Sprite *sprite)
     if (++sprite->data[2] >= 120)
         DestroySprite(sprite);
 }
-# 2401 "src/field_weather_effect.c"
+# 2375 "src/field_weather_effect.c"
 static void UnusedSetCurrentAbnormalWeather(u32 a0, u32 a1)
 {
     gCurrentAbnormalWeather = a0;

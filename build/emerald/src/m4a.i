@@ -1,6 +1,6 @@
-# 1 "src/m4a.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/m4a.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/m4a.c"
 # 1 "tools/agbcc/include/string.h" 1
 # 14 "tools/agbcc/include/string.h"
@@ -818,7 +818,7 @@ void m4aSoundInit(void)
     m4aSoundMode(0x00900000
                | 0x00040000
                | (12 << 12)
-               | (5 << 8));
+               | (12 << 8));
 
     for (i = 0; i < ((u16)gNumMusicPlayers); i++)
     {

@@ -1222,18 +1222,18 @@ sText_BerryBlenderStart:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xed
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xad
 	.byte	0xfb
 	.byte	0xca
@@ -1252,11 +1252,11 @@ sText_BerryBlenderStart:
 	.byte	0x0
 	.byte	0xd5
 	.byte	0x0
-	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xed
 	.byte	0x0
 	.byte	0xda
 	.byte	0xe6
@@ -1269,8 +1269,8 @@ sText_BerryBlenderStart:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xdb
 	.byte	0xfe
 	.byte	0xe8
 	.byte	0xe3
@@ -1287,18 +1287,18 @@ sText_BerryBlenderStart:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xed
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xad
 	.byte	0xfb
 	.byte	0xff
@@ -1325,57 +1325,57 @@ sText_WasMade:
 	.type	 sText_Mister,object
 sText_Mister:
 	.byte	0xc7
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 sText_Mister,7
 	.type	 sText_Laddie,object
 sText_Laddie:
 	.byte	0xc6
-	.byte	0xbb
-	.byte	0xbe
-	.byte	0xbe
-	.byte	0xc3
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xd9
 	.byte	0xff
 	.size	 sText_Laddie,7
 	.type	 sText_Lassie,object
 sText_Lassie:
 	.byte	0xc6
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xcd
-	.byte	0xc3
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xd9
 	.byte	0xff
 	.size	 sText_Lassie,7
 	.type	 sText_Master,object
 sText_Master:
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 sText_Master,7
 	.type	 sText_Dude,object
 sText_Dude:
 	.byte	0xbe
-	.byte	0xcf
-	.byte	0xbe
-	.byte	0xbf
+	.byte	0xe9
+	.byte	0xd8
+	.byte	0xd9
 	.byte	0xff
 	.size	 sText_Dude,5
 	.type	 sText_Miss,object
 sText_Miss:
 	.byte	0xc7
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xcd
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe7
 	.byte	0xff
 	.size	 sText_Miss,5
 	.align	2, 0
@@ -1504,11 +1504,11 @@ sText_WouldLikeToBlendAnotherBerry:
 	.byte	0xd9
 	.byte	0xe6
 	.byte	0x0
-	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xac
 	.byte	0xff
 	.size	 sText_WouldLikeToBlendAnotherBerry,39
@@ -1532,13 +1532,13 @@ sText_RunOutOfBerriesForBlending:
 	.byte	0xe3
 	.byte	0xda
 	.byte	0x0
-	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0x0
 	.byte	0xda
 	.byte	0xe3
@@ -1561,18 +1561,18 @@ sText_RunOutOfBerriesForBlending:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xed
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xad
 	.byte	0xfb
 	.byte	0xff
@@ -1591,9 +1591,9 @@ sText_YourPokeblockCaseIsFull:
 	.byte	0x59
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xdd
 	.byte	0xe7
@@ -1616,13 +1616,13 @@ sText_HasNoBerriesToPut:
 	.byte	0xe2
 	.byte	0xe3
 	.byte	0x0
-	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0x0
 	.byte	0xe8
 	.byte	0xe3
@@ -1639,18 +1639,18 @@ sText_HasNoBerriesToPut:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xed
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xad
 	.byte	0xff
 	.size	 sText_HasNoBerriesToPut,45
@@ -1666,9 +1666,9 @@ sText_ApostropheSPokeblockCaseIsFull:
 	.byte	0x59
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xdd
 	.byte	0xe7
@@ -1684,48 +1684,48 @@ sText_ApostropheSPokeblockCaseIsFull:
 	.type	 sText_BlendingResults,object
 sText_BlendingResults:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xcf
-	.byte	0xc6
-	.byte	0xce
-	.byte	0xcd
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xe8
+	.byte	0xe7
 	.byte	0x0
-	.byte	0xc9
-	.byte	0xc0
+	.byte	0xe3
+	.byte	0xda
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc1
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
 	.byte	0xff
 	.size	 sText_BlendingResults,20
 	.type	 sText_BerryUsed,object
 sText_BerryUsed:
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xed
 	.byte	0x0
 	.byte	0xcf
-	.byte	0xcd
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xff
 	.size	 sText_BerryUsed,11
 	.type	 sText_SpaceBerry,object
 sText_SpaceBerry:
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xff
 	.size	 sText_SpaceBerry,7
 	.type	 sText_Time,object
@@ -1759,18 +1759,18 @@ sText_Sec:
 	.type	 sText_MaximumSpeed,object
 sText_MaximumSpeed:
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xd2
-	.byte	0xc3
-	.byte	0xc7
-	.byte	0xcf
-	.byte	0xc7
+	.byte	0xd5
+	.byte	0xec
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xe9
+	.byte	0xe1
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xff
 	.size	 sText_MaximumSpeed,14
 	.type	 sText_RPM,object
@@ -1799,12 +1799,12 @@ sText_Space:
 	.type	 sText_Ranking,object
 sText_Ranking:
 	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xc5
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdf
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
 	.byte	0xff
 	.size	 sText_Ranking,8
 	.type	 sText_TheLevelIs,object
@@ -6578,7 +6578,7 @@ UpdateOpponentScores:
 	mov	r6, r9
 	mov	r5, r8
 	push	{r5, r6, r7}
-	add	sp, sp, #-0x8
+	add	sp, sp, #-0x4
 	ldr	r0, .L597
 	ldrh	r0, [r0]
 	cmp	r0, #0
@@ -6622,20 +6622,19 @@ UpdateOpponentScores:
 	blt	.LCB4956
 	b	.L573	@long jump
 .LCB4956:
-	ldr	r0, .L597+0x8
-	add	r2, r0, #0
-	add	r2, r2, #0x20
-	str	r2, [sp]
-	mov	r1, #0x0
-	mov	r9, r1
 	mov	r2, #0x0
-	str	r2, [sp, #0x4]
+	str	r2, [sp]
+	mov	r9, r2
+	ldr	r0, .L597+0x8
+	add	r0, r0, #0x4
 	mov	r8, r0
-	ldr	r0, .L597+0x14
-	mov	sl, r0
+	ldr	r1, .L597+0x14
+	mov	sl, r1
 .L575:
-	mov	r1, r8
-	ldrh	r0, [r1]
+	ldr	r2, [sp]
+	ldr	r1, .L597+0x8
+	add	r0, r2, r1
+	ldrh	r0, [r0]
 	ldr	r1, .L597+0xc
 	mov	r2, #0x88
 	lsl	r2, r2, #0x7
@@ -6646,24 +6645,23 @@ UpdateOpponentScores:
 .LCB4984:
 	ldr	r6, .L597+0x10
 	ldr	r0, [r6]
+	lsl	r1, r7, #0x1
 	add	r0, r0, #0x96
-	ldr	r2, [sp, #0x4]
-	add	r0, r0, r2
+	add	r0, r0, r1
 	ldrh	r5, [r0]
-	mov	r0, r8
-	ldrh	r4, [r0, #0x4]
-	ldr	r1, .L597+0x18
-	cmp	r4, r1
+	mov	r2, r8
+	ldrh	r4, [r2]
+	ldr	r0, .L597+0x18
+	cmp	r4, r0
 	bne	.L577	@cond_branch
-	add	r0, r1, #0
 	bl	UpdateSpeedFromHit
 	ldr	r0, [r6]
-	mov	r2, #0x8b
-	lsl	r2, r2, #0x1
-	add	r4, r0, r2
+	mov	r1, #0x8b
+	lsl	r1, r1, #0x1
+	add	r4, r0, r1
 	add	r0, r0, #0x4c
-	mov	r1, #0x0
-	ldrsh	r0, [r0, r1]
+	mov	r2, #0x0
+	ldrsh	r0, [r0, r2]
 	mov	r1, #0x37
 	bl	__divsi3
 	ldrh	r1, [r4]
@@ -6682,9 +6680,9 @@ UpdateOpponentScores:
 	ldr	r0, .L597+0x18
 	bl	CreateScoreSymbolSprite
 	ldr	r1, [r6]
-	mov	r2, #0x92
-	lsl	r2, r2, #0x1
-	add	r1, r1, r2
+	mov	r0, #0x92
+	lsl	r0, r0, #0x1
+	add	r1, r1, r0
 	add	r1, r1, r9
 	ldrh	r0, [r1]
 	add	r0, r0, #0x1
@@ -6754,12 +6752,12 @@ UpdateOpponentScores:
 	strh	r0, [r1]
 .L579:
 	mov	r0, r8
-	ldrh	r1, [r0, #0x4]
+	ldrh	r1, [r0]
 	ldr	r0, .L599
 	cmp	r1, r0
 	beq	.L585	@cond_branch
 .L595:
-	ldr	r1, [sp]
+	mov	r1, r8
 	ldrh	r0, [r1]
 	ldr	r2, .L599+0x8
 	cmp	r0, r2
@@ -6807,24 +6805,21 @@ UpdateOpponentScores:
 	bl	m4aMPlayTempoControl
 .L574:
 	ldr	r1, [sp]
-	add	r1, r1, #0x2
+	add	r1, r1, #0x10
 	str	r1, [sp]
 	mov	r2, #0x6
 	add	r9, r9, r2
-	ldr	r0, [sp, #0x4]
-	add	r0, r0, #0x2
-	str	r0, [sp, #0x4]
-	mov	r1, #0x10
-	add	r8, r8, r1
+	mov	r0, #0x10
+	add	r8, r8, r0
 	add	r7, r7, #0x1
 	ldr	r0, .L601+0x4
 	ldr	r0, [r0]
 	add	r0, r0, #0x7c
 	ldrb	r0, [r0]
 	cmp	r7, r0
-	bge	.LCB5220
+	bge	.LCB5215
 	b	.L575	@long jump
-.LCB5220:
+.LCB5215:
 .L573:
 	ldr	r0, .L601+0x8
 	ldrh	r0, [r0]
@@ -6850,7 +6845,7 @@ UpdateOpponentScores:
 	cmp	r7, r0
 	blt	.L593	@cond_branch
 .L589:
-	add	sp, sp, #0x8
+	add	sp, sp, #0x4
 	pop	{r3, r4, r5}
 	mov	r8, r3
 	mov	r9, r4
@@ -7321,9 +7316,9 @@ CalculatePokeblockColor:
 	mov	r7, #0x0
 	ldrsh	r0, [r1, r7]
 	cmp	r0, #0x32
-	ble	.LCB5892
+	ble	.LCB5887
 	b	.L706	@long jump
-.LCB5892:
+.LCB5887:
 	add	r1, r1, #0x2
 	add	r4, r4, #0x1
 	cmp	r4, #0x4
@@ -8132,9 +8127,9 @@ CB2_EndBlenderGame:
 	ldrb	r0, [r0]
 	sub	r0, r0, #0x1
 	cmp	r0, #0xc
-	bls	.LCB6993
+	bls	.LCB6988
 	b	.L867	@long jump
-.LCB6993:
+.LCB6988:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L960+0x4
 	add	r0, r0, r1
@@ -8248,15 +8243,15 @@ CB2_EndBlenderGame:
 	bl	GetMultiplayerId
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.LCB7139
+	beq	.LCB7134
 	b	.L949	@long jump
-.LCB7139:
+.LCB7134:
 	bl	IsLinkTaskFinished
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.LCB7146
+	bne	.LCB7141
 	b	.L867	@long jump
-.LCB7146:
+.LCB7141:
 	ldr	r0, .L970
 	ldrb	r0, [r0]
 	cmp	r0, #0
@@ -8323,9 +8318,9 @@ CB2_EndBlenderGame:
 	bl	SendBlock
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.LCB7242
+	bne	.LCB7237
 	b	.L867	@long jump
-.LCB7242:
+.LCB7237:
 	mov	r5, r8
 	ldr	r1, [r5]
 	b	.L956
@@ -8360,9 +8355,9 @@ CB2_EndBlenderGame:
 	bl	SendBlock
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.LCB7287
+	bne	.LCB7282
 	b	.L867	@long jump
-.LCB7287:
+.LCB7282:
 	ldr	r1, [r4]
 	b	.L956
 .L973:
@@ -8373,9 +8368,9 @@ CB2_EndBlenderGame:
 	bl	GetBlockReceivedStatus
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.LCB7303
+	bne	.LCB7298
 	b	.L867	@long jump
-.LCB7303:
+.LCB7298:
 	bl	ResetBlockReceivedFlags
 	ldr	r5, .L974
 	ldr	r1, [r5]
@@ -8463,17 +8458,17 @@ CB2_EndBlenderGame:
 	bl	PrintBlendingRanking
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.LCB7426
+	bne	.LCB7421
 	b	.L867	@long jump
-.LCB7426:
+.LCB7421:
 	b	.L949
 .L912:
 	bl	PrintBlendingResults
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.LCB7435
+	bne	.LCB7430
 	b	.L867	@long jump
-.LCB7435:
+.LCB7430:
 	ldr	r0, .L978
 	ldrb	r0, [r0]
 	cmp	r0, #0
@@ -8503,9 +8498,9 @@ CB2_EndBlenderGame:
 	add	r1, r5, #0
 	bl	Blender_PrintText
 	cmp	r0, #0
-	bne	.LCB7476
+	bne	.LCB7471
 	b	.L867	@long jump
-.LCB7476:
+.LCB7471:
 	ldr	r1, [r6]
 	b	.L956
 .L981:
@@ -8547,9 +8542,9 @@ CB2_EndBlenderGame:
 	b	.L867
 .L938:
 	cmp	r2, #0x1
-	beq	.LCB7528
+	beq	.LCB7523
 	b	.L867	@long jump
-.LCB7528:
+.LCB7523:
 .L922:
 	ldr	r2, .L984
 	ldr	r0, [r2]
@@ -8805,9 +8800,9 @@ LinkPlayAgainHandleSaving:
 	ldr	r0, [r0]
 	add	r4, r1, #0
 	cmp	r0, #0x6
-	bls	.LCB7868
+	bls	.LCB7863
 	b	.L1003	@long jump
-.LCB7868:
+.LCB7863:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L1022+0x4
 	add	r0, r0, r1
@@ -8985,9 +8980,9 @@ CB2_CheckPlayAgainLink:
 	ldrb	r0, [r0]
 	add	r6, r1, #0
 	cmp	r0, #0xc
-	bls	.LCB8092
+	bls	.LCB8087
 	b	.L1037	@long jump
-.LCB8092:
+.LCB8087:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L1074+0x4
 	add	r0, r0, r1
@@ -9021,14 +9016,14 @@ CB2_CheckPlayAgainLink:
 	ldrh	r2, [r0]
 	ldr	r0, .L1076
 	cmp	r2, r0
-	bne	.LCB8123
+	bne	.LCB8118
 	b	.L1070	@long jump
-.LCB8123:
+.LCB8118:
 	ldr	r0, .L1076+0x4
 	cmp	r2, r0
-	beq	.LCB8129
+	beq	.LCB8124
 	b	.L1037	@long jump
-.LCB8129:
+.LCB8124:
 	add	r0, r1, #0
 	add	r0, r0, #0x6c
 	ldrh	r2, [r0]
@@ -9122,9 +9117,9 @@ CB2_CheckPlayAgainLink:
 	add	r1, r5, #0
 	bl	Blender_PrintText
 	cmp	r0, #0
-	bne	.LCB8252
+	bne	.LCB8247
 	b	.L1037	@long jump
-.LCB8252:
+.LCB8247:
 	ldr	r1, [r6]
 	mov	r0, #0x84
 	lsl	r0, r0, #0x1
@@ -9146,9 +9141,9 @@ CB2_CheckPlayAgainLink:
 	add	r0, r0, #0x1
 	str	r0, [r1]
 	cmp	r0, #0x3c
-	bgt	.LCB8281
+	bgt	.LCB8276
 	b	.L1037	@long jump
-.LCB8281:
+.LCB8276:
 	add	r1, r4, #0
 .L1070:
 	add	r1, r1, #0x63
@@ -9173,9 +9168,9 @@ CB2_CheckPlayAgainLink:
 	bl	IsLinkTaskFinished
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.LCB8316
+	bne	.LCB8311
 	b	.L1037	@long jump
-.LCB8316:
+.LCB8311:
 	ldr	r3, .L1088
 	ldr	r1, [r3]
 	mov	r2, #0x84
@@ -9350,9 +9345,9 @@ CB2_CheckPlayAgainLocal:
 	ldrb	r0, [r0]
 	add	r6, r1, #0
 	cmp	r0, #0xa
-	bls	.LCB8545
+	bls	.LCB8540
 	b	.L1099	@long jump
-.LCB8545:
+.LCB8540:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L1115+0x4
 	add	r0, r0, r1
@@ -9558,9 +9553,9 @@ ProcessLinkPlayerCmds:
 	ldr	r0, .L1175
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.LCB8797
+	bne	.LCB8792
 	b	.L1130	@long jump
-.LCB8797:
+.LCB8792:
 	ldr	r4, .L1175+0x4
 	ldrh	r0, [r4]
 	ldr	r1, .L1175+0x8
@@ -9635,23 +9630,23 @@ ProcessLinkPlayerCmds:
 	bl	GetMultiplayerId
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.LCB8905
+	beq	.LCB8900
 	b	.L1130	@long jump
-.LCB8905:
+.LCB8900:
 	ldr	r2, .L1181+0x4
 	ldr	r0, [r2]
 	add	r0, r0, #0x64
 	ldrh	r1, [r0]
 	ldr	r0, .L1181+0x8
 	cmp	r1, r0
+	bne	.LCB8911
+	b	.L1130	@long jump
+.LCB8911:
+	ldr	r0, .L1181
+	cmp	r1, r0
 	bne	.LCB8916
 	b	.L1130	@long jump
 .LCB8916:
-	ldr	r0, .L1181
-	cmp	r1, r0
-	bne	.LCB8921
-	b	.L1130	@long jump
-.LCB8921:
 	mov	r5, #0x0
 	add	r7, r2, #0
 	b	.L1143
@@ -10950,9 +10945,9 @@ PrintBlendingResults:
 	ldrb	r0, [r0]
 	add	r4, r1, #0
 	cmp	r0, #0x6
-	bls	.LCB10515
+	bls	.LCB10510
 	b	.L1332	@long jump
-.LCB10515:
+.LCB10510:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L1367+0x4
 	add	r0, r0, r1
@@ -10994,9 +10989,9 @@ PrintBlendingResults:
 	sub	r0, r0, #0xa
 	str	r0, [r2]
 	cmp	r0, #0
-	blt	.LCB10560
+	blt	.LCB10555
 	b	.L1332	@long jump
-.LCB10560:
+.LCB10555:
 	mov	r0, #0x0
 	str	r0, [r2]
 	b	.L1366
@@ -11009,9 +11004,9 @@ PrintBlendingResults:
 	add	r0, r0, #0x1
 	str	r0, [r1]
 	cmp	r0, #0x14
-	bgt	.LCB10577
+	bgt	.LCB10572
 	b	.L1332	@long jump
-.LCB10577:
+.LCB10572:
 	mov	r6, #0x0
 .L1341:
 	ldr	r4, .L1369
@@ -11326,9 +11321,9 @@ PrintBlendingResults:
 	mov	r0, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.LCB10989
+	bne	.LCB10984
 	b	.L1332	@long jump
-.LCB10989:
+.LCB10984:
 	ldr	r1, [r4]
 	b	.L1366
 .L1374:
@@ -11795,9 +11790,9 @@ PrintBlendingRanking:
 	ldrb	r0, [r0]
 	add	r2, r1, #0
 	cmp	r0, #0x6
-	bls	.LCB11568
+	bls	.LCB11563
 	b	.L1426	@long jump
-.LCB11568:
+.LCB11563:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L1447+0x4
 	add	r0, r0, r1
@@ -11839,9 +11834,9 @@ PrintBlendingRanking:
 	sub	r0, r0, #0xa
 	str	r0, [r2]
 	cmp	r0, #0
-	blt	.LCB11613
+	blt	.LCB11608
 	b	.L1426	@long jump
-.LCB11613:
+.LCB11608:
 	mov	r0, #0x0
 	str	r0, [r2]
 	b	.L1446
@@ -11854,9 +11849,9 @@ PrintBlendingRanking:
 	add	r0, r0, #0x1
 	str	r0, [r2]
 	cmp	r0, #0x14
-	bgt	.LCB11630
+	bgt	.LCB11625
 	b	.L1426	@long jump
-.LCB11630:
+.LCB11625:
 	mov	r0, #0x0
 	str	r0, [r2]
 	b	.L1446
@@ -11963,9 +11958,9 @@ PrintBlendingRanking:
 	add	r0, r0, #0x7c
 	ldrb	r0, [r0]
 	cmp	r2, r0
-	bcc	.LCB11749
+	bcc	.LCB11744
 	b	.L1434	@long jump
-.LCB11749:
+.LCB11744:
 	mov	r3, #0xff
 	mov	sl, r3
 	mov	r0, #0x3
@@ -12089,9 +12084,9 @@ PrintBlendingRanking:
 	add	r0, r0, #0x7c
 	ldrb	r0, [r0]
 	cmp	r2, r0
-	bcs	.LCB11905
+	bcs	.LCB11900
 	b	.L1436	@long jump
-.LCB11905:
+.LCB11900:
 .L1434:
 	mov	r0, #0x5
 	bl	PutWindowTilemap

@@ -562,19 +562,8 @@ HandleInputChooseAction:
 	mov	r0, #0x8
 	and	r0, r0, r2
 	cmp	r0, #0
-	beq	.L55	@cond_branch
-	bl	SwapHpBarsWithHpText
-	b	.L23
-.L55:
-	mov	r0, #0x4
-	and	r0, r0, r2
-	cmp	r0, #0
 	beq	.L23	@cond_branch
-	mov	r0, #0x1
-	mov	r1, #0x14
-	mov	r2, #0x0
-	bl	BtlController_EmitTwoReturnValues
-	bl	PlayerBufferExecCompleted
+	bl	SwapHpBarsWithHpText
 .L23:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
@@ -841,9 +830,9 @@ HandleInputChooseTarget:
 	mov	r0, #0x60
 	and	r0, r0, r2
 	cmp	r0, #0
-	bne	.LCB981
+	bne	.LCB967
 	b	.L97	@long jump
-.LCB981:
+.LCB967:
 	mov	r0, #0x5
 	bl	PlaySE
 	ldr	r2, .L179
@@ -867,9 +856,9 @@ HandleInputChooseTarget:
 	ldrb	r0, [r0, #0x7]
 	add	r7, r1, #0
 	cmp	r0, #0x90
-	bne	.LCB1008
+	bne	.LCB994
 	b	.L168	@long jump
-.LCB1008:
+.LCB994:
 	add	r5, r3, #0
 	mov	r8, r2
 .L100:
@@ -989,9 +978,9 @@ HandleInputChooseTarget:
 	mov	r0, #0x90
 	and	r0, r0, r2
 	cmp	r0, #0
-	bne	.LCB1192
+	bne	.LCB1178
 	b	.L93	@long jump
-.LCB1192:
+.LCB1178:
 	mov	r0, #0x5
 	bl	PlaySE
 	ldr	r2, .L185
@@ -1446,9 +1435,9 @@ HandleInputChooseMove:
 	add	r4, r5, #0
 	and	r4, r4, r2
 	cmp	r4, #0
-	bne	.LCB1789
+	bne	.LCB1775
 	b	.L227	@long jump
-.LCB1789:
+.LCB1775:
 	mov	r0, #0x5
 	bl	PlaySE
 	ldr	r1, .L286+0x4
@@ -1797,9 +1786,9 @@ HandleInputChooseMove:
 	add	r0, r5, #0
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.LCB2268
+	bne	.LCB2254
 	b	.L254	@long jump
-.LCB2268:
+.LCB2254:
 	ldrb	r0, [r2]
 	bl	MoveSelectionDestroyCursorAt
 	mov	r0, r8
@@ -1827,17 +1816,17 @@ HandleInputChooseMove:
 	add	r0, r5, #0
 	and	r0, r0, r2
 	cmp	r0, #0
-	beq	.LCB2311
+	beq	.LCB2297
 	b	.L254	@long jump
-.LCB2311:
+.LCB2297:
 	ldr	r1, .L308+0x4
 	add	r0, r6, #0
 	eor	r0, r0, r2
 	ldrb	r1, [r1]
 	cmp	r0, r1
-	bcc	.LCB2322
+	bcc	.LCB2308
 	b	.L254	@long jump
-.LCB2322:
+.LCB2308:
 	ldrb	r0, [r3]
 	bl	MoveSelectionDestroyCursorAt
 	mov	r0, r8
@@ -1864,9 +1853,9 @@ HandleInputChooseMove:
 	add	r0, r6, #0
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.LCB2365
+	bne	.LCB2351
 	b	.L254	@long jump
-.LCB2365:
+.LCB2351:
 	ldrb	r0, [r2]
 	bl	MoveSelectionDestroyCursorAt
 	mov	r0, r8
@@ -1894,17 +1883,17 @@ HandleInputChooseMove:
 	add	r0, r6, #0
 	and	r0, r0, r2
 	cmp	r0, #0
-	beq	.LCB2408
+	beq	.LCB2394
 	b	.L254	@long jump
-.LCB2408:
+.LCB2394:
 	ldr	r1, .L312+0x4
 	add	r0, r5, #0
 	eor	r0, r0, r2
 	ldrb	r1, [r1]
 	cmp	r0, r1
-	bcc	.LCB2419
+	bcc	.LCB2405
 	b	.L254	@long jump
-.LCB2419:
+.LCB2405:
 	ldrb	r0, [r3]
 	bl	MoveSelectionDestroyCursorAt
 	mov	r0, r8
@@ -2236,9 +2225,9 @@ HandleMoveSwitching:
 	mov	r0, #0x5
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.LCB2863
+	bne	.LCB2849
 	b	.L330	@long jump
-.LCB2863:
+.LCB2849:
 	mov	r0, #0x5
 	bl	PlaySE
 	ldr	r5, .L404+0x4
@@ -2250,9 +2239,9 @@ HandleMoveSwitching:
 	ldrb	r0, [r3]
 	ldrb	r1, [r7]
 	cmp	r0, r1
-	bne	.LCB2881
+	bne	.LCB2867
 	b	.L331	@long jump
-.LCB2881:
+.LCB2867:
 	ldr	r1, .L404+0x10
 	lsl	r0, r2, #0x9
 	add	r0, r0, #0x20
@@ -2476,9 +2465,9 @@ HandleMoveSwitching:
 	lsl	r1, r1, #0xe
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.LCB3141
+	beq	.LCB3127
 	b	.L331	@long jump
-.LCB3141:
+.LCB3127:
 	mov	r6, #0x0
 	mov	r1, sp
 	add	r1, r1, #0x4
@@ -2757,9 +2746,9 @@ HandleMoveSwitching:
 	mov	r0, #0x1
 	and	r0, r0, r2
 	cmp	r0, #0
-	bne	.LCB3497
+	bne	.LCB3483
 	b	.L369	@long jump
-.LCB3497:
+.LCB3483:
 	ldr	r0, .L408+0x4
 	ldr	r1, .L408+0x8
 	ldrb	r1, [r1]
@@ -2800,17 +2789,17 @@ HandleMoveSwitching:
 	mov	r0, #0x1
 	and	r0, r0, r2
 	cmp	r0, #0
-	beq	.LCB3569
+	beq	.LCB3555
 	b	.L369	@long jump
-.LCB3569:
+.LCB3555:
 	ldr	r1, .L412+0x4
 	mov	r0, #0x1
 	eor	r0, r0, r2
 	ldrb	r1, [r1]
 	cmp	r0, r1
-	bcc	.LCB3580
+	bcc	.LCB3566
 	b	.L369	@long jump
-.LCB3580:
+.LCB3566:
 	ldr	r0, .L412+0x8
 	ldr	r1, .L412+0xc
 	ldrb	r1, [r1]
@@ -4375,9 +4364,9 @@ Task_GiveExpToMon:
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	cmp	sl, r0
-	bne	.LCB5469
+	bne	.LCB5455
 	b	.L527	@long jump
-.LCB5469:
+.LCB5455:
 .L528:
 	mov	r0, #0x64
 	mov	r1, sl
@@ -6093,9 +6082,9 @@ CopyPlayerMonData:
 	ldrb	r0, [r1]
 	add	r4, r2, #0
 	cmp	r0, #0x3b
-	bls	.LCB7555
+	bls	.LCB7541
 	bl	.L685	@far jump
-.LCB7555:
+.LCB7541:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L773+0x8
 	add	r0, r0, r1
@@ -7253,9 +7242,9 @@ SetPlayerMonData:
 	ldrb	r0, [r1]
 	add	r7, r3, #0
 	cmp	r0, #0x3b
-	bls	.LCB9047
+	bls	.LCB9033
 	bl	.L896	@far jump
-.LCB9047:
+.LCB9033:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L967+0x8
 	add	r0, r0, r1
@@ -9339,20 +9328,20 @@ PlayerHandleDrawTrainerPic:
 	lsl	r1, r1, #0xf
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.LCB11527
+	bne	.LCB11513
 	b	.L1120	@long jump
-.LCB11527:
+.LCB11513:
 	ldr	r0, .L1129+0x4
 	ldrh	r0, [r0]
 	ldr	r1, .L1129+0x8
 	cmp	r0, r1
-	bne	.LCB11536
+	bne	.LCB11522
 	b	.L1120	@long jump
-.LCB11536:
+.LCB11522:
 	cmp	r0, r1
-	bls	.LCB11538
+	bls	.LCB11524
 	b	.L1120	@long jump
-.LCB11538:
+.LCB11524:
 	ldr	r0, .L1129+0xc
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x8]
@@ -10191,9 +10180,9 @@ PlayerHandleMoveAnimation:
 	bl	mplay_80342A4
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.LCB12512
+	beq	.LCB12498
 	b	.L1181	@long jump
-.LCB12512:
+.LCB12498:
 	ldr	r0, .L1184+0x4
 	ldr	r0, [r0]
 	mov	ip, r0

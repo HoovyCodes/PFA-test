@@ -24969,20 +24969,21 @@ SetCurrentAndNextWeatherNoDelay:
 	.type	 Task_WeatherInit,function
 	.thumb_func
 Task_WeatherInit:
-	push	{r4, lr}
+	push	{r4, r5, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r2, .L19
+	ldr	r5, .L19
 	mov	r1, #0xd9
 	lsl	r1, r1, #0x3
-	add	r0, r2, r1
+	add	r0, r5, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
 	beq	.L18	@cond_branch
+	bl	UpdateCameraPanning
 	ldr	r1, .L19+0x4
-	mov	r3, #0xda
-	lsl	r3, r3, #0x3
-	add	r0, r2, r3
+	mov	r2, #0xda
+	lsl	r2, r2, #0x3
+	add	r0, r5, r2
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x4
 	add	r1, r1, #0x8
@@ -24997,7 +24998,7 @@ Task_WeatherInit:
 	ldr	r1, .L19+0xc
 	str	r1, [r0]
 .L18:
-	pop	{r4}
+	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
 .L20:
@@ -25695,9 +25696,9 @@ ApplyGammaShift:
 	lsr	r0, r0, #0x18
 	mov	r9, r0
 	cmp	r4, r9
-	bcc	.LCB1202
+	bcc	.LCB1203
 	b	.L152	@long jump
-.LCB1202:
+.LCB1203:
 	ldr	r1, [sp]
 	lsl	r0, r1, #0x18
 	asr	r0, r0, #0x13

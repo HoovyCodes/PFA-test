@@ -79,11 +79,9 @@ gPCText_ItemPCOptionsText:
 	.align	2, 0
 	.type	 gNewGamePCItems,object
 gNewGamePCItems:
-	.short	0x1c
-	.short	0x1
-	.short	0x0
-	.short	0x0
-	.size	 gNewGamePCItems,8
+	.short	0x99
+	.space	2
+	.size	 gNewGamePCItems,4
 	.globl	gMailboxMailOptions
 	.align	2, 0
 	.type	 gMailboxMailOptions,object

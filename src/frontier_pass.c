@@ -586,7 +586,7 @@ static u32 AllocateFrontierPassData(void (*callback)(void))
     sPassData->battlePoints = gSaveBlock2Ptr->frontier.battlePoints;
     sPassData->hasBattleRecord = CanCopyRecordedBattleSaveData();
     sPassData->unkE = 0;
-    sPassData->trainerStars = CountPlayerTrainerStars();
+    sPassData->trainerStars = CountPlayerTrainerStars()+1;
     for (i = 0; i < 7; i++)
     {
         if (FlagGet(FLAG_SYS_TOWER_SILVER + i * 2))
@@ -982,7 +982,7 @@ static void Task_HandleFrontierPassInput(u8 taskId)
                 PlaySE(SE_PC_OFF);
                 SetMainCallback2(CB2_HideFrontierPass);
                 DestroyTask(taskId);
-                // BUG. The function should return here. Otherwise, it can play the same sound twice and destroy the same task twice.
+				return;
             }
         }
 

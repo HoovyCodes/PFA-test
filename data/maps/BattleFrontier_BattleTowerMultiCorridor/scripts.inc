@@ -122,60 +122,60 @@ BattleFrontier_BattleTowerMultiCorridor_EventScript_WarpToLinkMultiBattleRoom:: 
 	return
 
 BattleFrontier_BattleTowerMultiCorridor_Movement_PlayerWalkToDoor: @ 8248EBC
-	walk_down
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
+	walk_fast_down
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
 	step_end
 
 BattleFrontier_BattleTowerMultiCorridor_Movement_PartnerWalkToDoor: @ 8248EC4
-	walk_down
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
+	walk_fast_down
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
 	step_end
 
 BattleFrontier_BattleTowerMultiCorridor_Movement_PlayerAttendantWalkToDoor: @ 8248ECC
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_up
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_up
 	walk_in_place_fastest_right
 	step_end
 
 BattleFrontier_BattleTowerMultiCorridor_Movement_PartnerAttendantWalkToDoor: @ 8248ED5
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
 	walk_in_place_fastest_left
 	step_end
 
 BattleFrontier_BattleTowerMultiCorridor_Movement_TrainerEnterDoor: @ 8248EDE
 	delay_16
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
 	set_invisible
 	step_end
 
 BattleFrontier_BattleTowerMultiCorridor_Movement_AttendantEnterDoor: @ 8248EE3
-	walk_up
+	walk_fast_up
 	set_invisible
 	step_end
 
 BattleFrontier_BattleTowerMultiCorridor_Movement_ExitElevator: @ 8248EE6
-	walk_down
+	walk_fast_down
 	step_end
 

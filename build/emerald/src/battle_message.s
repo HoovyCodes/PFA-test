@@ -310,12 +310,12 @@ sText_UseNextPkmn:
 	.byte	0xe8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xac
 	.byte	0xff
 	.size	 sText_UseNextPkmn,18
@@ -407,12 +407,12 @@ sText_PkmnMakesGroundMiss:
 	.byte	0xd9
 	.byte	0xe7
 	.byte	0x0
-	.byte	0xc1
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xc8
-	.byte	0xbe
+	.byte	0xdb
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xd8
 	.byte	0xfe
 	.byte	0xe1
 	.byte	0xe3
@@ -569,12 +569,12 @@ sText_PlayerWhiteout:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xab
 	.byte	0xfb
 	.byte	0xff
@@ -1851,12 +1851,12 @@ sText_PkmnRaisedSpDef:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
+	.byte	0xd9
+	.byte	0xda
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnRaisedSpDef,24
@@ -1878,12 +1878,12 @@ sText_PkmnRaisedSpDefALittle:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
+	.byte	0xd9
+	.byte	0xda
 	.byte	0x0
 	.byte	0xd5
 	.byte	0x0
@@ -1914,12 +1914,12 @@ sText_PkmnRaisedDef:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnRaisedDef,24
@@ -1941,12 +1941,12 @@ sText_PkmnRaisedDefALittle:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xd5
 	.byte	0x0
@@ -2025,14 +2025,14 @@ sText_PkmnUsedSafeguard:
 	.byte	0xed
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xbb
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc1
-	.byte	0xcf
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbe
+	.byte	0xd5
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xdb
+	.byte	0xe9
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd8
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnUsedSafeguard,38
@@ -2076,14 +2076,14 @@ sText_PkmnSafeguardExpired:
 	.byte	0xed
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xbb
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc1
-	.byte	0xcf
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbe
+	.byte	0xd5
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xdb
+	.byte	0xe9
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd8
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnSafeguardExpired,48
@@ -2340,9 +2340,9 @@ sText_PkmnSqueezedByBind:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbe
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd8
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnSqueezedByBind,30
@@ -2400,14 +2400,14 @@ sText_PkmnTrappedBySandTomb:
 	.byte	0xed
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbe
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd8
 	.byte	0x0
 	.byte	0xce
-	.byte	0xc9
-	.byte	0xc7
-	.byte	0xbc
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd6
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnTrappedBySandTomb,29
@@ -2420,13 +2420,13 @@ sText_PkmnWrappedBy:
 	.byte	0xd5
 	.byte	0xe7
 	.byte	0x0
-	.byte	0xd1
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xca
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xeb
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe4
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0x0
 	.byte	0xd6
 	.byte	0xed
@@ -2441,13 +2441,13 @@ sText_PkmnClamped:
 	.byte	0xfd
 	.byte	0xf
 	.byte	0x0
-	.byte	0xbd
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xd7
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xfe
 	.byte	0xfd
 	.byte	0x10
@@ -2555,10 +2555,10 @@ gText_PkmnShroudedInMist:
 	.byte	0xdd
 	.byte	0xe2
 	.byte	0x0
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0xab
 	.byte	0xff
 	.size	 gText_PkmnShroudedInMist,28
@@ -2583,10 +2583,10 @@ sText_PkmnProtectedByMist:
 	.byte	0xd6
 	.byte	0xed
 	.byte	0x0
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnProtectedByMist,25
@@ -2720,10 +2720,10 @@ sText_PkmnPeltedByHail:
 	.byte	0xd6
 	.byte	0xed
 	.byte	0x0
-	.byte	0xc2
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc6
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe0
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnPeltedByHail,22
@@ -2819,15 +2819,15 @@ sText_PkmnSappedByLeechSeed:
 	.byte	0xed
 	.byte	0x0
 	.byte	0xc6
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbd
-	.byte	0xc2
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xdc
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnSappedByLeechSeed,37
@@ -2880,11 +2880,11 @@ sText_PkmnUproarKeptAwake:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcf
-	.byte	0xca
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xbb
-	.byte	0xcc
+	.byte	0xe4
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xd5
+	.byte	0xe6
 	.byte	0xfe
 	.byte	0xdf
 	.byte	0xd9
@@ -2923,11 +2923,11 @@ sText_PkmnWokeUpInUproar:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xcf
-	.byte	0xca
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xbb
-	.byte	0xcc
+	.byte	0xe4
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xd5
+	.byte	0xe6
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnWokeUpInUproar,26
@@ -2947,11 +2947,11 @@ sText_PkmnCausedUproar:
 	.byte	0xe2
 	.byte	0x0
 	.byte	0xcf
-	.byte	0xca
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xbb
-	.byte	0xcc
+	.byte	0xe4
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xd5
+	.byte	0xe6
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnCausedUproar,21
@@ -2974,11 +2974,11 @@ sText_PkmnMakingUproar:
 	.byte	0xe2
 	.byte	0x0
 	.byte	0xcf
-	.byte	0xca
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xbb
-	.byte	0xcc
+	.byte	0xe4
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xd5
+	.byte	0xe6
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnMakingUproar,24
@@ -3029,11 +3029,11 @@ sText_PkmnCantSleepInUproar:
 	.byte	0xe2
 	.byte	0x0
 	.byte	0xcf
-	.byte	0xca
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xbb
-	.byte	0xcc
+	.byte	0xe4
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xd5
+	.byte	0xe6
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnCantSleepInUproar,33
@@ -3043,21 +3043,20 @@ sText_PkmnStockpiled:
 	.byte	0xf
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xbd
-	.byte	0xc5
-	.byte	0xca
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xe4
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xfe
 	.byte	0xfd
 	.byte	0x0
 	.byte	0xab
 	.byte	0xff
-	.size	 sText_PkmnStockpiled,18
+	.size	 sText_PkmnStockpiled,17
 	.type	 sText_PkmnCantStockpile,object
 sText_PkmnCantStockpile:
 	.byte	0xfd
@@ -3070,14 +3069,14 @@ sText_PkmnCantStockpile:
 	.byte	0xe8
 	.byte	0xfe
 	.byte	0xcd
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xbd
-	.byte	0xc5
-	.byte	0xca
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xe4
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xd5
 	.byte	0xe2
@@ -3118,11 +3117,11 @@ sText_PkmnCantSleepInUproar2:
 	.byte	0xe2
 	.byte	0x0
 	.byte	0xcf
-	.byte	0xca
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xbb
-	.byte	0xcc
+	.byte	0xe4
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xd5
+	.byte	0xe6
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnCantSleepInUproar2,33
@@ -3137,11 +3136,11 @@ sText_UproarKeptPkmnAwake:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xcf
-	.byte	0xca
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xbb
-	.byte	0xcc
+	.byte	0xe4
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xd5
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xdf
 	.byte	0xd9
@@ -3362,15 +3361,15 @@ sText_PkmnMadeSubstitute:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xcf
-	.byte	0xbc
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xcf
-	.byte	0xce
-	.byte	0xbf
+	.byte	0xe9
+	.byte	0xd6
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xd9
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnMadeSubstitute,22
@@ -3394,15 +3393,15 @@ sText_PkmnHasSubstitute:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xcf
-	.byte	0xbc
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xcf
-	.byte	0xce
-	.byte	0xbf
+	.byte	0xe9
+	.byte	0xd6
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xd9
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnHasSubstitute,29
@@ -3413,15 +3412,15 @@ sText_SubstituteDamaged:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xcf
-	.byte	0xbc
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xcf
-	.byte	0xce
-	.byte	0xbf
+	.byte	0xe9
+	.byte	0xd6
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xe8
 	.byte	0xe3
@@ -3453,15 +3452,15 @@ sText_PkmnSubstituteFaded:
 	.byte	0xe7
 	.byte	0xfe
 	.byte	0xcd
-	.byte	0xcf
-	.byte	0xbc
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xcf
-	.byte	0xce
-	.byte	0xbf
+	.byte	0xe9
+	.byte	0xd6
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xda
 	.byte	0xd5
@@ -3501,9 +3500,9 @@ sText_PkmnRageBuilding:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc1
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xd9
 	.byte	0xfe
 	.byte	0xdd
 	.byte	0xe7
@@ -3584,11 +3583,11 @@ sText_PkmnGotEncore:
 	.byte	0xe2
 	.byte	0x0
 	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbd
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xbf
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd9
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnGotEncore,18
@@ -3600,11 +3599,11 @@ sText_PkmnEncoreEnded:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbd
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xbf
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd9
 	.byte	0xfe
 	.byte	0xd9
 	.byte	0xe2
@@ -3642,13 +3641,13 @@ sText_PkmnSketchedMove:
 	.byte	0xf
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xc5
-	.byte	0xbf
-	.byte	0xce
-	.byte	0xbd
-	.byte	0xc2
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xfe
 	.byte	0xfd
 	.byte	0x0
@@ -3808,14 +3807,14 @@ sText_PkmnFellIntoNightmare:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xc8
-	.byte	0xc3
-	.byte	0xc1
-	.byte	0xc2
-	.byte	0xce
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe8
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd9
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnFellIntoNightmare,26
@@ -3840,14 +3839,14 @@ sText_PkmnLockedInNightmare:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xc8
-	.byte	0xc3
-	.byte	0xc1
-	.byte	0xc2
-	.byte	0xce
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe8
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd9
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnLockedInNightmare,29
@@ -3883,10 +3882,10 @@ sText_PkmnLaidCurse:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xcf
-	.byte	0xcc
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xe3
 	.byte	0xe2
@@ -3922,21 +3921,21 @@ sText_PkmnAfflictedByCurse:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xcf
-	.byte	0xcc
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnAfflictedByCurse,30
 	.type	 sText_SpikesScattered,object
 sText_SpikesScattered:
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xc3
-	.byte	0xc5
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xe4
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0x0
 	.byte	0xeb
 	.byte	0xd9
@@ -4003,11 +4002,11 @@ sText_PkmnHurtBySpikes:
 	.byte	0xed
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xc3
-	.byte	0xc5
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xe4
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnHurtBySpikes,22
@@ -4040,11 +4039,11 @@ sText_PkmnPerishCountFell:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xca
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xc2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xdc
 	.byte	0x0
 	.byte	0xd7
 	.byte	0xe3
@@ -4092,12 +4091,12 @@ sText_PkmnEnduredHit:
 	.byte	0x10
 	.byte	0x0
 	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xcf
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xfe
 	.byte	0xe8
 	.byte	0xdc
@@ -4112,14 +4111,14 @@ sText_PkmnEnduredHit:
 	.type	 sText_MagnitudeStrength,object
 sText_MagnitudeStrength:
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc1
-	.byte	0xc8
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xcf
-	.byte	0xbe
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xd8
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xfd
 	.byte	0x0
@@ -4161,11 +4160,11 @@ sText_PkmnCutHPMaxedAttack:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnCutHPMaxedAttack,40
@@ -4239,15 +4238,15 @@ sText_PkmnShedLeechSeed:
 	.byte	0xd8
 	.byte	0xfe
 	.byte	0xc6
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbd
-	.byte	0xc2
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xdc
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnShedLeechSeed,20
@@ -4267,11 +4266,11 @@ sText_PkmnBlewAwaySpikes:
 	.byte	0xed
 	.byte	0xfe
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xc3
-	.byte	0xc5
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xe4
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnBlewAwaySpikes,21
@@ -4553,12 +4552,12 @@ sText_PkmnSubjectedToTorment:
 	.byte	0xe3
 	.byte	0x0
 	.byte	0xce
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xc7
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xce
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe8
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnSubjectedToTorment,29
@@ -4794,9 +4793,9 @@ sText_PkmnMadeWish:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xd1
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xc2
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xdc
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnMadeWish,16
@@ -4808,9 +4807,9 @@ sText_PkmnWishCameTrue:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xd1
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xc2
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xdc
 	.byte	0xfe
 	.byte	0xd7
 	.byte	0xd5
@@ -5092,11 +5091,11 @@ sText_PkmnWantsGrudge:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xc1
-	.byte	0xcc
-	.byte	0xcf
-	.byte	0xbe
-	.byte	0xc1
-	.byte	0xbf
+	.byte	0xe6
+	.byte	0xe9
+	.byte	0xd8
+	.byte	0xdb
+	.byte	0xd9
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnWantsGrudge,40
@@ -5138,11 +5137,11 @@ sText_PkmnLostPPGrudge:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xc1
-	.byte	0xcc
-	.byte	0xcf
-	.byte	0xbe
-	.byte	0xc1
-	.byte	0xbf
+	.byte	0xe6
+	.byte	0xe9
+	.byte	0xd8
+	.byte	0xdb
+	.byte	0xd9
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnLostPPGrudge,43
@@ -5206,15 +5205,15 @@ sText_PkmnMoveBounced:
 	.byte	0xed
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc1
-	.byte	0xc3
-	.byte	0xbd
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xd7
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xbb
-	.byte	0xce
+	.byte	0xe3
+	.byte	0xd5
+	.byte	0xe8
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnMoveBounced,40
@@ -5265,13 +5264,13 @@ sText_PkmnSnatchedMove:
 	.byte	0x10
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xc8
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xbd
-	.byte	0xc2
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xfe
 	.byte	0xfd
 	.byte	0x13
@@ -5873,10 +5872,10 @@ sText_PkmnRaisedSpeed:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnRaisedSpeed,26
@@ -6244,11 +6243,11 @@ sText_PkmnCutsAttackWith:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnCutsAttackWith,26
@@ -6316,11 +6315,11 @@ sText_PkmnTraced:
 	.byte	0x13
 	.byte	0x0
 	.byte	0xce
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xfe
 	.byte	0xfd
 	.byte	0x0
@@ -6654,16 +6653,16 @@ sText_ItSuckedLiquidOoze:
 	.byte	0xd9
 	.byte	0xfe
 	.byte	0xc6
-	.byte	0xc3
-	.byte	0xcb
-	.byte	0xcf
-	.byte	0xc3
-	.byte	0xbe
+	.byte	0xdd
+	.byte	0xe5
+	.byte	0xe9
+	.byte	0xdd
+	.byte	0xd8
 	.byte	0x0
 	.byte	0xc9
-	.byte	0xc9
-	.byte	0xd4
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xee
+	.byte	0xd9
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_ItSuckedLiquidOoze,30
@@ -6960,8 +6959,9 @@ sText_PkmnsXHadNoEffectOnY:
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnsXHadNoEffectOnY,29
-	.type	 sText_StatSharply,object
-sText_StatSharply:
+	.globl	gText_StatSharply
+	.type	 gText_StatSharply,object
+gText_StatSharply:
 	.byte	0xe7
 	.byte	0xdc
 	.byte	0xd5
@@ -6971,7 +6971,7 @@ sText_StatSharply:
 	.byte	0xed
 	.byte	0x0
 	.byte	0xff
-	.size	 sText_StatSharply,9
+	.size	 gText_StatSharply,9
 	.globl	gText_StatRose
 	.type	 gText_StatRose,object
 gText_StatRose:
@@ -7711,12 +7711,12 @@ sText_NoRunningFromTrainers:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xce
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xd6
 	.byte	0xd5
@@ -7875,16 +7875,16 @@ sText_MirrorMoveFailed:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xc3
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xcc
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xea
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xda
 	.byte	0xd5
@@ -8259,12 +8259,12 @@ sText_FailedToSpitUp:
 	.byte	0xe3
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xc3
-	.byte	0xce
+	.byte	0xe4
+	.byte	0xdd
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xcf
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xfe
 	.byte	0xd5
 	.byte	0x0
@@ -8296,12 +8296,12 @@ sText_FailedToSwallow:
 	.byte	0xe3
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xd1
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xc9
-	.byte	0xd1
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xeb
 	.byte	0xfe
 	.byte	0xd5
 	.byte	0x0
@@ -8339,14 +8339,14 @@ sText_WindBecameHeatWave:
 	.byte	0xd5
 	.byte	0xfe
 	.byte	0xc2
-	.byte	0xbf
-	.byte	0xbb
-	.byte	0xce
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xd1
-	.byte	0xbb
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_WindBecameHeatWave,34
@@ -8447,15 +8447,15 @@ sText_TooWeakForSubstitute:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xcf
-	.byte	0xbc
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xcf
-	.byte	0xce
-	.byte	0xbf
+	.byte	0xe9
+	.byte	0xd6
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xd9
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_TooWeakForSubstitute,38
@@ -8528,12 +8528,12 @@ sText_FaintInThree:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xeb
 	.byte	0xdd
@@ -8857,12 +8857,12 @@ sText_EnemyAboutToSwitchPkmn:
 	.byte	0xd9
 	.byte	0xfe
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xac
 	.byte	0xff
 	.size	 sText_EnemyAboutToSwitchPkmn,50
@@ -9989,6 +9989,3668 @@ sText_Evasiveness:
 	.byte	0xe7
 	.byte	0xff
 	.size	 sText_Evasiveness,12
+	.type	 sText_WinDortha,object
+sText_WinDortha:
+	.byte	0xc2
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xad
+	.byte	0xfe
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdf
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xbc
+	.byte	0xca
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_WinDortha,29
+	.type	 sText_Win0,object
+sText_Win0:
+	.byte	0xc2
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Win0,10
+	.type	 sText_Win1,object
+sText_Win1:
+	.byte	0xbb
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xae
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xd9
+	.byte	0xdc
+	.byte	0xac
+	.byte	0xff
+	.size	 sText_Win1,26
+	.type	 sText_Win2,object
+sText_Win2:
+	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xfe
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win2,34
+	.type	 sText_Win3,object
+sText_Win3:
+	.byte	0xd1
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xac
+	.byte	0xfe
+	.byte	0xc0
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xac
+	.byte	0xff
+	.size	 sText_Win3,23
+	.type	 sText_Win4,object
+sText_Win4:
+	.byte	0xbb
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Win4,16
+	.type	 sText_Win5,object
+sText_Win5:
+	.byte	0xc0
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xb8
+	.byte	0xfe
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe0
+	.byte	0xd8
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Win5,27
+	.type	 sText_Win6,object
+sText_Win6:
+	.byte	0xbe
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xac
+	.byte	0xff
+	.size	 sText_Win6,23
+	.type	 sText_Win7,object
+sText_Win7:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdf
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xfe
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win7,45
+	.type	 sText_Win8,object
+sText_Win8:
+	.byte	0xbb
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xed
+	.byte	0x0
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xed
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win8,29
+	.type	 sText_Win9,object
+sText_Win9:
+	.byte	0xca
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0x36
+	.byte	0xfe
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win9,30
+	.type	 sText_Win10,object
+sText_Win10:
+	.byte	0xce
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xc3
+	.byte	0xfe
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win10,53
+	.type	 sText_Win11,object
+sText_Win11:
+	.byte	0xcd
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xb8
+	.byte	0xfe
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xb4
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xad
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win11,34
+	.type	 sText_Win12,object
+sText_Win12:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdf
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xfe
+	.byte	0xe3
+	.byte	0xda
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe0
+	.byte	0xd8
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win12,35
+	.type	 sText_Win13,object
+sText_Win13:
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xda
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Win13,23
+	.type	 sText_Win14,object
+sText_Win14:
+	.byte	0xd1
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xac
+	.byte	0xff
+	.size	 sText_Win14,14
+	.type	 sText_Win15,object
+sText_Win15:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win15,33
+	.type	 sText_Win16,object
+sText_Win16:
+	.byte	0xc9
+	.byte	0xc5
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xac
+	.byte	0xfe
+	.byte	0xd1
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xac
+	.byte	0xff
+	.size	 sText_Win16,44
+	.type	 sText_Win17,object
+sText_Win17:
+	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xb4
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xad
+	.byte	0xfe
+	.byte	0xc1
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Win17,35
+	.type	 sText_Win18,object
+sText_Win18:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x36
+	.byte	0xfe
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xac
+	.byte	0xff
+	.size	 sText_Win18,33
+	.type	 sText_Win19,object
+sText_Win19:
+	.byte	0xc8
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe9
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0xfe
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xda
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe7
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win19,46
+	.type	 sText_Win20,object
+sText_Win20:
+	.byte	0xc8
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xfe
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdf
+	.byte	0xe7
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Win20,37
+	.type	 sText_Win21,object
+sText_Win21:
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xe7
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win21,36
+	.type	 sText_Win22,object
+sText_Win22:
+	.byte	0xc1
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xde
+	.byte	0xe3
+	.byte	0xd6
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xfe
+	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xda
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xed
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win22,46
+	.type	 sText_Win23,object
+sText_Win23:
+	.byte	0xc8
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xed
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Win23,24
+	.type	 sText_Win24,object
+sText_Win24:
+	.byte	0xbe
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win24,29
+	.type	 sText_Win25,object
+sText_Win25:
+	.byte	0xbb
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xcd
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xfe
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xac
+	.byte	0xff
+	.size	 sText_Win25,45
+	.type	 sText_Win26,object
+sText_Win26:
+	.byte	0xbc
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xad
+	.byte	0xfe
+	.byte	0xc1
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xe9
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win26,40
+	.type	 sText_Win27,object
+sText_Win27:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xc3
+	.byte	0xae
+	.byte	0xae
+	.byte	0xfe
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xac
+	.byte	0x0
+	.byte	0xc2
+	.byte	0xe9
+	.byte	0xdc
+	.byte	0xac
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Win27,33
+	.type	 sText_Win28,object
+sText_Win28:
+	.byte	0xc8
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xfe
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win28,38
+	.type	 sText_Win29,object
+sText_Win29:
+	.byte	0xcd
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xd8
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xa3
+	.byte	0xad
+	.byte	0xfe
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win29,56
+	.type	 sText_Win30,object
+sText_Win30:
+	.byte	0xc8
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xfe
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win30,45
+	.type	 sText_Win31,object
+sText_Win31:
+	.byte	0xbc
+	.byte	0xe3
+	.byte	0xed
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Win31,21
+	.type	 sText_Win32,object
+sText_Win32:
+	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win32,25
+	.type	 sText_Win33,object
+sText_Win33:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win33,30
+	.type	 sText_Win34,object
+sText_Win34:
+	.byte	0xc7
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xe9
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xb4
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xd6
+	.byte	0xed
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win34,28
+	.type	 sText_Win35,object
+sText_Win35:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe9
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xb4
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win35,25
+	.type	 sText_Win36,object
+sText_Win36:
+	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdf
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xb4
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xfe
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xc0
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xbc
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xac
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Win36,62
+	.type	 sText_Win37,object
+sText_Win37:
+	.byte	0xcd
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe3
+	.byte	0xe4
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xe4
+	.byte	0xe0
+	.byte	0xed
+	.byte	0xfe
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe7
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win37,43
+	.type	 sText_Win38,object
+sText_Win38:
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xad
+	.byte	0xad
+	.byte	0xad
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe4
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win38,32
+	.type	 sText_Win39,object
+sText_Win39:
+	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xb4
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xfe
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xda
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win39,42
+	.type	 sText_Win40,object
+sText_Win40:
+	.byte	0xce
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xb8
+	.byte	0xfe
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xed
+	.byte	0x0
+	.byte	0xda
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win40,45
+	.type	 sText_Win41,object
+sText_Win41:
+	.byte	0xbc
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Win41,12
+	.type	 sText_Win42,object
+sText_Win42:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win42,37
+	.type	 sText_Win43,object
+sText_Win43:
+	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xb4
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xe9
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0xfe
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe4
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xee
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xed
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xea
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win43,46
+	.type	 sText_Win44,object
+sText_Win44:
+	.byte	0xc3
+	.byte	0xe8
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xac
+	.byte	0x0
+	.byte	0xbb
+	.byte	0xe0
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xed
+	.byte	0xac
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Win44,21
+	.type	 sText_Win45,object
+sText_Win45:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xfe
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe4
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xc0
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xcc
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win45,42
+	.type	 sText_Win46,object
+sText_Win46:
+	.byte	0xc1
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xe6
+	.byte	0xed
+	.byte	0xac
+	.byte	0xfe
+	.byte	0xbc
+	.byte	0xd5
+	.byte	0xd6
+	.byte	0xed
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xe6
+	.byte	0xed
+	.byte	0xac
+	.byte	0xff
+	.size	 sText_Win46,35
+	.type	 sText_Win47,object
+sText_Win47:
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xad
+	.byte	0xad
+	.byte	0xad
+	.byte	0xfe
+	.byte	0xc8
+	.byte	0xe3
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe4
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xe7
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win47,42
+	.type	 sText_Win48,object
+sText_Win48:
+	.byte	0xbe
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xdb
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win48,24
+	.type	 sText_Win49,object
+sText_Win49:
+	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xb4
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xe2
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win49,16
+	.type	 sText_Win50,object
+sText_Win50:
+	.byte	0xd0
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xed
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xfe
+	.byte	0xe1
+	.byte	0xed
+	.byte	0x0
+	.byte	0xda
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Win50,42
+	.type	 sText_LoseDortha,object
+sText_LoseDortha:
+	.byte	0xc2
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xad
+	.byte	0xfe
+	.byte	0xc2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe4
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xee
+	.byte	0xd9
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_LoseDortha,44
+	.type	 sText_Lose0,object
+sText_Lose0:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xac
+	.byte	0xfe
+	.byte	0xd1
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xac
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Lose0,15
+	.type	 sText_Lose1,object
+sText_Lose1:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe9
+	.byte	0xe4
+	.byte	0xe4
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose1,29
+	.type	 sText_Lose2,object
+sText_Lose2:
+	.byte	0xc6
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xab
+	.byte	0xfe
+	.byte	0xcc
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Lose2,33
+	.type	 sText_Lose3,object
+sText_Lose3:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xe9
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xe7
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose3,26
+	.type	 sText_Lose4,object
+sText_Lose4:
+	.byte	0xc6
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xfe
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xeb
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xc9
+	.byte	0xc5
+	.byte	0xac
+	.byte	0xff
+	.size	 sText_Lose4,32
+	.type	 sText_Lose5,object
+sText_Lose5:
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose5,18
+	.type	 sText_Lose6,object
+sText_Lose6:
+	.byte	0xd1
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xac
+	.byte	0xff
+	.size	 sText_Lose6,18
+	.type	 sText_Lose7,object
+sText_Lose7:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xfe
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xec
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Lose7,41
+	.type	 sText_Lose8,object
+sText_Lose8:
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xfe
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose8,39
+	.type	 sText_Lose9,object
+sText_Lose9:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe4
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xfe
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xee
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe0
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose9,52
+	.type	 sText_Lose10,object
+sText_Lose10:
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe4
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose10,27
+	.type	 sText_Lose11,object
+sText_Lose11:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xe6
+	.byte	0xed
+	.byte	0xab
+	.byte	0xfe
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Lose11,28
+	.type	 sText_Lose12,object
+sText_Lose12:
+	.byte	0xbc
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xad
+	.byte	0xad
+	.byte	0xad
+	.byte	0x0
+	.byte	0xc9
+	.byte	0xdc
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xc9
+	.byte	0xc5
+	.byte	0xad
+	.byte	0xad
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose12,17
+	.type	 sText_Lose13,object
+sText_Lose13:
+	.byte	0xc7
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xfe
+	.byte	0xeb
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose13,41
+	.type	 sText_Lose14,object
+sText_Lose14:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xfe
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose14,50
+	.type	 sText_Lose15,object
+sText_Lose15:
+	.byte	0xc1
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xe9
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Lose15,20
+	.type	 sText_Lose16,object
+sText_Lose16:
+	.byte	0xcc
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdf
+	.byte	0xd5
+	.byte	0xd6
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Lose16,19
+	.type	 sText_Lose17,object
+sText_Lose17:
+	.byte	0xc6
+	.byte	0xdd
+	.byte	0xda
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xad
+	.byte	0xfe
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xdf
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose17,56
+	.type	 sText_Lose18,object
+sText_Lose18:
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Lose18,15
+	.type	 sText_Lose19,object
+sText_Lose19:
+	.byte	0xd1
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0xfe
+	.byte	0xcd
+	.byte	0xe9
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xbf
+	.byte	0xda
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xac
+	.byte	0xff
+	.size	 sText_Lose19,40
+	.type	 sText_Lose20,object
+sText_Lose20:
+	.byte	0xc9
+	.byte	0xc5
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xc9
+	.byte	0xc5
+	.byte	0x36
+	.byte	0xfe
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Lose20,28
+	.type	 sText_Lose21,object
+sText_Lose21:
+	.byte	0xc9
+	.byte	0xeb
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xed
+	.byte	0x0
+	.byte	0xd9
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Lose21,12
+	.type	 sText_Lose22,object
+sText_Lose22:
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Lose22,25
+	.type	 sText_Lose23,object
+sText_Lose23:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xfe
+	.byte	0xe7
+	.byte	0xd7
+	.byte	0xe9
+	.byte	0xe1
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xe7
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose23,37
+	.type	 sText_Lose24,object
+sText_Lose24:
+	.byte	0xd1
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xac
+	.byte	0xfe
+	.byte	0xbb
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose24,33
+	.type	 sText_Lose25,object
+sText_Lose25:
+	.byte	0xd1
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Lose25,10
+	.type	 sText_Lose26,object
+sText_Lose26:
+	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xab
+	.byte	0xfe
+	.byte	0xcc
+	.byte	0xd9
+	.byte	0xe4
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Lose26,40
+	.type	 sText_Lose27,object
+sText_Lose27:
+	.byte	0xc9
+	.byte	0xdc
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Lose27,21
+	.type	 sText_Lose28,object
+sText_Lose28:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xed
+	.byte	0x0
+	.byte	0xdf
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xeb
+	.byte	0xfe
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose28,36
+	.type	 sText_Lose29,object
+sText_Lose29:
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe9
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xe7
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Lose29,12
+	.type	 sText_Lose30,object
+sText_Lose30:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xfe
+	.byte	0xca
+	.byte	0xe3
+	.byte	0xdf
+	.byte	0x1b
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xad
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose30,51
+	.type	 sText_Lose31,object
+sText_Lose31:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xed
+	.byte	0xad
+	.byte	0xfe
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose31,36
+	.type	 sText_Lose32,object
+sText_Lose32:
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose32,34
+	.type	 sText_Lose33,object
+sText_Lose33:
+	.byte	0xc1
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xe6
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose33,25
+	.type	 sText_Lose34,object
+sText_Lose34:
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xec
+	.byte	0xed
+	.byte	0xad
+	.byte	0xfe
+	.byte	0xcd
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose34,26
+	.type	 sText_Lose35,object
+sText_Lose35:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xad
+	.byte	0xad
+	.byte	0xfe
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xad
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose35,18
+	.type	 sText_Lose36,object
+sText_Lose36:
+	.byte	0xbb
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xdf
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xac
+	.byte	0xff
+	.size	 sText_Lose36,20
+	.type	 sText_Lose37,object
+sText_Lose37:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xad
+	.byte	0xfe
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose37,44
+	.type	 sText_Lose38,object
+sText_Lose38:
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe4
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose38,34
+	.type	 sText_Lose39,object
+sText_Lose39:
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xd8
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose39,28
+	.type	 sText_Lose40,object
+sText_Lose40:
+	.byte	0xbb
+	.byte	0xe6
+	.byte	0xdb
+	.byte	0xab
+	.byte	0x0
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xfe
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xce
+	.byte	0xed
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xbb
+	.byte	0xd8
+	.byte	0xea
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose40,42
+	.type	 sText_Lose41,object
+sText_Lose41:
+	.byte	0xc1
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xec
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Lose41,27
+	.type	 sText_Lose42,object
+sText_Lose42:
+	.byte	0xd1
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xab
+	.byte	0xfe
+	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xb4
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xd6
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Lose42,24
+	.type	 sText_Lose43,object
+sText_Lose43:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xfe
+	.byte	0xe1
+	.byte	0xed
+	.byte	0x0
+	.byte	0xca
+	.byte	0xe3
+	.byte	0xdf
+	.byte	0x1b
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xed
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose43,44
+	.type	 sText_Lose44,object
+sText_Lose44:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdf
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose44,29
+	.type	 sText_Lose45,object
+sText_Lose45:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe8
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xad
+	.byte	0xad
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose45,28
+	.type	 sText_Lose46,object
+sText_Lose46:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xed
+	.byte	0xfe
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xed
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose46,31
+	.type	 sText_Lose47,object
+sText_Lose47:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xb8
+	.byte	0xfe
+	.byte	0xd6
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose47,45
+	.type	 sText_Lose48,object
+sText_Lose48:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xed
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose48,27
+	.type	 sText_Lose49,object
+sText_Lose49:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xde
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xc3
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose49,30
+	.type	 sText_Lose50,object
+sText_Lose50:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xe4
+	.byte	0xe0
+	.byte	0xed
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xfe
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xde
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe4
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Lose50,52
 	.globl	gStatNamesTable
 	.align	2, 0
 	.type	 gStatNamesTable,object
@@ -10158,12 +13820,12 @@ sText_TrainerBlockedBall:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xce
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xd6
 	.byte	0xe0
@@ -10229,9 +13891,9 @@ sText_ItDodgedBall:
 	.byte	0xe2
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc6
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
 	.byte	0xab
 	.byte	0xfe
 	.byte	0xce
@@ -10240,12 +13902,12 @@ sText_ItDodgedBall:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xd7
 	.byte	0xd5
@@ -10283,12 +13945,12 @@ sText_YouMissedPkmn:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_YouMissedPkmn,24
@@ -10307,12 +13969,12 @@ sText_PkmnBrokeFree:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xd6
 	.byte	0xe6
@@ -10552,12 +14214,12 @@ sText_PkmnSentToPC:
 	.size	 sText_PkmnSentToPC,22
 	.type	 sText_Someones,object
 sText_Someones:
-	.byte	0xe7
-	.byte	0xe3
-	.byte	0xe1
-	.byte	0xd9
-	.byte	0xe3
+	.byte	0xc6
+	.byte	0xd5
 	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xe8
 	.byte	0xd9
 	.byte	0xb4
 	.byte	0xe7
@@ -10606,12 +14268,12 @@ sText_PkmnDataAddedToDex:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xd2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xec
 	.byte	0xad
 	.byte	0xfb
 	.byte	0xff
@@ -10666,9 +14328,9 @@ sText_BoxIsFull:
 	.byte	0xdc
 	.byte	0xd9
 	.byte	0x0
-	.byte	0xbc
-	.byte	0xc9
-	.byte	0xd2
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xec
 	.byte	0x0
 	.byte	0xdd
 	.byte	0xe7
@@ -10710,27 +14372,27 @@ sText_BoxIsFull:
 	.type	 sText_EnigmaBerry,object
 sText_EnigmaBerry:
 	.byte	0xbf
-	.byte	0xc8
-	.byte	0xc3
-	.byte	0xc1
-	.byte	0xc7
-	.byte	0xbb
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xe1
+	.byte	0xd5
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xff
 	.size	 sText_EnigmaBerry,13
 	.type	 sText_BerrySuffix,object
 sText_BerrySuffix:
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xff
 	.size	 sText_BerrySuffix,7
 	.type	 sText_PkmnsItemCuredParalysis,object
@@ -11232,12 +14894,12 @@ sText_EnduredViaSturdy:
 	.byte	0x10
 	.byte	0x0
 	.byte	-0x41
-	.byte	-0x38
-	.byte	-0x42
-	.byte	-0x31
-	.byte	-0x34
-	.byte	-0x41
-	.byte	-0x42
+	.byte	-0x1e
+	.byte	-0x28
+	.byte	-0x17
+	.byte	-0x1a
+	.byte	-0x27
+	.byte	-0x28
 	.byte	-0x2
 	.byte	-0x18
 	.byte	-0x24
@@ -11416,12 +15078,12 @@ sText_TargetAbilityActivates:
 	.type	 sText_GravityIntensified,object
 sText_GravityIntensified:
 	.byte	0xc1
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xd0
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xd3
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xed
 	.byte	0x0
 	.byte	0xdd
 	.byte	0xe2
@@ -13881,8 +17543,8 @@ sText_GrassyTerrainEnds:
 	.byte	0xad
 	.byte	0xff
 	.size	 sText_GrassyTerrainEnds,44
-	.type	 sText_AngryPointActivates,object
-sText_AngryPointActivates:
+	.type	 sText_TargetsStatWasMaxedOut,object
+sText_TargetsStatWasMaxedOut:
 	.byte	0xfd
 	.byte	0x10
 	.byte	0xb4
@@ -13901,15 +17563,11 @@ sText_AngryPointActivates:
 	.byte	0xe8
 	.byte	0xe7
 	.byte	0x0
-	.byte	0xd5
-	.byte	0xe8
-	.byte	0xe8
-	.byte	0xd5
-	.byte	0xd7
-	.byte	0xdf
+	.byte	0xfd
+	.byte	0x0
 	.byte	0xab
 	.byte	0xff
-	.size	 sText_AngryPointActivates,26
+	.size	 sText_TargetsStatWasMaxedOut,22
 	.type	 sText_PoisonHealHpUp,object
 sText_PoisonHealHpUp:
 	.byte	0xce
@@ -15032,17 +18690,17 @@ sText_PkmnBlewAwayToxicSpikes:
 	.byte	0xed
 	.byte	0xfe
 	.byte	0xce
-	.byte	0xc9
-	.byte	0xd2
-	.byte	0xc3
-	.byte	0xbd
+	.byte	0xe3
+	.byte	0xec
+	.byte	0xdd
+	.byte	0xd7
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xc3
-	.byte	0xc5
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xe4
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnBlewAwayToxicSpikes,27
@@ -15062,15 +18720,15 @@ sText_PkmnBlewAwayStickyWeb:
 	.byte	0xed
 	.byte	0xfe
 	.byte	0xcd
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xbd
-	.byte	0xc5
-	.byte	0xd3
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xed
 	.byte	0x0
 	.byte	0xd1
-	.byte	0xbf
-	.byte	0xbc
+	.byte	0xd9
+	.byte	0xd6
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnBlewAwayStickyWeb,25
@@ -15090,17 +18748,17 @@ sText_PkmnBlewAwayStealthRock:
 	.byte	0xed
 	.byte	0xfe
 	.byte	0xcd
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xce
-	.byte	0xc2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe8
+	.byte	0xdc
 	.byte	0x0
 	.byte	0xcc
-	.byte	0xc9
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_PkmnBlewAwayStealthRock,27
@@ -17155,6 +20813,35 @@ sText_StatWasNotLowered:
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_StatWasNotLowered,25
+	.type	 sText_AuraFlaredToLife,object
+sText_AuraFlaredToLife:
+	.byte	0xfd
+	.byte	0x10
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_AuraFlaredToLife,26
 	.type	 sText_AirLockActivates,object
 sText_AirLockActivates:
 	.byte	0xce
@@ -17316,12 +21003,12 @@ sText_AuraBreakActivates:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xb4
 	.byte	0xe7
 	.byte	0x0
@@ -17395,10 +21082,158 @@ sText_ScreenCleanerActivates:
 	.byte	0xab
 	.byte	0xff
 	.size	 sText_ScreenCleanerActivates,40
+	.type	 sText_FetchedPokeBall,object
+sText_FetchedPokeBall:
+	.byte	0xfd
+	.byte	0x13
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xfe
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xfd
+	.byte	0x16
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_FetchedPokeBall,15
+	.type	 sText_BattlerAbilityRaisedStat,object
+sText_BattlerAbilityRaisedStat:
+	.byte	0xfd
+	.byte	0x13
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xfd
+	.byte	0x1a
+	.byte	0xfe
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xfd
+	.byte	0x0
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_BattlerAbilityRaisedStat,23
+	.type	 sText_ASandstormKickedUp,object
+sText_ASandstormKickedUp:
+	.byte	0xbb
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xdf
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xe9
+	.byte	0xe4
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_ASandstormKickedUp,23
+	.type	 sText_PkmnsWillPerishIn3Turns,object
+sText_PkmnsWillPerishIn3Turns:
+	.byte	0xbc
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0x0
+	.byte	0xca
+	.byte	0xe3
+	.byte	0xdf
+	.byte	0x1b
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xfe
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_PkmnsWillPerishIn3Turns,41
+	.type	 sText_AbilityRaisedStatDrastically,object
+sText_AbilityRaisedStatDrastically:
+	.byte	0xfd
+	.byte	0x19
+	.byte	0x0
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xfd
+	.byte	0x10
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0xfe
+	.byte	0xfd
+	.byte	0x0
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xed
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_AbilityRaisedStatDrastically,31
 	.globl	gBattleStringsTable
 	.align	2, 0
 	.type	 gBattleStringsTable,object
-	.size	 gBattleStringsTable,2228
+	.size	 gBattleStringsTable,2252
 gBattleStringsTable:
 	.word	sText_Trainer1LoseText
 	.word	sText_PkmnGainedEXP
@@ -17597,7 +21432,7 @@ gBattleStringsTable:
 	.word	sText_PkmnPreventsStatLossWith
 	.word	sText_PkmnHurtsWith
 	.word	sText_PkmnTraced
-	.word	sText_StatSharply
+	.word	gText_StatSharply
 	.word	gText_StatRose
 	.word	sText_StatHarshly
 	.word	sText_StatFell
@@ -17839,7 +21674,7 @@ gBattleStringsTable:
 	.word	sText_PsychicTerrainEnds
 	.word	sText_GrassyTerrainEnds
 	.word	sText_TargetAbilityRaisedStat
-	.word	sText_AngryPointActivates
+	.word	sText_TargetsStatWasMaxedOut
 	.word	sText_AttackerAbilityRaisedStat
 	.word	sText_PoisonHealHpUp
 	.word	sText_BadDreamsDmg
@@ -17945,6 +21780,12 @@ gBattleStringsTable:
 	.word	sText_AuraBreakActivates
 	.word	sText_ComatoseActivates
 	.word	sText_ScreenCleanerActivates
+	.word	sText_FetchedPokeBall
+	.word	sText_BattlerAbilityRaisedStat
+	.word	sText_ASandstormKickedUp
+	.word	sText_PkmnsWillPerishIn3Turns
+	.word	sText_AbilityRaisedStatDrastically
+	.word	sText_AuraFlaredToLife
 	.space	48
 	.globl	gTerrainStringIds
 	.align	1, 0
@@ -18660,30 +22501,30 @@ gText_LinkStandby:
 	.type	 gText_BattleMenu,object
 gText_BattleMenu:
 	.byte	0xc0
-	.byte	0xc3
-	.byte	0xc1
-	.byte	0xc2
-	.byte	0xce
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe8
 	.byte	0xfc
 	.byte	0x13
 	.byte	0x38
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xdb
 	.byte	0xfe
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xfc
 	.byte	0x13
 	.byte	0x38
 	.byte	0xcc
-	.byte	0xcf
-	.byte	0xc8
+	.byte	0xe9
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_BattleMenu,26
 	.globl	gText_SafariZoneMenu
@@ -18729,9 +22570,9 @@ gText_MoveInterfacePP:
 	.type	 gText_MoveInterfaceType,object
 gText_MoveInterfaceType:
 	.byte	0xce
-	.byte	0xd3
-	.byte	0xca
-	.byte	0xbf
+	.byte	0xed
+	.byte	0xe4
+	.byte	0xd9
 	.byte	0xba
 	.byte	0xff
 	.size	 gText_MoveInterfaceType,6
@@ -18750,9 +22591,9 @@ gText_MoveInterfacePpType:
 	.byte	0xca
 	.byte	0xfe
 	.byte	0xce
-	.byte	0xd3
-	.byte	0xca
-	.byte	0xbf
+	.byte	0xed
+	.byte	0xe4
+	.byte	0xd9
 	.byte	0xba
 	.byte	0xff
 	.size	 gText_MoveInterfacePpType,17
@@ -19141,11 +22982,11 @@ sATypeMove_Table:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xc8
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc6
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe0
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -19156,13 +22997,13 @@ sATypeMove_Table:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xc0
-	.byte	0xc3
-	.byte	0xc1
-	.byte	0xc2
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc1
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -19173,11 +23014,11 @@ sATypeMove_Table:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xc0
-	.byte	0xc6
-	.byte	0xd3
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc1
+	.byte	0xe0
+	.byte	0xed
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -19188,11 +23029,11 @@ sATypeMove_Table:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -19203,11 +23044,11 @@ sATypeMove_Table:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xc1
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xc8
-	.byte	0xbe
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xd8
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -19218,9 +23059,9 @@ sATypeMove_Table:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xcc
-	.byte	0xc9
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -19231,8 +23072,8 @@ sATypeMove_Table:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xcf
-	.byte	0xc1
+	.byte	0xe9
+	.byte	0xdb
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -19243,10 +23084,10 @@ sATypeMove_Table:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xc1
-	.byte	0xc2
-	.byte	0xc9
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -19257,10 +23098,10 @@ sATypeMove_Table:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -19283,9 +23124,9 @@ sATypeMove_Table:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xc0
-	.byte	0xc3
-	.byte	0xcc
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -19296,10 +23137,10 @@ sATypeMove_Table:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xd1
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -19310,10 +23151,10 @@ sATypeMove_Table:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xc1
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xcd
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe7
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -19325,13 +23166,13 @@ sATypeMove_Table:
 	.byte	0xe2
 	.byte	0x0
 	.byte	0xbf
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xbd
-	.byte	0xce
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbd
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd7
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -19342,12 +23183,12 @@ sATypeMove_Table:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xca
-	.byte	0xcd
-	.byte	0xd3
-	.byte	0xbd
-	.byte	0xc2
-	.byte	0xc3
-	.byte	0xbd
+	.byte	0xe7
+	.byte	0xed
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xd7
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -19359,8 +23200,8 @@ sATypeMove_Table:
 	.byte	0xe2
 	.byte	0x0
 	.byte	0xc3
-	.byte	0xbd
-	.byte	0xbf
+	.byte	0xd7
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -19371,11 +23212,11 @@ sATypeMove_Table:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc1
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -19386,9 +23227,9 @@ sATypeMove_Table:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xc5
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdf
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -19399,10 +23240,10 @@ sATypeMove_Table:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xc0
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xed
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -19415,19 +23256,19 @@ sATypeMove_Table:
 	.type	 gText_BattleTourney,object
 gText_BattleTourney:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xce
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xcc
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_BattleTourney,15
 	.type	 sText_Round1,object
@@ -19565,14 +23406,14 @@ gText_AFormerChampion:
 	.byte	0xd9
 	.byte	0xe6
 	.byte	0x0
-	.byte	0xbd
-	.byte	0xc2
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xca
-	.byte	0xc3
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xe4
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xab
 	.byte	0xfb
 	.byte	0xff
@@ -19593,14 +23434,14 @@ gText_ThePreviousChampion:
 	.byte	0xe9
 	.byte	0xe7
 	.byte	0x0
-	.byte	0xbd
-	.byte	0xc2
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xca
-	.byte	0xc3
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xe4
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xab
 	.byte	0xfb
 	.byte	0xff
@@ -19621,14 +23462,14 @@ gText_TheUnbeatenChampion:
 	.byte	0xd9
 	.byte	0xe2
 	.byte	0x0
-	.byte	0xbd
-	.byte	0xc2
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xca
-	.byte	0xc3
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xe4
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xab
 	.byte	0xfb
 	.byte	0xff
@@ -20050,12 +23891,12 @@ gBattlePalaceFlavorTextTable:
 	.type	 sText_RefIfNothingIsDecided,object
 sText_RefIfNothingIsDecided:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xc3
@@ -20119,12 +23960,12 @@ sText_RefIfNothingIsDecided:
 	.type	 sText_RefThatsIt,object
 sText_RefThatsIt:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xce
@@ -20193,12 +24034,12 @@ sText_RefThatsIt:
 	.type	 sText_RefJudgeMind,object
 sText_RefJudgeMind:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xc4
@@ -20232,12 +24073,12 @@ sText_RefJudgeMind:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xe7
 	.byte	0xdc
@@ -20267,12 +24108,12 @@ sText_RefJudgeMind:
 	.type	 sText_RefJudgeSkill,object
 sText_RefJudgeSkill:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xc4
@@ -20307,12 +24148,12 @@ sText_RefJudgeSkill:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xe9
 	.byte	0xe7
@@ -20341,12 +24182,12 @@ sText_RefJudgeSkill:
 	.type	 sText_RefJudgeBody,object
 sText_RefJudgeBody:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xc4
@@ -20380,12 +24221,12 @@ sText_RefJudgeBody:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xeb
 	.byte	0xdd
@@ -20416,12 +24257,12 @@ sText_RefJudgeBody:
 	.type	 sText_RefJudgement1,object
 sText_RefJudgement1:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xc4
@@ -20472,12 +24313,12 @@ sText_RefJudgement1:
 	.type	 sText_RefJudgement2,object
 sText_RefJudgement2:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xc4
@@ -20528,12 +24369,12 @@ sText_RefJudgement2:
 	.type	 sText_RefJudgement3,object
 sText_RefJudgement3:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xc4
@@ -20608,12 +24449,12 @@ sText_DefeatedOpponentByReferee:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
 	.byte	0xb4
 	.byte	0xe7
 	.byte	0x0
@@ -20663,12 +24504,12 @@ sText_LostToOpponentByReferee:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
 	.byte	0xb4
 	.byte	0xe7
 	.byte	0x0
@@ -20715,12 +24556,12 @@ sText_TiedOpponentByReferee:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
 	.byte	0xb4
 	.byte	0xe7
 	.byte	0x0
@@ -20738,12 +24579,12 @@ sText_TiedOpponentByReferee:
 	.type	 sText_RefCommenceBattle,object
 sText_RefCommenceBattle:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xfd
@@ -21023,18 +24864,18 @@ gText_RecordBattleToPass:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xc0
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xca
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xcd
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe7
 	.byte	0xac
 	.byte	0xff
 	.size	 gText_RecordBattleToPass,60
@@ -21081,18 +24922,18 @@ gText_BattleRecordedOnPass:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xc0
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xca
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xcd
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe7
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_BattleRecordedOnPass,54
@@ -21604,7 +25445,40 @@ sTextOnWindowsInfo_Normal:
 	.byte	0x0
 	.byte	0x6
 	.space	2
-	.size	 sTextOnWindowsInfo_Normal,288
+	.byte	0xee
+	.byte	0x7
+	.byte	0x0
+	.byte	0x1
+	.byte	0x0
+	.byte	0x0
+	.byte	0x0
+	.byte	0x6
+	.byte	0xe
+	.byte	0x5
+	.space	2
+	.byte	0xee
+	.byte	0x7
+	.byte	0x0
+	.byte	0x1
+	.byte	0x0
+	.byte	0x0
+	.byte	0x0
+	.byte	0x1
+	.byte	0xe
+	.byte	0x3
+	.space	2
+	.byte	0xee
+	.byte	0x7
+	.byte	0x0
+	.byte	0x1
+	.byte	0x0
+	.byte	0x0
+	.byte	0x0
+	.byte	0xb
+	.byte	0xe
+	.byte	0xb
+	.space	2
+	.size	 sTextOnWindowsInfo_Normal,324
 	.align	2, 0
 	.type	 sTextOnWindowsInfo_Arena,object
 sTextOnWindowsInfo_Arena:
@@ -22772,17 +26646,17 @@ BufferStringBattle:
 	lsl	r1, r1, #0x2
 	b	.L157
 .L147:
-	mov	r0, #0x8e
-	lsl	r0, r0, #0x2
+	ldr	r0, .L249
 	cmp	r6, r0
 	bls	.L148	@cond_branch
-	ldr	r1, .L249
+	ldr	r1, .L249+0x4
 	mov	r0, #0xff
 	strb	r0, [r1]
 	b	.L2
 .L250:
 	.align	2, 0
 .L249:
+	.word	0x23e
 	.word	gDisplayedStringBattle
 .L148:
 	ldr	r1, .L251
@@ -23386,19 +27260,19 @@ BattleStringExpandPlaceholders:
 	mov	r9, r0
 	mov	r8, r1
 	mov	r6, #0x0
-	ldr	r0, .L611
+	ldr	r0, .L834
 	ldr	r0, [r0]
 	mov	r1, #0x80
 	lsl	r1, r1, #0x12
 	and	r0, r0, r1
 	cmp	r0, #0
 	beq	.L379	@cond_branch
-	ldr	r0, .L611+0x4
+	ldr	r0, .L834+0x4
 	ldrb	r7, [r0]
 	b	.L380
-.L612:
+.L835:
 	.align	2, 0
-.L611:
+.L834:
 	.word	gBattleTypeFlags
 	.word	gUnknown_0203C7B4
 .L379:
@@ -23408,7 +27282,7 @@ BattleStringExpandPlaceholders:
 .L380:
 	mov	r0, r9
 	ldrb	r1, [r0]
-	bl	.L577	@ far jump
+	bl	.L801	@ far jump
 .L383:
 	mov	r4, #0x0
 	cmp	r1, #0xfd
@@ -23424,17 +27298,17 @@ BattleStringExpandPlaceholders:
 	bl	.L385	@far jump
 .LCB1976:
 	lsl	r0, r0, #0x2
-	ldr	r1, .L613
+	ldr	r1, .L836
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L614:
+.L837:
 	.align	2, 0
-.L613:
-	.word	.L563
+.L836:
+	.word	.L787
 	.align	2, 0
 	.align	2, 0
-.L563:
+.L787:
 	.word	.L386
 	.word	.L390
 	.word	.L396
@@ -23463,7 +27337,7 @@ BattleStringExpandPlaceholders:
 	.word	.L475
 	.word	.L476
 	.word	.L477
-	.word	.L545
+	.word	.L769
 	.word	.L479
 	.word	.L480
 	.word	.L481
@@ -23472,42 +27346,42 @@ BattleStringExpandPlaceholders:
 	.word	.L484
 	.word	.L485
 	.word	.L486
-	.word	.L491
-	.word	.L495
-	.word	.L504
-	.word	.L513
-	.word	.L516
-	.word	.L507
-	.word	.L510
-	.word	.L519
-	.word	.L522
-	.word	.L525
-	.word	.L526
-	.word	.L527
-	.word	.L532
-	.word	.L604
-	.word	.L537
+	.word	.L549
+	.word	.L611
+	.word	.L620
+	.word	.L629
+	.word	.L632
+	.word	.L623
+	.word	.L626
+	.word	.L635
+	.word	.L638
+	.word	.L641
+	.word	.L642
+	.word	.L643
+	.word	.L702
+	.word	.L827
+	.word	.L761
 	.word	.L393
-	.word	.L538
-	.word	.L539
-	.word	.L551
-	.word	.L554
+	.word	.L762
+	.word	.L763
+	.word	.L775
+	.word	.L778
 	.word	.L425
-	.word	.L557
-	.word	.L560
+	.word	.L781
+	.word	.L784
 	.word	.L426
 	.word	.L427
 .L386:
-	ldr	r5, .L615
+	ldr	r5, .L838
 	ldrb	r0, [r5]
 	cmp	r0, #0xfd
 	bne	.L387	@cond_branch
-	ldr	r4, .L615+0x4
+	ldr	r4, .L838+0x4
 	add	r0, r5, #0
-	b	.L578
-.L616:
+	b	.L802
+.L839:
 	.align	2, 0
-.L615:
+.L838:
 	.word	gBattleTextBuff1
 	.word	gStringVar1
 .L387:
@@ -23516,101 +27390,101 @@ BattleStringExpandPlaceholders:
 	add	r4, r0, #0
 	cmp	r4, #0
 	beq	.LCB2020
-	bl	.L575	@far jump
+	bl	.L799	@far jump
 .LCB2020:
 	add	r4, r5, #0
 	bl	.L385	@ far jump
 .L390:
-	ldr	r1, .L617
+	ldr	r1, .L840
 	ldrb	r0, [r1]
 	cmp	r0, #0xfd
 	bne	.L394	@cond_branch
-	ldr	r4, .L617+0x4
-	b	.L579
-.L618:
+	ldr	r4, .L840+0x4
+	b	.L803
+.L841:
 	.align	2, 0
-.L617:
+.L840:
 	.word	gBattleTextBuff2
 	.word	gStringVar2
 .L393:
-	ldr	r1, .L619
+	ldr	r1, .L842
 	ldrb	r0, [r1]
 	cmp	r0, #0xfd
 	bne	.L394	@cond_branch
-	ldr	r4, .L619+0x4
-.L579:
+	ldr	r4, .L842+0x4
+.L803:
 	add	r0, r1, #0
-.L578:
+.L802:
 	add	r1, r4, #0
 	bl	ExpandBattleTextBuffPlaceholders
 	bl	.L385	@ far jump
-.L620:
+.L843:
 	.align	2, 0
-.L619:
+.L842:
 	.word	gBattleTextBuff3
 	.word	gStringVar3
 .L394:
 	add	r4, r1, #0
 	bl	.L385	@ far jump
 .L396:
-	ldr	r4, .L621
+	ldr	r4, .L844
 	bl	.L385	@ far jump
-.L622:
+.L845:
 	.align	2, 0
-.L621:
+.L844:
 	.word	gStringVar1
 .L397:
-	ldr	r4, .L623
+	ldr	r4, .L846
 	bl	.L385	@ far jump
-.L624:
+.L847:
 	.align	2, 0
-.L623:
+.L846:
 	.word	gStringVar2
 .L398:
-	ldr	r4, .L625
+	ldr	r4, .L848
 	bl	.L385	@ far jump
-.L626:
+.L849:
 	.align	2, 0
-.L625:
+.L848:
 	.word	gStringVar3
 .L399:
 	mov	r0, #0x0
 	bl	GetBattlerAtPosition
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	b	.L580
+	b	.L804
 .L400:
 	mov	r0, #0x1
 	bl	GetBattlerAtPosition
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	b	.L580
+	b	.L804
 .L401:
 	mov	r0, #0x2
 	bl	GetBattlerAtPosition
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	b	.L580
+	b	.L804
 .L402:
 	mov	r0, #0x3
 	bl	GetBattlerAtPosition
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	b	.L580
+	b	.L804
 .L403:
-	ldr	r0, .L627
+	ldr	r0, .L850
 	lsl	r1, r7, #0x3
 	sub	r1, r1, r7
 	lsl	r1, r1, #0x2
 	add	r1, r1, r0
 	ldrh	r0, [r1, #0x18]
-	b	.L580
-.L628:
+	b	.L804
+.L851:
 	.align	2, 0
-.L627:
+.L850:
 	.word	gLinkPlayers
 .L404:
-	ldr	r1, .L629
+	ldr	r1, .L852
 	lsl	r0, r7, #0x3
 	sub	r0, r0, r7
 	lsl	r0, r0, #0x2
@@ -23618,13 +27492,13 @@ BattleStringExpandPlaceholders:
 	ldrh	r1, [r0, #0x18]
 	mov	r0, #0x1
 	eor	r0, r0, r1
-	b	.L580
-.L630:
+	b	.L804
+.L853:
 	.align	2, 0
-.L629:
+.L852:
 	.word	gLinkPlayers
 .L405:
-	ldr	r1, .L631
+	ldr	r1, .L854
 	lsl	r0, r7, #0x3
 	sub	r0, r0, r7
 	lsl	r0, r0, #0x2
@@ -23632,13 +27506,13 @@ BattleStringExpandPlaceholders:
 	ldrh	r1, [r0, #0x18]
 	mov	r0, #0x2
 	eor	r0, r0, r1
-	b	.L580
-.L632:
+	b	.L804
+.L855:
 	.align	2, 0
-.L631:
+.L854:
 	.word	gLinkPlayers
 .L406:
-	ldr	r1, .L633
+	ldr	r1, .L856
 	lsl	r0, r7, #0x3
 	sub	r0, r0, r7
 	lsl	r0, r0, #0x2
@@ -23646,262 +27520,262 @@ BattleStringExpandPlaceholders:
 	ldrh	r1, [r0, #0x18]
 	mov	r0, #0x3
 	eor	r0, r0, r1
-	b	.L580
-.L634:
+	b	.L804
+.L857:
 	.align	2, 0
-.L633:
+.L856:
 	.word	gLinkPlayers
 .L408:
-	ldr	r0, .L635
+	ldr	r0, .L858
 	ldrb	r1, [r0]
 	mov	r0, #0x2
 	eor	r0, r0, r1
-	b	.L580
-.L636:
+	b	.L804
+.L859:
 	.align	2, 0
-.L635:
+.L858:
 	.word	gBattlerAttacker
 .L409:
-	ldr	r0, .L637
+	ldr	r0, .L860
 	ldrb	r0, [r0]
 	bl	GetBattlerSide
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
 	beq	.L410	@cond_branch
-	ldr	r0, .L637+0x4
+	ldr	r0, .L860+0x4
 	ldr	r1, [r0]
 	mov	r0, #0x8
 	and	r1, r1, r0
-	ldr	r4, .L637+0x8
+	ldr	r4, .L860+0x8
 	cmp	r1, #0
-	beq	.L581	@cond_branch
-	ldr	r4, .L637+0xc
-	b	.L581
-.L638:
+	beq	.L805	@cond_branch
+	ldr	r4, .L860+0xc
+	b	.L805
+.L861:
 	.align	2, 0
-.L637:
+.L860:
 	.word	gBattlerAttacker
 	.word	gBattleTypeFlags
 	.word	sText_WildPkmnPrefix
 	.word	sText_FoePkmnPrefix
 .L415:
-	mov	r5, r8
-	add	r0, r5, r6
+	mov	r3, r8
+	add	r0, r3, r6
 	strb	r1, [r0]
 	add	r6, r6, #0x1
 	add	r4, r4, #0x1
-.L581:
+.L805:
 	ldrb	r1, [r4]
 	add	r0, r1, #0
 	cmp	r0, #0xff
 	bne	.L415	@cond_branch
 .L410:
-	ldr	r0, .L639
+	ldr	r0, .L862
 	ldrb	r0, [r0]
-	b	.L580
-.L640:
+	b	.L804
+.L863:
 	.align	2, 0
-.L639:
+.L862:
 	.word	gBattlerAttacker
 .L417:
-	ldr	r0, .L641
+	ldr	r0, .L864
 	ldrb	r0, [r0]
 	bl	GetBattlerSide
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
 	beq	.L418	@cond_branch
-	ldr	r0, .L641+0x4
+	ldr	r0, .L864+0x4
 	ldr	r1, [r0]
 	mov	r0, #0x8
 	and	r1, r1, r0
-	ldr	r4, .L641+0x8
+	ldr	r4, .L864+0x8
 	cmp	r1, #0
-	beq	.L582	@cond_branch
-	ldr	r4, .L641+0xc
-	b	.L582
-.L642:
+	beq	.L806	@cond_branch
+	ldr	r4, .L864+0xc
+	b	.L806
+.L865:
 	.align	2, 0
-.L641:
+.L864:
 	.word	gBattlerTarget
 	.word	gBattleTypeFlags
 	.word	sText_WildPkmnPrefix
 	.word	sText_FoePkmnPrefix
 .L423:
-	mov	r2, r8
-	add	r0, r2, r6
-	strb	r1, [r0]
-	add	r6, r6, #0x1
-	add	r4, r4, #0x1
-.L582:
-	ldrb	r1, [r4]
-	add	r0, r1, #0
-	cmp	r0, #0xff
-	bne	.L423	@cond_branch
-.L418:
-	ldr	r0, .L643
-	ldrb	r0, [r0]
-	b	.L580
-.L644:
-	.align	2, 0
-.L643:
-	.word	gBattlerTarget
-.L425:
-	ldr	r0, .L645
-	ldrb	r0, [r0]
-	b	.L580
-.L646:
-	.align	2, 0
-.L645:
-	.word	gBattlerTarget
-.L426:
-	ldr	r0, .L647
-	ldrb	r0, [r0]
-	b	.L580
-.L648:
-	.align	2, 0
-.L647:
-	.word	gActiveBattler
-.L427:
-	ldr	r4, .L649
-	ldrb	r0, [r4]
-	bl	GetBattlerSide
-	lsl	r0, r0, #0x18
-	cmp	r0, #0
-	bne	.L428	@cond_branch
-	ldr	r1, .L649+0x4
-	ldrb	r0, [r4]
-	lsl	r0, r0, #0x1
-	add	r0, r0, r1
-	ldrh	r1, [r0]
-	mov	r0, #0x64
-	mul	r0, r0, r1
-	ldr	r1, .L649+0x8
-	add	r0, r0, r1
-	b	.L608
-.L650:
-	.align	2, 0
-.L649:
-	.word	gActiveBattler
-	.word	gBattlerPartyIndexes
-	.word	gPlayerParty
-.L428:
-	ldr	r1, .L651
-	ldrb	r0, [r4]
-	lsl	r0, r0, #0x1
-	add	r0, r0, r1
-	ldrh	r1, [r0]
-	mov	r0, #0x64
-	mul	r0, r0, r1
-	ldr	r1, .L651+0x4
-	b	.L610
-.L652:
-	.align	2, 0
-.L651:
-	.word	gBattlerPartyIndexes
-	.word	gEnemyParty
-.L430:
-	ldr	r0, .L653
-	ldrb	r0, [r0]
-	bl	GetBattlerSide
-	lsl	r0, r0, #0x18
-	cmp	r0, #0
-	beq	.L431	@cond_branch
-	ldr	r0, .L653+0x4
-	ldr	r1, [r0]
-	mov	r0, #0x8
-	and	r1, r1, r0
-	ldr	r4, .L653+0x8
-	cmp	r1, #0
-	beq	.L583	@cond_branch
-	ldr	r4, .L653+0xc
-	b	.L583
-.L654:
-	.align	2, 0
-.L653:
-	.word	gEffectBattler
-	.word	gBattleTypeFlags
-	.word	sText_WildPkmnPrefix
-	.word	sText_FoePkmnPrefix
-.L436:
 	mov	r5, r8
 	add	r0, r5, r6
 	strb	r1, [r0]
 	add	r6, r6, #0x1
 	add	r4, r4, #0x1
-.L583:
+.L806:
 	ldrb	r1, [r4]
 	add	r0, r1, #0
 	cmp	r0, #0xff
-	bne	.L436	@cond_branch
-.L431:
-	ldr	r0, .L655
+	bne	.L423	@cond_branch
+.L418:
+	ldr	r0, .L866
 	ldrb	r0, [r0]
-	b	.L580
-.L656:
+	b	.L804
+.L867:
 	.align	2, 0
-.L655:
-	.word	gEffectBattler
-.L438:
-	ldr	r0, .L657
+.L866:
+	.word	gBattlerTarget
+.L425:
+	ldr	r0, .L868
+	ldrb	r0, [r0]
+	b	.L804
+.L869:
+	.align	2, 0
+.L868:
+	.word	gBattlerTarget
+.L426:
+	ldr	r0, .L870
+	ldrb	r0, [r0]
+	b	.L804
+.L871:
+	.align	2, 0
+.L870:
+	.word	gActiveBattler
+.L427:
+	ldr	r4, .L872
+	ldrb	r0, [r4]
+	bl	GetBattlerSide
+	lsl	r0, r0, #0x18
+	cmp	r0, #0
+	bne	.L428	@cond_branch
+	ldr	r1, .L872+0x4
+	ldrb	r0, [r4]
+	lsl	r0, r0, #0x1
+	add	r0, r0, r1
+	ldrh	r1, [r0]
+	mov	r0, #0x64
+	mul	r0, r0, r1
+	ldr	r1, .L872+0x8
+	add	r0, r0, r1
+	b	.L831
+.L873:
+	.align	2, 0
+.L872:
+	.word	gActiveBattler
+	.word	gBattlerPartyIndexes
+	.word	gPlayerParty
+.L428:
+	ldr	r1, .L874
+	ldrb	r0, [r4]
+	lsl	r0, r0, #0x1
+	add	r0, r0, r1
+	ldrh	r1, [r0]
+	mov	r0, #0x64
+	mul	r0, r0, r1
+	ldr	r1, .L874+0x4
+	b	.L833
+.L875:
+	.align	2, 0
+.L874:
+	.word	gBattlerPartyIndexes
+	.word	gEnemyParty
+.L430:
+	ldr	r0, .L876
 	ldrb	r0, [r0]
 	bl	GetBattlerSide
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L439	@cond_branch
-	ldr	r0, .L657+0x4
+	beq	.L431	@cond_branch
+	ldr	r0, .L876+0x4
 	ldr	r1, [r0]
 	mov	r0, #0x8
 	and	r1, r1, r0
-	ldr	r4, .L657+0x8
+	ldr	r4, .L876+0x8
 	cmp	r1, #0
-	beq	.L584	@cond_branch
-	ldr	r4, .L657+0xc
-	b	.L584
-.L658:
+	beq	.L807	@cond_branch
+	ldr	r4, .L876+0xc
+	b	.L807
+.L877:
 	.align	2, 0
-.L657:
-	.word	gActiveBattler
+.L876:
+	.word	gEffectBattler
 	.word	gBattleTypeFlags
 	.word	sText_WildPkmnPrefix
 	.word	sText_FoePkmnPrefix
-.L444:
+.L436:
 	mov	r2, r8
 	add	r0, r2, r6
 	strb	r1, [r0]
 	add	r6, r6, #0x1
 	add	r4, r4, #0x1
-.L584:
+.L807:
+	ldrb	r1, [r4]
+	add	r0, r1, #0
+	cmp	r0, #0xff
+	bne	.L436	@cond_branch
+.L431:
+	ldr	r0, .L878
+	ldrb	r0, [r0]
+	b	.L804
+.L879:
+	.align	2, 0
+.L878:
+	.word	gEffectBattler
+.L438:
+	ldr	r0, .L880
+	ldrb	r0, [r0]
+	bl	GetBattlerSide
+	lsl	r0, r0, #0x18
+	cmp	r0, #0
+	beq	.L439	@cond_branch
+	ldr	r0, .L880+0x4
+	ldr	r1, [r0]
+	mov	r0, #0x8
+	and	r1, r1, r0
+	ldr	r4, .L880+0x8
+	cmp	r1, #0
+	beq	.L808	@cond_branch
+	ldr	r4, .L880+0xc
+	b	.L808
+.L881:
+	.align	2, 0
+.L880:
+	.word	gActiveBattler
+	.word	gBattleTypeFlags
+	.word	sText_WildPkmnPrefix
+	.word	sText_FoePkmnPrefix
+.L444:
+	mov	r3, r8
+	add	r0, r3, r6
+	strb	r1, [r0]
+	add	r6, r6, #0x1
+	add	r4, r4, #0x1
+.L808:
 	ldrb	r1, [r4]
 	add	r0, r1, #0
 	cmp	r0, #0xff
 	bne	.L444	@cond_branch
 .L439:
-	ldr	r0, .L659
+	ldr	r0, .L882
 	ldrb	r0, [r0]
-	b	.L580
-.L660:
+	b	.L804
+.L883:
 	.align	2, 0
-.L659:
+.L882:
 	.word	gActiveBattler
 .L446:
-	ldr	r0, .L661
+	ldr	r0, .L884
 	ldrb	r0, [r0, #0x17]
 	bl	GetBattlerSide
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
 	beq	.L447	@cond_branch
-	ldr	r0, .L661+0x4
+	ldr	r0, .L884+0x4
 	ldr	r1, [r0]
 	mov	r0, #0x8
 	and	r1, r1, r0
-	ldr	r4, .L661+0x8
+	ldr	r4, .L884+0x8
 	cmp	r1, #0
-	beq	.L585	@cond_branch
-	ldr	r4, .L661+0xc
-	b	.L585
-.L662:
+	beq	.L809	@cond_branch
+	ldr	r4, .L884+0xc
+	b	.L809
+.L885:
 	.align	2, 0
-.L661:
+.L884:
 	.word	gBattleScripting
 	.word	gBattleTypeFlags
 	.word	sText_WildPkmnPrefix
@@ -23912,82 +27786,82 @@ BattleStringExpandPlaceholders:
 	strb	r1, [r0]
 	add	r6, r6, #0x1
 	add	r4, r4, #0x1
-.L585:
+.L809:
 	ldrb	r1, [r4]
 	add	r0, r1, #0
 	cmp	r0, #0xff
 	bne	.L452	@cond_branch
 .L447:
-	ldr	r0, .L663
+	ldr	r0, .L886
 	ldrb	r0, [r0, #0x17]
-.L580:
+.L804:
 	mov	r1, sp
 	bl	GetBattlerNick
 	mov	r4, sp
-	b	.L385
-.L664:
+	bl	.L385	@ far jump
+.L887:
 	.align	2, 0
-.L663:
+.L886:
 	.word	gBattleScripting
 .L454:
-	ldr	r0, .L665
+	ldr	r0, .L888
 	ldr	r2, [r0]
 	ldrh	r1, [r2]
-	ldr	r0, .L665+0x4
+	ldr	r0, .L888+0x4
 	cmp	r1, r0
-	bhi	.L586	@cond_branch
+	bhi	.L810	@cond_branch
 	ldrh	r1, [r2]
-	b	.L587
-.L666:
+	b	.L811
+.L889:
 	.align	2, 0
-.L665:
+.L888:
 	.word	gBattleMsgDataPtr
 	.word	0x2ea
 .L457:
-	ldr	r0, .L667
+	ldr	r0, .L890
 	ldr	r2, [r0]
 	ldrh	r1, [r2, #0x2]
-	ldr	r0, .L667+0x4
+	ldr	r0, .L890+0x4
 	cmp	r1, r0
 	bls	.L458	@cond_branch
-.L586:
-	ldr	r0, .L667+0x8
+.L810:
+	ldr	r0, .L890+0x8
 	ldr	r0, [r0]
 	add	r0, r0, #0x88
 	ldrb	r1, [r0]
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x1
-	ldr	r1, .L667+0xc
+	ldr	r1, .L890+0xc
 	add	r4, r0, r1
-	b	.L385
-.L668:
+	bl	.L385	@ far jump
+.L891:
 	.align	2, 0
-.L667:
+.L890:
 	.word	gBattleMsgDataPtr
 	.word	0x2ea
 	.word	gBattleStruct
 	.word	sATypeMove_Table
 .L458:
 	ldrh	r1, [r2, #0x2]
-.L587:
+.L811:
 	mov	r0, #0xd
 	mul	r1, r1, r0
-	ldr	r0, .L669
+	ldr	r0, .L892
 	add	r4, r1, r0
-	b	.L385
-.L670:
+	bl	.L385	@ far jump
+.L893:
 	.align	2, 0
-.L669:
+.L892:
 	.word	gMoveNames
 .L460:
-	ldr	r0, .L671
+	ldr	r0, .L894
 	ldr	r1, [r0]
-	ldr	r0, .L671+0x4
+	ldr	r0, .L894+0x4
 	and	r0, r0, r1
 	cmp	r0, #0
 	beq	.L461	@cond_branch
-	ldr	r2, .L671+0x8
+	ldr	r2, .L894+0x8
 	ldrh	r0, [r2]
 	cmp	r0, #0xcd
 	bne	.L462	@cond_branch
@@ -23995,28 +27869,28 @@ BattleStringExpandPlaceholders:
 	and	r1, r1, r0
 	cmp	r1, #0
 	bne	.L463	@cond_branch
-	ldr	r0, .L671+0xc
+	ldr	r0, .L894+0xc
 	add	r0, r0, #0x25
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L576	@cond_branch
-	ldr	r2, .L671+0x10
+	beq	.L800	@cond_branch
+	ldr	r2, .L894+0x10
 	ldrb	r1, [r2]
 	mov	r0, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
 	bne	.L465	@cond_branch
 	b	.L469
-.L672:
+.L895:
 	.align	2, 0
-.L671:
+.L894:
 	.word	gBattleTypeFlags
 	.word	0x2000002
 	.word	gLastUsedItem
 	.word	gBattleScripting
 	.word	gPotentialItemEffectBattler
-.L576:
-	ldr	r2, .L673
+.L800:
+	ldr	r2, .L896
 	ldrb	r1, [r2]
 	mov	r0, #0x1
 	and	r0, r0, r1
@@ -24026,179 +27900,179 @@ BattleStringExpandPlaceholders:
 	ldrb	r0, [r2]
 	lsl	r1, r0, #0x3
 	sub	r1, r1, r0
-	b	.L588
-.L674:
+	b	.L812
+.L897:
 	.align	2, 0
-.L673:
+.L896:
 	.word	gPotentialItemEffectBattler
 .L463:
-	ldr	r2, .L675
-	ldr	r0, .L675+0x4
+	ldr	r2, .L898
+	ldr	r0, .L898+0x4
 	add	r0, r0, #0x25
 	ldrb	r1, [r0]
 	lsl	r0, r1, #0x3
 	sub	r0, r0, r1
 	lsl	r0, r0, #0x2
 	add	r0, r0, r2
-	ldr	r1, .L675+0x8
+	ldr	r1, .L898+0x8
 	ldrb	r2, [r1]
 	ldrh	r0, [r0, #0x18]
 	cmp	r0, r2
 	bne	.L469	@cond_branch
 	lsl	r1, r2, #0x3
 	sub	r1, r1, r2
-.L588:
+.L812:
 	lsl	r1, r1, #0x2
-	ldr	r0, .L675+0xc
+	ldr	r0, .L898+0xc
 	add	r1, r1, r0
 	mov	r0, sp
 	bl	StringCopy
-	ldr	r1, .L675+0x10
+	ldr	r1, .L898+0x10
 	mov	r0, sp
 	bl	StringAppend
 	mov	r4, sp
-	b	.L385
-.L676:
+	bl	.L385	@ far jump
+.L899:
 	.align	2, 0
-.L675:
+.L898:
 	.word	gLinkPlayers
 	.word	gBattleScripting
 	.word	gPotentialItemEffectBattler
 	.word	gEnigmaBerries
 	.word	sText_BerrySuffix
 .L469:
-	ldr	r4, .L677
-	b	.L385
-.L678:
+	ldr	r4, .L900
+	bl	.L385	@ far jump
+.L901:
 	.align	2, 0
-.L677:
+.L900:
 	.word	sText_EnigmaBerry
 .L462:
 	ldrh	r0, [r2]
-	b	.L589
+	b	.L813
 .L461:
-	ldr	r0, .L679
+	ldr	r0, .L902
 	ldrh	r0, [r0]
-.L589:
+.L813:
 	mov	r1, sp
 	bl	CopyItemName
 	mov	r4, sp
-	b	.L385
-.L680:
+	bl	.L385	@ far jump
+.L903:
 	.align	2, 0
-.L679:
+.L902:
 	.word	gLastUsedItem
 .L473:
-	ldr	r0, .L681
-	b	.L590
-.L682:
+	ldr	r0, .L904
+	b	.L814
+.L905:
 	.align	2, 0
-.L681:
+.L904:
 	.word	gLastUsedAbility
 .L474:
-	ldr	r1, .L683
-	ldr	r0, .L683+0x4
-	b	.L591
-.L684:
+	ldr	r1, .L906
+	ldr	r0, .L906+0x4
+	b	.L815
+.L907:
 	.align	2, 0
-.L683:
+.L906:
 	.word	sBattlerAbilities
 	.word	gBattlerAttacker
 .L475:
-	ldr	r1, .L685
-	ldr	r0, .L685+0x4
-	b	.L591
-.L686:
+	ldr	r1, .L908
+	ldr	r0, .L908+0x4
+	b	.L815
+.L909:
 	.align	2, 0
-.L685:
+.L908:
 	.word	sBattlerAbilities
 	.word	gBattlerTarget
 .L476:
-	ldr	r1, .L687
-	ldr	r0, .L687+0x4
+	ldr	r1, .L910
+	ldr	r0, .L910+0x4
 	ldrb	r0, [r0, #0x17]
-	b	.L592
-.L688:
+	b	.L816
+.L911:
 	.align	2, 0
-.L687:
+.L910:
 	.word	sBattlerAbilities
 	.word	gBattleScripting
 .L477:
-	ldr	r1, .L689
-	ldr	r0, .L689+0x4
-.L591:
+	ldr	r1, .L912
+	ldr	r0, .L912+0x4
+.L815:
 	ldrb	r0, [r0]
-.L592:
+.L816:
 	lsl	r0, r0, #0x1
 	add	r0, r0, r1
-.L590:
+.L814:
 	ldrh	r1, [r0]
 	mov	r0, #0xd
 	mul	r1, r1, r0
-	ldr	r0, .L689+0x8
+	ldr	r0, .L912+0x8
 	add	r4, r1, r0
-	b	.L385
-.L690:
+	bl	.L385	@ far jump
+.L913:
 	.align	2, 0
-.L689:
+.L912:
 	.word	sBattlerAbilities
 	.word	gEffectBattler
 	.word	gAbilityNames
 .L479:
-	ldr	r0, .L691
+	ldr	r0, .L914
 	ldrh	r4, [r0]
 	mov	r0, #0x1
-	b	.L593
-.L692:
+	b	.L817
+.L915:
 	.align	2, 0
-.L691:
+.L914:
 	.word	gTrainerBattleOpponent_A
 .L480:
 	lsl	r0, r7, #0x3
 	sub	r0, r0, r7
 	lsl	r0, r0, #0x2
-	ldr	r1, .L693
+	ldr	r1, .L916
 	add	r4, r0, r1
-	b	.L385
-.L694:
+	bl	.L385	@ far jump
+.L917:
 	.align	2, 0
-.L693:
+.L916:
 	.word	gLinkPlayers+0x8
 .L481:
-	ldr	r4, .L695
+	ldr	r4, .L918
 	lsl	r0, r7, #0x3
 	sub	r0, r0, r7
 	lsl	r0, r0, #0x2
 	add	r0, r0, r4
 	ldrh	r1, [r0, #0x18]
 	mov	r0, #0x2
-	b	.L594
-.L696:
+	b	.L818
+.L919:
 	.align	2, 0
-.L695:
+.L918:
 	.word	gLinkPlayers
 .L482:
-	ldr	r4, .L697
+	ldr	r4, .L920
 	lsl	r0, r7, #0x3
 	sub	r0, r0, r7
 	lsl	r0, r0, #0x2
 	add	r0, r0, r4
 	ldrh	r1, [r0, #0x18]
 	mov	r0, #0x1
-	b	.L594
-.L698:
+	b	.L818
+.L921:
 	.align	2, 0
-.L697:
+.L920:
 	.word	gLinkPlayers
 .L483:
-	ldr	r4, .L699
+	ldr	r4, .L922
 	lsl	r0, r7, #0x3
 	sub	r0, r0, r7
 	lsl	r0, r0, #0x2
 	add	r0, r0, r4
 	ldrh	r1, [r0, #0x18]
 	mov	r0, #0x3
-.L594:
+.L818:
 	eor	r0, r0, r1
 	bl	GetBattlerMultiplayerId
 	lsl	r1, r0, #0x3
@@ -24206,116 +28080,316 @@ BattleStringExpandPlaceholders:
 	lsl	r1, r1, #0x2
 	add	r4, r4, #0x8
 	add	r4, r1, r4
-	b	.L385
-.L700:
+	bl	.L385	@ far jump
+.L923:
 	.align	2, 0
-.L699:
+.L922:
 	.word	gLinkPlayers
 .L484:
-	ldr	r0, .L701
+	ldr	r0, .L924
 	ldrb	r0, [r0, #0x17]
 	bl	GetBattlerMultiplayerId
 	lsl	r1, r0, #0x3
 	sub	r1, r1, r0
 	lsl	r1, r1, #0x2
-	ldr	r0, .L701+0x4
+	ldr	r0, .L924+0x4
 	add	r4, r1, r0
-	b	.L385
-.L702:
+	bl	.L385	@ far jump
+.L925:
 	.align	2, 0
-.L701:
+.L924:
 	.word	gBattleScripting
 	.word	gLinkPlayers+0x8
 .L485:
 	mov	r0, #0x0
-	b	.L595
+	bl	.L819	@ far jump
 .L486:
-	ldr	r0, .L703
+	ldr	r5, .L926
+	ldrh	r1, [r5]
+	ldr	r0, .L926+0x4
+	cmp	r1, r0
+	bne	.L487	@cond_branch
+	mov	r0, #0x2
+	b	.L820
+.L927:
+	.align	2, 0
+.L926:
+	.word	gTrainerBattleOpponent_A
+	.word	0x3fe
+.L487:
+	ldr	r0, .L928
+	bl	VarGet
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
+	cmp	r0, #0xc
+	bne	.L489	@cond_branch
+	ldr	r0, .L928+0x4
 	ldr	r1, [r0]
-	ldr	r0, .L703+0x4
+	ldr	r0, .L928+0x8
+	add	r1, r1, r0
+	ldr	r0, .L928+0xc
+	ldrh	r0, [r0]
+	lsl	r0, r0, #0x1
+	ldrh	r2, [r1]
+	add	r0, r0, r2
+	strh	r0, [r1]
+	ldr	r4, .L928+0x10
+	bl	.L385	@ far jump
+.L929:
+	.align	2, 0
+.L928:
+	.word	0x4001
+	.word	gSaveBlock2Ptr
+	.word	0xeb8
+	.word	gSpecialVar_0x800B
+	.word	sText_LoseDortha
+.L489:
+	ldr	r0, .L930
+	ldr	r1, [r0]
+	ldr	r0, .L930+0x4
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L487	@cond_branch
-	ldr	r0, .L703+0x8
-	ldrh	r1, [r0]
-	mov	r0, #0x2
-	b	.L596
-.L704:
+	bne	.LCB3101
+	b	.L491	@long jump
+.LCB3101:
+	bl	Random
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
+	mov	r1, #0x33
+	bl	__umodsi3
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
+	cmp	r0, #0x32
+	bls	.LCB3114
+	bl	.L385	@far jump
+.LCB3114:
+	lsl	r0, r0, #0x2
+	ldr	r1, .L930+0x8
+	add	r0, r0, r1
+	ldr	r0, [r0]
+	mov	pc, r0
+.L931:
 	.align	2, 0
-.L703:
+.L930:
 	.word	gBattleTypeFlags
 	.word	0x3f0100
-	.word	gTrainerBattleOpponent_A
-.L487:
+	.word	.L544
+	.align	2, 0
+	.align	2, 0
+.L544:
+	.word	.L646
+	.word	.L647
+	.word	.L648
+	.word	.L649
+	.word	.L650
+	.word	.L651
+	.word	.L652
+	.word	.L653
+	.word	.L654
+	.word	.L655
+	.word	.L656
+	.word	.L657
+	.word	.L658
+	.word	.L659
+	.word	.L660
+	.word	.L661
+	.word	.L662
+	.word	.L663
+	.word	.L664
+	.word	.L665
+	.word	.L666
+	.word	.L667
+	.word	.L668
+	.word	.L669
+	.word	.L670
+	.word	.L671
+	.word	.L672
+	.word	.L673
+	.word	.L674
+	.word	.L675
+	.word	.L676
+	.word	.L677
+	.word	.L678
+	.word	.L679
+	.word	.L680
+	.word	.L681
+	.word	.L682
+	.word	.L683
+	.word	.L684
+	.word	.L685
+	.word	.L686
+	.word	.L687
+	.word	.L688
+	.word	.L689
+	.word	.L690
+	.word	.L691
+	.word	.L692
+	.word	.L693
+	.word	.L694
+	.word	.L695
+	.word	.L696
+.L491:
 	mov	r0, #0x80
 	lsl	r0, r0, #0x13
 	and	r1, r1, r0
 	cmp	r1, #0
-	beq	.L489	@cond_branch
-	ldr	r0, .L705
-	ldrh	r1, [r0]
+	beq	.L547	@cond_branch
+	ldrh	r1, [r5]
 	mov	r0, #0x4
-	b	.L597
-.L706:
-	.align	2, 0
-.L705:
-	.word	gTrainerBattleOpponent_A
-.L489:
+	bl	.L821	@ far jump
+.L547:
 	bl	GetTrainerALoseText
 	add	r4, r0, #0
-	b	.L385
-.L491:
-	ldr	r0, .L707
+	bl	.L385	@ far jump
+.L549:
+	ldr	r5, .L932
+	ldrh	r1, [r5]
+	ldr	r0, .L932+0x4
+	cmp	r1, r0
+	bne	.L550	@cond_branch
+	mov	r0, #0x1
+.L820:
+	bl	CopyFrontierTrainerText
+	ldr	r4, .L932+0x8
+	bl	.L385	@ far jump
+.L933:
+	.align	2, 0
+.L932:
+	.word	gTrainerBattleOpponent_A
+	.word	0x3fe
+	.word	gStringVar4
+.L550:
+	ldr	r0, .L934
+	bl	VarGet
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
+	cmp	r0, #0xc
+	bne	.L552	@cond_branch
+	ldr	r4, .L934+0x4
+	bl	.L385	@ far jump
+.L935:
+	.align	2, 0
+.L934:
+	.word	0x4001
+	.word	sText_WinDortha
+.L552:
+	ldr	r0, .L936
 	ldr	r1, [r0]
-	ldr	r0, .L707+0x4
+	ldr	r0, .L936+0x4
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L492	@cond_branch
-	ldr	r0, .L707+0x8
-	b	.L598
-.L708:
+	bne	.LCB3205
+	b	.L554	@long jump
+.LCB3205:
+	bl	Random
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
+	mov	r1, #0x33
+	bl	__umodsi3
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
+	cmp	r0, #0x32
+	bls	.LCB3218
+	bl	.L385	@far jump
+.LCB3218:
+	lsl	r0, r0, #0x2
+	ldr	r1, .L936+0x8
+	add	r0, r0, r1
+	ldr	r0, [r0]
+	mov	pc, r0
+.L937:
 	.align	2, 0
-.L707:
+.L936:
 	.word	gBattleTypeFlags
 	.word	0x3f0100
-	.word	gTrainerBattleOpponent_A
-.L492:
+	.word	.L607
+	.align	2, 0
+	.align	2, 0
+.L607:
+	.word	.L705
+	.word	.L706
+	.word	.L707
+	.word	.L708
+	.word	.L709
+	.word	.L710
+	.word	.L711
+	.word	.L712
+	.word	.L713
+	.word	.L714
+	.word	.L715
+	.word	.L716
+	.word	.L717
+	.word	.L718
+	.word	.L719
+	.word	.L720
+	.word	.L721
+	.word	.L722
+	.word	.L723
+	.word	.L724
+	.word	.L725
+	.word	.L726
+	.word	.L727
+	.word	.L728
+	.word	.L729
+	.word	.L730
+	.word	.L731
+	.word	.L732
+	.word	.L733
+	.word	.L734
+	.word	.L735
+	.word	.L736
+	.word	.L737
+	.word	.L738
+	.word	.L739
+	.word	.L740
+	.word	.L741
+	.word	.L742
+	.word	.L743
+	.word	.L744
+	.word	.L745
+	.word	.L746
+	.word	.L747
+	.word	.L748
+	.word	.L749
+	.word	.L750
+	.word	.L751
+	.word	.L752
+	.word	.L753
+	.word	.L754
+	.word	.L755
+.L554:
 	mov	r0, #0x80
 	lsl	r0, r0, #0x13
 	and	r1, r1, r0
 	cmp	r1, #0
-	bne	.LCB3109
-	b	.L385	@long jump
-.LCB3109:
-	ldr	r0, .L709
-	b	.L599
-.L710:
-	.align	2, 0
-.L709:
-	.word	gTrainerBattleOpponent_A
-.L495:
-	ldr	r0, .L711
+	bne	.LCB3243
+	bl	.L385	@far jump
+.LCB3243:
+	ldrh	r1, [r5]
+	bl	.L822	@ far jump
+.L611:
+	ldr	r0, .L938
 	ldrb	r0, [r0, #0x17]
 	bl	GetBattlerSide
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L496	@cond_branch
-	ldr	r0, .L711+0x4
+	beq	.L612	@cond_branch
+	ldr	r0, .L938+0x4
 	ldr	r1, [r0]
 	mov	r0, #0x8
 	and	r1, r1, r0
-	ldr	r4, .L711+0x8
+	ldr	r4, .L938+0x8
 	cmp	r1, #0
-	beq	.L497	@cond_branch
-	ldr	r4, .L711+0xc
-.L497:
+	beq	.L613	@cond_branch
+	ldr	r4, .L938+0xc
+.L613:
 	ldrb	r1, [r4]
 	add	r0, r1, #0
-	ldr	r3, .L711+0x10
-	ldr	r2, .L711+0x14
+	ldr	r3, .L938+0x10
+	ldr	r2, .L938+0x14
 	cmp	r0, #0xff
-	beq	.L574	@cond_branch
-.L501:
+	beq	.L798	@cond_branch
+.L617:
 	mov	r5, r8
 	add	r0, r5, r6
 	strb	r1, [r0]
@@ -24324,158 +28398,158 @@ BattleStringExpandPlaceholders:
 	ldrb	r1, [r4]
 	add	r0, r1, #0
 	cmp	r0, #0xff
-	bne	.L501	@cond_branch
-.L574:
+	bne	.L617	@cond_branch
+.L798:
 	ldr	r0, [r2]
 	add	r0, r0, #0x52
 	ldrb	r1, [r0]
 	mov	r0, #0x64
 	mul	r0, r0, r1
 	add	r0, r0, r3
-.L608:
+.L831:
 	mov	r1, #0x2
 	mov	r2, sp
 	bl	GetMonData
-	b	.L503
-.L712:
+	b	.L619
+.L939:
 	.align	2, 0
-.L711:
+.L938:
 	.word	gBattleScripting
 	.word	gBattleTypeFlags
 	.word	sText_WildPkmnPrefix
 	.word	sText_FoePkmnPrefix
 	.word	gEnemyParty
 	.word	gBattleStruct
-.L496:
-	ldr	r0, .L713
+.L612:
+	ldr	r0, .L940
 	ldr	r0, [r0]
 	add	r0, r0, #0x52
 	ldrb	r1, [r0]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L713+0x4
-.L610:
+	ldr	r1, .L940+0x4
+.L833:
 	add	r0, r0, r1
 	mov	r1, #0x2
 	mov	r2, sp
 	bl	GetMonData
-.L503:
+.L619:
 	mov	r0, sp
 	bl	StringGetEnd10
 	mov	r4, sp
-	b	.L385
-.L714:
+	bl	.L385	@ far jump
+.L941:
 	.align	2, 0
-.L713:
+.L940:
 	.word	gBattleStruct
 	.word	gPlayerParty
-.L504:
-	ldr	r0, .L715
+.L620:
+	ldr	r0, .L942
 	bl	FlagGet
 	lsl	r0, r0, #0x18
-	ldr	r4, .L715+0x4
+	ldr	r4, .L942+0x4
 	cmp	r0, #0
-	bne	.LCB3232
-	b	.L385	@long jump
-.LCB3232:
-	ldr	r4, .L715+0x8
-	b	.L385
-.L716:
+	bne	.LCB3360
+	bl	.L385	@far jump
+.LCB3360:
+	ldr	r4, .L942+0x8
+	bl	.L385	@ far jump
+.L943:
 	.align	2, 0
-.L715:
+.L942:
 	.word	0x8ab
 	.word	sText_Someones
 	.word	sText_Lanettes
-.L507:
-	ldr	r0, .L717
-	b	.L600
-.L718:
+.L623:
+	ldr	r0, .L944
+	b	.L823
+.L945:
 	.align	2, 0
-.L717:
+.L944:
 	.word	gBattlerAttacker
-.L510:
-	ldr	r0, .L719
-.L600:
+.L626:
+	ldr	r0, .L946
+.L823:
 	ldrb	r0, [r0]
 	bl	GetBattlerSide
 	lsl	r0, r0, #0x18
-	ldr	r4, .L719+0x4
+	ldr	r4, .L946+0x4
 	cmp	r0, #0
-	beq	.LCB3268
-	b	.L385	@long jump
-.LCB3268:
-	ldr	r4, .L719+0x8
-	b	.L385
-.L720:
+	beq	.LCB3396
+	bl	.L385	@far jump
+.LCB3396:
+	ldr	r4, .L946+0x8
+	bl	.L385	@ far jump
+.L947:
 	.align	2, 0
-.L719:
+.L946:
 	.word	gBattlerTarget
 	.word	sText_FoePkmnPrefix3
 	.word	sText_AllyPkmnPrefix2
-.L513:
-	ldr	r0, .L721
-	b	.L601
-.L722:
+.L629:
+	ldr	r0, .L948
+	b	.L824
+.L949:
 	.align	2, 0
-.L721:
+.L948:
 	.word	gBattlerAttacker
-.L516:
-	ldr	r0, .L723
-.L601:
+.L632:
+	ldr	r0, .L950
+.L824:
 	ldrb	r0, [r0]
 	bl	GetBattlerSide
 	lsl	r0, r0, #0x18
-	ldr	r4, .L723+0x4
+	ldr	r4, .L950+0x4
 	cmp	r0, #0
-	beq	.LCB3304
-	b	.L385	@long jump
-.LCB3304:
-	ldr	r4, .L723+0x8
-	b	.L385
-.L724:
+	beq	.LCB3432
+	bl	.L385	@far jump
+.LCB3432:
+	ldr	r4, .L950+0x8
+	bl	.L385	@ far jump
+.L951:
 	.align	2, 0
-.L723:
+.L950:
 	.word	gBattlerTarget
 	.word	sText_FoePkmnPrefix2
 	.word	sText_AllyPkmnPrefix
-.L519:
-	ldr	r0, .L725
-	b	.L602
-.L726:
+.L635:
+	ldr	r0, .L952
+	b	.L825
+.L953:
 	.align	2, 0
-.L725:
+.L952:
 	.word	gBattlerAttacker
-.L522:
-	ldr	r0, .L727
-.L602:
+.L638:
+	ldr	r0, .L954
+.L825:
 	ldrb	r0, [r0]
 	bl	GetBattlerSide
 	lsl	r0, r0, #0x18
-	ldr	r4, .L727+0x4
+	ldr	r4, .L954+0x4
 	cmp	r0, #0
-	beq	.LCB3340
-	b	.L385	@long jump
-.LCB3340:
-	ldr	r4, .L727+0x8
-	b	.L385
-.L728:
+	beq	.LCB3468
+	bl	.L385	@far jump
+.LCB3468:
+	ldr	r4, .L954+0x8
+	bl	.L385	@ far jump
+.L955:
 	.align	2, 0
-.L727:
+.L954:
 	.word	gBattlerTarget
 	.word	sText_FoePkmnPrefix4
 	.word	sText_AllyPkmnPrefix3
-.L525:
-	ldr	r0, .L729
-	b	.L603
-.L730:
+.L641:
+	ldr	r0, .L956
+	bl	.L826	@ far jump
+.L957:
 	.align	2, 0
-.L729:
+.L956:
 	.word	gTrainerBattleOpponent_B
-.L526:
-	ldr	r0, .L731
+.L642:
+	ldr	r0, .L958
 	ldrh	r4, [r0]
 	mov	r0, #0x3
-.L593:
+.L817:
 	bl	GetBattlerAtPosition
 	add	r3, r0, #0
 	lsl	r3, r3, #0x18
@@ -24485,92 +28559,937 @@ BattleStringExpandPlaceholders:
 	add	r2, r7, #0
 	bl	BattleStringGetOpponentNameByTrainerId
 	add	r4, r0, #0
-	b	.L385
-.L732:
+	bl	.L385	@ far jump
+.L959:
 	.align	2, 0
-.L731:
+.L958:
 	.word	gTrainerBattleOpponent_B
-.L527:
-	ldr	r0, .L733
+.L643:
+	ldr	r0, .L960
 	ldr	r1, [r0]
-	ldr	r0, .L733+0x4
+	ldr	r0, .L960+0x4
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L528	@cond_branch
-	ldr	r0, .L733+0x8
-	ldrh	r1, [r0]
-	mov	r0, #0x2
-	b	.L596
-.L734:
+	bne	.LCB3520
+	b	.L644	@long jump
+.LCB3520:
+	bl	Random
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
+	mov	r1, #0x33
+	bl	__umodsi3
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
+	cmp	r0, #0x32
+	bls	.LCB3533
+	bl	.L385	@far jump
+.LCB3533:
+	lsl	r0, r0, #0x2
+	ldr	r1, .L960+0x8
+	add	r0, r0, r1
+	ldr	r0, [r0]
+	mov	pc, r0
+.L961:
 	.align	2, 0
-.L733:
+.L960:
 	.word	gBattleTypeFlags
 	.word	0x3f0100
-	.word	gTrainerBattleOpponent_B
-.L528:
+	.word	.L697
+	.align	2, 0
+	.align	2, 0
+.L697:
+	.word	.L646
+	.word	.L647
+	.word	.L648
+	.word	.L649
+	.word	.L650
+	.word	.L651
+	.word	.L652
+	.word	.L653
+	.word	.L654
+	.word	.L655
+	.word	.L656
+	.word	.L657
+	.word	.L658
+	.word	.L659
+	.word	.L660
+	.word	.L661
+	.word	.L662
+	.word	.L663
+	.word	.L664
+	.word	.L665
+	.word	.L666
+	.word	.L667
+	.word	.L668
+	.word	.L669
+	.word	.L670
+	.word	.L671
+	.word	.L672
+	.word	.L673
+	.word	.L674
+	.word	.L675
+	.word	.L676
+	.word	.L677
+	.word	.L678
+	.word	.L679
+	.word	.L680
+	.word	.L681
+	.word	.L682
+	.word	.L683
+	.word	.L684
+	.word	.L685
+	.word	.L686
+	.word	.L687
+	.word	.L688
+	.word	.L689
+	.word	.L690
+	.word	.L691
+	.word	.L692
+	.word	.L693
+	.word	.L694
+	.word	.L695
+	.word	.L696
+.L646:
+	ldr	r4, .L962
+	b	.L385
+.L963:
+	.align	2, 0
+.L962:
+	.word	sText_Lose0
+.L647:
+	ldr	r4, .L964
+	b	.L385
+.L965:
+	.align	2, 0
+.L964:
+	.word	sText_Lose1
+.L648:
+	ldr	r4, .L966
+	b	.L385
+.L967:
+	.align	2, 0
+.L966:
+	.word	sText_Lose2
+.L649:
+	ldr	r4, .L968
+	b	.L385
+.L969:
+	.align	2, 0
+.L968:
+	.word	sText_Lose3
+.L650:
+	ldr	r4, .L970
+	b	.L385
+.L971:
+	.align	2, 0
+.L970:
+	.word	sText_Lose4
+.L651:
+	ldr	r4, .L972
+	b	.L385
+.L973:
+	.align	2, 0
+.L972:
+	.word	sText_Lose5
+.L652:
+	ldr	r4, .L974
+	b	.L385
+.L975:
+	.align	2, 0
+.L974:
+	.word	sText_Lose6
+.L653:
+	ldr	r4, .L976
+	b	.L385
+.L977:
+	.align	2, 0
+.L976:
+	.word	sText_Lose7
+.L654:
+	ldr	r4, .L978
+	b	.L385
+.L979:
+	.align	2, 0
+.L978:
+	.word	sText_Lose8
+.L655:
+	ldr	r4, .L980
+	b	.L385
+.L981:
+	.align	2, 0
+.L980:
+	.word	sText_Lose9
+.L656:
+	ldr	r4, .L982
+	b	.L385
+.L983:
+	.align	2, 0
+.L982:
+	.word	sText_Lose10
+.L657:
+	ldr	r4, .L984
+	b	.L385
+.L985:
+	.align	2, 0
+.L984:
+	.word	sText_Lose11
+.L658:
+	ldr	r4, .L986
+	b	.L385
+.L987:
+	.align	2, 0
+.L986:
+	.word	sText_Lose12
+.L659:
+	ldr	r4, .L988
+	b	.L385
+.L989:
+	.align	2, 0
+.L988:
+	.word	sText_Lose13
+.L660:
+	ldr	r4, .L990
+	b	.L385
+.L991:
+	.align	2, 0
+.L990:
+	.word	sText_Lose14
+.L661:
+	ldr	r4, .L992
+	b	.L385
+.L993:
+	.align	2, 0
+.L992:
+	.word	sText_Lose15
+.L662:
+	ldr	r4, .L994
+	b	.L385
+.L995:
+	.align	2, 0
+.L994:
+	.word	sText_Lose16
+.L663:
+	ldr	r4, .L996
+	b	.L385
+.L997:
+	.align	2, 0
+.L996:
+	.word	sText_Lose17
+.L664:
+	ldr	r4, .L998
+	b	.L385
+.L999:
+	.align	2, 0
+.L998:
+	.word	sText_Lose18
+.L665:
+	ldr	r4, .L1000
+	b	.L385
+.L1001:
+	.align	2, 0
+.L1000:
+	.word	sText_Lose19
+.L666:
+	ldr	r4, .L1002
+	b	.L385
+.L1003:
+	.align	2, 0
+.L1002:
+	.word	sText_Lose20
+.L667:
+	ldr	r4, .L1004
+	b	.L385
+.L1005:
+	.align	2, 0
+.L1004:
+	.word	sText_Lose21
+.L668:
+	ldr	r4, .L1006
+	b	.L385
+.L1007:
+	.align	2, 0
+.L1006:
+	.word	sText_Lose22
+.L669:
+	ldr	r4, .L1008
+	b	.L385
+.L1009:
+	.align	2, 0
+.L1008:
+	.word	sText_Lose23
+.L670:
+	ldr	r4, .L1010
+	b	.L385
+.L1011:
+	.align	2, 0
+.L1010:
+	.word	sText_Lose24
+.L671:
+	ldr	r4, .L1012
+	b	.L385
+.L1013:
+	.align	2, 0
+.L1012:
+	.word	sText_Lose25
+.L672:
+	ldr	r4, .L1014
+	b	.L385
+.L1015:
+	.align	2, 0
+.L1014:
+	.word	sText_Lose26
+.L673:
+	ldr	r4, .L1016
+	b	.L385
+.L1017:
+	.align	2, 0
+.L1016:
+	.word	sText_Lose27
+.L674:
+	ldr	r4, .L1018
+	b	.L385
+.L1019:
+	.align	2, 0
+.L1018:
+	.word	sText_Lose28
+.L675:
+	ldr	r4, .L1020
+	b	.L385
+.L1021:
+	.align	2, 0
+.L1020:
+	.word	sText_Lose29
+.L676:
+	ldr	r4, .L1022
+	b	.L385
+.L1023:
+	.align	2, 0
+.L1022:
+	.word	sText_Lose30
+.L677:
+	ldr	r4, .L1024
+	b	.L385
+.L1025:
+	.align	2, 0
+.L1024:
+	.word	sText_Lose31
+.L678:
+	ldr	r4, .L1026
+	b	.L385
+.L1027:
+	.align	2, 0
+.L1026:
+	.word	sText_Lose32
+.L679:
+	ldr	r4, .L1028
+	b	.L385
+.L1029:
+	.align	2, 0
+.L1028:
+	.word	sText_Lose33
+.L680:
+	ldr	r4, .L1030
+	b	.L385
+.L1031:
+	.align	2, 0
+.L1030:
+	.word	sText_Lose34
+.L681:
+	ldr	r4, .L1032
+	b	.L385
+.L1033:
+	.align	2, 0
+.L1032:
+	.word	sText_Lose35
+.L682:
+	ldr	r4, .L1034
+	b	.L385
+.L1035:
+	.align	2, 0
+.L1034:
+	.word	sText_Lose36
+.L683:
+	ldr	r4, .L1036
+	b	.L385
+.L1037:
+	.align	2, 0
+.L1036:
+	.word	sText_Lose37
+.L684:
+	ldr	r4, .L1038
+	b	.L385
+.L1039:
+	.align	2, 0
+.L1038:
+	.word	sText_Lose38
+.L685:
+	ldr	r4, .L1040
+	b	.L385
+.L1041:
+	.align	2, 0
+.L1040:
+	.word	sText_Lose39
+.L686:
+	ldr	r4, .L1042
+	b	.L385
+.L1043:
+	.align	2, 0
+.L1042:
+	.word	sText_Lose40
+.L687:
+	ldr	r4, .L1044
+	b	.L385
+.L1045:
+	.align	2, 0
+.L1044:
+	.word	sText_Lose41
+.L688:
+	ldr	r4, .L1046
+	b	.L385
+.L1047:
+	.align	2, 0
+.L1046:
+	.word	sText_Lose42
+.L689:
+	ldr	r4, .L1048
+	b	.L385
+.L1049:
+	.align	2, 0
+.L1048:
+	.word	sText_Lose43
+.L690:
+	ldr	r4, .L1050
+	b	.L385
+.L1051:
+	.align	2, 0
+.L1050:
+	.word	sText_Lose44
+.L691:
+	ldr	r4, .L1052
+	b	.L385
+.L1053:
+	.align	2, 0
+.L1052:
+	.word	sText_Lose45
+.L692:
+	ldr	r4, .L1054
+	b	.L385
+.L1055:
+	.align	2, 0
+.L1054:
+	.word	sText_Lose46
+.L693:
+	ldr	r4, .L1056
+	b	.L385
+.L1057:
+	.align	2, 0
+.L1056:
+	.word	sText_Lose47
+.L694:
+	ldr	r4, .L1058
+	b	.L385
+.L1059:
+	.align	2, 0
+.L1058:
+	.word	sText_Lose48
+.L695:
+	ldr	r4, .L1060
+	b	.L385
+.L1061:
+	.align	2, 0
+.L1060:
+	.word	sText_Lose49
+.L696:
+	ldr	r4, .L1062
+	b	.L385
+.L1063:
+	.align	2, 0
+.L1062:
+	.word	sText_Lose50
+.L644:
 	mov	r0, #0x80
 	lsl	r0, r0, #0x13
 	and	r1, r1, r0
 	cmp	r1, #0
-	beq	.L530	@cond_branch
-	ldr	r0, .L735
+	beq	.L700	@cond_branch
+	ldr	r0, .L1064
 	ldrh	r1, [r0]
 	mov	r0, #0x4
-	b	.L597
-.L736:
+	b	.L821
+.L1065:
 	.align	2, 0
-.L735:
+.L1064:
 	.word	gTrainerBattleOpponent_B
-.L530:
+.L700:
 	bl	GetTrainerBLoseText
 	add	r4, r0, #0
 	b	.L385
-.L532:
-	ldr	r0, .L737
+.L702:
+	ldr	r0, .L1066
 	ldr	r1, [r0]
-	ldr	r0, .L737+0x4
+	ldr	r0, .L1066+0x4
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L533	@cond_branch
-	ldr	r0, .L737+0x8
-.L598:
-	ldrh	r1, [r0]
-	mov	r0, #0x1
-.L596:
-	bl	CopyFrontierTrainerText
-	ldr	r4, .L737+0xc
-	b	.L385
-.L738:
+	bne	.LCB4094
+	b	.L703	@long jump
+.LCB4094:
+	bl	Random
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
+	mov	r1, #0x33
+	bl	__umodsi3
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
+	cmp	r0, #0x32
+	bls	.LCB4107
+	b	.L385	@long jump
+.LCB4107:
+	lsl	r0, r0, #0x2
+	ldr	r1, .L1066+0x8
+	add	r0, r0, r1
+	ldr	r0, [r0]
+	mov	pc, r0
+.L1067:
 	.align	2, 0
-.L737:
+.L1066:
 	.word	gBattleTypeFlags
 	.word	0x3f0100
-	.word	gTrainerBattleOpponent_B
-	.word	gStringVar4
-.L533:
+	.word	.L756
+	.align	2, 0
+	.align	2, 0
+.L756:
+	.word	.L705
+	.word	.L706
+	.word	.L707
+	.word	.L708
+	.word	.L709
+	.word	.L710
+	.word	.L711
+	.word	.L712
+	.word	.L713
+	.word	.L714
+	.word	.L715
+	.word	.L716
+	.word	.L717
+	.word	.L718
+	.word	.L719
+	.word	.L720
+	.word	.L721
+	.word	.L722
+	.word	.L723
+	.word	.L724
+	.word	.L725
+	.word	.L726
+	.word	.L727
+	.word	.L728
+	.word	.L729
+	.word	.L730
+	.word	.L731
+	.word	.L732
+	.word	.L733
+	.word	.L734
+	.word	.L735
+	.word	.L736
+	.word	.L737
+	.word	.L738
+	.word	.L739
+	.word	.L740
+	.word	.L741
+	.word	.L742
+	.word	.L743
+	.word	.L744
+	.word	.L745
+	.word	.L746
+	.word	.L747
+	.word	.L748
+	.word	.L749
+	.word	.L750
+	.word	.L751
+	.word	.L752
+	.word	.L753
+	.word	.L754
+	.word	.L755
+.L705:
+	ldr	r4, .L1068
+	b	.L385
+.L1069:
+	.align	2, 0
+.L1068:
+	.word	sText_Win0
+.L706:
+	ldr	r4, .L1070
+	b	.L385
+.L1071:
+	.align	2, 0
+.L1070:
+	.word	sText_Win1
+.L707:
+	ldr	r4, .L1072
+	b	.L385
+.L1073:
+	.align	2, 0
+.L1072:
+	.word	sText_Win2
+.L708:
+	ldr	r4, .L1074
+	b	.L385
+.L1075:
+	.align	2, 0
+.L1074:
+	.word	sText_Win3
+.L709:
+	ldr	r4, .L1076
+	b	.L385
+.L1077:
+	.align	2, 0
+.L1076:
+	.word	sText_Win4
+.L710:
+	ldr	r4, .L1078
+	b	.L385
+.L1079:
+	.align	2, 0
+.L1078:
+	.word	sText_Win5
+.L711:
+	ldr	r4, .L1080
+	b	.L385
+.L1081:
+	.align	2, 0
+.L1080:
+	.word	sText_Win6
+.L712:
+	ldr	r4, .L1082
+	b	.L385
+.L1083:
+	.align	2, 0
+.L1082:
+	.word	sText_Win7
+.L713:
+	ldr	r4, .L1084
+	b	.L385
+.L1085:
+	.align	2, 0
+.L1084:
+	.word	sText_Win8
+.L714:
+	ldr	r4, .L1086
+	b	.L385
+.L1087:
+	.align	2, 0
+.L1086:
+	.word	sText_Win9
+.L715:
+	ldr	r4, .L1088
+	b	.L385
+.L1089:
+	.align	2, 0
+.L1088:
+	.word	sText_Win10
+.L716:
+	ldr	r4, .L1090
+	b	.L385
+.L1091:
+	.align	2, 0
+.L1090:
+	.word	sText_Win11
+.L717:
+	ldr	r4, .L1092
+	b	.L385
+.L1093:
+	.align	2, 0
+.L1092:
+	.word	sText_Win12
+.L718:
+	ldr	r4, .L1094
+	b	.L385
+.L1095:
+	.align	2, 0
+.L1094:
+	.word	sText_Win13
+.L719:
+	ldr	r4, .L1096
+	b	.L385
+.L1097:
+	.align	2, 0
+.L1096:
+	.word	sText_Win14
+.L720:
+	ldr	r4, .L1098
+	b	.L385
+.L1099:
+	.align	2, 0
+.L1098:
+	.word	sText_Win15
+.L721:
+	ldr	r4, .L1100
+	b	.L385
+.L1101:
+	.align	2, 0
+.L1100:
+	.word	sText_Win16
+.L722:
+	ldr	r4, .L1102
+	b	.L385
+.L1103:
+	.align	2, 0
+.L1102:
+	.word	sText_Win17
+.L723:
+	ldr	r4, .L1104
+	b	.L385
+.L1105:
+	.align	2, 0
+.L1104:
+	.word	sText_Win18
+.L724:
+	ldr	r4, .L1106
+	b	.L385
+.L1107:
+	.align	2, 0
+.L1106:
+	.word	sText_Win19
+.L725:
+	ldr	r4, .L1108
+	b	.L385
+.L1109:
+	.align	2, 0
+.L1108:
+	.word	sText_Win20
+.L726:
+	ldr	r4, .L1110
+	b	.L385
+.L1111:
+	.align	2, 0
+.L1110:
+	.word	sText_Win21
+.L727:
+	ldr	r4, .L1112
+	b	.L385
+.L1113:
+	.align	2, 0
+.L1112:
+	.word	sText_Win22
+.L728:
+	ldr	r4, .L1114
+	b	.L385
+.L1115:
+	.align	2, 0
+.L1114:
+	.word	sText_Win23
+.L729:
+	ldr	r4, .L1116
+	b	.L385
+.L1117:
+	.align	2, 0
+.L1116:
+	.word	sText_Win24
+.L730:
+	ldr	r4, .L1118
+	b	.L385
+.L1119:
+	.align	2, 0
+.L1118:
+	.word	sText_Win25
+.L731:
+	ldr	r4, .L1120
+	b	.L385
+.L1121:
+	.align	2, 0
+.L1120:
+	.word	sText_Win26
+.L732:
+	ldr	r4, .L1122
+	b	.L385
+.L1123:
+	.align	2, 0
+.L1122:
+	.word	sText_Win27
+.L733:
+	ldr	r4, .L1124
+	b	.L385
+.L1125:
+	.align	2, 0
+.L1124:
+	.word	sText_Win28
+.L734:
+	ldr	r4, .L1126
+	b	.L385
+.L1127:
+	.align	2, 0
+.L1126:
+	.word	sText_Win29
+.L735:
+	ldr	r4, .L1128
+	b	.L385
+.L1129:
+	.align	2, 0
+.L1128:
+	.word	sText_Win30
+.L736:
+	ldr	r4, .L1130
+	b	.L385
+.L1131:
+	.align	2, 0
+.L1130:
+	.word	sText_Win31
+.L737:
+	ldr	r4, .L1132
+	b	.L385
+.L1133:
+	.align	2, 0
+.L1132:
+	.word	sText_Win32
+.L738:
+	ldr	r4, .L1134
+	b	.L385
+.L1135:
+	.align	2, 0
+.L1134:
+	.word	sText_Win33
+.L739:
+	ldr	r4, .L1136
+	b	.L385
+.L1137:
+	.align	2, 0
+.L1136:
+	.word	sText_Win34
+.L740:
+	ldr	r4, .L1138
+	b	.L385
+.L1139:
+	.align	2, 0
+.L1138:
+	.word	sText_Win35
+.L741:
+	ldr	r4, .L1140
+	b	.L385
+.L1141:
+	.align	2, 0
+.L1140:
+	.word	sText_Win36
+.L742:
+	ldr	r4, .L1142
+	b	.L385
+.L1143:
+	.align	2, 0
+.L1142:
+	.word	sText_Win37
+.L743:
+	ldr	r4, .L1144
+	b	.L385
+.L1145:
+	.align	2, 0
+.L1144:
+	.word	sText_Win38
+.L744:
+	ldr	r4, .L1146
+	b	.L385
+.L1147:
+	.align	2, 0
+.L1146:
+	.word	sText_Win39
+.L745:
+	ldr	r4, .L1148
+	b	.L385
+.L1149:
+	.align	2, 0
+.L1148:
+	.word	sText_Win40
+.L746:
+	ldr	r4, .L1150
+	b	.L385
+.L1151:
+	.align	2, 0
+.L1150:
+	.word	sText_Win41
+.L747:
+	ldr	r4, .L1152
+	b	.L385
+.L1153:
+	.align	2, 0
+.L1152:
+	.word	sText_Win42
+.L748:
+	ldr	r4, .L1154
+	b	.L385
+.L1155:
+	.align	2, 0
+.L1154:
+	.word	sText_Win43
+.L749:
+	ldr	r4, .L1156
+	b	.L385
+.L1157:
+	.align	2, 0
+.L1156:
+	.word	sText_Win44
+.L750:
+	ldr	r4, .L1158
+	b	.L385
+.L1159:
+	.align	2, 0
+.L1158:
+	.word	sText_Win45
+.L751:
+	ldr	r4, .L1160
+	b	.L385
+.L1161:
+	.align	2, 0
+.L1160:
+	.word	sText_Win46
+.L752:
+	ldr	r4, .L1162
+	b	.L385
+.L1163:
+	.align	2, 0
+.L1162:
+	.word	sText_Win47
+.L753:
+	ldr	r4, .L1164
+	b	.L385
+.L1165:
+	.align	2, 0
+.L1164:
+	.word	sText_Win48
+.L754:
+	ldr	r4, .L1166
+	b	.L385
+.L1167:
+	.align	2, 0
+.L1166:
+	.word	sText_Win49
+.L755:
+	ldr	r4, .L1168
+	b	.L385
+.L1169:
+	.align	2, 0
+.L1168:
+	.word	sText_Win50
+.L703:
 	mov	r0, #0x80
 	lsl	r0, r0, #0x13
 	and	r1, r1, r0
 	cmp	r1, #0
-	bne	.LCB3465
+	bne	.LCB4642
 	b	.L385	@long jump
-.LCB3465:
-	ldr	r0, .L739
-.L599:
+.LCB4642:
+	ldr	r0, .L1170
 	ldrh	r1, [r0]
+.L822:
 	mov	r0, #0x3
-.L597:
+.L821:
 	bl	CopyTrainerHillTrainerText
-	ldr	r4, .L739+0x4
+	ldr	r4, .L1170+0x4
 	b	.L385
-.L740:
+.L1171:
 	.align	2, 0
-.L739:
+.L1170:
 	.word	gTrainerBattleOpponent_B
 	.word	gStringVar4
-.L537:
+.L761:
 	mov	r0, #0x2
-.L595:
+.L819:
 	bl	GetBattlerAtPosition
 	add	r1, r0, #0
 	lsl	r1, r1, #0x18
@@ -24579,160 +29498,160 @@ BattleStringExpandPlaceholders:
 	bl	BattleStringGetPlayerName
 	add	r4, r0, #0
 	b	.L385
-.L538:
-	ldr	r0, .L741
+.L762:
+	ldr	r0, .L1172
 	ldrb	r2, [r0]
 	mov	r0, sp
 	add	r1, r7, #0
 	bl	BattleStringGetTrainerName
 	add	r4, r0, #0
 	b	.L385
-.L742:
+.L1173:
 	.align	2, 0
-.L741:
+.L1172:
 	.word	gBattlerAttacker
-.L539:
-	ldr	r0, .L743
+.L763:
+	ldr	r0, .L1174
 	ldrb	r0, [r0]
 	bl	GetBattlerPosition
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x2
-	beq	.L541	@cond_branch
+	beq	.L765	@cond_branch
 	cmp	r0, #0x2
-	bgt	.L550	@cond_branch
+	bgt	.L774	@cond_branch
 	cmp	r0, #0x1
-	beq	.L545	@cond_branch
+	beq	.L769	@cond_branch
 	b	.L385
-.L744:
+.L1175:
 	.align	2, 0
-.L743:
+.L1174:
 	.word	gBattlerAttacker
-.L550:
+.L774:
 	cmp	r0, #0x3
-	beq	.L544	@cond_branch
+	beq	.L768	@cond_branch
 	b	.L385
-.L541:
-	ldr	r0, .L745
+.L765:
+	ldr	r0, .L1176
 	ldr	r0, [r0]
 	mov	r1, #0x80
 	lsl	r1, r1, #0xf
 	and	r0, r0, r1
 	cmp	r0, #0
 	beq	.L385	@cond_branch
-.L604:
-	ldr	r0, .L745+0x4
+.L827:
+	ldr	r0, .L1176+0x4
 	ldrh	r0, [r0]
 	bl	GetFrontierOpponentClass
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	mov	r1, #0xd
 	mul	r1, r1, r0
-	ldr	r0, .L745+0x8
+	ldr	r0, .L1176+0x8
 	add	r4, r1, r0
 	b	.L385
-.L746:
+.L1177:
 	.align	2, 0
-.L745:
+.L1176:
 	.word	gBattleTypeFlags
 	.word	gPartnerTrainerId
 	.word	gTrainerClassNames
-.L544:
-	ldr	r0, .L747
+.L768:
+	ldr	r0, .L1178
 	ldr	r1, [r0]
 	mov	r0, #0x80
 	lsl	r0, r0, #0x8
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L545	@cond_branch
+	beq	.L769	@cond_branch
 	mov	r0, #0x80
 	lsl	r0, r0, #0xf
 	and	r1, r1, r0
-	ldr	r2, .L747+0x4
+	ldr	r2, .L1178+0x4
 	cmp	r1, #0
-	beq	.L546	@cond_branch
+	beq	.L770	@cond_branch
 	ldrh	r1, [r2]
-	ldr	r0, .L747+0x8
+	ldr	r0, .L1178+0x8
 	cmp	r1, r0
-	beq	.L545	@cond_branch
-.L546:
+	beq	.L769	@cond_branch
+.L770:
 	ldrh	r0, [r2]
-	b	.L605
-.L748:
+	b	.L828
+.L1179:
 	.align	2, 0
-.L747:
+.L1178:
 	.word	gBattleTypeFlags
 	.word	gTrainerBattleOpponent_B
 	.word	0xffff
-.L545:
-	ldr	r0, .L749
-.L603:
+.L769:
+	ldr	r0, .L1180
+.L826:
 	ldrh	r0, [r0]
-.L605:
+.L828:
 	bl	BattleStringGetOpponentClassByTrainerId
 	add	r4, r0, #0
 	b	.L385
-.L750:
+.L1181:
 	.align	2, 0
-.L749:
+.L1180:
 	.word	gTrainerBattleOpponent_A
-.L551:
-	ldr	r0, .L751
-	b	.L606
-.L752:
+.L775:
+	ldr	r0, .L1182
+	b	.L829
+.L1183:
 	.align	2, 0
-.L751:
+.L1182:
 	.word	gBattlerAttacker
-.L554:
-	ldr	r0, .L753
-	b	.L607
-.L754:
+.L778:
+	ldr	r0, .L1184
+	b	.L830
+.L1185:
 	.align	2, 0
-.L753:
+.L1184:
 	.word	gBattlerAttacker
-.L557:
-	ldr	r0, .L755
-.L606:
+.L781:
+	ldr	r0, .L1186
+.L829:
 	ldrb	r0, [r0]
 	bl	GetBattlerSide
 	lsl	r0, r0, #0x18
-	ldr	r4, .L755+0x4
+	ldr	r4, .L1186+0x4
 	cmp	r0, #0
 	bne	.L385	@cond_branch
-	ldr	r4, .L755+0x8
+	ldr	r4, .L1186+0x8
 	b	.L385
-.L756:
+.L1187:
 	.align	2, 0
-.L755:
+.L1186:
 	.word	gBattlerTarget
 	.word	sText_Opposing1
 	.word	sText_Your1
-.L560:
-	ldr	r0, .L757
-.L607:
+.L784:
+	ldr	r0, .L1188
+.L830:
 	ldrb	r0, [r0]
 	bl	GetBattlerSide
 	lsl	r0, r0, #0x18
-	ldr	r4, .L757+0x4
+	ldr	r4, .L1188+0x4
 	cmp	r0, #0
 	bne	.L385	@cond_branch
-	ldr	r4, .L757+0x8
+	ldr	r4, .L1188+0x8
 .L385:
 	mov	r0, r9
-	ldrb	r3, [r0]
-	mov	r2, r9
-	add	r2, r2, #0x1
+	ldrb	r2, [r0]
+	mov	r3, r9
+	add	r3, r3, #0x1
 	cmp	r4, #0
-	beq	.L565	@cond_branch
-.L575:
+	beq	.L789	@cond_branch
+.L799:
 	ldrb	r1, [r4]
 	add	r0, r1, #0
-	mov	r2, r9
-	ldrb	r3, [r2]
-	add	r2, r2, #0x1
+	mov	r3, r9
+	ldrb	r2, [r3]
+	add	r3, r3, #0x1
 	cmp	r0, #0xff
-	beq	.L565	@cond_branch
-.L568:
+	beq	.L789	@cond_branch
+.L792:
 	mov	r5, r8
 	add	r0, r5, r6
 	strb	r1, [r0]
@@ -24741,51 +29660,51 @@ BattleStringExpandPlaceholders:
 	ldrb	r1, [r4]
 	add	r0, r1, #0
 	cmp	r0, #0xff
-	bne	.L568	@cond_branch
-.L565:
-	add	r0, r3, #0
+	bne	.L792	@cond_branch
+.L789:
+	add	r0, r2, #0
 	cmp	r0, #0x24
-	beq	.L571	@cond_branch
+	beq	.L795	@cond_branch
 	cmp	r0, #0x30
-	beq	.L571	@cond_branch
+	beq	.L795	@cond_branch
 	cmp	r0, #0x25
-	beq	.L571	@cond_branch
+	beq	.L795	@cond_branch
 	cmp	r0, #0x31
-	bne	.L572	@cond_branch
-.L571:
+	bne	.L796	@cond_branch
+.L795:
 	mov	r0, r8
 	add	r1, r0, r6
 	mov	r0, #0xfc
 	strb	r0, [r1]
 	add	r6, r6, #0x1
-	mov	r5, r8
-	add	r1, r5, r6
+	mov	r2, r8
+	add	r1, r2, r6
 	mov	r0, #0x9
 	strb	r0, [r1]
 	add	r6, r6, #0x1
-	b	.L572
-.L758:
+	b	.L796
+.L1189:
 	.align	2, 0
-.L757:
+.L1188:
 	.word	gBattlerTarget
 	.word	sText_Opposing2
 	.word	sText_Your2
 .L384:
-	mov	r2, r8
-	add	r0, r2, r6
+	mov	r3, r8
+	add	r0, r3, r6
 	strb	r1, [r0]
 	add	r6, r6, #0x1
-	mov	r2, r9
-	add	r2, r2, #0x1
-.L572:
-	mov	r9, r2
-	ldrb	r1, [r2]
-.L577:
+	mov	r3, r9
+	add	r3, r3, #0x1
+.L796:
+	mov	r9, r3
+	ldrb	r1, [r3]
+.L801:
 	add	r0, r1, #0
 	cmp	r0, #0xff
-	beq	.LCB3779
+	beq	.LCB4956
 	bl	.L383	@far jump
-.LCB3779:
+.LCB4956:
 	mov	r5, r8
 	add	r1, r5, r6
 	mov	r2, r9
@@ -24814,14 +29733,14 @@ IllusionNickHack:
 	mov	r6, #0x64
 	mov	r0, r1
 	mul	r0, r0, r6
-	ldr	r5, .L770
+	ldr	r5, .L1201
 	add	r7, r0, r5
 	add	r0, r7, #0
 	bl	GetMonAbility
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x95
-	bne	.L760	@cond_branch
+	bne	.L1191	@cond_branch
 	mov	r1, #0x2
 	add	r0, r4, #0
 	eor	r0, r0, r1
@@ -24829,8 +29748,8 @@ IllusionNickHack:
 	lsr	r0, r0, #0x18
 	bl	IsBattlerAlive
 	cmp	r0, #0
-	beq	.L761	@cond_branch
-	ldr	r1, .L770+0x4
+	beq	.L1192	@cond_branch
+	ldr	r1, .L1201+0x4
 	mov	r0, #0x2
 	eor	r0, r0, r4
 	lsl	r0, r0, #0x1
@@ -24838,60 +29757,60 @@ IllusionNickHack:
 	ldrh	r0, [r0]
 	mul	r0, r0, r6
 	add	r6, r0, r5
-	b	.L762
-.L771:
+	b	.L1193
+.L1202:
 	.align	2, 0
-.L770:
+.L1201:
 	.word	gEnemyParty
 	.word	gBattlerPartyIndexes
-.L769:
+.L1200:
 	add	r0, r4, #0
 	mov	r1, #0x2
 	mov	r2, r8
 	bl	GetMonData
-	b	.L759
-.L761:
+	b	.L1190
+.L1192:
 	add	r6, r7, #0
-.L762:
+.L1193:
 	mov	r5, #0x5
-.L766:
+.L1197:
 	mov	r0, #0x64
 	mov	r1, r5
 	mul	r1, r1, r0
-	ldr	r0, .L772
+	ldr	r0, .L1203
 	add	r4, r1, r0
 	add	r0, r4, #0
 	mov	r1, #0x5
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L765	@cond_branch
+	beq	.L1196	@cond_branch
 	add	r0, r4, #0
 	mov	r1, #0x39
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L765	@cond_branch
+	beq	.L1196	@cond_branch
 	cmp	r4, r7
-	beq	.L765	@cond_branch
+	beq	.L1196	@cond_branch
 	cmp	r4, r6
-	bne	.L769	@cond_branch
-.L765:
+	bne	.L1200	@cond_branch
+.L1196:
 	sub	r5, r5, #0x1
 	cmp	r5, #0
-	bge	.L766	@cond_branch
-.L760:
+	bge	.L1197	@cond_branch
+.L1191:
 	add	r0, r7, #0
 	mov	r1, #0x2
 	mov	r2, r8
 	bl	GetMonData
-.L759:
+.L1190:
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L773:
+.L1204:
 	.align	2, 0
-.L772:
+.L1203:
 	.word	gEnemyParty
 .Lfe11:
 	.size	 IllusionNickHack,.Lfe11-IllusionNickHack
@@ -24912,79 +29831,79 @@ ExpandBattleTextBuffPlaceholders:
 	strb	r0, [r5]
 	ldrb	r0, [r7, #0x1]
 	cmp	r0, #0xff
-	bne	.LCB3923
-	b	.L776	@long jump
-.LCB3923:
-.L777:
+	bne	.LCB5100
+	b	.L1207	@long jump
+.LCB5100:
+.L1208:
 	add	r0, r7, r6
 	ldrb	r1, [r0]
 	add	r4, r0, #0
 	cmp	r1, #0xa
-	bls	.LCB3931
-	b	.L775	@long jump
-.LCB3931:
+	bls	.LCB5108
+	b	.L1206	@long jump
+.LCB5108:
 	lsl	r0, r1, #0x2
-	ldr	r1, .L821
+	ldr	r1, .L1252
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L822:
+.L1253:
 	.align	2, 0
-.L821:
-	.word	.L813
+.L1252:
+	.word	.L1244
 	.align	2, 0
 	.align	2, 0
-.L813:
-	.word	.L779
-	.word	.L780
-	.word	.L788
-	.word	.L789
-	.word	.L790
-	.word	.L795
-	.word	.L796
-	.word	.L797
-	.word	.L804
-	.word	.L805
-	.word	.L806
-.L779:
+.L1244:
+	.word	.L1210
+	.word	.L1211
+	.word	.L1219
+	.word	.L1220
+	.word	.L1221
+	.word	.L1226
+	.word	.L1227
+	.word	.L1228
+	.word	.L1235
+	.word	.L1236
+	.word	.L1237
+.L1210:
 	add	r0, r6, r7
 	ldrb	r1, [r0, #0x1]
 	ldrb	r0, [r0, #0x2]
 	lsl	r0, r0, #0x8
 	orr	r1, r1, r0
-	ldr	r0, .L823
+	ldr	r0, .L1254
 	sub	r1, r1, #0xc
 	lsl	r1, r1, #0x2
 	add	r1, r1, r0
 	ldr	r1, [r1]
-	b	.L816
-.L824:
+	b	.L1247
+.L1255:
 	.align	2, 0
-.L823:
+.L1254:
 	.word	gBattleStringsTable
-.L780:
+.L1211:
 	ldrb	r0, [r4, #0x1]
 	cmp	r0, #0x2
-	beq	.L783	@cond_branch
+	beq	.L1214	@cond_branch
 	cmp	r0, #0x2
-	bgt	.L787	@cond_branch
+	bgt	.L1218	@cond_branch
 	cmp	r0, #0x1
-	beq	.L782	@cond_branch
-	b	.L781
-.L787:
+	beq	.L1213	@cond_branch
+	b	.L1212
+.L1218:
 	cmp	r0, #0x4
-	beq	.L784	@cond_branch
-	b	.L781
-.L782:
+	beq	.L1215	@cond_branch
+	b	.L1212
+.L1213:
 	ldrb	r4, [r4, #0x3]
 	mov	r8, r4
-	b	.L781
-.L783:
+	b	.L1212
+.L1214:
 	ldrb	r1, [r4, #0x3]
 	ldrb	r0, [r4, #0x4]
 	lsl	r0, r0, #0x8
-	b	.L817
-.L784:
+	b	.L1248
+.L1215:
 	ldrb	r0, [r4, #0x3]
 	mov	r8, r0
 	ldrb	r0, [r4, #0x4]
@@ -24996,10 +29915,10 @@ ExpandBattleTextBuffPlaceholders:
 	orr	r1, r1, r0
 	ldrb	r0, [r4, #0x6]
 	lsl	r0, r0, #0x18
-.L817:
+.L1248:
 	orr	r1, r1, r0
 	mov	r8, r1
-.L781:
+.L1212:
 	add	r4, r6, r7
 	ldrb	r3, [r4, #0x2]
 	add	r0, r5, #0
@@ -25009,8 +29928,8 @@ ExpandBattleTextBuffPlaceholders:
 	add	r0, r6, #0x3
 	ldrb	r4, [r4, #0x1]
 	add	r6, r0, r4
-	b	.L775
-.L788:
+	b	.L1206
+.L1219:
 	add	r0, r6, r7
 	ldrb	r1, [r0, #0x1]
 	ldrb	r0, [r0, #0x2]
@@ -25018,94 +29937,94 @@ ExpandBattleTextBuffPlaceholders:
 	orr	r1, r1, r0
 	mov	r0, #0xd
 	mul	r1, r1, r0
-	ldr	r0, .L825
+	ldr	r0, .L1256
 	add	r1, r1, r0
-	b	.L816
-.L826:
+	b	.L1247
+.L1257:
 	.align	2, 0
-.L825:
+.L1256:
 	.word	gMoveNames
-.L789:
+.L1220:
 	add	r0, r6, r7
 	ldrb	r0, [r0, #0x1]
 	lsl	r1, r0, #0x3
 	sub	r1, r1, r0
-	ldr	r0, .L827
+	ldr	r0, .L1258
 	add	r1, r1, r0
-	b	.L818
-.L828:
+	b	.L1249
+.L1259:
 	.align	2, 0
-.L827:
+.L1258:
 	.word	gTypeNames
-.L790:
+.L1221:
 	ldrb	r0, [r4, #0x1]
 	bl	GetBattlerSide
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L791	@cond_branch
+	bne	.L1222	@cond_branch
 	ldrb	r1, [r4, #0x2]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L829
+	ldr	r1, .L1260
 	add	r0, r0, r1
 	mov	r1, #0x2
 	mov	r2, sp
 	bl	GetMonData
-	b	.L792
-.L830:
+	b	.L1223
+.L1261:
 	.align	2, 0
-.L829:
+.L1260:
 	.word	gPlayerParty
-.L791:
-	ldr	r0, .L831
+.L1222:
+	ldr	r0, .L1262
 	ldr	r0, [r0]
 	mov	r1, #0x8
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L793	@cond_branch
-	ldr	r1, .L831+0x4
+	beq	.L1224	@cond_branch
+	ldr	r1, .L1262+0x4
 	add	r0, r5, #0
 	bl	StringAppend
-	b	.L794
-.L832:
+	b	.L1225
+.L1263:
 	.align	2, 0
-.L831:
+.L1262:
 	.word	gBattleTypeFlags
 	.word	sText_FoePkmnPrefix
-.L793:
-	ldr	r1, .L833
+.L1224:
+	ldr	r1, .L1264
 	add	r0, r5, #0
 	bl	StringAppend
-.L794:
+.L1225:
 	add	r0, r6, r7
 	ldrb	r1, [r0, #0x2]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L833+0x4
+	ldr	r1, .L1264+0x4
 	add	r0, r0, r1
 	mov	r1, #0x2
 	mov	r2, sp
 	bl	GetMonData
-.L792:
+.L1223:
 	mov	r0, sp
 	bl	StringGetEnd10
 	add	r0, r5, #0
 	mov	r1, sp
 	bl	StringAppend
-	b	.L812
-.L834:
+	b	.L1243
+.L1265:
 	.align	2, 0
-.L833:
+.L1264:
 	.word	sText_WildPkmnPrefix
 	.word	gEnemyParty
-.L795:
-	ldr	r1, .L835
-	b	.L819
-.L836:
+.L1226:
+	ldr	r1, .L1266
+	b	.L1250
+.L1267:
 	.align	2, 0
-.L835:
+.L1266:
 	.word	gStatNamesTable
-.L796:
+.L1227:
 	add	r0, r6, r7
 	ldrb	r1, [r0, #0x1]
 	ldrb	r0, [r0, #0x2]
@@ -25113,32 +30032,32 @@ ExpandBattleTextBuffPlaceholders:
 	orr	r1, r1, r0
 	add	r0, r5, #0
 	bl	GetSpeciesName
-	b	.L812
-.L797:
+	b	.L1243
+.L1228:
 	add	r4, r6, r7
-	ldr	r0, .L837
+	ldr	r0, .L1268
 	ldrb	r2, [r4, #0x1]
 	lsl	r1, r2, #0x1
 	add	r1, r1, r0
 	ldrb	r0, [r4, #0x2]
 	ldrh	r1, [r1]
 	cmp	r0, r1
-	bne	.L798	@cond_branch
+	bne	.L1229	@cond_branch
 	add	r0, r2, #0
 	add	r1, r5, #0
 	bl	GetBattlerNick
-	b	.L812
-.L838:
+	b	.L1243
+.L1269:
 	.align	2, 0
-.L837:
+.L1268:
 	.word	gBattlerPartyIndexes
-.L798:
-	ldr	r0, .L839
+.L1229:
+	ldr	r0, .L1270
 	add	r1, r0, #0
 	add	r1, r1, #0x32
 	ldrb	r0, [r1]
 	cmp	r0, #0
-	beq	.L800	@cond_branch
+	beq	.L1231	@cond_branch
 	mov	r0, #0x0
 	strb	r0, [r1]
 	ldrb	r0, [r4, #0x1]
@@ -25147,65 +30066,65 @@ ExpandBattleTextBuffPlaceholders:
 	bl	IllusionNickHack
 	add	r0, r5, #0
 	bl	StringGetEnd10
-	b	.L812
-.L840:
+	b	.L1243
+.L1271:
 	.align	2, 0
-.L839:
+.L1270:
 	.word	gBattleScripting
-.L800:
+.L1231:
 	add	r0, r2, #0
 	bl	GetBattlerSide
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L802	@cond_branch
+	bne	.L1233	@cond_branch
 	ldrb	r1, [r4, #0x2]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L841
+	ldr	r1, .L1272
 	add	r0, r0, r1
 	mov	r1, #0x2
 	add	r2, r5, #0
 	bl	GetMonData
-	b	.L803
-.L842:
+	b	.L1234
+.L1273:
 	.align	2, 0
-.L841:
+.L1272:
 	.word	gPlayerParty
-.L802:
+.L1233:
 	ldrb	r1, [r4, #0x2]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L843
+	ldr	r1, .L1274
 	add	r0, r0, r1
 	mov	r1, #0x2
 	add	r2, r5, #0
 	bl	GetMonData
-.L803:
+.L1234:
 	add	r0, r5, #0
 	bl	StringGetEnd10
-	b	.L820
-.L844:
+	b	.L1251
+.L1275:
 	.align	2, 0
-.L843:
+.L1274:
 	.word	gEnemyParty
-.L804:
-	ldr	r1, .L845
-.L819:
+.L1235:
+	ldr	r1, .L1276
+.L1250:
 	add	r0, r6, r7
 	ldrb	r0, [r0, #0x1]
 	lsl	r0, r0, #0x2
 	add	r0, r0, r1
 	ldr	r1, [r0]
-.L818:
+.L1249:
 	add	r0, r5, #0
 	bl	StringAppend
 	add	r6, r6, #0x2
-	b	.L775
-.L846:
+	b	.L1206
+.L1277:
 	.align	2, 0
-.L845:
+.L1276:
 	.word	gPokeblockWasTooXStringTable
-.L805:
+.L1236:
 	add	r0, r6, r7
 	ldrb	r1, [r0, #0x1]
 	ldrb	r0, [r0, #0x2]
@@ -25213,52 +30132,52 @@ ExpandBattleTextBuffPlaceholders:
 	orr	r1, r1, r0
 	mov	r0, #0xd
 	mul	r1, r1, r0
-	ldr	r0, .L847
+	ldr	r0, .L1278
 	add	r1, r1, r0
-	b	.L816
-.L848:
+	b	.L1247
+.L1279:
 	.align	2, 0
-.L847:
+.L1278:
 	.word	gAbilityNames
-.L806:
+.L1237:
 	add	r0, r6, r7
 	ldrb	r2, [r0, #0x1]
 	ldrb	r0, [r0, #0x2]
 	lsl	r0, r0, #0x8
 	orr	r2, r2, r0
-	ldr	r0, .L849
+	ldr	r0, .L1280
 	ldr	r0, [r0]
-	ldr	r1, .L849+0x4
+	ldr	r1, .L1280+0x4
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L807	@cond_branch
+	beq	.L1238	@cond_branch
 	cmp	r2, #0xcd
-	bne	.L808	@cond_branch
-	ldr	r2, .L849+0x8
-	ldr	r0, .L849+0xc
+	bne	.L1239	@cond_branch
+	ldr	r2, .L1280+0x8
+	ldr	r0, .L1280+0xc
 	add	r0, r0, #0x25
 	ldrb	r1, [r0]
 	lsl	r0, r1, #0x3
 	sub	r0, r0, r1
 	lsl	r0, r0, #0x2
 	add	r0, r0, r2
-	ldr	r1, .L849+0x10
+	ldr	r1, .L1280+0x10
 	ldrb	r2, [r1]
 	ldrh	r0, [r0, #0x18]
 	cmp	r0, r2
-	bne	.L809	@cond_branch
+	bne	.L1240	@cond_branch
 	lsl	r1, r2, #0x3
 	sub	r1, r1, r2
 	lsl	r1, r1, #0x2
-	ldr	r0, .L849+0x14
+	ldr	r0, .L1280+0x14
 	add	r1, r1, r0
 	add	r0, r5, #0
 	bl	StringCopy
-	ldr	r1, .L849+0x18
-	b	.L816
-.L850:
+	ldr	r1, .L1280+0x18
+	b	.L1247
+.L1281:
 	.align	2, 0
-.L849:
+.L1280:
 	.word	gBattleTypeFlags
 	.word	0x2000002
 	.word	gLinkPlayers
@@ -25266,36 +30185,36 @@ ExpandBattleTextBuffPlaceholders:
 	.word	gPotentialItemEffectBattler
 	.word	gEnigmaBerries
 	.word	sText_BerrySuffix
-.L809:
-	ldr	r1, .L851
-.L816:
+.L1240:
+	ldr	r1, .L1282
+.L1247:
 	add	r0, r5, #0
 	bl	StringAppend
-	b	.L812
-.L852:
+	b	.L1243
+.L1283:
 	.align	2, 0
-.L851:
+.L1282:
 	.word	sText_EnigmaBerry
-.L808:
+.L1239:
 	add	r0, r2, #0
 	add	r1, r5, #0
 	bl	CopyItemName
-	b	.L812
-.L807:
+	b	.L1243
+.L1238:
 	add	r0, r2, #0
 	add	r1, r5, #0
 	bl	CopyItemName
-.L820:
-.L812:
+.L1251:
+.L1243:
 	add	r6, r6, #0x3
-.L775:
+.L1206:
 	add	r0, r7, r6
 	ldrb	r0, [r0]
 	cmp	r0, #0xff
-	beq	.LCB4418
-	b	.L777	@long jump
-.LCB4418:
-.L776:
+	beq	.LCB5595
+	b	.L1208	@long jump
+.LCB5595:
+.L1207:
 	add	sp, sp, #0xc
 	pop	{r3}
 	mov	r8, r3
@@ -25311,49 +30230,49 @@ ChooseMoveUsedParticle:
 	push	{r4, r5, lr}
 	add	r4, r0, #0
 	mov	r2, #0x0
-	ldr	r5, .L864
-	ldr	r3, .L864+0x4
-.L854:
+	ldr	r5, .L1295
+	ldr	r3, .L1295+0x4
+.L1285:
 	cmp	r2, #0x4
-	beq	.L855	@cond_branch
+	beq	.L1286	@cond_branch
 	ldrh	r1, [r3]
 	cmp	r1, #0
-	bne	.L857	@cond_branch
+	bne	.L1288	@cond_branch
 	add	r2, r2, #0x1
-.L857:
+.L1288:
 	ldr	r0, [r5]
 	add	r3, r3, #0x2
 	ldrh	r0, [r0]
 	cmp	r1, r0
-	bne	.L854	@cond_branch
-.L855:
+	bne	.L1285	@cond_branch
+.L1286:
 	cmp	r2, #0
-	blt	.L860	@cond_branch
+	blt	.L1291	@cond_branch
 	cmp	r2, #0x2
-	bgt	.L861	@cond_branch
-	ldr	r1, .L864+0x8
+	bgt	.L1292	@cond_branch
+	ldr	r1, .L1295+0x8
 	add	r0, r4, #0
 	bl	StringCopy
-	b	.L860
-.L865:
+	b	.L1291
+.L1296:
 	.align	2, 0
-.L864:
+.L1295:
 	.word	gBattleMsgDataPtr
 	.word	sGrammarMoveUsedTable
 	.word	sText_SpaceIs
-.L861:
+.L1292:
 	cmp	r2, #0x4
-	bgt	.L860	@cond_branch
-	ldr	r1, .L866
+	bgt	.L1291	@cond_branch
+	ldr	r1, .L1297
 	add	r0, r4, #0
 	bl	StringCopy
-.L860:
+.L1291:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L867:
+.L1298:
 	.align	2, 0
-.L866:
+.L1297:
 	.word	sText_ApostropheS
 .Lfe13:
 	.size	 ChooseMoveUsedParticle,.Lfe13-ChooseMoveUsedParticle
@@ -25364,95 +30283,95 @@ ChooseTypeOfMoveUsedString:
 	push	{r4, r5, lr}
 	add	r3, r0, #0
 	mov	r4, #0x0
-	b	.L888
-.L871:
+	b	.L1319
+.L1302:
 	add	r3, r3, #0x1
-.L888:
+.L1319:
 	ldrb	r0, [r3]
 	cmp	r0, #0xff
-	bne	.L871	@cond_branch
-	ldr	r1, .L890
-	ldr	r5, .L890+0x4
+	bne	.L1302	@cond_branch
+	ldr	r1, .L1321
+	ldr	r5, .L1321+0x4
 	mov	r0, #0x0
 	lsl	r0, r0, #0x1
 	add	r2, r0, r1
-.L873:
+.L1304:
 	cmp	r4, #0x4
-	beq	.L887	@cond_branch
+	beq	.L1318	@cond_branch
 	ldrh	r1, [r2]
 	cmp	r1, #0
-	bne	.L876	@cond_branch
+	bne	.L1307	@cond_branch
 	add	r4, r4, #0x1
-.L876:
+.L1307:
 	ldr	r0, [r5]
 	add	r2, r2, #0x2
 	ldrh	r0, [r0]
 	cmp	r1, r0
-	bne	.L873	@cond_branch
+	bne	.L1304	@cond_branch
 	cmp	r4, #0x4
-	bhi	.L879	@cond_branch
-.L887:
+	bhi	.L1310	@cond_branch
+.L1318:
 	lsl	r0, r4, #0x2
-	ldr	r1, .L890+0x8
+	ldr	r1, .L1321+0x8
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L891:
+.L1322:
 	.align	2, 0
-.L890:
+.L1321:
 	.word	sGrammarMoveUsedTable
 	.word	gBattleMsgDataPtr
-	.word	.L885
+	.word	.L1316
 	.align	2, 0
 	.align	2, 0
-.L885:
-	.word	.L880
-	.word	.L881
-	.word	.L882
-	.word	.L883
-	.word	.L884
-.L880:
-	ldr	r1, .L892
-	b	.L889
-.L893:
+.L1316:
+	.word	.L1311
+	.word	.L1312
+	.word	.L1313
+	.word	.L1314
+	.word	.L1315
+.L1311:
+	ldr	r1, .L1323
+	b	.L1320
+.L1324:
 	.align	2, 0
-.L892:
+.L1323:
 	.word	sText_ExclamationMark
-.L881:
-	ldr	r1, .L894
-	b	.L889
-.L895:
+.L1312:
+	ldr	r1, .L1325
+	b	.L1320
+.L1326:
 	.align	2, 0
-.L894:
+.L1325:
 	.word	sText_ExclamationMark2
-.L882:
-	ldr	r1, .L896
-	b	.L889
-.L897:
+.L1313:
+	ldr	r1, .L1327
+	b	.L1320
+.L1328:
 	.align	2, 0
-.L896:
+.L1327:
 	.word	sText_ExclamationMark3
-.L883:
-	ldr	r1, .L898
-.L889:
+.L1314:
+	ldr	r1, .L1329
+.L1320:
 	add	r0, r3, #0
 	bl	StringCopy
-	b	.L879
-.L899:
+	b	.L1310
+.L1330:
 	.align	2, 0
-.L898:
+.L1329:
 	.word	sText_ExclamationMark4
-.L884:
-	ldr	r1, .L900
+.L1315:
+	ldr	r1, .L1331
 	add	r0, r3, #0
 	bl	StringCopy
-.L879:
+.L1310:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L901:
+.L1332:
 	.align	2, 0
-.L900:
+.L1331:
 	.word	sText_ExclamationMark5
 .Lfe14:
 	.size	 ChooseTypeOfMoveUsedString,.Lfe14-ChooseTypeOfMoveUsedString
@@ -25469,8 +30388,8 @@ BattlePutTextOnWindow:
 	add	r4, r0, #0
 	lsl	r1, r1, #0x18
 	lsr	r7, r1, #0x18
-	ldr	r1, .L921
-	ldr	r0, .L921+0x4
+	ldr	r1, .L1352
+	ldr	r0, .L1352+0x4
 	add	r0, r0, #0x24
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x2
@@ -25480,17 +30399,17 @@ BattlePutTextOnWindow:
 	mov	r0, #0x80
 	and	r0, r0, r7
 	cmp	r0, #0
-	beq	.L903	@cond_branch
+	beq	.L1334	@cond_branch
 	mov	r0, #0x7f
 	and	r7, r7, r0
 	mov	r0, #0x0
-	b	.L918
-.L922:
+	b	.L1349
+.L1353:
 	.align	2, 0
-.L921:
+.L1352:
 	.word	sBattleTextOnWindowsInfo
 	.word	gBattleScripting
-.L903:
+.L1334:
 	lsl	r0, r7, #0x1
 	add	r0, r0, r7
 	lsl	r0, r0, #0x2
@@ -25499,7 +30418,7 @@ BattlePutTextOnWindow:
 	add	r0, r7, #0
 	bl	FillWindowPixelBuffer
 	mov	r0, #0x1
-.L918:
+.L1349:
 	mov	r9, r0
 	str	r4, [sp]
 	mov	r0, sp
@@ -25553,8 +30472,8 @@ BattlePutTextOnWindow:
 	mov	r0, sp
 	ldrb	r0, [r0, #0x6]
 	cmp	r0, #0xff
-	bne	.L905	@cond_branch
-	ldr	r0, .L923
+	bne	.L1336	@cond_branch
+	ldr	r0, .L1354
 	add	r0, r0, #0x24
 	ldrb	r0, [r0]
 	add	r1, r7, #0
@@ -25570,101 +30489,101 @@ BattlePutTextOnWindow:
 	mov	r1, sp
 	strb	r0, [r1, #0x8]
 	strb	r0, [r2, #0x6]
-.L905:
+.L1336:
 	cmp	r7, #0x16
-	bne	.L906	@cond_branch
-	ldr	r0, .L923+0x4
+	bne	.L1337	@cond_branch
+	ldr	r0, .L1354+0x4
 	ldrb	r2, [r0]
 	mov	r1, #0x3
 	neg	r1, r1
 	and	r1, r1, r2
-	b	.L919
-.L924:
+	b	.L1350
+.L1355:
 	.align	2, 0
-.L923:
+.L1354:
 	.word	gBattleScripting
 	.word	gTextFlags
-.L906:
-	ldr	r0, .L925
+.L1337:
+	ldr	r0, .L1356
 	ldrb	r1, [r0]
 	mov	r2, #0x2
 	orr	r1, r1, r2
-.L919:
+.L1350:
 	strb	r1, [r0]
 	add	r3, r0, #0
-	ldr	r0, .L925+0x4
+	ldr	r0, .L1356+0x4
 	ldr	r1, [r0]
-	ldr	r2, .L925+0x8
+	ldr	r2, .L1356+0x8
 	and	r1, r1, r2
 	add	r2, r0, #0
 	cmp	r1, #0
-	beq	.L908	@cond_branch
+	beq	.L1339	@cond_branch
 	ldrb	r0, [r3]
 	mov	r1, #0x4
 	orr	r0, r0, r1
-	b	.L920
-.L926:
+	b	.L1351
+.L1357:
 	.align	2, 0
-.L925:
+.L1356:
 	.word	gTextFlags
 	.word	gBattleTypeFlags
 	.word	0x1000002
-.L908:
+.L1339:
 	ldrb	r1, [r3]
 	mov	r0, #0x5
 	neg	r0, r0
 	and	r0, r0, r1
-.L920:
+.L1351:
 	strb	r0, [r3]
 	cmp	r7, #0
-	beq	.L911	@cond_branch
+	beq	.L1342	@cond_branch
 	cmp	r7, #0x16
-	bne	.L910	@cond_branch
-.L911:
+	bne	.L1341	@cond_branch
+.L1342:
 	ldr	r1, [r2]
-	ldr	r0, .L927
+	ldr	r0, .L1358
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L912	@cond_branch
+	beq	.L1343	@cond_branch
 	mov	r6, #0x1
-	b	.L913
-.L928:
+	b	.L1344
+.L1359:
 	.align	2, 0
-.L927:
+.L1358:
 	.word	0x2000002
-.L912:
+.L1343:
 	mov	r0, #0x80
 	lsl	r0, r0, #0x11
 	and	r1, r1, r0
 	cmp	r1, #0
-	beq	.L914	@cond_branch
-	ldr	r4, .L929
+	beq	.L1345	@cond_branch
+	ldr	r4, .L1360
 	bl	GetTextSpeedInRecordedBattle
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	add	r0, r0, r4
 	ldrb	r6, [r0]
-	b	.L913
-.L930:
+	b	.L1344
+.L1361:
 	.align	2, 0
-.L929:
+.L1360:
 	.word	sRecordedBattleTextSpeeds
-.L914:
+.L1345:
 	bl	GetPlayerTextSpeedDelay
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-.L913:
-	ldr	r0, .L931
+.L1344:
+	ldr	r0, .L1362
 	ldrb	r1, [r0]
 	mov	r2, #0x1
 	orr	r1, r1, r2
 	strb	r1, [r0]
-	b	.L916
-.L932:
+	b	.L1347
+.L1363:
 	.align	2, 0
-.L931:
+.L1362:
 	.word	gTextFlags
-.L910:
+.L1341:
 	add	r0, r6, r7
 	lsl	r0, r0, #0x2
 	add	r0, r0, r8
@@ -25674,20 +30593,20 @@ BattlePutTextOnWindow:
 	neg	r0, r0
 	and	r0, r0, r1
 	strb	r0, [r3]
-.L916:
+.L1347:
 	mov	r0, sp
 	add	r1, r6, #0
 	mov	r2, #0x0
 	bl	AddTextPrinter
 	mov	r0, r9
 	cmp	r0, #0
-	beq	.L917	@cond_branch
+	beq	.L1348	@cond_branch
 	add	r0, r7, #0
 	bl	PutWindowTilemap
 	add	r0, r7, #0
 	mov	r1, #0x3
 	bl	CopyWindowToVram
-.L917:
+.L1348:
 	add	sp, sp, #0x10
 	pop	{r3, r4}
 	mov	r8, r3
@@ -25703,15 +30622,15 @@ BattlePutTextOnWindow:
 	.thumb_func
 SetPpNumbersPaletteInMoveSelection:
 	push	{r4, r5, lr}
-	ldr	r1, .L934
-	ldr	r0, .L934+0x4
+	ldr	r1, .L1365
+	ldr	r0, .L1365+0x4
 	ldrb	r2, [r0]
 	lsl	r0, r2, #0x9
 	add	r0, r0, #0x20
 	ldr	r1, [r1]
 	add	r1, r1, r0
-	ldr	r4, .L934+0x8
-	ldr	r0, .L934+0xc
+	ldr	r4, .L1365+0x8
+	ldr	r0, .L1365+0xc
 	add	r2, r2, r0
 	ldrb	r2, [r2]
 	add	r0, r1, #0
@@ -25723,7 +30642,7 @@ SetPpNumbersPaletteInMoveSelection:
 	ldrb	r1, [r1]
 	bl	GetCurrentPpToMaxPpState
 	lsl	r0, r0, #0x18
-	ldr	r5, .L934+0x10
+	ldr	r5, .L1365+0x10
 	lsr	r0, r0, #0x16
 	add	r0, r0, r4
 	ldrh	r1, [r0]
@@ -25733,7 +30652,7 @@ SetPpNumbersPaletteInMoveSelection:
 	ldrh	r0, [r0, #0x2]
 	add	r5, r5, #0xb6
 	strh	r0, [r5]
-	ldr	r4, .L934+0x14
+	ldr	r4, .L1365+0x14
 	add	r0, r2, #0
 	add	r1, r4, #0
 	mov	r2, #0x1
@@ -25746,9 +30665,9 @@ SetPpNumbersPaletteInMoveSelection:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L935:
+.L1366:
 	.align	2, 0
-.L934:
+.L1365:
 	.word	gBattleResources
 	.word	gActiveBattler
 	.word	gUnknown_08D85620
@@ -25769,43 +30688,43 @@ GetCurrentPpToMaxPpState:
 	lsl	r1, r1, #0x18
 	lsr	r0, r1, #0x18
 	cmp	r0, r2
-	beq	.L938	@cond_branch
+	beq	.L1369	@cond_branch
 	cmp	r0, #0x2
-	bhi	.L939	@cond_branch
+	bhi	.L1370	@cond_branch
 	cmp	r2, #0x1
-	bhi	.L938	@cond_branch
-	b	.L944
-.L939:
+	bhi	.L1369	@cond_branch
+	b	.L1375
+.L1370:
 	cmp	r0, #0x7
-	bhi	.L943	@cond_branch
+	bhi	.L1374	@cond_branch
 	cmp	r2, #0x2
-	bhi	.L938	@cond_branch
-.L944:
+	bhi	.L1369	@cond_branch
+.L1375:
 	mov	r0, #0x2
 	sub	r0, r0, r2
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	b	.L950
-.L943:
+	b	.L1381
+.L1374:
 	cmp	r2, #0
-	bne	.L947	@cond_branch
+	bne	.L1378	@cond_branch
 	mov	r0, #0x2
-	b	.L950
-.L947:
+	b	.L1381
+.L1378:
 	lsr	r0, r1, #0x1a
 	cmp	r2, r0
-	bhi	.L948	@cond_branch
+	bhi	.L1379	@cond_branch
 	mov	r0, #0x1
-	b	.L950
-.L948:
+	b	.L1381
+.L1379:
 	lsr	r0, r1, #0x19
 	cmp	r3, r0
-	bhi	.L938	@cond_branch
+	bhi	.L1369	@cond_branch
 	mov	r0, #0x0
-	b	.L950
-.L938:
+	b	.L1381
+.L1369:
 	mov	r0, #0x3
-.L950:
+.L1381:
 	pop	{r1}
 	bx	r1
 .Lfe17:
@@ -25829,11 +30748,11 @@ GetEnemyMonCount:
 	add	r7, r0, #0
 	mov	r6, #0x0
 	mov	r5, #0x0
-.L955:
+.L1386:
 	mov	r0, #0x64
 	mov	r1, r5
 	mul	r1, r1, r0
-	ldr	r0, .L959
+	ldr	r0, .L1390
 	add	r4, r1, r0
 	add	r0, r4, #0
 	mov	r1, #0x41
@@ -25841,31 +30760,31 @@ GetEnemyMonCount:
 	bl	GetMonData
 	add	r1, r0, #0
 	cmp	r1, #0
-	beq	.L954	@cond_branch
-	ldr	r0, .L959+0x4
+	beq	.L1385	@cond_branch
+	ldr	r0, .L1390+0x4
 	cmp	r1, r0
-	beq	.L954	@cond_branch
+	beq	.L1385	@cond_branch
 	cmp	r7, #0
-	beq	.L957	@cond_branch
+	beq	.L1388	@cond_branch
 	add	r0, r4, #0
 	mov	r1, #0x39
 	mov	r2, #0x0
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L954	@cond_branch
-.L957:
+	beq	.L1385	@cond_branch
+.L1388:
 	add	r6, r6, #0x1
-.L954:
+.L1385:
 	add	r5, r5, #0x1
 	cmp	r5, #0x5
-	bls	.L955	@cond_branch
+	bls	.L1386	@cond_branch
 	add	r0, r6, #0
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.L960:
+.L1391:
 	.align	2, 0
-.L959:
+.L1390:
 	.word	gEnemyParty
 	.word	0x432
 .Lfe18:
@@ -25875,7 +30794,7 @@ GetEnemyMonCount:
 	.thumb_func
 IsBattlerHpLow:
 	push	{lr}
-	ldr	r2, .L965
+	ldr	r2, .L1396
 	mov	r1, #0x5c
 	mul	r1, r1, r0
 	add	r1, r1, r2
@@ -25885,16 +30804,16 @@ IsBattlerHpLow:
 	ldrh	r1, [r1, #0x2e]
 	bl	__divsi3
 	cmp	r0, #0x18
-	ble	.L962	@cond_branch
+	ble	.L1393	@cond_branch
 	mov	r0, #0x0
-	b	.L964
-.L966:
+	b	.L1395
+.L1397:
 	.align	2, 0
-.L965:
+.L1396:
 	.word	gBattleMons
-.L962:
+.L1393:
 	mov	r0, #0x1
-.L964:
+.L1395:
 	pop	{r1}
 	bx	r1
 .Lfe19:
@@ -25908,102 +30827,102 @@ ShouldDoTrainerSlide:
 	add	r6, r0, #0
 	add	r5, r1, #0
 	add	r4, r2, #0
-	ldr	r0, .L987
+	ldr	r0, .L1418
 	ldr	r0, [r0]
 	mov	r1, #0x8
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L971	@cond_branch
+	beq	.L1402	@cond_branch
 	lsl	r0, r6, #0x18
 	lsr	r0, r0, #0x18
 	bl	GetBattlerSide
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.L971	@cond_branch
+	bne	.L1402	@cond_branch
 	mov	r0, #0x0
-	ldr	r2, .L987+0x4
+	ldr	r2, .L1418+0x4
 	add	r3, r2, #0
-.L973:
+.L1404:
 	lsl	r1, r0, #0x4
 	ldrh	r7, [r2]
 	cmp	r5, r7
-	bne	.L972	@cond_branch
-	ldr	r0, .L987+0x8
+	bne	.L1403	@cond_branch
+	ldr	r0, .L1418+0x8
 	strb	r6, [r0, #0x17]
 	cmp	r4, #0x1
-	beq	.L978	@cond_branch
+	beq	.L1409	@cond_branch
 	cmp	r4, #0x1
-	bcc	.L976	@cond_branch
+	bcc	.L1407	@cond_branch
 	cmp	r4, #0x2
-	beq	.L980	@cond_branch
-	b	.L971
-.L988:
+	beq	.L1411	@cond_branch
+	b	.L1402
+.L1419:
 	.align	2, 0
-.L987:
+.L1418:
 	.word	gBattleTypeFlags
 	.word	sTrainerSlides
 	.word	gBattleScripting
-.L976:
+.L1407:
 	add	r0, r3, #0x4
 	add	r0, r1, r0
 	ldr	r4, [r0]
 	cmp	r4, #0
-	beq	.L971	@cond_branch
+	beq	.L1402	@cond_branch
 	mov	r0, #0x1
 	bl	GetEnemyMonCount
 	cmp	r0, #0x1
-	bne	.L971	@cond_branch
-	ldr	r0, .L989
+	bne	.L1402	@cond_branch
+	ldr	r0, .L1420
 	ldr	r0, [r0]
 	mov	r1, #0xaa
 	lsl	r1, r1, #0x2
 	add	r0, r0, r1
 	str	r4, [r0]
 	mov	r0, #0x1
-	b	.L985
-.L990:
+	b	.L1416
+.L1421:
 	.align	2, 0
-.L989:
+.L1420:
 	.word	gBattleStruct
-.L978:
+.L1409:
 	add	r0, r3, #0
 	add	r0, r0, #0x8
 	add	r0, r1, r0
 	ldr	r5, [r0]
 	cmp	r5, #0
-	beq	.L971	@cond_branch
+	beq	.L1402	@cond_branch
 	mov	r0, #0x1
 	bl	GetEnemyMonCount
 	add	r4, r0, #0
 	cmp	r4, #0x1
-	bne	.L971	@cond_branch
+	bne	.L1402	@cond_branch
 	add	r0, r6, #0
 	bl	IsBattlerHpLow
 	cmp	r0, #0
-	beq	.L971	@cond_branch
-	ldr	r2, .L991
+	beq	.L1402	@cond_branch
+	ldr	r2, .L1422
 	ldr	r0, [r2]
 	mov	r3, #0xab
 	lsl	r3, r3, #0x2
 	add	r1, r0, r3
 	ldrb	r0, [r1]
 	cmp	r0, #0
-	bne	.L971	@cond_branch
+	bne	.L1402	@cond_branch
 	strb	r4, [r1]
 	ldr	r0, [r2]
 	mov	r7, #0xaa
 	lsl	r7, r7, #0x2
 	add	r0, r0, r7
-	b	.L986
-.L992:
+	b	.L1417
+.L1423:
 	.align	2, 0
-.L991:
+.L1422:
 	.word	gBattleStruct
-.L980:
+.L1411:
 	ldr	r5, [r2, #0xc]
 	cmp	r5, #0
-	beq	.L971	@cond_branch
+	beq	.L1402	@cond_branch
 	mov	r0, #0x1
 	bl	GetEnemyMonCount
 	add	r4, r0, #0
@@ -26011,28 +30930,28 @@ ShouldDoTrainerSlide:
 	bl	GetEnemyMonCount
 	sub	r0, r0, #0x1
 	cmp	r4, r0
-	bne	.L971	@cond_branch
-	ldr	r0, .L993
+	bne	.L1402	@cond_branch
+	ldr	r0, .L1424
 	ldr	r0, [r0]
 	mov	r1, #0xaa
 	lsl	r1, r1, #0x2
 	add	r0, r0, r1
-.L986:
+.L1417:
 	str	r5, [r0]
 	mov	r0, #0x1
-	b	.L985
-.L994:
+	b	.L1416
+.L1425:
 	.align	2, 0
-.L993:
+.L1424:
 	.word	gBattleStruct
-.L972:
+.L1403:
 	add	r2, r2, #0x10
 	add	r0, r0, #0x1
 	cmp	r0, #0
-	beq	.L973	@cond_branch
-.L971:
+	beq	.L1404	@cond_branch
+.L1402:
 	mov	r0, #0x0
-.L985:
+.L1416:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1

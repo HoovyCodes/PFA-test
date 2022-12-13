@@ -107,6 +107,7 @@ static bool8 LoadCardGfx(void);
 static void CB2_InitTrainerCard(void);
 static u32 GetCappedGameStat(u8 statId, u32 maxValue);
 static bool8 HasAllFrontierSymbols(void);
+static bool8 hasHundredWins(void);
 static u8 GetRubyTrainerStars(struct TrainerCard*);
 static u16 GetCaughtMonsCount(void);
 static void SetPlayerCardData(struct TrainerCard*, u8);
@@ -655,35 +656,48 @@ static bool8 HasAllFrontierSymbols(void)
     return TRUE;
 }
 
+static bool8 hasHundredWins(void)
+{
+	return FALSE;
+}
+
 u32 CountPlayerTrainerStars(void)
 {
     u8 stars = 0;
+	u32 i;
+	u16 result=0;
 
-    if (GetGameStat(GAME_STAT_ENTERED_HOF))
-        stars++;
-    if (HasAllHoennMons())
-        stars++;
+	for (i = TRAINER_SAWYER_1+TRAINER_FLAGS_START; i < TRAINER_MARCEL+TRAINER_FLAGS_START+1; i++)
+    {
+        if (FlagGet(i))
+            result++;
+    }
+	if (result>10)
+		stars++;
     if (CountPlayerContestPaintings() > 4)
         stars++;
     if (HasAllFrontierSymbols())
         stars++;
-
     return stars;
 }
 
 static u8 GetRubyTrainerStars(struct TrainerCard *trainerCard)
 {
     u8 stars = 0;
+	u32 i;
+	u16 result=0;
 
-    if (trainerCard->hofDebutHours || trainerCard->hofDebutMinutes || trainerCard->hofDebutSeconds)
+	for (i = TRAINER_SAWYER_1+TRAINER_FLAGS_START; i < TRAINER_MARCEL+TRAINER_FLAGS_START+1; i++)
+    {
+        if (FlagGet(i))
+            result++;
+    }
+	if (result>10)
+		stars++;
+    if (CountPlayerContestPaintings() > 4)
         stars++;
-    if (trainerCard->caughtAllHoenn)
+    if (HasAllFrontierSymbols())
         stars++;
-    if (trainerCard->battleTowerStraightWins > 49)
-        stars++;
-    if (trainerCard->hasAllPaintings)
-        stars++;
-
     return stars;
 }
 
@@ -721,7 +735,7 @@ static void SetPlayerCardData(struct TrainerCard *trainerCard, u8 cardType)
 
     trainerCard->pokemonTrades = GetCappedGameStat(GAME_STAT_POKEMON_TRADES, 0xFFFF);
 
-    trainerCard->money = GetMoney(&gSaveBlock1Ptr->money);
+    trainerCard->money = GetCaughtMonsCount();
 
     for (i = 0; i < TRAINER_CARD_PROFILE_LENGTH; i++)
         trainerCard->easyChatProfile[i] = gSaveBlock1Ptr->easyChatProfile[i];
@@ -733,20 +747,26 @@ static void SetPlayerCardData(struct TrainerCard *trainerCard, u8 cardType)
     case CARD_TYPE_EMERALD:
         trainerCard->battleTowerWins = 0;
         trainerCard->battleTowerStraightWins = 0;
+        trainerCard->contestsWithFriends = 0;
+        trainerCard->pokeblocksWithFriends = 0;
+        if (CountPlayerContestPaintings() > 4)
+            trainerCard->hasAllPaintings = TRUE;
+        trainerCard->stars = 0;
     // Seems like GF got CARD_TYPE_FRLG and CARD_TYPE_RS wrong.
     case CARD_TYPE_FRLG:
         trainerCard->contestsWithFriends = GetCappedGameStat(GAME_STAT_WON_LINK_CONTEST, 999);
         trainerCard->pokeblocksWithFriends = GetCappedGameStat(GAME_STAT_POKEBLOCKS_WITH_FRIENDS, 0xFFFF);
         if (CountPlayerContestPaintings() > 4)
             trainerCard->hasAllPaintings = TRUE;
-        trainerCard->stars = GetRubyTrainerStars(trainerCard);
+        trainerCard->stars = GetRubyTrainerStars(trainerCard)+1;
         break;
     case CARD_TYPE_RS:
         trainerCard->battleTowerWins = 0;
         trainerCard->battleTowerStraightWins = 0;
         trainerCard->contestsWithFriends = 0;
         trainerCard->pokeblocksWithFriends = 0;
-        trainerCard->hasAllPaintings = 0;
+        if (CountPlayerContestPaintings() > 4)
+            trainerCard->hasAllPaintings = TRUE;
         trainerCard->stars = 0;
         break;
     }
@@ -1068,13 +1088,20 @@ static void PrintPokedexOnCard(void)
 {
     s32 xOffset;
     u8 top;
+	u32 i;
+	u8 symbols;
+	for (i = FLAG_SYS_TOWER_SILVER; i < FLAG_SYS_TOWER_SILVER + NUM_SYMBOLS; i++)
+    {
+        if (FlagGet(i))
+            symbols++;
+    }
     if (FlagGet(FLAG_SYS_POKEDEX_GET))
     {
         if (!sData->isHoenn)
             AddTextPrinterParameterized3(1, 1, 20, 72, sTrainerCardTextColors, TEXT_SPEED_FF, gText_TrainerCardPokedex);
         else
             AddTextPrinterParameterized3(1, 1, 16, 73, sTrainerCardTextColors, TEXT_SPEED_FF, gText_TrainerCardPokedex);
-        StringCopy(ConvertIntToDecimalStringN(gStringVar4, sData->trainerCard.caughtMonsCount, STR_CONV_MODE_LEFT_ALIGN, 3), gText_EmptyString6);
+        StringCopy(ConvertIntToDecimalStringN(gStringVar4, symbols, STR_CONV_MODE_LEFT_ALIGN, 3), gText_EmptyString6);
         if (!sData->isHoenn)
         {
             xOffset = GetStringRightAlignXOffset(1, gStringVar4, 144);
@@ -1500,7 +1527,7 @@ static void DrawStarsAndBadgesOnCard(void)
     u16 tileNum = 192;
     u8 palNum = 3;
 
-    FillBgTilemapBufferRect(3, 143, 15, yOffsets[sData->isHoenn], sData->trainerCard.stars, 1, 4);
+    FillBgTilemapBufferRect(3, 143, 15, yOffsets[sData->isHoenn], sData->trainerCard.stars-1, 1, 4);
     if (!sData->isLink)
     {
         x = 4;

@@ -540,6 +540,12 @@
 #define PH_NURSE_BLEND              607
 #define PH_NURSE_HELD               608
 #define PH_NURSE_SOLO               609
+#define MUS_VS_TRAINER_HGSS         610
+#define MUS_VS_TRAINER_DPPT         611
+#define MUS_VS_TRAINER_BW           612
+#define MUS_VS_TRAINER_COLO         613
+#define MUS_VS_TRAINER_BRAIN_DPPT   614
+#define MUS_VS_LEADER_DPPT          615
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

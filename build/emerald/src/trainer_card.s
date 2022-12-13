@@ -2214,100 +2214,138 @@ HasAllFrontierSymbols:
 .Lfe9:
 	.size	 HasAllFrontierSymbols,.Lfe9-HasAllFrontierSymbols
 	.align	2, 0
+	.type	 hasHundredWins,function
+	.thumb_func
+hasHundredWins:
+	mov	r0, #0x0
+	bx	lr
+.Lfe10:
+	.size	 hasHundredWins,.Lfe10-hasHundredWins
+	.align	2, 0
 	.globl	CountPlayerTrainerStars
 	.type	 CountPlayerTrainerStars,function
 	.thumb_func
 CountPlayerTrainerStars:
-	push	{r4, lr}
-	mov	r0, #0xa
-	bl	GetGameStat
-	neg	r1, r0
-	orr	r1, r1, r0
-	lsr	r4, r1, #0x1f
-	bl	HasAllHoennMons
-	lsl	r0, r0, #0x10
+	push	{r4, r5, r6, lr}
+	mov	r6, #0x0
+	mov	r5, #0x0
+	ldr	r4, .L212
+.L206:
+	lsl	r0, r4, #0x10
+	lsr	r0, r0, #0x10
+	bl	FlagGet
+	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L203	@cond_branch
+	beq	.L205	@cond_branch
+	add	r0, r5, #0x1
+	lsl	r0, r0, #0x10
+	lsr	r5, r0, #0x10
+.L205:
 	add	r4, r4, #0x1
-.L203:
+	ldr	r0, .L212+0x4
+	cmp	r4, r0
+	bls	.L206	@cond_branch
+	cmp	r5, #0xa
+	bls	.L209	@cond_branch
+	add	r0, r6, #0x1
+	lsl	r0, r0, #0x18
+	lsr	r6, r0, #0x18
+.L209:
 	bl	CountPlayerContestPaintings
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x4
-	bls	.L204	@cond_branch
-	add	r0, r4, #0x1
+	bls	.L210	@cond_branch
+	add	r0, r6, #0x1
 	lsl	r0, r0, #0x18
-	lsr	r4, r0, #0x18
-.L204:
+	lsr	r6, r0, #0x18
+.L210:
 	bl	HasAllFrontierSymbols
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L205	@cond_branch
-	add	r0, r4, #0x1
+	beq	.L211	@cond_branch
+	add	r0, r6, #0x1
 	lsl	r0, r0, #0x18
-	lsr	r4, r0, #0x18
-.L205:
-	add	r0, r4, #0
-	pop	{r4}
+	lsr	r6, r0, #0x18
+.L211:
+	add	r0, r6, #0
+	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.Lfe10:
-	.size	 CountPlayerTrainerStars,.Lfe10-CountPlayerTrainerStars
+.L213:
+	.align	2, 0
+.L212:
+	.word	0x501
+	.word	0x50b
+.Lfe11:
+	.size	 CountPlayerTrainerStars,.Lfe11-CountPlayerTrainerStars
 	.align	2, 0
 	.type	 GetRubyTrainerStars,function
 	.thumb_func
 GetRubyTrainerStars:
-	push	{lr}
-	add	r1, r0, #0
-	mov	r2, #0x0
-	ldrh	r0, [r1, #0x6]
-	cmp	r0, #0
-	bne	.L208	@cond_branch
-	ldr	r0, [r1, #0x8]
-	cmp	r0, #0
-	beq	.L207	@cond_branch
-.L208:
-	mov	r2, #0x1
-.L207:
-	ldrb	r0, [r1, #0x3]
-	cmp	r0, #0
-	beq	.L209	@cond_branch
-	add	r0, r2, #0x1
+	push	{r4, r5, r6, lr}
+	mov	r6, #0x0
+	mov	r5, #0x0
+	ldr	r4, .L224
+.L218:
+	lsl	r0, r4, #0x10
+	lsr	r0, r0, #0x10
+	bl	FlagGet
 	lsl	r0, r0, #0x18
-	lsr	r2, r0, #0x18
-.L209:
-	ldrh	r0, [r1, #0x1a]
-	cmp	r0, #0x31
-	bls	.L210	@cond_branch
-	add	r0, r2, #0x1
-	lsl	r0, r0, #0x18
-	lsr	r2, r0, #0x18
-.L210:
-	ldrb	r0, [r1, #0x4]
 	cmp	r0, #0
-	beq	.L211	@cond_branch
-	add	r0, r2, #0x1
+	beq	.L217	@cond_branch
+	add	r0, r5, #0x1
+	lsl	r0, r0, #0x10
+	lsr	r5, r0, #0x10
+.L217:
+	add	r4, r4, #0x1
+	ldr	r0, .L224+0x4
+	cmp	r4, r0
+	bls	.L218	@cond_branch
+	cmp	r5, #0xa
+	bls	.L221	@cond_branch
+	add	r0, r6, #0x1
 	lsl	r0, r0, #0x18
-	lsr	r2, r0, #0x18
-.L211:
-	add	r0, r2, #0
+	lsr	r6, r0, #0x18
+.L221:
+	bl	CountPlayerContestPaintings
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	cmp	r0, #0x4
+	bls	.L222	@cond_branch
+	add	r0, r6, #0x1
+	lsl	r0, r0, #0x18
+	lsr	r6, r0, #0x18
+.L222:
+	bl	HasAllFrontierSymbols
+	lsl	r0, r0, #0x18
+	cmp	r0, #0
+	beq	.L223	@cond_branch
+	add	r0, r6, #0x1
+	lsl	r0, r0, #0x18
+	lsr	r6, r0, #0x18
+.L223:
+	add	r0, r6, #0
+	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.Lfe11:
-	.size	 GetRubyTrainerStars,.Lfe11-GetRubyTrainerStars
+.L225:
+	.align	2, 0
+.L224:
+	.word	0x501
+	.word	0x50b
+.Lfe12:
+	.size	 GetRubyTrainerStars,.Lfe12-GetRubyTrainerStars
 	.align	2, 0
 	.type	 SetPlayerCardData,function
 	.thumb_func
 SetPlayerCardData:
 	push	{r4, r5, r6, r7, lr}
-	mov	r7, r8
-	push	{r7}
 	add	r5, r0, #0
 	lsl	r1, r1, #0x18
-	lsr	r1, r1, #0x18
-	mov	r8, r1
-	ldr	r6, .L228
-	ldr	r1, [r6]
+	lsr	r6, r1, #0x18
+	ldr	r7, .L245
+	ldr	r1, [r7]
 	ldrb	r0, [r1, #0x8]
 	strb	r0, [r5]
 	ldrh	r0, [r1, #0xe]
@@ -2320,9 +2358,9 @@ SetPlayerCardData:
 	mov	r0, #0xa
 	bl	GetGameStat
 	cmp	r0, #0
-	bne	.L213	@cond_branch
+	bne	.L227	@cond_branch
 	mov	r4, #0x0
-.L213:
+.L227:
 	lsr	r0, r4, #0x10
 	strh	r0, [r5, #0x6]
 	lsr	r1, r4, #0x8
@@ -2331,28 +2369,28 @@ SetPlayerCardData:
 	strh	r1, [r5, #0x8]
 	and	r4, r4, r2
 	strh	r4, [r5, #0xa]
-	ldr	r1, .L228+0x4
+	ldr	r1, .L245+0x4
 	cmp	r0, r1
-	bls	.L214	@cond_branch
+	bls	.L228	@cond_branch
 	strh	r1, [r5, #0x6]
 	mov	r0, #0x3b
 	strh	r0, [r5, #0x8]
 	strh	r0, [r5, #0xa]
-.L214:
-	ldr	r0, .L228+0x8
+.L228:
+	ldr	r0, .L245+0x8
 	bl	FlagGet
 	strb	r0, [r5, #0x2]
 	bl	HasAllHoennMons
 	strb	r0, [r5, #0x3]
 	bl	GetCaughtMonsCount
 	strh	r0, [r5, #0xc]
-	ldr	r0, [r6]
+	ldr	r0, [r7]
 	ldrb	r1, [r0, #0xb]
 	lsl	r1, r1, #0x8
 	ldrb	r0, [r0, #0xa]
 	orr	r0, r0, r1
 	strh	r0, [r5, #0xe]
-	ldr	r4, .L228+0xc
+	ldr	r4, .L245+0xc
 	mov	r0, #0x17
 	add	r1, r4, #0
 	bl	GetCappedGameStat
@@ -2361,28 +2399,26 @@ SetPlayerCardData:
 	add	r1, r4, #0
 	bl	GetCappedGameStat
 	strh	r0, [r5, #0x16]
-	ldr	r1, .L228+0x10
+	ldr	r1, .L245+0x10
 	mov	r0, #0x15
 	bl	GetCappedGameStat
 	strh	r0, [r5, #0x20]
-	ldr	r4, .L228+0x14
-	ldr	r0, [r4]
-	mov	r1, #0x92
-	lsl	r1, r1, #0x3
-	add	r0, r0, r1
-	bl	GetMoney
+	bl	GetCaughtMonsCount
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
 	str	r0, [r5, #0x24]
 	mov	r2, #0x0
 	add	r7, r5, #0
 	add	r7, r7, #0x30
-	add	r6, r5, #0
-	add	r6, r6, #0x28
-	ldr	r0, [r4]
-	ldr	r1, .L228+0x18
+	add	r4, r5, #0
+	add	r4, r4, #0x28
+	ldr	r0, .L245+0x14
+	ldr	r0, [r0]
+	ldr	r1, .L245+0x18
 	add	r3, r0, r1
-.L218:
+.L232:
 	lsl	r0, r2, #0x1
-	add	r1, r6, r0
+	add	r1, r4, r0
 	add	r0, r3, r0
 	ldrh	r0, [r0]
 	strh	r0, [r1]
@@ -2390,22 +2426,21 @@ SetPlayerCardData:
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	cmp	r2, #0x3
-	bls	.L218	@cond_branch
-	ldr	r0, .L228
+	bls	.L232	@cond_branch
+	ldr	r0, .L245
 	ldr	r1, [r0]
 	add	r0, r7, #0
 	bl	StringCopy
-	mov	r0, r8
-	cmp	r0, #0x1
-	beq	.L224	@cond_branch
-	cmp	r0, #0x1
-	bgt	.L227	@cond_branch
-	cmp	r0, #0
-	beq	.L222	@cond_branch
-	b	.L220
-.L229:
+	cmp	r6, #0x1
+	beq	.L239	@cond_branch
+	cmp	r6, #0x1
+	bgt	.L243	@cond_branch
+	cmp	r6, #0
+	beq	.L237	@cond_branch
+	b	.L234
+.L246:
 	.align	2, 0
-.L228:
+.L245:
 	.word	gSaveBlock2Ptr
 	.word	0x3e7
 	.word	0x861
@@ -2413,19 +2448,30 @@ SetPlayerCardData:
 	.word	0xffff
 	.word	gSaveBlock1Ptr
 	.word	0x2bb0
-.L227:
-	mov	r1, r8
-	cmp	r1, #0x2
-	bne	.L220	@cond_branch
+.L243:
+	cmp	r6, #0x2
+	bne	.L234	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r5, #0x18]
 	strh	r0, [r5, #0x1a]
-.L222:
-	ldr	r1, .L230
+	strh	r0, [r5, #0x1c]
+	strh	r0, [r5, #0x1e]
+	bl	CountPlayerContestPaintings
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	cmp	r0, #0x4
+	bls	.L236	@cond_branch
+	mov	r0, #0x1
+	strb	r0, [r5, #0x4]
+.L236:
+	mov	r0, #0x0
+	strb	r0, [r5, #0x1]
+.L237:
+	ldr	r1, .L247
 	mov	r0, #0x23
 	bl	GetCappedGameStat
 	strh	r0, [r5, #0x1c]
-	ldr	r1, .L230+0x4
+	ldr	r1, .L247+0x4
 	mov	r0, #0x22
 	bl	GetCappedGameStat
 	strh	r0, [r5, #0x1e]
@@ -2433,36 +2479,41 @@ SetPlayerCardData:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x4
-	bls	.L223	@cond_branch
+	bls	.L238	@cond_branch
 	mov	r0, #0x1
 	strb	r0, [r5, #0x4]
-.L223:
+.L238:
 	add	r0, r5, #0
 	bl	GetRubyTrainerStars
-	strb	r0, [r5, #0x1]
-	b	.L220
-.L231:
+	add	r0, r0, #0x1
+	b	.L244
+.L248:
 	.align	2, 0
-.L230:
+.L247:
 	.word	0x3e7
 	.word	0xffff
-.L224:
-	mov	r1, #0x0
+.L239:
 	mov	r0, #0x0
 	strh	r0, [r5, #0x18]
 	strh	r0, [r5, #0x1a]
 	strh	r0, [r5, #0x1c]
 	strh	r0, [r5, #0x1e]
-	strb	r1, [r5, #0x4]
-	strb	r1, [r5, #0x1]
-.L220:
-	pop	{r3}
-	mov	r8, r3
+	bl	CountPlayerContestPaintings
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	cmp	r0, #0x4
+	bls	.L240	@cond_branch
+	strb	r6, [r5, #0x4]
+.L240:
+	mov	r0, #0x0
+.L244:
+	strb	r0, [r5, #0x1]
+.L234:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.Lfe12:
-	.size	 SetPlayerCardData,.Lfe12-SetPlayerCardData
+.Lfe13:
+	.size	 SetPlayerCardData,.Lfe13-SetPlayerCardData
 	.align	2, 0
 	.type	 TrainerCard_GenerateCardForLinkPlayer,function
 	.thumb_func
@@ -2485,9 +2536,9 @@ TrainerCard_GenerateCardForLinkPlayer:
 	add	r1, r4, #0
 	add	r1, r1, #0x60
 	strh	r0, [r1]
-	ldr	r0, .L237
+	ldr	r0, .L254
 	ldr	r0, [r0]
-	ldr	r2, .L237+0x4
+	ldr	r2, .L254+0x4
 	add	r0, r0, r2
 	ldrh	r0, [r0]
 	add	r2, r4, #0
@@ -2495,32 +2546,32 @@ TrainerCard_GenerateCardForLinkPlayer:
 	strh	r0, [r2]
 	ldrh	r0, [r1]
 	cmp	r0, #0
-	beq	.L233	@cond_branch
+	beq	.L250	@cond_branch
 	ldrb	r0, [r4, #0x1]
 	add	r0, r0, #0x1
 	strb	r0, [r4, #0x1]
-.L233:
+.L250:
 	ldrb	r0, [r4]
 	cmp	r0, #0x1
-	bne	.L234	@cond_branch
-	ldr	r2, .L237+0x8
+	bne	.L251	@cond_branch
+	ldr	r2, .L254+0x8
 	ldrh	r0, [r4, #0xe]
 	mov	r1, #0x7
 	and	r0, r0, r1
 	add	r0, r0, #0x8
-	b	.L236
-.L238:
+	b	.L253
+.L255:
 	.align	2, 0
-.L237:
+.L254:
 	.word	gSaveBlock2Ptr
 	.word	0xeba
 	.word	gLinkPlayerFacilityClasses
-.L234:
-	ldr	r2, .L239
+.L251:
+	ldr	r2, .L256
 	ldrh	r0, [r4, #0xe]
 	mov	r1, #0x7
 	and	r0, r0, r1
-.L236:
+.L253:
 	lsl	r0, r0, #0x1
 	add	r0, r0, r2
 	ldrh	r1, [r0]
@@ -2530,12 +2581,12 @@ TrainerCard_GenerateCardForLinkPlayer:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L240:
+.L257:
 	.align	2, 0
-.L239:
+.L256:
 	.word	gLinkPlayerFacilityClasses
-.Lfe13:
-	.size	 TrainerCard_GenerateCardForLinkPlayer,.Lfe13-TrainerCard_GenerateCardForLinkPlayer
+.Lfe14:
+	.size	 TrainerCard_GenerateCardForLinkPlayer,.Lfe14-TrainerCard_GenerateCardForLinkPlayer
 	.align	2, 0
 	.globl	TrainerCard_GenerateCardForPlayer
 	.type	 TrainerCard_GenerateCardForPlayer,function
@@ -2557,39 +2608,39 @@ TrainerCard_GenerateCardForPlayer:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x3a]
-	ldr	r1, .L246
+	ldr	r1, .L263
 	ldr	r1, [r1]
-	ldr	r2, .L246+0x4
+	ldr	r2, .L263+0x4
 	add	r1, r1, r2
 	ldrh	r1, [r1]
 	strh	r1, [r4, #0x3c]
 	cmp	r0, #0
-	beq	.L242	@cond_branch
+	beq	.L259	@cond_branch
 	ldrb	r0, [r4, #0x1]
 	add	r0, r0, #0x1
 	strb	r0, [r4, #0x1]
-.L242:
+.L259:
 	ldrb	r0, [r4]
 	cmp	r0, #0x1
-	bne	.L243	@cond_branch
-	ldr	r2, .L246+0x8
+	bne	.L260	@cond_branch
+	ldr	r2, .L263+0x8
 	ldrh	r0, [r4, #0xe]
 	mov	r1, #0x7
 	and	r0, r0, r1
 	add	r0, r0, #0x8
-	b	.L245
-.L247:
+	b	.L262
+.L264:
 	.align	2, 0
-.L246:
+.L263:
 	.word	gSaveBlock2Ptr
 	.word	0xeba
 	.word	gLinkPlayerFacilityClasses
-.L243:
-	ldr	r2, .L248
+.L260:
+	ldr	r2, .L265
 	ldrh	r0, [r4, #0xe]
 	mov	r1, #0x7
 	and	r0, r0, r1
-.L245:
+.L262:
 	lsl	r0, r0, #0x1
 	add	r0, r0, r2
 	ldrh	r1, [r0]
@@ -2599,12 +2650,12 @@ TrainerCard_GenerateCardForPlayer:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L249:
+.L266:
 	.align	2, 0
-.L248:
+.L265:
 	.word	gLinkPlayerFacilityClasses
-.Lfe14:
-	.size	 TrainerCard_GenerateCardForPlayer,.Lfe14-TrainerCard_GenerateCardForPlayer
+.Lfe15:
+	.size	 TrainerCard_GenerateCardForPlayer,.Lfe15-TrainerCard_GenerateCardForPlayer
 	.align	2, 0
 	.globl	CopyTrainerCardData
 	.type	 CopyTrainerCardData,function
@@ -2626,29 +2677,29 @@ CopyTrainerCardData:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L253	@cond_branch
+	beq	.L270	@cond_branch
 	cmp	r0, #0x1
-	bgt	.L257	@cond_branch
+	bgt	.L274	@cond_branch
 	cmp	r0, #0
-	beq	.L252	@cond_branch
-	b	.L251
-.L257:
+	beq	.L269	@cond_branch
+	b	.L268
+.L274:
 	cmp	r0, #0x2
-	beq	.L254	@cond_branch
-	b	.L251
-.L252:
+	beq	.L271	@cond_branch
+	b	.L268
+.L269:
 	add	r0, r5, #0
 	add	r1, r6, #0
 	mov	r2, #0x60
 	bl	memcpy
-	b	.L251
-.L253:
+	b	.L268
+.L270:
 	add	r0, r5, #0
 	add	r1, r6, #0
 	mov	r2, #0x38
 	bl	memcpy
-	b	.L251
-.L254:
+	b	.L268
+.L271:
 	add	r0, r5, #0
 	add	r1, r6, #0
 	mov	r2, #0x60
@@ -2662,18 +2713,18 @@ CopyTrainerCardData:
 	ldrh	r1, [r6, #0x3c]
 	add	r0, r0, #0x2
 	strh	r1, [r0]
-.L251:
+.L268:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.Lfe15:
-	.size	 CopyTrainerCardData,.Lfe15-CopyTrainerCardData
+.Lfe16:
+	.size	 CopyTrainerCardData,.Lfe16-CopyTrainerCardData
 	.align	2, 0
 	.type	 SetDataFromTrainerCard,function
 	.thumb_func
 SetDataFromTrainerCard:
 	push	{r4, r5, lr}
-	ldr	r4, .L271
+	ldr	r4, .L288
 	ldr	r0, [r4]
 	mov	r1, #0x0
 	strb	r1, [r0, #0xa]
@@ -2694,93 +2745,93 @@ SetDataFromTrainerCard:
 	mov	r2, #0x8
 	bl	memset
 	ldr	r1, [r4]
-	ldr	r2, .L271+0x4
+	ldr	r2, .L288+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L259	@cond_branch
+	beq	.L276	@cond_branch
 	ldrb	r0, [r1, #0xa]
 	add	r0, r0, #0x1
 	strb	r0, [r1, #0xa]
-.L259:
+.L276:
 	ldr	r1, [r4]
-	ldr	r3, .L271+0x8
+	ldr	r3, .L288+0x8
 	add	r0, r1, r3
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	bne	.L261	@cond_branch
-	ldr	r2, .L271+0xc
+	bne	.L278	@cond_branch
+	ldr	r2, .L288+0xc
 	add	r0, r1, r2
 	ldr	r0, [r0]
 	cmp	r0, #0
-	beq	.L260	@cond_branch
-.L261:
+	beq	.L277	@cond_branch
+.L278:
 	ldrb	r0, [r1, #0xb]
 	add	r0, r0, #0x1
 	strb	r0, [r1, #0xb]
-.L260:
-	ldr	r2, .L271
+.L277:
+	ldr	r2, .L288
 	ldr	r1, [r2]
 	mov	r3, #0xa9
 	lsl	r3, r3, #0x3
 	add	r0, r1, r3
 	ldr	r0, [r0]
 	cmp	r0, #0
-	beq	.L262	@cond_branch
+	beq	.L279	@cond_branch
 	ldrb	r0, [r1, #0xc]
 	add	r0, r0, #0x1
 	strb	r0, [r1, #0xc]
-.L262:
+.L279:
 	ldr	r1, [r2]
-	ldr	r3, .L271+0x10
+	ldr	r3, .L288+0x10
 	add	r0, r1, r3
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	beq	.L263	@cond_branch
+	beq	.L280	@cond_branch
 	ldrb	r0, [r1, #0x10]
 	add	r0, r0, #0x1
 	strb	r0, [r1, #0x10]
-.L263:
+.L280:
 	ldr	r1, [r2]
-	ldr	r2, .L271+0x14
+	ldr	r2, .L288+0x14
 	add	r0, r1, r2
 	ldr	r0, [r0]
 	cmp	r0, #0
-	beq	.L264	@cond_branch
+	beq	.L281	@cond_branch
 	ldrb	r0, [r1, #0xd]
 	add	r0, r0, #0x1
 	strb	r0, [r1, #0xd]
-.L264:
+.L281:
 	mov	r5, #0x0
-	ldr	r4, .L271+0x18
-.L268:
+	ldr	r4, .L288+0x18
+.L285:
 	lsl	r0, r4, #0x10
 	lsr	r0, r0, #0x10
 	bl	FlagGet
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L267	@cond_branch
-	ldr	r0, .L271
+	beq	.L284	@cond_branch
+	ldr	r0, .L288
 	ldr	r1, [r0]
 	add	r1, r1, #0x11
 	add	r1, r1, r5
 	ldrb	r0, [r1]
 	add	r0, r0, #0x1
 	strb	r0, [r1]
-.L267:
+.L284:
 	add	r4, r4, #0x1
 	add	r0, r5, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
-	ldr	r0, .L271+0x1c
+	ldr	r0, .L288+0x1c
 	cmp	r4, r0
-	bls	.L268	@cond_branch
+	bls	.L285	@cond_branch
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L272:
+.L289:
 	.align	2, 0
-.L271:
+.L288:
 	.word	sData
 	.word	0x536
 	.word	0x53a
@@ -2789,8 +2840,8 @@ SetDataFromTrainerCard:
 	.word	0x54c
 	.word	0x867
 	.word	0x86e
-.Lfe16:
-	.size	 SetDataFromTrainerCard,.Lfe16-SetDataFromTrainerCard
+.Lfe17:
+	.size	 SetDataFromTrainerCard,.Lfe17-SetDataFromTrainerCard
 	.align	2, 0
 	.type	 HandleGpuRegs,function
 	.thumb_func
@@ -2826,25 +2877,25 @@ HandleGpuRegs:
 	mov	r0, #0x40
 	mov	r1, #0xf0
 	bl	SetGpuReg
-	ldr	r0, .L276
+	ldr	r0, .L293
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L274	@cond_branch
+	beq	.L291	@cond_branch
 	mov	r0, #0xc7
 	bl	EnableInterrupts
-	b	.L275
-.L277:
+	b	.L292
+.L294:
 	.align	2, 0
-.L276:
+.L293:
 	.word	gReceivedRemoteLinkPlayers
-.L274:
+.L291:
 	mov	r0, #0x3
 	bl	EnableInterrupts
-.L275:
+.L292:
 	pop	{r0}
 	bx	r0
-.Lfe17:
-	.size	 HandleGpuRegs,.Lfe17-HandleGpuRegs
+.Lfe18:
+	.size	 HandleGpuRegs,.Lfe18-HandleGpuRegs
 	.align	2, 0
 	.type	 sub_80C32EC,function
 	.thumb_func
@@ -2859,10 +2910,10 @@ sub_80C32EC:
 	lsr	r2, r0, #0x18
 	asr	r0, r0, #0x18
 	cmp	r0, #0x4
-	bgt	.L279	@cond_branch
+	bgt	.L296	@cond_branch
 	mov	r2, #0x0
-.L279:
-	ldr	r4, .L280
+.L296:
+	ldr	r4, .L297
 	ldr	r0, [r4]
 	mov	r1, #0xa5
 	lsl	r1, r1, #0x3
@@ -2877,7 +2928,7 @@ sub_80C32EC:
 	mov	r0, #0x54
 	bl	SetGpuReg
 	ldr	r0, [r4]
-	ldr	r1, .L280+0x4
+	ldr	r1, .L297+0x4
 	add	r0, r0, r1
 	ldrh	r2, [r0]
 	lsl	r1, r2, #0x8
@@ -2891,13 +2942,13 @@ sub_80C32EC:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L281:
+.L298:
 	.align	2, 0
-.L280:
+.L297:
 	.word	sData
 	.word	0x7ca8
-.Lfe18:
-	.size	 sub_80C32EC,.Lfe18-sub_80C32EC
+.Lfe19:
+	.size	 sub_80C32EC,.Lfe19-sub_80C32EC
 	.align	2, 0
 	.type	 ResetGpuRegs,function
 	.thumb_func
@@ -2924,8 +2975,8 @@ ResetGpuRegs:
 	bl	SetGpuReg
 	pop	{r0}
 	bx	r0
-.Lfe19:
-	.size	 ResetGpuRegs,.Lfe19-ResetGpuRegs
+.Lfe20:
+	.size	 ResetGpuRegs,.Lfe20-ResetGpuRegs
 	.align	2, 0
 	.type	 InitBgsAndWindows,function
 	.thumb_func
@@ -2933,7 +2984,7 @@ InitBgsAndWindows:
 	push	{lr}
 	mov	r0, #0x0
 	bl	ResetBgsAndClearDma3BusyFlags
-	ldr	r1, .L284
+	ldr	r1, .L301
 	mov	r0, #0x0
 	mov	r2, #0x4
 	bl	InitBgsFromTemplates
@@ -2969,34 +3020,34 @@ InitBgsAndWindows:
 	mov	r1, #0x0
 	mov	r2, #0x0
 	bl	ChangeBgY
-	ldr	r0, .L284+0x4
+	ldr	r0, .L301+0x4
 	bl	InitWindows
 	bl	DeactivateAllTextPrinters
 	bl	LoadMessageBoxAndBorderGfx
 	pop	{r0}
 	bx	r0
-.L285:
+.L302:
 	.align	2, 0
-.L284:
+.L301:
 	.word	sTrainerCardBgTemplates
 	.word	sTrainerCardWindowTemplates
-.Lfe20:
-	.size	 InitBgsAndWindows,.Lfe20-InitBgsAndWindows
+.Lfe21:
+	.size	 InitBgsAndWindows,.Lfe21-InitBgsAndWindows
 	.align	2, 0
 	.type	 SetTrainerCardCb2,function
 	.thumb_func
 SetTrainerCardCb2:
 	push	{lr}
-	ldr	r0, .L287
+	ldr	r0, .L304
 	bl	SetMainCallback2
 	pop	{r0}
 	bx	r0
-.L288:
+.L305:
 	.align	2, 0
-.L287:
+.L304:
 	.word	CB2_TrainerCard
-.Lfe21:
-	.size	 SetTrainerCardCb2,.Lfe21-SetTrainerCardCb2
+.Lfe22:
+	.size	 SetTrainerCardCb2,.Lfe22-SetTrainerCardCb2
 	.align	2, 0
 	.type	 SetUpTrainerCardTask,function
 	.thumb_func
@@ -3004,96 +3055,28 @@ SetUpTrainerCardTask:
 	push	{lr}
 	bl	ResetTasks
 	bl	ScanlineEffect_Stop
-	ldr	r0, .L290
+	ldr	r0, .L307
 	mov	r1, #0x0
 	bl	CreateTask
 	bl	InitTrainerCardData
 	bl	SetDataFromTrainerCard
 	pop	{r0}
 	bx	r0
-.L291:
+.L308:
 	.align	2, 0
-.L290:
+.L307:
 	.word	Task_TrainerCard
-.Lfe22:
-	.size	 SetUpTrainerCardTask,.Lfe22-SetUpTrainerCardTask
+.Lfe23:
+	.size	 SetUpTrainerCardTask,.Lfe23-SetUpTrainerCardTask
 	.align	2, 0
 	.type	 PrintAllOnCardFront,function
 	.thumb_func
 PrintAllOnCardFront:
 	push	{lr}
-	ldr	r0, .L303
-	ldr	r1, [r0]
-	ldrb	r0, [r1, #0x1]
-	cmp	r0, #0x5
-	bhi	.L300	@cond_branch
-	lsl	r0, r0, #0x2
-	ldr	r1, .L303+0x4
-	add	r0, r0, r1
-	ldr	r0, [r0]
-	mov	pc, r0
-.L304:
-	.align	2, 0
-.L303:
-	.word	sData
-	.word	.L301
-	.align	2, 0
-	.align	2, 0
-.L301:
-	.word	.L294
-	.word	.L295
-	.word	.L296
-	.word	.L297
-	.word	.L298
-	.word	.L299
-.L294:
-	bl	PrintNameOnCardFront
-	b	.L293
-.L295:
-	bl	PrintIdOnCard
-	b	.L293
-.L296:
-	bl	PrintMoneyOnCard
-	b	.L293
-.L297:
-	bl	PrintPokedexOnCard
-	b	.L293
-.L298:
-	bl	PrintTimeOnCard
-	b	.L293
-.L299:
-	bl	PrintProfilePhraseOnCard
-	b	.L293
-.L300:
-	mov	r0, #0x0
-	strb	r0, [r1, #0x1]
-	mov	r0, #0x1
-	b	.L302
-.L293:
-	ldr	r0, .L305
-	ldr	r1, [r0]
-	ldrb	r0, [r1, #0x1]
-	add	r0, r0, #0x1
-	strb	r0, [r1, #0x1]
-	mov	r0, #0x0
-.L302:
-	pop	{r1}
-	bx	r1
-.L306:
-	.align	2, 0
-.L305:
-	.word	sData
-.Lfe23:
-	.size	 PrintAllOnCardFront,.Lfe23-PrintAllOnCardFront
-	.align	2, 0
-	.type	 PrintAllOnCardBack,function
-	.thumb_func
-PrintAllOnCardBack:
-	push	{lr}
 	ldr	r0, .L320
 	ldr	r1, [r0]
 	ldrb	r0, [r1, #0x1]
-	cmp	r0, #0x7
+	cmp	r0, #0x5
 	bhi	.L317	@cond_branch
 	lsl	r0, r0, #0x2
 	ldr	r1, .L320+0x4
@@ -3108,47 +3091,36 @@ PrintAllOnCardBack:
 	.align	2, 0
 	.align	2, 0
 .L318:
-	.word	.L309
-	.word	.L310
 	.word	.L311
 	.word	.L312
 	.word	.L313
 	.word	.L314
 	.word	.L315
 	.word	.L316
-.L309:
-	bl	PrintNameOnCardBack
-	b	.L308
-.L310:
-	bl	PrintHofDebutTimeOnCard
-	b	.L308
 .L311:
-	bl	PrintLinkBattleResultsOnCard
-	b	.L308
+	bl	PrintNameOnCardFront
+	b	.L310
 .L312:
-	bl	PrintTradesStringOnCard
-	b	.L308
+	bl	PrintIdOnCard
+	b	.L310
 .L313:
-	bl	PrintBerryCrushStringOnCard
-	bl	PrintPokeblockStringOnCard
-	b	.L308
+	bl	PrintMoneyOnCard
+	b	.L310
 .L314:
-	bl	PrintUnionStringOnCard
-	bl	PrintContestStringOnCard
-	b	.L308
+	bl	PrintPokedexOnCard
+	b	.L310
 .L315:
-	bl	PrintPokemonIconsOnCard
-	bl	PrintBattleFacilityStringOnCard
-	b	.L308
+	bl	PrintTimeOnCard
+	b	.L310
 .L316:
-	bl	PrintStickersOnCard
-	b	.L308
+	bl	PrintProfilePhraseOnCard
+	b	.L310
 .L317:
 	mov	r0, #0x0
 	strb	r0, [r1, #0x1]
 	mov	r0, #0x1
 	b	.L319
-.L308:
+.L310:
 	ldr	r0, .L322
 	ldr	r1, [r0]
 	ldrb	r0, [r1, #0x1]
@@ -3163,7 +3135,86 @@ PrintAllOnCardBack:
 .L322:
 	.word	sData
 .Lfe24:
-	.size	 PrintAllOnCardBack,.Lfe24-PrintAllOnCardBack
+	.size	 PrintAllOnCardFront,.Lfe24-PrintAllOnCardFront
+	.align	2, 0
+	.type	 PrintAllOnCardBack,function
+	.thumb_func
+PrintAllOnCardBack:
+	push	{lr}
+	ldr	r0, .L337
+	ldr	r1, [r0]
+	ldrb	r0, [r1, #0x1]
+	cmp	r0, #0x7
+	bhi	.L334	@cond_branch
+	lsl	r0, r0, #0x2
+	ldr	r1, .L337+0x4
+	add	r0, r0, r1
+	ldr	r0, [r0]
+	mov	pc, r0
+.L338:
+	.align	2, 0
+.L337:
+	.word	sData
+	.word	.L335
+	.align	2, 0
+	.align	2, 0
+.L335:
+	.word	.L326
+	.word	.L327
+	.word	.L328
+	.word	.L329
+	.word	.L330
+	.word	.L331
+	.word	.L332
+	.word	.L333
+.L326:
+	bl	PrintNameOnCardBack
+	b	.L325
+.L327:
+	bl	PrintHofDebutTimeOnCard
+	b	.L325
+.L328:
+	bl	PrintLinkBattleResultsOnCard
+	b	.L325
+.L329:
+	bl	PrintTradesStringOnCard
+	b	.L325
+.L330:
+	bl	PrintBerryCrushStringOnCard
+	bl	PrintPokeblockStringOnCard
+	b	.L325
+.L331:
+	bl	PrintUnionStringOnCard
+	bl	PrintContestStringOnCard
+	b	.L325
+.L332:
+	bl	PrintPokemonIconsOnCard
+	bl	PrintBattleFacilityStringOnCard
+	b	.L325
+.L333:
+	bl	PrintStickersOnCard
+	b	.L325
+.L334:
+	mov	r0, #0x0
+	strb	r0, [r1, #0x1]
+	mov	r0, #0x1
+	b	.L336
+.L325:
+	ldr	r0, .L339
+	ldr	r1, [r0]
+	ldrb	r0, [r1, #0x1]
+	add	r0, r0, #0x1
+	strb	r0, [r1, #0x1]
+	mov	r0, #0x0
+.L336:
+	pop	{r1}
+	bx	r1
+.L340:
+	.align	2, 0
+.L339:
+	.word	sData
+.Lfe25:
+	.size	 PrintAllOnCardBack,.Lfe25-PrintAllOnCardBack
 	.align	2, 0
 	.type	 BufferTextsVarsForCardPage2,function
 	.thumb_func
@@ -3180,37 +3231,37 @@ BufferTextsVarsForCardPage2:
 	bl	BufferBattleFacilityStats
 	pop	{r0}
 	bx	r0
-.Lfe25:
-	.size	 BufferTextsVarsForCardPage2,.Lfe25-BufferTextsVarsForCardPage2
+.Lfe26:
+	.size	 BufferTextsVarsForCardPage2,.Lfe26-BufferTextsVarsForCardPage2
 	.align	2, 0
 	.type	 PrintNameOnCardFront,function
 	.thumb_func
 PrintNameOnCardFront:
 	push	{r4, r5, lr}
 	add	sp, sp, #-0x2c
-	ldr	r1, .L328
+	ldr	r1, .L345
 	add	r0, sp, #0xc
 	bl	StringCopy
 	add	r5, r0, #0
-	ldr	r4, .L328+0x4
+	ldr	r4, .L345+0x4
 	ldr	r1, [r4]
-	ldr	r0, .L328+0x8
+	ldr	r0, .L345+0x8
 	add	r1, r1, r0
 	add	r0, r5, #0
 	bl	StringCopy
 	ldr	r0, [r4]
-	ldr	r1, .L328+0xc
+	ldr	r1, .L345+0xc
 	add	r0, r0, r1
 	ldrb	r1, [r0]
 	add	r0, r5, #0
 	bl	ConvertInternationalString
 	ldr	r0, [r4]
-	ldr	r1, .L328+0x10
+	ldr	r1, .L345+0x10
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L326	@cond_branch
-	ldr	r0, .L328+0x14
+	bne	.L343	@cond_branch
+	ldr	r0, .L345+0x14
 	str	r0, [sp]
 	mov	r0, #0x1
 	neg	r0, r0
@@ -3222,18 +3273,18 @@ PrintNameOnCardFront:
 	mov	r2, #0x14
 	mov	r3, #0x1c
 	bl	AddTextPrinterParameterized3
-	b	.L327
-.L329:
+	b	.L344
+.L346:
 	.align	2, 0
-.L328:
+.L345:
 	.word	gText_TrainerCardName
 	.word	sData
 	.word	0x564
 	.word	0x7caa
 	.word	0x52a
 	.word	sTrainerCardTextColors
-.L326:
-	ldr	r0, .L330
+.L343:
+	ldr	r0, .L347
 	str	r0, [sp]
 	mov	r0, #0x1
 	neg	r0, r0
@@ -3245,64 +3296,64 @@ PrintNameOnCardFront:
 	mov	r2, #0x10
 	mov	r3, #0x21
 	bl	AddTextPrinterParameterized3
-.L327:
+.L344:
 	add	sp, sp, #0x2c
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L331:
+.L348:
 	.align	2, 0
-.L330:
+.L347:
 	.word	sTrainerCardTextColors
-.Lfe26:
-	.size	 PrintNameOnCardFront,.Lfe26-PrintNameOnCardFront
+.Lfe27:
+	.size	 PrintNameOnCardFront,.Lfe27-PrintNameOnCardFront
 	.align	2, 0
 	.type	 PrintIdOnCard,function
 	.thumb_func
 PrintIdOnCard:
 	push	{r4, lr}
 	add	sp, sp, #-0x2c
-	ldr	r1, .L336
+	ldr	r1, .L353
 	add	r0, sp, #0xc
 	bl	StringCopy
-	ldr	r4, .L336+0x4
+	ldr	r4, .L353+0x4
 	ldr	r1, [r4]
-	ldr	r2, .L336+0x8
+	ldr	r2, .L353+0x8
 	add	r1, r1, r2
 	ldrh	r1, [r1]
 	mov	r2, #0x2
 	mov	r3, #0x5
 	bl	ConvertIntToDecimalStringN
 	ldr	r0, [r4]
-	ldr	r1, .L336+0xc
+	ldr	r1, .L353+0xc
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L333	@cond_branch
+	bne	.L350	@cond_branch
 	mov	r0, #0x1
 	add	r1, sp, #0xc
 	mov	r2, #0x50
 	bl	GetStringCenterAlignXOffset
 	add	r0, r0, #0x84
-	b	.L335
-.L337:
+	b	.L352
+.L354:
 	.align	2, 0
-.L336:
+.L353:
 	.word	gText_TrainerCardIDNo
 	.word	sData
 	.word	0x542
 	.word	0x52a
-.L333:
+.L350:
 	mov	r0, #0x1
 	add	r1, sp, #0xc
 	mov	r2, #0x60
 	bl	GetStringCenterAlignXOffset
 	add	r0, r0, #0x78
-.L335:
+.L352:
 	mov	r3, #0x9
 	lsl	r2, r0, #0x18
 	lsr	r2, r2, #0x18
-	ldr	r0, .L338
+	ldr	r0, .L355
 	str	r0, [sp]
 	mov	r0, #0x1
 	neg	r0, r0
@@ -3316,61 +3367,61 @@ PrintIdOnCard:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L339:
+.L356:
 	.align	2, 0
-.L338:
+.L355:
 	.word	sTrainerCardTextColors
-.Lfe27:
-	.size	 PrintIdOnCard,.Lfe27-PrintIdOnCard
+.Lfe28:
+	.size	 PrintIdOnCard,.Lfe28-PrintIdOnCard
 	.align	2, 0
 	.type	 PrintMoneyOnCard,function
 	.thumb_func
 PrintMoneyOnCard:
 	push	{r4, r5, lr}
 	add	sp, sp, #-0xc
-	ldr	r0, .L345
+	ldr	r0, .L362
 	ldr	r0, [r0]
-	ldr	r1, .L345+0x4
+	ldr	r1, .L362+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L341	@cond_branch
-	ldr	r0, .L345+0x8
+	bne	.L358	@cond_branch
+	ldr	r0, .L362+0x8
 	str	r0, [sp]
 	mov	r0, #0x1
 	neg	r0, r0
 	str	r0, [sp, #0x4]
-	ldr	r0, .L345+0xc
+	ldr	r0, .L362+0xc
 	str	r0, [sp, #0x8]
 	mov	r0, #0x1
 	mov	r1, #0x1
 	mov	r2, #0x14
 	mov	r3, #0x38
 	bl	AddTextPrinterParameterized3
-	b	.L342
-.L346:
+	b	.L359
+.L363:
 	.align	2, 0
-.L345:
+.L362:
 	.word	sData
 	.word	0x52b
 	.word	sTrainerCardTextColors
 	.word	gText_TrainerCardMoney
-.L341:
-	ldr	r0, .L347
+.L358:
+	ldr	r0, .L364
 	str	r0, [sp]
 	mov	r0, #0x1
 	neg	r0, r0
 	str	r0, [sp, #0x4]
-	ldr	r0, .L347+0x4
+	ldr	r0, .L364+0x4
 	str	r0, [sp, #0x8]
 	mov	r0, #0x1
 	mov	r1, #0x1
 	mov	r2, #0x10
 	mov	r3, #0x39
 	bl	AddTextPrinterParameterized3
-.L342:
-	ldr	r0, .L347+0x8
-	ldr	r4, .L347+0xc
+.L359:
+	ldr	r0, .L364+0x8
+	ldr	r4, .L364+0xc
 	ldr	r1, [r4]
 	mov	r2, #0xab
 	lsl	r2, r2, #0x3
@@ -3379,25 +3430,25 @@ PrintMoneyOnCard:
 	mov	r2, #0x0
 	mov	r3, #0x6
 	bl	ConvertIntToDecimalStringN
-	ldr	r5, .L347+0x10
-	ldr	r1, .L347+0x14
+	ldr	r5, .L364+0x10
+	ldr	r1, .L364+0x14
 	add	r0, r5, #0
 	bl	StringExpandPlaceholders
 	ldr	r0, [r4]
-	ldr	r1, .L347+0x18
+	ldr	r1, .L364+0x18
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L343	@cond_branch
+	bne	.L360	@cond_branch
 	mov	r0, #0x1
 	add	r1, r5, #0
 	mov	r2, #0x90
 	bl	GetStringRightAlignXOffset
 	mov	r3, #0x38
-	b	.L344
-.L348:
+	b	.L361
+.L365:
 	.align	2, 0
-.L347:
+.L364:
 	.word	sTrainerCardTextColors
 	.word	gText_TrainerCardMoney
 	.word	gStringVar1
@@ -3405,21 +3456,21 @@ PrintMoneyOnCard:
 	.word	gStringVar4
 	.word	gText_PokedollarVar1
 	.word	0x52b
-.L343:
+.L360:
 	mov	r0, #0x1
 	add	r1, r5, #0
 	mov	r2, #0x80
 	bl	GetStringRightAlignXOffset
 	mov	r3, #0x39
-.L344:
+.L361:
 	lsl	r2, r0, #0x18
 	lsr	r2, r2, #0x18
-	ldr	r0, .L349
+	ldr	r0, .L366
 	str	r0, [sp]
 	mov	r0, #0x1
 	neg	r0, r0
 	str	r0, [sp, #0x4]
-	ldr	r0, .L349+0x4
+	ldr	r0, .L366+0x4
 	str	r0, [sp, #0x8]
 	mov	r0, #0x1
 	mov	r1, #0x1
@@ -3428,13 +3479,13 @@ PrintMoneyOnCard:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L350:
+.L367:
 	.align	2, 0
-.L349:
+.L366:
 	.word	sTrainerCardTextColors
 	.word	gStringVar4
-.Lfe28:
-	.size	 PrintMoneyOnCard,.Lfe28-PrintMoneyOnCard
+.Lfe29:
+	.size	 PrintMoneyOnCard,.Lfe29-PrintMoneyOnCard
 	.align	2, 0
 	.type	 GetCaughtMonsCount,function
 	.thumb_func
@@ -3442,138 +3493,151 @@ GetCaughtMonsCount:
 	push	{lr}
 	bl	IsNationalPokedexEnabled
 	cmp	r0, #0
-	bne	.L352	@cond_branch
+	bne	.L369	@cond_branch
 	mov	r0, #0x1
 	bl	GetHoennPokedexCount
-	b	.L356
-.L352:
+	b	.L373
+.L369:
 	mov	r0, #0x1
 	bl	GetNationalPokedexCount
-.L356:
+.L373:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	pop	{r1}
 	bx	r1
-.Lfe29:
-	.size	 GetCaughtMonsCount,.Lfe29-GetCaughtMonsCount
+.Lfe30:
+	.size	 GetCaughtMonsCount,.Lfe30-GetCaughtMonsCount
 	.align	2, 0
 	.type	 PrintPokedexOnCard,function
 	.thumb_func
 PrintPokedexOnCard:
 	push	{r4, r5, lr}
 	add	sp, sp, #-0xc
-	ldr	r0, .L363
+	ldr	r4, .L386
+.L378:
+	lsl	r0, r4, #0x10
+	lsr	r0, r0, #0x10
 	bl	FlagGet
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L358	@cond_branch
-	ldr	r0, .L363+0x4
+	beq	.L377	@cond_branch
+	add	r0, r5, #0x1
+	lsl	r0, r0, #0x18
+	lsr	r5, r0, #0x18
+.L377:
+	add	r4, r4, #0x1
+	ldr	r0, .L386+0x4
+	cmp	r4, r0
+	bls	.L378	@cond_branch
+	sub	r0, r0, #0x70
+	bl	FlagGet
+	lsl	r0, r0, #0x18
+	cmp	r0, #0
+	beq	.L381	@cond_branch
+	ldr	r0, .L386+0x8
 	ldr	r0, [r0]
-	ldr	r1, .L363+0x8
+	ldr	r1, .L386+0xc
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L359	@cond_branch
-	ldr	r0, .L363+0xc
+	bne	.L382	@cond_branch
+	ldr	r0, .L386+0x10
 	str	r0, [sp]
 	mov	r0, #0x1
 	neg	r0, r0
 	str	r0, [sp, #0x4]
-	ldr	r0, .L363+0x10
+	ldr	r0, .L386+0x14
 	str	r0, [sp, #0x8]
 	mov	r0, #0x1
 	mov	r1, #0x1
 	mov	r2, #0x14
 	mov	r3, #0x48
 	bl	AddTextPrinterParameterized3
-	b	.L360
-.L364:
+	b	.L383
+.L387:
 	.align	2, 0
-.L363:
-	.word	0x861
+.L386:
+	.word	0x8c4
+	.word	0x8d1
 	.word	sData
 	.word	0x52b
 	.word	sTrainerCardTextColors
 	.word	gText_TrainerCardPokedex
-.L359:
-	ldr	r0, .L365
+.L382:
+	ldr	r0, .L388
 	str	r0, [sp]
 	mov	r0, #0x1
 	neg	r0, r0
 	str	r0, [sp, #0x4]
-	ldr	r0, .L365+0x4
+	ldr	r0, .L388+0x4
 	str	r0, [sp, #0x8]
 	mov	r0, #0x1
 	mov	r1, #0x1
 	mov	r2, #0x10
 	mov	r3, #0x49
 	bl	AddTextPrinterParameterized3
-.L360:
-	ldr	r5, .L365+0x8
-	ldr	r4, .L365+0xc
-	ldr	r0, [r4]
-	mov	r1, #0xa8
-	lsl	r1, r1, #0x3
-	add	r0, r0, r1
-	ldrh	r1, [r0]
-	add	r0, r5, #0
+.L383:
+	ldr	r4, .L388+0x8
+	add	r0, r4, #0
+	add	r1, r5, #0
 	mov	r2, #0x0
 	mov	r3, #0x3
 	bl	ConvertIntToDecimalStringN
-	ldr	r1, .L365+0x10
+	ldr	r1, .L388+0xc
 	bl	StringCopy
-	ldr	r0, [r4]
-	ldr	r1, .L365+0x14
+	ldr	r0, .L388+0x10
+	ldr	r0, [r0]
+	ldr	r1, .L388+0x14
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L361	@cond_branch
+	bne	.L384	@cond_branch
 	mov	r0, #0x1
-	add	r1, r5, #0
+	add	r1, r4, #0
 	mov	r2, #0x90
 	bl	GetStringRightAlignXOffset
 	mov	r3, #0x48
-	b	.L362
-.L366:
+	b	.L385
+.L389:
 	.align	2, 0
-.L365:
+.L388:
 	.word	sTrainerCardTextColors
 	.word	gText_TrainerCardPokedex
 	.word	gStringVar4
-	.word	sData
 	.word	gText_EmptyString6
+	.word	sData
 	.word	0x52b
-.L361:
+.L384:
 	mov	r0, #0x1
-	add	r1, r5, #0
+	add	r1, r4, #0
 	mov	r2, #0x80
 	bl	GetStringRightAlignXOffset
 	mov	r3, #0x49
-.L362:
+.L385:
 	lsl	r2, r0, #0x18
 	lsr	r2, r2, #0x18
-	ldr	r0, .L367
+	ldr	r0, .L390
 	str	r0, [sp]
 	mov	r0, #0x1
 	neg	r0, r0
 	str	r0, [sp, #0x4]
-	ldr	r0, .L367+0x4
+	ldr	r0, .L390+0x4
 	str	r0, [sp, #0x8]
 	mov	r0, #0x1
 	mov	r1, #0x1
 	bl	AddTextPrinterParameterized3
-.L358:
+.L381:
 	add	sp, sp, #0xc
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L368:
+.L391:
 	.align	2, 0
-.L367:
+.L390:
 	.word	sTrainerCardTextColors
 	.word	gStringVar4
-.Lfe30:
-	.size	 PrintPokedexOnCard,.Lfe30-PrintPokedexOnCard
+.Lfe31:
+	.size	 PrintPokedexOnCard,.Lfe31-PrintPokedexOnCard
 	.section .rodata
 	.align	2, 0
 	.type	 sTimeColonTextColors,object
@@ -3592,108 +3656,108 @@ PrintTimeOnCard:
 	mov	r5, r8
 	push	{r5, r6, r7}
 	add	sp, sp, #-0xc
-	ldr	r0, .L378
+	ldr	r0, .L401
 	ldr	r0, [r0]
-	ldr	r1, .L378+0x4
+	ldr	r1, .L401+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L370	@cond_branch
-	ldr	r0, .L378+0x8
+	bne	.L393	@cond_branch
+	ldr	r0, .L401+0x8
 	str	r0, [sp]
 	mov	r0, #0x1
 	neg	r0, r0
 	str	r0, [sp, #0x4]
-	ldr	r0, .L378+0xc
+	ldr	r0, .L401+0xc
 	str	r0, [sp, #0x8]
 	mov	r0, #0x1
 	mov	r1, #0x1
 	mov	r2, #0x14
 	mov	r3, #0x58
 	bl	AddTextPrinterParameterized3
-	b	.L371
-.L379:
+	b	.L394
+.L402:
 	.align	2, 0
-.L378:
+.L401:
 	.word	sData
 	.word	0x52b
 	.word	sTrainerCardTextColors
 	.word	gText_TrainerCardTime
-.L370:
-	ldr	r0, .L380
+.L393:
+	ldr	r0, .L403
 	str	r0, [sp]
 	mov	r0, #0x1
 	neg	r0, r0
 	str	r0, [sp, #0x4]
-	ldr	r0, .L380+0x4
+	ldr	r0, .L403+0x4
 	str	r0, [sp, #0x8]
 	mov	r0, #0x1
 	mov	r1, #0x1
 	mov	r2, #0x10
 	mov	r3, #0x59
 	bl	AddTextPrinterParameterized3
-.L371:
-	ldr	r0, .L380+0x8
+.L394:
+	ldr	r0, .L403+0x8
 	ldr	r1, [r0]
 	ldrb	r0, [r1, #0x5]
 	cmp	r0, #0
-	beq	.L372	@cond_branch
-	ldr	r2, .L380+0xc
+	beq	.L395	@cond_branch
+	ldr	r2, .L403+0xc
 	add	r0, r1, r2
 	ldrh	r5, [r0]
 	add	r2, r2, #0x2
 	add	r0, r1, r2
 	ldrh	r6, [r0]
-	b	.L373
-.L381:
+	b	.L396
+.L404:
 	.align	2, 0
-.L380:
+.L403:
 	.word	sTrainerCardTextColors
 	.word	gText_TrainerCardTime
 	.word	sData
 	.word	0x544
-.L372:
-	ldr	r0, .L382
+.L395:
+	ldr	r0, .L405
 	ldr	r0, [r0]
 	ldrh	r5, [r0, #0xe]
 	ldrb	r6, [r0, #0x10]
-.L373:
-	ldr	r0, .L382+0x4
+.L396:
+	ldr	r0, .L405+0x4
 	cmp	r5, r0
-	bls	.L374	@cond_branch
+	bls	.L397	@cond_branch
 	add	r5, r0, #0
-.L374:
+.L397:
 	cmp	r6, #0x3b
-	bls	.L375	@cond_branch
+	bls	.L398	@cond_branch
 	mov	r6, #0x3b
-.L375:
-	ldr	r1, .L382+0x8
+.L398:
+	ldr	r1, .L405+0x8
 	mov	r0, #0x1
 	mov	r2, #0x0
 	bl	GetStringWidth
 	mov	sl, r0
-	ldr	r0, .L382+0xc
+	ldr	r0, .L405+0xc
 	ldr	r0, [r0]
-	ldr	r1, .L382+0x10
+	ldr	r1, .L405+0x10
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L376	@cond_branch
+	bne	.L399	@cond_branch
 	mov	r7, #0x90
 	mov	r4, #0x58
-	b	.L377
-.L383:
+	b	.L400
+.L406:
 	.align	2, 0
-.L382:
+.L405:
 	.word	gSaveBlock2Ptr
 	.word	0x3e7
 	.word	gText_Colon2
 	.word	sData
 	.word	0x52b
-.L376:
+.L399:
 	mov	r7, #0x80
 	mov	r4, #0x59
-.L377:
+.L400:
 	mov	r0, sl
 	add	r0, r0, #0x1e
 	sub	r7, r7, r0
@@ -3708,7 +3772,7 @@ PrintTimeOnCard:
 	mov	r1, #0x0
 	add	r3, r4, #0
 	bl	FillWindowPixelRect
-	ldr	r2, .L384
+	ldr	r2, .L407
 	mov	r9, r2
 	mov	r0, r9
 	add	r1, r5, #0
@@ -3717,7 +3781,7 @@ PrintTimeOnCard:
 	bl	ConvertIntToDecimalStringN
 	lsl	r2, r7, #0x18
 	lsr	r2, r2, #0x18
-	ldr	r0, .L384+0x4
+	ldr	r0, .L407+0x4
 	mov	r8, r0
 	str	r0, [sp]
 	mov	r5, #0x1
@@ -3732,8 +3796,8 @@ PrintTimeOnCard:
 	add	r7, r7, #0x12
 	lsl	r2, r7, #0x18
 	lsr	r2, r2, #0x18
-	ldr	r1, .L384+0x8
-	ldr	r0, .L384+0xc
+	ldr	r1, .L407+0x8
+	ldr	r0, .L407+0xc
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x7]
 	lsl	r0, r0, #0x2
@@ -3741,7 +3805,7 @@ PrintTimeOnCard:
 	ldr	r0, [r0]
 	str	r0, [sp]
 	str	r5, [sp, #0x4]
-	ldr	r0, .L384+0x10
+	ldr	r0, .L407+0x10
 	str	r0, [sp, #0x8]
 	mov	r0, #0x1
 	mov	r1, #0x1
@@ -3772,23 +3836,23 @@ PrintTimeOnCard:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L385:
+.L408:
 	.align	2, 0
-.L384:
+.L407:
 	.word	gStringVar4
 	.word	sTrainerCardTextColors
 	.word	sTimeColonTextColors
 	.word	sData
 	.word	gText_Colon2
-.Lfe31:
-	.size	 PrintTimeOnCard,.Lfe31-PrintTimeOnCard
+.Lfe32:
+	.size	 PrintTimeOnCard,.Lfe32-PrintTimeOnCard
 	.section .rodata
-	.type	 yOffsetsLine1.96,object
-yOffsetsLine1.96:
+	.type	 yOffsetsLine1.99,object
+yOffsetsLine1.99:
 	.byte	0x71
 	.byte	0x68
-	.type	 yOffsetsLine2.97,object
-yOffsetsLine2.97:
+	.type	 yOffsetsLine2.100,object
+yOffsetsLine2.100:
 	.byte	0x81
 	.byte	0x78
 .text
@@ -3800,19 +3864,19 @@ PrintProfilePhraseOnCard:
 	mov	r7, r8
 	push	{r7}
 	add	sp, sp, #-0xc
-	ldr	r7, .L388
+	ldr	r7, .L411
 	ldr	r1, [r7]
 	ldrb	r0, [r1, #0x5]
 	cmp	r0, #0
-	beq	.L387	@cond_branch
-	ldr	r0, .L388+0x4
+	beq	.L410	@cond_branch
+	ldr	r0, .L411+0x4
 	mov	r8, r0
-	ldr	r4, .L388+0x8
+	ldr	r4, .L411+0x8
 	add	r0, r1, r4
 	ldrb	r0, [r0]
 	add	r0, r0, r8
 	ldrb	r3, [r0]
-	ldr	r6, .L388+0xc
+	ldr	r6, .L411+0xc
 	str	r6, [sp]
 	mov	r5, #0x1
 	neg	r5, r5
@@ -3845,7 +3909,7 @@ PrintProfilePhraseOnCard:
 	mov	r0, #0x1
 	mov	r1, #0x1
 	bl	AddTextPrinterParameterized3
-	ldr	r0, .L388+0x10
+	ldr	r0, .L411+0x10
 	mov	r8, r0
 	ldr	r1, [r7]
 	add	r0, r1, r4
@@ -3881,84 +3945,84 @@ PrintProfilePhraseOnCard:
 	mov	r0, #0x1
 	mov	r1, #0x1
 	bl	AddTextPrinterParameterized3
-.L387:
+.L410:
 	add	sp, sp, #0xc
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L389:
+.L412:
 	.align	2, 0
-.L388:
+.L411:
 	.word	sData
-	.word	yOffsetsLine1.96
+	.word	yOffsetsLine1.99
 	.word	0x52b
 	.word	sTrainerCardTextColors
-	.word	yOffsetsLine2.97
-.Lfe32:
-	.size	 PrintProfilePhraseOnCard,.Lfe32-PrintProfilePhraseOnCard
+	.word	yOffsetsLine2.100
+.Lfe33:
+	.size	 PrintProfilePhraseOnCard,.Lfe33-PrintProfilePhraseOnCard
 	.align	2, 0
 	.type	 BufferNameForCardBack,function
 	.thumb_func
 BufferNameForCardBack:
 	push	{r4, lr}
-	ldr	r4, .L392
+	ldr	r4, .L415
 	ldr	r1, [r4]
 	add	r0, r1, #0
 	add	r0, r0, #0x4d
-	ldr	r2, .L392+0x4
+	ldr	r2, .L415+0x4
 	add	r1, r1, r2
 	bl	StringCopy
 	ldr	r1, [r4]
 	add	r0, r1, #0
 	add	r0, r0, #0x4d
-	ldr	r2, .L392+0x8
+	ldr	r2, .L415+0x8
 	add	r1, r1, r2
 	ldrb	r1, [r1]
 	bl	ConvertInternationalString
 	ldr	r1, [r4]
-	ldr	r2, .L392+0xc
+	ldr	r2, .L415+0xc
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L391	@cond_branch
-	ldr	r0, .L392+0x10
+	beq	.L414	@cond_branch
+	ldr	r0, .L415+0x10
 	add	r1, r1, #0x4d
 	bl	StringCopy
 	ldr	r0, [r4]
 	add	r0, r0, #0x4d
-	ldr	r1, .L392+0x14
+	ldr	r1, .L415+0x14
 	bl	StringExpandPlaceholders
-.L391:
+.L414:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L393:
+.L416:
 	.align	2, 0
-.L392:
+.L415:
 	.word	sData
 	.word	0x564
 	.word	0x7caa
 	.word	0x52a
 	.word	gStringVar1
 	.word	gText_Var1sTrainerCard
-.Lfe33:
-	.size	 BufferNameForCardBack,.Lfe33-BufferNameForCardBack
+.Lfe34:
+	.size	 BufferNameForCardBack,.Lfe34-BufferNameForCardBack
 	.align	2, 0
 	.type	 PrintNameOnCardBack,function
 	.thumb_func
 PrintNameOnCardBack:
 	push	{r4, lr}
 	add	sp, sp, #-0xc
-	ldr	r4, .L397
+	ldr	r4, .L420
 	ldr	r1, [r4]
-	ldr	r2, .L397+0x4
+	ldr	r2, .L420+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L395	@cond_branch
-	ldr	r0, .L397+0x8
+	bne	.L418	@cond_branch
+	ldr	r0, .L420+0x8
 	str	r0, [sp]
 	mov	r0, #0x1
 	neg	r0, r0
@@ -3971,14 +4035,14 @@ PrintNameOnCardBack:
 	mov	r2, #0x88
 	mov	r3, #0x9
 	bl	AddTextPrinterParameterized3
-	b	.L396
-.L398:
+	b	.L419
+.L421:
 	.align	2, 0
-.L397:
+.L420:
 	.word	sData
 	.word	0x52b
 	.word	sTrainerCardTextColors
-.L395:
+.L418:
 	add	r1, r1, #0x4d
 	mov	r0, #0x1
 	mov	r2, #0xd8
@@ -3986,7 +4050,7 @@ PrintNameOnCardBack:
 	add	r2, r0, #0
 	lsl	r2, r2, #0x18
 	lsr	r2, r2, #0x18
-	ldr	r0, .L399
+	ldr	r0, .L422
 	str	r0, [sp]
 	mov	r0, #0x1
 	neg	r0, r0
@@ -3998,17 +4062,17 @@ PrintNameOnCardBack:
 	mov	r1, #0x1
 	mov	r3, #0x9
 	bl	AddTextPrinterParameterized3
-.L396:
+.L419:
 	add	sp, sp, #0xc
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L400:
+.L423:
 	.align	2, 0
-.L399:
+.L422:
 	.word	sTrainerCardTextColors
-.Lfe34:
-	.size	 PrintNameOnCardBack,.Lfe34-PrintNameOnCardBack
+.Lfe35:
+	.size	 PrintNameOnCardBack,.Lfe35-PrintNameOnCardBack
 	.section .rodata
 	.type	 sText_HofTime,object
 sText_HofTime:
@@ -4028,29 +4092,29 @@ sText_HofTime:
 	.thumb_func
 BufferHofDebutTime:
 	push	{r4, lr}
-	ldr	r4, .L403
+	ldr	r4, .L426
 	ldr	r1, [r4]
 	ldrb	r0, [r1, #0xb]
 	cmp	r0, #0
-	beq	.L402	@cond_branch
-	ldr	r0, .L403+0x4
-	ldr	r2, .L403+0x8
+	beq	.L425	@cond_branch
+	ldr	r0, .L426+0x4
+	ldr	r2, .L426+0x8
 	add	r1, r1, r2
 	ldrh	r1, [r1]
 	mov	r2, #0x1
 	mov	r3, #0x3
 	bl	ConvertIntToDecimalStringN
-	ldr	r0, .L403+0xc
+	ldr	r0, .L426+0xc
 	ldr	r1, [r4]
-	ldr	r2, .L403+0x10
+	ldr	r2, .L426+0x10
 	add	r1, r1, r2
 	ldrh	r1, [r1]
 	mov	r2, #0x2
 	mov	r3, #0x2
 	bl	ConvertIntToDecimalStringN
-	ldr	r0, .L403+0x14
+	ldr	r0, .L426+0x14
 	ldr	r1, [r4]
-	ldr	r2, .L403+0x18
+	ldr	r2, .L426+0x18
 	add	r1, r1, r2
 	ldrh	r1, [r1]
 	mov	r2, #0x2
@@ -4058,15 +4122,15 @@ BufferHofDebutTime:
 	bl	ConvertIntToDecimalStringN
 	ldr	r0, [r4]
 	add	r0, r0, #0x93
-	ldr	r1, .L403+0x1c
+	ldr	r1, .L426+0x1c
 	bl	StringExpandPlaceholders
-.L402:
+.L425:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L404:
+.L427:
 	.align	2, 0
-.L403:
+.L426:
 	.word	sData
 	.word	gStringVar1
 	.word	0x53a
@@ -4075,15 +4139,15 @@ BufferHofDebutTime:
 	.word	gStringVar3
 	.word	0x53e
 	.word	sText_HofTime
-.Lfe35:
-	.size	 BufferHofDebutTime,.Lfe35-BufferHofDebutTime
+.Lfe36:
+	.size	 BufferHofDebutTime,.Lfe36-BufferHofDebutTime
 	.section .rodata
-	.type	 xOffsets.110,object
-xOffsets.110:
+	.type	 xOffsets.113,object
+xOffsets.113:
 	.byte	0x8
 	.byte	0x10
-	.type	 widths.111,object
-widths.111:
+	.type	 widths.114,object
+widths.114:
 	.byte	0xd8
 	.byte	0xd8
 .text
@@ -4100,10 +4164,10 @@ PrintStatOnBackOfCard:
 	add	r4, r0, #0
 	mov	r9, r2
 	mov	sl, r3
-	ldr	r2, .L406
-	ldr	r6, .L406+0x4
+	ldr	r2, .L429
+	ldr	r6, .L429+0x4
 	ldr	r0, [r6]
-	ldr	r5, .L406+0x8
+	ldr	r5, .L429+0x8
 	add	r0, r0, r5
 	ldrb	r0, [r0]
 	add	r0, r0, r2
@@ -4113,7 +4177,7 @@ PrintStatOnBackOfCard:
 	lsl	r0, r0, #0x16
 	add	r4, r4, r0
 	lsr	r4, r4, #0x18
-	ldr	r0, .L406+0xc
+	ldr	r0, .L429+0xc
 	str	r0, [sp]
 	mov	r0, #0x1
 	neg	r0, r0
@@ -4124,7 +4188,7 @@ PrintStatOnBackOfCard:
 	mov	r1, #0x1
 	add	r3, r4, #0
 	bl	AddTextPrinterParameterized3
-	ldr	r1, .L406+0x10
+	ldr	r1, .L429+0x10
 	ldr	r0, [r6]
 	add	r0, r0, r5
 	ldrb	r0, [r0]
@@ -4154,42 +4218,42 @@ PrintStatOnBackOfCard:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L407:
+.L430:
 	.align	2, 0
-.L406:
-	.word	xOffsets.110
+.L429:
+	.word	xOffsets.113
 	.word	sData
 	.word	0x52b
 	.word	sTrainerCardTextColors
-	.word	widths.111
-.Lfe36:
-	.size	 PrintStatOnBackOfCard,.Lfe36-PrintStatOnBackOfCard
+	.word	widths.114
+.Lfe37:
+	.size	 PrintStatOnBackOfCard,.Lfe37-PrintStatOnBackOfCard
 	.align	2, 0
 	.type	 PrintHofDebutTimeOnCard,function
 	.thumb_func
 PrintHofDebutTimeOnCard:
 	push	{lr}
-	ldr	r0, .L410
+	ldr	r0, .L433
 	ldr	r2, [r0]
 	ldrb	r0, [r2, #0xb]
 	cmp	r0, #0
-	beq	.L409	@cond_branch
-	ldr	r1, .L410+0x4
+	beq	.L432	@cond_branch
+	ldr	r1, .L433+0x4
 	add	r2, r2, #0x93
-	ldr	r3, .L410+0x8
+	ldr	r3, .L433+0x8
 	mov	r0, #0x0
 	bl	PrintStatOnBackOfCard
-.L409:
+.L432:
 	pop	{r0}
 	bx	r0
-.L411:
+.L434:
 	.align	2, 0
-.L410:
+.L433:
 	.word	sData
 	.word	gText_HallOfFameDebut
 	.word	sTrainerCardStatColors
-.Lfe37:
-	.size	 PrintHofDebutTimeOnCard,.Lfe37-PrintHofDebutTimeOnCard
+.Lfe38:
+	.size	 PrintHofDebutTimeOnCard,.Lfe38-PrintHofDebutTimeOnCard
 	.section .rodata
 	.align	2, 0
 	.type	 sLinkBattleTexts,object
@@ -4204,15 +4268,15 @@ sLinkBattleTexts:
 	.thumb_func
 BufferLinkBattleResults:
 	push	{r4, lr}
-	ldr	r4, .L414
+	ldr	r4, .L437
 	ldr	r1, [r4]
 	ldrb	r0, [r1, #0xc]
 	cmp	r0, #0
-	beq	.L413	@cond_branch
+	beq	.L436	@cond_branch
 	add	r0, r1, #0
 	add	r0, r0, #0xd9
-	ldr	r2, .L414+0x4
-	ldr	r3, .L414+0x8
+	ldr	r2, .L437+0x4
+	ldr	r3, .L437+0x8
 	add	r1, r1, r3
 	ldrb	r1, [r1]
 	lsl	r1, r1, #0x2
@@ -4220,7 +4284,7 @@ BufferLinkBattleResults:
 	ldr	r1, [r1]
 	bl	StringCopy
 	ldr	r1, [r4]
-	ldr	r2, .L414+0xc
+	ldr	r2, .L437+0xc
 	add	r0, r1, r2
 	mov	r3, #0xa9
 	lsl	r3, r3, #0x3
@@ -4230,65 +4294,65 @@ BufferLinkBattleResults:
 	mov	r3, #0x4
 	bl	ConvertIntToDecimalStringN
 	ldr	r1, [r4]
-	ldr	r2, .L414+0x10
+	ldr	r2, .L437+0x10
 	add	r0, r1, r2
-	ldr	r3, .L414+0x14
+	ldr	r3, .L437+0x14
 	add	r1, r1, r3
 	ldrh	r1, [r1]
 	mov	r2, #0x0
 	mov	r3, #0x4
 	bl	ConvertIntToDecimalStringN
-.L413:
+.L436:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L415:
+.L438:
 	.align	2, 0
-.L414:
+.L437:
 	.word	sData
 	.word	sLinkBattleTexts
 	.word	0x52a
 	.word	0x165
 	.word	0x1ab
 	.word	0x54a
-.Lfe38:
-	.size	 BufferLinkBattleResults,.Lfe38-BufferLinkBattleResults
+.Lfe39:
+	.size	 BufferLinkBattleResults,.Lfe39-BufferLinkBattleResults
 	.align	2, 0
 	.type	 PrintLinkBattleResultsOnCard,function
 	.thumb_func
 PrintLinkBattleResultsOnCard:
 	push	{r4, r5, lr}
-	ldr	r5, .L418
+	ldr	r5, .L441
 	ldr	r1, [r5]
 	ldrb	r0, [r1, #0xc]
 	cmp	r0, #0
-	beq	.L417	@cond_branch
-	ldr	r0, .L418+0x4
-	ldr	r2, .L418+0x8
+	beq	.L440	@cond_branch
+	ldr	r0, .L441+0x4
+	ldr	r2, .L441+0x8
 	add	r1, r1, r2
 	bl	StringCopy
-	ldr	r0, .L418+0xc
+	ldr	r0, .L441+0xc
 	ldr	r1, [r5]
-	ldr	r2, .L418+0x10
+	ldr	r2, .L441+0x10
 	add	r1, r1, r2
 	bl	StringCopy
-	ldr	r4, .L418+0x14
-	ldr	r1, .L418+0x18
+	ldr	r4, .L441+0x14
+	ldr	r1, .L441+0x18
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	ldr	r1, [r5]
 	add	r1, r1, #0xd9
-	ldr	r3, .L418+0x1c
+	ldr	r3, .L441+0x1c
 	mov	r0, #0x1
 	add	r2, r4, #0
 	bl	PrintStatOnBackOfCard
-.L417:
+.L440:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L419:
+.L442:
 	.align	2, 0
-.L418:
+.L441:
 	.word	sData
 	.word	gStringVar1
 	.word	0x165
@@ -4297,502 +4361,502 @@ PrintLinkBattleResultsOnCard:
 	.word	gStringVar4
 	.word	gText_WinsLosses
 	.word	sTrainerCardTextColors
-.Lfe39:
-	.size	 PrintLinkBattleResultsOnCard,.Lfe39-PrintLinkBattleResultsOnCard
+.Lfe40:
+	.size	 PrintLinkBattleResultsOnCard,.Lfe40-PrintLinkBattleResultsOnCard
 	.align	2, 0
 	.type	 BufferNumTrades,function
 	.thumb_func
 BufferNumTrades:
 	push	{lr}
-	ldr	r0, .L422
+	ldr	r0, .L445
 	ldr	r1, [r0]
 	ldrb	r0, [r1, #0x10]
 	cmp	r0, #0
-	beq	.L421	@cond_branch
-	ldr	r2, .L422+0x4
+	beq	.L444	@cond_branch
+	ldr	r2, .L445+0x4
 	add	r0, r1, r2
-	ldr	r2, .L422+0x8
+	ldr	r2, .L445+0x8
 	add	r1, r1, r2
 	ldrh	r1, [r1]
 	mov	r2, #0x1
 	mov	r3, #0x5
 	bl	ConvertIntToDecimalStringN
-.L421:
+.L444:
 	pop	{r0}
 	bx	r0
-.L423:
+.L446:
 	.align	2, 0
-.L422:
+.L445:
 	.word	sData
 	.word	0x237
 	.word	0x554
-.Lfe40:
-	.size	 BufferNumTrades,.Lfe40-BufferNumTrades
+.Lfe41:
+	.size	 BufferNumTrades,.Lfe41-BufferNumTrades
 	.align	2, 0
 	.type	 PrintTradesStringOnCard,function
 	.thumb_func
 PrintTradesStringOnCard:
 	push	{lr}
-	ldr	r0, .L426
+	ldr	r0, .L449
 	ldr	r2, [r0]
 	ldrb	r0, [r2, #0x10]
 	cmp	r0, #0
-	beq	.L425	@cond_branch
-	ldr	r1, .L426+0x4
-	ldr	r0, .L426+0x8
+	beq	.L448	@cond_branch
+	ldr	r1, .L449+0x4
+	ldr	r0, .L449+0x8
 	add	r2, r2, r0
-	ldr	r3, .L426+0xc
+	ldr	r3, .L449+0xc
 	mov	r0, #0x2
 	bl	PrintStatOnBackOfCard
-.L425:
+.L448:
 	pop	{r0}
 	bx	r0
-.L427:
+.L450:
 	.align	2, 0
-.L426:
+.L449:
 	.word	sData
 	.word	gText_PokemonTrades
 	.word	0x237
 	.word	sTrainerCardStatColors
-.Lfe41:
-	.size	 PrintTradesStringOnCard,.Lfe41-PrintTradesStringOnCard
+.Lfe42:
+	.size	 PrintTradesStringOnCard,.Lfe42-PrintTradesStringOnCard
 	.align	2, 0
 	.type	 BufferBerryCrushPoints,function
 	.thumb_func
 BufferBerryCrushPoints:
 	push	{lr}
-	ldr	r0, .L430
+	ldr	r0, .L453
 	ldr	r2, [r0]
-	ldr	r1, .L430+0x4
+	ldr	r1, .L453+0x4
 	add	r0, r2, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L429	@cond_branch
+	bne	.L452	@cond_branch
 	mov	r3, #0xae
 	lsl	r3, r3, #0x3
 	add	r0, r2, r3
 	ldr	r1, [r0]
 	cmp	r1, #0
-	beq	.L429	@cond_branch
-	ldr	r3, .L430+0x8
+	beq	.L452	@cond_branch
+	ldr	r3, .L453+0x8
 	add	r0, r2, r3
 	mov	r2, #0x1
 	mov	r3, #0x5
 	bl	ConvertIntToDecimalStringN
-.L429:
+.L452:
 	pop	{r0}
 	bx	r0
-.L431:
+.L454:
 	.align	2, 0
-.L430:
+.L453:
 	.word	sData
 	.word	0x52a
 	.word	0x2c3
-.Lfe42:
-	.size	 BufferBerryCrushPoints,.Lfe42-BufferBerryCrushPoints
+.Lfe43:
+	.size	 BufferBerryCrushPoints,.Lfe43-BufferBerryCrushPoints
 	.align	2, 0
 	.type	 PrintBerryCrushStringOnCard,function
 	.thumb_func
 PrintBerryCrushStringOnCard:
 	push	{lr}
-	ldr	r0, .L434
+	ldr	r0, .L457
 	ldr	r2, [r0]
-	ldr	r1, .L434+0x4
+	ldr	r1, .L457+0x4
 	add	r0, r2, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L433	@cond_branch
+	bne	.L456	@cond_branch
 	add	r1, r1, #0x46
 	add	r0, r2, r1
 	ldr	r0, [r0]
 	cmp	r0, #0
-	beq	.L433	@cond_branch
-	ldr	r1, .L434+0x8
-	ldr	r0, .L434+0xc
+	beq	.L456	@cond_branch
+	ldr	r1, .L457+0x8
+	ldr	r0, .L457+0xc
 	add	r2, r2, r0
-	ldr	r3, .L434+0x10
+	ldr	r3, .L457+0x10
 	mov	r0, #0x4
 	bl	PrintStatOnBackOfCard
-.L433:
+.L456:
 	pop	{r0}
 	bx	r0
-.L435:
+.L458:
 	.align	2, 0
-.L434:
+.L457:
 	.word	sData
 	.word	0x52a
 	.word	gText_BerryCrush
 	.word	0x2c3
 	.word	sTrainerCardStatColors
-.Lfe43:
-	.size	 PrintBerryCrushStringOnCard,.Lfe43-PrintBerryCrushStringOnCard
+.Lfe44:
+	.size	 PrintBerryCrushStringOnCard,.Lfe44-PrintBerryCrushStringOnCard
 	.align	2, 0
 	.type	 BufferUnionRoomStats,function
 	.thumb_func
 BufferUnionRoomStats:
 	push	{lr}
-	ldr	r0, .L438
+	ldr	r0, .L461
 	ldr	r2, [r0]
-	ldr	r1, .L438+0x4
+	ldr	r1, .L461+0x4
 	add	r0, r2, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L437	@cond_branch
-	ldr	r3, .L438+0x8
+	bne	.L460	@cond_branch
+	ldr	r3, .L461+0x8
 	add	r0, r2, r3
 	ldr	r1, [r0]
 	cmp	r1, #0
-	beq	.L437	@cond_branch
-	ldr	r3, .L438+0xc
+	beq	.L460	@cond_branch
+	ldr	r3, .L461+0xc
 	add	r0, r2, r3
 	mov	r2, #0x1
 	mov	r3, #0x5
 	bl	ConvertIntToDecimalStringN
-.L437:
+.L460:
 	pop	{r0}
 	bx	r0
-.L439:
+.L462:
 	.align	2, 0
-.L438:
+.L461:
 	.word	sData
 	.word	0x52a
 	.word	0x574
 	.word	0x34f
-.Lfe44:
-	.size	 BufferUnionRoomStats,.Lfe44-BufferUnionRoomStats
+.Lfe45:
+	.size	 BufferUnionRoomStats,.Lfe45-BufferUnionRoomStats
 	.align	2, 0
 	.type	 PrintUnionStringOnCard,function
 	.thumb_func
 PrintUnionStringOnCard:
 	push	{lr}
-	ldr	r0, .L442
+	ldr	r0, .L465
 	ldr	r2, [r0]
-	ldr	r1, .L442+0x4
+	ldr	r1, .L465+0x4
 	add	r0, r2, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L441	@cond_branch
+	bne	.L464	@cond_branch
 	add	r1, r1, #0x4a
 	add	r0, r2, r1
 	ldr	r0, [r0]
 	cmp	r0, #0
-	beq	.L441	@cond_branch
-	ldr	r1, .L442+0x8
-	ldr	r0, .L442+0xc
+	beq	.L464	@cond_branch
+	ldr	r1, .L465+0x8
+	ldr	r0, .L465+0xc
 	add	r2, r2, r0
-	ldr	r3, .L442+0x10
+	ldr	r3, .L465+0x10
 	mov	r0, #0x3
 	bl	PrintStatOnBackOfCard
-.L441:
+.L464:
 	pop	{r0}
 	bx	r0
-.L443:
+.L466:
 	.align	2, 0
-.L442:
+.L465:
 	.word	sData
 	.word	0x52a
 	.word	gText_UnionTradesAndBattles
 	.word	0x34f
 	.word	sTrainerCardStatColors
-.Lfe45:
-	.size	 PrintUnionStringOnCard,.Lfe45-PrintUnionStringOnCard
+.Lfe46:
+	.size	 PrintUnionStringOnCard,.Lfe46-PrintUnionStringOnCard
 	.align	2, 0
 	.type	 BufferLinkPokeblocksNum,function
 	.thumb_func
 BufferLinkPokeblocksNum:
 	push	{r4, lr}
-	ldr	r4, .L446
+	ldr	r4, .L469
 	ldr	r1, [r4]
-	ldr	r2, .L446+0x4
+	ldr	r2, .L469+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L445	@cond_branch
-	ldr	r0, .L446+0x8
+	beq	.L468	@cond_branch
+	ldr	r0, .L469+0x8
 	add	r1, r1, r0
 	ldrh	r0, [r1]
 	cmp	r0, #0
-	beq	.L445	@cond_branch
-	ldr	r0, .L446+0xc
+	beq	.L468	@cond_branch
+	ldr	r0, .L469+0xc
 	ldrh	r1, [r1]
 	mov	r2, #0x1
 	mov	r3, #0x5
 	bl	ConvertIntToDecimalStringN
 	ldr	r0, [r4]
-	ldr	r1, .L446+0x10
+	ldr	r1, .L469+0x10
 	add	r0, r0, r1
-	ldr	r1, .L446+0x14
+	ldr	r1, .L469+0x14
 	bl	StringExpandPlaceholders
-.L445:
+.L468:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L447:
+.L470:
 	.align	2, 0
-.L446:
+.L469:
 	.word	sData
 	.word	0x52a
 	.word	0x552
 	.word	gStringVar1
 	.word	0x395
 	.word	gText_NumPokeblocks
-.Lfe46:
-	.size	 BufferLinkPokeblocksNum,.Lfe46-BufferLinkPokeblocksNum
+.Lfe47:
+	.size	 BufferLinkPokeblocksNum,.Lfe47-BufferLinkPokeblocksNum
 	.align	2, 0
 	.type	 PrintPokeblockStringOnCard,function
 	.thumb_func
 PrintPokeblockStringOnCard:
 	push	{lr}
-	ldr	r0, .L450
+	ldr	r0, .L473
 	ldr	r2, [r0]
-	ldr	r1, .L450+0x4
+	ldr	r1, .L473+0x4
 	add	r0, r2, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L449	@cond_branch
+	beq	.L472	@cond_branch
 	add	r1, r1, #0x28
 	add	r0, r2, r1
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	beq	.L449	@cond_branch
-	ldr	r1, .L450+0x8
-	ldr	r0, .L450+0xc
+	beq	.L472	@cond_branch
+	ldr	r1, .L473+0x8
+	ldr	r0, .L473+0xc
 	add	r2, r2, r0
-	ldr	r3, .L450+0x10
+	ldr	r3, .L473+0x10
 	mov	r0, #0x3
 	bl	PrintStatOnBackOfCard
-.L449:
+.L472:
 	pop	{r0}
 	bx	r0
-.L451:
+.L474:
 	.align	2, 0
-.L450:
+.L473:
 	.word	sData
 	.word	0x52a
 	.word	gText_PokeblocksWithFriends
 	.word	0x395
 	.word	sTrainerCardStatColors
-.Lfe47:
-	.size	 PrintPokeblockStringOnCard,.Lfe47-PrintPokeblockStringOnCard
+.Lfe48:
+	.size	 PrintPokeblockStringOnCard,.Lfe48-PrintPokeblockStringOnCard
 	.align	2, 0
 	.type	 BufferLinkContestNum,function
 	.thumb_func
 BufferLinkContestNum:
 	push	{lr}
-	ldr	r0, .L454
+	ldr	r0, .L477
 	ldr	r1, [r0]
-	ldr	r2, .L454+0x4
+	ldr	r2, .L477+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L453	@cond_branch
+	beq	.L476	@cond_branch
 	mov	r3, #0xaa
 	lsl	r3, r3, #0x3
 	add	r2, r1, r3
 	ldrh	r0, [r2]
 	cmp	r0, #0
-	beq	.L453	@cond_branch
-	ldr	r3, .L454+0x8
+	beq	.L476	@cond_branch
+	ldr	r3, .L477+0x8
 	add	r0, r1, r3
 	ldrh	r1, [r2]
 	mov	r2, #0x1
 	mov	r3, #0x5
 	bl	ConvertIntToDecimalStringN
-.L453:
+.L476:
 	pop	{r0}
 	bx	r0
-.L455:
+.L478:
 	.align	2, 0
-.L454:
+.L477:
 	.word	sData
 	.word	0x52a
 	.word	0x3db
-.Lfe48:
-	.size	 BufferLinkContestNum,.Lfe48-BufferLinkContestNum
+.Lfe49:
+	.size	 BufferLinkContestNum,.Lfe49-BufferLinkContestNum
 	.align	2, 0
 	.type	 PrintContestStringOnCard,function
 	.thumb_func
 PrintContestStringOnCard:
 	push	{lr}
-	ldr	r0, .L458
+	ldr	r0, .L481
 	ldr	r2, [r0]
-	ldr	r1, .L458+0x4
+	ldr	r1, .L481+0x4
 	add	r0, r2, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L457	@cond_branch
+	beq	.L480	@cond_branch
 	add	r1, r1, #0x26
 	add	r0, r2, r1
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	beq	.L457	@cond_branch
-	ldr	r1, .L458+0x8
-	ldr	r0, .L458+0xc
+	beq	.L480	@cond_branch
+	ldr	r1, .L481+0x8
+	ldr	r0, .L481+0xc
 	add	r2, r2, r0
-	ldr	r3, .L458+0x10
+	ldr	r3, .L481+0x10
 	mov	r0, #0x4
 	bl	PrintStatOnBackOfCard
-.L457:
+.L480:
 	pop	{r0}
 	bx	r0
-.L459:
+.L482:
 	.align	2, 0
-.L458:
+.L481:
 	.word	sData
 	.word	0x52a
 	.word	gText_WonContestsWFriends
 	.word	0x3db
 	.word	sTrainerCardStatColors
-.Lfe49:
-	.size	 PrintContestStringOnCard,.Lfe49-PrintContestStringOnCard
+.Lfe50:
+	.size	 PrintContestStringOnCard,.Lfe50-PrintContestStringOnCard
 	.align	2, 0
 	.type	 BufferBattleFacilityStats,function
 	.thumb_func
 BufferBattleFacilityStats:
 	push	{r4, lr}
-	ldr	r4, .L470
+	ldr	r4, .L493
 	ldr	r1, [r4]
-	ldr	r2, .L470+0x4
+	ldr	r2, .L493+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0x1
-	beq	.L462	@cond_branch
+	beq	.L485	@cond_branch
 	cmp	r0, #0x1
-	ble	.L461	@cond_branch
+	ble	.L484	@cond_branch
 	cmp	r0, #0x2
-	beq	.L464	@cond_branch
-	b	.L461
-.L471:
+	beq	.L487	@cond_branch
+	b	.L484
+.L494:
 	.align	2, 0
-.L470:
+.L493:
 	.word	sData
 	.word	0x52a
-.L462:
+.L485:
 	ldrb	r0, [r1, #0xd]
 	cmp	r0, #0
-	beq	.L461	@cond_branch
-	ldr	r0, .L472
-	ldr	r2, .L472+0x4
+	beq	.L484	@cond_branch
+	ldr	r0, .L495
+	ldr	r2, .L495+0x4
 	add	r1, r1, r2
 	ldrh	r1, [r1]
 	mov	r2, #0x1
 	mov	r3, #0x4
 	bl	ConvertIntToDecimalStringN
-	ldr	r0, .L472+0x8
+	ldr	r0, .L495+0x8
 	ldr	r1, [r4]
-	ldr	r2, .L472+0xc
+	ldr	r2, .L495+0xc
 	add	r1, r1, r2
 	ldrh	r1, [r1]
 	mov	r2, #0x1
 	mov	r3, #0x4
 	bl	ConvertIntToDecimalStringN
 	ldr	r0, [r4]
-	ldr	r1, .L472+0x10
+	ldr	r1, .L495+0x10
 	add	r0, r0, r1
-	ldr	r1, .L472+0x14
+	ldr	r1, .L495+0x14
 	bl	StringExpandPlaceholders
-	b	.L461
-.L473:
+	b	.L484
+.L496:
 	.align	2, 0
-.L472:
+.L495:
 	.word	gStringVar1
 	.word	0x54c
 	.word	gStringVar2
 	.word	0x54e
 	.word	0x421
 	.word	gText_WinsStraight
-.L464:
-	ldr	r2, .L474
+.L487:
+	ldr	r2, .L497
 	add	r1, r1, r2
 	ldrh	r0, [r1]
 	cmp	r0, #0
-	beq	.L461	@cond_branch
-	ldr	r0, .L474+0x4
+	beq	.L484	@cond_branch
+	ldr	r0, .L497+0x4
 	ldrh	r1, [r1]
 	mov	r2, #0x1
 	mov	r3, #0x5
 	bl	ConvertIntToDecimalStringN
 	ldr	r0, [r4]
-	ldr	r1, .L474+0x8
+	ldr	r1, .L497+0x8
 	add	r0, r0, r1
-	ldr	r1, .L474+0xc
+	ldr	r1, .L497+0xc
 	bl	StringExpandPlaceholders
-.L461:
+.L484:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L475:
+.L498:
 	.align	2, 0
-.L474:
+.L497:
 	.word	0x596
 	.word	gStringVar1
 	.word	0x421
 	.word	gText_NumBP
-.Lfe50:
-	.size	 BufferBattleFacilityStats,.Lfe50-BufferBattleFacilityStats
+.Lfe51:
+	.size	 BufferBattleFacilityStats,.Lfe51-BufferBattleFacilityStats
 	.align	2, 0
 	.type	 PrintBattleFacilityStringOnCard,function
 	.thumb_func
 PrintBattleFacilityStringOnCard:
 	push	{lr}
-	ldr	r0, .L486
+	ldr	r0, .L509
 	ldr	r2, [r0]
-	ldr	r1, .L486+0x4
+	ldr	r1, .L509+0x4
 	add	r0, r2, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x1
-	beq	.L478	@cond_branch
+	beq	.L501	@cond_branch
 	cmp	r0, #0x1
-	ble	.L477	@cond_branch
+	ble	.L500	@cond_branch
 	cmp	r0, #0x2
-	beq	.L480	@cond_branch
-	b	.L477
-.L487:
+	beq	.L503	@cond_branch
+	b	.L500
+.L510:
 	.align	2, 0
-.L486:
+.L509:
 	.word	sData
 	.word	0x52a
-.L478:
+.L501:
 	ldrb	r0, [r2, #0xd]
 	cmp	r0, #0
-	beq	.L477	@cond_branch
-	ldr	r1, .L488
-	ldr	r0, .L488+0x4
+	beq	.L500	@cond_branch
+	ldr	r1, .L511
+	ldr	r0, .L511+0x4
 	add	r2, r2, r0
-	ldr	r3, .L488+0x8
+	ldr	r3, .L511+0x8
 	mov	r0, #0x5
 	bl	PrintStatOnBackOfCard
-	b	.L477
-.L489:
+	b	.L500
+.L512:
 	.align	2, 0
-.L488:
+.L511:
 	.word	gText_BattleTower
 	.word	0x421
 	.word	sTrainerCardTextColors
-.L480:
-	ldr	r1, .L490
+.L503:
+	ldr	r1, .L513
 	add	r0, r2, r1
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	beq	.L477	@cond_branch
-	ldr	r1, .L490+0x4
-	ldr	r0, .L490+0x8
+	beq	.L500	@cond_branch
+	ldr	r1, .L513+0x4
+	ldr	r0, .L513+0x8
 	add	r2, r2, r0
-	ldr	r3, .L490+0xc
+	ldr	r3, .L513+0xc
 	mov	r0, #0x5
 	bl	PrintStatOnBackOfCard
-.L477:
+.L500:
 	pop	{r0}
 	bx	r0
-.L491:
+.L514:
 	.align	2, 0
-.L490:
+.L513:
 	.word	0x596
 	.word	gText_BattlePtsWon
 	.word	0x421
 	.word	sTrainerCardStatColors
-.Lfe51:
-	.size	 PrintBattleFacilityStringOnCard,.Lfe51-PrintBattleFacilityStringOnCard
+.Lfe52:
+	.size	 PrintBattleFacilityStringOnCard,.Lfe52-PrintBattleFacilityStringOnCard
 	.section .rodata
 .LC135:
 	.byte	0x5
@@ -4815,26 +4879,26 @@ PrintBattleFacilityStringOnCard:
 PrintPokemonIconsOnCard:
 	push	{r4, r5, lr}
 	add	sp, sp, #-0x20
-	ldr	r1, .L500
+	ldr	r1, .L523
 	add	r0, sp, #0x10
 	mov	r2, #0x6
 	bl	memcpy
 	add	r4, sp, #0x18
-	ldr	r1, .L500+0x4
+	ldr	r1, .L523+0x4
 	add	r0, r4, #0
 	mov	r2, #0x6
 	bl	memcpy
-	ldr	r0, .L500+0x8
+	ldr	r0, .L523+0x8
 	ldr	r0, [r0]
-	ldr	r1, .L500+0xc
+	ldr	r1, .L523+0xc
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	add	r5, r4, #0
 	cmp	r0, #0
-	bne	.L493	@cond_branch
+	bne	.L516	@cond_branch
 	mov	r4, #0x0
-.L497:
-	ldr	r0, .L500+0x8
+.L520:
+	ldr	r0, .L523+0x8
 	ldr	r0, [r0]
 	lsl	r1, r4, #0x1
 	mov	r2, #0xb1
@@ -4843,7 +4907,7 @@ PrintPokemonIconsOnCard:
 	add	r1, r0, r1
 	ldrh	r0, [r1]
 	cmp	r0, #0
-	beq	.L496	@cond_branch
+	beq	.L519	@cond_branch
 	bl	GetMonIconPaletteIndexFromSpecies
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
@@ -4869,34 +4933,34 @@ PrintPokemonIconsOnCard:
 	mov	r0, #0x3
 	mov	r3, #0xf
 	bl	WriteSequenceToBgTilemapBuffer
-.L496:
+.L519:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x5
-	bls	.L497	@cond_branch
-.L493:
+	bls	.L520	@cond_branch
+.L516:
 	add	sp, sp, #0x20
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L501:
+.L524:
 	.align	2, 0
-.L500:
+.L523:
 	.word	.LC135
 	.word	.LC137
 	.word	sData
 	.word	0x52a
-.Lfe52:
-	.size	 PrintPokemonIconsOnCard,.Lfe52-PrintPokemonIconsOnCard
+.Lfe53:
+	.size	 PrintPokemonIconsOnCard,.Lfe53-PrintPokemonIconsOnCard
 	.align	2, 0
 	.type	 LoadMonIconGfx,function
 	.thumb_func
 LoadMonIconGfx:
 	push	{r4, r5, lr}
 	add	sp, sp, #-0x4
-	ldr	r0, .L517
-	ldr	r4, .L517+0x4
+	ldr	r0, .L540
+	ldr	r4, .L540+0x4
 	ldr	r1, [r4]
 	mov	r5, #0x8d
 	lsl	r5, r5, #0x3
@@ -4904,25 +4968,25 @@ LoadMonIconGfx:
 	mov	r2, #0x60
 	bl	CpuSet
 	ldr	r4, [r4]
-	ldr	r1, .L517+0x8
+	ldr	r1, .L540+0x8
 	add	r0, r4, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x1
-	beq	.L505	@cond_branch
+	beq	.L528	@cond_branch
 	cmp	r0, #0x1
-	ble	.L503	@cond_branch
+	ble	.L526	@cond_branch
 	cmp	r0, #0x2
-	beq	.L506	@cond_branch
+	beq	.L529	@cond_branch
 	cmp	r0, #0x3
-	beq	.L507	@cond_branch
-	b	.L503
-.L518:
+	beq	.L530	@cond_branch
+	b	.L526
+.L541:
 	.align	2, 0
-.L517:
+.L540:
 	.word	gMonIconPalettes
 	.word	sData
 	.word	0x582
-.L505:
+.L528:
 	mov	r2, #0x8d
 	lsl	r2, r2, #0x3
 	add	r0, r4, r2
@@ -4932,8 +4996,8 @@ LoadMonIconGfx:
 	mov	r2, #0x0
 	mov	r3, #0x0
 	bl	TintPalette_CustomTone
-	b	.L503
-.L506:
+	b	.L526
+.L529:
 	add	r0, r4, r5
 	mov	r2, #0xfa
 	lsl	r2, r2, #0x1
@@ -4944,13 +5008,13 @@ LoadMonIconGfx:
 	str	r1, [sp]
 	mov	r1, #0x60
 	bl	TintPalette_CustomTone
-	b	.L503
-.L507:
+	b	.L526
+.L530:
 	add	r0, r4, r5
 	mov	r1, #0x60
 	bl	TintPalette_SepiaTone
-.L503:
-	ldr	r0, .L519
+.L526:
+	ldr	r0, .L542
 	ldr	r0, [r0]
 	mov	r1, #0x8d
 	lsl	r1, r1, #0x3
@@ -4959,8 +5023,8 @@ LoadMonIconGfx:
 	mov	r2, #0xc0
 	bl	LoadPalette
 	mov	r4, #0x0
-.L514:
-	ldr	r0, .L519
+.L537:
+	ldr	r0, .L542
 	ldr	r0, [r0]
 	lsl	r1, r4, #0x1
 	mov	r2, #0xb1
@@ -4969,7 +5033,7 @@ LoadMonIconGfx:
 	add	r1, r0, r1
 	ldrh	r0, [r1]
 	cmp	r0, #0
-	beq	.L513	@cond_branch
+	beq	.L536	@cond_branch
 	mov	r1, #0x0
 	mov	r2, #0x0
 	bl	GetMonIconTiles
@@ -4983,22 +5047,22 @@ LoadMonIconGfx:
 	mov	r2, #0x80
 	lsl	r2, r2, #0x2
 	bl	LoadBgTiles
-.L513:
+.L536:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x5
-	bls	.L514	@cond_branch
+	bls	.L537	@cond_branch
 	add	sp, sp, #0x4
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L520:
+.L543:
 	.align	2, 0
-.L519:
+.L542:
 	.word	sData
-.Lfe53:
-	.size	 LoadMonIconGfx,.Lfe53-LoadMonIconGfx
+.Lfe54:
+	.size	 LoadMonIconGfx,.Lfe54-LoadMonIconGfx
 	.section .rodata
 .LC142:
 	.byte	0xb
@@ -5012,32 +5076,32 @@ LoadMonIconGfx:
 PrintStickersOnCard:
 	push	{r4, lr}
 	add	sp, sp, #-0x14
-	ldr	r1, .L529
+	ldr	r1, .L552
 	add	r0, sp, #0x10
 	mov	r2, #0x4
 	bl	memcpy
-	ldr	r0, .L529+0x4
+	ldr	r0, .L552+0x4
 	ldr	r1, [r0]
-	ldr	r2, .L529+0x8
+	ldr	r2, .L552+0x8
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L522	@cond_branch
+	bne	.L545	@cond_branch
 	add	r2, r2, #0x56
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0x1
-	bne	.L522	@cond_branch
+	bne	.L545	@cond_branch
 	mov	r4, #0x0
-.L526:
-	ldr	r0, .L529+0x4
+.L549:
+	ldr	r0, .L552+0x4
 	ldr	r0, [r0]
-	ldr	r1, .L529+0xc
+	ldr	r1, .L552+0xc
 	add	r0, r0, r1
 	add	r0, r0, r4
 	ldrb	r3, [r0]
 	cmp	r3, #0
-	beq	.L525	@cond_branch
+	beq	.L548	@cond_branch
 	lsl	r1, r4, #0x12
 	mov	r2, #0xa0
 	lsl	r2, r2, #0x11
@@ -5061,50 +5125,50 @@ PrintStickersOnCard:
 	mov	r0, #0x3
 	mov	r3, #0x2
 	bl	WriteSequenceToBgTilemapBuffer
-.L525:
+.L548:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x2
-	bls	.L526	@cond_branch
-.L522:
+	bls	.L549	@cond_branch
+.L545:
 	add	sp, sp, #0x14
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L530:
+.L553:
 	.align	2, 0
-.L529:
+.L552:
 	.word	.LC142
 	.word	sData
 	.word	0x52a
 	.word	0x584
-.Lfe54:
-	.size	 PrintStickersOnCard,.Lfe54-PrintStickersOnCard
+.Lfe55:
+	.size	 PrintStickersOnCard,.Lfe55-PrintStickersOnCard
 	.align	2, 0
 	.type	 LoadStickerGfx,function
 	.thumb_func
 LoadStickerGfx:
 	push	{lr}
-	ldr	r0, .L532
+	ldr	r0, .L555
 	mov	r1, #0xb0
 	mov	r2, #0x20
 	bl	LoadPalette
-	ldr	r0, .L532+0x4
+	ldr	r0, .L555+0x4
 	mov	r1, #0xc0
 	mov	r2, #0x20
 	bl	LoadPalette
-	ldr	r0, .L532+0x8
+	ldr	r0, .L555+0x8
 	mov	r1, #0xd0
 	mov	r2, #0x20
 	bl	LoadPalette
-	ldr	r0, .L532+0xc
+	ldr	r0, .L555+0xc
 	mov	r1, #0xe0
 	mov	r2, #0x20
 	bl	LoadPalette
-	ldr	r0, .L532+0x10
+	ldr	r0, .L555+0x10
 	ldr	r1, [r0]
-	ldr	r0, .L532+0x14
+	ldr	r0, .L555+0x14
 	add	r1, r1, r0
 	mov	r2, #0x80
 	lsl	r2, r2, #0x3
@@ -5113,17 +5177,17 @@ LoadStickerGfx:
 	bl	LoadBgTiles
 	pop	{r0}
 	bx	r0
-.L533:
+.L556:
 	.align	2, 0
-.L532:
+.L555:
 	.word	sTrainerCardSticker1_Pal
 	.word	sTrainerCardSticker2_Pal
 	.word	sTrainerCardSticker3_Pal
 	.word	sTrainerCardSticker4_Pal
 	.word	sData
 	.word	0x17a8
-.Lfe55:
-	.size	 LoadStickerGfx,.Lfe55-LoadStickerGfx
+.Lfe56:
+	.size	 LoadStickerGfx,.Lfe56-LoadStickerGfx
 	.align	2, 0
 	.type	 DrawTrainerCardWindow,function
 	.thumb_func
@@ -5140,80 +5204,80 @@ DrawTrainerCardWindow:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.Lfe56:
-	.size	 DrawTrainerCardWindow,.Lfe56-DrawTrainerCardWindow
+.Lfe57:
+	.size	 DrawTrainerCardWindow,.Lfe57-DrawTrainerCardWindow
 	.align	2, 0
 	.type	 SetCardBgsAndPals,function
 	.thumb_func
 SetCardBgsAndPals:
 	push	{r4, lr}
 	add	sp, sp, #-0x8
-	ldr	r0, .L550
+	ldr	r0, .L573
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x3]
 	cmp	r0, #0x4
-	bls	.LCB4916
-	b	.L546	@long jump
-.LCB4916:
+	bls	.LCB5007
+	b	.L569	@long jump
+.LCB5007:
 	lsl	r0, r0, #0x2
-	ldr	r1, .L550+0x4
+	ldr	r1, .L573+0x4
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L551:
+.L574:
 	.align	2, 0
-.L550:
+.L573:
 	.word	sData
-	.word	.L547
+	.word	.L570
 	.align	2, 0
 	.align	2, 0
-.L547:
-	.word	.L537
-	.word	.L538
-	.word	.L539
-	.word	.L544
-	.word	.L545
-.L537:
-	ldr	r0, .L552
+.L570:
+	.word	.L560
+	.word	.L561
+	.word	.L562
+	.word	.L567
+	.word	.L568
+.L560:
+	ldr	r0, .L575
 	ldr	r1, [r0]
-	ldr	r0, .L552+0x4
+	ldr	r0, .L575+0x4
 	add	r1, r1, r0
 	mov	r2, #0x80
 	lsl	r2, r2, #0x3
 	mov	r0, #0x3
-	b	.L549
-.L553:
+	b	.L572
+.L576:
 	.align	2, 0
-.L552:
+.L575:
 	.word	sData
 	.word	0x13a8
-.L538:
-	ldr	r0, .L554
+.L561:
+	ldr	r0, .L577
 	ldr	r1, [r0]
-	ldr	r3, .L554+0x4
+	ldr	r3, .L577+0x4
 	add	r1, r1, r3
 	mov	r2, #0xc0
 	lsl	r2, r2, #0x5
 	mov	r0, #0x0
-.L549:
+.L572:
 	mov	r3, #0x0
 	bl	LoadBgTiles
-	b	.L536
-.L555:
+	b	.L559
+.L578:
 	.align	2, 0
-.L554:
+.L577:
 	.word	sData
 	.word	0x19a8
-.L539:
-	ldr	r4, .L556
+.L562:
+	ldr	r4, .L579
 	ldr	r2, [r4]
-	ldr	r1, .L556+0x4
+	ldr	r1, .L579+0x4
 	add	r0, r2, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L540	@cond_branch
-	ldr	r1, .L556+0x8
-	ldr	r3, .L556+0xc
+	beq	.L563	@cond_branch
+	ldr	r1, .L579+0x8
+	ldr	r3, .L579+0xc
 	add	r0, r2, r3
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x2
@@ -5222,24 +5286,24 @@ SetCardBgsAndPals:
 	mov	r1, #0x0
 	mov	r2, #0x60
 	bl	LoadPalette
-	ldr	r0, .L556+0x10
+	ldr	r0, .L579+0x10
 	mov	r1, #0x30
 	mov	r2, #0x20
 	bl	LoadPalette
 	ldr	r0, [r4]
-	ldr	r1, .L556+0x14
+	ldr	r1, .L579+0x14
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L542	@cond_branch
-	ldr	r0, .L556+0x18
+	beq	.L565	@cond_branch
+	ldr	r0, .L579+0x18
 	mov	r1, #0x10
 	mov	r2, #0x20
 	bl	LoadPalette
-	b	.L542
-.L557:
+	b	.L565
+.L580:
 	.align	2, 0
-.L556:
+.L579:
 	.word	sData
 	.word	0x52a
 	.word	sHoennTrainerCardStarPals
@@ -5247,9 +5311,9 @@ SetCardBgsAndPals:
 	.word	sHoennTrainerCardBadges_Pal
 	.word	0x534
 	.word	sHoennTrainerCardFemaleBg_Pal
-.L540:
-	ldr	r1, .L558
-	ldr	r3, .L558+0x4
+.L563:
+	ldr	r1, .L581
+	ldr	r3, .L581+0x4
 	add	r0, r2, r3
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x2
@@ -5258,55 +5322,55 @@ SetCardBgsAndPals:
 	mov	r1, #0x0
 	mov	r2, #0x60
 	bl	LoadPalette
-	ldr	r0, .L558+0x8
+	ldr	r0, .L581+0x8
 	mov	r1, #0x30
 	mov	r2, #0x20
 	bl	LoadPalette
 	ldr	r0, [r4]
-	ldr	r1, .L558+0xc
+	ldr	r1, .L581+0xc
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L542	@cond_branch
-	ldr	r0, .L558+0x10
+	beq	.L565	@cond_branch
+	ldr	r0, .L581+0x10
 	mov	r1, #0x10
 	mov	r2, #0x20
 	bl	LoadPalette
-.L542:
-	ldr	r0, .L558+0x14
+.L565:
+	ldr	r0, .L581+0x14
 	mov	r1, #0x40
 	mov	r2, #0x20
 	bl	LoadPalette
-	b	.L536
-.L559:
+	b	.L559
+.L582:
 	.align	2, 0
-.L558:
+.L581:
 	.word	sKantoTrainerCardStarPals
 	.word	0x535
 	.word	sKantoTrainerCardBadges_Pal
 	.word	0x534
 	.word	sKantoTrainerCardFemaleBg_Pal
 	.word	sTrainerCardGold_Pal
-.L544:
-	ldr	r4, .L560
+.L567:
+	ldr	r4, .L583
 	ldr	r1, [r4]
-	ldr	r3, .L560+0x4
+	ldr	r3, .L583+0x4
 	add	r1, r1, r3
 	mov	r0, #0x0
 	bl	SetBgTilemapBuffer
 	ldr	r1, [r4]
-	ldr	r0, .L560+0x8
+	ldr	r0, .L583+0x8
 	add	r1, r1, r0
 	mov	r0, #0x2
 	bl	SetBgTilemapBuffer
-	b	.L536
-.L561:
+	b	.L559
+.L584:
 	.align	2, 0
-.L560:
+.L583:
 	.word	sData
 	.word	0x3ca8
 	.word	0x5ca8
-.L545:
+.L568:
 	mov	r4, #0x20
 	str	r4, [sp]
 	str	r4, [sp, #0x4]
@@ -5329,39 +5393,39 @@ SetCardBgsAndPals:
 	mov	r2, #0x0
 	mov	r3, #0x0
 	bl	FillBgTilemapBufferRect_Palette0
-.L546:
+.L569:
 	mov	r0, #0x1
-	b	.L548
-.L536:
-	ldr	r0, .L562
+	b	.L571
+.L559:
+	ldr	r0, .L585
 	ldr	r1, [r0]
 	ldrb	r0, [r1, #0x3]
 	add	r0, r0, #0x1
 	strb	r0, [r1, #0x3]
 	mov	r0, #0x0
-.L548:
+.L571:
 	add	sp, sp, #0x8
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-.L563:
+.L586:
 	.align	2, 0
-.L562:
+.L585:
 	.word	sData
-.Lfe57:
-	.size	 SetCardBgsAndPals,.Lfe57-SetCardBgsAndPals
+.Lfe58:
+	.size	 SetCardBgsAndPals,.Lfe58-SetCardBgsAndPals
 	.align	2, 0
 	.type	 DrawCardScreenBackground,function
 	.thumb_func
 DrawCardScreenBackground:
 	push	{r4, r5, r6, r7, lr}
 	add	r7, r0, #0
-	ldr	r0, .L578
+	ldr	r0, .L601
 	ldr	r0, [r0]
-	ldr	r1, .L578+0x4
+	ldr	r1, .L601+0x4
 	add	r6, r0, r1
 	mov	r1, #0x0
-.L568:
+.L591:
 	mov	r2, #0x0
 	lsl	r5, r1, #0x10
 	asr	r1, r5, #0x10
@@ -5369,12 +5433,12 @@ DrawCardScreenBackground:
 	lsl	r0, r1, #0x4
 	sub	r0, r0, r1
 	lsl	r4, r0, #0x1
-.L572:
+.L595:
 	lsl	r0, r2, #0x10
 	asr	r1, r0, #0x10
 	add	r2, r0, #0
 	cmp	r1, #0x1d
-	bgt	.L573	@cond_branch
+	bgt	.L596	@cond_branch
 	add	r0, r3, r1
 	lsl	r0, r0, #0x1
 	add	r0, r0, r6
@@ -5382,18 +5446,18 @@ DrawCardScreenBackground:
 	lsl	r1, r1, #0x1
 	add	r1, r1, r7
 	ldrh	r1, [r1]
-	b	.L577
-.L579:
+	b	.L600
+.L602:
 	.align	2, 0
-.L578:
+.L601:
 	.word	sData
 	.word	0x5ca8
-.L573:
+.L596:
 	add	r0, r3, r1
 	lsl	r0, r0, #0x1
 	add	r0, r0, r6
 	ldrh	r1, [r7]
-.L577:
+.L600:
 	strh	r1, [r0]
 	mov	r1, #0x80
 	lsl	r1, r1, #0x9
@@ -5401,31 +5465,31 @@ DrawCardScreenBackground:
 	lsr	r2, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x1f
-	ble	.L572	@cond_branch
+	ble	.L595	@cond_branch
 	add	r0, r5, r1
 	lsr	r1, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x13
-	ble	.L568	@cond_branch
+	ble	.L591	@cond_branch
 	mov	r0, #0x2
 	bl	CopyBgTilemapBufferToVram
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.Lfe58:
-	.size	 DrawCardScreenBackground,.Lfe58-DrawCardScreenBackground
+.Lfe59:
+	.size	 DrawCardScreenBackground,.Lfe59-DrawCardScreenBackground
 	.align	2, 0
 	.type	 DrawCardFrontOrBack,function
 	.thumb_func
 DrawCardFrontOrBack:
 	push	{r4, r5, r6, r7, lr}
 	add	r7, r0, #0
-	ldr	r0, .L594
+	ldr	r0, .L617
 	ldr	r0, [r0]
-	ldr	r1, .L594+0x4
+	ldr	r1, .L617+0x4
 	add	r6, r0, r1
 	mov	r1, #0x0
-.L584:
+.L607:
 	mov	r2, #0x0
 	lsl	r5, r1, #0x10
 	asr	r1, r5, #0x10
@@ -5433,12 +5497,12 @@ DrawCardFrontOrBack:
 	lsl	r0, r1, #0x4
 	sub	r0, r0, r1
 	lsl	r4, r0, #0x1
-.L588:
+.L611:
 	lsl	r0, r2, #0x10
 	asr	r1, r0, #0x10
 	add	r2, r0, #0
 	cmp	r1, #0x1d
-	bgt	.L589	@cond_branch
+	bgt	.L612	@cond_branch
 	add	r0, r3, r1
 	lsl	r0, r0, #0x1
 	add	r0, r0, r6
@@ -5446,18 +5510,18 @@ DrawCardFrontOrBack:
 	lsl	r1, r1, #0x1
 	add	r1, r1, r7
 	ldrh	r1, [r1]
-	b	.L593
-.L595:
+	b	.L616
+.L618:
 	.align	2, 0
-.L594:
+.L617:
 	.word	sData
 	.word	0x3ca8
-.L589:
+.L612:
 	add	r0, r3, r1
 	lsl	r0, r0, #0x1
 	add	r0, r0, r6
 	ldrh	r1, [r7]
-.L593:
+.L616:
 	strh	r1, [r0]
 	mov	r1, #0x80
 	lsl	r1, r1, #0x9
@@ -5465,22 +5529,22 @@ DrawCardFrontOrBack:
 	lsr	r2, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x1f
-	ble	.L588	@cond_branch
+	ble	.L611	@cond_branch
 	add	r0, r5, r1
 	lsr	r1, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x13
-	ble	.L584	@cond_branch
+	ble	.L607	@cond_branch
 	mov	r0, #0x0
 	bl	CopyBgTilemapBufferToVram
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.Lfe59:
-	.size	 DrawCardFrontOrBack,.Lfe59-DrawCardFrontOrBack
+.Lfe60:
+	.size	 DrawCardFrontOrBack,.Lfe60-DrawCardFrontOrBack
 	.section .rodata
-	.type	 yOffsets.184,object
-yOffsets.184:
+	.type	 yOffsets.187,object
+yOffsets.187:
 	.byte	0x7
 	.byte	0x7
 .text
@@ -5495,20 +5559,23 @@ DrawStarsAndBadgesOnCard:
 	push	{r5, r6, r7}
 	add	sp, sp, #-0xc
 	mov	r0, #0xc0
-	mov	r8, r0
+	mov	r9, r0
 	mov	r2, #0x3
 	mov	sl, r2
-	ldr	r2, .L604
-	ldr	r4, .L604+0x4
+	ldr	r2, .L627
+	ldr	r4, .L627+0x4
 	ldr	r1, [r4]
-	ldr	r3, .L604+0x8
+	ldr	r3, .L627+0x8
 	add	r0, r1, r3
 	ldrb	r0, [r0]
 	add	r0, r0, r2
 	ldrb	r3, [r0]
-	ldr	r0, .L604+0xc
+	ldr	r0, .L627+0xc
 	add	r1, r1, r0
 	ldrb	r0, [r1]
+	sub	r0, r0, #0x1
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
 	str	r0, [sp]
 	mov	r0, #0x1
 	str	r0, [sp, #0x4]
@@ -5521,13 +5588,13 @@ DrawStarsAndBadgesOnCard:
 	ldr	r0, [r4]
 	ldrb	r0, [r0, #0x5]
 	cmp	r0, #0
-	bne	.L597	@cond_branch
+	bne	.L620	@cond_branch
 	mov	r2, #0x4
-	mov	r9, r2
+	mov	r8, r2
 	mov	r2, #0x0
 	mov	r6, #0x1
-.L601:
-	ldr	r0, .L604+0x4
+.L624:
+	ldr	r0, .L627+0x4
 	ldr	r1, [r0]
 	lsl	r0, r2, #0x10
 	asr	r7, r0, #0x10
@@ -5535,8 +5602,8 @@ DrawStarsAndBadgesOnCard:
 	add	r1, r1, r7
 	ldrb	r0, [r1]
 	cmp	r0, #0
-	beq	.L600	@cond_branch
-	mov	r3, r9
+	beq	.L623	@cond_branch
+	mov	r3, r8
 	lsl	r5, r3, #0x18
 	lsr	r5, r5, #0x18
 	str	r6, [sp]
@@ -5544,15 +5611,15 @@ DrawStarsAndBadgesOnCard:
 	mov	r0, sl
 	str	r0, [sp, #0x8]
 	mov	r0, #0x3
-	mov	r1, r8
+	mov	r1, r9
 	add	r2, r5, #0
 	mov	r3, #0xf
 	bl	FillBgTilemapBufferRect
-	mov	r1, r8
+	mov	r1, r9
 	add	r1, r1, #0x1
 	lsl	r1, r1, #0x10
 	lsr	r1, r1, #0x10
-	mov	r4, r9
+	mov	r4, r8
 	add	r4, r4, #0x1
 	lsl	r4, r4, #0x18
 	lsr	r4, r4, #0x18
@@ -5564,7 +5631,7 @@ DrawStarsAndBadgesOnCard:
 	add	r2, r4, #0
 	mov	r3, #0xf
 	bl	FillBgTilemapBufferRect
-	mov	r1, r8
+	mov	r1, r9
 	add	r1, r1, #0x10
 	lsl	r1, r1, #0x10
 	lsr	r1, r1, #0x10
@@ -5576,7 +5643,7 @@ DrawStarsAndBadgesOnCard:
 	add	r2, r5, #0
 	mov	r3, #0x10
 	bl	FillBgTilemapBufferRect
-	mov	r1, r8
+	mov	r1, r9
 	add	r1, r1, #0x11
 	lsl	r1, r1, #0x10
 	lsr	r1, r1, #0x10
@@ -5588,26 +5655,26 @@ DrawStarsAndBadgesOnCard:
 	add	r2, r4, #0
 	mov	r3, #0x10
 	bl	FillBgTilemapBufferRect
-.L600:
+.L623:
 	add	r0, r7, #0x1
 	lsl	r0, r0, #0x10
-	mov	r1, r8
+	mov	r1, r9
 	add	r1, r1, #0x2
 	lsl	r1, r1, #0x10
 	lsr	r1, r1, #0x10
-	mov	r8, r1
-	mov	r2, r9
+	mov	r9, r1
+	mov	r2, r8
 	lsl	r1, r2, #0x10
 	mov	r3, #0xc0
 	lsl	r3, r3, #0xa
 	add	r1, r1, r3
 	lsr	r1, r1, #0x10
-	mov	r9, r1
+	mov	r8, r1
 	lsr	r2, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x7
-	ble	.L601	@cond_branch
-.L597:
+	ble	.L624	@cond_branch
+.L620:
 	mov	r0, #0x3
 	bl	CopyBgTilemapBufferToVram
 	add	sp, sp, #0xc
@@ -5618,31 +5685,31 @@ DrawStarsAndBadgesOnCard:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L605:
+.L628:
 	.align	2, 0
-.L604:
-	.word	yOffsets.184
+.L627:
+	.word	yOffsets.187
 	.word	sData
 	.word	0x52b
 	.word	0x535
-.Lfe60:
-	.size	 DrawStarsAndBadgesOnCard,.Lfe60-DrawStarsAndBadgesOnCard
+.Lfe61:
+	.size	 DrawStarsAndBadgesOnCard,.Lfe61-DrawStarsAndBadgesOnCard
 	.align	2, 0
 	.type	 DrawCardBackStats,function
 	.thumb_func
 DrawCardBackStats:
 	push	{r4, r5, r6, lr}
 	add	sp, sp, #-0xc
-	ldr	r6, .L615
+	ldr	r6, .L638
 	ldr	r1, [r6]
-	ldr	r2, .L615+0x4
+	ldr	r2, .L638+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L607	@cond_branch
+	bne	.L630	@cond_branch
 	ldrb	r0, [r1, #0x10]
 	cmp	r0, #0
-	beq	.L608	@cond_branch
+	beq	.L631	@cond_branch
 	mov	r4, #0x1
 	str	r4, [sp]
 	str	r4, [sp, #0x4]
@@ -5660,14 +5727,14 @@ DrawCardBackStats:
 	mov	r2, #0x1b
 	mov	r3, #0xa
 	bl	FillBgTilemapBufferRect
-.L608:
+.L631:
 	ldr	r0, [r6]
 	mov	r1, #0xae
 	lsl	r1, r1, #0x3
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	cmp	r0, #0
-	beq	.L609	@cond_branch
+	beq	.L632	@cond_branch
 	mov	r4, #0x1
 	str	r4, [sp]
 	str	r4, [sp, #0x4]
@@ -5685,13 +5752,13 @@ DrawCardBackStats:
 	mov	r2, #0x15
 	mov	r3, #0xe
 	bl	FillBgTilemapBufferRect
-.L609:
+.L632:
 	ldr	r0, [r6]
-	ldr	r2, .L615+0x8
+	ldr	r2, .L638+0x8
 	add	r0, r0, r2
 	ldr	r0, [r0]
 	cmp	r0, #0
-	beq	.L611	@cond_branch
+	beq	.L634	@cond_branch
 	mov	r4, #0x1
 	str	r4, [sp]
 	str	r4, [sp, #0x4]
@@ -5709,17 +5776,17 @@ DrawCardBackStats:
 	mov	r2, #0x1b
 	mov	r3, #0xc
 	bl	FillBgTilemapBufferRect
-	b	.L611
-.L616:
+	b	.L634
+.L639:
 	.align	2, 0
-.L615:
+.L638:
 	.word	sData
 	.word	0x52a
 	.word	0x574
-.L607:
+.L630:
 	ldrb	r0, [r1, #0x10]
 	cmp	r0, #0
-	beq	.L612	@cond_branch
+	beq	.L635	@cond_branch
 	mov	r4, #0x1
 	str	r4, [sp]
 	str	r4, [sp, #0x4]
@@ -5738,14 +5805,14 @@ DrawCardBackStats:
 	mov	r2, #0x1b
 	mov	r3, #0xa
 	bl	FillBgTilemapBufferRect
-.L612:
+.L635:
 	ldr	r0, [r6]
 	mov	r1, #0xaa
 	lsl	r1, r1, #0x3
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	beq	.L613	@cond_branch
+	beq	.L636	@cond_branch
 	mov	r4, #0x1
 	str	r4, [sp]
 	str	r4, [sp, #0x4]
@@ -5764,11 +5831,11 @@ DrawCardBackStats:
 	mov	r2, #0x1b
 	mov	r3, #0xe
 	bl	FillBgTilemapBufferRect
-.L613:
+.L636:
 	ldr	r0, [r6]
 	ldrb	r0, [r0, #0xd]
 	cmp	r0, #0
-	beq	.L611	@cond_branch
+	beq	.L634	@cond_branch
 	mov	r4, #0x1
 	str	r4, [sp]
 	str	r4, [sp, #0x4]
@@ -5803,21 +5870,21 @@ DrawCardBackStats:
 	mov	r2, #0x1b
 	mov	r3, #0x10
 	bl	FillBgTilemapBufferRect
-.L611:
+.L634:
 	mov	r0, #0x3
 	bl	CopyBgTilemapBufferToVram
 	add	sp, sp, #0xc
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.Lfe61:
-	.size	 DrawCardBackStats,.Lfe61-DrawCardBackStats
+.Lfe62:
+	.size	 DrawCardBackStats,.Lfe62-DrawCardBackStats
 	.align	2, 0
 	.type	 BlinkTimeColon,function
 	.thumb_func
 BlinkTimeColon:
 	push	{lr}
-	ldr	r3, .L619
+	ldr	r3, .L642
 	ldr	r1, [r3]
 	ldrb	r0, [r1, #0x6]
 	add	r0, r0, #0x1
@@ -5825,7 +5892,7 @@ BlinkTimeColon:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x3c
-	bls	.L618	@cond_branch
+	bls	.L641	@cond_branch
 	ldr	r1, [r3]
 	mov	r0, #0x0
 	strb	r0, [r1, #0x6]
@@ -5835,20 +5902,20 @@ BlinkTimeColon:
 	eor	r0, r0, r1
 	strb	r0, [r2, #0x7]
 	ldr	r0, [r3]
-	ldr	r1, .L619+0x4
+	ldr	r1, .L642+0x4
 	add	r0, r0, r1
 	mov	r1, #0x1
 	strb	r1, [r0]
-.L618:
+.L641:
 	pop	{r0}
 	bx	r0
-.L620:
+.L643:
 	.align	2, 0
-.L619:
+.L642:
 	.word	sData
 	.word	0x529
-.Lfe62:
-	.size	 BlinkTimeColon,.Lfe62-BlinkTimeColon
+.Lfe63:
+	.size	 BlinkTimeColon,.Lfe63-BlinkTimeColon
 	.align	2, 0
 	.globl	GetTrainerCardStars
 	.type	 GetTrainerCardStars,function
@@ -5856,66 +5923,66 @@ BlinkTimeColon:
 GetTrainerCardStars:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r2, .L622
+	ldr	r2, .L645
 	mov	r1, #0x64
 	mul	r0, r0, r1
 	add	r0, r0, r2
 	ldrb	r0, [r0, #0x1]
 	bx	lr
-.L623:
+.L646:
 	.align	2, 0
-.L622:
+.L645:
 	.word	gTrainerCards
-.Lfe63:
-	.size	 GetTrainerCardStars,.Lfe63-GetTrainerCardStars
+.Lfe64:
+	.size	 GetTrainerCardStars,.Lfe64-GetTrainerCardStars
 	.align	2, 0
 	.type	 FlipTrainerCard,function
 	.thumb_func
 FlipTrainerCard:
 	push	{r4, lr}
-	ldr	r4, .L625
+	ldr	r4, .L648
 	add	r0, r4, #0
 	mov	r1, #0x0
 	bl	CreateTask
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	bl	_call_via_r4
-	ldr	r0, .L625+0x4
+	ldr	r0, .L648+0x4
 	bl	SetHBlankCallback
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L626:
+.L649:
 	.align	2, 0
-.L625:
+.L648:
 	.word	Task_DoCardFlipTask
 	.word	HblankCb_TrainerCard
-.Lfe64:
-	.size	 FlipTrainerCard,.Lfe64-FlipTrainerCard
+.Lfe65:
+	.size	 FlipTrainerCard,.Lfe65-FlipTrainerCard
 	.align	2, 0
 	.type	 IsCardFlipTaskActive,function
 	.thumb_func
 IsCardFlipTaskActive:
 	push	{lr}
-	ldr	r0, .L631
+	ldr	r0, .L654
 	bl	FindTaskIdByFunc
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0xff
-	beq	.L628	@cond_branch
+	beq	.L651	@cond_branch
 	mov	r0, #0x0
-	b	.L630
-.L632:
+	b	.L653
+.L655:
 	.align	2, 0
-.L631:
+.L654:
 	.word	Task_DoCardFlipTask
-.L628:
+.L651:
 	mov	r0, #0x1
-.L630:
+.L653:
 	pop	{r1}
 	bx	r1
-.Lfe65:
-	.size	 IsCardFlipTaskActive,.Lfe65-IsCardFlipTaskActive
+.Lfe66:
+	.size	 IsCardFlipTaskActive,.Lfe66-IsCardFlipTaskActive
 	.align	2, 0
 	.type	 Task_DoCardFlipTask,function
 	.thumb_func
@@ -5923,13 +5990,13 @@ Task_DoCardFlipTask:
 	push	{r4, r5, lr}
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r5, .L638
-	ldr	r2, .L638+0x4
+	ldr	r5, .L661
+	ldr	r2, .L661+0x4
 	lsl	r1, r0, #0x2
 	add	r1, r1, r0
 	lsl	r1, r1, #0x3
 	add	r4, r1, r2
-.L634:
+.L657:
 	mov	r1, #0x8
 	ldrsh	r0, [r4, r1]
 	lsl	r0, r0, #0x2
@@ -5939,17 +6006,17 @@ Task_DoCardFlipTask:
 	bl	_call_via_r1
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L634	@cond_branch
+	bne	.L657	@cond_branch
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L639:
+.L662:
 	.align	2, 0
-.L638:
+.L661:
 	.word	sTrainerCardFlipTasks
 	.word	gTasks
-.Lfe66:
-	.size	 Task_DoCardFlipTask,.Lfe66-Task_DoCardFlipTask
+.Lfe67:
+	.size	 Task_DoCardFlipTask,.Lfe67-Task_DoCardFlipTask
 	.align	2, 0
 	.type	 Task_BeginCardFlip,function
 	.thumb_func
@@ -5963,17 +6030,17 @@ Task_BeginCardFlip:
 	bl	ScanlineEffect_Stop
 	bl	ScanlineEffect_Clear
 	mov	r1, #0x0
-	ldr	r0, .L646
+	ldr	r0, .L669
 	mov	r2, #0x0
 	mov	r3, #0xf0
 	lsl	r3, r3, #0x3
 	add	r0, r0, r3
-.L644:
+.L667:
 	strh	r2, [r0]
 	add	r0, r0, #0x2
 	add	r1, r1, #0x1
 	cmp	r1, #0x9f
-	bls	.L644	@cond_branch
+	bls	.L667	@cond_branch
 	ldrh	r0, [r4, #0x8]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x8]
@@ -5981,12 +6048,12 @@ Task_BeginCardFlip:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-.L647:
+.L670:
 	.align	2, 0
-.L646:
+.L669:
 	.word	gScanlineEffectRegBuffers
-.Lfe67:
-	.size	 Task_BeginCardFlip,.Lfe67-Task_BeginCardFlip
+.Lfe68:
+	.size	 Task_BeginCardFlip,.Lfe68-Task_BeginCardFlip
 	.align	2, 0
 	.type	 Task_AnimateCardFlipDown,function
 	.thumb_func
@@ -5998,7 +6065,7 @@ Task_AnimateCardFlipDown:
 	push	{r5, r6, r7}
 	add	sp, sp, #-0x4
 	mov	r8, r0
-	ldr	r0, .L668
+	ldr	r0, .L691
 	ldr	r1, [r0]
 	mov	r0, #0x0
 	strb	r0, [r1, #0x9]
@@ -6007,25 +6074,25 @@ Task_AnimateCardFlipDown:
 	mov	r2, #0xa
 	ldrsh	r0, [r0, r2]
 	cmp	r0, #0x4c
-	ble	.L649	@cond_branch
+	ble	.L672	@cond_branch
 	mov	r0, #0x4d
 	mov	r3, r8
 	strh	r0, [r3, #0xa]
-	b	.L650
-.L669:
+	b	.L673
+.L692:
 	.align	2, 0
-.L668:
+.L691:
 	.word	sData
-.L649:
+.L672:
 	add	r0, r1, #0x7
 	mov	r4, r8
 	strh	r0, [r4, #0xa]
-.L650:
-	ldr	r0, .L670
+.L673:
+	ldr	r0, .L693
 	ldr	r0, [r0]
 	mov	r2, r8
 	ldrh	r1, [r2, #0xa]
-	ldr	r3, .L670+0x4
+	ldr	r3, .L693+0x4
 	add	r0, r0, r3
 	strh	r1, [r0]
 	ldrh	r0, [r2, #0xa]
@@ -6044,7 +6111,7 @@ Task_AnimateCardFlipDown:
 	add	r1, r4, #0
 	bl	__udivsi3
 	add	r5, r0, #0
-	ldr	r1, .L670+0x8
+	ldr	r1, .L693+0x8
 	add	r5, r5, r1
 	mov	r0, r5
 	mul	r0, r0, r4
@@ -6057,9 +6124,9 @@ Task_AnimateCardFlipDown:
 	lsl	r5, r5, #0x1
 	mov	r2, #0x0
 	cmp	r2, r7
-	bcs	.L652	@cond_branch
-	ldr	r3, .L670+0xc
-.L654:
+	bcs	.L675	@cond_branch
+	ldr	r3, .L693+0xc
+.L677:
 	lsl	r0, r2, #0x10
 	asr	r0, r0, #0x10
 	lsl	r1, r0, #0x1
@@ -6071,22 +6138,22 @@ Task_AnimateCardFlipDown:
 	lsr	r2, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, r7
-	bcc	.L654	@cond_branch
-.L652:
+	bcc	.L677	@cond_branch
+.L675:
 	lsl	r1, r2, #0x10
 	mov	r3, r9
 	lsl	r0, r3, #0x10
 	asr	r3, r0, #0x10
-	ldr	r4, .L670
+	ldr	r4, .L693
 	mov	r9, r4
 	ldr	r4, [sp]
 	lsr	r7, r4, #0x10
 	cmp	r1, r0
-	bge	.L667	@cond_branch
-	ldr	r0, .L670+0xc
+	bge	.L690	@cond_branch
+	ldr	r0, .L693+0xc
 	mov	ip, r0
 	add	r4, r3, #0
-.L659:
+.L682:
 	lsr	r3, r6, #0x10
 	add	r6, r6, r5
 	mov	r2, sl
@@ -6101,15 +6168,15 @@ Task_AnimateCardFlipDown:
 	lsl	r1, r2, #0x10
 	asr	r0, r1, #0x10
 	cmp	r0, r4
-	blt	.L659	@cond_branch
-.L667:
+	blt	.L682	@cond_branch
+.L690:
 	add	r3, r7, #0
 	lsl	r1, r2, #0x10
 	asr	r0, r1, #0x10
 	cmp	r0, #0x9f
-	bgt	.L662	@cond_branch
-	ldr	r2, .L670+0xc
-.L664:
+	bgt	.L685	@cond_branch
+	ldr	r2, .L693+0xc
+.L687:
 	asr	r0, r1, #0x10
 	lsl	r1, r0, #0x1
 	add	r1, r1, r2
@@ -6118,8 +6185,8 @@ Task_AnimateCardFlipDown:
 	lsl	r1, r0, #0x10
 	asr	r0, r1, #0x10
 	cmp	r0, #0x9f
-	ble	.L664	@cond_branch
-.L662:
+	ble	.L687	@cond_branch
+.L685:
 	mov	r3, r9
 	ldr	r0, [r3]
 	mov	r1, #0x1
@@ -6128,11 +6195,11 @@ Task_AnimateCardFlipDown:
 	mov	r1, #0xa
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x4c
-	ble	.L666	@cond_branch
+	ble	.L689	@cond_branch
 	ldrh	r0, [r4, #0x8]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x8]
-.L666:
+.L689:
 	mov	r0, #0x0
 	add	sp, sp, #0x4
 	pop	{r3, r4, r5}
@@ -6142,15 +6209,15 @@ Task_AnimateCardFlipDown:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.L671:
+.L694:
 	.align	2, 0
-.L670:
+.L693:
 	.word	sData
 	.word	0x7ca8
 	.word	-0x10000
 	.word	gScanlineEffectRegBuffers
-.Lfe68:
-	.size	 Task_AnimateCardFlipDown,.Lfe68-Task_AnimateCardFlipDown
+.Lfe69:
+	.size	 Task_AnimateCardFlipDown,.Lfe69-Task_AnimateCardFlipDown
 	.align	2, 0
 	.type	 Task_DrawFlippedCardSide,function
 	.thumb_func
@@ -6158,38 +6225,38 @@ Task_DrawFlippedCardSide:
 	push	{r4, r5, lr}
 	add	sp, sp, #-0x8
 	add	r5, r0, #0
-	ldr	r4, .L698
+	ldr	r4, .L721
 	ldr	r1, [r4]
 	mov	r0, #0x0
 	strb	r0, [r1, #0x9]
 	bl	sub_8087598
 	add	r2, r4, #0
 	cmp	r0, #0x1
-	beq	.L697	@cond_branch
-.L674:
+	beq	.L720	@cond_branch
+.L697:
 	ldr	r3, [r2]
 	ldrb	r0, [r3, #0x4]
 	cmp	r0, #0x4
-	bhi	.L692	@cond_branch
+	bhi	.L715	@cond_branch
 	lsl	r0, r0, #0x2
-	ldr	r1, .L698+0x4
+	ldr	r1, .L721+0x4
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L699:
+.L722:
 	.align	2, 0
-.L698:
+.L721:
 	.word	sData
-	.word	.L693
+	.word	.L716
 	.align	2, 0
 	.align	2, 0
-.L693:
-	.word	.L678
-	.word	.L679
-	.word	.L684
-	.word	.L687
-	.word	.L690
-.L678:
+.L716:
+	.word	.L701
+	.word	.L702
+	.word	.L707
+	.word	.L710
+	.word	.L713
+.L701:
 	mov	r0, #0x1
 	mov	r1, #0x0
 	bl	FillWindowPixelBuffer
@@ -6201,72 +6268,72 @@ Task_DrawFlippedCardSide:
 	mov	r2, #0x0
 	mov	r3, #0x0
 	bl	FillBgTilemapBufferRect_Palette0
-	b	.L677
-.L679:
+	b	.L700
+.L702:
 	ldr	r0, [r2]
 	ldrb	r0, [r0, #0x8]
 	cmp	r0, #0
-	bne	.L680	@cond_branch
+	bne	.L703	@cond_branch
 	bl	PrintAllOnCardBack
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L677	@cond_branch
-	b	.L697
-.L680:
+	bne	.L700	@cond_branch
+	b	.L720
+.L703:
 	bl	PrintAllOnCardFront
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L677	@cond_branch
-	b	.L697
-.L684:
-	ldr	r0, .L700
+	bne	.L700	@cond_branch
+	b	.L720
+.L707:
+	ldr	r0, .L723
 	ldr	r1, [r0]
 	ldrb	r0, [r1, #0x8]
 	cmp	r0, #0
-	bne	.L685	@cond_branch
-	ldr	r2, .L700+0x4
+	bne	.L708	@cond_branch
+	ldr	r2, .L723+0x4
 	add	r0, r1, r2
 	bl	DrawCardFrontOrBack
-	b	.L677
-.L701:
+	b	.L700
+.L724:
 	.align	2, 0
-.L700:
+.L723:
 	.word	sData
 	.word	0xa48
-.L685:
+.L708:
 	mov	r0, #0x1
 	bl	DrawTrainerCardWindow
-	b	.L677
-.L687:
-	ldr	r0, .L702
+	b	.L700
+.L710:
+	ldr	r0, .L725
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x8]
 	cmp	r0, #0
-	bne	.L688	@cond_branch
+	bne	.L711	@cond_branch
 	bl	DrawCardBackStats
-	b	.L677
-.L703:
+	b	.L700
+.L726:
 	.align	2, 0
-.L702:
+.L725:
 	.word	sData
-.L688:
+.L711:
 	mov	r0, #0x2
 	mov	r1, #0x0
 	bl	FillWindowPixelBuffer
-	b	.L677
-.L690:
-	ldr	r0, .L704
+	b	.L700
+.L713:
+	ldr	r0, .L727
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x8]
 	cmp	r0, #0
-	beq	.L677	@cond_branch
+	beq	.L700	@cond_branch
 	bl	CreateTrainerCardTrainerPic
-	b	.L677
-.L705:
+	b	.L700
+.L728:
 	.align	2, 0
-.L704:
+.L727:
 	.word	sData
-.L692:
+.L715:
 	ldrh	r0, [r5, #0x8]
 	add	r0, r0, #0x1
 	mov	r1, #0x0
@@ -6275,48 +6342,48 @@ Task_DrawFlippedCardSide:
 	strb	r0, [r3, #0x9]
 	ldr	r0, [r2]
 	strb	r1, [r0, #0x4]
-	b	.L697
-.L677:
-	ldr	r2, .L706
+	b	.L720
+.L700:
+	ldr	r2, .L729
 	ldr	r1, [r2]
 	ldrb	r0, [r1, #0x4]
 	add	r0, r0, #0x1
 	strb	r0, [r1, #0x4]
-	ldr	r0, .L706+0x4
+	ldr	r0, .L729+0x4
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L674	@cond_branch
-.L697:
+	beq	.L697	@cond_branch
+.L720:
 	mov	r0, #0x0
 	add	sp, sp, #0x8
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-.L707:
+.L730:
 	.align	2, 0
-.L706:
+.L729:
 	.word	sData
 	.word	gReceivedRemoteLinkPlayers
-.Lfe69:
-	.size	 Task_DrawFlippedCardSide,.Lfe69-Task_DrawFlippedCardSide
+.Lfe70:
+	.size	 Task_DrawFlippedCardSide,.Lfe70-Task_DrawFlippedCardSide
 	.align	2, 0
 	.type	 Task_SetCardFlipped,function
 	.thumb_func
 Task_SetCardFlipped:
 	push	{r4, r5, lr}
 	add	r5, r0, #0
-	ldr	r4, .L710
+	ldr	r4, .L733
 	ldr	r1, [r4]
 	mov	r0, #0x0
 	strb	r0, [r1, #0x9]
 	ldr	r0, [r4]
 	ldrb	r0, [r0, #0x8]
 	cmp	r0, #0
-	beq	.L709	@cond_branch
+	beq	.L732	@cond_branch
 	mov	r0, #0x2
 	bl	DrawTrainerCardWindow
 	ldr	r0, [r4]
-	ldr	r1, .L710+0x4
+	ldr	r1, .L733+0x4
 	add	r0, r0, r1
 	bl	DrawCardScreenBackground
 	ldr	r0, [r4]
@@ -6325,7 +6392,7 @@ Task_SetCardFlipped:
 	add	r0, r0, r1
 	bl	DrawCardFrontOrBack
 	bl	DrawStarsAndBadgesOnCard
-.L709:
+.L732:
 	mov	r0, #0x1
 	bl	DrawTrainerCardWindow
 	ldr	r2, [r4]
@@ -6345,13 +6412,13 @@ Task_SetCardFlipped:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-.L711:
+.L734:
 	.align	2, 0
-.L710:
+.L733:
 	.word	sData
 	.word	0xef8
-.Lfe70:
-	.size	 Task_SetCardFlipped,.Lfe70-Task_SetCardFlipped
+.Lfe71:
+	.size	 Task_SetCardFlipped,.Lfe71-Task_SetCardFlipped
 	.align	2, 0
 	.type	 Task_AnimateCardFlipUp,function
 	.thumb_func
@@ -6363,7 +6430,7 @@ Task_AnimateCardFlipUp:
 	push	{r5, r6, r7}
 	add	sp, sp, #-0x4
 	mov	r8, r0
-	ldr	r0, .L732
+	ldr	r0, .L755
 	ldr	r0, [r0]
 	mov	r2, #0x0
 	strb	r2, [r0, #0x9]
@@ -6372,24 +6439,24 @@ Task_AnimateCardFlipUp:
 	mov	r3, #0xa
 	ldrsh	r0, [r0, r3]
 	cmp	r0, #0x5
-	bgt	.L713	@cond_branch
+	bgt	.L736	@cond_branch
 	mov	r4, r8
 	strh	r2, [r4, #0xa]
-	b	.L714
-.L733:
+	b	.L737
+.L756:
 	.align	2, 0
-.L732:
+.L755:
 	.word	sData
-.L713:
+.L736:
 	sub	r0, r1, #0x5
 	mov	r1, r8
 	strh	r0, [r1, #0xa]
-.L714:
-	ldr	r0, .L734
+.L737:
+	ldr	r0, .L757
 	ldr	r0, [r0]
 	mov	r2, r8
 	ldrh	r1, [r2, #0xa]
-	ldr	r3, .L734+0x4
+	ldr	r3, .L757+0x4
 	add	r0, r0, r3
 	strh	r1, [r0]
 	ldrh	r0, [r2, #0xa]
@@ -6408,7 +6475,7 @@ Task_AnimateCardFlipUp:
 	add	r1, r4, #0
 	bl	__udivsi3
 	add	r5, r0, #0
-	ldr	r1, .L734+0x8
+	ldr	r1, .L757+0x8
 	add	r5, r5, r1
 	mov	r0, r5
 	mul	r0, r0, r4
@@ -6421,9 +6488,9 @@ Task_AnimateCardFlipUp:
 	lsr	r5, r5, #0x1
 	mov	r2, #0x0
 	cmp	r2, r7
-	bcs	.L716	@cond_branch
-	ldr	r3, .L734+0xc
-.L718:
+	bcs	.L739	@cond_branch
+	ldr	r3, .L757+0xc
+.L741:
 	lsl	r0, r2, #0x10
 	asr	r0, r0, #0x10
 	lsl	r1, r0, #0x1
@@ -6435,22 +6502,22 @@ Task_AnimateCardFlipUp:
 	lsr	r2, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, r7
-	bcc	.L718	@cond_branch
-.L716:
+	bcc	.L741	@cond_branch
+.L739:
 	lsl	r1, r2, #0x10
 	mov	r3, r9
 	lsl	r0, r3, #0x10
 	asr	r3, r0, #0x10
-	ldr	r4, .L734
+	ldr	r4, .L757
 	mov	r9, r4
 	ldr	r4, [sp]
 	lsr	r7, r4, #0x10
 	cmp	r1, r0
-	bge	.L731	@cond_branch
-	ldr	r0, .L734+0xc
+	bge	.L754	@cond_branch
+	ldr	r0, .L757+0xc
 	mov	ip, r0
 	add	r4, r3, #0
-.L723:
+.L746:
 	lsr	r3, r6, #0x10
 	add	r6, r6, r5
 	add	r5, r5, sl
@@ -6464,15 +6531,15 @@ Task_AnimateCardFlipUp:
 	lsl	r1, r2, #0x10
 	asr	r0, r1, #0x10
 	cmp	r0, r4
-	blt	.L723	@cond_branch
-.L731:
+	blt	.L746	@cond_branch
+.L754:
 	add	r3, r7, #0
 	lsl	r1, r2, #0x10
 	asr	r0, r1, #0x10
 	cmp	r0, #0x9f
-	bgt	.L726	@cond_branch
-	ldr	r2, .L734+0xc
-.L728:
+	bgt	.L749	@cond_branch
+	ldr	r2, .L757+0xc
+.L751:
 	asr	r0, r1, #0x10
 	lsl	r1, r0, #0x1
 	add	r1, r1, r2
@@ -6481,8 +6548,8 @@ Task_AnimateCardFlipUp:
 	lsl	r1, r0, #0x10
 	asr	r0, r1, #0x10
 	cmp	r0, #0x9f
-	ble	.L728	@cond_branch
-.L726:
+	ble	.L751	@cond_branch
+.L749:
 	mov	r1, r9
 	ldr	r0, [r1]
 	mov	r1, #0x1
@@ -6491,11 +6558,11 @@ Task_AnimateCardFlipUp:
 	mov	r3, #0xa
 	ldrsh	r0, [r2, r3]
 	cmp	r0, #0
-	bgt	.L730	@cond_branch
+	bgt	.L753	@cond_branch
 	ldrh	r0, [r2, #0x8]
 	add	r0, r0, #0x1
 	strh	r0, [r2, #0x8]
-.L730:
+.L753:
 	mov	r0, #0x0
 	add	sp, sp, #0x4
 	pop	{r3, r4, r5}
@@ -6505,15 +6572,15 @@ Task_AnimateCardFlipUp:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.L735:
+.L758:
 	.align	2, 0
-.L734:
+.L757:
 	.word	sData
 	.word	0x7ca8
 	.word	-0x10000
 	.word	gScanlineEffectRegBuffers
-.Lfe71:
-	.size	 Task_AnimateCardFlipUp,.Lfe71-Task_AnimateCardFlipUp
+.Lfe72:
+	.size	 Task_AnimateCardFlipUp,.Lfe72-Task_AnimateCardFlipUp
 	.align	2, 0
 	.type	 Task_EndCardFlip,function
 	.thumb_func
@@ -6525,7 +6592,7 @@ Task_EndCardFlip:
 	bl	ShowBg
 	mov	r0, #0x0
 	bl	SetHBlankCallback
-	ldr	r0, .L737
+	ldr	r0, .L760
 	bl	FindTaskIdByFunc
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
@@ -6533,12 +6600,12 @@ Task_EndCardFlip:
 	mov	r0, #0x0
 	pop	{r1}
 	bx	r1
-.L738:
+.L761:
 	.align	2, 0
-.L737:
+.L760:
 	.word	Task_DoCardFlipTask
-.Lfe72:
-	.size	 Task_EndCardFlip,.Lfe72-Task_EndCardFlip
+.Lfe73:
+	.size	 Task_EndCardFlip,.Lfe73-Task_EndCardFlip
 	.align	2, 0
 	.globl	ShowPlayerTrainerCard
 	.type	 ShowPlayerTrainerCard,function
@@ -6546,8 +6613,8 @@ Task_EndCardFlip:
 ShowPlayerTrainerCard:
 	push	{r4, r5, lr}
 	add	r5, r0, #0
-	ldr	r4, .L745
-	ldr	r0, .L745+0x4
+	ldr	r4, .L768
+	ldr	r0, .L768+0x4
 	bl	AllocZeroed
 	add	r1, r0, #0
 	str	r1, [r4]
@@ -6555,70 +6622,70 @@ ShowPlayerTrainerCard:
 	lsl	r2, r2, #0x3
 	add	r0, r1, r2
 	str	r5, [r0]
-	ldr	r0, .L745+0x8
+	ldr	r0, .L768+0x8
 	cmp	r5, r0
-	bne	.L740	@cond_branch
-	ldr	r0, .L745+0xc
+	bne	.L763	@cond_branch
+	ldr	r0, .L768+0xc
 	add	r1, r1, r0
-	ldr	r0, .L745+0x10
-	b	.L744
-.L746:
+	ldr	r0, .L768+0x10
+	b	.L767
+.L769:
 	.align	2, 0
-.L745:
+.L768:
 	.word	sData
 	.word	0x7cac
 	.word	CB2_ReshowFrontierPass
 	.word	0x52c
 	.word	0x7fff
-.L740:
-	ldr	r2, .L747
+.L763:
+	ldr	r2, .L770
 	add	r1, r1, r2
 	mov	r0, #0x0
-.L744:
+.L767:
 	strh	r0, [r1]
 	bl	InUnionRoom
 	add	r3, r0, #0
 	cmp	r3, #0x1
-	bne	.L742	@cond_branch
-	ldr	r1, .L747+0x4
+	bne	.L765	@cond_branch
+	ldr	r1, .L770+0x4
 	ldr	r0, [r1]
 	strb	r3, [r0, #0x5]
 	add	r2, r1, #0
-	b	.L743
-.L748:
+	b	.L766
+.L771:
 	.align	2, 0
-.L747:
+.L770:
 	.word	0x52c
 	.word	sData
-.L742:
-	ldr	r2, .L749
+.L765:
+	ldr	r2, .L772
 	ldr	r1, [r2]
 	mov	r0, #0x0
 	strb	r0, [r1, #0x5]
-.L743:
+.L766:
 	ldr	r0, [r2]
-	ldr	r1, .L749+0x4
+	ldr	r1, .L772+0x4
 	add	r0, r0, r1
 	mov	r1, #0x2
 	strb	r1, [r0]
 	ldr	r0, [r2]
-	ldr	r2, .L749+0x8
+	ldr	r2, .L772+0x8
 	add	r0, r0, r2
 	bl	TrainerCard_GenerateCardForLinkPlayer
-	ldr	r0, .L749+0xc
+	ldr	r0, .L772+0xc
 	bl	SetMainCallback2
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L750:
+.L773:
 	.align	2, 0
-.L749:
+.L772:
 	.word	sData
 	.word	0x7caa
 	.word	0x534
 	.word	CB2_InitTrainerCard
-.Lfe73:
-	.size	 ShowPlayerTrainerCard,.Lfe73-ShowPlayerTrainerCard
+.Lfe74:
+	.size	 ShowPlayerTrainerCard,.Lfe74-ShowPlayerTrainerCard
 	.align	2, 0
 	.globl	ShowTrainerCardInLink
 	.type	 ShowTrainerCardInLink,function
@@ -6629,8 +6696,8 @@ ShowTrainerCardInLink:
 	add	r6, r1, #0
 	lsl	r4, r4, #0x18
 	lsr	r4, r4, #0x18
-	ldr	r5, .L752
-	ldr	r0, .L752+0x4
+	ldr	r5, .L775
+	ldr	r0, .L775+0x4
 	bl	AllocZeroed
 	str	r0, [r5]
 	mov	r2, #0xa6
@@ -6640,32 +6707,32 @@ ShowTrainerCardInLink:
 	mov	r1, #0x1
 	strb	r1, [r0, #0x5]
 	ldr	r0, [r5]
-	ldr	r1, .L752+0x8
+	ldr	r1, .L775+0x8
 	add	r0, r0, r1
-	ldr	r2, .L752+0xc
+	ldr	r2, .L775+0xc
 	mov	r1, #0x64
 	mul	r1, r1, r4
 	add	r1, r1, r2
 	mov	r2, #0x64
 	bl	memcpy
 	ldr	r1, [r5]
-	ldr	r2, .L752+0x10
+	ldr	r2, .L775+0x10
 	lsl	r0, r4, #0x3
 	sub	r0, r0, r4
 	lsl	r0, r0, #0x2
 	add	r0, r0, r2
 	ldrh	r0, [r0, #0x1a]
-	ldr	r2, .L752+0x14
+	ldr	r2, .L775+0x14
 	add	r1, r1, r2
 	strb	r0, [r1]
-	ldr	r0, .L752+0x18
+	ldr	r0, .L775+0x18
 	bl	SetMainCallback2
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L753:
+.L776:
 	.align	2, 0
-.L752:
+.L775:
 	.word	sData
 	.word	0x7cac
 	.word	0x534
@@ -6673,19 +6740,19 @@ ShowTrainerCardInLink:
 	.word	gLinkPlayers
 	.word	0x7caa
 	.word	CB2_InitTrainerCard
-.Lfe74:
-	.size	 ShowTrainerCardInLink,.Lfe74-ShowTrainerCardInLink
+.Lfe75:
+	.size	 ShowTrainerCardInLink,.Lfe75-ShowTrainerCardInLink
 	.align	2, 0
 	.type	 InitTrainerCardData,function
 	.thumb_func
 InitTrainerCardData:
 	push	{r4, r5, lr}
-	ldr	r4, .L760
+	ldr	r4, .L783
 	ldr	r0, [r4]
 	mov	r1, #0x0
 	strb	r1, [r0]
 	ldr	r2, [r4]
-	ldr	r0, .L760+0x4
+	ldr	r0, .L783+0x4
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x12]
 	strb	r0, [r2, #0x6]
@@ -6700,18 +6767,18 @@ InitTrainerCardData:
 	strb	r1, [r0]
 	bl	GetSetCardType
 	ldr	r1, [r4]
-	ldr	r3, .L760+0x8
+	ldr	r3, .L783+0x8
 	add	r1, r1, r3
 	strb	r0, [r1]
 	mov	r5, #0x0
-.L758:
+.L781:
 	mov	r0, #0xd
 	mul	r0, r0, r5
 	add	r0, r0, #0x19
 	ldr	r1, [r4]
 	add	r0, r1, r0
 	lsl	r2, r5, #0x1
-	ldr	r3, .L760+0xc
+	ldr	r3, .L783+0xc
 	add	r1, r1, r3
 	add	r1, r1, r2
 	ldrh	r1, [r1]
@@ -6720,96 +6787,96 @@ InitTrainerCardData:
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	cmp	r5, #0x3
-	bls	.L758	@cond_branch
+	bls	.L781	@cond_branch
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L761:
+.L784:
 	.align	2, 0
-.L760:
+.L783:
 	.word	sData
 	.word	gSaveBlock2Ptr
 	.word	0x52a
 	.word	0x55c
-.Lfe75:
-	.size	 InitTrainerCardData,.Lfe75-InitTrainerCardData
+.Lfe76:
+	.size	 InitTrainerCardData,.Lfe76-InitTrainerCardData
 	.align	2, 0
 	.type	 GetSetCardType,function
 	.thumb_func
 GetSetCardType:
 	push	{lr}
-	ldr	r0, .L775
+	ldr	r0, .L798
 	ldr	r1, [r0]
 	cmp	r1, #0
-	bne	.L763	@cond_branch
-	ldr	r0, .L775+0x4
+	bne	.L786	@cond_branch
+	ldr	r0, .L798+0x4
 	ldrb	r1, [r0]
 	sub	r0, r1, #0x4
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bhi	.L764	@cond_branch
+	bhi	.L787	@cond_branch
 	mov	r0, #0x0
-	b	.L773
-.L776:
+	b	.L796
+.L799:
 	.align	2, 0
-.L775:
+.L798:
 	.word	sData
 	.word	gGameVersion
-.L764:
+.L787:
 	cmp	r1, #0x3
-	beq	.L774	@cond_branch
+	beq	.L797	@cond_branch
 	mov	r0, #0x1
-	b	.L773
-.L763:
-	ldr	r2, .L777
+	b	.L796
+.L786:
+	ldr	r2, .L800
 	add	r0, r1, r2
 	ldrb	r2, [r0]
 	sub	r0, r2, #0x4
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bhi	.L769	@cond_branch
-	ldr	r0, .L777+0x4
+	bhi	.L792	@cond_branch
+	ldr	r0, .L800+0x4
 	add	r1, r1, r0
 	mov	r0, #0x0
 	strb	r0, [r1]
-	b	.L773
-.L778:
+	b	.L796
+.L801:
 	.align	2, 0
-.L777:
+.L800:
 	.word	0x56c
 	.word	0x52b
-.L769:
+.L792:
 	lsl	r0, r2, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x3
-	beq	.L771	@cond_branch
-	ldr	r2, .L779
+	beq	.L794	@cond_branch
+	ldr	r2, .L802
 	add	r1, r1, r2
 	mov	r0, #0x1
 	strb	r0, [r1]
-	b	.L773
-.L780:
+	b	.L796
+.L803:
 	.align	2, 0
-.L779:
+.L802:
 	.word	0x52b
-.L771:
-	ldr	r0, .L781
+.L794:
+	ldr	r0, .L804
 	add	r1, r1, r0
 	mov	r0, #0x1
 	strb	r0, [r1]
-.L774:
+.L797:
 	mov	r0, #0x2
-.L773:
+.L796:
 	pop	{r1}
 	bx	r1
-.L782:
+.L805:
 	.align	2, 0
-.L781:
+.L804:
 	.word	0x52b
-.Lfe76:
-	.size	 GetSetCardType,.Lfe76-GetSetCardType
+.Lfe77:
+	.size	 GetSetCardType,.Lfe77-GetSetCardType
 	.align	2, 0
 	.type	 VersionToCardType,function
 	.thumb_func
@@ -6822,21 +6889,21 @@ VersionToCardType:
 	add	r0, r0, r2
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bhi	.L784	@cond_branch
+	bhi	.L807	@cond_branch
 	mov	r0, #0x0
-	b	.L788
-.L784:
+	b	.L811
+.L807:
 	cmp	r1, #0x3
-	beq	.L786	@cond_branch
+	beq	.L809	@cond_branch
 	mov	r0, #0x1
-	b	.L788
-.L786:
+	b	.L811
+.L809:
 	mov	r0, #0x2
-.L788:
+.L811:
 	pop	{r1}
 	bx	r1
-.Lfe77:
-	.size	 VersionToCardType,.Lfe77-VersionToCardType
+.Lfe78:
+	.size	 VersionToCardType,.Lfe78-VersionToCardType
 	.align	2, 0
 	.type	 CreateTrainerCardTrainerPic,function
 	.thumb_func
@@ -6845,26 +6912,26 @@ CreateTrainerCardTrainerPic:
 	add	sp, sp, #-0x8
 	bl	InUnionRoom
 	cmp	r0, #0x1
-	bne	.L790	@cond_branch
-	ldr	r0, .L792
+	bne	.L813	@cond_branch
+	ldr	r0, .L815
 	ldrb	r0, [r0]
 	cmp	r0, #0x1
-	bne	.L790	@cond_branch
-	ldr	r5, .L792+0x4
+	bne	.L813	@cond_branch
+	ldr	r5, .L815+0x4
 	ldr	r0, [r5]
-	ldr	r1, .L792+0x8
+	ldr	r1, .L815+0x8
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	bl	FacilityClassToPicIndex
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
-	ldr	r4, .L792+0xc
+	ldr	r4, .L815+0xc
 	ldr	r1, [r5]
-	ldr	r3, .L792+0x10
+	ldr	r3, .L815+0x10
 	add	r2, r1, r3
 	ldrb	r3, [r2]
 	lsl	r3, r3, #0x1
-	ldr	r2, .L792+0x14
+	ldr	r2, .L815+0x14
 	add	r1, r1, r2
 	ldrb	r1, [r1]
 	lsl	r1, r1, #0x2
@@ -6880,23 +6947,23 @@ CreateTrainerCardTrainerPic:
 	str	r1, [sp, #0x4]
 	mov	r1, #0x1
 	bl	CreateTrainerCardTrainerPicSprite
-	b	.L791
-.L793:
+	b	.L814
+.L816:
 	.align	2, 0
-.L792:
+.L815:
 	.word	gReceivedRemoteLinkPlayers
 	.word	sData
 	.word	0x583
 	.word	sTrainerPicOffset
 	.word	0x534
 	.word	0x52b
-.L790:
-	ldr	r2, .L794
-	ldr	r6, .L794+0x4
+.L813:
+	ldr	r2, .L817
+	ldr	r6, .L817+0x4
 	ldr	r0, [r6]
-	ldr	r5, .L794+0x8
+	ldr	r5, .L817+0x8
 	add	r1, r0, r5
-	ldr	r3, .L794+0xc
+	ldr	r3, .L817+0xc
 	add	r0, r0, r3
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1
@@ -6907,12 +6974,12 @@ CreateTrainerCardTrainerPic:
 	bl	FacilityClassToPicIndex
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
-	ldr	r4, .L794+0x10
+	ldr	r4, .L817+0x10
 	ldr	r1, [r6]
 	add	r5, r1, r5
 	ldrb	r3, [r5]
 	lsl	r3, r3, #0x1
-	ldr	r2, .L794+0x14
+	ldr	r2, .L817+0x14
 	add	r1, r1, r2
 	ldrb	r1, [r1]
 	lsl	r1, r1, #0x2
@@ -6928,22 +6995,22 @@ CreateTrainerCardTrainerPic:
 	str	r1, [sp, #0x4]
 	mov	r1, #0x1
 	bl	CreateTrainerCardTrainerPicSprite
-.L791:
+.L814:
 	add	sp, sp, #0x8
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L795:
+.L818:
 	.align	2, 0
-.L794:
+.L817:
 	.word	sTrainerPicFacilityClass
 	.word	sData
 	.word	0x534
 	.word	0x52a
 	.word	sTrainerPicOffset
 	.word	0x52b
-.Lfe78:
-	.size	 CreateTrainerCardTrainerPic,.Lfe78-CreateTrainerCardTrainerPic
+.Lfe79:
+	.size	 CreateTrainerCardTrainerPic,.Lfe79-CreateTrainerCardTrainerPic
 .text
 	.align	2, 0
 

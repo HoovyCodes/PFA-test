@@ -42,17 +42,17 @@ BattleFrontier_BattleTowerCorridor_EventScript_WarpToBattleRoom:: @ 8241B27
 	end
 
 BattleFrontier_BattleTowerCorridor_Movement_PlayerWalkToFarDoor: @ 8241B36
-	walk_right
+	walk_fast_right
 BattleFrontier_BattleTowerCorridor_Movement_AttendantWalkToFarDoor: @ 8241B37
-	walk_right
-	walk_right
+	walk_fast_right
+	walk_fast_right
 BattleFrontier_BattleTowerCorridor_Movement_PlayerWalkToDoor: @ 8241B39
-	walk_right
+	walk_fast_right
 BattleFrontier_BattleTowerCorridor_Movement_AttendantWalkToDoor: @ 8241B3A
-	walk_right
-	walk_right
-	walk_right
-	walk_up
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_up
 	set_invisible
 	step_end
 

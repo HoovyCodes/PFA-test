@@ -1,6 +1,6 @@
-# 1 "src/trainer_card.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/trainer_card.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/trainer_card.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -4819,8 +4819,11 @@ extern const u8 gText_ChikoritaDoll80BP[];
 extern const u8 gText_TotodileDoll80BP[];
 
 extern const u8 gText_Dolls[];
-extern const u8 gText_Cushions[];
+extern const u8 gText_MatDesk[];
+extern const u8 gText_OrnaPost[];
+extern const u8 gText_ChairPlant[];
 extern const u8 gText_Contest[];
+extern const u8 gText_TMs[];
 extern const u8 gText_MegaC[];
 extern const u8 gText_MegaB[];
 extern const u8 gText_MegaA[];
@@ -4998,8 +5001,11 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Doll[];
-extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Cushion[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MatDesk[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_OrnaPost[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChairPlant[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Contest[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TM[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaC[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaB[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaA[];
@@ -16526,6 +16532,7 @@ static bool8 LoadCardGfx(void);
 static void CB2_InitTrainerCard(void);
 static u32 GetCappedGameStat(u8 statId, u32 maxValue);
 static bool8 HasAllFrontierSymbols(void);
+static bool8 hasHundredWins(void);
 static u8 GetRubyTrainerStars(struct TrainerCard*);
 static u16 GetCaughtMonsCount(void);
 static void SetPlayerCardData(struct TrainerCard*, u8);
@@ -16778,7 +16785,7 @@ static void CloseTrainerCard(u8 taskId)
     { Free(sData); sData = ((void *)0); };
     DestroyTask(taskId);
 }
-# 372 "src/trainer_card.c"
+# 373 "src/trainer_card.c"
 static void Task_TrainerCard(u8 taskId)
 {
     switch (sData->mainState)
@@ -17065,35 +17072,48 @@ static bool8 HasAllFrontierSymbols(void)
     return 1;
 }
 
+static bool8 hasHundredWins(void)
+{
+ return 0;
+}
+
 u32 CountPlayerTrainerStars(void)
 {
     u8 stars = 0;
+ u32 i;
+ u16 result=0;
 
-    if (GetGameStat(10))
-        stars++;
-    if (HasAllHoennMons())
-        stars++;
+ for (i = 1 +0x500; i < 11 +0x500 +1; i++)
+    {
+        if (FlagGet(i))
+            result++;
+    }
+ if (result>10)
+  stars++;
     if (CountPlayerContestPaintings() > 4)
         stars++;
     if (HasAllFrontierSymbols())
         stars++;
-
     return stars;
 }
 
 static u8 GetRubyTrainerStars(struct TrainerCard *trainerCard)
 {
     u8 stars = 0;
+ u32 i;
+ u16 result=0;
 
-    if (trainerCard->hofDebutHours || trainerCard->hofDebutMinutes || trainerCard->hofDebutSeconds)
+ for (i = 1 +0x500; i < 11 +0x500 +1; i++)
+    {
+        if (FlagGet(i))
+            result++;
+    }
+ if (result>10)
+  stars++;
+    if (CountPlayerContestPaintings() > 4)
         stars++;
-    if (trainerCard->caughtAllHoenn)
+    if (HasAllFrontierSymbols())
         stars++;
-    if (trainerCard->battleTowerStraightWins > 49)
-        stars++;
-    if (trainerCard->hasAllPaintings)
-        stars++;
-
     return stars;
 }
 
@@ -17131,7 +17151,7 @@ static void SetPlayerCardData(struct TrainerCard *trainerCard, u8 cardType)
 
     trainerCard->pokemonTrades = GetCappedGameStat(21, 0xFFFF);
 
-    trainerCard->money = GetMoney(&gSaveBlock1Ptr->money);
+    trainerCard->money = GetCaughtMonsCount();
 
     for (i = 0; i < 4; i++)
         trainerCard->easyChatProfile[i] = gSaveBlock1Ptr->easyChatProfile[i];
@@ -17143,20 +17163,26 @@ static void SetPlayerCardData(struct TrainerCard *trainerCard, u8 cardType)
     case CARD_TYPE_EMERALD:
         trainerCard->battleTowerWins = 0;
         trainerCard->battleTowerStraightWins = 0;
+        trainerCard->contestsWithFriends = 0;
+        trainerCard->pokeblocksWithFriends = 0;
+        if (CountPlayerContestPaintings() > 4)
+            trainerCard->hasAllPaintings = 1;
+        trainerCard->stars = 0;
 
     case CARD_TYPE_FRLG:
         trainerCard->contestsWithFriends = GetCappedGameStat(35, 999);
         trainerCard->pokeblocksWithFriends = GetCappedGameStat(34, 0xFFFF);
         if (CountPlayerContestPaintings() > 4)
             trainerCard->hasAllPaintings = 1;
-        trainerCard->stars = GetRubyTrainerStars(trainerCard);
+        trainerCard->stars = GetRubyTrainerStars(trainerCard)+1;
         break;
     case CARD_TYPE_RS:
         trainerCard->battleTowerWins = 0;
         trainerCard->battleTowerStraightWins = 0;
         trainerCard->contestsWithFriends = 0;
         trainerCard->pokeblocksWithFriends = 0;
-        trainerCard->hasAllPaintings = 0;
+        if (CountPlayerContestPaintings() > 4)
+            trainerCard->hasAllPaintings = 1;
         trainerCard->stars = 0;
         break;
     }
@@ -17478,13 +17504,20 @@ static void PrintPokedexOnCard(void)
 {
     s32 xOffset;
     u8 top;
+ u32 i;
+ u8 symbols;
+ for (i = (((0x500 + 864 - 1) + 1) + 0x64); i < (((0x500 + 864 - 1) + 1) + 0x64) + (1 + (((0x500 + 864 - 1) + 1) + 0x71)-(((0x500 + 864 - 1) + 1) + 0x64)); i++)
+    {
+        if (FlagGet(i))
+            symbols++;
+    }
     if (FlagGet((((0x500 + 864 - 1) + 1) + 0x1)))
     {
         if (!sData->isHoenn)
             AddTextPrinterParameterized3(1, 1, 20, 72, sTrainerCardTextColors, 0xFF, gText_TrainerCardPokedex);
         else
             AddTextPrinterParameterized3(1, 1, 16, 73, sTrainerCardTextColors, 0xFF, gText_TrainerCardPokedex);
-        StringCopy(ConvertIntToDecimalStringN(gStringVar4, sData->trainerCard.caughtMonsCount, STR_CONV_MODE_LEFT_ALIGN, 3), gText_EmptyString6);
+        StringCopy(ConvertIntToDecimalStringN(gStringVar4, symbols, STR_CONV_MODE_LEFT_ALIGN, 3), gText_EmptyString6);
         if (!sData->isHoenn)
         {
             xOffset = GetStringRightAlignXOffset(1, gStringVar4, 144);
@@ -17910,7 +17943,7 @@ static void DrawStarsAndBadgesOnCard(void)
     u16 tileNum = 192;
     u8 palNum = 3;
 
-    FillBgTilemapBufferRect(3, 143, 15, yOffsets[sData->isHoenn], sData->trainerCard.stars, 1, 4);
+    FillBgTilemapBufferRect(3, 143, 15, yOffsets[sData->isHoenn], sData->trainerCard.stars-1, 1, 4);
     if (!sData->isLink)
     {
         x = 4;

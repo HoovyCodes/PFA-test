@@ -18,7 +18,7 @@ AllocateBattleResources:
 	bl	InitTrainerHillBattleStruct
 .L3:
 	ldr	r4, .L5+0x4
-	mov	r0, #0xd3
+	mov	r0, #0xd5
 	lsl	r0, r0, #0x2
 	bl	AllocZeroed
 	str	r0, [r4]

@@ -1,6 +1,6 @@
-# 1 "src/main_menu.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/main_menu.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/main_menu.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -14063,8 +14063,11 @@ extern const u8 gText_ChikoritaDoll80BP[];
 extern const u8 gText_TotodileDoll80BP[];
 
 extern const u8 gText_Dolls[];
-extern const u8 gText_Cushions[];
+extern const u8 gText_MatDesk[];
+extern const u8 gText_OrnaPost[];
+extern const u8 gText_ChairPlant[];
 extern const u8 gText_Contest[];
+extern const u8 gText_TMs[];
 extern const u8 gText_MegaC[];
 extern const u8 gText_MegaB[];
 extern const u8 gText_MegaA[];
@@ -14242,8 +14245,11 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Doll[];
-extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Cushion[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MatDesk[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_OrnaPost[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChairPlant[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Contest[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TM[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaC[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaB[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaA[];
@@ -17705,7 +17711,7 @@ static void Task_NewGameBirchSpeechSub_InitPokeBall(u8 taskId)
     u8 spriteId = gTasks[sBirchSpeechMainTaskId].data[9];
 
     gSprites[spriteId].pos1.x = 100;
-    gSprites[spriteId].pos1.y = 75;
+    gSprites[spriteId].pos1.y = 65;
     gSprites[spriteId].invisible = 0;
     gSprites[spriteId].data[0] = 0;
 
@@ -18009,7 +18015,7 @@ static void Task_NewGameBirchSpeech_ReshowBirchLotad(u8 taskId)
         gSprites[spriteId].oam.objMode = 1;
         spriteId = gTasks[taskId].data[9];
         gSprites[spriteId].pos1.x = 100;
-        gSprites[spriteId].pos1.y = 75;
+        gSprites[spriteId].pos1.y = 65;
         gSprites[spriteId].invisible = 0;
         gSprites[spriteId].oam.objMode = 1;
         NewGameBirchSpeech_StartFadeInTarget1OutTarget2(taskId, 2);
@@ -18216,7 +18222,7 @@ static void SpriteCB_MovePlayerDownWhileShrinking(struct Sprite *sprite)
 
 static u8 NewGameBirchSpeech_CreateLotadSprite(u8 a, u8 b)
 {
-    return CreatePicSprite2(270, 8, 0, 1, a, b, 14, -1);
+    return CreatePicSprite2(625, 8, 0, 1, a, b, 14, -1);
 }
 
 static void AddBirchSpeechObjects(u8 taskId)
@@ -18473,33 +18479,28 @@ static void MainMenu_FormatSavegamePokedex(void)
     u8 str[0x20];
     u16 dexCount;
 
-    if (FlagGet((((0x500 + 864 - 1) + 1) + 0x1)) == 1)
-    {
-        if (IsNationalPokedexEnabled())
-            dexCount = GetNationalPokedexCount(FLAG_GET_CAUGHT);
-        else
-            dexCount = GetHoennPokedexCount(FLAG_GET_CAUGHT);
-        StringExpandPlaceholders(gStringVar4, gText_ContinueMenuPokedex);
-        AddTextPrinterParameterized3(2, 1, 0, 33, sTextColor_MenuInfo, -1, gStringVar4);
-        ConvertIntToDecimalStringN(str, dexCount, STR_CONV_MODE_LEFT_ALIGN, 3);
-        AddTextPrinterParameterized3(2, 1, GetStringRightAlignXOffset(1, str, 100), 33, sTextColor_MenuInfo, -1, str);
-    }
+    dexCount = gSaveBlock2Ptr->frontier.battlePoints;
+    StringExpandPlaceholders(gStringVar4, gText_ContinueMenuPokedex);
+    AddTextPrinterParameterized3(2, 1, 0, 33, sTextColor_MenuInfo, -1, gStringVar4);
+    ConvertIntToDecimalStringN(str, dexCount, STR_CONV_MODE_LEFT_ALIGN, 3);
+    AddTextPrinterParameterized3(2, 1, GetStringRightAlignXOffset(1, str, 100), 33, sTextColor_MenuInfo, -1, str);
+
 }
 
 static void MainMenu_FormatSavegameBadges(void)
 {
     u8 str[0x20];
-    u8 badgeCount = 0;
+    u16 badgeCount = 0;
     u32 i;
 
-    for (i = (((0x500 + 864 - 1) + 1) + 0x7); i < (((0x500 + 864 - 1) + 1) + 0x7) + (1 + (((0x500 + 864 - 1) + 1) + 0xE) - (((0x500 + 864 - 1) + 1) + 0x7)); i++)
+    for (i = (((0x500 + 864 - 1) + 1) + 0x64); i < (((0x500 + 864 - 1) + 1) + 0x64) + (1 + (((0x500 + 864 - 1) + 1) + 0x71)-(((0x500 + 864 - 1) + 1) + 0x64)); i++)
     {
         if (FlagGet(i))
             badgeCount++;
     }
     StringExpandPlaceholders(gStringVar4, gText_ContinueMenuBadges);
     AddTextPrinterParameterized3(2, 1, 0x6C, 33, sTextColor_MenuInfo, -1, gStringVar4);
-    ConvertIntToDecimalStringN(str, badgeCount, STR_CONV_MODE_LEADING_ZEROS, 1);
+    ConvertIntToDecimalStringN(str, badgeCount, STR_CONV_MODE_LEFT_ALIGN, 3);
     AddTextPrinterParameterized3(2, 1, GetStringRightAlignXOffset(1, str, 0xD0), 33, sTextColor_MenuInfo, -1, str);
 }
 

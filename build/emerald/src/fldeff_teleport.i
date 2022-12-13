@@ -1,6 +1,6 @@
-# 1 "src/fldeff_teleport.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/fldeff_teleport.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/fldeff_teleport.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -3212,7 +3212,7 @@ void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
 
-bool8 CanLearnTutorMove(u16, u8);
+bool32 CanLearnTutorMove(u16, u8);
 # 6 "src/fldeff_teleport.c" 2
 # 1 "include/overworld.h" 1
 # 29 "include/overworld.h"

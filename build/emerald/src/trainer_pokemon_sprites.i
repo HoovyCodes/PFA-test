@@ -1,6 +1,6 @@
-# 1 "src/trainer_pokemon_sprites.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/trainer_pokemon_sprites.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/trainer_pokemon_sprites.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);

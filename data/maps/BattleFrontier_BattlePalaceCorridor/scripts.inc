@@ -78,80 +78,80 @@ BattleFrontier_BattlePalaceCorridor_EventScript_LongStreakComment:: @ 824F5AF
 	return
 
 BattleFrontier_BattlePalaceCorridor_Movement_EnterCorridor: @ 824F5B8
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 BattleFrontier_BattlePalaceCorridor_Movement_AttendantWalkTo50BattleRoom: @ 824F5BD
-	walk_up
-	walk_up
-	walk_left
-	walk_left
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 BattleFrontier_BattlePalaceCorridor_Movement_PlayerWalkTo50BattleRoom: @ 824F5C4
-	walk_up
-	walk_up
-	walk_up
-	walk_left
-	walk_left
-	walk_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
 	step_end
 
 BattleFrontier_BattlePalaceCorridor_Movement_AttendantWalkToOpenBattleRoom: @ 824F5CB
-	walk_up
-	walk_right
-	walk_right
-	walk_up
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 BattleFrontier_BattlePalaceCorridor_Movement_PlayerWalkToOpenBattleRoom: @ 824F5D2
-	walk_up
-	walk_up
-	walk_right
-	walk_right
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 BattleFrontier_BattlePalaceCorridor_Movement_PlayerEnterBattleRoom: @ 824F5D9
-	walk_up
+	walk_fast_up
 BattleFrontier_BattlePalaceCorridor_Movement_AttendantEnterBattleRoom: @ 824F5DA
-	walk_up
+	walk_fast_up
 	set_invisible
 	step_end
 
 BattleFrontier_BattlePalaceCorridor_Text_PeopleAndMonAreSame: @ 824F5DD
-	.string "People and POKéMON, they are but\n"
+	.string "People and Pokémon, they are but\n"
 	.string "the same…\p"
 	.string "Their individual nature makes them\n"
 	.string "good at certain things, and not good\l"
 	.string "at others.$"
 
 BattleFrontier_BattlePalaceCorridor_Text_LetMonDoWhatItLikes: @ 824F65B
-	.string "Rather than trying to make a POKéMON\n"
+	.string "Rather than trying to make a Pokémon\n"
 	.string "do what it dislikes, try to let it do\l"
 	.string "what it likes and is good at doing.\p"
-	.string "Put yourself in the POKéMON's position\n"
+	.string "Put yourself in the Pokémon's position\n"
 	.string "and consider what moves it would like.$"
 
 BattleFrontier_BattlePalaceCorridor_Text_MonDifferentWhenCornered: @ 824F718
-	.string "A POKéMON's nature is a remarkable\n"
+	.string "A Pokémon's nature is a remarkable\n"
 	.string "thing…\p"
-	.string "Some POKéMON behave in a completely\n"
+	.string "Some Pokémon behave in a completely\n"
 	.string "different way when they are cornered.$"
 
 BattleFrontier_BattlePalaceCorridor_Text_BeginningToUnderstandNature: @ 824F78C
 	.string "Are you beginning to understand how\n"
-	.string "a POKéMON's nature makes it behave?$"
+	.string "a Pokémon's nature makes it behave?$"
 
 BattleFrontier_BattlePalaceCorridor_Text_HeartfeltBondBetweenYouAndMons: @ 824F7D4
 	.string "Ah… I see a strong, heartfelt bond\n"
-	.string "between you and your POKéMON…$"
+	.string "between you and your Pokémon…$"
 

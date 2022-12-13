@@ -356,8 +356,10 @@ gBattleFrontierTrainerMons_ZU:
 	.short	0x5c
 	.short	0x5d
 	.short	0x72
+	.short	0x81
+	.short	0x82
 	.short	0xffff
-	.size	 gBattleFrontierTrainerMons_ZU,260
+	.size	 gBattleFrontierTrainerMons_ZU,264
 	.globl	gBattleFrontierTrainerMons_ZU_PU
 	.align	1, 0
 	.type	 gBattleFrontierTrainerMons_ZU_PU,object
@@ -491,7 +493,6 @@ gBattleFrontierTrainerMons_ZU_PU:
 	.short	0x5c
 	.short	0x5d
 	.short	0x72
-	.short	0xffff
 	.short	0x81
 	.short	0x82
 	.short	0x83
@@ -546,24 +547,24 @@ gBattleFrontierTrainerMons_ZU_PU:
 	.short	0xb4
 	.short	0xb5
 	.short	0xb6
-	.short	0xb9
-	.short	0xba
+	.short	0xb7
+	.short	0xb8
 	.short	0xbb
 	.short	0xbc
 	.short	0xbd
-	.short	0xc1
-	.short	0xc2
-	.short	0xb7
-	.short	0xb8
 	.short	0xbe
 	.short	0xbf
-	.short	0xc0
 	.short	0xc3
 	.short	0xc4
+	.short	0xb9
+	.short	0xba
+	.short	0xc0
+	.short	0xc1
+	.short	0xc2
 	.short	0xc5
-	.short	0xc5
+	.short	0xc6
 	.short	0xc7
-	.short	0xc8
+	.short	0xc7
 	.short	0xc9
 	.short	0xca
 	.short	0xcb
@@ -578,2232 +579,1697 @@ gBattleFrontierTrainerMons_ZU_PU:
 	.short	0xd4
 	.short	0xd5
 	.short	0xd6
+	.short	0xd7
+	.short	0xd8
+	.short	0xd9
+	.short	0xda
+	.short	0xdb
+	.short	0xdc
 	.short	0xffff
-	.size	 gBattleFrontierTrainerMons_ZU_PU,434
+	.size	 gBattleFrontierTrainerMons_ZU_PU,444
 	.globl	gBattleFrontierTrainerMons_ZU_PU_NU
 	.align	1, 0
 	.type	 gBattleFrontierTrainerMons_ZU_PU_NU,object
 gBattleFrontierTrainerMons_ZU_PU_NU:
-	.short	0x0
+	.short	0x83
+	.short	0x84
+	.short	0x85
+	.short	0x86
+	.short	0x87
+	.short	0x88
+	.short	0x89
+	.short	0x8a
+	.short	0x8b
+	.short	0x8c
+	.short	0x8d
+	.short	0x8e
+	.short	0x8f
+	.short	0x90
+	.short	0x91
+	.short	0x92
+	.short	0x93
+	.short	0x94
+	.short	0x95
+	.short	0x96
+	.short	0x97
+	.short	0x98
+	.short	0x99
+	.short	0x9a
+	.short	0x9b
+	.short	0x9c
+	.short	0x9d
+	.short	0x9e
+	.short	0x9f
+	.short	0xa0
+	.short	0xa1
+	.short	0xa2
+	.short	0xa3
+	.short	0xa4
+	.short	0xa5
+	.short	0xa6
+	.short	0xa7
+	.short	0xa8
+	.short	0xa9
+	.short	0xaa
+	.short	0xab
+	.short	0xac
+	.short	0xad
+	.short	0xae
+	.short	0xaf
+	.short	0xb0
+	.short	0xb1
+	.short	0xb2
+	.short	0xb3
+	.short	0xb4
+	.short	0xb5
+	.short	0xb6
+	.short	0xb7
+	.short	0xb8
+	.short	0xbb
+	.short	0xbc
+	.short	0xbd
+	.short	0xbe
+	.short	0xbf
+	.short	0xc3
+	.short	0xc4
+	.short	0xb9
+	.short	0xba
+	.short	0xc0
+	.short	0xc1
+	.short	0xc2
+	.short	0xc5
+	.short	0xc6
+	.short	0xc7
+	.short	0xc7
+	.short	0xc9
+	.short	0xca
+	.short	0xcb
+	.short	0xcc
+	.short	0xcd
+	.short	0xce
+	.short	0xcf
+	.short	0xd0
+	.short	0xd1
+	.short	0xd2
+	.short	0xd3
+	.short	0xd4
+	.short	0xd5
+	.short	0xd6
+	.short	0xd7
+	.short	0xd8
+	.short	0xd9
+	.short	0xda
+	.short	0xdb
+	.short	0xdc
+	.short	0xdd
+	.short	0xde
+	.short	0xdf
+	.short	0xe0
+	.short	0xe1
+	.short	0xe2
+	.short	0xe3
+	.short	0xe4
+	.short	0xe5
+	.short	0xe6
+	.short	0xe7
+	.short	0xe8
+	.short	0xe9
+	.short	0xea
+	.short	0xeb
+	.short	0xec
+	.short	0xed
+	.short	0xee
+	.short	0xef
+	.short	0xf0
+	.short	0xf1
+	.short	0xf2
+	.short	0xf3
+	.short	0xf4
+	.short	0xf5
+	.short	0xf6
+	.short	0xf7
+	.short	0xf8
+	.short	0xf9
+	.short	0xfa
+	.short	0xfb
+	.short	0xfc
+	.short	0xfd
+	.short	0xfe
+	.short	0xff
+	.short	0x100
+	.short	0x101
+	.short	0x102
+	.short	0x103
+	.short	0x104
+	.short	0x105
+	.short	0x106
+	.short	0x107
+	.short	0x108
+	.short	0x109
+	.short	0x10a
+	.short	0x10b
+	.short	0x10c
+	.short	0x10d
+	.short	0x10e
+	.short	0x10f
+	.short	0x110
+	.short	0x111
+	.short	0x112
+	.short	0x113
+	.short	0x114
+	.short	0x115
+	.short	0x116
+	.short	0x117
+	.short	0x118
+	.short	0x119
+	.short	0x11a
+	.short	0x11b
+	.short	0x11c
+	.short	0x11d
+	.short	0x11e
+	.short	0x11f
+	.short	0x120
+	.short	0x121
+	.short	0x122
+	.short	0x123
+	.short	0x124
+	.short	0x125
+	.short	0x126
+	.short	0x127
+	.short	0x128
+	.short	0x129
+	.short	0x12a
+	.short	0x12b
+	.short	0x12c
+	.short	0x12d
+	.short	0x12e
+	.short	0x12f
+	.short	0x130
+	.short	0x131
+	.short	0x132
+	.short	0x133
+	.short	0x134
+	.short	0x135
+	.short	0x136
+	.short	0x137
+	.short	0x138
+	.short	0x139
+	.short	0x13a
+	.short	0x13b
+	.short	0x13c
+	.short	0x13d
+	.short	0x13e
+	.short	0x13f
+	.short	0x140
+	.short	0x141
+	.short	0xffff
+	.size	 gBattleFrontierTrainerMons_ZU_PU_NU,384
+	.globl	gBattleFrontierTrainerMons_PU_NU
+	.align	1, 0
+	.type	 gBattleFrontierTrainerMons_PU_NU,object
+gBattleFrontierTrainerMons_PU_NU:
+	.short	0xdd
+	.short	0xde
+	.short	0xdf
+	.short	0xe0
+	.short	0xe1
+	.short	0xe2
+	.short	0xe3
+	.short	0xe4
+	.short	0xe5
+	.short	0xe6
+	.short	0xe7
+	.short	0xe8
+	.short	0xe9
+	.short	0xea
+	.short	0xeb
+	.short	0xec
+	.short	0xed
+	.short	0xee
+	.short	0xef
+	.short	0xf0
+	.short	0xf1
+	.short	0xf2
+	.short	0xf3
+	.short	0xf4
+	.short	0xf5
+	.short	0xf6
+	.short	0xf7
+	.short	0xf8
+	.short	0xf9
+	.short	0xfa
+	.short	0xfb
+	.short	0xfc
+	.short	0xfd
+	.short	0xfe
+	.short	0xff
+	.short	0x100
+	.short	0x101
+	.short	0x102
+	.short	0x103
+	.short	0x104
+	.short	0x105
+	.short	0x106
+	.short	0x107
+	.short	0x108
+	.short	0x109
+	.short	0x10a
+	.short	0x10b
+	.short	0x10c
+	.short	0x10d
+	.short	0x10e
+	.short	0x10f
+	.short	0x110
+	.short	0x111
+	.short	0x112
+	.short	0x113
+	.short	0x114
+	.short	0x115
+	.short	0x116
+	.short	0x117
+	.short	0x118
+	.short	0x119
+	.short	0x11a
+	.short	0x11b
+	.short	0x11c
+	.short	0x11d
+	.short	0x11e
+	.short	0x11f
+	.short	0x120
+	.short	0x121
+	.short	0x122
+	.short	0x123
+	.short	0x124
+	.short	0x125
+	.short	0x126
+	.short	0x127
+	.short	0x128
+	.short	0x129
+	.short	0x12a
+	.short	0x12b
+	.short	0x12c
+	.short	0x12d
+	.short	0x12e
+	.short	0x12f
+	.short	0x130
+	.short	0x131
+	.short	0x132
+	.short	0x133
+	.short	0x134
+	.short	0x135
+	.short	0x136
+	.short	0x137
+	.short	0x138
+	.short	0x139
+	.short	0x13a
+	.short	0x13b
+	.short	0x13c
+	.short	0x13d
+	.short	0x13e
+	.short	0x13f
+	.short	0x140
+	.short	0x141
+	.short	0xffff
+	.size	 gBattleFrontierTrainerMons_PU_NU,204
+	.globl	gBattleFrontierTrainerMons_PU_NU_RU
+	.align	1, 0
+	.type	 gBattleFrontierTrainerMons_PU_NU_RU,object
+gBattleFrontierTrainerMons_PU_NU_RU:
+	.short	0xdd
+	.short	0xde
+	.short	0xdf
+	.short	0xe0
+	.short	0xe1
+	.short	0xe2
+	.short	0xe3
+	.short	0xe4
+	.short	0xe5
+	.short	0xe6
+	.short	0xe7
+	.short	0xe8
+	.short	0xe9
+	.short	0xea
+	.short	0xeb
+	.short	0xec
+	.short	0xed
+	.short	0xee
+	.short	0xef
+	.short	0xf0
+	.short	0xf1
+	.short	0xf2
+	.short	0xf3
+	.short	0xf4
+	.short	0xf5
+	.short	0xf6
+	.short	0xf7
+	.short	0xf8
+	.short	0xf9
+	.short	0xfa
+	.short	0xfb
+	.short	0xfc
+	.short	0xfd
+	.short	0xfe
+	.short	0xff
+	.short	0x100
+	.short	0x101
+	.short	0x102
+	.short	0x103
+	.short	0x104
+	.short	0x105
+	.short	0x106
+	.short	0x107
+	.short	0x108
+	.short	0x109
+	.short	0x10a
+	.short	0x10b
+	.short	0x10c
+	.short	0x10d
+	.short	0x10e
+	.short	0x10f
+	.short	0x110
+	.short	0x111
+	.short	0x112
+	.short	0x113
+	.short	0x114
+	.short	0x115
+	.short	0x116
+	.short	0x117
+	.short	0x118
+	.short	0x119
+	.short	0x11a
+	.short	0x11b
+	.short	0x11c
+	.short	0x11d
+	.short	0x11e
+	.short	0x11f
+	.short	0x120
+	.short	0x121
+	.short	0x122
+	.short	0x123
+	.short	0x124
+	.short	0x125
+	.short	0x126
+	.short	0x127
+	.short	0x128
+	.short	0x129
+	.short	0x12a
+	.short	0x12b
+	.short	0x12c
+	.short	0x12d
+	.short	0x12e
+	.short	0x12f
+	.short	0x130
+	.short	0x131
+	.short	0x132
+	.short	0x133
+	.short	0x134
+	.short	0x135
+	.short	0x136
+	.short	0x137
+	.short	0x138
+	.short	0x139
+	.short	0x13a
+	.short	0x13b
+	.short	0x13c
+	.short	0x13d
+	.short	0x13e
+	.short	0x13f
+	.short	0x140
+	.short	0x141
+	.short	0x142
+	.short	0x143
+	.short	0x144
+	.short	0x145
+	.short	0x146
+	.short	0x147
+	.short	0x148
+	.short	0x149
+	.short	0x14a
+	.short	0x14b
+	.short	0x14c
+	.short	0x14d
+	.short	0x14e
+	.short	0x14f
+	.short	0x150
+	.short	0x151
+	.short	0x152
+	.short	0x153
+	.short	0x154
+	.short	0x155
+	.short	0x156
+	.short	0x157
+	.short	0x158
+	.short	0x159
+	.short	0x15a
+	.short	0x15b
+	.short	0x15c
+	.short	0x15d
+	.short	0x15e
+	.short	0x15f
+	.short	0x160
+	.short	0x161
+	.short	0x162
+	.short	0x163
+	.short	0x164
+	.short	0x165
+	.short	0x166
+	.short	0x167
+	.short	0x168
+	.short	0x169
+	.short	0x16a
+	.short	0x16b
+	.short	0x16c
+	.short	0x16d
+	.short	0x16e
+	.short	0x16f
+	.short	0x170
+	.short	0x171
+	.short	0x172
+	.short	0x173
+	.short	0x174
+	.short	0x175
+	.short	0x176
+	.short	0x177
+	.short	0x178
+	.short	0x179
+	.short	0x17a
+	.short	0x17b
+	.short	0x17c
+	.short	0x17d
+	.short	0x17e
+	.short	0x17f
+	.short	0x180
+	.short	0x181
+	.short	0x182
+	.short	0x183
+	.short	0x184
+	.short	0x185
+	.short	0x186
+	.short	0x187
+	.short	0x188
+	.short	0x189
+	.short	0x18a
+	.short	0x18b
+	.short	0x18c
+	.short	0x18d
+	.short	0x18e
+	.short	0x18f
+	.short	0x190
+	.short	0x191
+	.short	0x192
+	.short	0x193
+	.short	0x194
+	.short	0x195
+	.short	0x196
+	.short	0x197
+	.short	0x198
+	.short	0x199
+	.short	0x19a
+	.short	0x19b
+	.short	0x19c
+	.short	0x19d
+	.short	0x19e
+	.short	0x19f
+	.short	0x1a0
+	.short	0x1a1
+	.short	0x1a2
+	.short	0x1a3
+	.short	0x1a4
+	.short	0x1a5
+	.short	0x1a6
+	.short	0x1a7
+	.short	0x1a8
+	.short	0x1a9
+	.short	0x1aa
+	.short	0x1ab
+	.short	0x1ac
+	.short	0x1ad
+	.short	0x1ae
+	.short	0x1af
+	.short	0x1b0
+	.short	0x1b1
+	.short	0x1b2
+	.short	0x1b3
+	.short	0x1b4
+	.short	0x1b5
+	.short	0x1b6
+	.short	0x1b7
+	.short	0x1b8
+	.short	0x1b9
+	.short	0xffff
+	.size	 gBattleFrontierTrainerMons_PU_NU_RU,444
+	.globl	gBattleFrontierTrainerMons_NU_RU
+	.align	1, 0
+	.type	 gBattleFrontierTrainerMons_NU_RU,object
+gBattleFrontierTrainerMons_NU_RU:
+	.short	0x142
+	.short	0x143
+	.short	0x144
+	.short	0x145
+	.short	0x146
+	.short	0x147
+	.short	0x148
+	.short	0x149
+	.short	0x14a
+	.short	0x14b
+	.short	0x14c
+	.short	0x14d
+	.short	0x14e
+	.short	0x14f
+	.short	0x150
+	.short	0x151
+	.short	0x152
+	.short	0x153
+	.short	0x154
+	.short	0x155
+	.short	0x156
+	.short	0x157
+	.short	0x158
+	.short	0x159
+	.short	0x15a
+	.short	0x15b
+	.short	0x15c
+	.short	0x15d
+	.short	0x15e
+	.short	0x15f
+	.short	0x160
+	.short	0x161
+	.short	0x162
+	.short	0x163
+	.short	0x164
+	.short	0x165
+	.short	0x166
+	.short	0x167
+	.short	0x168
+	.short	0x169
+	.short	0x16a
+	.short	0x16b
+	.short	0x16c
+	.short	0x16d
+	.short	0x16e
+	.short	0x16f
+	.short	0x170
+	.short	0x171
+	.short	0x172
+	.short	0x173
+	.short	0x174
+	.short	0x175
+	.short	0x176
+	.short	0x177
+	.short	0x178
+	.short	0x179
+	.short	0x17a
+	.short	0x17b
+	.short	0x17c
+	.short	0x17d
+	.short	0x17e
+	.short	0x17f
+	.short	0x180
+	.short	0x181
+	.short	0x182
+	.short	0x183
+	.short	0x184
+	.short	0x185
+	.short	0x186
+	.short	0x187
+	.short	0x188
+	.short	0x189
+	.short	0x18a
+	.short	0x18b
+	.short	0x18c
+	.short	0x18d
+	.short	0x18e
+	.short	0x18f
+	.short	0x190
+	.short	0x191
+	.short	0x192
+	.short	0x193
+	.short	0x194
+	.short	0x195
+	.short	0x196
+	.short	0x197
+	.short	0x198
+	.short	0x199
+	.short	0x19a
+	.short	0x19b
+	.short	0x19c
+	.short	0x19d
+	.short	0x19e
+	.short	0x19f
+	.short	0x1a0
+	.short	0x1a1
+	.short	0x1a2
+	.short	0x1a3
+	.short	0x1a4
+	.short	0x1a5
+	.short	0x1a6
+	.short	0x1a7
+	.short	0x1a8
+	.short	0x1a9
+	.short	0x1aa
+	.short	0x1ab
+	.short	0x1ac
+	.short	0x1ad
+	.short	0x1ae
+	.short	0x1af
+	.short	0x1b0
+	.short	0x1b1
+	.short	0x1b2
+	.short	0x1b3
+	.short	0x1b4
+	.short	0x1b5
+	.short	0x1b6
+	.short	0x1b7
+	.short	0x1b8
+	.short	0x1b9
+	.short	0xffff
+	.size	 gBattleFrontierTrainerMons_NU_RU,242
+	.globl	gBattleFrontierTrainerMons_NU_RU_UU
+	.align	1, 0
+	.type	 gBattleFrontierTrainerMons_NU_RU_UU,object
+gBattleFrontierTrainerMons_NU_RU_UU:
+	.short	0x142
+	.short	0x143
+	.short	0x144
+	.short	0x145
+	.short	0x146
+	.short	0x147
+	.short	0x148
+	.short	0x149
+	.short	0x14a
+	.short	0x14b
+	.short	0x14c
+	.short	0x14d
+	.short	0x14e
+	.short	0x14f
+	.short	0x150
+	.short	0x151
+	.short	0x152
+	.short	0x153
+	.short	0x154
+	.short	0x155
+	.short	0x156
+	.short	0x157
+	.short	0x158
+	.short	0x159
+	.short	0x15a
+	.short	0x15b
+	.short	0x15c
+	.short	0x15d
+	.short	0x15e
+	.short	0x15f
+	.short	0x160
+	.short	0x161
+	.short	0x162
+	.short	0x163
+	.short	0x164
+	.short	0x165
+	.short	0x166
+	.short	0x167
+	.short	0x168
+	.short	0x169
+	.short	0x16a
+	.short	0x16b
+	.short	0x16c
+	.short	0x16d
+	.short	0x16e
+	.short	0x16f
+	.short	0x170
+	.short	0x171
+	.short	0x172
+	.short	0x173
+	.short	0x174
+	.short	0x175
+	.short	0x176
+	.short	0x177
+	.short	0x178
+	.short	0x179
+	.short	0x17a
+	.short	0x17b
+	.short	0x17c
+	.short	0x17d
+	.short	0x17e
+	.short	0x17f
+	.short	0x180
+	.short	0x181
+	.short	0x182
+	.short	0x183
+	.short	0x184
+	.short	0x185
+	.short	0x186
+	.short	0x187
+	.short	0x188
+	.short	0x189
+	.short	0x18a
+	.short	0x18b
+	.short	0x18c
+	.short	0x18d
+	.short	0x18e
+	.short	0x18f
+	.short	0x190
+	.short	0x191
+	.short	0x192
+	.short	0x193
+	.short	0x194
+	.short	0x195
+	.short	0x196
+	.short	0x197
+	.short	0x198
+	.short	0x199
+	.short	0x19a
+	.short	0x19b
+	.short	0x19c
+	.short	0x19d
+	.short	0x19e
+	.short	0x19f
+	.short	0x1a0
+	.short	0x1a1
+	.short	0x1a2
+	.short	0x1a3
+	.short	0x1a4
+	.short	0x1a5
+	.short	0x1a6
+	.short	0x1a7
+	.short	0x1a8
+	.short	0x1a9
+	.short	0x1aa
+	.short	0x1ab
+	.short	0x1ac
+	.short	0x1ad
+	.short	0x1ae
+	.short	0x1af
+	.short	0x1b0
+	.short	0x1b1
+	.short	0x1b2
+	.short	0x1b3
+	.short	0x1b4
+	.short	0x1b5
+	.short	0x1b6
+	.short	0x1b7
+	.short	0x1b8
+	.short	0x1b9
+	.short	0x1ba
+	.short	0x1bb
+	.short	0x1bc
+	.short	0x1bd
+	.short	0x1be
+	.short	0x1bf
+	.short	0x1c0
+	.short	0x1c1
+	.short	0x1c2
+	.short	0x1c3
+	.short	0x1c4
+	.short	0x1c5
+	.short	0x1c6
+	.short	0x1c7
+	.short	0x1c8
+	.short	0x1c9
+	.short	0x1ca
+	.short	0x1cb
+	.short	0x1cc
+	.short	0x1cd
+	.short	0x1ce
+	.short	0x1cf
+	.short	0x1d0
+	.short	0x1d1
+	.short	0x1d2
+	.short	0x1d3
+	.short	0x1d4
+	.short	0x1d5
+	.short	0x1d6
+	.short	0x1d7
+	.short	0x1d8
+	.short	0x1d9
+	.short	0x1da
+	.short	0x1db
+	.short	0x1dc
+	.short	0x1dd
+	.short	0x1de
+	.short	0x1df
+	.short	0x1e0
+	.short	0x1e1
+	.short	0x1e2
+	.short	0x1e3
+	.short	0x1e4
+	.short	0x1e5
+	.short	0x1e6
+	.short	0x1e7
+	.short	0x1e8
+	.short	0x1e9
+	.short	0x1ea
+	.short	0x1eb
+	.short	0x1ec
+	.short	0x1ed
+	.short	0x1ee
+	.short	0x1ef
+	.short	0x1f0
+	.short	0x1f1
+	.short	0x1f2
+	.short	0x1f3
+	.short	0x1f4
+	.short	0x1f5
+	.short	0x1f6
+	.short	0x1f7
+	.short	0x1f8
+	.short	0x1f9
+	.short	0x1fa
+	.short	0x1fb
+	.short	0x1fc
+	.short	0x1fd
+	.short	0x1fe
+	.short	0x1ff
+	.short	0x200
+	.short	0x201
+	.short	0x202
+	.short	0x203
+	.short	0x204
+	.short	0x205
+	.short	0x206
+	.short	0x207
+	.short	0x208
+	.short	0x209
+	.short	0x20a
+	.short	0x20b
+	.short	0x20c
+	.short	0x20d
+	.short	0x20e
+	.short	0x20f
+	.short	0x210
+	.short	0x211
+	.short	0x212
+	.short	0x213
+	.short	0x214
+	.short	0x215
+	.short	0x216
+	.short	0x217
+	.short	0x218
+	.short	0x219
+	.short	0x21a
+	.short	0x21b
+	.short	0x21c
+	.short	0x21d
+	.short	0x21e
+	.short	0x21f
+	.short	0x220
+	.short	0x221
+	.short	0x222
+	.short	0x223
+	.short	0x224
+	.short	0x225
+	.short	0x226
+	.short	0x227
+	.short	0x228
+	.short	0x229
+	.short	0x22a
+	.short	0x22b
+	.short	0x22c
+	.short	0x22d
+	.short	0x22e
+	.short	0x22f
+	.short	0x230
+	.short	0x231
+	.short	0x232
+	.short	0x233
+	.short	0x234
+	.short	0xffff
+	.size	 gBattleFrontierTrainerMons_NU_RU_UU,488
+	.globl	gBattleFrontierTrainerMons_NU_RU_UU_OU
+	.align	1, 0
+	.type	 gBattleFrontierTrainerMons_NU_RU_UU_OU,object
+gBattleFrontierTrainerMons_NU_RU_UU_OU:
+	.short	0x1ba
+	.short	0x1bb
+	.short	0x1bc
+	.short	0x1bd
+	.short	0x1be
+	.short	0x1bf
+	.short	0x1c0
+	.short	0x1c1
+	.short	0x1c2
+	.short	0x1c3
+	.short	0x1c4
+	.short	0x1c5
+	.short	0x1c6
+	.short	0x1c7
+	.short	0x1c8
+	.short	0x1c9
+	.short	0x1ca
+	.short	0x1cb
+	.short	0x1cc
+	.short	0x1cd
+	.short	0x1ce
+	.short	0x1cf
+	.short	0x1d0
+	.short	0x1d1
+	.short	0x1d2
+	.short	0x1d3
+	.short	0x1d4
+	.short	0x1d5
+	.short	0x1d6
+	.short	0x1d7
+	.short	0x1d8
+	.short	0x1d9
+	.short	0x1da
+	.short	0x1db
+	.short	0x1dc
+	.short	0x1dd
+	.short	0x1de
+	.short	0x1df
+	.short	0x1e0
+	.short	0x1e1
+	.short	0x1e2
+	.short	0x1e3
+	.short	0x1e4
+	.short	0x1e5
+	.short	0x1e6
+	.short	0x1e7
+	.short	0x1e8
+	.short	0x1e9
+	.short	0x1ea
+	.short	0x1eb
+	.short	0x1ec
+	.short	0x1ed
+	.short	0x1ee
+	.short	0x1ef
+	.short	0x1f0
+	.short	0x1f1
+	.short	0x1f2
+	.short	0x1f3
+	.short	0x1f4
+	.short	0x1f5
+	.short	0x1f6
+	.short	0x1f7
+	.short	0x1f8
+	.short	0x1f9
+	.short	0x1fa
+	.short	0x1fb
+	.short	0x1fc
+	.short	0x1fd
+	.short	0x1fe
+	.short	0x1ff
+	.short	0x200
+	.short	0x201
+	.short	0x202
+	.short	0x203
+	.short	0x204
+	.short	0x205
+	.short	0x206
+	.short	0x207
+	.short	0x208
+	.short	0x209
+	.short	0x20a
+	.short	0x20b
+	.short	0x20c
+	.short	0x20d
+	.short	0x20e
+	.short	0x20f
+	.short	0x210
+	.short	0x211
+	.short	0x212
+	.short	0x213
+	.short	0x214
+	.short	0x215
+	.short	0x216
+	.short	0x217
+	.short	0x218
+	.short	0x219
+	.short	0x21a
+	.short	0x21b
+	.short	0x21c
+	.short	0x21d
+	.short	0x21e
+	.short	0x21f
+	.short	0x220
+	.short	0x221
+	.short	0x222
+	.short	0x223
+	.short	0x224
+	.short	0x225
+	.short	0x226
+	.short	0x227
+	.short	0x228
+	.short	0x229
+	.short	0x22a
+	.short	0x22b
+	.short	0x22c
+	.short	0x22d
+	.short	0x22e
+	.short	0x22f
+	.short	0x230
+	.short	0x231
+	.short	0x232
+	.short	0x233
+	.short	0x234
+	.short	0xffff
+	.size	 gBattleFrontierTrainerMons_NU_RU_UU_OU,248
+	.globl	gBattleFrontierTrainerMons_RU_UU_OU
+	.align	1, 0
+	.type	 gBattleFrontierTrainerMons_RU_UU_OU,object
+gBattleFrontierTrainerMons_RU_UU_OU:
+	.short	0x1ba
+	.short	0x1bb
+	.short	0x1bc
+	.short	0x1bd
+	.short	0x1be
+	.short	0x1bf
+	.short	0x1c0
+	.short	0x1c1
+	.short	0x1c2
+	.short	0x1c3
+	.short	0x1c4
+	.short	0x1c5
+	.short	0x1c6
+	.short	0x1c7
+	.short	0x1c8
+	.short	0x1c9
+	.short	0x1ca
+	.short	0x1cb
+	.short	0x1cc
+	.short	0x1cd
+	.short	0x1ce
+	.short	0x1cf
+	.short	0x1d0
+	.short	0x1d1
+	.short	0x1d2
+	.short	0x1d3
+	.short	0x1d4
+	.short	0x1d5
+	.short	0x1d6
+	.short	0x1d7
+	.short	0x1d8
+	.short	0x1d9
+	.short	0x1da
+	.short	0x1db
+	.short	0x1dc
+	.short	0x1dd
+	.short	0x1de
+	.short	0x1df
+	.short	0x1e0
+	.short	0x1e1
+	.short	0x1e2
+	.short	0x1e3
+	.short	0x1e4
+	.short	0x1e5
+	.short	0x1e6
+	.short	0x1e7
+	.short	0x1e8
+	.short	0x1e9
+	.short	0x1ea
+	.short	0x1eb
+	.short	0x1ec
+	.short	0x1ed
+	.short	0x1ee
+	.short	0x1ef
+	.short	0x1f0
+	.short	0x1f1
+	.short	0x1f2
+	.short	0x1f3
+	.short	0x1f4
+	.short	0x1f5
+	.short	0x1f6
+	.short	0x1f7
+	.short	0x1f8
+	.short	0x1f9
+	.short	0x1fa
+	.short	0x1fb
+	.short	0x1fc
+	.short	0x1fd
+	.short	0x1fe
+	.short	0x1ff
+	.short	0x200
+	.short	0x201
+	.short	0x202
+	.short	0x203
+	.short	0x204
+	.short	0x205
+	.short	0x206
+	.short	0x207
+	.short	0x208
+	.short	0x209
+	.short	0x20a
+	.short	0x20b
+	.short	0x20c
+	.short	0x20d
+	.short	0x20e
+	.short	0x20f
+	.short	0x210
+	.short	0x211
+	.short	0x212
+	.short	0x213
+	.short	0x214
+	.short	0x215
+	.short	0x216
+	.short	0x217
+	.short	0x218
+	.short	0x219
+	.short	0x21a
+	.short	0x21b
+	.short	0x21c
+	.short	0x21d
+	.short	0x21e
+	.short	0x21f
+	.short	0x220
+	.short	0x221
+	.short	0x222
+	.short	0x223
+	.short	0x224
+	.short	0x225
+	.short	0x226
+	.short	0x227
+	.short	0x228
+	.short	0x229
+	.short	0x22a
+	.short	0x22b
+	.short	0x22c
+	.short	0x22d
+	.short	0x22e
+	.short	0x22f
+	.short	0x230
+	.short	0x231
+	.short	0x232
+	.short	0x233
+	.short	0x234
+	.short	0x235
+	.short	0x236
+	.short	0x237
+	.short	0x238
+	.short	0x239
+	.short	0x23a
+	.short	0x23b
+	.short	0x23c
+	.short	0x23d
+	.short	0x23e
+	.short	0x23f
+	.short	0x240
+	.short	0x241
+	.short	0x242
+	.short	0x243
+	.short	0x244
+	.short	0x245
+	.short	0x246
+	.short	0x247
+	.short	0x248
+	.short	0x249
+	.short	0x24a
+	.short	0x24b
+	.short	0x24c
+	.short	0x24d
+	.short	0x24e
+	.short	0x24f
+	.short	0x250
+	.short	0x251
+	.short	0x252
+	.short	0x253
+	.short	0x254
+	.short	0x255
+	.short	0x256
+	.short	0x257
+	.short	0x258
+	.short	0x259
+	.short	0x25a
+	.short	0x25b
+	.short	0x25c
+	.short	0x25d
+	.short	0x25e
+	.short	0x25f
+	.short	0x260
+	.short	0x261
+	.short	0x262
+	.short	0x263
+	.short	0x264
+	.short	0x265
+	.short	0x266
+	.short	0x267
+	.short	0x268
+	.short	0x269
+	.short	0x26a
+	.short	0x26b
+	.short	0x26c
+	.short	0x26d
+	.short	0x26e
+	.short	0x26f
+	.short	0x270
+	.short	0x271
+	.short	0x272
+	.short	0x273
+	.short	0x274
+	.short	0x275
+	.short	0x276
+	.short	0x277
+	.short	0x278
+	.short	0x279
+	.short	0x27a
+	.short	0x27b
+	.short	0x27c
+	.short	0xffff
+	.size	 gBattleFrontierTrainerMons_RU_UU_OU,392
+	.globl	gBattleFrontierTrainerMons_UU_OU
+	.align	1, 0
+	.type	 gBattleFrontierTrainerMons_UU_OU,object
+gBattleFrontierTrainerMons_UU_OU:
+	.short	0x1ba
+	.short	0x1bb
+	.short	0x1bc
+	.short	0x1bd
+	.short	0x1be
+	.short	0x1bf
+	.short	0x1c0
+	.short	0x1c1
+	.short	0x1c2
+	.short	0x1c3
+	.short	0x1c4
+	.short	0x1c5
+	.short	0x1c6
+	.short	0x1c7
+	.short	0x1c8
+	.short	0x1c9
+	.short	0x1ca
+	.short	0x1cb
+	.short	0x1cc
+	.short	0x1cd
+	.short	0x1ce
+	.short	0x1cf
+	.short	0x1d0
+	.short	0x1d1
+	.short	0x1d2
+	.short	0x1d3
+	.short	0x1d4
+	.short	0x1d5
+	.short	0x1d6
+	.short	0x1d7
+	.short	0x1d8
+	.short	0x1d9
+	.short	0x1da
+	.short	0x1db
+	.short	0x1dc
+	.short	0x1dd
+	.short	0x1de
+	.short	0x1df
+	.short	0x1e0
+	.short	0x1e1
+	.short	0x1e2
+	.short	0x1e3
+	.short	0x1e4
+	.short	0x1e5
+	.short	0x1e6
+	.short	0x1e7
+	.short	0x1e8
+	.short	0x1e9
+	.short	0x1ea
+	.short	0x1eb
+	.short	0x1ec
+	.short	0x1ed
+	.short	0x1ee
+	.short	0x1ef
+	.short	0x1f0
+	.short	0x1f1
+	.short	0x1f2
+	.short	0x1f3
+	.short	0x1f4
+	.short	0x1f5
+	.short	0x1f6
+	.short	0x1f7
+	.short	0x1f8
+	.short	0x1f9
+	.short	0x1fa
+	.short	0x1fb
+	.short	0x1fc
+	.short	0x1fd
+	.short	0x1fe
+	.short	0x1ff
+	.short	0x200
+	.short	0x201
+	.short	0x202
+	.short	0x203
+	.short	0x204
+	.short	0x205
+	.short	0x206
+	.short	0x207
+	.short	0x208
+	.short	0x209
+	.short	0x20a
+	.short	0x20b
+	.short	0x20c
+	.short	0x20d
+	.short	0x20e
+	.short	0x20f
+	.short	0x210
+	.short	0x211
+	.short	0x212
+	.short	0x213
+	.short	0x214
+	.short	0x215
+	.short	0x216
+	.short	0x217
+	.short	0x218
+	.short	0x219
+	.short	0x21a
+	.short	0x21b
+	.short	0x21c
+	.short	0x21d
+	.short	0x21e
+	.short	0x21f
+	.short	0x220
+	.short	0x221
+	.short	0x222
+	.short	0x223
+	.short	0x224
+	.short	0x225
+	.short	0x226
+	.short	0x227
+	.short	0x228
+	.short	0x229
+	.short	0x22a
+	.short	0x22b
+	.short	0x22c
+	.short	0x22d
+	.short	0x22e
+	.short	0x22f
+	.short	0x230
+	.short	0x231
+	.short	0x232
+	.short	0x233
+	.short	0x234
+	.short	0x235
+	.short	0x236
+	.short	0x237
+	.short	0x238
+	.short	0x239
+	.short	0x23a
+	.short	0x23b
+	.short	0x23c
+	.short	0x23d
+	.short	0x23e
+	.short	0x23f
+	.short	0x240
+	.short	0x241
+	.short	0x242
+	.short	0x243
+	.short	0x244
+	.short	0x245
+	.short	0x246
+	.short	0x247
+	.short	0x248
+	.short	0x249
+	.short	0x24a
+	.short	0x24b
+	.short	0x24c
+	.short	0x24d
+	.short	0x24e
+	.short	0x24f
+	.short	0x250
+	.short	0x251
+	.short	0x252
+	.short	0x253
+	.short	0x254
+	.short	0x255
+	.short	0x256
+	.short	0x257
+	.short	0x258
+	.short	0x259
+	.short	0x25a
+	.short	0x25b
+	.short	0x25c
+	.short	0x25d
+	.short	0x25e
+	.short	0x25f
+	.short	0x260
+	.short	0x261
+	.short	0x262
+	.short	0x263
+	.short	0x264
+	.short	0x265
+	.short	0x266
+	.short	0x267
+	.short	0x268
+	.short	0x269
+	.short	0x26a
+	.short	0x26b
+	.short	0x26c
+	.short	0x26d
+	.short	0x26e
+	.short	0x26f
+	.short	0x270
+	.short	0x271
+	.short	0x272
+	.short	0x273
+	.short	0x274
+	.short	0x275
+	.short	0x276
+	.short	0x277
+	.short	0x278
+	.short	0x279
+	.short	0x27a
+	.short	0x27b
+	.short	0x27c
+	.short	0xffff
+	.size	 gBattleFrontierTrainerMons_UU_OU,392
+	.globl	gBattleFrontierTrainerMons_Dortha
+	.align	1, 0
+	.type	 gBattleFrontierTrainerMons_Dortha,object
+gBattleFrontierTrainerMons_Dortha:
 	.short	0x1
-	.short	0x2
-	.short	0x3
 	.short	0x4
 	.short	0x5
-	.short	0x6
 	.short	0x7
 	.short	0x8
-	.short	0x9
-	.short	0xa
-	.short	0xb
 	.short	0xc
 	.short	0xd
-	.short	0xe
 	.short	0xf
 	.short	0x10
 	.short	0x11
 	.short	0x12
-	.short	0x13
 	.short	0x14
 	.short	0x15
-	.short	0x16
-	.short	0x17
 	.short	0x18
 	.short	0x19
 	.short	0x1a
-	.short	0x1b
-	.short	0x1c
-	.short	0x1d
-	.short	0x1e
-	.short	0x1f
-	.short	0x20
 	.short	0x21
-	.short	0x22
 	.short	0x23
-	.short	0x24
 	.short	0x25
-	.short	0x26
 	.short	0x27
 	.short	0x28
 	.short	0x29
 	.short	0x2a
-	.short	0x2b
 	.short	0x2c
 	.short	0x2d
 	.short	0x2e
 	.short	0x2f
 	.short	0x30
 	.short	0x31
-	.short	0x32
-	.short	0x33
 	.short	0x34
 	.short	0x35
-	.short	0x36
 	.short	0x37
-	.short	0x38
-	.short	0x39
-	.short	0x3a
 	.short	0x3b
-	.short	0x3c
-	.short	0x3d
-	.short	0x3e
-	.short	0x3f
-	.short	0x40
-	.short	0x41
-	.short	0x42
 	.short	0x43
 	.short	0x44
 	.short	0x45
 	.short	0x46
 	.short	0x47
-	.short	0x48
 	.short	0x49
-	.short	0x4a
-	.short	0x4b
 	.short	0x4c
 	.short	0x4d
-	.short	0x4e
-	.short	0x4f
-	.short	0x50
-	.short	0x51
-	.short	0x52
 	.short	0x53
-	.short	0x54
-	.short	0x55
 	.short	0x56
-	.short	0x57
-	.short	0x58
-	.short	0x59
 	.short	0x5a
-	.short	0x5b
 	.short	0x5e
-	.short	0x5f
-	.short	0x60
 	.short	0x61
-	.short	0x62
-	.short	0x63
-	.short	0x64
-	.short	0x65
-	.short	0x66
-	.short	0x67
-	.short	0x68
 	.short	0x69
 	.short	0x6a
-	.short	0x6b
-	.short	0x6c
-	.short	0x6d
-	.short	0x6e
 	.short	0x6f
-	.short	0x70
 	.short	0x71
-	.short	0x73
-	.short	0x74
-	.short	0x75
-	.short	0x76
 	.short	0x77
 	.short	0x78
-	.short	0x79
-	.short	0x7a
-	.short	0x7b
-	.short	0x7c
-	.short	0x7d
-	.short	0x7e
 	.short	0x7f
-	.short	0x80
-	.short	0x5c
-	.short	0x5d
-	.short	0x72
-	.short	0xffff
 	.short	0x81
-	.short	0x82
 	.short	0x83
 	.short	0x84
-	.short	0x85
-	.short	0x86
 	.short	0x87
 	.short	0x88
-	.short	0x89
-	.short	0x8a
 	.short	0x8b
-	.short	0x8c
-	.short	0x8d
-	.short	0x8e
-	.short	0x8f
-	.short	0x90
-	.short	0x91
-	.short	0x92
-	.short	0x93
 	.short	0x94
-	.short	0x95
-	.short	0x96
-	.short	0x97
 	.short	0x98
 	.short	0x99
-	.short	0x9a
-	.short	0x9b
-	.short	0x9c
-	.short	0x9d
-	.short	0x9e
-	.short	0x9f
-	.short	0xa0
-	.short	0xa1
-	.short	0xa2
 	.short	0xa3
-	.short	0xa4
 	.short	0xa5
-	.short	0xa6
 	.short	0xa7
-	.short	0xa8
 	.short	0xa9
 	.short	0xaa
 	.short	0xab
 	.short	0xac
-	.short	0xad
-	.short	0xae
-	.short	0xaf
-	.short	0xb0
-	.short	0xb1
-	.short	0xb2
-	.short	0xb3
 	.short	0xb4
-	.short	0xb5
-	.short	0xb6
-	.short	0xb9
-	.short	0xba
+	.short	0xb7
 	.short	0xbb
 	.short	0xbc
-	.short	0xbd
+	.short	0xbf
 	.short	0xc1
 	.short	0xc2
-	.short	0xb7
-	.short	0xb8
-	.short	0xbe
-	.short	0xbf
-	.short	0xc0
-	.short	0xc3
-	.short	0xc4
-	.short	0xc5
-	.short	0xc5
-	.short	0xc7
-	.short	0xc8
 	.short	0xc9
 	.short	0xca
-	.short	0xcb
-	.short	0xcc
 	.short	0xcd
-	.short	0xce
-	.short	0xcf
 	.short	0xd0
 	.short	0xd1
 	.short	0xd2
 	.short	0xd3
-	.short	0xd4
-	.short	0xd5
 	.short	0xd6
-	.short	0xffff
-	.short	0xd7
-	.short	0xd8
-	.short	0xd9
 	.short	0xda
-	.short	0xdb
 	.short	0xdc
 	.short	0xdd
 	.short	0xde
-	.short	0xdf
-	.short	0xe0
-	.short	0xe1
-	.short	0xe2
-	.short	0xe3
-	.short	0xe4
-	.short	0xe5
-	.short	0xe6
-	.short	0xe7
 	.short	0xe8
-	.short	0xe9
 	.short	0xea
 	.short	0xeb
-	.short	0xec
-	.short	0xed
-	.short	0xee
 	.short	0xef
 	.short	0xf0
-	.short	0xf1
-	.short	0xf2
-	.short	0xf3
-	.short	0xf4
-	.short	0xf5
-	.short	0xf6
-	.short	0xf7
-	.short	0xf8
 	.short	0xf9
-	.short	0xfa
-	.short	0xfb
-	.short	0xfc
-	.short	0xfd
-	.short	0xfe
 	.short	0xff
 	.short	0x100
-	.short	0x101
-	.short	0x102
-	.short	0x103
-	.short	0x104
-	.short	0x105
-	.short	0x106
-	.short	0x107
-	.short	0x108
-	.short	0x109
-	.short	0x10a
-	.short	0x10b
-	.short	0x10c
 	.short	0x10d
 	.short	0x10e
 	.short	0x10f
-	.short	0x110
-	.short	0x111
 	.short	0x112
-	.short	0x113
 	.short	0x114
-	.short	0x115
-	.short	0x116
-	.short	0x117
 	.short	0x118
 	.short	0x119
 	.short	0x11a
-	.short	0x11b
-	.short	0x11c
 	.short	0x11d
-	.short	0x11e
-	.short	0x11f
 	.short	0x120
-	.short	0x121
 	.short	0x122
-	.short	0x123
-	.short	0x124
-	.short	0x125
 	.short	0x126
 	.short	0x127
-	.short	0x128
-	.short	0x129
-	.short	0x12a
-	.short	0x12b
-	.short	0x12c
-	.short	0x12d
-	.short	0x12e
-	.short	0x12f
-	.short	0x130
-	.short	0x131
-	.short	0x132
-	.short	0x133
-	.short	0x134
 	.short	0x135
 	.short	0x136
-	.short	0x137
-	.short	0x138
 	.short	0x139
-	.short	0x13a
-	.short	0xffff
-	.size	 gBattleFrontierTrainerMons_ZU_PU_NU,636
-	.globl	gBattleFrontierTrainerMons_PU_NU
-	.align	1, 0
-	.type	 gBattleFrontierTrainerMons_PU_NU,object
-gBattleFrontierTrainerMons_PU_NU:
-	.short	0x81
-	.short	0x82
-	.short	0x83
-	.short	0x84
-	.short	0x85
-	.short	0x86
-	.short	0x87
-	.short	0x88
-	.short	0x89
-	.short	0x8a
-	.short	0x8b
-	.short	0x8c
-	.short	0x8d
-	.short	0x8e
-	.short	0x8f
-	.short	0x90
-	.short	0x91
-	.short	0x92
-	.short	0x93
-	.short	0x94
-	.short	0x95
-	.short	0x96
-	.short	0x97
-	.short	0x98
-	.short	0x99
-	.short	0x9a
-	.short	0x9b
-	.short	0x9c
-	.short	0x9d
-	.short	0x9e
-	.short	0x9f
-	.short	0xa0
-	.short	0xa1
-	.short	0xa2
-	.short	0xa3
-	.short	0xa4
-	.short	0xa5
-	.short	0xa6
-	.short	0xa7
-	.short	0xa8
-	.short	0xa9
-	.short	0xaa
-	.short	0xab
-	.short	0xac
-	.short	0xad
-	.short	0xae
-	.short	0xaf
-	.short	0xb0
-	.short	0xb1
-	.short	0xb2
-	.short	0xb3
-	.short	0xb4
-	.short	0xb5
-	.short	0xb6
-	.short	0xb9
-	.short	0xba
-	.short	0xbb
-	.short	0xbc
-	.short	0xbd
-	.short	0xc1
-	.short	0xc2
-	.short	0xb7
-	.short	0xb8
-	.short	0xbe
-	.short	0xbf
-	.short	0xc0
-	.short	0xc3
-	.short	0xc4
-	.short	0xc5
-	.short	0xc5
-	.short	0xc7
-	.short	0xc8
-	.short	0xc9
-	.short	0xca
-	.short	0xcb
-	.short	0xcc
-	.short	0xcd
-	.short	0xce
-	.short	0xcf
-	.short	0xd0
-	.short	0xd1
-	.short	0xd2
-	.short	0xd3
-	.short	0xd4
-	.short	0xd5
-	.short	0xd6
-	.short	0xffff
-	.short	0xd7
-	.short	0xd8
-	.short	0xd9
-	.short	0xda
-	.short	0xdb
-	.short	0xdc
-	.short	0xdd
-	.short	0xde
-	.short	0xdf
-	.short	0xe0
-	.short	0xe1
-	.short	0xe2
-	.short	0xe3
-	.short	0xe4
-	.short	0xe5
-	.short	0xe6
-	.short	0xe7
-	.short	0xe8
-	.short	0xe9
-	.short	0xea
-	.short	0xeb
-	.short	0xec
-	.short	0xed
-	.short	0xee
-	.short	0xef
-	.short	0xf0
-	.short	0xf1
-	.short	0xf2
-	.short	0xf3
-	.short	0xf4
-	.short	0xf5
-	.short	0xf6
-	.short	0xf7
-	.short	0xf8
-	.short	0xf9
-	.short	0xfa
-	.short	0xfb
-	.short	0xfc
-	.short	0xfd
-	.short	0xfe
-	.short	0xff
-	.short	0x100
-	.short	0x101
-	.short	0x102
-	.short	0x103
-	.short	0x104
-	.short	0x105
-	.short	0x106
-	.short	0x107
-	.short	0x108
-	.short	0x109
-	.short	0x10a
-	.short	0x10b
-	.short	0x10c
-	.short	0x10d
-	.short	0x10e
-	.short	0x10f
-	.short	0x110
-	.short	0x111
-	.short	0x112
-	.short	0x113
-	.short	0x114
-	.short	0x115
-	.short	0x116
-	.short	0x117
-	.short	0x118
-	.short	0x119
-	.short	0x11a
-	.short	0x11b
-	.short	0x11c
-	.short	0x11d
-	.short	0x11e
-	.short	0x11f
-	.short	0x120
-	.short	0x121
-	.short	0x122
-	.short	0x123
-	.short	0x124
-	.short	0x125
-	.short	0x126
-	.short	0x127
-	.short	0x128
-	.short	0x129
-	.short	0x12a
-	.short	0x12b
-	.short	0x12c
-	.short	0x12d
-	.short	0x12e
-	.short	0x12f
-	.short	0x130
-	.short	0x131
-	.short	0x132
-	.short	0x133
-	.short	0x134
-	.short	0x135
-	.short	0x136
-	.short	0x137
-	.short	0x138
-	.short	0x139
-	.short	0x13a
-	.short	0xffff
-	.size	 gBattleFrontierTrainerMons_PU_NU,376
-	.globl	gBattleFrontierTrainerMons_PU_NU_RU
-	.align	1, 0
-	.type	 gBattleFrontierTrainerMons_PU_NU_RU,object
-gBattleFrontierTrainerMons_PU_NU_RU:
-	.short	0x81
-	.short	0x82
-	.short	0x83
-	.short	0x84
-	.short	0x85
-	.short	0x86
-	.short	0x87
-	.short	0x88
-	.short	0x89
-	.short	0x8a
-	.short	0x8b
-	.short	0x8c
-	.short	0x8d
-	.short	0x8e
-	.short	0x8f
-	.short	0x90
-	.short	0x91
-	.short	0x92
-	.short	0x93
-	.short	0x94
-	.short	0x95
-	.short	0x96
-	.short	0x97
-	.short	0x98
-	.short	0x99
-	.short	0x9a
-	.short	0x9b
-	.short	0x9c
-	.short	0x9d
-	.short	0x9e
-	.short	0x9f
-	.short	0xa0
-	.short	0xa1
-	.short	0xa2
-	.short	0xa3
-	.short	0xa4
-	.short	0xa5
-	.short	0xa6
-	.short	0xa7
-	.short	0xa8
-	.short	0xa9
-	.short	0xaa
-	.short	0xab
-	.short	0xac
-	.short	0xad
-	.short	0xae
-	.short	0xaf
-	.short	0xb0
-	.short	0xb1
-	.short	0xb2
-	.short	0xb3
-	.short	0xb4
-	.short	0xb5
-	.short	0xb6
-	.short	0xb9
-	.short	0xba
-	.short	0xbb
-	.short	0xbc
-	.short	0xbd
-	.short	0xc1
-	.short	0xc2
-	.short	0xb7
-	.short	0xb8
-	.short	0xbe
-	.short	0xbf
-	.short	0xc0
-	.short	0xc3
-	.short	0xc4
-	.short	0xc5
-	.short	0xc5
-	.short	0xc7
-	.short	0xc8
-	.short	0xc9
-	.short	0xca
-	.short	0xcb
-	.short	0xcc
-	.short	0xcd
-	.short	0xce
-	.short	0xcf
-	.short	0xd0
-	.short	0xd1
-	.short	0xd2
-	.short	0xd3
-	.short	0xd4
-	.short	0xd5
-	.short	0xd6
-	.short	0xffff
-	.short	0xd7
-	.short	0xd8
-	.short	0xd9
-	.short	0xda
-	.short	0xdb
-	.short	0xdc
-	.short	0xdd
-	.short	0xde
-	.short	0xdf
-	.short	0xe0
-	.short	0xe1
-	.short	0xe2
-	.short	0xe3
-	.short	0xe4
-	.short	0xe5
-	.short	0xe6
-	.short	0xe7
-	.short	0xe8
-	.short	0xe9
-	.short	0xea
-	.short	0xeb
-	.short	0xec
-	.short	0xed
-	.short	0xee
-	.short	0xef
-	.short	0xf0
-	.short	0xf1
-	.short	0xf2
-	.short	0xf3
-	.short	0xf4
-	.short	0xf5
-	.short	0xf6
-	.short	0xf7
-	.short	0xf8
-	.short	0xf9
-	.short	0xfa
-	.short	0xfb
-	.short	0xfc
-	.short	0xfd
-	.short	0xfe
-	.short	0xff
-	.short	0x100
-	.short	0x101
-	.short	0x102
-	.short	0x103
-	.short	0x104
-	.short	0x105
-	.short	0x106
-	.short	0x107
-	.short	0x108
-	.short	0x109
-	.short	0x10a
-	.short	0x10b
-	.short	0x10c
-	.short	0x10d
-	.short	0x10e
-	.short	0x10f
-	.short	0x110
-	.short	0x111
-	.short	0x112
-	.short	0x113
-	.short	0x114
-	.short	0x115
-	.short	0x116
-	.short	0x117
-	.short	0x118
-	.short	0x119
-	.short	0x11a
-	.short	0x11b
-	.short	0x11c
-	.short	0x11d
-	.short	0x11e
-	.short	0x11f
-	.short	0x120
-	.short	0x121
-	.short	0x122
-	.short	0x123
-	.short	0x124
-	.short	0x125
-	.short	0x126
-	.short	0x127
-	.short	0x128
-	.short	0x129
-	.short	0x12a
-	.short	0x12b
-	.short	0x12c
-	.short	0x12d
-	.short	0x12e
-	.short	0x12f
-	.short	0x130
-	.short	0x131
-	.short	0x132
-	.short	0x133
-	.short	0x134
-	.short	0x135
-	.short	0x136
-	.short	0x137
-	.short	0x138
-	.short	0x139
-	.short	0x13a
-	.short	0xffff
-	.short	0x13b
 	.short	0x13c
-	.short	0x13d
-	.short	0x13e
 	.short	0x13f
 	.short	0x140
 	.short	0x141
 	.short	0x142
 	.short	0x143
-	.short	0x144
 	.short	0x145
-	.short	0x146
 	.short	0x147
-	.short	0x148
-	.short	0x149
 	.short	0x14a
-	.short	0x14b
-	.short	0x14c
 	.short	0x14d
 	.short	0x14e
-	.short	0x14f
-	.short	0x150
-	.short	0x151
-	.short	0x152
 	.short	0x153
-	.short	0x154
 	.short	0x155
 	.short	0x156
-	.short	0x157
-	.short	0x158
-	.short	0x159
 	.short	0x15a
-	.short	0x15b
-	.short	0x15c
-	.short	0x15d
 	.short	0x15e
-	.short	0x15f
-	.short	0x160
 	.short	0x161
-	.short	0x162
-	.short	0x163
-	.short	0x164
 	.short	0x165
 	.short	0x166
 	.short	0x167
-	.short	0x168
 	.short	0x169
-	.short	0x16a
-	.short	0x16b
-	.short	0x16c
 	.short	0x16d
-	.short	0x16e
-	.short	0x16f
-	.short	0x170
-	.short	0x171
 	.short	0x172
-	.short	0x173
-	.short	0x174
 	.short	0x175
 	.short	0x176
 	.short	0x177
-	.short	0x178
 	.short	0x179
 	.short	0x17a
-	.short	0x17b
 	.short	0x17c
 	.short	0x17d
 	.short	0x17e
 	.short	0x17f
 	.short	0x180
-	.short	0x181
 	.short	0x182
-	.short	0x183
-	.short	0x184
-	.short	0x185
-	.short	0x186
-	.short	0x187
 	.short	0x188
-	.short	0x189
 	.short	0x18a
-	.short	0x18b
-	.short	0x18c
 	.short	0x18d
-	.short	0x18e
-	.short	0x18f
-	.short	0x190
 	.short	0x191
-	.short	0x192
-	.short	0x193
 	.short	0x194
-	.short	0x195
-	.short	0x196
-	.short	0x197
-	.short	0x198
 	.short	0x199
-	.short	0x19a
 	.short	0x19b
 	.short	0x19c
 	.short	0x19d
 	.short	0x19e
 	.short	0x19f
-	.short	0x1a0
-	.short	0x1a1
-	.short	0x1a2
-	.short	0x1a3
-	.short	0x1a4
 	.short	0x1a5
-	.short	0xffff
-	.size	 gBattleFrontierTrainerMons_PU_NU_RU,592
-	.globl	gBattleFrontierTrainerMons_NU_RU
-	.align	1, 0
-	.type	 gBattleFrontierTrainerMons_NU_RU,object
-gBattleFrontierTrainerMons_NU_RU:
-	.short	0xd7
-	.short	0xd8
-	.short	0xd9
-	.short	0xda
-	.short	0xdb
-	.short	0xdc
-	.short	0xdd
-	.short	0xde
-	.short	0xdf
-	.short	0xe0
-	.short	0xe1
-	.short	0xe2
-	.short	0xe3
-	.short	0xe4
-	.short	0xe5
-	.short	0xe6
-	.short	0xe7
-	.short	0xe8
-	.short	0xe9
-	.short	0xea
-	.short	0xeb
-	.short	0xec
-	.short	0xed
-	.short	0xee
-	.short	0xef
-	.short	0xf0
-	.short	0xf1
-	.short	0xf2
-	.short	0xf3
-	.short	0xf4
-	.short	0xf5
-	.short	0xf6
-	.short	0xf7
-	.short	0xf8
-	.short	0xf9
-	.short	0xfa
-	.short	0xfb
-	.short	0xfc
-	.short	0xfd
-	.short	0xfe
-	.short	0xff
-	.short	0x100
-	.short	0x101
-	.short	0x102
-	.short	0x103
-	.short	0x104
-	.short	0x105
-	.short	0x106
-	.short	0x107
-	.short	0x108
-	.short	0x109
-	.short	0x10a
-	.short	0x10b
-	.short	0x10c
-	.short	0x10d
-	.short	0x10e
-	.short	0x10f
-	.short	0x110
-	.short	0x111
-	.short	0x112
-	.short	0x113
-	.short	0x114
-	.short	0x115
-	.short	0x116
-	.short	0x117
-	.short	0x118
-	.short	0x119
-	.short	0x11a
-	.short	0x11b
-	.short	0x11c
-	.short	0x11d
-	.short	0x11e
-	.short	0x11f
-	.short	0x120
-	.short	0x121
-	.short	0x122
-	.short	0x123
-	.short	0x124
-	.short	0x125
-	.short	0x126
-	.short	0x127
-	.short	0x128
-	.short	0x129
-	.short	0x12a
-	.short	0x12b
-	.short	0x12c
-	.short	0x12d
-	.short	0x12e
-	.short	0x12f
-	.short	0x130
-	.short	0x131
-	.short	0x132
-	.short	0x133
-	.short	0x134
-	.short	0x135
-	.short	0x136
-	.short	0x137
-	.short	0x138
-	.short	0x139
-	.short	0x13a
-	.short	0xffff
-	.short	0x13b
-	.short	0x13c
-	.short	0x13d
-	.short	0x13e
-	.short	0x13f
-	.short	0x140
-	.short	0x141
-	.short	0x142
-	.short	0x143
-	.short	0x144
-	.short	0x145
-	.short	0x146
-	.short	0x147
-	.short	0x148
-	.short	0x149
-	.short	0x14a
-	.short	0x14b
-	.short	0x14c
-	.short	0x14d
-	.short	0x14e
-	.short	0x14f
-	.short	0x150
-	.short	0x151
-	.short	0x152
-	.short	0x153
-	.short	0x154
-	.short	0x155
-	.short	0x156
-	.short	0x157
-	.short	0x158
-	.short	0x159
-	.short	0x15a
-	.short	0x15b
-	.short	0x15c
-	.short	0x15d
-	.short	0x15e
-	.short	0x15f
-	.short	0x160
-	.short	0x161
-	.short	0x162
-	.short	0x163
-	.short	0x164
-	.short	0x165
-	.short	0x166
-	.short	0x167
-	.short	0x168
-	.short	0x169
-	.short	0x16a
-	.short	0x16b
-	.short	0x16c
-	.short	0x16d
-	.short	0x16e
-	.short	0x16f
-	.short	0x170
-	.short	0x171
-	.short	0x172
-	.short	0x173
-	.short	0x174
-	.short	0x175
-	.short	0x176
-	.short	0x177
-	.short	0x178
-	.short	0x179
-	.short	0x17a
-	.short	0x17b
-	.short	0x17c
-	.short	0x17d
-	.short	0x17e
-	.short	0x17f
-	.short	0x180
-	.short	0x181
-	.short	0x182
-	.short	0x183
-	.short	0x184
-	.short	0x185
-	.short	0x186
-	.short	0x187
-	.short	0x188
-	.short	0x189
-	.short	0x18a
-	.short	0x18b
-	.short	0x18c
-	.short	0x18d
-	.short	0x18e
-	.short	0x18f
-	.short	0x190
-	.short	0x191
-	.short	0x192
-	.short	0x193
-	.short	0x194
-	.short	0x195
-	.short	0x196
-	.short	0x197
-	.short	0x198
-	.short	0x199
-	.short	0x19a
-	.short	0x19b
-	.short	0x19c
-	.short	0x19d
-	.short	0x19e
-	.short	0x19f
-	.short	0x1a0
-	.short	0x1a1
-	.short	0x1a2
-	.short	0x1a3
-	.short	0x1a4
-	.short	0x1a5
-	.short	0xffff
-	.size	 gBattleFrontierTrainerMons_NU_RU,418
-	.globl	gBattleFrontierTrainerMons_NU_RU_UU
-	.align	1, 0
-	.type	 gBattleFrontierTrainerMons_NU_RU_UU,object
-gBattleFrontierTrainerMons_NU_RU_UU:
-	.short	0xd7
-	.short	0xd8
-	.short	0xd9
-	.short	0xda
-	.short	0xdb
-	.short	0xdc
-	.short	0xdd
-	.short	0xde
-	.short	0xdf
-	.short	0xe0
-	.short	0xe1
-	.short	0xe2
-	.short	0xe3
-	.short	0xe4
-	.short	0xe5
-	.short	0xe6
-	.short	0xe7
-	.short	0xe8
-	.short	0xe9
-	.short	0xea
-	.short	0xeb
-	.short	0xec
-	.short	0xed
-	.short	0xee
-	.short	0xef
-	.short	0xf0
-	.short	0xf1
-	.short	0xf2
-	.short	0xf3
-	.short	0xf4
-	.short	0xf5
-	.short	0xf6
-	.short	0xf7
-	.short	0xf8
-	.short	0xf9
-	.short	0xfa
-	.short	0xfb
-	.short	0xfc
-	.short	0xfd
-	.short	0xfe
-	.short	0xff
-	.short	0x100
-	.short	0x101
-	.short	0x102
-	.short	0x103
-	.short	0x104
-	.short	0x105
-	.short	0x106
-	.short	0x107
-	.short	0x108
-	.short	0x109
-	.short	0x10a
-	.short	0x10b
-	.short	0x10c
-	.short	0x10d
-	.short	0x10e
-	.short	0x10f
-	.short	0x110
-	.short	0x111
-	.short	0x112
-	.short	0x113
-	.short	0x114
-	.short	0x115
-	.short	0x116
-	.short	0x117
-	.short	0x118
-	.short	0x119
-	.short	0x11a
-	.short	0x11b
-	.short	0x11c
-	.short	0x11d
-	.short	0x11e
-	.short	0x11f
-	.short	0x120
-	.short	0x121
-	.short	0x122
-	.short	0x123
-	.short	0x124
-	.short	0x125
-	.short	0x126
-	.short	0x127
-	.short	0x128
-	.short	0x129
-	.short	0x12a
-	.short	0x12b
-	.short	0x12c
-	.short	0x12d
-	.short	0x12e
-	.short	0x12f
-	.short	0x130
-	.short	0x131
-	.short	0x132
-	.short	0x133
-	.short	0x134
-	.short	0x135
-	.short	0x136
-	.short	0x137
-	.short	0x138
-	.short	0x139
-	.short	0x13a
-	.short	0xffff
-	.short	0x13b
-	.short	0x13c
-	.short	0x13d
-	.short	0x13e
-	.short	0x13f
-	.short	0x140
-	.short	0x141
-	.short	0x142
-	.short	0x143
-	.short	0x144
-	.short	0x145
-	.short	0x146
-	.short	0x147
-	.short	0x148
-	.short	0x149
-	.short	0x14a
-	.short	0x14b
-	.short	0x14c
-	.short	0x14d
-	.short	0x14e
-	.short	0x14f
-	.short	0x150
-	.short	0x151
-	.short	0x152
-	.short	0x153
-	.short	0x154
-	.short	0x155
-	.short	0x156
-	.short	0x157
-	.short	0x158
-	.short	0x159
-	.short	0x15a
-	.short	0x15b
-	.short	0x15c
-	.short	0x15d
-	.short	0x15e
-	.short	0x15f
-	.short	0x160
-	.short	0x161
-	.short	0x162
-	.short	0x163
-	.short	0x164
-	.short	0x165
-	.short	0x166
-	.short	0x167
-	.short	0x168
-	.short	0x169
-	.short	0x16a
-	.short	0x16b
-	.short	0x16c
-	.short	0x16d
-	.short	0x16e
-	.short	0x16f
-	.short	0x170
-	.short	0x171
-	.short	0x172
-	.short	0x173
-	.short	0x174
-	.short	0x175
-	.short	0x176
-	.short	0x177
-	.short	0x178
-	.short	0x179
-	.short	0x17a
-	.short	0x17b
-	.short	0x17c
-	.short	0x17d
-	.short	0x17e
-	.short	0x17f
-	.short	0x180
-	.short	0x181
-	.short	0x182
-	.short	0x183
-	.short	0x184
-	.short	0x185
-	.short	0x186
-	.short	0x187
-	.short	0x188
-	.short	0x189
-	.short	0x18a
-	.short	0x18b
-	.short	0x18c
-	.short	0x18d
-	.short	0x18e
-	.short	0x18f
-	.short	0x190
-	.short	0x191
-	.short	0x192
-	.short	0x193
-	.short	0x194
-	.short	0x195
-	.short	0x196
-	.short	0x197
-	.short	0x198
-	.short	0x199
-	.short	0x19a
-	.short	0x19b
-	.short	0x19c
-	.short	0x19d
-	.short	0x19e
-	.short	0x19f
-	.short	0x1a0
-	.short	0x1a1
-	.short	0x1a2
-	.short	0x1a3
-	.short	0x1a4
-	.short	0x1a5
-	.short	0xffff
-	.short	0x1a6
-	.short	0x1a7
 	.short	0x1a8
-	.short	0x1a9
-	.short	0x1aa
-	.short	0x1ab
-	.short	0x1ac
-	.short	0x1ad
 	.short	0x1ae
-	.short	0x1af
-	.short	0x1b0
-	.short	0x1b1
-	.short	0x1b2
-	.short	0x1b3
-	.short	0x1b4
 	.short	0x1b5
-	.short	0x1b6
-	.short	0x1b7
-	.short	0x1b8
-	.short	0x1b9
-	.short	0x1ba
 	.short	0x1bb
-	.short	0x1bc
-	.short	0x1bd
-	.short	0x1be
 	.short	0x1bf
 	.short	0x1c0
 	.short	0x1c1
-	.short	0x1c2
-	.short	0x1c3
-	.short	0x1c4
-	.short	0x1c5
-	.short	0x1c6
-	.short	0x1c7
 	.short	0x1c8
-	.short	0x1c9
-	.short	0x1ca
-	.short	0x1cb
 	.short	0x1cc
-	.short	0x1cd
-	.short	0x1ce
-	.short	0x1cf
-	.short	0x1d0
 	.short	0x1d1
 	.short	0x1d2
-	.short	0x1d3
-	.short	0x1d4
-	.short	0x1d5
-	.short	0x1d6
-	.short	0x1d7
-	.short	0x1d8
-	.short	0x1d9
-	.short	0x1da
 	.short	0x1db
 	.short	0x1dc
-	.short	0x1dd
 	.short	0x1de
 	.short	0x1df
-	.short	0x1e0
-	.short	0x1e1
 	.short	0x1e2
-	.short	0x1e3
-	.short	0x1e4
 	.short	0x1e5
-	.short	0x1e6
-	.short	0x1e7
 	.short	0x1e8
 	.short	0x1e9
 	.short	0x1ea
 	.short	0x1eb
-	.short	0x1ec
 	.short	0x1ed
-	.short	0x1ee
 	.short	0x1ef
 	.short	0x1f0
 	.short	0x1f1
-	.short	0x1f2
-	.short	0x1f3
 	.short	0x1f4
 	.short	0x1f5
-	.short	0x1f6
-	.short	0x1f7
-	.short	0x1f8
 	.short	0x1f9
-	.short	0x1fa
 	.short	0x1fb
-	.short	0x1fc
-	.short	0x1fd
 	.short	0x1fe
-	.short	0x1ff
-	.short	0x200
-	.short	0x201
-	.short	0x202
-	.short	0x203
 	.short	0x204
-	.short	0x205
-	.short	0x206
-	.short	0x207
-	.short	0x208
 	.short	0x209
 	.short	0x20a
-	.short	0x20b
-	.short	0x20c
-	.short	0x20d
 	.short	0x20e
 	.short	0x20f
-	.short	0xffff
-	.size	 gBattleFrontierTrainerMons_NU_RU_UU,632
-	.globl	gBattleFrontierTrainerMons_NU_RU_UU_OU
-	.align	1, 0
-	.type	 gBattleFrontierTrainerMons_NU_RU_UU_OU,object
-gBattleFrontierTrainerMons_NU_RU_UU_OU:
-	.short	0xd7
-	.short	0xd8
-	.short	0xd9
-	.short	0xda
-	.short	0xdb
-	.short	0xdc
-	.short	0xdd
-	.short	0xde
-	.short	0xdf
-	.short	0xe0
-	.short	0xe1
-	.short	0xe2
-	.short	0xe3
-	.short	0xe4
-	.short	0xe5
-	.short	0xe6
-	.short	0xe7
-	.short	0xe8
-	.short	0xe9
-	.short	0xea
-	.short	0xeb
-	.short	0xec
-	.short	0xed
-	.short	0xee
-	.short	0xef
-	.short	0xf0
-	.short	0xf1
-	.short	0xf2
-	.short	0xf3
-	.short	0xf4
-	.short	0xf5
-	.short	0xf6
-	.short	0xf7
-	.short	0xf8
-	.short	0xf9
-	.short	0xfa
-	.short	0xfb
-	.short	0xfc
-	.short	0xfd
-	.short	0xfe
-	.short	0xff
-	.short	0x100
-	.short	0x101
-	.short	0x102
-	.short	0x103
-	.short	0x104
-	.short	0x105
-	.short	0x106
-	.short	0x107
-	.short	0x108
-	.short	0x109
-	.short	0x10a
-	.short	0x10b
-	.short	0x10c
-	.short	0x10d
-	.short	0x10e
-	.short	0x10f
-	.short	0x110
-	.short	0x111
-	.short	0x112
-	.short	0x113
-	.short	0x114
-	.short	0x115
-	.short	0x116
-	.short	0x117
-	.short	0x118
-	.short	0x119
-	.short	0x11a
-	.short	0x11b
-	.short	0x11c
-	.short	0x11d
-	.short	0x11e
-	.short	0x11f
-	.short	0x120
-	.short	0x121
-	.short	0x122
-	.short	0x123
-	.short	0x124
-	.short	0x125
-	.short	0x126
-	.short	0x127
-	.short	0x128
-	.short	0x129
-	.short	0x12a
-	.short	0x12b
-	.short	0x12c
-	.short	0x12d
-	.short	0x12e
-	.short	0x12f
-	.short	0x130
-	.short	0x131
-	.short	0x132
-	.short	0x133
-	.short	0x134
-	.short	0x135
-	.short	0x136
-	.short	0x137
-	.short	0x138
-	.short	0x139
-	.short	0x13a
-	.short	0xffff
-	.short	0x13b
-	.short	0x13c
-	.short	0x13d
-	.short	0x13e
-	.short	0x13f
-	.short	0x140
-	.short	0x141
-	.short	0x142
-	.short	0x143
-	.short	0x144
-	.short	0x145
-	.short	0x146
-	.short	0x147
-	.short	0x148
-	.short	0x149
-	.short	0x14a
-	.short	0x14b
-	.short	0x14c
-	.short	0x14d
-	.short	0x14e
-	.short	0x14f
-	.short	0x150
-	.short	0x151
-	.short	0x152
-	.short	0x153
-	.short	0x154
-	.short	0x155
-	.short	0x156
-	.short	0x157
-	.short	0x158
-	.short	0x159
-	.short	0x15a
-	.short	0x15b
-	.short	0x15c
-	.short	0x15d
-	.short	0x15e
-	.short	0x15f
-	.short	0x160
-	.short	0x161
-	.short	0x162
-	.short	0x163
-	.short	0x164
-	.short	0x165
-	.short	0x166
-	.short	0x167
-	.short	0x168
-	.short	0x169
-	.short	0x16a
-	.short	0x16b
-	.short	0x16c
-	.short	0x16d
-	.short	0x16e
-	.short	0x16f
-	.short	0x170
-	.short	0x171
-	.short	0x172
-	.short	0x173
-	.short	0x174
-	.short	0x175
-	.short	0x176
-	.short	0x177
-	.short	0x178
-	.short	0x179
-	.short	0x17a
-	.short	0x17b
-	.short	0x17c
-	.short	0x17d
-	.short	0x17e
-	.short	0x17f
-	.short	0x180
-	.short	0x181
-	.short	0x182
-	.short	0x183
-	.short	0x184
-	.short	0x185
-	.short	0x186
-	.short	0x187
-	.short	0x188
-	.short	0x189
-	.short	0x18a
-	.short	0x18b
-	.short	0x18c
-	.short	0x18d
-	.short	0x18e
-	.short	0x18f
-	.short	0x190
-	.short	0x191
-	.short	0x192
-	.short	0x193
-	.short	0x194
-	.short	0x195
-	.short	0x196
-	.short	0x197
-	.short	0x198
-	.short	0x199
-	.short	0x19a
-	.short	0x19b
-	.short	0x19c
-	.short	0x19d
-	.short	0x19e
-	.short	0x19f
-	.short	0x1a0
-	.short	0x1a1
-	.short	0x1a2
-	.short	0x1a3
-	.short	0x1a4
-	.short	0x1a5
-	.short	0xffff
-	.short	0x1a6
-	.short	0x1a7
-	.short	0x1a8
-	.short	0x1a9
-	.short	0x1aa
-	.short	0x1ab
-	.short	0x1ac
-	.short	0x1ad
-	.short	0x1ae
-	.short	0x1af
-	.short	0x1b0
-	.short	0x1b1
-	.short	0x1b2
-	.short	0x1b3
-	.short	0x1b4
-	.short	0x1b5
-	.short	0x1b6
-	.short	0x1b7
-	.short	0x1b8
-	.short	0x1b9
-	.short	0x1ba
-	.short	0x1bb
-	.short	0x1bc
-	.short	0x1bd
-	.short	0x1be
-	.short	0x1bf
-	.short	0x1c0
-	.short	0x1c1
-	.short	0x1c2
-	.short	0x1c3
-	.short	0x1c4
-	.short	0x1c5
-	.short	0x1c6
-	.short	0x1c7
-	.short	0x1c8
-	.short	0x1c9
-	.short	0x1ca
-	.short	0x1cb
-	.short	0x1cc
-	.short	0x1cd
-	.short	0x1ce
-	.short	0x1cf
-	.short	0x1d0
-	.short	0x1d1
-	.short	0x1d2
-	.short	0x1d3
-	.short	0x1d4
-	.short	0x1d5
-	.short	0x1d6
-	.short	0x1d7
-	.short	0x1d8
-	.short	0x1d9
-	.short	0x1da
-	.short	0x1db
-	.short	0x1dc
-	.short	0x1dd
-	.short	0x1de
-	.short	0x1df
-	.short	0x1e0
-	.short	0x1e1
-	.short	0x1e2
-	.short	0x1e3
-	.short	0x1e4
-	.short	0x1e5
-	.short	0x1e6
-	.short	0x1e7
-	.short	0x1e8
-	.short	0x1e9
-	.short	0x1ea
-	.short	0x1eb
-	.short	0x1ec
-	.short	0x1ed
-	.short	0x1ee
-	.short	0x1ef
-	.short	0x1f0
-	.short	0x1f1
-	.short	0x1f2
-	.short	0x1f3
-	.short	0x1f4
-	.short	0x1f5
-	.short	0x1f6
-	.short	0x1f7
-	.short	0x1f8
-	.short	0x1f9
-	.short	0x1fa
-	.short	0x1fb
-	.short	0x1fc
-	.short	0x1fd
-	.short	0x1fe
-	.short	0x1ff
-	.short	0x200
-	.short	0x201
-	.short	0x202
-	.short	0x203
-	.short	0x204
-	.short	0x205
-	.short	0x206
-	.short	0x207
-	.short	0x208
-	.short	0x209
-	.short	0x20a
-	.short	0x20b
-	.short	0x20c
-	.short	0x20d
-	.short	0x20e
-	.short	0x20f
-	.short	0xffff
 	.short	0x210
-	.short	0x211
-	.short	0x212
-	.short	0x213
-	.short	0x214
-	.short	0x215
-	.short	0x216
-	.short	0x217
-	.short	0x218
 	.short	0x219
 	.short	0x21a
-	.short	0x21b
-	.short	0x21c
-	.short	0x21d
 	.short	0x21e
-	.short	0x21f
-	.short	0x220
-	.short	0x221
-	.short	0x222
-	.short	0x223
 	.short	0x224
 	.short	0x225
 	.short	0x226
 	.short	0x227
-	.short	0x228
 	.short	0x229
-	.short	0x22a
-	.short	0x22b
-	.short	0x22c
 	.short	0x22d
 	.short	0x22e
 	.short	0x22f
-	.short	0x230
 	.short	0x231
-	.short	0x232
-	.short	0x233
 	.short	0x234
-	.short	0x235
 	.short	0x236
-	.short	0x237
 	.short	0x238
-	.short	0x239
-	.short	0x23a
 	.short	0x23b
-	.short	0x23c
-	.short	0x23d
-	.short	0x23e
-	.short	0x23f
-	.short	0x240
 	.short	0x241
-	.short	0x242
 	.short	0x243
-	.short	0x244
-	.short	0x245
 	.short	0x246
-	.short	0x247
-	.short	0x248
-	.short	0x249
-	.short	0x24a
 	.short	0x24b
 	.short	0x24c
-	.short	0x24d
-	.short	0x24e
-	.short	0x24f
 	.short	0x250
 	.short	0x251
-	.short	0x252
 	.short	0x253
 	.short	0x254
-	.short	0x255
 	.short	0x256
 	.short	0x257
+	.short	0x258
+	.short	0x259
+	.short	0x25b
+	.short	0x25e
+	.short	0x25f
+	.short	0x261
+	.short	0x263
+	.short	0x264
+	.short	0x265
+	.short	0x268
+	.short	0x269
+	.short	0x26a
+	.short	0x26e
+	.short	0x273
+	.short	0x276
+	.short	0x277
+	.short	0x278
+	.short	0x279
+	.short	0x27c
 	.short	0xffff
-	.size	 gBattleFrontierTrainerMons_NU_RU_UU_OU,778
-	.globl	gBattleFrontierTrainerMons_RU_UU_OU
-	.align	1, 0
-	.type	 gBattleFrontierTrainerMons_RU_UU_OU,object
-gBattleFrontierTrainerMons_RU_UU_OU:
-	.short	0x13b
-	.short	0x13c
-	.short	0x13d
-	.short	0x13e
-	.short	0x13f
-	.short	0x140
-	.short	0x141
-	.short	0x142
-	.short	0x143
-	.short	0x144
-	.short	0x145
-	.short	0x146
-	.short	0x147
-	.short	0x148
-	.short	0x149
-	.short	0x14a
-	.short	0x14b
-	.short	0x14c
-	.short	0x14d
-	.short	0x14e
-	.short	0x14f
-	.short	0x150
-	.short	0x151
-	.short	0x152
-	.short	0x153
-	.short	0x154
-	.short	0x155
-	.short	0x156
-	.short	0x157
-	.short	0x158
-	.short	0x159
-	.short	0x15a
-	.short	0x15b
-	.short	0x15c
-	.short	0x15d
-	.short	0x15e
-	.short	0x15f
-	.short	0x160
-	.short	0x161
-	.short	0x162
-	.short	0x163
-	.short	0x164
-	.short	0x165
-	.short	0x166
-	.short	0x167
-	.short	0x168
-	.short	0x169
-	.short	0x16a
-	.short	0x16b
-	.short	0x16c
-	.short	0x16d
-	.short	0x16e
-	.short	0x16f
-	.short	0x170
-	.short	0x171
-	.short	0x172
-	.short	0x173
-	.short	0x174
-	.short	0x175
-	.short	0x176
-	.short	0x177
-	.short	0x178
-	.short	0x179
-	.short	0x17a
-	.short	0x17b
-	.short	0x17c
-	.short	0x17d
-	.short	0x17e
-	.short	0x17f
-	.short	0x180
-	.short	0x181
-	.short	0x182
-	.short	0x183
-	.short	0x184
-	.short	0x185
-	.short	0x186
-	.short	0x187
-	.short	0x188
-	.short	0x189
-	.short	0x18a
-	.short	0x18b
-	.short	0x18c
-	.short	0x18d
-	.short	0x18e
-	.short	0x18f
-	.short	0x190
-	.short	0x191
-	.short	0x192
-	.short	0x193
-	.short	0x194
-	.short	0x195
-	.short	0x196
-	.short	0x197
-	.short	0x198
-	.short	0x199
-	.short	0x19a
-	.short	0x19b
-	.short	0x19c
-	.short	0x19d
-	.short	0x19e
-	.short	0x19f
-	.short	0x1a0
-	.short	0x1a1
-	.short	0x1a2
-	.short	0x1a3
-	.short	0x1a4
-	.short	0x1a5
-	.short	0xffff
-	.short	0x1a6
-	.short	0x1a7
-	.short	0x1a8
-	.short	0x1a9
-	.short	0x1aa
-	.short	0x1ab
-	.short	0x1ac
-	.short	0x1ad
-	.short	0x1ae
-	.short	0x1af
-	.short	0x1b0
-	.short	0x1b1
-	.short	0x1b2
-	.short	0x1b3
-	.short	0x1b4
-	.short	0x1b5
-	.short	0x1b6
-	.short	0x1b7
-	.short	0x1b8
-	.short	0x1b9
-	.short	0x1ba
-	.short	0x1bb
-	.short	0x1bc
-	.short	0x1bd
-	.short	0x1be
-	.short	0x1bf
-	.short	0x1c0
-	.short	0x1c1
-	.short	0x1c2
-	.short	0x1c3
-	.short	0x1c4
-	.short	0x1c5
-	.short	0x1c6
-	.short	0x1c7
-	.short	0x1c8
-	.short	0x1c9
-	.short	0x1ca
-	.short	0x1cb
-	.short	0x1cc
-	.short	0x1cd
-	.short	0x1ce
-	.short	0x1cf
-	.short	0x1d0
-	.short	0x1d1
-	.short	0x1d2
-	.short	0x1d3
-	.short	0x1d4
-	.short	0x1d5
-	.short	0x1d6
-	.short	0x1d7
-	.short	0x1d8
-	.short	0x1d9
-	.short	0x1da
-	.short	0x1db
-	.short	0x1dc
-	.short	0x1dd
-	.short	0x1de
-	.short	0x1df
-	.short	0x1e0
-	.short	0x1e1
-	.short	0x1e2
-	.short	0x1e3
-	.short	0x1e4
-	.short	0x1e5
-	.short	0x1e6
-	.short	0x1e7
-	.short	0x1e8
-	.short	0x1e9
-	.short	0x1ea
-	.short	0x1eb
-	.short	0x1ec
-	.short	0x1ed
-	.short	0x1ee
-	.short	0x1ef
-	.short	0x1f0
-	.short	0x1f1
-	.short	0x1f2
-	.short	0x1f3
-	.short	0x1f4
-	.short	0x1f5
-	.short	0x1f6
-	.short	0x1f7
-	.short	0x1f8
-	.short	0x1f9
-	.short	0x1fa
-	.short	0x1fb
-	.short	0x1fc
-	.short	0x1fd
-	.short	0x1fe
-	.short	0x1ff
-	.short	0x200
-	.short	0x201
-	.short	0x202
-	.short	0x203
-	.short	0x204
-	.short	0x205
-	.short	0x206
-	.short	0x207
-	.short	0x208
-	.short	0x209
-	.short	0x20a
-	.short	0x20b
-	.short	0x20c
-	.short	0x20d
-	.short	0x20e
-	.short	0x20f
-	.short	0xffff
-	.short	0x210
-	.short	0x211
-	.short	0x212
-	.short	0x213
-	.short	0x214
-	.short	0x215
-	.short	0x216
-	.short	0x217
-	.short	0x218
-	.short	0x219
-	.short	0x21a
-	.short	0x21b
-	.short	0x21c
-	.short	0x21d
-	.short	0x21e
-	.short	0x21f
-	.short	0x220
-	.short	0x221
-	.short	0x222
-	.short	0x223
-	.short	0x224
-	.short	0x225
-	.short	0x226
-	.short	0x227
-	.short	0x228
-	.short	0x229
-	.short	0x22a
-	.short	0x22b
-	.short	0x22c
-	.short	0x22d
-	.short	0x22e
-	.short	0x22f
-	.short	0x230
-	.short	0x231
-	.short	0x232
-	.short	0x233
-	.short	0x234
-	.short	0x235
-	.short	0x236
-	.short	0x237
-	.short	0x238
-	.short	0x239
-	.short	0x23a
-	.short	0x23b
-	.short	0x23c
-	.short	0x23d
-	.short	0x23e
-	.short	0x23f
-	.short	0x240
-	.short	0x241
-	.short	0x242
-	.short	0x243
-	.short	0x244
-	.short	0x245
-	.short	0x246
-	.short	0x247
-	.short	0x248
-	.short	0x249
-	.short	0x24a
-	.short	0x24b
-	.short	0x24c
-	.short	0x24d
-	.short	0x24e
-	.short	0x24f
-	.short	0x250
-	.short	0x251
-	.short	0x252
-	.short	0x253
-	.short	0x254
-	.short	0x255
-	.short	0x256
-	.short	0x257
-	.short	0xffff
-	.size	 gBattleFrontierTrainerMons_RU_UU_OU,576
-	.globl	gBattleFrontierTrainerMons_UU_OU
-	.align	1, 0
-	.type	 gBattleFrontierTrainerMons_UU_OU,object
-gBattleFrontierTrainerMons_UU_OU:
-	.short	0x1a6
-	.short	0x1a7
-	.short	0x1a8
-	.short	0x1a9
-	.short	0x1aa
-	.short	0x1ab
-	.short	0x1ac
-	.short	0x1ad
-	.short	0x1ae
-	.short	0x1af
-	.short	0x1b0
-	.short	0x1b1
-	.short	0x1b2
-	.short	0x1b3
-	.short	0x1b4
-	.short	0x1b5
-	.short	0x1b6
-	.short	0x1b7
-	.short	0x1b8
-	.short	0x1b9
-	.short	0x1ba
-	.short	0x1bb
-	.short	0x1bc
-	.short	0x1bd
-	.short	0x1be
-	.short	0x1bf
-	.short	0x1c0
-	.short	0x1c1
-	.short	0x1c2
-	.short	0x1c3
-	.short	0x1c4
-	.short	0x1c5
-	.short	0x1c6
-	.short	0x1c7
-	.short	0x1c8
-	.short	0x1c9
-	.short	0x1ca
-	.short	0x1cb
-	.short	0x1cc
-	.short	0x1cd
-	.short	0x1ce
-	.short	0x1cf
-	.short	0x1d0
-	.short	0x1d1
-	.short	0x1d2
-	.short	0x1d3
-	.short	0x1d4
-	.short	0x1d5
-	.short	0x1d6
-	.short	0x1d7
-	.short	0x1d8
-	.short	0x1d9
-	.short	0x1da
-	.short	0x1db
-	.short	0x1dc
-	.short	0x1dd
-	.short	0x1de
-	.short	0x1df
-	.short	0x1e0
-	.short	0x1e1
-	.short	0x1e2
-	.short	0x1e3
-	.short	0x1e4
-	.short	0x1e5
-	.short	0x1e6
-	.short	0x1e7
-	.short	0x1e8
-	.short	0x1e9
-	.short	0x1ea
-	.short	0x1eb
-	.short	0x1ec
-	.short	0x1ed
-	.short	0x1ee
-	.short	0x1ef
-	.short	0x1f0
-	.short	0x1f1
-	.short	0x1f2
-	.short	0x1f3
-	.short	0x1f4
-	.short	0x1f5
-	.short	0x1f6
-	.short	0x1f7
-	.short	0x1f8
-	.short	0x1f9
-	.short	0x1fa
-	.short	0x1fb
-	.short	0x1fc
-	.short	0x1fd
-	.short	0x1fe
-	.short	0x1ff
-	.short	0x200
-	.short	0x201
-	.short	0x202
-	.short	0x203
-	.short	0x204
-	.short	0x205
-	.short	0x206
-	.short	0x207
-	.short	0x208
-	.short	0x209
-	.short	0x20a
-	.short	0x20b
-	.short	0x20c
-	.short	0x20d
-	.short	0x20e
-	.short	0x20f
-	.short	0xffff
-	.short	0x210
-	.short	0x211
-	.short	0x212
-	.short	0x213
-	.short	0x214
-	.short	0x215
-	.short	0x216
-	.short	0x217
-	.short	0x218
-	.short	0x219
-	.short	0x21a
-	.short	0x21b
-	.short	0x21c
-	.short	0x21d
-	.short	0x21e
-	.short	0x21f
-	.short	0x220
-	.short	0x221
-	.short	0x222
-	.short	0x223
-	.short	0x224
-	.short	0x225
-	.short	0x226
-	.short	0x227
-	.short	0x228
-	.short	0x229
-	.short	0x22a
-	.short	0x22b
-	.short	0x22c
-	.short	0x22d
-	.short	0x22e
-	.short	0x22f
-	.short	0x230
-	.short	0x231
-	.short	0x232
-	.short	0x233
-	.short	0x234
-	.short	0x235
-	.short	0x236
-	.short	0x237
-	.short	0x238
-	.short	0x239
-	.short	0x23a
-	.short	0x23b
-	.short	0x23c
-	.short	0x23d
-	.short	0x23e
-	.short	0x23f
-	.short	0x240
-	.short	0x241
-	.short	0x242
-	.short	0x243
-	.short	0x244
-	.short	0x245
-	.short	0x246
-	.short	0x247
-	.short	0x248
-	.short	0x249
-	.short	0x24a
-	.short	0x24b
-	.short	0x24c
-	.short	0x24d
-	.short	0x24e
-	.short	0x24f
-	.short	0x250
-	.short	0x251
-	.short	0x252
-	.short	0x253
-	.short	0x254
-	.short	0x255
-	.short	0x256
-	.short	0x257
-	.short	0xffff
-	.size	 gBattleFrontierTrainerMons_UU_OU,360
+	.size	 gBattleFrontierTrainerMons_Dortha,482
 	.globl	gBattleFrontierTrainers
 	.align	2, 0
 	.type	 gBattleFrontierTrainers,object
@@ -2811,11 +2277,11 @@ gBattleFrontierTrainerMons_UU_OU:
 gBattleFrontierTrainers:
 	.byte	0x2b
 	.space	3
-	.byte	0xbc
-	.byte	0xcc
-	.byte	0xbb
 	.byte	0xbe
-	.byte	0xd3
+	.byte	0xed
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe2
 	.byte	0xff
 	.space	2
 	.short	0xa29
@@ -2839,14 +2305,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x2b
 	.space	3
-	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xbc
+	.byte	0xe6
+	.byte	0xed
+	.byte	0xd7
+	.byte	0xd9
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0x280e
 	.short	0x103d
 	.short	0x461
@@ -2868,14 +2333,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x2b
 	.space	3
-	.byte	0xbc
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xbe
 	.byte	0xc6
-	.byte	0xbf
-	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xee
 	.byte	0xff
+	.space	1
 	.short	0x80e
 	.short	0xc00
 	.short	0xa06
@@ -2897,13 +2362,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x47
 	.space	3
-	.byte	0xbd
-	.byte	0xd3
-	.byte	0xbc
-	.byte	0xc3
-	.byte	0xc6
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xde
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xd5
 	.byte	0xff
-	.space	2
 	.short	0xa06
 	.short	0xe2c
 	.short	0xe01
@@ -2925,14 +2391,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x47
 	.space	3
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbf
+	.byte	0xc4
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xdd
 	.byte	0xff
+	.space	2
 	.short	0xc1d
 	.short	0x1e0f
 	.short	0x100b
@@ -2954,13 +2419,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x47
 	.space	3
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xc1
-	.byte	0xc1
-	.byte	0xd3
+	.byte	0xcd
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
-	.space	2
 	.short	0x20f
 	.short	0xe25
 	.short	0x102f
@@ -2982,13 +2448,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x26
 	.space	3
-	.byte	0xc5
-	.byte	0xbf
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xc2
+	.byte	0xbb
+	.byte	0xec
+	.byte	0xe0
 	.byte	0xff
-	.space	2
+	.space	4
 	.short	0xa01
 	.short	0x1017
 	.short	0xe1e
@@ -3010,13 +2474,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x26
 	.space	3
-	.byte	0xc1
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xd3
-	.byte	0xcd
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xe3
+	.byte	0xe7
 	.byte	0xff
 	.short	0x1020
 	.short	0x20e
@@ -3040,12 +2504,13 @@ gBattleFrontierTrainers:
 	.byte	0x26
 	.space	3
 	.byte	0xc1
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xc8
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xd9
+	.byte	0xe9
+	.byte	0xe7
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0xa01
 	.short	0x100a
 	.short	0x1006
@@ -3067,14 +2532,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x27
 	.space	3
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbb
+	.byte	0xc5
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xdf
+	.byte	0xd5
 	.byte	0xff
+	.space	2
 	.short	0xa01
 	.short	0x1014
 	.short	0x62d
@@ -3096,13 +2560,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x27
 	.space	3
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xbd
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xd9
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0xa28
 	.short	0x616
 	.short	0x100b
@@ -3124,10 +2589,10 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x27
 	.space	3
-	.byte	0xd4
 	.byte	0xc9
-	.byte	0xbf
-	.byte	0xd3
+	.byte	0xe0
+	.byte	0xdb
+	.byte	0xd5
 	.byte	0xff
 	.space	3
 	.short	0x1611
@@ -3151,14 +2616,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x15
 	.space	3
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xcf
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xbd
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe9
+	.byte	0xe7
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0xa14
 	.short	0x631
 	.short	0xc03
@@ -3180,12 +2644,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x15
 	.space	3
-	.byte	0xcc
-	.byte	0xcf
-	.byte	0xcd
-	.byte	0xcd
+	.byte	0xbd
+	.byte	0xd5
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe9
+	.byte	0xe7
 	.byte	0xff
-	.space	3
 	.short	0xa37
 	.short	0x102a
 	.short	0x1236
@@ -3207,14 +2673,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x15
 	.space	3
-	.byte	0xbe
-	.byte	0xcf
 	.byte	0xcd
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xc8
+	.byte	0xd9
+	.byte	0xe4
+	.byte	0xe4
+	.byte	0xe3
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0xa01
 	.short	0xe2c
 	.short	0x103a
@@ -3236,12 +2701,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x13
 	.space	3
-	.byte	0xce
-	.byte	0xc3
 	.byte	0xc8
-	.byte	0xbb
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xd5
 	.byte	0xff
-	.space	3
+	.space	2
 	.short	0x608
 	.short	0xa02
 	.short	0x1016
@@ -3263,13 +2729,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x13
 	.space	3
-	.byte	0xc1
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xbb
-	.byte	0xc8
+	.byte	0xc0
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xd9
 	.byte	0xff
 	.short	0xe0d
 	.short	0x1a0e
@@ -3292,11 +2758,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x13
 	.space	3
-	.byte	0xd4
-	.byte	0xc9
-	.byte	0xbf
+	.byte	0xcc
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xff
-	.space	4
+	.space	3
 	.short	0xa01
 	.short	0x101f
 	.short	0x1020
@@ -3319,11 +2786,13 @@ gBattleFrontierTrainers:
 	.byte	0x1b
 	.space	3
 	.byte	0xbd
-	.byte	0xc2
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xdb
 	.byte	0xff
-	.space	3
 	.short	0xa29
 	.short	0xe2f
 	.short	0xe25
@@ -3345,10 +2814,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x1b
 	.space	3
-	.byte	0xbb
-	.byte	0xc6
+	.byte	0xcd
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xdd
 	.byte	0xff
-	.space	5
+	.space	1
 	.short	0xa05
 	.short	0x1a35
 	.short	0x1609
@@ -3370,11 +2843,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x1b
 	.space	3
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xbd
-	.byte	0xc2
+	.byte	0xc6
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xec
 	.byte	0xff
 	.space	2
 	.short	0xa08
@@ -3398,12 +2871,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x1c
 	.space	3
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xc8
-	.byte	0xbf
+	.byte	0xce
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xd5
 	.byte	0xff
-	.space	3
+	.space	2
 	.short	0xa01
 	.short	0x1015
 	.short	0x1237
@@ -3426,10 +2900,10 @@ gBattleFrontierTrainers:
 	.byte	0x1c
 	.space	3
 	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xd4
-	.byte	0xbf
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd9
 	.byte	0xff
 	.space	2
 	.short	0x418
@@ -3453,14 +2927,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x1c
 	.space	3
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xcf
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xd0
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd5
 	.byte	0xff
-	.space	1
+	.space	3
 	.short	0xa29
 	.short	0x281e
 	.short	0xe0a
@@ -3482,12 +2954,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x11
 	.space	3
-	.byte	0xc5
-	.byte	0xc3
-	.byte	0xca
-	.byte	0xca
+	.byte	0xbf
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0xff
-	.space	3
+	.space	2
 	.short	0x608
 	.short	0xa29
 	.short	0x1408
@@ -3509,11 +2982,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x11
 	.space	3
-	.byte	0xc4
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xc7
+	.byte	0xd9
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
 	.byte	0xff
 	.space	2
 	.short	0x160f
@@ -3537,12 +3010,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x11
 	.space	3
-	.byte	0xc4
-	.byte	0xc9
-	.byte	0xc2
-	.byte	0xc8
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe7
 	.byte	0xff
-	.space	3
+	.space	2
 	.short	0xa29
 	.short	0x1020
 	.short	0x141a
@@ -3564,11 +3038,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x10
 	.space	3
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xc8
+	.byte	0xc7
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe4
 	.byte	0xff
-	.space	4
+	.space	3
 	.short	0xa31
 	.short	0x1025
 	.short	0x200f
@@ -3590,12 +3065,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x10
 	.space	3
-	.byte	0xbf
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xbb
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xdc
 	.byte	0xff
 	.space	1
 	.short	0x100d
@@ -3619,14 +3094,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x10
 	.space	3
-	.byte	0xbd
 	.byte	0xbb
-	.byte	0xcc
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xbf
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xe6
+	.byte	0xd5
 	.byte	0xff
-	.space	1
 	.short	0xa28
 	.short	0x1c1f
 	.short	0x1a34
@@ -3648,14 +3123,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x7
 	.space	3
-	.byte	0xc1
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xbe
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xbb
+	.byte	0xe6
+	.byte	0xdf
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xed
 	.byte	0xff
-	.space	1
 	.short	0x619
 	.short	0x1000
 	.short	0x161b
@@ -3678,12 +3153,11 @@ gBattleFrontierTrainers:
 	.byte	0x7
 	.space	3
 	.byte	0xbb
-	.byte	0xd3
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xd8
+	.byte	0xd5
+	.byte	0xe1
 	.byte	0xff
-	.space	2
+	.space	3
 	.short	0x611
 	.short	0xa01
 	.short	0x140f
@@ -3705,13 +3179,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x7
 	.space	3
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbd
-	.byte	0xc9
+	.byte	0xbc
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xed
 	.byte	0xff
-	.space	2
 	.short	0xa01
 	.short	0x2639
 	.short	0x1037
@@ -3733,14 +3208,10 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x38
 	.space	3
-	.byte	0xbd
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xbb
+	.byte	0xc4
+	.byte	0xe9
 	.byte	0xff
-	.space	1
+	.space	5
 	.short	0xa01
 	.short	0x103a
 	.short	0x102f
@@ -3762,13 +3233,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x38
 	.space	3
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbd
-	.byte	0xd3
+	.byte	0xce
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0xff
-	.space	2
 	.short	0xa29
 	.short	0x1020
 	.short	0x2817
@@ -3790,11 +3262,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x38
 	.space	3
-	.byte	0xc5
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xc2
-	.byte	0xd3
+	.byte	0xcd
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xe0
 	.byte	0xff
 	.space	2
 	.short	0xa2a
@@ -3818,14 +3290,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x29
 	.space	3
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xd3
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xc6
+	.byte	0xd9
+	.byte	0xe3
+	.byte	0xe4
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd8
 	.byte	0xff
-	.space	1
 	.short	0xa29
 	.short	0x121e
 	.short	0x120c
@@ -3847,12 +3319,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x29
 	.space	3
-	.byte	0xc4
-	.byte	0xcf
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xbb
-	.byte	0xc8
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xff
 	.space	1
 	.short	0xa02
@@ -3876,13 +3348,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x29
 	.space	3
-	.byte	0xcb
-	.byte	0xcf
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc8
+	.byte	0xbc
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xdf
+	.byte	0xe7
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0xa28
 	.short	0x20e
 	.short	0x100f
@@ -3904,14 +3377,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x2a
 	.space	3
-	.byte	0xc2
-	.byte	0xbb
-	.byte	0xd3
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xd5
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0xa01
 	.short	0x1017
 	.short	0x1620
@@ -3933,12 +3405,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x2a
 	.space	3
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xbb
+	.byte	0xbd
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xff
 	.space	1
 	.short	0xa01
@@ -3962,13 +3434,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x2a
 	.space	3
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xd3
+	.byte	0xc2
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xdb
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0x102a
 	.short	0x20e
 	.short	0x101e
@@ -3990,14 +3463,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x42
 	.space	3
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc0
-	.byte	0xbb
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xc8
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xe3
 	.byte	0xff
-	.space	1
+	.space	3
 	.short	0x611
 	.short	0xc00
 	.short	0x100d
@@ -4019,14 +3490,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x42
 	.space	3
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xd0
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xbd
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe0
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0x1020
 	.short	0x624
 	.short	0xe1d
@@ -4048,14 +3518,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x42
 	.space	3
-	.byte	0xca
-	.byte	0xbb
-	.byte	0xd3
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xcc
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd5
 	.byte	0xff
-	.space	1
+	.space	3
 	.short	0xa01
 	.short	0x180f
 	.short	0xe08
@@ -4077,14 +3545,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x2
 	.space	3
-	.byte	0xca
 	.byte	0xbb
-	.byte	0xc7
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xbb
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0x102a
 	.short	0x20e
 	.short	0x1228
@@ -4106,11 +3573,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x2
 	.space	3
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xd4
-	.byte	0xbb
+	.byte	0xc2
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xda
+	.byte	0xd5
 	.byte	0xff
 	.space	2
 	.short	0xa01
@@ -4134,12 +3601,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x2
 	.space	3
-	.byte	0xc7
 	.byte	0xbb
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xbb
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd8
 	.byte	0xff
 	.space	1
 	.short	0xa01
@@ -4163,13 +3630,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x43
 	.space	3
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xd1
-	.byte	0xc3
-	.byte	0xcd
+	.byte	0xbb
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0xe13
 	.short	0x461
 	.short	0x100b
@@ -4192,10 +3660,10 @@ gBattleFrontierTrainers:
 	.byte	0x43
 	.space	3
 	.byte	0xd3
-	.byte	0xc9
-	.byte	0xcd
-	.byte	0xc2
-	.byte	0xc3
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xdd
 	.byte	0xff
 	.space	2
 	.short	0x461
@@ -4219,12 +3687,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x43
 	.space	3
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xc8
+	.byte	0xca
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.space	1
 	.short	0xa31
@@ -4248,12 +3716,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x35
 	.space	3
-	.byte	0xc5
-	.byte	0xbf
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xc2
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe9
+	.byte	0xe0
 	.byte	0xff
-	.space	3
+	.space	1
 	.short	0x80d
 	.short	0xa14
 	.short	0xe0a
@@ -4275,12 +3745,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x35
 	.space	3
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xcf
-	.byte	0xbb
 	.byte	0xcc
-	.byte	0xce
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xe7
 	.byte	0xff
 	.space	1
 	.short	0xa01
@@ -4304,14 +3774,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x35
 	.space	3
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xcc
+	.byte	0xc1
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xed
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0x1642
 	.short	0xa14
 	.short	0x1020
@@ -4333,14 +3802,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x1d
 	.space	3
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xc2
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe3
 	.byte	0xff
+	.space	2
 	.short	0x100d
 	.short	0x1239
 	.short	0xa02
@@ -4362,12 +3830,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x1d
 	.space	3
-	.byte	0xbc
-	.byte	0xcc
-	.byte	0xd3
-	.byte	0xcd
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.space	1
 	.short	0x264d
@@ -4391,14 +3859,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x1d
 	.space	3
-	.byte	0xbd
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xd3
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xc4
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd5
+	.byte	0xd8
 	.byte	0xff
+	.space	2
 	.short	0x81c
 	.short	0xffff
 	.short	0xffff
@@ -4421,13 +3888,11 @@ gBattleFrontierTrainers:
 	.byte	0x2d
 	.space	3
 	.byte	0xce
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xd9
+	.byte	0xe3
+	.byte	0xe0
 	.byte	0xff
+	.space	3
 	.short	0x828
 	.short	0x102b
 	.short	0xa4a
@@ -4449,12 +3914,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x2d
 	.space	3
-	.byte	0xc4
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xca
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe8
 	.byte	0xff
 	.space	1
 	.short	0xa28
@@ -4478,14 +3943,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x2d
 	.space	3
-	.byte	0xd1
-	.byte	0xbf
 	.byte	0xcd
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xd3
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe6
 	.byte	0xff
-	.space	1
 	.short	0x2a97
 	.short	0x2a97
 	.short	0x100b
@@ -4507,13 +3972,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0xe
 	.space	3
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xc7
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0x20f
 	.short	0xe25
 	.short	0x102b
@@ -4535,14 +4001,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0xe
 	.space	3
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xd1
-	.byte	0xcd
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xce
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xed
 	.byte	0xff
-	.space	1
 	.short	0xa29
 	.short	0x281f
 	.short	0x1036
@@ -4564,13 +4030,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0xe
 	.space	3
-	.byte	0xcd
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xc7
-	.byte	0xd3
+	.byte	0xcc
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd8
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0xa28
 	.short	0x1821
 	.short	0x100b
@@ -4592,13 +4059,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x5
 	.space	3
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xc8
-	.byte	0xc3
-	.byte	0xbf
+	.byte	0xd1
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0xa29
 	.short	0x602
 	.short	0xa01
@@ -4620,14 +4088,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x5
 	.space	3
-	.byte	0xbb
-	.byte	0xbe
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbb
-	.byte	0xc8
+	.byte	0xbd
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe8
 	.byte	0xff
-	.space	1
+	.space	3
 	.short	0x826
 	.short	0xc00
 	.short	0xffff
@@ -4649,14 +4115,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x5
 	.space	3
-	.byte	0xce
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xc8
+	.byte	0xbe
+	.byte	0xd5
+	.byte	0xe9
+	.byte	0xd8
 	.byte	0xff
+	.space	3
 	.short	0x1e26
 	.short	0xc03
 	.short	0xffff
@@ -4678,13 +4142,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x37
 	.space	3
-	.byte	0xc4
-	.byte	0xcf
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbb
+	.byte	0xbf
+	.byte	0xe6
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xd5
 	.byte	0xff
 	.short	0xa01
 	.short	0x1212
@@ -4707,13 +4171,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x37
 	.space	3
-	.byte	0xcc
-	.byte	0xd3
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xbe
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
 	.byte	0xff
-	.space	2
 	.short	0x1642
 	.short	0xa14
 	.short	0x1e14
@@ -4735,14 +4200,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x37
 	.space	3
-	.byte	0xbd
-	.byte	0xc2
-	.byte	0xbf
 	.byte	0xc6
-	.byte	0xcd
-	.byte	0xbf
-	.byte	0xbb
+	.byte	0xed
+	.byte	0xe9
 	.byte	0xff
+	.space	4
 	.short	0xa01
 	.short	0xe2e
 	.short	0xe02
@@ -4764,14 +4226,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x14
 	.space	3
-	.byte	0xbe
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xbb
+	.byte	0xce
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xd5
 	.byte	0xff
-	.space	1
 	.short	0xa02
 	.short	0xe20
 	.short	0xa28
@@ -4793,14 +4255,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x14
 	.space	3
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xd4
-	.byte	0xbc
-	.byte	0xbf
-	.byte	0xce
-	.byte	0xc2
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xe8
 	.byte	0xff
+	.space	1
 	.short	0x62f
 	.short	0xa02
 	.short	0x1016
@@ -4822,14 +4284,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x14
 	.space	3
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xbb
+	.byte	0xc2
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xd8
+	.byte	0xd5
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0xa01
 	.short	0x1627
 	.short	0x1037
@@ -4851,14 +4312,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0xd
 	.space	3
-	.byte	0xc4
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xc3
 	.byte	0xbb
-	.byte	0xc8
+	.byte	0xdb
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xde
+	.byte	0xd5
 	.byte	0xff
+	.space	1
 	.short	0x1e22
 	.short	0x100b
 	.short	0x1e14
@@ -4880,13 +4341,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0xd
 	.space	3
-	.byte	0xbb
-	.byte	0xbc
-	.byte	0xbc
-	.byte	0xc3
-	.byte	0xbf
+	.byte	0xcd
+	.byte	0xd5
+	.byte	0xd6
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe2
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0xa02
 	.short	0x120f
 	.short	0xa28
@@ -4908,14 +4370,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0xd
 	.space	3
-	.byte	0xbc
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbb
+	.byte	0xcd
+	.byte	0xe3
+	.byte	0xe4
+	.byte	0xdc
+	.byte	0xed
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0xa28
 	.short	0xa0c
 	.short	0xa33
@@ -4937,14 +4398,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x19
 	.space	3
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xc3
-	.byte	0xc9
+	.byte	0xd0
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xdf
+	.byte	0xe3
 	.byte	0xff
+	.space	1
 	.short	0xa01
 	.short	0x1620
 	.short	0xe0f
@@ -4966,11 +4427,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x19
 	.space	3
-	.byte	0xc4
-	.byte	0xbb
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xd2
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xed
+	.byte	0xdd
 	.byte	0xff
 	.space	2
 	.short	0x80f
@@ -4994,14 +4455,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x19
 	.space	3
-	.byte	0xbe
-	.byte	0xbb
-	.byte	0xc5
-	.byte	0xc9
-	.byte	0xce
-	.byte	0xbb
+	.byte	0xbd
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe9
+	.byte	0xe7
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0xa02
 	.short	0x101e
 	.short	0x102f
@@ -5023,13 +4483,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x4
 	.space	3
-	.byte	0xbc
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xd3
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xd1
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xda
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xff
 	.short	0x456
 	.short	0x20c
@@ -5052,12 +4512,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x4
 	.space	3
-	.byte	0xbd
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xcd
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xce
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xed
 	.byte	0xff
 	.space	1
 	.short	0xa01
@@ -5081,14 +4541,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU
 	.byte	0x4
 	.space	3
-	.byte	0xce
-	.byte	0xcc
-	.byte	0xbf
 	.byte	0xd0
-	.byte	0xc3
-	.byte	0xc8
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0x1023
 	.short	0x100b
 	.short	0x142f
@@ -5110,14 +4569,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU
 	.byte	0x3a
 	.space	3
-	.byte	0xca
-	.byte	0xbb
 	.byte	0xce
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xe1
+	.byte	0xed
 	.byte	0xff
+	.space	2
 	.short	0xa29
 	.short	0xe2a
 	.short	0xc00
@@ -5139,13 +4597,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU
 	.byte	0x3a
 	.space	3
-	.byte	0xc5
 	.byte	0xbb
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xdf
+	.byte	0xdd
+	.byte	0xe3
 	.byte	0xff
-	.space	2
+	.space	3
 	.short	0x1e22
 	.short	0x100f
 	.short	0xa02
@@ -5167,14 +4624,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU
 	.byte	0x3a
 	.space	3
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xd2
-	.byte	0xd1
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xc6
+	.byte	0xcc
+	.byte	0xd5
+	.byte	0xe9
+	.byte	0xda
 	.byte	0xff
+	.space	3
 	.short	0x80e
 	.short	0xa30
 	.short	0xa05
@@ -5196,13 +4651,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU
 	.byte	0x0
 	.space	3
-	.byte	0xbe
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xd3
-	.byte	0xc6
+	.byte	0xc3
+	.byte	0xe6
+	.byte	0x1b
+	.byte	0xe2
+	.byte	0x1b
+	.byte	0xd9
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0xa01
 	.short	0xe16
 	.short	0x1620
@@ -5224,14 +4680,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU
 	.byte	0x0
 	.space	3
-	.byte	0xc5
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xce
-	.byte	0xc2
+	.byte	0xc9
+	.byte	0xee
+	.byte	0xee
+	.byte	0xed
 	.byte	0xff
+	.space	3
 	.short	0xa02
 	.short	0x1031
 	.short	0x1022
@@ -5253,12 +4707,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU
 	.byte	0x0
 	.space	3
-	.byte	0xcc
 	.byte	0xc3
-	.byte	0xbd
-	.byte	0xc2
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdd
 	.byte	0xff
-	.space	3
+	.space	2
 	.short	0xa05
 	.short	0x2507
 	.short	0x103d
@@ -5280,13 +4735,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU
 	.byte	0x1a
 	.space	3
-	.byte	0xbd
-	.byte	0xbb
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xd0
+	.byte	0xd9
+	.byte	0xdb
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd8
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0xa01
 	.short	0x1015
 	.short	0x1006
@@ -5308,12 +4764,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU
 	.byte	0x1a
 	.space	3
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xc6
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xc0
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xd9
 	.byte	0xff
 	.space	1
 	.short	0x1020
@@ -5337,10 +4793,10 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU
 	.byte	0x1a
 	.space	3
-	.byte	0xc8
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xc2
+	.byte	0xc5
+	.byte	0xe3
+	.byte	0xd6
+	.byte	0xed
 	.byte	0xff
 	.space	3
 	.short	0xa29
@@ -5364,11 +4820,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU
 	.byte	0x30
 	.space	3
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xbc
-	.byte	0xbc
-	.byte	0xd3
+	.byte	0xc2
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xe1
 	.byte	0xff
 	.space	2
 	.short	0xc28
@@ -5392,13 +4848,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU
 	.byte	0x30
 	.space	3
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbd
-	.byte	0xbf
+	.byte	0xca
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0xa28
 	.short	0x2662
 	.short	0x1016
@@ -5420,14 +4877,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU
 	.byte	0x31
 	.space	3
-	.byte	0xc5
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xc2
-	.byte	0xcc
-	.byte	0xd3
-	.byte	0xc8
+	.byte	0xcd
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe1
 	.byte	0xff
+	.space	2
 	.short	0xa01
 	.short	0x1017
 	.short	0x180f
@@ -5449,13 +4905,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU
 	.byte	0x31
 	.space	3
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xce
+	.byte	0xdc
+	.byte	0x1b
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe6
 	.byte	0xff
-	.space	2
 	.short	0x2216
 	.short	0xa02
 	.short	0x103a
@@ -5477,11 +4934,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU
 	.byte	0x32
 	.space	3
-	.byte	0xcc
 	.byte	0xbb
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe8
 	.byte	0xff
 	.space	2
 	.short	0xc38
@@ -5506,13 +4963,11 @@ gBattleFrontierTrainers:
 	.byte	0x32
 	.space	3
 	.byte	0xbb
-	.byte	0xcc
-	.byte	0xce
-	.byte	0xc2
-	.byte	0xcf
-	.byte	0xcc
+	.byte	0xee
+	.byte	0xd5
+	.byte	0xe6
 	.byte	0xff
-	.space	1
+	.space	3
 	.short	0x803
 	.short	0xe09
 	.short	0xe25
@@ -5534,14 +4989,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU
 	.byte	0x33
 	.space	3
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xcc
-	.byte	0xbb
+	.byte	0xce
+	.byte	0xee
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xd5
 	.byte	0xff
+	.space	2
 	.short	0x1e10
 	.short	0x1c04
 	.short	0x100b
@@ -5563,14 +5017,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU
 	.byte	0x33
 	.space	3
-	.byte	0xbb
-	.byte	0xbe
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbb
+	.byte	0xc6
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd5
 	.byte	0xff
+	.space	2
 	.short	0x161b
 	.short	0x1239
 	.short	0x1021
@@ -5592,13 +5045,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU
 	.byte	0x2e
 	.space	3
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xc5
+	.byte	0xcc
+	.byte	0xe3
+	.byte	0xd7
+	.byte	0xdc
 	.byte	0xff
-	.space	2
+	.space	3
 	.short	0xc1d
 	.short	0x1022
 	.short	0x1c12
@@ -5620,10 +5072,10 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU
 	.byte	0x2f
 	.space	3
-	.byte	0xc4
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xc6
+	.byte	0xbf
+	.byte	0xe6
+	.byte	0xe2
+	.byte	0xd5
 	.byte	0xff
 	.space	3
 	.short	0xa29
@@ -5647,12 +5099,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU
 	.byte	0x30
 	.space	3
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xc5
+	.byte	0xbc
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe3
 	.byte	0xff
-	.space	3
 	.short	0xa29
 	.short	0xe0d
 	.short	0x414
@@ -5674,14 +5128,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0x31
 	.space	3
-	.byte	0xd3
-	.byte	0xbb
-	.byte	0xd4
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xc8
+	.byte	0xc1
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0xa01
 	.short	0x100a
 	.short	0xe33
@@ -5703,13 +5156,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0x32
 	.space	3
-	.byte	0xc4
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc6
+	.byte	0xce
+	.byte	0xed
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe8
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0xa29
 	.short	0x1408
 	.short	0x102f
@@ -5731,14 +5185,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0x33
 	.space	3
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xbf
+	.byte	0xcc
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xed
 	.byte	0xff
-	.space	1
+	.space	3
 	.short	0xa29
 	.short	0x1408
 	.short	0x102f
@@ -5760,12 +5212,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0x2e
 	.space	3
-	.byte	0xbe
-	.byte	0xbb
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xd4
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xdf
+	.byte	0xe3
 	.byte	0xff
-	.space	3
+	.space	1
 	.short	0x1e22
 	.short	0x1231
 	.short	0xa01
@@ -5787,13 +5241,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0x2e
 	.space	3
-	.byte	0xbd
 	.byte	0xbb
-	.byte	0xcc
-	.byte	0xc6
-	.byte	0xc9
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xed
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0xc26
 	.short	0xc01
 	.short	0xffff
@@ -5815,14 +5270,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0x2f
 	.space	3
-	.byte	0xbf
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xc3
 	.byte	0xbb
+	.byte	0xe0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xd5
 	.byte	0xff
-	.space	1
 	.short	0xa14
 	.short	0x1632
 	.short	0xc03
@@ -5844,11 +5299,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0x2f
 	.space	3
-	.byte	0xbe
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xbb
+	.byte	0xca
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xed
 	.byte	0xff
 	.space	2
 	.short	0xa28
@@ -5872,14 +5327,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0xa
 	.space	3
-	.byte	0xc2
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xc9
 	.byte	0xc7
-	.byte	0xc3
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
-	.space	1
 	.short	0x805
 	.short	0xc01
 	.short	0xffff
@@ -5901,14 +5356,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0xa
 	.space	3
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbd
 	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbe
-	.byte	0xc9
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe7
 	.byte	0xff
+	.space	2
 	.short	0x611
 	.short	0xc00
 	.short	0x1201
@@ -5930,14 +5384,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0xa
 	.space	3
-	.byte	0xcd
-	.byte	0xc2
-	.byte	0xc3
-	.byte	0xd4
-	.byte	0xcf
-	.byte	0xc5
-	.byte	0xbb
+	.byte	0xbf
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xe3
 	.byte	0xff
+	.space	1
 	.short	0x1642
 	.short	0xa14
 	.short	0x1e14
@@ -5959,13 +5413,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0x36
 	.space	3
-	.byte	0xc4
-	.byte	0xc9
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbb
+	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
 	.byte	0xff
-	.space	2
+	.space	4
 	.short	0xa06
 	.short	0x1408
 	.short	0x102f
@@ -5987,11 +5439,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0x36
 	.space	3
-	.byte	0xc5
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xd3
+	.byte	0xc3
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xff
 	.space	2
 	.short	0xa28
@@ -6015,13 +5467,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0x36
 	.space	3
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xd3
-	.byte	0xc8
-	.byte	0xbb
+	.byte	0xc5
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xdd
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0xa29
 	.short	0x602
 	.short	0x1e21
@@ -6043,12 +5496,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0x9
 	.space	3
-	.byte	0xbf
-	.byte	0xd0
-	.byte	0xbb
-	.byte	0xc8
+	.byte	0xd3
+	.byte	0xd9
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xdb
 	.byte	0xff
-	.space	3
+	.space	2
 	.short	0x1e10
 	.short	0x628
 	.short	0x1404
@@ -6070,14 +5524,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0x9
 	.space	3
-	.byte	0xc4
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xbe
 	.byte	0xbb
-	.byte	0xc8
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xda
 	.byte	0xff
-	.space	1
+	.space	3
 	.short	0x1405
 	.short	0xc00
 	.short	0xffff
@@ -6099,10 +5551,10 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0x9
 	.space	3
-	.byte	0xc4
-	.byte	0xc9
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xc3
+	.byte	0xee
+	.byte	0xd9
+	.byte	0xe1
 	.byte	0xff
 	.space	3
 	.short	0xc2b
@@ -6126,14 +5578,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0x16
 	.space	3
-	.byte	0xc5
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xc2
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xd8
+	.byte	0x1b
+	.byte	0xd9
 	.byte	0xff
+	.space	1
 	.short	0xc28
 	.short	0xc04
 	.short	0xffff
@@ -6155,14 +5607,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0x16
 	.space	3
-	.byte	0xcd
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xca
-	.byte	0xc2
-	.byte	0xd3
+	.byte	0xd1
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd5
 	.byte	0xff
-	.space	1
 	.short	0x81c
 	.short	0x1e22
 	.short	0x1005
@@ -6184,13 +5636,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0x16
 	.space	3
-	.byte	0xbd
-	.byte	0xc2
-	.byte	0xc6
-	.byte	0xc9
-	.byte	0xbf
+	.byte	0xbc
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xd9
 	.byte	0xff
-	.space	2
 	.short	0x161b
 	.short	0xa3d
 	.short	0x1000
@@ -6212,12 +5665,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_ZU_PU_NU
 	.byte	0x1e
 	.space	3
-	.byte	0xc8
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xcf
+	.byte	0xe6
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe3
 	.byte	0xff
 	.space	1
 	.short	0xa01
@@ -6242,10 +5695,10 @@ gBattleFrontierTrainers:
 	.byte	0x1e
 	.space	3
 	.byte	0xc6
-	.byte	0xcf
-	.byte	0xc5
-	.byte	0xbb
-	.byte	0xcd
+	.byte	0xe9
+	.byte	0xdf
+	.byte	0xd5
+	.byte	0xe7
 	.byte	0xff
 	.space	2
 	.short	0xa28
@@ -6269,12 +5722,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_PU_NU
 	.byte	0x1e
 	.space	3
-	.byte	0xd4
-	.byte	0xbb
 	.byte	0xbd
-	.byte	0xc2
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe4
+	.byte	0xd5
+	.byte	0xe6
 	.byte	0xff
-	.space	3
+	.space	1
 	.short	0xa29
 	.short	0x1021
 	.short	0x141c
@@ -6296,14 +5751,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_PU_NU
 	.byte	0x1f
 	.space	3
-	.byte	0xc5
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xd3
-	.byte	0xc8
+	.byte	0xbf
+	.byte	0xd6
+	.byte	0xd6
+	.byte	0xd5
 	.byte	0xff
+	.space	3
 	.short	0xa01
 	.short	0x2216
 	.short	0x1e04
@@ -6325,14 +5778,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_PU_NU
 	.byte	0x1f
 	.space	3
-	.byte	0xbc
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xc8
-	.byte	0xbb
+	.byte	0xd0
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd5
 	.byte	0xff
+	.space	3
 	.short	0xa28
 	.short	0x20e
 	.short	0x1000
@@ -6354,14 +5805,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_PU_NU
 	.byte	0x1f
 	.space	3
-	.byte	0xc5
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xcc
-	.byte	0xbb
+	.byte	0xbc
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xed
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0xe19
 	.short	0xa06
 	.short	0x412
@@ -6383,13 +5833,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_PU_NU
 	.byte	0xc
 	.space	3
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xd3
+	.byte	0xc8
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0xe1
 	.byte	0xff
-	.space	2
+	.space	3
 	.short	0x1000
 	.short	0xa28
 	.short	0x463
@@ -6411,14 +5860,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_PU_NU
 	.byte	0xc
 	.space	3
-	.byte	0xc4
-	.byte	0xbb
-	.byte	0xd4
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xc8
+	.byte	0xbd
+	.byte	0xed
+	.byte	0xd5
+	.byte	0xe2
 	.byte	0xff
-	.space	1
+	.space	3
 	.short	0xa01
 	.short	0x43a
 	.short	0x1230
@@ -6440,12 +5887,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_PU_NU
 	.byte	0xc
 	.space	3
-	.byte	0xc5
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xcd
-	.byte	0xbf
-	.byte	0xd3
+	.byte	0xc4
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xd6
+	.byte	0xd5
 	.byte	0xff
 	.space	1
 	.short	0xa01
@@ -6469,13 +5916,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_PU_NU
 	.byte	0x17
 	.space	3
-	.byte	0xc4
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xcc
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xda
 	.byte	0xff
-	.space	2
+	.space	3
 	.short	0xa01
 	.short	0x1017
 	.short	0x1648
@@ -6497,14 +5943,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_PU_NU
 	.byte	0x17
 	.space	3
-	.byte	0xc1
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xc0
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xd1
+	.byte	0xdd
+	.byte	0xe1
 	.byte	0xff
+	.space	4
 	.short	0xa01
 	.short	0x2700
 	.short	0x267c
@@ -6526,14 +5969,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_PU_NU
 	.byte	0x17
 	.space	3
-	.byte	0xd2
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xc0
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xe3
 	.byte	0xff
-	.space	1
+	.space	3
 	.short	0xa01
 	.short	0x120a
 	.short	0xa28
@@ -6555,14 +5996,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_PU_NU
 	.byte	0x20
 	.space	3
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xd0
-	.byte	0xc3
-	.byte	0xc8
+	.byte	0xd2
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
-	.space	1
 	.short	0xa06
 	.short	0x1e1b
 	.short	0x102f
@@ -6584,14 +6025,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_PU_NU
 	.byte	0x20
 	.space	3
-	.byte	0xbc
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xc8
 	.byte	0xbb
-	.byte	0xc8
+	.byte	0xd6
+	.byte	0xd8
+	.byte	0xe9
+	.byte	0xe0
 	.byte	0xff
+	.space	2
 	.short	0xa01
 	.short	0x2711
 	.short	0x102f
@@ -6613,13 +6053,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_PU_NU
 	.byte	0x1d
 	.space	3
-	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xd3
+	.byte	0xc0
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xe6
+	.byte	0xd9
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0x2467
 	.short	0x100b
 	.short	0x103a
@@ -6641,14 +6082,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_PU_NU
 	.byte	0xe
 	.space	3
-	.byte	0xd4
-	.byte	0xbb
 	.byte	0xbd
-	.byte	0xc5
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xe1
 	.byte	0xff
+	.space	4
 	.short	0x1016
 	.short	0xa02
 	.short	0x245b
@@ -6670,14 +6108,10 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_PU_NU
 	.byte	0x5
 	.space	3
-	.byte	0xc1
-	.byte	0xbb
-	.byte	0xbc
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xc4
+	.byte	0xdd
 	.byte	0xff
+	.space	5
 	.short	0x2601
 	.short	0xe0d
 	.short	0x402
@@ -6699,11 +6133,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_PU_NU
 	.byte	0x37
 	.space	3
-	.byte	0xbf
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xd3
+	.byte	0xbb
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xd9
 	.byte	0xff
 	.space	2
 	.short	0xe0f
@@ -6727,12 +6161,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_PU_NU
 	.byte	0x14
 	.space	3
-	.byte	0xc4
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xbe
-	.byte	0xd3
-	.byte	0xc8
+	.byte	0xce
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xff
 	.space	1
 	.short	0xa02
@@ -6756,13 +6190,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_PU_NU
 	.byte	0xd
 	.space	3
-	.byte	0xcd
-	.byte	0xc9
-	.byte	0xc0
-	.byte	0xc3
-	.byte	0xbb
+	.byte	0xbd
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe7
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0x126
 	.short	0xe18
 	.short	0x1404
@@ -6784,12 +6219,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_PU_NU
 	.byte	0x3
 	.space	3
-	.byte	0xbc
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xd3
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe1
 	.byte	0xff
 	.space	1
 	.short	0x200
@@ -6813,12 +6248,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU
 	.byte	0x3
 	.space	3
-	.byte	0xc5
-	.byte	0xbb
-	.byte	0xd3
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xc3
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe6
 	.byte	0xff
 	.space	1
 	.short	0xa37
@@ -6842,14 +6277,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU
 	.byte	0x3
 	.space	3
-	.byte	0xbd
 	.byte	0xc9
-	.byte	0xc9
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xdb
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xde
+	.byte	0xd5
+	.byte	0xe2
 	.byte	0xff
-	.space	1
 	.short	0x1e0f
 	.short	0x1231
 	.short	0xe14
@@ -6871,13 +6306,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU
 	.byte	0x12
 	.space	3
-	.byte	0xc4
-	.byte	0xcf
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xbb
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xde
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd5
 	.byte	0xff
-	.space	2
 	.short	0x60d
 	.short	0x1437
 	.short	0x1014
@@ -6899,13 +6335,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU
 	.byte	0x12
 	.space	3
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbb
+	.byte	0xbe
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0xc11
 	.short	0xc01
 	.short	0xa29
@@ -6927,12 +6364,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU
 	.byte	0x12
 	.space	3
-	.byte	0xc6
-	.byte	0xd3
-	.byte	0xc8
-	.byte	0xc8
+	.byte	0xbd
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xd5
 	.byte	0xff
-	.space	3
 	.short	0xa05
 	.short	0x1439
 	.short	0x1015
@@ -6954,11 +6393,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU
 	.byte	0x44
 	.space	3
-	.byte	0xc4
-	.byte	0xc9
-	.byte	0xd0
-	.byte	0xbb
-	.byte	0xc8
+	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xda
 	.byte	0xff
 	.space	2
 	.short	0xa05
@@ -6982,13 +6421,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU
 	.byte	0x44
 	.space	3
-	.byte	0xbe
-	.byte	0xc9
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc3
-	.byte	0xbd
+	.byte	0xbf
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xd9
 	.byte	0xff
 	.short	0xa01
 	.short	0x101e
@@ -7011,13 +6450,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU
 	.byte	0x44
 	.space	3
-	.byte	0xc8
-	.byte	0xc3
-	.byte	0xc5
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xcd
+	.byte	0xcc
+	.byte	0xe3
+	.byte	0xdf
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe9
 	.byte	0xff
 	.short	0xa01
 	.short	0x2666
@@ -7040,14 +6479,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU
 	.byte	0x45
 	.space	3
-	.byte	0xd0
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbb
+	.byte	0xbd
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xed
+	.byte	0xe0
 	.byte	0xff
+	.space	2
 	.short	0xa01
 	.short	0x2711
 	.short	0xa02
@@ -7069,14 +6507,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU
 	.byte	0x45
 	.space	3
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc6
 	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xd3
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd5
 	.byte	0xff
+	.space	3
 	.short	0x1806
 	.short	0x100b
 	.short	0x1028
@@ -7098,14 +6534,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU
 	.byte	0x45
 	.space	3
-	.byte	0xc7
 	.byte	0xbf
-	.byte	0xc1
-	.byte	0xc2
-	.byte	0xbb
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xd6
+	.byte	0xe0
+	.byte	0xd5
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0x1806
 	.short	0x100b
 	.short	0x1038
@@ -7127,14 +6562,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU
 	.byte	0x34
 	.space	3
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xce
-	.byte	0xc9
+	.byte	0xd4
+	.byte	0xd9
+	.byte	0xdf
+	.byte	0xd9
 	.byte	0xff
+	.space	3
 	.short	0x43e
 	.short	0x20e
 	.short	0x100f
@@ -7156,14 +6589,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU
 	.byte	0x34
 	.space	3
-	.byte	0xbe
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xbb
-	.byte	0xc8
+	.byte	0xbf
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xda
 	.byte	0xff
-	.space	1
+	.space	3
 	.short	0xa28
 	.short	0x46b
 	.short	0x100b
@@ -7185,11 +6616,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU
 	.byte	0x34
 	.space	3
-	.byte	0xbc
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xbe
 	.byte	0xd3
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdf
+	.byte	0xe3
 	.byte	0xff
 	.space	2
 	.short	0xa28
@@ -7213,14 +6644,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU
 	.byte	0x34
 	.space	3
-	.byte	0xc1
 	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc2
-	.byte	0xbb
-	.byte	0xc7
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd8
 	.byte	0xff
-	.space	1
 	.short	0x805
 	.short	0xc00
 	.short	0xffff
@@ -7242,13 +6673,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU
 	.byte	0x29
 	.space	3
-	.byte	0xce
-	.byte	0xd3
-	.byte	0xc6
-	.byte	0xc9
-	.byte	0xcc
+	.byte	0xcd
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe2
 	.byte	0xff
-	.space	2
 	.short	0x100f
 	.short	0xa02
 	.short	0xe09
@@ -7270,11 +6702,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU
 	.byte	0x2a
 	.space	3
-	.byte	0xc4
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xc1
+	.byte	0xd5
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xdd
 	.byte	0xff
 	.space	2
 	.short	0x410
@@ -7298,14 +6730,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU
 	.byte	0x42
 	.space	3
-	.byte	0xbd
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xc6
+	.byte	0xc4
+	.byte	0xdd
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
+	.space	1
 	.short	0x1020
 	.short	0x628
 	.short	0x100b
@@ -7327,12 +6759,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU
 	.byte	0x2
 	.space	3
-	.byte	0xc4
-	.byte	0xbb
-	.byte	0xd4
-	.byte	0xc6
-	.byte	0xd3
-	.byte	0xc8
+	.byte	0xca
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xd9
 	.byte	0xff
 	.space	1
 	.short	0x100b
@@ -7357,13 +6789,13 @@ gBattleFrontierTrainers:
 	.byte	0x2b
 	.space	3
 	.byte	0xd4
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc2
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xdf
+	.byte	0xe3
 	.byte	0xff
+	.space	1
 	.short	0xa01
 	.short	0x101e
 	.short	0xa28
@@ -7385,13 +6817,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x2b
 	.space	3
-	.byte	0xc4
-	.byte	0xc9
-	.byte	0xc2
-	.byte	0xbb
-	.byte	0xc8
+	.byte	0xbd
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe7
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0x1c24
 	.short	0x1000
 	.short	0x1c16
@@ -7413,12 +6846,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x47
 	.space	3
-	.byte	0xcd
-	.byte	0xc2
-	.byte	0xbf
-	.byte	0xbb
+	.byte	0xc0
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xd9
 	.byte	0xff
-	.space	3
+	.space	2
 	.short	0x1018
 	.short	0xa02
 	.short	0x628
@@ -7440,13 +6874,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x47
 	.space	3
-	.byte	0xc5
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xbb
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xee
+	.byte	0xd5
 	.byte	0xff
-	.space	2
 	.short	0xa29
 	.short	0xe09
 	.short	0x2008
@@ -7468,13 +6903,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x26
 	.space	3
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xc3
-	.byte	0xbb
-	.byte	0xc2
+	.byte	0xc5
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
-	.space	2
 	.short	0xa01
 	.short	0x163f
 	.short	0x102f
@@ -7496,14 +6932,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x26
 	.space	3
-	.byte	0xc1
 	.byte	0xbb
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xce
-	.byte	0xce
+	.byte	0xe6
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe0
 	.byte	0xff
+	.space	1
 	.short	0xa01
 	.short	0x122a
 	.short	0x1a30
@@ -7525,14 +6961,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x27
 	.space	3
-	.byte	0xc2
-	.byte	0xbb
-	.byte	0xd3
-	.byte	0xc6
 	.byte	0xc3
-	.byte	0xbf
+	.byte	0xea
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd5
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0xa01
 	.short	0x1632
 	.short	0x1039
@@ -7554,13 +6989,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x27
 	.space	3
-	.byte	0xc7
-	.byte	0xbf
-	.byte	0xc1
-	.byte	0xbb
 	.byte	0xc8
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xed
+	.byte	0xd5
 	.byte	0xff
-	.space	2
 	.short	0xa01
 	.short	0x1627
 	.short	0x1037
@@ -7582,13 +7018,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x15
 	.space	3
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xcd
-	.byte	0xbb
-	.byte	0xbd
+	.byte	0xc4
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xe7
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0xa28
 	.short	0x1a16
 	.short	0xc03
@@ -7610,13 +7047,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x15
 	.space	3
-	.byte	0xcb
-	.byte	0xcf
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xc1
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xdd
 	.byte	0xff
 	.short	0xa29
 	.short	0x120e
@@ -7639,13 +7076,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x13
 	.space	3
-	.byte	0xcd
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc7
-	.byte	0xbb
+	.byte	0xbe
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xe2
 	.byte	0xff
-	.space	2
+	.space	3
 	.short	0xa07
 	.short	0x120a
 	.short	0xa05
@@ -7667,14 +7103,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x13
 	.space	3
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xd3
+	.byte	0xbc
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xd5
 	.byte	0xff
-	.space	1
 	.short	0xa29
 	.short	0x1438
 	.short	0xc04
@@ -7696,14 +7132,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x43
 	.space	3
-	.byte	0xc2
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xc7
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xdf
+	.byte	0xe3
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0x100d
 	.short	0x1807
 	.short	0xa28
@@ -7725,12 +7160,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x43
 	.space	3
-	.byte	0xc6
-	.byte	0xcf
-	.byte	0xbd
-	.byte	0xbb
+	.byte	0xc2
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xd8
 	.byte	0xff
-	.space	3
+	.space	2
 	.short	0xa3d
 	.short	0x1000
 	.short	0x101e
@@ -7752,14 +7188,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x35
 	.space	3
-	.byte	0xc4
-	.byte	0xbb
 	.byte	0xc7
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe3
+	.byte	0xd9
 	.byte	0xff
+	.space	4
 	.short	0xa28
 	.short	0x2722
 	.short	0x100b
@@ -7781,14 +7214,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x35
 	.space	3
-	.byte	0xc1
-	.byte	0xcf
-	.byte	0xc8
-	.byte	0xc8
-	.byte	0xbb
-	.byte	0xcc
+	.byte	0xc6
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xdd
+	.byte	0xd9
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0xa01
 	.short	0x240f
 	.short	0x1e13
@@ -7810,13 +7242,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x11
 	.space	3
-	.byte	0xbd
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc3
 	.byte	0xc1
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xff
-	.space	2
 	.short	0xa01
 	.short	0x1015
 	.short	0x1237
@@ -7838,14 +7271,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x11
 	.space	3
-	.byte	0xca
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xcc
 	.byte	0xbd
-	.byte	0xbf
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xd8
 	.byte	0xff
-	.space	1
+	.space	3
 	.short	0x1023
 	.short	0x1010
 	.short	0x1020
@@ -7867,12 +7298,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x10
 	.space	3
-	.byte	0xcc
-	.byte	0xbf
 	.byte	0xc1
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbb
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xd5
 	.byte	0xff
 	.space	1
 	.short	0xa01
@@ -7896,14 +7327,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x10
 	.space	3
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xc5
+	.byte	0xe3
+	.byte	0xee
+	.byte	0xe9
+	.byte	0xd9
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0x1e0f
 	.short	0x1828
 	.short	0x1a13
@@ -7925,12 +7355,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_NU_RU_UU_OU
 	.byte	0x1d
 	.space	3
-	.byte	0xc2
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xc5
+	.byte	0xc0
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd8
 	.byte	0xff
-	.space	3
+	.space	2
 	.short	0x1023
 	.short	0x100b
 	.short	0x1020
@@ -7952,12 +7383,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_RU_UU_OU
 	.byte	0x1d
 	.space	3
-	.byte	0xbf
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xc6
+	.byte	0xcd
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xde
+	.byte	0xdd
 	.byte	0xff
-	.space	3
 	.short	0xe0d
 	.short	0x636
 	.short	0x461
@@ -7979,14 +7412,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_RU_UU_OU
 	.byte	0x2d
 	.space	3
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xcc
-	.byte	0xc9
+	.byte	0xc6
+	.byte	0xe3
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe2
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0xa01
 	.short	0x160a
 	.short	0x102f
@@ -8008,14 +7440,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_RU_UU_OU
 	.byte	0x2d
 	.space	3
-	.byte	0xc2
-	.byte	0xcf
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xcd
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xe2
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0x1642
 	.short	0xa14
 	.short	0x1020
@@ -8037,13 +7468,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_RU_UU_OU
 	.byte	0xe
 	.space	3
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xc2
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0xa28
 	.short	0x180d
 	.short	0x100b
@@ -8065,14 +7497,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_RU_UU_OU
 	.byte	0xe
 	.space	3
-	.byte	0xd2
 	.byte	0xbb
-	.byte	0xd0
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe0
+	.byte	0xe4
+	.byte	0xdc
 	.byte	0xff
-	.space	1
+	.space	3
 	.short	0x80e
 	.short	0xc00
 	.short	0xffff
@@ -8094,14 +7524,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_RU_UU_OU
 	.byte	0x5
 	.space	3
-	.byte	0xbd
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xc0
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xd5
+	.byte	0xe0
 	.byte	0xff
+	.space	1
 	.short	0x1236
 	.short	0x102f
 	.short	0x1239
@@ -8123,13 +7553,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_RU_UU_OU
 	.byte	0x5
 	.space	3
-	.byte	0xc4
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd0
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0x1e0f
 	.short	0x628
 	.short	0x100b
@@ -8151,14 +7582,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_RU_UU_OU
 	.byte	0x19
 	.space	3
-	.byte	0xbf
-	.byte	0xbe
-	.byte	0xcf
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbe
-	.byte	0xc9
+	.byte	0xc7
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xdd
 	.byte	0xff
+	.space	3
 	.short	0xa40
 	.short	0x1a08
 	.short	0x1000
@@ -8180,11 +7609,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_RU_UU_OU
 	.byte	0x19
 	.space	3
-	.byte	0xc2
-	.byte	0xbb
-	.byte	0xc6
+	.byte	0xc1
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd8
 	.byte	0xff
-	.space	4
+	.space	1
 	.short	0xa29
 	.short	0x1a33
 	.short	0xa1f
@@ -8207,11 +7639,13 @@ gBattleFrontierTrainers:
 	.byte	0x4
 	.space	3
 	.byte	0xc1
-	.byte	0xbb
-	.byte	0xc1
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xdb
+	.byte	0xe7
 	.byte	0xff
-	.space	3
+	.space	1
 	.short	0x804
 	.short	0x1020
 	.short	0x44b
@@ -8233,12 +7667,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_RU_UU_OU
 	.byte	0x4
 	.space	3
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xc8
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xbe
+	.byte	0xc4
+	.byte	0xe9
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe1
+	.byte	0xd5
 	.byte	0xff
 	.space	1
 	.short	0xa29
@@ -8262,14 +7696,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_RU_UU_OU
 	.byte	0x3a
 	.space	3
-	.byte	0xc4
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xce
-	.byte	0xce
+	.byte	0xc1
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xd9
 	.byte	0xff
+	.space	3
 	.short	0x611
 	.short	0x100d
 	.short	0x1a1d
@@ -8291,14 +7723,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_RU_UU_OU
 	.byte	0x3a
 	.space	3
-	.byte	0xc1
 	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xce
-	.byte	0xce
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xe3
 	.byte	0xff
-	.space	1
 	.short	0xa28
 	.short	0xa15
 	.short	0x1603
@@ -8320,14 +7752,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_RU_UU_OU
 	.byte	0x0
 	.space	3
-	.byte	0xbf
-	.byte	0xc7
-	.byte	0xbb
 	.byte	0xc8
-	.byte	0xcf
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe0
 	.byte	0xff
+	.space	1
 	.short	0x413
 	.short	0x1437
 	.short	0x1014
@@ -8349,14 +7781,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_RU_UU_OU
 	.byte	0x0
 	.space	3
-	.byte	0xc1
-	.byte	0xcf
-	.byte	0xcd
-	.byte	0xce
 	.byte	0xbb
-	.byte	0xd0
-	.byte	0xc9
+	.byte	0xe0
+	.byte	0xeb
+	.byte	0xdd
+	.byte	0xe2
 	.byte	0xff
+	.space	2
 	.short	0x250c
 	.short	0xc00
 	.short	0xffff
@@ -8378,14 +7809,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_RU_UU_OU
 	.byte	0x1a
 	.space	3
-	.byte	0xc5
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xbf
-	.byte	0xcc
 	.byte	0xc9
-	.byte	0xc8
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xdf
 	.byte	0xff
+	.space	3
 	.short	0x610
 	.short	0xc00
 	.short	0xa31
@@ -8407,13 +7836,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_RU_UU_OU
 	.byte	0x1a
 	.space	3
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc0
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbe
-	.byte	0xc9
+	.byte	0xc5
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xe2
 	.byte	0xff
 	.short	0x1020
 	.short	0x2020
@@ -8436,13 +7865,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_RU_UU_OU
 	.byte	0x20
 	.space	3
-	.byte	0xcc
-	.byte	0xcf
-	.byte	0xbc
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xbb
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0xd9
 	.byte	0xff
-	.space	2
 	.short	0xa01
 	.short	0x1015
 	.short	0x1237
@@ -8464,13 +7894,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_RU_UU_OU
 	.byte	0x20
 	.space	3
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcc
+	.byte	0xc5
+	.byte	0xe9
+	.byte	0xd6
+	.byte	0xe3
 	.byte	0xff
-	.space	2
+	.space	3
 	.short	0x1020
 	.short	0x26d9
 	.short	0x102b
@@ -8492,13 +7921,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_RU_UU_OU
 	.byte	0x2b
 	.space	3
-	.byte	0xc4
-	.byte	0xbb
-	.byte	0xd2
-	.byte	0xc9
 	.byte	0xc8
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xff
-	.space	2
+	.space	3
 	.short	0x1020
 	.short	0x423
 	.short	0x100b
@@ -8520,13 +7948,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x2b
 	.space	3
-	.byte	0xc6
-	.byte	0xc9
-	.byte	0xc1
-	.byte	0xbb
-	.byte	0xc8
+	.byte	0xd1
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0x62f
 	.short	0xa01
 	.short	0x1000
@@ -8548,14 +7977,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x47
 	.space	3
-	.byte	0xbf
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xbb
+	.byte	0xd8
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd5
 	.byte	0xff
-	.space	1
 	.short	0x100b
 	.short	0x1e0f
 	.short	0x143f
@@ -8577,13 +8006,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x47
 	.space	3
-	.byte	0xc4
-	.byte	0xc9
-	.byte	0xcd
-	.byte	0xc3
-	.byte	0xbf
+	.byte	0xc8
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xdd
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0x1020
 	.short	0x20e
 	.short	0x1a2a
@@ -8605,13 +8035,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x1b
 	.space	3
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xc9
+	.byte	0xbd
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
 	.byte	0xff
 	.short	0xa01
 	.short	0x140f
@@ -8634,14 +8064,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x1b
 	.space	3
-	.byte	0xcd
-	.byte	0xc5
-	.byte	0xd3
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xc7
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd5
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0x2713
 	.short	0x100b
 	.short	0xa28
@@ -8663,12 +8092,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x1c
 	.space	3
-	.byte	0xcc
-	.byte	0xcf
-	.byte	0xce
-	.byte	0xc2
+	.byte	0xc4
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xff
-	.space	3
+	.space	4
 	.short	0xa01
 	.short	0x1236
 	.short	0x102f
@@ -8690,14 +8118,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x1c
 	.space	3
-	.byte	0xc7
 	.byte	0xbf
-	.byte	0xc6
-	.byte	0xc9
-	.byte	0xbe
-	.byte	0xd3
+	.byte	0xe7
+	.byte	0xdf
+	.byte	0xdd
+	.byte	0xe0
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0xa01
 	.short	0x2711
 	.short	0x1c20
@@ -8719,13 +8146,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x7
 	.space	3
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbe
-	.byte	0xcc
-	.byte	0xc9
+	.byte	0xd1
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0x1020
 	.short	0x42c
 	.short	0x1000
@@ -8748,12 +8176,13 @@ gBattleFrontierTrainers:
 	.byte	0x7
 	.space	3
 	.byte	0xbf
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xdb
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe8
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0xa01
 	.short	0x1000
 	.short	0x2621
@@ -8775,14 +8204,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x38
 	.space	3
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbf
+	.byte	0xc5
+	.byte	0xd9
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xe3
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0xa28
 	.short	0x1a29
 	.short	0x1a2b
@@ -8804,11 +8232,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x38
 	.space	3
-	.byte	0xc4
-	.byte	0xc9
-	.byte	0xd3
-	.byte	0xbd
-	.byte	0xbf
+	.byte	0xbe
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xdd
 	.byte	0xff
 	.space	2
 	.short	0xa02
@@ -8832,12 +8260,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x29
 	.space	3
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xbe
-	.byte	0xbe
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xe1
 	.byte	0xff
-	.space	3
+	.space	1
 	.short	0xa06
 	.short	0x1020
 	.short	0x44d
@@ -8859,11 +8289,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x29
 	.space	3
-	.byte	0xc1
-	.byte	0xbb
-	.byte	0xd0
-	.byte	0xc3
-	.byte	0xc8
+	.byte	0xbf
+	.byte	0xe6
+	.byte	0xeb
+	.byte	0xdd
+	.byte	0xe2
 	.byte	0xff
 	.space	2
 	.short	0xa01
@@ -8887,14 +8317,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x2a
 	.space	3
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xcd
+	.byte	0xee
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xd5
 	.byte	0xff
-	.space	1
 	.short	0x1826
 	.short	0x102f
 	.short	0x1642
@@ -8916,14 +8346,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x2a
 	.space	3
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xc2
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xc6
+	.byte	0xe9
+	.byte	0xd6
+	.byte	0xd5
 	.byte	0xff
-	.space	1
+	.space	3
 	.short	0xa01
 	.short	0x1236
 	.short	0x1020
@@ -8945,13 +8373,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x42
 	.space	3
-	.byte	0xc9
 	.byte	0xcd
-	.byte	0xbd
-	.byte	0xbb
-	.byte	0xcc
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xae
+	.byte	0xc4
+	.byte	0xdd
+	.byte	0xe2
 	.byte	0xff
-	.space	2
 	.short	0x100d
 	.short	0x1239
 	.short	0xa05
@@ -8973,14 +8402,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x42
 	.space	3
-	.byte	0xd1
-	.byte	0xc3
-	.byte	0xc6
 	.byte	0xcd
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe4
+	.byte	0xdc
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0x180d
 	.short	0x100b
 	.short	0x1a1f
@@ -9002,13 +8430,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x2
 	.space	3
-	.byte	0xbd
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbf
+	.byte	0xc8
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd5
 	.byte	0xff
-	.space	2
+	.space	3
 	.short	0xc3a
 	.short	0xc00
 	.short	0x1020
@@ -9030,12 +8457,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x2
 	.space	3
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xcd
+	.byte	0xc2
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe9
+	.byte	0xe2
 	.byte	0xff
-	.space	3
+	.space	2
 	.short	0x1236
 	.short	0xa4a
 	.short	0x13c
@@ -9057,12 +8485,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x3
 	.space	3
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xed
+	.byte	0xd5
 	.byte	0xff
-	.space	3
+	.space	1
 	.short	0xa29
 	.short	0x1031
 	.short	0x1042
@@ -9084,12 +8514,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x3
 	.space	3
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xd4
-	.byte	0xc9
+	.byte	0xc7
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xd9
 	.byte	0xff
 	.space	1
 	.short	0xa2a
@@ -9113,11 +8543,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x3
 	.space	3
-	.byte	0xd0
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbd
-	.byte	0xbf
+	.byte	0xce
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xdb
+	.byte	0xd5
 	.byte	0xff
 	.space	2
 	.short	0xe0d
@@ -9141,13 +8571,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x3
 	.space	3
-	.byte	0xbc
 	.byte	0xcc
-	.byte	0xd3
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe9
+	.byte	0xed
 	.byte	0xff
-	.space	2
+	.space	4
 	.short	0xa28
 	.short	0x268c
 	.short	0x1000
@@ -9169,11 +8597,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x12
 	.space	3
-	.byte	0xbb
-	.byte	0xd0
-	.byte	0xbb
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd9
 	.byte	0xff
-	.space	4
+	.space	2
 	.short	0xa29
 	.short	0x1020
 	.short	0x1a1b
@@ -9195,14 +8625,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x12
 	.space	3
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbb
-	.byte	0xc7
+	.byte	0xcf
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd5
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0xc1d
 	.short	0x1020
 	.short	0x20b
@@ -9224,12 +8653,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x12
 	.space	3
-	.byte	0xbd
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbf
+	.byte	0xcd
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd5
 	.byte	0xff
 	.space	1
 	.short	0xa01
@@ -9253,14 +8682,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x12
 	.space	3
-	.byte	0xc1
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xbb
-	.byte	0xc8
+	.byte	0xc5
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xd9
 	.byte	0xff
+	.space	2
 	.short	0xa01
 	.short	0x1645
 	.short	0x1020
@@ -9282,13 +8710,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x44
 	.space	3
-	.byte	0xce
-	.byte	0xd3
 	.byte	0xc6
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd8
 	.byte	0xff
-	.space	2
 	.short	0x827
 	.short	0xc00
 	.short	0xffff
@@ -9310,12 +8739,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x44
 	.space	3
-	.byte	0xbd
-	.byte	0xc2
-	.byte	0xbb
-	.byte	0xd4
+	.byte	0xce
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xdf
 	.byte	0xff
-	.space	3
+	.space	1
 	.short	0xa28
 	.short	0x20e
 	.short	0x101e
@@ -9337,14 +8768,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x44
 	.space	3
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xcd
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xbb
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xd9
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0x817
 	.short	0x1000
 	.short	0x1e0f
@@ -9366,12 +8796,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x45
 	.space	3
-	.byte	0xcd
-	.byte	0xc2
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xc3
-	.byte	0xbb
+	.byte	0xc1
+	.byte	0xe9
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xed
+	.byte	0xe9
 	.byte	0xff
 	.space	1
 	.short	0x102a
@@ -9395,14 +8825,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x45
 	.space	3
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xbb
+	.byte	0xc9
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe9
+	.byte	0xdb
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0xa01
 	.short	0x1236
 	.short	0x102f
@@ -9424,12 +8853,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x45
 	.space	3
-	.byte	0xbe
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbf
+	.byte	0xcd
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xdd
 	.byte	0xff
 	.space	1
 	.short	0xa29
@@ -9453,14 +8882,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x34
 	.space	3
-	.byte	0xc7
 	.byte	0xbb
-	.byte	0xbe
-	.byte	0xbe
-	.byte	0xc9
-	.byte	0xd2
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xdf
+	.byte	0xe7
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0x43e
 	.short	0x20e
 	.short	0x100f
@@ -9482,13 +8910,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x34
 	.space	3
-	.byte	0xbe
-	.byte	0xbb
-	.byte	0xd0
-	.byte	0xc3
-	.byte	0xc8
+	.byte	0xbc
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xe3
 	.byte	0xff
-	.space	2
 	.short	0x100d
 	.short	0x1213
 	.short	0xa02
@@ -9510,14 +8939,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x34
 	.space	3
-	.byte	0xce
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xd0
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xcd
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xdb
+	.byte	0xd9
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0xa29
 	.short	0x1813
 	.short	0xe16
@@ -9539,13 +8967,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0xa
 	.space	3
-	.byte	0xc7
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xc9
+	.byte	0xe2
+	.byte	0xe9
+	.byte	0xde
 	.byte	0xff
-	.space	2
+	.space	3
 	.short	0x1e0f
 	.short	0x1231
 	.short	0x1006
@@ -9567,12 +8994,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0xa
 	.space	3
-	.byte	0xbc
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xce
+	.byte	0xcd
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xe1
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xd8
 	.byte	0xff
-	.space	3
 	.short	0xa01
 	.short	0x103a
 	.short	0x2002
@@ -9594,12 +9023,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0xa
 	.space	3
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xcf
-	.byte	0xc6
+	.byte	0xc3
+	.byte	0xe7
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xde
+	.byte	0xd5
 	.byte	0xff
-	.space	3
+	.space	1
 	.short	0xa01
 	.short	0x634
 	.short	0x1e10
@@ -9621,11 +9052,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x36
 	.space	3
-	.byte	0xc5
-	.byte	0xbb
-	.byte	0xd3
+	.byte	0xbd
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xde
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xd5
 	.byte	0xff
-	.space	4
 	.short	0xe15
 	.short	0x201e
 	.short	0x1c12
@@ -9647,13 +9081,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x36
 	.space	3
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbb
+	.byte	0xc4
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xdd
 	.byte	0xff
-	.space	2
+	.space	3
 	.short	0x1020
 	.short	0x628
 	.short	0xa15
@@ -9675,11 +9108,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x36
 	.space	3
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbb
+	.byte	0xc7
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
 	.byte	0xff
 	.space	2
 	.short	0x122c
@@ -9703,14 +9136,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x9
 	.space	3
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xd2
-	.byte	0xbb
-	.byte	0xcd
+	.byte	0xc7
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xd8
 	.byte	0xff
-	.space	1
 	.short	0x1405
 	.short	0x102f
 	.short	0x821
@@ -9732,12 +9165,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x9
 	.space	3
-	.byte	0xd1
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xd0
+	.byte	0xd5
+	.byte	0xe9
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe2
 	.byte	0xff
 	.space	1
 	.short	0xa01
@@ -9761,14 +9194,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x9
 	.space	3
-	.byte	0xc4
 	.byte	0xbb
-	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe8
+	.byte	0xd5
 	.byte	0xff
-	.space	1
+	.space	4
 	.short	0xa29
 	.short	0x1022
 	.short	0x281e
@@ -9790,11 +9220,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x16
 	.space	3
-	.byte	0xc8
-	.byte	0xbb
-	.byte	0xbe
-	.byte	0xc3
-	.byte	0xbb
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd5
 	.byte	0xff
 	.space	2
 	.short	0xa02
@@ -9818,14 +9248,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x16
 	.space	3
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xbb
+	.byte	0xc6
+	.byte	0xe9
+	.byte	0xd7
+	.byte	0xdd
+	.byte	0xd5
 	.byte	0xff
+	.space	2
 	.short	0x1440
 	.short	0x1440
 	.short	0xffff
@@ -9847,10 +9276,10 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x16
 	.space	3
-	.byte	0xbf
-	.byte	0xc7
-	.byte	0xc7
-	.byte	0xbb
+	.byte	0xd0
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xdd
 	.byte	0xff
 	.space	3
 	.short	0xa2a
@@ -9874,14 +9303,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x1e
 	.space	3
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xc9
+	.byte	0xbf
+	.byte	0xd8
+	.byte	0xea
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd8
 	.byte	0xff
+	.space	1
 	.short	0xa29
 	.short	0x1020
 	.short	0x2207
@@ -9903,14 +9332,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x1e
 	.space	3
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xc8
 	.byte	0xc6
-	.byte	0xd3
+	.byte	0xe3
+	.byte	0xdf
+	.byte	0xd9
 	.byte	0xff
-	.space	1
+	.space	3
 	.short	0x1e0f
 	.short	0x1231
 	.short	0x1006
@@ -9932,13 +9359,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x1e
 	.space	3
-	.byte	0xbe
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xc9
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe3
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0xa28
 	.short	0x26c1
 	.short	0x1609
@@ -9960,12 +9388,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x1f
 	.space	3
-	.byte	0xc5
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xd1
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0xd5
+	.byte	0xd6
+	.byte	0xd5
 	.byte	0xff
 	.space	1
 	.short	0xe26
@@ -9989,14 +9417,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x1f
 	.space	3
-	.byte	0xc4
-	.byte	0xbb
-	.byte	0xd3
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xc8
+	.byte	0xc9
+	.byte	0xda
+	.byte	0xdd
+	.byte	0xe6
 	.byte	0xff
-	.space	1
+	.space	3
 	.short	0x1e10
 	.short	0x20b
 	.short	0x1404
@@ -10018,14 +9444,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x1f
 	.space	3
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc1
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbe
+	.byte	0xce
+	.byte	0x1b
+	.byte	0xd5
 	.byte	0xff
-	.space	1
+	.space	4
 	.short	0xa29
 	.short	0x1022
 	.short	0x1020
@@ -10047,14 +9470,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0xc
 	.space	3
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xc6
 	.byte	0xbb
-	.byte	0xc2
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd5
 	.byte	0xff
+	.space	1
 	.short	0x1017
 	.short	0x2520
 	.short	0xa14
@@ -10076,13 +9499,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0xc
 	.space	3
-	.byte	0xbd
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xc6
-	.byte	0xd3
+	.byte	0xcf
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xd5
 	.byte	0xff
-	.space	2
 	.short	0xa01
 	.short	0x1000
 	.short	0x2016
@@ -10104,13 +9528,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0xc
 	.space	3
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xd2
-	.byte	0xc3
-	.byte	0xbf
+	.byte	0xbd
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe0
 	.byte	0xff
-	.space	2
 	.short	0x1236
 	.short	0x102f
 	.short	0x1239
@@ -10132,14 +9557,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x17
 	.space	3
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xd3
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xdd
 	.byte	0xff
-	.space	1
+	.space	3
 	.short	0x80f
 	.short	0xc03
 	.short	0xffff
@@ -10162,11 +9585,13 @@ gBattleFrontierTrainers:
 	.byte	0x17
 	.space	3
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xd0
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd5
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xff
-	.space	3
+	.space	1
 	.short	0xa02
 	.short	0x1016
 	.short	0x631
@@ -10188,14 +9613,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x17
 	.space	3
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xd3
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xc4
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xd6
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0xa01
 	.short	0x1620
 	.short	0xa29
@@ -10217,14 +9641,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x20
 	.space	3
-	.byte	0xbc
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xc9
-	.byte	0xc5
-	.byte	0xcd
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xec
 	.byte	0xff
-	.space	1
+	.space	4
 	.short	0x1e0f
 	.short	0x100b
 	.short	0x1020
@@ -10246,14 +9667,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x20
 	.space	3
-	.byte	0xc1
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc1
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xbe
+	.byte	0xe6
+	.byte	0xed
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe2
 	.byte	0xff
+	.space	1
 	.short	0xa29
 	.short	0x1022
 	.short	0x1e14
@@ -10275,13 +9696,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x20
 	.space	3
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd0
+	.byte	0xd5
+	.byte	0xe2
 	.byte	0xff
-	.space	2
+	.space	4
 	.short	0xa2a
 	.short	0x1020
 	.short	0x2803
@@ -10303,13 +9722,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x30
 	.space	3
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcd
 	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe6
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd8
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0x1611
 	.short	0x1017
 	.short	0x161e
@@ -10331,12 +9751,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x30
 	.space	3
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xbc
-	.byte	0xd3
+	.byte	0xcd
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xe3
 	.byte	0xff
-	.space	3
+	.space	2
 	.short	0xe00
 	.short	0x1e1b
 	.short	0xffff
@@ -10358,14 +9779,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x31
 	.space	3
-	.byte	0xbe
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xce
 	.byte	0xc2
-	.byte	0xd3
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xdd
 	.byte	0xff
+	.space	1
 	.short	0xe0d
 	.short	0x1a17
 	.short	0x182c
@@ -10387,13 +9808,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x31
 	.space	3
-	.byte	0xca
-	.byte	0xc3
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xce
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xe3
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0x611
 	.short	0xa02
 	.short	0x140f
@@ -10415,12 +9837,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x32
 	.space	3
-	.byte	0xc0
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc8
+	.byte	0xc2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe2
 	.byte	0xff
-	.space	3
+	.space	1
 	.short	0x1022
 	.short	0x1c12
 	.short	0x20b
@@ -10442,11 +9866,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x32
 	.space	3
-	.byte	0xcd
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xcc
+	.byte	0xc4
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0x1b
 	.byte	0xff
 	.space	2
 	.short	0xa01
@@ -10470,11 +9894,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x33
 	.space	3
-	.byte	0xc0
-	.byte	0xc3
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xbb
+	.byte	0xc6
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe2
+	.byte	0xd5
 	.byte	0xff
 	.space	2
 	.short	0x103b
@@ -10498,14 +9922,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x33
 	.space	3
-	.byte	0xc1
-	.byte	0xc6
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbb
+	.byte	0xc7
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0xa01
 	.short	0x103a
 	.short	0x102f
@@ -10527,12 +9950,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x2e
 	.space	3
-	.byte	0xc8
-	.byte	0xc3
 	.byte	0xbd
-	.byte	0xc9
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xff
-	.space	3
 	.short	0x103a
 	.short	0x1020
 	.short	0x2431
@@ -10554,14 +9979,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x2e
 	.space	3
-	.byte	0xc4
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc7
-	.byte	0xd3
+	.byte	0xbb
+	.byte	0xd6
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe6
 	.byte	0xff
-	.space	1
+	.space	2
 	.short	0x1020
 	.short	0x20e
 	.short	0x2213
@@ -10583,14 +10007,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x2f
 	.space	3
-	.byte	0xbd
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xc8
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xd5
 	.byte	0xff
+	.space	1
 	.short	0x1017
 	.short	0xa02
 	.short	0x1212
@@ -10612,11 +10036,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x2f
 	.space	3
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbb
+	.byte	0xc5
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xdd
 	.byte	0xff
 	.space	2
 	.short	0xa29
@@ -10640,13 +10064,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x1d
 	.space	3
-	.byte	0xbb
-	.byte	0xd0
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xbc
+	.byte	0xe3
+	.byte	0xde
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0xd5
+	.byte	0xe6
 	.byte	0xff
-	.space	2
 	.short	0xa2a
 	.short	0x120a
 	.short	0xe12
@@ -10668,12 +10093,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x1d
 	.space	3
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xbb
-	.byte	0xc7
+	.byte	0xce
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xd5
+	.byte	0xde
+	.byte	0xdd
 	.byte	0xff
-	.space	3
 	.short	0xa3d
 	.short	0xe2c
 	.short	0x1216
@@ -10695,10 +10122,10 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x2d
 	.space	3
-	.byte	0xce
-	.byte	0xc2
 	.byte	0xbf
-	.byte	0xc9
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd5
 	.byte	0xff
 	.space	3
 	.short	0x1a20
@@ -10722,14 +10149,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x2d
 	.space	3
-	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xd3
+	.byte	0xca
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xe6
 	.byte	0xff
-	.space	1
+	.space	3
 	.short	0xa29
 	.short	0x1021
 	.short	0xa0d
@@ -10751,12 +10176,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0xe
 	.space	3
-	.byte	0xc2
-	.byte	0xcf
-	.byte	0xc1
-	.byte	0xc9
+	.byte	0xbb
+	.byte	0xe2
+	.byte	0xd9
 	.byte	0xff
-	.space	3
+	.space	4
 	.short	0xa01
 	.short	0x120f
 	.short	0xe0d
@@ -10778,13 +10202,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0xe
 	.space	3
-	.byte	0xbc
-	.byte	0xcc
-	.byte	0xd3
 	.byte	0xbd
-	.byte	0xbf
+	.byte	0xdc
+	.byte	0xe9
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xed
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0xa26
 	.short	0x102c
 	.short	0x1a34
@@ -10806,14 +10231,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x5
 	.space	3
-	.byte	0xc1
-	.byte	0xc3
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xbd
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xe8
 	.byte	0xff
-	.space	1
+	.space	3
 	.short	0x81b
 	.short	0xa02
 	.short	0x1212
@@ -10835,14 +10258,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x5
 	.space	3
-	.byte	0xce
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xc7
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd5
 	.byte	0xff
+	.space	2
 	.short	0xa01
 	.short	0x100a
 	.short	0xe33
@@ -10864,14 +10286,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x19
 	.space	3
-	.byte	0xbd
-	.byte	0xc2
 	.byte	0xbb
-	.byte	0xcc
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xec
+	.byte	0xed
 	.byte	0xff
+	.space	2
 	.short	0xa31
 	.short	0x200c
 	.short	0x102f
@@ -10893,14 +10314,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x19
 	.space	3
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xd3
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
 	.byte	0xbe
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xdd
 	.byte	0xff
+	.space	1
 	.short	0x1236
 	.short	0x102f
 	.short	0x1213
@@ -10922,12 +10343,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x4
 	.space	3
-	.byte	0xbe
-	.byte	0xc3
-	.byte	0xcc
 	.byte	0xc5
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe2
 	.byte	0xff
-	.space	3
+	.space	1
 	.short	0x44b
 	.short	0x20e
 	.short	0x100f
@@ -10949,14 +10372,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x4
 	.space	3
-	.byte	0xc2
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xbe
+	.byte	0xbd
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xff
-	.space	1
+	.space	3
 	.short	0xa28
 	.short	0x20e
 	.short	0x2200
@@ -10978,12 +10399,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x3a
 	.space	3
-	.byte	0xc9
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcc
+	.byte	0xc5
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd6
+	.byte	0xd5
 	.byte	0xff
-	.space	3
+	.space	2
 	.short	0x604
 	.short	0x1037
 	.short	0x24d8
@@ -11005,13 +10427,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x3a
 	.space	3
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xce
-	.byte	0xbf
 	.byte	0xcc
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xd5
 	.byte	0xff
-	.space	2
+	.space	3
 	.short	0xa01
 	.short	0x1624
 	.short	0x1027
@@ -11033,11 +10454,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x0
 	.space	3
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xd0
+	.byte	0xc8
+	.byte	0xdc
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xdb
 	.byte	0xff
-	.space	4
+	.space	2
 	.short	0x611
 	.short	0x100d
 	.short	0x20f
@@ -11059,13 +10482,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x0
 	.space	3
-	.byte	0xbd
 	.byte	0xc9
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xd3
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
-	.space	2
+	.space	1
 	.short	0x100d
 	.short	0x160f
 	.short	0xa02
@@ -11087,13 +10511,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x1a
 	.space	3
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xcc
-	.byte	0xbf
+	.byte	0xc3
+	.byte	0xe7
+	.byte	0xdd
 	.byte	0xff
-	.space	2
+	.space	4
 	.short	0x1c1a
 	.short	0x1e0f
 	.short	0x100b
@@ -11115,14 +10537,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x1a
 	.space	3
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xcd
+	.byte	0xd1
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xed
 	.byte	0xff
-	.space	1
 	.short	0xa29
 	.short	0x602
 	.short	0x1037
@@ -11144,12 +10566,12 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x37
 	.space	3
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xd0
-	.byte	0xc3
-	.byte	0xbb
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xd9
 	.byte	0xff
 	.space	1
 	.short	0xa29
@@ -11173,11 +10595,11 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x37
 	.space	3
-	.byte	0xca
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc1
-	.byte	0xbf
+	.byte	0xbc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xed
+	.byte	0xd5
 	.byte	0xff
 	.space	2
 	.short	0x100d
@@ -11201,12 +10623,13 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x14
 	.space	3
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xd3
-	.byte	0xbb
+	.byte	0xc2
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xea
+	.byte	0xd5
 	.byte	0xff
-	.space	3
+	.space	2
 	.short	0xa01
 	.short	0x1216
 	.short	0xc1d
@@ -11228,12 +10651,14 @@ gBattleFrontierTrainers:
 	.word	gBattleFrontierTrainerMons_UU_OU
 	.byte	0x14
 	.space	3
-	.byte	0xbe
-	.byte	0xbb
-	.byte	0xd1
-	.byte	0xc8
+	.byte	0xcf
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd5
 	.byte	0xff
-	.space	3
+	.space	1
 	.short	0xa01
 	.short	0x601
 	.short	0x102a
@@ -11256,11 +10681,12 @@ gBattleFrontierTrainers:
 	.byte	0xd
 	.space	3
 	.byte	0xbb
-	.byte	0xbc
-	.byte	0xbc
-	.byte	0xd3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xed
 	.byte	0xff
-	.space	3
+	.space	2
 	.short	0xa01
 	.short	0x103a
 	.short	0x1020
@@ -11280,14 +10706,14 @@ gBattleFrontierTrainers:
 	.short	0xc00
 	.short	0xffff
 	.word	gBattleFrontierTrainerMons_UU_OU
-	.byte	0xd
+	.byte	0x16
 	.space	3
-	.byte	0xc1
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xbe
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd5
 	.byte	0xff
 	.space	1
 	.short	0xa01
@@ -11308,11 +10734,11 @@ gBattleFrontierTrainers:
 	.short	0x1627
 	.short	0xe0a
 	.short	0x809
-	.word	gBattleFrontierTrainerMons_UU_OU
+	.word	gBattleFrontierTrainerMons_Dortha
 	.globl	gBattleFrontierMons
 	.align	2, 0
 	.type	 gBattleFrontierMons,object
-	.size	 gBattleFrontierMons,9600
+	.size	 gBattleFrontierMons,10192
 gBattleFrontierMons:
 	.short	0x14e
 	.short	0x35
@@ -11794,7 +11220,7 @@ gBattleFrontierMons:
 	.byte	0xe
 	.byte	0x0
 	.space	2
-	.short	0x2a4
+	.short	0x3f4
 	.short	0x171
 	.short	0x39
 	.short	0x185
@@ -11818,7 +11244,7 @@ gBattleFrontierMons:
 	.short	0x3a
 	.short	0xf7
 	.short	0x3b
-	.short	0xf7
+	.short	0x144
 	.byte	0x69
 	.byte	0x18
 	.byte	0xf
@@ -12074,13 +11500,13 @@ gBattleFrontierMons:
 	.byte	0x3
 	.byte	0x0
 	.space	2
-	.short	0x2e5
+	.short	0x409
 	.short	0x15b
-	.short	0x289
 	.short	0x21e
 	.short	0x163
+	.short	0x10d
 	.byte	0x58
-	.byte	0x18
+	.byte	0x9
 	.byte	0xa
 	.byte	0x0
 	.space	2
@@ -12326,13 +11752,13 @@ gBattleFrontierMons:
 	.space	2
 	.short	0xd5
 	.short	0x168
-	.short	0x68
+	.short	0x263
 	.short	0xa4
 	.short	0x17b
 	.byte	0x97
 	.byte	0x21
 	.byte	0x14
-	.byte	0x1
+	.byte	0x2
 	.space	2
 	.short	0x204
 	.short	0x1a1
@@ -12575,7 +12001,7 @@ gBattleFrontierMons:
 	.byte	0x0
 	.space	2
 	.short	0x308
-	.short	0x292
+	.short	0xb6
 	.short	0x53
 	.short	0x20d
 	.short	0x10d
@@ -12603,6 +12029,26 @@ gBattleFrontierMons:
 	.byte	0x3
 	.byte	0x2
 	.byte	0x2
+	.space	2
+	.short	0x401
+	.short	0x1ec
+	.short	0xeb
+	.short	0x105
+	.short	0x49
+	.byte	0x3b
+	.byte	0x5
+	.byte	0x5
+	.byte	0x1
+	.space	2
+	.short	0x17a
+	.short	0x9c
+	.short	0xd6
+	.short	0x3a
+	.short	0x55
+	.byte	0x58
+	.byte	0x9
+	.byte	0x14
+	.byte	0x0
 	.space	2
 	.short	0x1cc
 	.short	0x3b
@@ -12682,7 +12128,7 @@ gBattleFrontierMons:
 	.byte	0x69
 	.byte	0x21
 	.byte	0x14
-	.byte	0x2
+	.byte	0x1
 	.space	2
 	.short	0x2bb
 	.short	0x3b
@@ -12744,7 +12190,7 @@ gBattleFrontierMons:
 	.byte	0xa
 	.byte	0x0
 	.space	2
-	.short	0x158
+	.short	0x55
 	.short	0x19d
 	.short	0x1a
 	.short	0x11a
@@ -12762,7 +12208,7 @@ gBattleFrontierMons:
 	.byte	0x69
 	.byte	0x11
 	.byte	0xf
-	.byte	0x1
+	.byte	0x2
 	.space	2
 	.short	0x30c
 	.short	0x7e
@@ -12942,7 +12388,7 @@ gBattleFrontierMons:
 	.byte	0x51
 	.byte	0xa
 	.byte	0xd
-	.byte	0x0
+	.byte	0x2
 	.space	2
 	.short	0x1fe
 	.short	0x1ec
@@ -12952,7 +12398,7 @@ gBattleFrontierMons:
 	.byte	0x85
 	.byte	0xa
 	.byte	0xd
-	.byte	0x2
+	.byte	0x0
 	.space	2
 	.short	0x110
 	.short	0xf0
@@ -13072,7 +12518,7 @@ gBattleFrontierMons:
 	.byte	0x12
 	.byte	0x11
 	.byte	0xf
-	.byte	0x2
+	.byte	0x0
 	.space	2
 	.short	0x8b
 	.short	0x1be
@@ -13255,11 +12701,11 @@ gBattleFrontierMons:
 	.byte	0x0
 	.space	2
 	.short	0x14f
-	.short	0xbb
+	.short	0x107
 	.short	0x62
 	.short	0x11a
 	.short	0x172
-	.byte	0x13
+	.byte	0x79
 	.byte	0xa
 	.byte	0xd
 	.byte	0x2
@@ -13346,7 +12792,7 @@ gBattleFrontierMons:
 	.space	2
 	.short	0x1db
 	.short	0x1bc
-	.short	0x1bc
+	.short	0x118
 	.short	0x1ab
 	.short	0x194
 	.byte	0x56
@@ -13464,6 +12910,46 @@ gBattleFrontierMons:
 	.byte	0xd
 	.byte	0x1
 	.space	2
+	.short	0x90
+	.short	0xa4
+	.short	0x163
+	.short	0x23d
+	.short	0x21e
+	.byte	0x58
+	.byte	0x18
+	.byte	0xa
+	.byte	0x0
+	.space	2
+	.short	0x408
+	.short	0x15b
+	.short	0x163
+	.short	0x21e
+	.short	0x289
+	.byte	0x83
+	.byte	0x9
+	.byte	0xa
+	.byte	0x0
+	.space	2
+	.short	0x40a
+	.short	0x15b
+	.short	0x163
+	.short	0x10d
+	.short	0x21e
+	.byte	0x83
+	.byte	0x9
+	.byte	0xa
+	.byte	0x0
+	.space	2
+	.short	0x179
+	.short	0x1be
+	.short	0x9d
+	.short	0x199
+	.short	0x5c
+	.byte	0x58
+	.byte	0x5
+	.byte	0x8
+	.byte	0x0
+	.space	2
 	.short	0x1cc
 	.short	0x3b
 	.short	0xca
@@ -13532,7 +13018,7 @@ gBattleFrontierMons:
 	.byte	0x78
 	.byte	0xa
 	.byte	0xd
-	.byte	0x1
+	.byte	0x0
 	.space	2
 	.short	0x1a8
 	.short	0x1bf
@@ -13542,7 +13028,7 @@ gBattleFrontierMons:
 	.byte	0x6a
 	.byte	0x18
 	.byte	0xa
-	.byte	0x0
+	.byte	0x1
 	.space	2
 	.short	0x213
 	.short	0x111
@@ -13612,17 +13098,17 @@ gBattleFrontierMons:
 	.byte	0x69
 	.byte	0x18
 	.byte	0xf
-	.byte	0x1
+	.byte	0x0
 	.space	2
 	.short	0x2b5
-	.short	0x1f9
+	.short	0xa4
 	.short	0x14a
 	.short	0x68
-	.short	0x24e
+	.short	0x5c
 	.byte	0x4d
 	.byte	0x18
 	.byte	0xf
-	.byte	0x1
+	.byte	0x0
 	.space	2
 	.short	0x2fc
 	.short	0x241
@@ -13700,7 +13186,7 @@ gBattleFrontierMons:
 	.short	0x236
 	.short	0x118
 	.byte	0x70
-	.byte	0xa
+	.byte	0x6
 	.byte	0x3
 	.byte	0x0
 	.space	2
@@ -14234,7 +13720,7 @@ gBattleFrontierMons:
 	.byte	0xa
 	.byte	0x0
 	.space	2
-	.short	0x29a
+	.short	0x3e3
 	.short	0x1e3
 	.short	0x21e
 	.short	0x19c
@@ -14463,6 +13949,16 @@ gBattleFrontierMons:
 	.byte	0x5
 	.byte	0x5
 	.byte	0x2
+	.space	2
+	.short	0x1e1
+	.short	0x1be
+	.short	0x5e
+	.short	0x57
+	.short	0x19c
+	.byte	0x3b
+	.byte	0x18
+	.byte	0xa
+	.byte	0x0
 	.space	2
 	.short	0xb5
 	.short	0x209
@@ -14704,7 +14200,7 @@ gBattleFrontierMons:
 	.byte	0xa
 	.byte	0x2
 	.space	2
-	.short	0x29f
+	.short	0x3ef
 	.short	0x249
 	.short	0x5e
 	.short	0x1bf
@@ -14782,7 +14278,7 @@ gBattleFrontierMons:
 	.byte	0x61
 	.byte	0x5
 	.byte	0x17
-	.byte	0x1
+	.byte	0x2
 	.space	2
 	.short	0x300
 	.short	0x26f
@@ -15092,7 +14588,7 @@ gBattleFrontierMons:
 	.byte	0x78
 	.byte	0x18
 	.byte	0xa
-	.byte	0x2
+	.byte	0x1
 	.space	2
 	.short	0x2f6
 	.short	0x1a1
@@ -15416,7 +14912,7 @@ gBattleFrontierMons:
 	.space	2
 	.short	0x26c
 	.short	0x88
-	.short	0x176
+	.short	0x171
 	.short	0x200
 	.short	0xfc
 	.byte	0x52
@@ -15534,6 +15030,136 @@ gBattleFrontierMons:
 	.byte	0xa
 	.byte	0x0
 	.space	2
+	.short	0x1e8
+	.short	0xec
+	.short	0x1d9
+	.short	0x249
+	.short	0x5c
+	.byte	0x58
+	.byte	0x9
+	.byte	0x5
+	.byte	0x0
+	.space	2
+	.short	0x2cf
+	.short	0x1be
+	.short	0x249
+	.short	0x19e
+	.short	0x5c
+	.byte	0x58
+	.byte	0x21
+	.byte	0x14
+	.byte	0x0
+	.space	2
+	.short	0x2d0
+	.short	0xf7
+	.short	0x19b
+	.short	0x55
+	.short	0x1a1
+	.byte	0x78
+	.byte	0x18
+	.byte	0xa
+	.byte	0x0
+	.space	2
+	.short	0x320
+	.short	0x5e
+	.short	0x101
+	.short	0x15b
+	.short	0xec
+	.byte	0x78
+	.byte	0x18
+	.byte	0xa
+	.byte	0x0
+	.space	2
+	.short	0xf3
+	.short	0xa4
+	.short	0x15b
+	.short	0x55
+	.short	0x18c
+	.byte	0x58
+	.byte	0x18
+	.byte	0xa
+	.byte	0x0
+	.space	2
+	.short	0x17b
+	.short	0x45
+	.short	0x5c
+	.short	0x1be
+	.short	0xb6
+	.byte	0x58
+	.byte	0x21
+	.byte	0x14
+	.byte	0x0
+	.space	2
+	.short	0x1e0
+	.short	0x1be
+	.short	0x1d9
+	.short	0x119
+	.short	0x171
+	.byte	0x15
+	.byte	0x9
+	.byte	0xa
+	.byte	0x0
+	.space	2
+	.short	0x280
+	.short	0xe
+	.short	0x172
+	.short	0x15c
+	.short	0xeb
+	.byte	0x78
+	.byte	0xa
+	.byte	0xd
+	.byte	0x0
+	.space	2
+	.short	0x403
+	.short	0x15d
+	.short	0x266
+	.short	0xc8
+	.short	0xf5
+	.byte	0x78
+	.byte	0xa
+	.byte	0xd
+	.byte	0x0
+	.space	2
+	.short	0xf4
+	.short	0xdd
+	.short	0xf5
+	.short	0x1bc
+	.short	0x18a
+	.byte	0x51
+	.byte	0xa
+	.byte	0x3
+	.byte	0x0
+	.space	2
+	.short	0x286
+	.short	0xa4
+	.short	0x3a
+	.short	0x19e
+	.short	0x163
+	.byte	0x78
+	.byte	0x18
+	.byte	0xa
+	.byte	0x0
+	.space	2
+	.short	0x325
+	.short	0x1b1
+	.short	0x168
+	.short	0x1bc
+	.short	0x59
+	.byte	0x7d
+	.byte	0x3
+	.byte	0x1
+	.byte	0x0
+	.space	2
+	.short	0x281
+	.short	0x21e
+	.short	0x101
+	.short	0x114
+	.short	0x1bf
+	.byte	0x78
+	.byte	0x18
+	.byte	0xb
+	.byte	0x0
+	.space	2
 	.short	0x8e
 	.short	0x1bc
 	.short	0x59
@@ -15602,7 +15228,7 @@ gBattleFrontierMons:
 	.byte	0x9e
 	.byte	0xa
 	.byte	0x3
-	.byte	0x1
+	.byte	0x0
 	.space	2
 	.short	0x24f
 	.short	0x93
@@ -16592,6 +16218,176 @@ gBattleFrontierMons:
 	.byte	0x6a
 	.byte	0xa
 	.byte	0xd
+	.byte	0x0
+	.space	2
+	.short	0x1e2
+	.short	0x1be
+	.short	0x99
+	.short	0x10d
+	.short	0x11a
+	.byte	0x6a
+	.byte	0xa
+	.byte	0xd
+	.byte	0x0
+	.space	2
+	.short	0xfb
+	.short	0x1a1
+	.short	0x5e
+	.short	0xca
+	.short	0x25d
+	.byte	0x37
+	.byte	0x18
+	.byte	0xa
+	.byte	0x0
+	.space	2
+	.short	0x27e
+	.short	0xe
+	.short	0x1ba
+	.short	0x172
+	.short	0x18d
+	.byte	0x34
+	.byte	0xa
+	.byte	0xd
+	.byte	0x0
+	.space	2
+	.short	0x17c
+	.short	0x15b
+	.short	0x1b2
+	.short	0x1d9
+	.short	0x163
+	.byte	0x78
+	.byte	0x18
+	.byte	0xa
+	.byte	0x0
+	.space	2
+	.short	0x97
+	.short	0x45
+	.short	0x10d
+	.short	0x105
+	.short	0x87
+	.byte	0x58
+	.byte	0x9
+	.byte	0xd
+	.byte	0x0
+	.space	2
+	.short	0x92
+	.short	0x21e
+	.short	0x7e
+	.short	0x163
+	.short	0x171
+	.byte	0x38
+	.byte	0x18
+	.byte	0xa
+	.byte	0x0
+	.space	2
+	.short	0x319
+	.short	0x1e2
+	.short	0x55
+	.short	0x198
+	.short	0x186
+	.byte	0x7c
+	.byte	0x18
+	.byte	0xa
+	.byte	0x0
+	.space	2
+	.short	0xf5
+	.short	0x15b
+	.short	0xb6
+	.short	0x1f7
+	.short	0xa4
+	.byte	0x58
+	.byte	0x9
+	.byte	0xa
+	.byte	0x0
+	.space	2
+	.short	0x27f
+	.short	0xe
+	.short	0x1bc
+	.short	0x172
+	.short	0x59
+	.byte	0x78
+	.byte	0xa
+	.byte	0xd
+	.byte	0x0
+	.space	2
+	.short	0x2d1
+	.short	0x1b0
+	.short	0x250
+	.short	0x35
+	.short	0xbc
+	.byte	0x34
+	.byte	0x18
+	.byte	0xf
+	.byte	0x0
+	.space	2
+	.short	0x327
+	.short	0x2a2
+	.short	0x172
+	.short	0x1bf
+	.short	0x11a
+	.byte	0x70
+	.byte	0xa
+	.byte	0xe
+	.byte	0x0
+	.space	2
+	.short	0x31a
+	.short	0x167
+	.short	0x5c
+	.short	0x163
+	.short	0x59
+	.byte	0x58
+	.byte	0x5
+	.byte	0x8
+	.byte	0x0
+	.space	2
+	.short	0x407
+	.short	0x11a
+	.short	0x1b9
+	.short	0x7
+	.short	0x199
+	.byte	0x51
+	.byte	0xa
+	.byte	0xd
+	.byte	0x0
+	.space	2
+	.short	0x17d
+	.short	0x5e
+	.short	0x59
+	.short	0x3a
+	.short	0x163
+	.byte	0xb3
+	.byte	0x18
+	.byte	0xe
+	.byte	0x0
+	.space	2
+	.short	0x282
+	.short	0x1a1
+	.short	0x55
+	.short	0x144
+	.short	0x19b
+	.byte	0x78
+	.byte	0x18
+	.byte	0xa
+	.byte	0x0
+	.space	2
+	.short	0x3c5
+	.short	0x1a1
+	.short	0x55
+	.short	0x144
+	.short	0x19b
+	.byte	0x78
+	.byte	0x18
+	.byte	0xa
+	.byte	0x0
+	.space	2
+	.short	0x31c
+	.short	0x55
+	.short	0x144
+	.short	0x19c
+	.short	0x126
+	.byte	0x70
+	.byte	0x18
+	.byte	0xf
 	.byte	0x0
 	.space	2
 	.short	0x41
@@ -25063,31 +24859,29 @@ PutNewBattleTowerRecord:
 	mov	r6, r9
 	mov	r5, r8
 	push	{r5, r6, r7}
-	add	sp, sp, #-0x20
+	add	sp, sp, #-0x1c
 	mov	r1, #0x0
 	mov	r8, r1
 	mov	sl, r0
-	mov	r5, #0x0
+	mov	r6, #0x0
 	ldr	r2, .L290
 	ldr	r0, [r2]
-	mov	r4, sl
-	ldrb	r4, [r4, #0xc]
-	str	r4, [sp, #0x18]
-	mov	r9, r5
-	mov	r7, #0x4
-	str	r7, [sp, #0x1c]
-	ldr	r1, .L290+0x4
-	add	r1, r1, r0
-	mov	ip, r1
+	mov	r3, sl
+	ldrb	r3, [r3, #0xc]
+	str	r3, [sp, #0x18]
+	mov	ip, r6
+	ldr	r4, .L290+0x4
+	add	r4, r4, r0
+	mov	r9, r4
 .L250:
-	mov	r6, #0x0
+	mov	r5, #0x0
 	mov	r3, #0x0
-	mov	r2, ip
-	ldrb	r0, [r2]
-	ldr	r4, [sp, #0x18]
-	cmp	r0, r4
+	mov	r7, r9
+	ldrb	r0, [r7]
+	ldr	r1, [sp, #0x18]
+	cmp	r0, r1
 	bne	.L252	@cond_branch
-	mov	r4, r9
+	mov	r4, ip
 	mov	r2, sl
 	add	r2, r2, #0xc
 .L253:
@@ -25108,25 +24902,26 @@ PutNewBattleTowerRecord:
 .L252:
 	cmp	r3, #0x4
 	bne	.L257	@cond_branch
-	mov	r6, #0x0
+	mov	r5, #0x0
 	ldr	r1, .L290
 	ldr	r0, [r1]
-	ldr	r3, .L290+0x8
-	add	r0, r0, r3
-	ldr	r2, [sp, #0x1c]
-	add	r0, r0, r2
+	ldr	r1, .L290+0x8
+	add	r0, r0, r1
+	add	r0, r0, ip
 	ldrb	r0, [r0]
-	mov	r4, sl
-	ldrb	r4, [r4, #0x8]
-	cmp	r0, r4
+	mov	r2, sl
+	ldrb	r2, [r2, #0x4]
+	cmp	r0, r2
 	bne	.L257	@cond_branch
-	add	r1, r0, #0
-	mov	r2, r9
+	mov	r3, ip
+	mov	r2, sl
 	add	r2, r2, #0x4
+	add	r4, r1, #0
 .L262:
-	cmp	r1, #0xff
+	ldrb	r0, [r2]
+	cmp	r0, #0xff
 	bne	.L260	@cond_branch
-	mov	r6, #0x7
+	mov	r5, #0x7
 	b	.L257
 .L291:
 	.align	2, 0
@@ -25135,35 +24930,35 @@ PutNewBattleTowerRecord:
 	.word	0x744
 	.word	0x73c
 .L260:
-	add	r6, r6, #0x1
-	cmp	r6, #0x6
+	add	r2, r2, #0x1
+	add	r5, r5, #0x1
+	cmp	r5, #0x6
 	bgt	.L257	@cond_branch
 	ldr	r7, .L292
 	ldr	r0, [r7]
-	add	r0, r0, r3
-	add	r0, r0, r2
+	add	r1, r5, r3
+	add	r0, r0, r4
+	add	r0, r0, r1
 	ldrb	r0, [r0]
+	ldrb	r1, [r2]
 	cmp	r0, r1
 	beq	.L262	@cond_branch
 .L257:
-	cmp	r6, #0x7
+	cmp	r5, #0x7
 	beq	.L248	@cond_branch
-	mov	r0, #0xec
-	add	r9, r9, r0
-	ldr	r1, [sp, #0x1c]
-	add	r1, r1, #0xec
-	str	r1, [sp, #0x1c]
-	add	ip, ip, r0
-	add	r5, r5, #0x1
-	cmp	r5, #0x4
+	mov	r2, #0xec
+	add	ip, ip, r2
+	add	r9, r9, r2
+	add	r6, r6, #0x1
+	cmp	r6, #0x4
 	ble	.L250	@cond_branch
 .L248:
-	cmp	r5, #0x4
+	cmp	r6, #0x4
 	bgt	.L267	@cond_branch
-	ldr	r2, .L292
-	ldr	r0, [r2]
+	ldr	r3, .L292
+	ldr	r0, [r3]
 	mov	r1, #0xec
-	mul	r1, r1, r5
+	mul	r1, r1, r6
 	add	r0, r0, r1
 	mov	r4, #0xe7
 	lsl	r4, r4, #0x3
@@ -25174,7 +24969,7 @@ PutNewBattleTowerRecord:
 .L292:
 	.word	gSaveBlock2Ptr
 .L267:
-	mov	r5, #0x0
+	mov	r6, #0x0
 	ldr	r7, .L294
 	ldr	r0, [r7]
 	ldr	r1, .L294+0x4
@@ -25187,8 +24982,8 @@ PutNewBattleTowerRecord:
 	mov	r1, #0x0
 .L270:
 	add	r1, r1, #0xec
-	add	r5, r5, #0x1
-	cmp	r5, #0x4
+	add	r6, r6, #0x1
+	cmp	r6, #0x4
 	bgt	.L274	@cond_branch
 	ldr	r0, [r3]
 	add	r0, r0, r1
@@ -25197,12 +24992,12 @@ PutNewBattleTowerRecord:
 	cmp	r0, #0
 	bne	.L270	@cond_branch
 .L269:
-	cmp	r5, #0x4
+	cmp	r6, #0x4
 	bgt	.L274	@cond_branch
 	ldr	r1, .L294
 	ldr	r0, [r1]
 	mov	r1, #0xec
-	mul	r1, r1, r5
+	mul	r1, r1, r6
 	add	r0, r0, r1
 	mov	r2, #0xe7
 	lsl	r2, r2, #0x3
@@ -25219,8 +25014,8 @@ PutNewBattleTowerRecord:
 	.word	0x73a
 .L274:
 	mov	r2, sp
-	ldr	r4, .L296
-	ldr	r0, [r4]
+	ldr	r3, .L296
+	ldr	r0, [r3]
 	ldr	r3, .L296+0x4
 	add	r0, r0, r3
 	ldrh	r0, [r0]
@@ -25228,26 +25023,26 @@ PutNewBattleTowerRecord:
 	strh	r0, [r2]
 	add	r0, sp, #0xc
 	strh	r1, [r0]
-	mov	r7, #0x1
-	add	r8, r8, r7
-	mov	r5, #0x1
-	add	r0, sp, #0xc
-	mov	r9, r0
+	mov	r4, #0x1
+	add	r8, r8, r4
+	mov	r6, #0x1
+	add	r7, sp, #0xc
+	mov	r9, r7
 	mov	ip, r3
 .L278:
 	mov	r3, #0x0
-	add	r7, r5, #0x1
+	add	r7, r6, #0x1
 	cmp	r3, r8
 	bge	.L280	@cond_branch
 	ldr	r1, .L296
 	ldr	r0, [r1]
 	mov	r2, #0xec
-	mov	r1, r5
+	mov	r1, r6
 	mul	r1, r1, r2
 	add	r0, r0, r1
 	mov	r1, ip
 	add	r4, r0, r1
-	mov	r6, sp
+	mov	r5, sp
 .L282:
 	lsl	r0, r3, #0x1
 	add	r0, r0, sp
@@ -25259,9 +25054,9 @@ PutNewBattleTowerRecord:
 	mov	r3, #0x0
 	mov	r4, #0x1
 	mov	r8, r4
-	strh	r2, [r6]
+	strh	r2, [r5]
 	mov	r0, r9
-	strh	r5, [r0]
+	strh	r6, [r0]
 	b	.L280
 .L297:
 	.align	2, 0
@@ -25284,29 +25079,29 @@ PutNewBattleTowerRecord:
 	ldr	r1, .L298
 	ldr	r0, [r1]
 	mov	r4, #0xec
-	mov	r1, r5
+	mov	r1, r6
 	mul	r1, r1, r4
 	add	r0, r0, r1
 	add	r0, r0, ip
 	ldrh	r0, [r0]
 	strh	r0, [r3]
 	add	r2, r2, r9
-	strh	r5, [r2]
+	strh	r6, [r2]
 	mov	r0, #0x1
 	add	r8, r8, r0
 .L277:
-	add	r5, r7, #0
-	cmp	r5, #0x4
+	add	r6, r7, #0
+	cmp	r6, #0x4
 	ble	.L278	@cond_branch
 	bl	Random
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	mov	r1, r8
 	bl	__modsi3
-	add	r5, r0, #0
+	add	r6, r0, #0
 	ldr	r0, .L298
 	ldr	r0, [r0]
-	lsl	r1, r5, #0x1
+	lsl	r1, r6, #0x1
 	add	r1, r1, sp
 	add	r1, r1, #0xc
 	ldrh	r2, [r1]
@@ -25320,7 +25115,7 @@ PutNewBattleTowerRecord:
 	mov	r2, #0xec
 	bl	memcpy
 .L246:
-	add	sp, sp, #0x20
+	add	sp, sp, #0x1c
 	pop	{r3, r4, r5}
 	mov	r8, r3
 	mov	r9, r4
@@ -25905,9 +25700,9 @@ GetFrontierTrainerName:
 	add	r1, r0, r2
 	ldrb	r0, [r1]
 	cmp	r0, #0xff
-	bne	.LCB2836
+	bne	.LCB2835
 	b	.L401	@long jump
-.LCB2836:
+.LCB2835:
 	add	r2, r1, #0
 .L415:
 	add	r0, r6, r4
@@ -26254,9 +26049,9 @@ FillTrainerParty:
 	mov	r6, r9
 	mov	r5, r8
 	push	{r5, r6, r7}
-	add	sp, sp, #-0x40
+	add	sp, sp, #-0x3c
 	lsl	r0, r0, #0x10
-	lsr	r5, r0, #0x10
+	lsr	r7, r0, #0x10
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
 	str	r1, [sp, #0x18]
@@ -26271,9 +26066,9 @@ FillTrainerParty:
 	lsr	r0, r0, #0x18
 	str	r0, [sp, #0x20]
 	ldr	r0, .L550
-	cmp	r5, r0
+	cmp	r7, r0
 	bhi	.L488	@cond_branch
-	add	r0, r5, #0
+	add	r0, r7, #0
 	bl	GetFrontierTrainerFixedIvs
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
@@ -26293,9 +26088,9 @@ FillTrainerParty:
 	ldrh	r1, [r2]
 	ldr	r0, .L550+0xc
 	cmp	r1, r0
-	bne	.LCB3352
+	bne	.LCB3351
 	b	.L513	@long jump
-.LCB3352:
+.LCB3351:
 	b	.L514
 .L551:
 	.align	2, 0
@@ -26307,34 +26102,34 @@ FillTrainerParty:
 .L488:
 	mov	r0, #0xfa
 	lsl	r0, r0, #0x1
-	cmp	r5, r0
-	bne	.L490	@cond_branch
-	ldr	r7, [sp, #0x18]
-	add	r0, r7, #0x3
 	cmp	r7, r0
-	blt	.LCB3375
+	bne	.L490	@cond_branch
+	ldr	r6, [sp, #0x18]
+	add	r0, r6, #0x3
+	cmp	r6, r0
+	blt	.LCB3374
 	b	.L487	@long jump
-.LCB3375:
+.LCB3374:
 	ldr	r4, .L552
 .L494:
 	mov	r0, #0x64
-	mul	r0, r0, r7
+	mul	r0, r0, r6
 	ldr	r1, .L552+0x4
 	add	r0, r0, r1
 	ldr	r5, [sp, #0x18]
-	sub	r2, r7, r5
+	sub	r2, r6, r5
 	mov	r1, #0x2c
 	mul	r2, r2, r1
-	mov	r6, #0xc2
-	lsl	r6, r6, #0x4
-	add	r2, r2, r6
+	mov	r7, #0xc2
+	lsl	r7, r7, #0x4
+	add	r2, r2, r7
 	ldr	r1, [r4]
 	add	r1, r1, r2
 	bl	CreateBattleTowerMon
-	add	r7, r7, #0x1
+	add	r6, r6, #0x1
 	add	r0, r5, #0
 	add	r0, r0, #0x3
-	cmp	r7, r0
+	cmp	r6, r0
 	blt	.L494	@cond_branch
 	b	.L487
 .L553:
@@ -26344,7 +26139,7 @@ FillTrainerParty:
 	.word	gEnemyParty
 .L490:
 	ldr	r0, .L554
-	cmp	r5, r0
+	cmp	r7, r0
 	bne	.L497	@cond_branch
 	bl	CreateFrontierBrainPokemon
 	b	.L487
@@ -26354,47 +26149,47 @@ FillTrainerParty:
 	.word	0x3fe
 .L497:
 	ldr	r0, .L556
-	cmp	r5, r0
-	bhi	.L499	@cond_branch
-	mov	r6, #0x0
-	ldr	r7, [sp, #0x18]
-	ldr	r1, [sp, #0x1c]
-	add	r0, r7, r1
 	cmp	r7, r0
-	blt	.LCB3441
+	bhi	.L499	@cond_branch
+	mov	r5, #0x0
+	ldr	r6, [sp, #0x18]
+	ldr	r1, [sp, #0x1c]
+	add	r0, r6, r1
+	cmp	r6, r0
+	blt	.LCB3440
 	b	.L487	@long jump
-.LCB3441:
+.LCB3440:
 	ldr	r2, .L556+0x4
-	add	r1, r5, r2
+	add	r1, r7, r2
 	mov	r0, #0xec
 	mov	r2, r1
 	mul	r2, r2, r0
 	mov	r8, r2
-	mul	r0, r0, r5
-	ldr	r5, .L556+0x8
-	add	r4, r0, r5
+	mul	r0, r0, r7
+	ldr	r7, .L556+0x8
+	add	r4, r0, r7
 .L503:
 	ldr	r0, .L556+0xc
 	ldr	r3, [r0]
 	mov	r0, #0x2c
-	mov	r2, r6
+	mov	r2, r5
 	mul	r2, r2, r0
 	mov	r1, r8
 	add	r0, r2, r1
 	add	r1, r3, r0
-	ldr	r5, .L556+0x10
-	add	r0, r1, r5
+	ldr	r7, .L556+0x10
+	add	r0, r1, r7
 	ldrh	r0, [r0]
 	cmp	r0, #0
 	beq	.L502	@cond_branch
-	add	r5, r5, #0xc
-	add	r0, r1, r5
+	add	r7, r7, #0xc
+	add	r0, r1, r7
 	ldrb	r0, [r0]
 	ldr	r1, [sp, #0x20]
 	cmp	r0, r1
 	bhi	.L502	@cond_branch
 	mov	r0, #0x64
-	mul	r0, r0, r7
+	mul	r0, r0, r6
 	ldr	r1, .L556+0x14
 	add	r0, r0, r1
 	add	r1, r3, r4
@@ -26403,12 +26198,12 @@ FillTrainerParty:
 	mov	r2, #0x0
 	bl	CreateBattleTowerMon2
 .L502:
+	add	r5, r5, #0x1
 	add	r6, r6, #0x1
-	add	r7, r7, #0x1
 	ldr	r2, [sp, #0x18]
-	ldr	r5, [sp, #0x1c]
-	add	r0, r2, r5
-	cmp	r7, r0
+	ldr	r7, [sp, #0x1c]
+	add	r0, r2, r7
+	cmp	r6, r0
 	blt	.L503	@cond_branch
 	b	.L487
 .L557:
@@ -26421,35 +26216,37 @@ FillTrainerParty:
 	.word	0x76c
 	.word	gEnemyParty
 .L499:
-	ldr	r7, [sp, #0x18]
-	add	r0, r7, #0x3
-	cmp	r7, r0
-	blt	.LCB3521
+	ldr	r6, [sp, #0x18]
+	add	r0, r6, #0x3
+	cmp	r6, r0
+	blt	.LCB3520
 	b	.L487	@long jump
-.LCB3521:
-	ldr	r6, .L558
-	lsl	r0, r5, #0x4
-	add	r0, r0, r5
+.LCB3520:
+	ldr	r0, .L558
+	mov	r8, r0
+	lsl	r0, r7, #0x4
+	add	r0, r0, r7
 	lsl	r0, r0, #0x2
 	ldr	r1, .L558+0x4
 	add	r5, r0, r1
 	mov	r4, #0x0
 .L510:
 	mov	r0, #0x64
-	mul	r0, r0, r7
+	mul	r0, r0, r6
 	ldr	r1, .L558+0x8
 	add	r0, r0, r1
-	ldr	r1, [r6]
+	mov	r2, r8
+	ldr	r1, [r2]
 	add	r1, r1, r5
 	lsr	r2, r4, #0x18
 	bl	CreateApprenticeMon
-	mov	r2, #0x80
-	lsl	r2, r2, #0x11
-	add	r4, r4, r2
-	add	r7, r7, #0x1
+	mov	r7, #0x80
+	lsl	r7, r7, #0x11
+	add	r4, r4, r7
+	add	r6, r6, #0x1
 	ldr	r0, [sp, #0x18]
 	add	r0, r0, #0x3
-	cmp	r7, r0
+	cmp	r6, r0
 	blt	.L510	@cond_branch
 	b	.L487
 .L559:
@@ -26465,14 +26262,14 @@ FillTrainerParty:
 	lsr	r0, r0, #0x18
 	str	r0, [sp, #0x28]
 	lsl	r0, r0, #0x1
-	ldr	r5, [sp, #0x2c]
-	add	r0, r0, r5
+	ldr	r1, [sp, #0x2c]
+	add	r0, r0, r1
 	ldrh	r1, [r0]
 	ldr	r0, .L560
 	cmp	r1, r0
 	bne	.L514	@cond_branch
 .L513:
-	mov	r7, #0x0
+	mov	r6, #0x0
 	bl	Random
 	add	r4, r0, #0
 	bl	Random
@@ -26481,11 +26278,11 @@ FillTrainerParty:
 	lsl	r0, r0, #0x10
 	orr	r4, r4, r0
 	str	r4, [sp, #0x30]
-	ldr	r6, [sp, #0x1c]
-	cmp	r7, r6
-	bne	.LCB3603
+	ldr	r2, [sp, #0x1c]
+	cmp	r6, r2
+	bne	.LCB3604
 	b	.L487	@long jump
-.LCB3603:
+.LCB3604:
 .L519:
 	bl	Random
 	lsl	r0, r0, #0x10
@@ -26493,66 +26290,66 @@ FillTrainerParty:
 	ldr	r1, [sp, #0x28]
 	bl	__modsi3
 	lsl	r0, r0, #0x1
-	ldr	r1, [sp, #0x2c]
-	add	r0, r0, r1
-	ldrh	r4, [r0]
-	ldr	r2, [sp, #0x20]
-	cmp	r2, #0x32
+	ldr	r5, [sp, #0x2c]
+	add	r0, r0, r5
+	ldrh	r7, [r0]
+	ldr	r0, [sp, #0x20]
+	cmp	r0, #0x32
 	beq	.L521	@cond_branch
-	cmp	r2, #0x14
+	cmp	r0, #0x14
 	bne	.L520	@cond_branch
 .L521:
-	ldr	r0, .L560+0x4
-	cmp	r4, r0
-	bls	.LCB3631
+	mov	r0, #0x9f
+	lsl	r0, r0, #0x2
+	cmp	r7, r0
+	bls	.LCB3634
 	b	.L517	@long jump
-.LCB3631:
+.LCB3634:
 .L520:
-	mov	r6, #0x0
-	ldr	r5, [sp, #0x18]
-	add	r5, r5, r7
-	mov	r8, r5
+	mov	r5, #0x0
+	ldr	r1, [sp, #0x18]
+	add	r1, r1, r6
+	mov	r8, r1
 	b	.L522
 .L561:
 	.align	2, 0
 .L560:
 	.word	0xffff
-	.word	0x257
 .L524:
-	add	r6, r6, #0x1
+	add	r5, r5, #0x1
 .L522:
-	cmp	r6, r8
+	cmp	r5, r8
 	bge	.L523	@cond_branch
-	mov	r1, #0x64
-	mov	r0, r6
-	mul	r0, r0, r1
-	ldr	r2, .L562
-	add	r0, r0, r2
+	mov	r2, #0x64
+	mov	r0, r5
+	mul	r0, r0, r2
+	ldr	r1, .L562
+	add	r0, r0, r1
 	mov	r1, #0xb
 	mov	r2, #0x0
 	bl	GetMonData
 	ldr	r1, .L562+0x4
 	ldr	r2, [r1]
-	lsl	r1, r4, #0x4
+	lsl	r1, r7, #0x4
 	add	r1, r1, r2
 	ldrh	r1, [r1]
 	cmp	r0, r1
 	bne	.L524	@cond_branch
 .L523:
-	cmp	r6, r8
-	beq	.LCB3675
+	cmp	r5, r8
+	beq	.LCB3677
 	b	.L517	@long jump
-.LCB3675:
-	mov	r6, #0x0
-	cmp	r6, r8
+.LCB3677:
+	mov	r5, #0x0
+	cmp	r5, r8
 	bge	.L530	@cond_branch
-	ldr	r5, .L562+0x8
-	mov	r9, r5
+	ldr	r2, .L562+0x8
+	mov	r9, r2
 	mov	r3, #0x0
 .L532:
 	ldr	r0, .L562
-	add	r5, r3, r0
-	add	r0, r5, #0
+	add	r4, r3, r0
+	add	r0, r4, #0
 	mov	r1, #0xc
 	mov	r2, #0x0
 	str	r3, [sp, #0x38]
@@ -26560,13 +26357,13 @@ FillTrainerParty:
 	ldr	r3, [sp, #0x38]
 	cmp	r0, #0
 	beq	.L531	@cond_branch
-	add	r0, r5, #0
+	add	r0, r4, #0
 	mov	r1, #0xc
 	mov	r2, #0x0
 	bl	GetMonData
 	ldr	r1, .L562+0x4
 	ldr	r2, [r1]
-	lsl	r1, r4, #0x4
+	lsl	r1, r7, #0x4
 	add	r1, r1, r2
 	ldrb	r1, [r1, #0xa]
 	lsl	r1, r1, #0x1
@@ -26577,110 +26374,109 @@ FillTrainerParty:
 	beq	.L530	@cond_branch
 .L531:
 	add	r3, r3, #0x64
-	add	r6, r6, #0x1
-	cmp	r6, r8
+	add	r5, r5, #0x1
+	cmp	r5, r8
 	blt	.L532	@cond_branch
 .L530:
-	cmp	r6, r8
+	cmp	r5, r8
 	bne	.L517	@cond_branch
-	mov	r6, #0x0
-	cmp	r6, r7
+	mov	r5, #0x0
+	cmp	r5, r6
 	bge	.L537	@cond_branch
 	add	r0, sp, #0xc
 	ldrh	r0, [r0]
-	cmp	r0, r4
+	cmp	r0, r7
 	beq	.L537	@cond_branch
 	add	r1, sp, #0xc
 .L538:
 	add	r1, r1, #0x2
-	add	r6, r6, #0x1
-	cmp	r6, r7
+	add	r5, r5, #0x1
+	cmp	r5, r6
 	bge	.L537	@cond_branch
 	ldrh	r0, [r1]
-	cmp	r0, r4
+	cmp	r0, r7
 	bne	.L538	@cond_branch
 .L537:
-	cmp	r6, r7
+	cmp	r5, r6
 	bne	.L517	@cond_branch
-	lsl	r0, r7, #0x1
+	lsl	r0, r6, #0x1
 	add	r0, r0, sp
 	add	r0, r0, #0xc
-	strh	r4, [r0]
-	mov	r1, #0x64
+	strh	r7, [r0]
+	mov	r2, #0x64
 	mov	r0, r8
-	mul	r0, r0, r1
-	ldr	r2, .L562
-	add	r0, r0, r2
-	ldr	r5, .L562+0x4
-	ldr	r2, [r5]
-	lsl	r4, r4, #0x4
+	mul	r0, r0, r2
+	ldr	r5, .L562
+	add	r0, r0, r5
+	ldr	r1, .L562+0x4
+	ldr	r2, [r1]
+	lsl	r4, r7, #0x4
 	add	r2, r4, r2
 	ldrh	r1, [r2]
 	ldrb	r3, [r2, #0xc]
-	ldr	r6, [sp, #0x24]
-	str	r6, [sp]
+	ldr	r5, [sp, #0x24]
+	str	r5, [sp]
 	ldrb	r2, [r2, #0xb]
 	str	r2, [sp, #0x4]
-	ldr	r2, [sp, #0x30]
-	str	r2, [sp, #0x8]
+	ldr	r7, [sp, #0x30]
+	str	r7, [sp, #0x8]
 	ldr	r2, [sp, #0x20]
 	bl	CreateMonWithEVSpreadNatureOTID
 	mov	r0, #0xff
-	mov	r6, sp
-	strb	r0, [r6, #0x14]
-	mov	r6, #0x0
-	add	r0, r7, #0x1
-	str	r0, [sp, #0x34]
-	mov	r9, r4
+	mov	r1, sp
+	strb	r0, [r1, #0x14]
+	mov	r5, #0x0
+	add	r6, r6, #0x1
+	str	r6, [sp, #0x34]
+	add	r7, r4, #0
 	mov	r0, #0x64
-	mov	r3, r8
-	mul	r3, r3, r0
-	mov	r1, r9
-	str	r1, [sp, #0x3c]
-	ldr	r2, .L562
-	mov	sl, r2
+	mov	r2, r8
+	mul	r2, r2, r0
+	mov	r9, r2
+	ldr	r3, .L562+0x4
+	add	r6, r7, #0
+	ldr	r0, .L562
+	mov	sl, r0
 .L546:
-	ldr	r0, [r5]
-	ldr	r7, [sp, #0x3c]
-	add	r0, r7, r0
-	lsl	r4, r6, #0x1
+	ldr	r0, [r3]
+	add	r0, r6, r0
+	lsl	r4, r5, #0x1
 	add	r0, r0, #0x2
 	add	r0, r0, r4
 	ldrh	r1, [r0]
-	lsl	r2, r6, #0x18
+	lsl	r2, r5, #0x18
 	lsr	r2, r2, #0x18
-	mov	r7, sl
-	add	r0, r3, r7
+	mov	r0, r9
+	add	r0, r0, sl
 	str	r3, [sp, #0x38]
 	bl	SetMonMoveSlot
-	ldr	r0, [r5]
-	ldr	r1, [sp, #0x3c]
-	add	r0, r1, r0
+	ldr	r3, [sp, #0x38]
+	ldr	r0, [r3]
+	add	r0, r6, r0
 	add	r0, r0, #0x2
 	add	r0, r0, r4
 	ldrh	r0, [r0]
-	ldr	r3, [sp, #0x38]
 	cmp	r0, #0xda
 	bne	.L545	@cond_branch
 	mov	r0, #0x0
-	mov	r2, sp
-	strb	r0, [r2, #0x14]
+	mov	r1, sp
+	strb	r0, [r1, #0x14]
 .L545:
-	add	r6, r6, #0x1
-	cmp	r6, #0x3
+	add	r5, r5, #0x1
+	cmp	r5, #0x3
 	ble	.L546	@cond_branch
-	mov	r5, #0x64
+	mov	r2, #0x64
 	mov	r4, r8
-	mul	r4, r4, r5
-	ldr	r6, .L562
-	add	r4, r4, r6
+	mul	r4, r4, r2
+	ldr	r5, .L562
+	add	r4, r4, r5
 	add	r0, r4, #0
 	mov	r1, #0x20
 	add	r2, sp, #0x14
 	bl	SetMonData
-	ldr	r0, .L562+0x4
-	ldr	r0, [r0]
-	add	r0, r0, r9
+	ldr	r1, .L562+0x4
+	ldr	r0, [r1]
+	add	r0, r7, r0
 	ldrb	r2, [r0, #0xa]
 	lsl	r2, r2, #0x1
 	ldr	r0, .L562+0x8
@@ -26688,15 +26484,22 @@ FillTrainerParty:
 	add	r0, r4, #0
 	mov	r1, #0xc
 	bl	SetMonData
-	ldr	r7, [sp, #0x34]
+	ldr	r5, .L562+0x4
+	ldr	r2, [r5]
+	add	r2, r2, r7
+	add	r2, r2, #0xd
+	add	r0, r4, #0
+	mov	r1, #0x2e
+	bl	SetMonData
+	ldr	r6, [sp, #0x34]
 .L517:
-	ldr	r0, [sp, #0x1c]
-	cmp	r7, r0
-	beq	.LCB3869
+	ldr	r7, [sp, #0x1c]
+	cmp	r6, r7
+	beq	.LCB3877
 	b	.L519	@long jump
-.LCB3869:
+.LCB3877:
 .L487:
-	add	sp, sp, #0x40
+	add	sp, sp, #0x3c
 	pop	{r3, r4, r5}
 	mov	r8, r3
 	mov	r9, r4
@@ -26881,7 +26684,8 @@ GetRandomFrontierMonFromSet:
 	cmp	r6, #0x14
 	bne	.L589	@cond_branch
 .L593:
-	ldr	r0, .L599+0x4
+	mov	r0, #0x9f
+	lsl	r0, r0, #0x2
 	cmp	r1, r0
 	bhi	.L588	@cond_branch
 .L589:
@@ -26893,7 +26697,6 @@ GetRandomFrontierMonFromSet:
 	.align	2, 0
 .L599:
 	.word	0xffff
-	.word	0x257
 .Lfe24:
 	.size	 GetRandomFrontierMonFromSet,.Lfe24-GetRandomFrontierMonFromSet
 	.align	2, 0
@@ -26937,6 +26740,504 @@ FillFactoryTrainerParty:
 .Lfe25:
 	.size	 FillFactoryTrainerParty,.Lfe25-FillFactoryTrainerParty
 	.align	2, 0
+	.type	 FillFrontierTrainerPartyFake,function
+	.thumb_func
+FillFrontierTrainerPartyFake:
+	push	{r4, lr}
+	add	r4, r0, #0
+	lsl	r4, r4, #0x18
+	lsr	r4, r4, #0x18
+	bl	ZeroEnemyPartyMons
+	ldr	r0, .L609
+	ldrh	r0, [r0]
+	mov	r1, #0x0
+	add	r2, r4, #0
+	bl	FillTrainerPartyFAKE
+	pop	{r4}
+	pop	{r0}
+	bx	r0
+.L610:
+	.align	2, 0
+.L609:
+	.word	gTrainerBattleOpponent_A
+.Lfe26:
+	.size	 FillFrontierTrainerPartyFake,.Lfe26-FillFrontierTrainerPartyFake
+	.align	2, 0
+	.type	 FillTrainerPartyFAKE,function
+	.thumb_func
+FillTrainerPartyFAKE:
+	push	{r4, r5, r6, r7, lr}
+	mov	r7, sl
+	mov	r6, r9
+	mov	r5, r8
+	push	{r5, r6, r7}
+	add	sp, sp, #-0x3c
+	lsl	r0, r0, #0x10
+	lsr	r7, r0, #0x10
+	lsl	r1, r1, #0x18
+	lsr	r1, r1, #0x18
+	str	r1, [sp, #0x18]
+	lsl	r2, r2, #0x18
+	lsr	r2, r2, #0x18
+	str	r2, [sp, #0x1c]
+	add	r4, sp, #0x14
+	mov	r0, #0xff
+	strb	r0, [r4]
+	bl	SetFacilityPtrsGetLevel
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	str	r0, [sp, #0x20]
+	ldr	r0, .L674
+	cmp	r7, r0
+	bhi	.L612	@cond_branch
+	add	r0, r7, #0
+	bl	GetFrontierTrainerFixedIvs
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	str	r0, [sp, #0x24]
+	ldr	r0, .L674+0x4
+	ldrh	r2, [r0]
+	ldr	r0, .L674+0x8
+	ldr	r1, [r0]
+	mov	r0, #0x34
+	mul	r0, r0, r2
+	add	r0, r0, r1
+	ldr	r0, [r0, #0x30]
+	str	r0, [sp, #0x2c]
+	mov	r0, #0x0
+	str	r0, [sp, #0x28]
+	ldr	r2, [sp, #0x2c]
+	ldrh	r1, [r2]
+	ldr	r0, .L674+0xc
+	cmp	r1, r0
+	bne	.LCB4268
+	b	.L637	@long jump
+.LCB4268:
+	b	.L638
+.L675:
+	.align	2, 0
+.L674:
+	.word	0x12b
+	.word	gTrainerBattleOpponent_A
+	.word	gFacilityTrainers
+	.word	0xffff
+.L612:
+	mov	r0, #0xfa
+	lsl	r0, r0, #0x1
+	cmp	r7, r0
+	bne	.L614	@cond_branch
+	ldr	r6, [sp, #0x18]
+	add	r0, r6, #0x3
+	cmp	r6, r0
+	blt	.LCB4291
+	b	.L611	@long jump
+.LCB4291:
+	ldr	r4, .L676
+.L618:
+	mov	r0, #0x64
+	mul	r0, r0, r6
+	ldr	r1, .L676+0x4
+	add	r0, r0, r1
+	ldr	r5, [sp, #0x18]
+	sub	r2, r6, r5
+	mov	r1, #0x2c
+	mul	r2, r2, r1
+	mov	r7, #0xc2
+	lsl	r7, r7, #0x4
+	add	r2, r2, r7
+	ldr	r1, [r4]
+	add	r1, r1, r2
+	bl	CreateBattleTowerMon
+	add	r6, r6, #0x1
+	add	r0, r5, #0
+	add	r0, r0, #0x3
+	cmp	r6, r0
+	blt	.L618	@cond_branch
+	b	.L611
+.L677:
+	.align	2, 0
+.L676:
+	.word	gSaveBlock2Ptr
+	.word	gEnemyParty
+.L614:
+	ldr	r0, .L678
+	cmp	r7, r0
+	bne	.L621	@cond_branch
+	bl	CreateFrontierBrainPokemon
+	b	.L611
+.L679:
+	.align	2, 0
+.L678:
+	.word	0x3fe
+.L621:
+	ldr	r0, .L680
+	cmp	r7, r0
+	bhi	.L623	@cond_branch
+	mov	r5, #0x0
+	ldr	r6, [sp, #0x18]
+	ldr	r1, [sp, #0x1c]
+	add	r0, r6, r1
+	cmp	r6, r0
+	blt	.LCB4357
+	b	.L611	@long jump
+.LCB4357:
+	ldr	r2, .L680+0x4
+	add	r1, r7, r2
+	mov	r0, #0xec
+	mov	r2, r1
+	mul	r2, r2, r0
+	mov	r8, r2
+	mul	r0, r0, r7
+	ldr	r7, .L680+0x8
+	add	r4, r0, r7
+.L627:
+	ldr	r0, .L680+0xc
+	ldr	r3, [r0]
+	mov	r0, #0x2c
+	mov	r2, r5
+	mul	r2, r2, r0
+	mov	r1, r8
+	add	r0, r2, r1
+	add	r1, r3, r0
+	ldr	r7, .L680+0x10
+	add	r0, r1, r7
+	ldrh	r0, [r0]
+	cmp	r0, #0
+	beq	.L626	@cond_branch
+	add	r7, r7, #0xc
+	add	r0, r1, r7
+	ldrb	r0, [r0]
+	ldr	r1, [sp, #0x20]
+	cmp	r0, r1
+	bhi	.L626	@cond_branch
+	mov	r0, #0x64
+	mul	r0, r0, r6
+	ldr	r1, .L680+0x14
+	add	r0, r0, r1
+	add	r1, r3, r4
+	add	r2, r2, #0x34
+	add	r1, r1, r2
+	mov	r2, #0x0
+	bl	CreateBattleTowerMon2
+.L626:
+	add	r5, r5, #0x1
+	add	r6, r6, #0x1
+	ldr	r2, [sp, #0x18]
+	ldr	r7, [sp, #0x1c]
+	add	r0, r2, r7
+	cmp	r6, r0
+	blt	.L627	@cond_branch
+	b	.L611
+.L681:
+	.align	2, 0
+.L680:
+	.word	0x18f
+	.word	-0x12c
+	.word	-0x10d58
+	.word	gSaveBlock2Ptr
+	.word	0x76c
+	.word	gEnemyParty
+.L623:
+	ldr	r6, [sp, #0x18]
+	add	r0, r6, #0x3
+	cmp	r6, r0
+	blt	.LCB4437
+	b	.L611	@long jump
+.LCB4437:
+	ldr	r0, .L682
+	mov	r8, r0
+	lsl	r0, r7, #0x4
+	add	r0, r0, r7
+	lsl	r0, r0, #0x2
+	ldr	r1, .L682+0x4
+	add	r5, r0, r1
+	mov	r4, #0x0
+.L634:
+	mov	r0, #0x64
+	mul	r0, r0, r6
+	ldr	r1, .L682+0x8
+	add	r0, r0, r1
+	mov	r2, r8
+	ldr	r1, [r2]
+	add	r1, r1, r5
+	lsr	r2, r4, #0x18
+	bl	CreateApprenticeMon
+	mov	r7, #0x80
+	lsl	r7, r7, #0x11
+	add	r4, r4, r7
+	add	r6, r6, #0x1
+	ldr	r0, [sp, #0x18]
+	add	r0, r0, #0x3
+	cmp	r6, r0
+	blt	.L634	@cond_branch
+	b	.L611
+.L683:
+	.align	2, 0
+.L682:
+	.word	gSaveBlock2Ptr
+	.word	-0x6964
+	.word	gEnemyParty
+.L638:
+	ldr	r0, [sp, #0x28]
+	add	r0, r0, #0x1
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	str	r0, [sp, #0x28]
+	lsl	r0, r0, #0x1
+	ldr	r1, [sp, #0x2c]
+	add	r0, r0, r1
+	ldrh	r1, [r0]
+	ldr	r0, .L684
+	cmp	r1, r0
+	bne	.L638	@cond_branch
+.L637:
+	mov	r6, #0x0
+	bl	Random
+	add	r4, r0, #0
+	bl	Random
+	lsl	r4, r4, #0x10
+	lsr	r4, r4, #0x10
+	lsl	r0, r0, #0x10
+	orr	r4, r4, r0
+	str	r4, [sp, #0x30]
+	ldr	r2, [sp, #0x1c]
+	cmp	r6, r2
+	bne	.LCB4521
+	b	.L611	@long jump
+.LCB4521:
+.L643:
+	bl	Random
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
+	ldr	r1, [sp, #0x28]
+	bl	__modsi3
+	lsl	r0, r0, #0x1
+	ldr	r5, [sp, #0x2c]
+	add	r0, r0, r5
+	ldrh	r7, [r0]
+	ldr	r0, [sp, #0x20]
+	cmp	r0, #0x32
+	beq	.L645	@cond_branch
+	cmp	r0, #0x14
+	bne	.L644	@cond_branch
+.L645:
+	mov	r0, #0x9f
+	lsl	r0, r0, #0x2
+	cmp	r7, r0
+	bls	.LCB4551
+	b	.L641	@long jump
+.LCB4551:
+.L644:
+	mov	r5, #0x0
+	ldr	r1, [sp, #0x18]
+	add	r1, r1, r6
+	mov	r8, r1
+	b	.L646
+.L685:
+	.align	2, 0
+.L684:
+	.word	0xffff
+.L648:
+	add	r5, r5, #0x1
+.L646:
+	cmp	r5, r8
+	bge	.L647	@cond_branch
+	mov	r2, #0x64
+	mov	r0, r5
+	mul	r0, r0, r2
+	ldr	r1, .L686
+	add	r0, r0, r1
+	mov	r1, #0xb
+	mov	r2, #0x0
+	bl	GetMonData
+	ldr	r1, .L686+0x4
+	ldr	r2, [r1]
+	lsl	r1, r7, #0x4
+	add	r1, r1, r2
+	ldrh	r1, [r1]
+	cmp	r0, r1
+	bne	.L648	@cond_branch
+.L647:
+	cmp	r5, r8
+	beq	.LCB4594
+	b	.L641	@long jump
+.LCB4594:
+	mov	r5, #0x0
+	cmp	r5, r8
+	bge	.L654	@cond_branch
+	ldr	r2, .L686+0x8
+	mov	r9, r2
+	mov	r3, #0x0
+.L656:
+	ldr	r0, .L686
+	add	r4, r3, r0
+	add	r0, r4, #0
+	mov	r1, #0xc
+	mov	r2, #0x0
+	str	r3, [sp, #0x38]
+	bl	GetMonData
+	ldr	r3, [sp, #0x38]
+	cmp	r0, #0
+	beq	.L655	@cond_branch
+	add	r0, r4, #0
+	mov	r1, #0xc
+	mov	r2, #0x0
+	bl	GetMonData
+	ldr	r1, .L686+0x4
+	ldr	r2, [r1]
+	lsl	r1, r7, #0x4
+	add	r1, r1, r2
+	ldrb	r1, [r1, #0xa]
+	lsl	r1, r1, #0x1
+	add	r1, r1, r9
+	ldr	r3, [sp, #0x38]
+	ldrh	r1, [r1]
+	cmp	r0, r1
+	beq	.L654	@cond_branch
+.L655:
+	add	r3, r3, #0x64
+	add	r5, r5, #0x1
+	cmp	r5, r8
+	blt	.L656	@cond_branch
+.L654:
+	cmp	r5, r8
+	bne	.L641	@cond_branch
+	mov	r5, #0x0
+	cmp	r5, r6
+	bge	.L661	@cond_branch
+	add	r0, sp, #0xc
+	ldrh	r0, [r0]
+	cmp	r0, r7
+	beq	.L661	@cond_branch
+	add	r1, sp, #0xc
+.L662:
+	add	r1, r1, #0x2
+	add	r5, r5, #0x1
+	cmp	r5, r6
+	bge	.L661	@cond_branch
+	ldrh	r0, [r1]
+	cmp	r0, r7
+	bne	.L662	@cond_branch
+.L661:
+	cmp	r5, r6
+	bne	.L641	@cond_branch
+	lsl	r0, r6, #0x1
+	add	r0, r0, sp
+	add	r0, r0, #0xc
+	strh	r7, [r0]
+	mov	r2, #0x64
+	mov	r0, r8
+	mul	r0, r0, r2
+	ldr	r5, .L686
+	add	r0, r0, r5
+	ldr	r1, .L686+0x4
+	ldr	r2, [r1]
+	lsl	r4, r7, #0x4
+	add	r2, r4, r2
+	ldrh	r1, [r2]
+	ldrb	r3, [r2, #0xc]
+	ldr	r5, [sp, #0x24]
+	str	r5, [sp]
+	ldrb	r2, [r2, #0xb]
+	str	r2, [sp, #0x4]
+	ldr	r7, [sp, #0x30]
+	str	r7, [sp, #0x8]
+	mov	r2, #0x64
+	bl	CreateMonWithEVSpreadNatureOTID
+	mov	r0, #0xff
+	mov	r1, sp
+	strb	r0, [r1, #0x14]
+	mov	r5, #0x0
+	add	r6, r6, #0x1
+	str	r6, [sp, #0x34]
+	add	r7, r4, #0
+	mov	r0, #0x64
+	mov	r2, r8
+	mul	r2, r2, r0
+	mov	r9, r2
+	ldr	r3, .L686+0x4
+	add	r6, r7, #0
+	ldr	r0, .L686
+	mov	sl, r0
+.L670:
+	ldr	r0, [r3]
+	add	r0, r6, r0
+	lsl	r4, r5, #0x1
+	add	r0, r0, #0x2
+	add	r0, r0, r4
+	ldrh	r1, [r0]
+	lsl	r2, r5, #0x18
+	lsr	r2, r2, #0x18
+	mov	r0, r9
+	add	r0, r0, sl
+	str	r3, [sp, #0x38]
+	bl	SetMonMoveSlot
+	ldr	r3, [sp, #0x38]
+	ldr	r0, [r3]
+	add	r0, r6, r0
+	add	r0, r0, #0x2
+	add	r0, r0, r4
+	ldrh	r0, [r0]
+	cmp	r0, #0xda
+	bne	.L669	@cond_branch
+	mov	r0, #0x0
+	mov	r1, sp
+	strb	r0, [r1, #0x14]
+.L669:
+	add	r5, r5, #0x1
+	cmp	r5, #0x3
+	ble	.L670	@cond_branch
+	mov	r2, #0x64
+	mov	r4, r8
+	mul	r4, r4, r2
+	ldr	r5, .L686
+	add	r4, r4, r5
+	add	r0, r4, #0
+	mov	r1, #0x20
+	add	r2, sp, #0x14
+	bl	SetMonData
+	ldr	r1, .L686+0x4
+	ldr	r0, [r1]
+	add	r0, r7, r0
+	ldrb	r2, [r0, #0xa]
+	lsl	r2, r2, #0x1
+	ldr	r0, .L686+0x8
+	add	r2, r2, r0
+	add	r0, r4, #0
+	mov	r1, #0xc
+	bl	SetMonData
+	ldr	r5, .L686+0x4
+	ldr	r2, [r5]
+	add	r2, r2, r7
+	add	r2, r2, #0xd
+	add	r0, r4, #0
+	mov	r1, #0x2e
+	bl	SetMonData
+	ldr	r6, [sp, #0x34]
+.L641:
+	ldr	r7, [sp, #0x1c]
+	cmp	r6, r7
+	beq	.LCB4794
+	b	.L643	@long jump
+.LCB4794:
+.L611:
+	add	sp, sp, #0x3c
+	pop	{r3, r4, r5}
+	mov	r8, r3
+	mov	r9, r4
+	mov	sl, r5
+	pop	{r4, r5, r6, r7}
+	pop	{r0}
+	bx	r0
+.L687:
+	.align	2, 0
+.L686:
+	.word	gEnemyParty
+	.word	gFacilityTrainerMons
+	.word	gBattleFrontierHeldItems
+.Lfe27:
+	.size	 FillTrainerPartyFAKE,.Lfe27-FillTrainerPartyFAKE
+	.align	2, 0
 	.type	 FillFactoryFrontierTrainerParty,function
 	.thumb_func
 FillFactoryFrontierTrainerParty:
@@ -26952,11 +27253,11 @@ FillFactoryFrontierTrainerParty:
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
 	str	r1, [sp, #0x10]
-	ldr	r0, .L633
+	ldr	r0, .L713
 	cmp	r2, r0
-	bhi	.L609	@cond_branch
-	ldr	r4, .L633+0x4
-	ldr	r0, .L633+0x8
+	bhi	.L689	@cond_branch
+	ldr	r4, .L713+0x4
+	ldr	r0, .L713+0x8
 	bl	VarGet
 	lsl	r0, r0, #0x18
 	ldr	r4, [r4]
@@ -26970,47 +27271,47 @@ FillFactoryFrontierTrainerParty:
 	bl	__udivsi3
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
-	ldr	r3, .L633+0xc
+	ldr	r3, .L713+0xc
 	add	r4, r4, r3
 	ldrh	r0, [r4]
 	cmp	r0, #0x5
-	bhi	.L610	@cond_branch
+	bhi	.L690	@cond_branch
 	add	r0, r1, #0
 	mov	r1, #0x0
 	bl	GetFactoryMonFixedIV
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	b	.L632
-.L634:
+	b	.L712
+.L714:
 	.align	2, 0
-.L633:
+.L713:
 	.word	0x12b
 	.word	gSaveBlock2Ptr
 	.word	0x40ce
 	.word	0xcb2
-.L610:
+.L690:
 	add	r0, r1, #0
 	mov	r1, #0x1
 	bl	GetFactoryMonFixedIV
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	b	.L632
-.L609:
+	b	.L712
+.L689:
 	mov	r0, #0xfa
 	lsl	r0, r0, #0x1
 	cmp	r2, r0
-	bne	.L613	@cond_branch
+	bne	.L693	@cond_branch
 	ldr	r7, [sp, #0x10]
 	add	r0, r7, #0x3
 	cmp	r7, r0
-	blt	.LCB4270
-	b	.L608	@long jump
-.LCB4270:
-	ldr	r4, .L635
-.L617:
+	blt	.LCB4907
+	b	.L688	@long jump
+.LCB4907:
+	ldr	r4, .L715
+.L697:
 	mov	r0, #0x64
 	mul	r0, r0, r7
-	ldr	r1, .L635+0x4
+	ldr	r1, .L715+0x4
 	add	r0, r0, r1
 	ldr	r1, [sp, #0x10]
 	sub	r2, r7, r1
@@ -27028,32 +27329,32 @@ FillFactoryFrontierTrainerParty:
 	ldr	r0, [sp, #0x10]
 	add	r0, r0, #0x3
 	cmp	r7, r0
-	blt	.L617	@cond_branch
-	b	.L608
-.L636:
+	blt	.L697	@cond_branch
+	b	.L688
+.L716:
 	.align	2, 0
-.L635:
+.L715:
 	.word	gSaveBlock2Ptr
 	.word	gEnemyParty
-.L613:
-	ldr	r0, .L637
+.L693:
+	ldr	r0, .L717
 	cmp	r3, r0
-	bne	.L620	@cond_branch
+	bne	.L700	@cond_branch
 	bl	FillFactoryBrainParty
-	b	.L608
-.L638:
+	b	.L688
+.L718:
 	.align	2, 0
-.L637:
+.L717:
 	.word	0x3fe
-.L620:
+.L700:
 	mov	r0, #0x1f
-.L632:
+.L712:
 	str	r0, [sp, #0x18]
 	bl	SetFacilityPtrsGetLevel
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	str	r0, [sp, #0x14]
-	ldr	r0, .L639
+	ldr	r0, .L719
 	ldr	r1, [r0]
 	ldrb	r2, [r1, #0xa]
 	ldrb	r0, [r1, #0xb]
@@ -27067,8 +27368,8 @@ FillFactoryFrontierTrainerParty:
 	orr	r2, r2, r0
 	mov	r8, r2
 	mov	r7, #0x0
-.L625:
-	ldr	r1, .L639+0x4
+.L705:
+	ldr	r1, .L719+0x4
 	lsl	r0, r7, #0x1
 	add	r0, r0, r1
 	ldrh	r0, [r0]
@@ -27078,9 +27379,9 @@ FillFactoryFrontierTrainerParty:
 	mov	r0, #0x64
 	mov	r6, r5
 	mul	r6, r6, r0
-	ldr	r1, .L639+0x8
+	ldr	r1, .L719+0x8
 	add	r0, r6, r1
-	ldr	r3, .L639+0xc
+	ldr	r3, .L719+0xc
 	ldr	r2, [r3]
 	mov	r1, r9
 	lsl	r4, r1, #0x4
@@ -27104,8 +27405,8 @@ FillFactoryFrontierTrainerParty:
 	add	r7, r7, #0x1
 	mov	sl, r7
 	add	r7, r4, #0
-.L629:
-	ldr	r0, .L639+0xc
+.L709:
+	ldr	r0, .L719+0xc
 	ldr	r1, [r0]
 	mov	r2, r9
 	lsl	r0, r2, #0x4
@@ -27114,7 +27415,7 @@ FillFactoryFrontierTrainerParty:
 	add	r0, r0, #0x2
 	add	r0, r0, r1
 	ldrh	r1, [r0]
-	ldr	r2, .L639+0x8
+	ldr	r2, .L719+0x8
 	add	r0, r6, r2
 	add	r2, r3, #0
 	str	r3, [sp, #0x1c]
@@ -27124,22 +27425,22 @@ FillFactoryFrontierTrainerParty:
 	lsl	r0, r0, #0x18
 	lsr	r3, r0, #0x18
 	cmp	r3, #0x3
-	bls	.L629	@cond_branch
+	bls	.L709	@cond_branch
 	mov	r3, #0x64
 	mov	r4, r5
 	mul	r4, r4, r3
-	ldr	r0, .L639+0x8
+	ldr	r0, .L719+0x8
 	add	r4, r4, r0
 	add	r0, r4, #0
 	mov	r1, #0x20
 	add	r2, sp, #0xc
 	bl	SetMonData
-	ldr	r1, .L639+0xc
+	ldr	r1, .L719+0xc
 	ldr	r0, [r1]
 	add	r0, r7, r0
 	ldrb	r2, [r0, #0xa]
 	lsl	r2, r2, #0x1
-	ldr	r0, .L639+0x10
+	ldr	r0, .L719+0x10
 	add	r2, r2, r0
 	add	r0, r4, #0
 	mov	r1, #0xc
@@ -27148,8 +27449,8 @@ FillFactoryFrontierTrainerParty:
 	lsl	r0, r2, #0x18
 	lsr	r7, r0, #0x18
 	cmp	r7, #0x2
-	bls	.L625	@cond_branch
-.L608:
+	bls	.L705	@cond_branch
+.L688:
 	add	sp, sp, #0x20
 	pop	{r3, r4, r5}
 	mov	r8, r3
@@ -27158,16 +27459,16 @@ FillFactoryFrontierTrainerParty:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L640:
+.L720:
 	.align	2, 0
-.L639:
+.L719:
 	.word	gSaveBlock2Ptr
 	.word	gFrontierTempParty
 	.word	gEnemyParty
 	.word	gFacilityTrainerMons
 	.word	gBattleFrontierHeldItems
-.Lfe26:
-	.size	 FillFactoryFrontierTrainerParty,.Lfe26-FillFactoryFrontierTrainerParty
+.Lfe28:
+	.size	 FillFactoryFrontierTrainerParty,.Lfe28-FillFactoryFrontierTrainerParty
 	.align	2, 0
 	.type	 FillFactoryTentTrainerParty,function
 	.thumb_func
@@ -27181,7 +27482,7 @@ FillFactoryTentTrainerParty:
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
 	str	r1, [sp, #0x10]
-	ldr	r0, .L653
+	ldr	r0, .L733
 	ldr	r1, [r0]
 	ldrb	r0, [r1, #0xa]
 	mov	r9, r0
@@ -27198,8 +27499,8 @@ FillFactoryTentTrainerParty:
 	mov	r9, r2
 	mov	r7, #0x0
 	mov	r8, r7
-.L645:
-	ldr	r1, .L653+0x4
+.L725:
+	ldr	r1, .L733+0x4
 	mov	r2, r8
 	lsl	r0, r2, #0x1
 	add	r0, r0, r1
@@ -27209,9 +27510,9 @@ FillFactoryTentTrainerParty:
 	mov	r7, #0x64
 	mov	r6, r5
 	mul	r6, r6, r7
-	ldr	r1, .L653+0x8
+	ldr	r1, .L733+0x8
 	add	r0, r6, r1
-	ldr	r7, .L653+0xc
+	ldr	r7, .L733+0xc
 	ldr	r2, [r7]
 	lsl	r4, r4, #0x4
 	add	r2, r4, r2
@@ -27234,50 +27535,50 @@ FillFactoryTentTrainerParty:
 	str	r0, [sp, #0x14]
 	mov	r8, r4
 	mov	r5, r8
-.L649:
-	ldr	r1, .L653+0xc
+.L729:
+	ldr	r1, .L733+0xc
 	ldr	r0, [r1]
 	add	r0, r5, r0
 	lsl	r4, r7, #0x1
 	add	r0, r0, #0x2
 	add	r0, r0, r4
 	ldrh	r1, [r0]
-	ldr	r2, .L653+0x8
+	ldr	r2, .L733+0x8
 	add	r0, r6, r2
 	add	r2, r7, #0
 	bl	SetMonMoveAvoidReturn
-	ldr	r1, .L653+0xc
+	ldr	r1, .L733+0xc
 	ldr	r0, [r1]
 	add	r0, r5, r0
 	add	r0, r0, #0x2
 	add	r0, r0, r4
 	ldrh	r0, [r0]
 	cmp	r0, #0xda
-	bne	.L648	@cond_branch
+	bne	.L728	@cond_branch
 	mov	r1, #0x0
 	add	r0, sp, #0xc
 	strb	r1, [r0]
-.L648:
+.L728:
 	add	r0, r7, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
 	cmp	r7, #0x3
-	bls	.L649	@cond_branch
+	bls	.L729	@cond_branch
 	mov	r2, #0x64
 	mov	r4, sl
 	mul	r4, r4, r2
-	ldr	r7, .L653+0x8
+	ldr	r7, .L733+0x8
 	add	r4, r4, r7
 	add	r0, r4, #0
 	mov	r1, #0x20
 	add	r2, sp, #0xc
 	bl	SetMonData
-	ldr	r1, .L653+0xc
+	ldr	r1, .L733+0xc
 	ldr	r0, [r1]
 	add	r0, r0, r8
 	ldrb	r2, [r0, #0xa]
 	lsl	r2, r2, #0x1
-	ldr	r0, .L653+0x10
+	ldr	r0, .L733+0x10
 	add	r2, r2, r0
 	add	r0, r4, #0
 	mov	r1, #0xc
@@ -27287,7 +27588,7 @@ FillFactoryTentTrainerParty:
 	lsr	r0, r0, #0x18
 	mov	r8, r0
 	cmp	r0, #0x2
-	bls	.L645	@cond_branch
+	bls	.L725	@cond_branch
 	add	sp, sp, #0x18
 	pop	{r3, r4, r5}
 	mov	r8, r3
@@ -27296,163 +27597,2422 @@ FillFactoryTentTrainerParty:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L654:
+.L734:
 	.align	2, 0
-.L653:
+.L733:
 	.word	gSaveBlock2Ptr
 	.word	gFrontierTempParty
 	.word	gEnemyParty
 	.word	gFacilityTrainerMons
 	.word	gBattleFrontierHeldItems
-.Lfe27:
-	.size	 FillFactoryTentTrainerParty,.Lfe27-FillFactoryTentTrainerParty
+.Lfe29:
+	.size	 FillFactoryTentTrainerParty,.Lfe29-FillFactoryTentTrainerParty
+	.section .rodata
+	.type	 sText_Greeting0,object
+sText_Greeting0:
+	.byte	0xc6
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xe7
+	.byte	0xab
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting0,26
+	.type	 sText_Greeting1,object
+sText_Greeting1:
+	.byte	0xbb
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe8
+	.byte	0x36
+	.byte	0xfe
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xed
+	.byte	0xab
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting1,23
+	.type	 sText_Greeting2,object
+sText_Greeting2:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd9
+	.byte	0xec
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xb8
+	.byte	0xfe
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting2,34
+	.type	 sText_Greeting3,object
+sText_Greeting3:
+	.byte	0xbe
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting3,22
+	.type	 sText_Greeting4,object
+sText_Greeting4:
+	.byte	0xbe
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xac
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting4,30
+	.type	 sText_Greeting5,object
+sText_Greeting5:
+	.byte	0xbe
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xab
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting5,18
+	.type	 sText_Greeting6,object
+sText_Greeting6:
+	.byte	0xbc
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdf
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xb4
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xfe
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xed
+	.byte	0x0
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xed
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting6,36
+	.type	 sText_Greeting7,object
+sText_Greeting7:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xad
+	.byte	0xfe
+	.byte	0xca
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting7,39
+	.type	 sText_Greeting8,object
+sText_Greeting8:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xfe
+	.byte	0xc8
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xab
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting8,28
+	.type	 sText_Greeting9,object
+sText_Greeting9:
+	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xb4
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xac
+	.byte	0xfe
+	.byte	0xc2
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting9,34
+	.type	 sText_Greeting10,object
+sText_Greeting10:
+	.byte	0xcd
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xfe
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xdf
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting10,36
+	.type	 sText_Greeting11,object
+sText_Greeting11:
+	.byte	0xbf
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xab
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting11,11
+	.type	 sText_Greeting12,object
+sText_Greeting12:
+	.byte	0xc7
+	.byte	0xed
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xe9
+	.byte	0xed
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xed
+	.byte	0x0
+	.byte	0xca
+	.byte	0xe3
+	.byte	0xdf
+	.byte	0x1b
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting12,28
+	.type	 sText_Greeting13,object
+sText_Greeting13:
+	.byte	0xca
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xab
+	.byte	0xfe
+	.byte	0xbc
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0xab
+	.byte	0xab
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting13,27
+	.type	 sText_Greeting14,object
+sText_Greeting14:
+	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xb4
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xde
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xfe
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe4
+	.byte	0xe4
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xed
+	.byte	0x0
+	.byte	0xde
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xed
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting14,51
+	.type	 sText_Greeting15,object
+sText_Greeting15:
+	.byte	0xbd
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe5
+	.byte	0xe9
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xac
+	.byte	0xfe
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting15,48
+	.type	 sText_Greeting16,object
+sText_Greeting16:
+	.byte	0xcd
+	.byte	0xe3
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xde
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xac
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting16,39
+	.type	 sText_Greeting17,object
+sText_Greeting17:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xad
+	.byte	0xfe
+	.byte	0xbb
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xac
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting17,25
+	.type	 sText_Greeting18,object
+sText_Greeting18:
+	.byte	0xcc
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xfe
+	.byte	0xcc
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting18,43
+	.type	 sText_Greeting19,object
+sText_Greeting19:
+	.byte	0xca
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe4
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe9
+	.byte	0xe4
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xda
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe8
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting19,31
+	.type	 sText_Greeting20,object
+sText_Greeting20:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe4
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting20,31
+	.type	 sText_Greeting21,object
+sText_Greeting21:
+	.byte	0xc8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd7
+	.byte	0xed
+	.byte	0xab
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting21,11
+	.type	 sText_Greeting22,object
+sText_Greeting22:
+	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xb4
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xfe
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xed
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xda
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting22,45
+	.type	 sText_Greeting23,object
+sText_Greeting23:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting23,34
+	.type	 sText_Greeting24,object
+sText_Greeting24:
+	.byte	0xbb
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xed
+	.byte	0xfe
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xac
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting24,31
+	.type	 sText_Greeting25,object
+sText_Greeting25:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xca
+	.byte	0xe3
+	.byte	0xdf
+	.byte	0x1b
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xfe
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xcd
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0x0
+	.byte	0xcc
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe1
+	.byte	0xab
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting25,53
+	.type	 sText_Greeting26,object
+sText_Greeting26:
+	.byte	0xd1
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xac
+	.byte	0xfe
+	.byte	0xd1
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xc3
+	.byte	0xac
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting26,30
+	.type	 sText_Greeting27,object
+sText_Greeting27:
+	.byte	0xc3
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xed
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xfe
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xac
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting27,43
+	.type	 sText_Greeting28,object
+sText_Greeting28:
+	.byte	0xcd
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xad
+	.byte	0xfe
+	.byte	0xcc
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting28,44
+	.type	 sText_Greeting29,object
+sText_Greeting29:
+	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xfe
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xda
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting29,38
+	.type	 sText_Greeting30,object
+sText_Greeting30:
+	.byte	0xc6
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xda
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe8
+	.byte	0xfe
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xd9
+	.byte	0xe4
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Greeting30,29
+	.type	 sText_Greeting31,object
+sText_Greeting31:
+	.byte	0xc9
+	.byte	0xdc
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xed
+	.byte	0xad
+	.byte	0xad
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Greeting31,11
+	.type	 sText_Greeting32,object
+sText_Greeting32:
+	.byte	0xc8
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Greeting32,18
+	.type	 sText_Greeting33,object
+sText_Greeting33:
+	.byte	0xc6
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Greeting33,25
+	.type	 sText_Greeting34,object
+sText_Greeting34:
+	.byte	0xbe
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xac
+	.byte	0xff
+	.size	 sText_Greeting34,27
+	.type	 sText_Greeting35,object
+sText_Greeting35:
+	.byte	0xbe
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Greeting35,21
+	.type	 sText_Greeting36,object
+sText_Greeting36:
+	.byte	0xc2
+	.byte	0xd9
+	.byte	0xed
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe4
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xac
+	.byte	0xff
+	.size	 sText_Greeting36,32
+	.type	 sText_Greeting37,object
+sText_Greeting37:
+	.byte	0xd1
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xac
+	.byte	0x0
+	.byte	0xbc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xac
+	.byte	0x0
+	.byte	0xd1
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xac
+	.byte	0xff
+	.size	 sText_Greeting37,33
+	.type	 sText_Greeting38,object
+sText_Greeting38:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0x0
+	.byte	0xb4
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Greeting38,27
+	.type	 sText_Greeting39,object
+sText_Greeting39:
+	.byte	0xc8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xed
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xd9
+	.byte	0xdc
+	.byte	0xac
+	.byte	0xff
+	.size	 sText_Greeting39,27
+	.type	 sText_Greeting40,object
+sText_Greeting40:
+	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xab
+	.byte	0xfe
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Greeting40,27
+	.type	 sText_Greeting41,object
+sText_Greeting41:
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xda
+	.byte	0x0
+	.byte	0xda
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Greeting41,30
+	.type	 sText_Greeting42,object
+sText_Greeting42:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Greeting42,18
+	.type	 sText_Greeting43,object
+sText_Greeting43:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xab
+	.byte	0xff
+	.size	 sText_Greeting43,21
+	.type	 sText_Greeting44,object
+sText_Greeting44:
+	.byte	0xca
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xe0
+	.byte	0xed
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Greeting44,39
+	.type	 sText_Greeting45,object
+sText_Greeting45:
+	.byte	0xbb
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xac
+	.byte	0xff
+	.size	 sText_Greeting45,34
+	.type	 sText_Greeting46,object
+sText_Greeting46:
+	.byte	0xc0
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe4
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xab
+	.byte	0xfe
+	.byte	0xc0
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xda
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xda
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Greeting46,47
+	.type	 sText_Greeting47,object
+sText_Greeting47:
+	.byte	0xcd
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xda
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Greeting47,29
+	.type	 sText_Greeting48,object
+sText_Greeting48:
+	.byte	0xca
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xfe
+	.byte	0xe1
+	.byte	0xed
+	.byte	0x0
+	.byte	0xca
+	.byte	0xe3
+	.byte	0xdf
+	.byte	0x1b
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xe0
+	.byte	0xed
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Greeting48,40
+	.type	 sText_Greeting49,object
+sText_Greeting49:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xe6
+	.byte	0xed
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Greeting49,12
+	.type	 sText_Greeting50,object
+sText_Greeting50:
+	.byte	0xc1
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xe9
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xce
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xad
+	.byte	0xfe
+	.byte	0xbe
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xad
+	.byte	0xff
+	.size	 sText_Greeting50,34
+.text
+	.align	2, 0
+	.globl	getintro2
+	.type	 getintro2,function
+	.thumb_func
+getintro2:
+	push	{lr}
+	bl	Random
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
+	mov	r1, #0x33
+	bl	__umodsi3
+	lsl	r0, r0, #0x10
+	lsr	r0, r0, #0x10
+	cmp	r0, #0x32
+	bls	.LCB5300
+	b	.L736	@long jump
+.LCB5300:
+	lsl	r0, r0, #0x2
+	ldr	r1, .L790
+	add	r0, r0, r1
+	ldr	r0, [r0]
+	mov	pc, r0
+.L791:
+	.align	2, 0
+.L790:
+	.word	.L788
+	.align	2, 0
+	.align	2, 0
+.L788:
+	.word	.L737
+	.word	.L738
+	.word	.L739
+	.word	.L740
+	.word	.L741
+	.word	.L742
+	.word	.L743
+	.word	.L744
+	.word	.L745
+	.word	.L746
+	.word	.L747
+	.word	.L748
+	.word	.L749
+	.word	.L750
+	.word	.L751
+	.word	.L752
+	.word	.L753
+	.word	.L754
+	.word	.L755
+	.word	.L756
+	.word	.L757
+	.word	.L758
+	.word	.L759
+	.word	.L760
+	.word	.L761
+	.word	.L762
+	.word	.L763
+	.word	.L764
+	.word	.L765
+	.word	.L766
+	.word	.L767
+	.word	.L768
+	.word	.L769
+	.word	.L770
+	.word	.L771
+	.word	.L772
+	.word	.L773
+	.word	.L774
+	.word	.L775
+	.word	.L776
+	.word	.L777
+	.word	.L778
+	.word	.L779
+	.word	.L780
+	.word	.L781
+	.word	.L782
+	.word	.L783
+	.word	.L784
+	.word	.L785
+	.word	.L786
+	.word	.L787
+.L737:
+	ldr	r0, .L792
+	ldr	r1, .L792+0x4
+	bl	StringCopy
+	b	.L736
+.L793:
+	.align	2, 0
+.L792:
+	.word	gStringVar4
+	.word	sText_Greeting0
+.L738:
+	ldr	r0, .L794
+	ldr	r1, .L794+0x4
+	bl	StringCopy
+	b	.L736
+.L795:
+	.align	2, 0
+.L794:
+	.word	gStringVar4
+	.word	sText_Greeting1
+.L739:
+	ldr	r0, .L796
+	ldr	r1, .L796+0x4
+	bl	StringCopy
+	b	.L736
+.L797:
+	.align	2, 0
+.L796:
+	.word	gStringVar4
+	.word	sText_Greeting2
+.L740:
+	ldr	r0, .L798
+	ldr	r1, .L798+0x4
+	bl	StringCopy
+	b	.L736
+.L799:
+	.align	2, 0
+.L798:
+	.word	gStringVar4
+	.word	sText_Greeting3
+.L741:
+	ldr	r0, .L800
+	ldr	r1, .L800+0x4
+	bl	StringCopy
+	b	.L736
+.L801:
+	.align	2, 0
+.L800:
+	.word	gStringVar4
+	.word	sText_Greeting4
+.L742:
+	ldr	r0, .L802
+	ldr	r1, .L802+0x4
+	bl	StringCopy
+	b	.L736
+.L803:
+	.align	2, 0
+.L802:
+	.word	gStringVar4
+	.word	sText_Greeting5
+.L743:
+	ldr	r0, .L804
+	ldr	r1, .L804+0x4
+	bl	StringCopy
+	b	.L736
+.L805:
+	.align	2, 0
+.L804:
+	.word	gStringVar4
+	.word	sText_Greeting6
+.L744:
+	ldr	r0, .L806
+	ldr	r1, .L806+0x4
+	bl	StringCopy
+	b	.L736
+.L807:
+	.align	2, 0
+.L806:
+	.word	gStringVar4
+	.word	sText_Greeting7
+.L745:
+	ldr	r0, .L808
+	ldr	r1, .L808+0x4
+	bl	StringCopy
+	b	.L736
+.L809:
+	.align	2, 0
+.L808:
+	.word	gStringVar4
+	.word	sText_Greeting8
+.L746:
+	ldr	r0, .L810
+	ldr	r1, .L810+0x4
+	bl	StringCopy
+	b	.L736
+.L811:
+	.align	2, 0
+.L810:
+	.word	gStringVar4
+	.word	sText_Greeting9
+.L747:
+	ldr	r0, .L812
+	ldr	r1, .L812+0x4
+	bl	StringCopy
+	b	.L736
+.L813:
+	.align	2, 0
+.L812:
+	.word	gStringVar4
+	.word	sText_Greeting10
+.L748:
+	ldr	r0, .L814
+	ldr	r1, .L814+0x4
+	bl	StringCopy
+	b	.L736
+.L815:
+	.align	2, 0
+.L814:
+	.word	gStringVar4
+	.word	sText_Greeting11
+.L749:
+	ldr	r0, .L816
+	ldr	r1, .L816+0x4
+	bl	StringCopy
+	b	.L736
+.L817:
+	.align	2, 0
+.L816:
+	.word	gStringVar4
+	.word	sText_Greeting12
+.L750:
+	ldr	r0, .L818
+	ldr	r1, .L818+0x4
+	bl	StringCopy
+	b	.L736
+.L819:
+	.align	2, 0
+.L818:
+	.word	gStringVar4
+	.word	sText_Greeting13
+.L751:
+	ldr	r0, .L820
+	ldr	r1, .L820+0x4
+	bl	StringCopy
+	b	.L736
+.L821:
+	.align	2, 0
+.L820:
+	.word	gStringVar4
+	.word	sText_Greeting14
+.L752:
+	ldr	r0, .L822
+	ldr	r1, .L822+0x4
+	bl	StringCopy
+	b	.L736
+.L823:
+	.align	2, 0
+.L822:
+	.word	gStringVar4
+	.word	sText_Greeting15
+.L753:
+	ldr	r0, .L824
+	ldr	r1, .L824+0x4
+	bl	StringCopy
+	b	.L736
+.L825:
+	.align	2, 0
+.L824:
+	.word	gStringVar4
+	.word	sText_Greeting16
+.L754:
+	ldr	r0, .L826
+	ldr	r1, .L826+0x4
+	bl	StringCopy
+	b	.L736
+.L827:
+	.align	2, 0
+.L826:
+	.word	gStringVar4
+	.word	sText_Greeting17
+.L755:
+	ldr	r0, .L828
+	ldr	r1, .L828+0x4
+	bl	StringCopy
+	b	.L736
+.L829:
+	.align	2, 0
+.L828:
+	.word	gStringVar4
+	.word	sText_Greeting18
+.L756:
+	ldr	r0, .L830
+	ldr	r1, .L830+0x4
+	bl	StringCopy
+	b	.L736
+.L831:
+	.align	2, 0
+.L830:
+	.word	gStringVar4
+	.word	sText_Greeting19
+.L757:
+	ldr	r0, .L832
+	ldr	r1, .L832+0x4
+	bl	StringCopy
+	b	.L736
+.L833:
+	.align	2, 0
+.L832:
+	.word	gStringVar4
+	.word	sText_Greeting20
+.L758:
+	ldr	r0, .L834
+	ldr	r1, .L834+0x4
+	bl	StringCopy
+	b	.L736
+.L835:
+	.align	2, 0
+.L834:
+	.word	gStringVar4
+	.word	sText_Greeting21
+.L759:
+	ldr	r0, .L836
+	ldr	r1, .L836+0x4
+	bl	StringCopy
+	b	.L736
+.L837:
+	.align	2, 0
+.L836:
+	.word	gStringVar4
+	.word	sText_Greeting22
+.L760:
+	ldr	r0, .L838
+	ldr	r1, .L838+0x4
+	bl	StringCopy
+	b	.L736
+.L839:
+	.align	2, 0
+.L838:
+	.word	gStringVar4
+	.word	sText_Greeting23
+.L761:
+	ldr	r0, .L840
+	ldr	r1, .L840+0x4
+	bl	StringCopy
+	b	.L736
+.L841:
+	.align	2, 0
+.L840:
+	.word	gStringVar4
+	.word	sText_Greeting24
+.L762:
+	ldr	r0, .L842
+	ldr	r1, .L842+0x4
+	bl	StringCopy
+	b	.L736
+.L843:
+	.align	2, 0
+.L842:
+	.word	gStringVar4
+	.word	sText_Greeting25
+.L763:
+	ldr	r0, .L844
+	ldr	r1, .L844+0x4
+	bl	StringCopy
+	b	.L736
+.L845:
+	.align	2, 0
+.L844:
+	.word	gStringVar4
+	.word	sText_Greeting26
+.L764:
+	ldr	r0, .L846
+	ldr	r1, .L846+0x4
+	bl	StringCopy
+	b	.L736
+.L847:
+	.align	2, 0
+.L846:
+	.word	gStringVar4
+	.word	sText_Greeting27
+.L765:
+	ldr	r0, .L848
+	ldr	r1, .L848+0x4
+	bl	StringCopy
+	b	.L736
+.L849:
+	.align	2, 0
+.L848:
+	.word	gStringVar4
+	.word	sText_Greeting28
+.L766:
+	ldr	r0, .L850
+	ldr	r1, .L850+0x4
+	bl	StringCopy
+	b	.L736
+.L851:
+	.align	2, 0
+.L850:
+	.word	gStringVar4
+	.word	sText_Greeting29
+.L767:
+	ldr	r0, .L852
+	ldr	r1, .L852+0x4
+	bl	StringCopy
+	b	.L736
+.L853:
+	.align	2, 0
+.L852:
+	.word	gStringVar4
+	.word	sText_Greeting30
+.L768:
+	ldr	r0, .L854
+	ldr	r1, .L854+0x4
+	bl	StringCopy
+	b	.L736
+.L855:
+	.align	2, 0
+.L854:
+	.word	gStringVar4
+	.word	sText_Greeting31
+.L769:
+	ldr	r0, .L856
+	ldr	r1, .L856+0x4
+	bl	StringCopy
+	b	.L736
+.L857:
+	.align	2, 0
+.L856:
+	.word	gStringVar4
+	.word	sText_Greeting32
+.L770:
+	ldr	r0, .L858
+	ldr	r1, .L858+0x4
+	bl	StringCopy
+	b	.L736
+.L859:
+	.align	2, 0
+.L858:
+	.word	gStringVar4
+	.word	sText_Greeting33
+.L771:
+	ldr	r0, .L860
+	ldr	r1, .L860+0x4
+	bl	StringCopy
+	b	.L736
+.L861:
+	.align	2, 0
+.L860:
+	.word	gStringVar4
+	.word	sText_Greeting34
+.L772:
+	ldr	r0, .L862
+	ldr	r1, .L862+0x4
+	bl	StringCopy
+	b	.L736
+.L863:
+	.align	2, 0
+.L862:
+	.word	gStringVar4
+	.word	sText_Greeting35
+.L773:
+	ldr	r0, .L864
+	ldr	r1, .L864+0x4
+	bl	StringCopy
+	b	.L736
+.L865:
+	.align	2, 0
+.L864:
+	.word	gStringVar4
+	.word	sText_Greeting36
+.L774:
+	ldr	r0, .L866
+	ldr	r1, .L866+0x4
+	bl	StringCopy
+	b	.L736
+.L867:
+	.align	2, 0
+.L866:
+	.word	gStringVar4
+	.word	sText_Greeting37
+.L775:
+	ldr	r0, .L868
+	ldr	r1, .L868+0x4
+	bl	StringCopy
+	b	.L736
+.L869:
+	.align	2, 0
+.L868:
+	.word	gStringVar4
+	.word	sText_Greeting38
+.L776:
+	ldr	r0, .L870
+	ldr	r1, .L870+0x4
+	bl	StringCopy
+	b	.L736
+.L871:
+	.align	2, 0
+.L870:
+	.word	gStringVar4
+	.word	sText_Greeting39
+.L777:
+	ldr	r0, .L872
+	ldr	r1, .L872+0x4
+	bl	StringCopy
+	b	.L736
+.L873:
+	.align	2, 0
+.L872:
+	.word	gStringVar4
+	.word	sText_Greeting40
+.L778:
+	ldr	r0, .L874
+	ldr	r1, .L874+0x4
+	bl	StringCopy
+	b	.L736
+.L875:
+	.align	2, 0
+.L874:
+	.word	gStringVar4
+	.word	sText_Greeting41
+.L779:
+	ldr	r0, .L876
+	ldr	r1, .L876+0x4
+	bl	StringCopy
+	b	.L736
+.L877:
+	.align	2, 0
+.L876:
+	.word	gStringVar4
+	.word	sText_Greeting42
+.L780:
+	ldr	r0, .L878
+	ldr	r1, .L878+0x4
+	bl	StringCopy
+	b	.L736
+.L879:
+	.align	2, 0
+.L878:
+	.word	gStringVar4
+	.word	sText_Greeting43
+.L781:
+	ldr	r0, .L880
+	ldr	r1, .L880+0x4
+	bl	StringCopy
+	b	.L736
+.L881:
+	.align	2, 0
+.L880:
+	.word	gStringVar4
+	.word	sText_Greeting44
+.L782:
+	ldr	r0, .L882
+	ldr	r1, .L882+0x4
+	bl	StringCopy
+	b	.L736
+.L883:
+	.align	2, 0
+.L882:
+	.word	gStringVar4
+	.word	sText_Greeting45
+.L783:
+	ldr	r0, .L884
+	ldr	r1, .L884+0x4
+	bl	StringCopy
+	b	.L736
+.L885:
+	.align	2, 0
+.L884:
+	.word	gStringVar4
+	.word	sText_Greeting46
+.L784:
+	ldr	r0, .L886
+	ldr	r1, .L886+0x4
+	bl	StringCopy
+	b	.L736
+.L887:
+	.align	2, 0
+.L886:
+	.word	gStringVar4
+	.word	sText_Greeting47
+.L785:
+	ldr	r0, .L888
+	ldr	r1, .L888+0x4
+	bl	StringCopy
+	b	.L736
+.L889:
+	.align	2, 0
+.L888:
+	.word	gStringVar4
+	.word	sText_Greeting48
+.L786:
+	ldr	r0, .L890
+	ldr	r1, .L890+0x4
+	bl	StringCopy
+	b	.L736
+.L891:
+	.align	2, 0
+.L890:
+	.word	gStringVar4
+	.word	sText_Greeting49
+.L787:
+	ldr	r0, .L892
+	ldr	r1, .L892+0x4
+	bl	StringCopy
+.L736:
+	pop	{r0}
+	bx	r0
+.L893:
+	.align	2, 0
+.L892:
+	.word	gStringVar4
+	.word	sText_Greeting50
+.Lfe30:
+	.size	 getintro2,.Lfe30-getintro2
 	.align	2, 0
 	.globl	FrontierSpeechToString
 	.type	 FrontierSpeechToString,function
 	.thumb_func
 FrontierSpeechToString:
-	push	{r4, r5, lr}
-	add	r5, r0, #0
-	ldr	r4, .L666
-	add	r0, r4, #0
-	add	r1, r5, #0
-	mov	r2, #0x3
-	mov	r3, #0x2
-	bl	ConvertEasyChatWordsToString
-	mov	r2, #0x1
-	neg	r2, r2
-	mov	r0, #0x1
-	add	r1, r4, #0
-	bl	GetStringWidth
-	cmp	r0, #0xcc
-	bls	.L656	@cond_branch
-	add	r0, r4, #0
-	add	r1, r5, #0
-	mov	r2, #0x2
-	mov	r3, #0x3
-	bl	ConvertEasyChatWordsToString
-	ldrb	r0, [r4]
-	mov	r1, #0x1
-	cmp	r0, #0xfe
-	beq	.L658	@cond_branch
-	add	r2, r4, #0
-.L657:
-	add	r0, r1, r2
-	ldrb	r0, [r0]
-	add	r1, r1, #0x1
-	cmp	r0, #0xfe
-	bne	.L657	@cond_branch
-.L658:
-	ldr	r2, .L666
-	add	r0, r1, r2
-	ldrb	r0, [r0]
-	add	r3, r2, #0
-	cmp	r0, #0xfe
-	beq	.L665	@cond_branch
-.L663:
-	add	r1, r1, #0x1
-	add	r0, r1, r2
-	ldrb	r0, [r0]
-	cmp	r0, #0xfe
-	bne	.L663	@cond_branch
-.L665:
-	add	r1, r1, r3
-	mov	r0, #0xfa
-	strb	r0, [r1]
-.L656:
-	pop	{r4, r5}
+	push	{lr}
+	bl	getintro2
 	pop	{r0}
 	bx	r0
-.L667:
-	.align	2, 0
-.L666:
-	.word	gStringVar4
-.Lfe28:
-	.size	 FrontierSpeechToString,.Lfe28-FrontierSpeechToString
+.Lfe31:
+	.size	 FrontierSpeechToString,.Lfe31-FrontierSpeechToString
 	.align	2, 0
 	.type	 GetOpponentIntroSpeech,function
 	.thumb_func
 GetOpponentIntroSpeech:
 	push	{lr}
 	bl	SetFacilityPtrsGetLevel
-	ldr	r0, .L679
+	ldr	r0, .L906
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	beq	.L669	@cond_branch
-	ldr	r0, .L679+0x4
-	b	.L677
-.L680:
+	beq	.L896	@cond_branch
+	ldr	r0, .L906+0x4
+	b	.L904
+.L907:
 	.align	2, 0
-.L679:
+.L906:
 	.word	gSpecialVar_0x8005
 	.word	gTrainerBattleOpponent_B
-.L669:
-	ldr	r0, .L681
-.L677:
-	ldrh	r3, [r0]
+.L896:
+	ldr	r0, .L908
+.L904:
+	ldrh	r2, [r0]
 	mov	r0, #0xfa
 	lsl	r0, r0, #0x1
-	cmp	r3, r0
-	bne	.L671	@cond_branch
-	ldr	r0, .L681+0x4
+	cmp	r2, r0
+	bne	.L898	@cond_branch
+	ldr	r0, .L908+0x4
 	ldr	r0, [r0]
-	ldr	r1, .L681+0x8
-	b	.L678
-.L682:
+	ldr	r1, .L908+0x8
+	b	.L905
+.L909:
 	.align	2, 0
-.L681:
+.L908:
 	.word	gTrainerBattleOpponent_A
 	.word	gSaveBlock2Ptr
 	.word	0xbfc
-.L671:
-	ldr	r0, .L683
-	cmp	r3, r0
-	bhi	.L673	@cond_branch
-	ldr	r2, .L683+0x4
-	mov	r0, #0x34
-	mov	r1, r3
-	mul	r1, r1, r0
-	ldr	r0, [r2]
-	add	r0, r0, r1
-	add	r0, r0, #0xc
-	bl	FrontierSpeechToString
-	b	.L672
-.L684:
+.L898:
+	ldr	r0, .L910
+	cmp	r2, r0
+	bhi	.L900	@cond_branch
+	bl	getintro2
+	b	.L899
+.L911:
 	.align	2, 0
-.L683:
+.L910:
 	.word	0x12b
-	.word	gFacilityTrainers
-.L673:
-	ldr	r0, .L685
-	cmp	r3, r0
-	bhi	.L675	@cond_branch
-	ldr	r1, .L685+0x4
+.L900:
+	ldr	r0, .L912
+	cmp	r2, r0
+	bhi	.L902	@cond_branch
+	ldr	r1, .L912+0x4
 	mov	r0, #0xec
-	mul	r0, r0, r3
+	mul	r0, r0, r2
 	ldr	r1, [r1]
 	add	r0, r0, r1
-	ldr	r1, .L685+0x8
-.L678:
+	ldr	r1, .L912+0x8
+.L905:
 	add	r0, r0, r1
 	bl	FrontierSpeechToString
-	b	.L672
-.L686:
+	b	.L899
+.L913:
 	.align	2, 0
-.L685:
+.L912:
 	.word	0x18f
 	.word	gSaveBlock2Ptr
 	.word	-0x10d48
-.L675:
-	add	r0, r3, #0
+.L902:
+	add	r0, r2, #0
 	add	r0, r0, #0x70
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	bl	BufferApprenticeChallengeText
-.L672:
+.L899:
 	pop	{r0}
 	bx	r0
-.Lfe29:
-	.size	 GetOpponentIntroSpeech,.Lfe29-GetOpponentIntroSpeech
+.Lfe32:
+	.size	 GetOpponentIntroSpeech,.Lfe32-GetOpponentIntroSpeech
 	.align	2, 0
 	.type	 HandleSpecialTrainerBattleEnd,function
 	.thumb_func
@@ -27460,73 +30020,74 @@ HandleSpecialTrainerBattleEnd:
 	push	{r4, r5, r6, lr}
 	add	sp, sp, #-0x4
 	bl	RecordedBattle_SaveBattleOutcome
-	ldr	r0, .L716
+	ldr	r0, .L944
 	add	r0, r0, #0x26
 	ldrb	r0, [r0]
-	cmp	r0, #0xb
-	bls	.LCB4858
-	b	.L688	@long jump
-.LCB4858:
+	cmp	r0, #0xc
+	bls	.LCB6213
+	b	.L915	@long jump
+.LCB6213:
 	lsl	r0, r0, #0x2
-	ldr	r1, .L716+0x4
+	ldr	r1, .L944+0x4
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L717:
+.L945:
 	.align	2, 0
-.L716:
+.L944:
 	.word	gBattleScripting
-	.word	.L714
+	.word	.L942
 	.align	2, 0
 	.align	2, 0
-.L714:
-	.word	.L696
-	.word	.L700
-	.word	.L706
-	.word	.L696
-	.word	.L696
-	.word	.L696
-	.word	.L696
-	.word	.L696
-	.word	.L688
-	.word	.L696
-	.word	.L696
-	.word	.L707
-.L696:
-	ldr	r0, .L718
+.L942:
+	.word	.L923
+	.word	.L928
+	.word	.L934
+	.word	.L923
+	.word	.L923
+	.word	.L923
+	.word	.L923
+	.word	.L923
+	.word	.L915
+	.word	.L923
+	.word	.L923
+	.word	.L935
+	.word	.L928
+.L923:
+	ldr	r0, .L946
 	ldr	r0, [r0]
-	ldr	r2, .L718+0x4
+	ldr	r2, .L946+0x4
 	add	r1, r0, r2
 	ldr	r2, [r1]
-	ldr	r0, .L718+0x8
+	ldr	r0, .L946+0x8
 	cmp	r2, r0
-	bhi	.L697	@cond_branch
+	bhi	.L924	@cond_branch
 	add	r0, r2, #0x1
 	str	r0, [r1]
 	mov	r1, #0x14
 	bl	__umodsi3
 	cmp	r0, #0
-	bne	.L688	@cond_branch
+	bne	.L915	@cond_branch
 	bl	UpdateGymLeaderRematch
-	b	.L688
-.L719:
+	b	.L915
+.L947:
 	.align	2, 0
-.L718:
+.L946:
 	.word	gSaveBlock2Ptr
 	.word	0xebc
 	.word	0xfffffe
-.L697:
-	ldr	r0, .L720
+.L924:
+	ldr	r0, .L948
 	str	r0, [r1]
-	b	.L688
-.L721:
+	b	.L915
+.L949:
 	.align	2, 0
-.L720:
+.L948:
 	.word	0xffffff
-.L700:
+.L928:
 	mov	r6, #0x0
-	ldr	r5, .L722
-.L704:
+	ldr	r5, .L950
+.L932:
 	mov	r0, #0x64
 	mov	r4, r6
 	mul	r4, r4, r0
@@ -27539,7 +30100,7 @@ HandleSpecialTrainerBattleEnd:
 	bl	GetMonData
 	mov	r1, sp
 	strh	r0, [r1]
-	ldr	r0, .L722+0x4
+	ldr	r0, .L950+0x4
 	add	r4, r4, r0
 	add	r0, r4, #0
 	mov	r1, #0xc
@@ -27547,30 +30108,30 @@ HandleSpecialTrainerBattleEnd:
 	bl	SetMonData
 	add	r6, r6, #0x1
 	cmp	r6, #0x5
-	ble	.L704	@cond_branch
-	b	.L688
-.L723:
+	ble	.L932	@cond_branch
+	b	.L915
+.L951:
 	.align	2, 0
-.L722:
+.L950:
 	.word	gSaveBlock1Ptr
 	.word	gPlayerParty
-.L706:
+.L934:
 	bl	CopyEReaderTrainerFarewellMessage
-	b	.L688
-.L707:
+	b	.L915
+.L935:
 	mov	r6, #0x0
-.L711:
+.L939:
 	mov	r0, #0x64
 	mov	r4, r6
 	mul	r4, r4, r0
-	ldr	r0, .L724
+	ldr	r0, .L952
 	add	r5, r4, r0
 	add	r0, r5, #0
 	mov	r1, #0xb
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L710	@cond_branch
-	ldr	r0, .L724+0x4
+	beq	.L938	@cond_branch
+	ldr	r0, .L952+0x4
 	ldr	r0, [r0]
 	add	r0, r0, r4
 	mov	r1, #0x8e
@@ -27579,25 +30140,25 @@ HandleSpecialTrainerBattleEnd:
 	add	r1, r5, #0
 	mov	r2, #0x64
 	bl	memcpy
-.L710:
+.L938:
 	add	r6, r6, #0x1
 	cmp	r6, #0x2
-	ble	.L711	@cond_branch
-.L688:
-	ldr	r0, .L724+0x8
+	ble	.L939	@cond_branch
+.L915:
+	ldr	r0, .L952+0x8
 	bl	SetMainCallback2
 	add	sp, sp, #0x4
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L725:
+.L953:
 	.align	2, 0
-.L724:
+.L952:
 	.word	gPlayerParty
 	.word	gSaveBlock1Ptr
 	.word	CB2_ReturnToFieldContinueScriptPlayMapMusic
-.Lfe30:
-	.size	 HandleSpecialTrainerBattleEnd,.Lfe30-HandleSpecialTrainerBattleEnd
+.Lfe33:
+	.size	 HandleSpecialTrainerBattleEnd,.Lfe33-HandleSpecialTrainerBattleEnd
 	.align	2, 0
 	.type	 Task_StartBattleAfterTransition,function
 	.thumb_func
@@ -27609,26 +30170,26 @@ Task_StartBattleAfterTransition:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.L727	@cond_branch
-	ldr	r0, .L728
-	ldr	r1, .L728+0x4
+	bne	.L955	@cond_branch
+	ldr	r0, .L956
+	ldr	r1, .L956+0x4
 	str	r1, [r0, #0x8]
-	ldr	r0, .L728+0x8
+	ldr	r0, .L956+0x8
 	bl	SetMainCallback2
 	add	r0, r4, #0
 	bl	DestroyTask
-.L727:
+.L955:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L729:
+.L957:
 	.align	2, 0
-.L728:
+.L956:
 	.word	gMain
 	.word	HandleSpecialTrainerBattleEnd
 	.word	CB2_InitBattle
-.Lfe31:
-	.size	 Task_StartBattleAfterTransition,.Lfe31-Task_StartBattleAfterTransition
+.Lfe34:
+	.size	 Task_StartBattleAfterTransition,.Lfe34-Task_StartBattleAfterTransition
 	.align	2, 0
 	.globl	DoSpecialTrainerBattle
 	.type	 DoSpecialTrainerBattle,function
@@ -27636,132 +30197,133 @@ Task_StartBattleAfterTransition:
 DoSpecialTrainerBattle:
 	push	{r4, r5, r6, lr}
 	add	sp, sp, #-0x4
-	ldr	r0, .L782
-	ldr	r2, .L782+0x4
+	ldr	r0, .L1011
+	ldr	r2, .L1011+0x4
 	ldrh	r1, [r2]
 	add	r0, r0, #0x26
 	strb	r1, [r0]
 	ldrh	r0, [r2]
-	cmp	r0, #0xb
-	bls	.LCB5075
-	b	.L731	@long jump
-.LCB5075:
+	cmp	r0, #0xc
+	bls	.LCB6430
+	b	.L959	@long jump
+.LCB6430:
 	lsl	r0, r0, #0x2
-	ldr	r1, .L782+0x8
+	ldr	r1, .L1011+0x8
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L783:
+.L1012:
 	.align	2, 0
-.L782:
+.L1011:
 	.word	gBattleScripting
 	.word	gSpecialVar_0x8004
-	.word	.L777
+	.word	.L1006
 	.align	2, 0
 	.align	2, 0
-.L777:
-	.word	.L732
-	.word	.L741
-	.word	.L747
-	.word	.L753
-	.word	.L756
-	.word	.L760
-	.word	.L763
-	.word	.L765
-	.word	.L768
-	.word	.L767
-	.word	.L766
-	.word	.L769
-.L732:
-	ldr	r5, .L784
+.L1006:
+	.word	.L960
+	.word	.L969
+	.word	.L975
+	.word	.L981
+	.word	.L984
+	.word	.L988
+	.word	.L991
+	.word	.L994
+	.word	.L997
+	.word	.L996
+	.word	.L995
+	.word	.L998
+	.word	.L993
+.L960:
+	ldr	r5, .L1013
 	mov	r0, #0x84
 	lsl	r0, r0, #0x1
 	str	r0, [r5]
-	ldr	r0, .L784+0x4
+	ldr	r0, .L1013+0x4
 	bl	VarGet
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
 	cmp	r4, #0x1
-	beq	.L735	@cond_branch
+	beq	.L963	@cond_branch
 	cmp	r4, #0x1
-	bgt	.L740	@cond_branch
+	bgt	.L968	@cond_branch
 	cmp	r4, #0
-	beq	.L734	@cond_branch
-	b	.L733
-.L785:
+	beq	.L962	@cond_branch
+	b	.L961
+.L1014:
 	.align	2, 0
-.L784:
+.L1013:
 	.word	gBattleTypeFlags
 	.word	0x40ce
-.L740:
+.L968:
 	cmp	r4, #0x2
-	beq	.L736	@cond_branch
+	beq	.L964	@cond_branch
 	cmp	r4, #0x3
-	beq	.L737	@cond_branch
-	b	.L733
-.L734:
+	beq	.L965	@cond_branch
+	b	.L961
+.L962:
 	mov	r0, #0x3
 	bl	FillFrontierTrainerParty
-	b	.L733
-.L735:
+	b	.L961
+.L963:
 	mov	r0, #0x4
 	bl	FillFrontierTrainerParty
 	ldr	r0, [r5]
 	orr	r0, r0, r4
 	str	r0, [r5]
-	b	.L733
-.L736:
+	b	.L961
+.L964:
 	mov	r0, #0x2
 	bl	FillFrontierTrainersParties
-	ldr	r1, .L786
-	ldr	r0, .L786+0x4
+	ldr	r1, .L1015
+	ldr	r0, .L1015+0x4
 	ldr	r0, [r0]
-	ldr	r2, .L786+0x8
+	ldr	r2, .L1015+0x8
 	add	r0, r0, r2
 	ldrh	r0, [r0]
 	strh	r0, [r1]
 	ldrh	r0, [r1]
 	bl	FillPartnerParty
 	ldr	r0, [r5]
-	ldr	r1, .L786+0xc
+	ldr	r1, .L1015+0xc
 	orr	r0, r0, r1
 	str	r0, [r5]
-	b	.L733
-.L787:
+	b	.L961
+.L1016:
 	.align	2, 0
-.L786:
+.L1015:
 	.word	gPartnerTrainerId
 	.word	gSaveBlock2Ptr
 	.word	0xcd6
 	.word	0x408041
-.L737:
+.L965:
 	ldr	r0, [r5]
-	ldr	r1, .L788
+	ldr	r1, .L1017
 	orr	r0, r0, r1
 	str	r0, [r5]
 	mov	r0, #0x2
 	bl	FillFrontierTrainersParties
-.L733:
-	ldr	r0, .L788+0x4
+.L961:
+	ldr	r0, .L1017+0x4
 	mov	r1, #0x1
 	bl	CreateTask
 	mov	r0, #0x0
 	bl	PlayMapChosenOrBattleBGM
 	mov	r0, #0x0
-	b	.L779
-.L789:
+	b	.L1008
+.L1018:
 	.align	2, 0
-.L788:
+.L1017:
 	.word	0x800043
 	.word	Task_StartBattleAfterTransition
-.L741:
+.L969:
 	mov	r5, #0x0
-	ldr	r6, .L790
-.L745:
+	ldr	r6, .L1019
+.L973:
 	mov	r0, #0x64
 	mov	r4, r5
 	mul	r4, r4, r0
-	ldr	r0, .L790+0x4
+	ldr	r0, .L1019+0x4
 	add	r0, r4, r0
 	mov	r1, #0xc
 	bl	GetMonData
@@ -27777,28 +30339,28 @@ DoSpecialTrainerBattle:
 	bl	SetMonData
 	add	r5, r5, #0x1
 	cmp	r5, #0x5
-	ble	.L745	@cond_branch
-	ldr	r0, .L790+0x8
+	ble	.L973	@cond_branch
+	ldr	r0, .L1019+0x8
 	mov	r1, #0x1
 	bl	CreateTask
 	mov	r0, #0x0
 	bl	PlayMapChosenOrBattleBGM
 	mov	r0, #0xc
-	b	.L779
-.L791:
+	b	.L1008
+.L1020:
 	.align	2, 0
-.L790:
+.L1019:
 	.word	gSaveBlock1Ptr
 	.word	gPlayerParty
 	.word	Task_StartBattleAfterTransition
-.L747:
+.L975:
 	bl	ZeroEnemyPartyMons
 	mov	r5, #0x0
-	ldr	r4, .L792
-.L751:
+	ldr	r4, .L1021
+.L979:
 	mov	r0, #0x64
 	mul	r0, r0, r5
-	ldr	r1, .L792+0x4
+	ldr	r1, .L1021+0x4
 	add	r0, r0, r1
 	mov	r1, #0x2c
 	mov	r2, r5
@@ -27811,268 +30373,293 @@ DoSpecialTrainerBattle:
 	bl	CreateBattleTowerMon
 	add	r5, r5, #0x1
 	cmp	r5, #0x2
-	ble	.L751	@cond_branch
-	ldr	r1, .L792+0x8
-	ldr	r0, .L792+0xc
+	ble	.L979	@cond_branch
+	ldr	r1, .L1021+0x8
+	ldr	r0, .L1021+0xc
 	str	r0, [r1]
-	ldr	r1, .L792+0x10
+	ldr	r1, .L1021+0x10
 	mov	r0, #0x0
 	strh	r0, [r1]
-	ldr	r0, .L792+0x14
+	ldr	r0, .L1021+0x14
 	mov	r1, #0x1
 	bl	CreateTask
 	mov	r0, #0x0
 	bl	PlayMapChosenOrBattleBGM
 	mov	r0, #0xd
-	b	.L779
-.L793:
+	b	.L1008
+.L1022:
 	.align	2, 0
-.L792:
+.L1021:
 	.word	gSaveBlock2Ptr
 	.word	gEnemyParty
 	.word	gBattleTypeFlags
 	.word	0x808
 	.word	gTrainerBattleOpponent_A
 	.word	Task_StartBattleAfterTransition
-.L753:
-	ldr	r4, .L794
-	ldr	r0, .L794+0x4
+.L981:
+	ldr	r4, .L1023
+	ldr	r0, .L1023+0x4
 	str	r0, [r4]
-	ldr	r0, .L794+0x8
+	ldr	r0, .L1023+0x8
 	bl	VarGet
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
 	cmp	r1, #0x1
-	bne	.L754	@cond_branch
+	bne	.L982	@cond_branch
 	ldr	r0, [r4]
 	orr	r0, r0, r1
 	str	r0, [r4]
-.L754:
-	ldr	r0, .L794+0xc
+.L982:
+	ldr	r0, .L1023+0xc
 	ldrh	r1, [r0]
-	ldr	r0, .L794+0x10
+	ldr	r0, .L1023+0x10
 	cmp	r1, r0
-	bne	.L755	@cond_branch
+	bne	.L983	@cond_branch
 	mov	r0, #0x2
 	bl	FillFrontierTrainerParty
-.L755:
-	ldr	r0, .L794+0x14
+.L983:
+	ldr	r0, .L1023+0x14
 	mov	r1, #0x1
 	bl	CreateTask
 	mov	r0, #0x0
 	bl	sub_806E694
 	mov	r0, #0x3
-	b	.L779
-.L795:
+	b	.L1008
+.L1024:
 	.align	2, 0
-.L794:
+.L1023:
 	.word	gBattleTypeFlags
 	.word	0x10008
 	.word	0x40ce
 	.word	gTrainerBattleOpponent_A
 	.word	0x3fe
 	.word	Task_StartBattleAfterTransition
-.L756:
-	ldr	r4, .L796
-	ldr	r0, .L796+0x4
+.L984:
+	ldr	r4, .L1025
+	ldr	r0, .L1025+0x4
 	str	r0, [r4]
-	ldr	r0, .L796+0x8
+	ldr	r0, .L1025+0x8
 	bl	VarGet
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
 	cmp	r1, #0x1
-	bne	.L757	@cond_branch
+	bne	.L985	@cond_branch
 	ldr	r0, [r4]
 	orr	r0, r0, r1
 	str	r0, [r4]
-.L757:
-	ldr	r0, .L796+0xc
+.L985:
+	ldr	r0, .L1025+0xc
 	ldr	r0, [r0]
-	ldr	r2, .L796+0x10
+	ldr	r2, .L1025+0x10
 	add	r0, r0, r2
 	ldrb	r1, [r0]
 	mov	r0, #0x3
 	and	r0, r0, r1
 	cmp	r0, #0x2
-	beq	.L758	@cond_branch
+	beq	.L986	@cond_branch
 	mov	r0, #0x3
 	bl	FillFrontierTrainerParty
-	b	.L759
-.L797:
+	b	.L987
+.L1026:
 	.align	2, 0
-.L796:
+.L1025:
 	.word	gBattleTypeFlags
 	.word	0x20008
 	.word	0x40ce
 	.word	gSaveBlock2Ptr
 	.word	0xca9
-.L758:
+.L986:
 	mov	r0, #0x3
 	bl	FillTentTrainerParty
-.L759:
-	ldr	r0, .L798
+.L987:
+	ldr	r0, .L1027
 	mov	r1, #0x1
 	bl	CreateTask
 	mov	r0, #0x0
 	bl	PlayMapChosenOrBattleBGM
 	mov	r0, #0x4
-	b	.L779
-.L799:
+	b	.L1008
+.L1028:
 	.align	2, 0
-.L798:
+.L1027:
 	.word	Task_StartBattleAfterTransition
-.L760:
-	ldr	r1, .L800
-	ldr	r0, .L800+0x4
+.L988:
+	ldr	r1, .L1029
+	ldr	r0, .L1029+0x4
 	str	r0, [r1]
-	ldr	r0, .L800+0x8
+	ldr	r0, .L1029+0x8
 	ldr	r0, [r0]
-	ldr	r1, .L800+0xc
+	ldr	r1, .L1029+0xc
 	add	r0, r0, r1
 	ldrb	r1, [r0]
 	mov	r0, #0x3
 	and	r0, r0, r1
 	cmp	r0, #0x2
-	beq	.L761	@cond_branch
+	beq	.L989	@cond_branch
 	mov	r0, #0x3
 	bl	FillFrontierTrainerParty
-	b	.L762
-.L801:
+	b	.L990
+.L1030:
 	.align	2, 0
-.L800:
+.L1029:
 	.word	gBattleTypeFlags
 	.word	0x40008
 	.word	gSaveBlock2Ptr
 	.word	0xca9
-.L761:
+.L989:
 	mov	r0, #0x3
 	bl	FillTentTrainerParty
-.L762:
-	ldr	r0, .L802
+.L990:
+	ldr	r0, .L1031
 	mov	r1, #0x1
 	bl	CreateTask
 	mov	r0, #0x0
 	bl	PlayMapChosenOrBattleBGM
 	mov	r0, #0x5
-	b	.L779
-.L803:
+	b	.L1008
+.L1032:
 	.align	2, 0
-.L802:
+.L1031:
 	.word	Task_StartBattleAfterTransition
-.L763:
-	ldr	r4, .L804
-	ldr	r0, .L804+0x4
+.L991:
+	ldr	r4, .L1033
+	ldr	r0, .L1033+0x4
 	str	r0, [r4]
-	ldr	r0, .L804+0x8
+	ldr	r0, .L1033+0x8
 	bl	VarGet
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
 	cmp	r1, #0x1
-	bne	.L764	@cond_branch
+	bne	.L992	@cond_branch
 	ldr	r0, [r4]
 	orr	r0, r0, r1
 	str	r0, [r4]
-.L764:
+.L992:
 	bl	FillFactoryTrainerParty
-	ldr	r0, .L804+0xc
+	ldr	r0, .L1033+0xc
 	mov	r1, #0x1
 	bl	CreateTask
 	mov	r0, #0x0
 	bl	PlayMapChosenOrBattleBGM
 	mov	r0, #0x6
-	b	.L779
-.L805:
+	b	.L1008
+.L1034:
 	.align	2, 0
-.L804:
+.L1033:
 	.word	gBattleTypeFlags
 	.word	0x80008
 	.word	0x40ce
 	.word	Task_StartBattleAfterTransition
-.L765:
-	ldr	r1, .L806
+.L993:
+	ldr	r1, .L1035
+	ldr	r2, .L1035+0x4
+	add	r0, r2, #0
+	strh	r0, [r1]
+	ldr	r1, .L1035+0x8
+	mov	r0, #0x84
+	lsl	r0, r0, #0x1
+	str	r0, [r1]
+	mov	r0, #0x6
+	bl	FillFrontierTrainerPartyFake
+	ldr	r0, .L1035+0xc
+	mov	r1, #0x1
+	bl	CreateTask
+	mov	r0, #0x0
+	bl	PlayMapChosenOrBattleBGM
+	mov	r0, #0x0
+	b	.L1008
+.L1036:
+	.align	2, 0
+.L1035:
+	.word	gTrainerBattleOpponent_A
+	.word	0x12b
+	.word	gBattleTypeFlags
+	.word	Task_StartBattleAfterTransition
+.L994:
+	ldr	r1, .L1037
 	mov	r0, #0x84
 	lsl	r0, r0, #0x1
 	str	r0, [r1]
 	mov	r0, #0x3
 	bl	FillFrontierTrainerParty
-	b	.L780
-.L807:
+	b	.L1009
+.L1038:
 	.align	2, 0
-.L806:
+.L1037:
 	.word	gBattleTypeFlags
-.L766:
-	ldr	r1, .L808
-	ldr	r0, .L808+0x4
+.L995:
+	ldr	r1, .L1039
+	ldr	r0, .L1039+0x4
 	str	r0, [r1]
 	mov	r0, #0x3
 	bl	FillFrontierTrainerParty
-	ldr	r0, .L808+0x8
+	ldr	r0, .L1039+0x8
 	mov	r1, #0x1
 	bl	CreateTask
 	mov	r0, #0x0
 	bl	PlayMapChosenOrBattleBGM
 	mov	r0, #0xa
-	b	.L779
-.L809:
+	b	.L1008
+.L1040:
 	.align	2, 0
-.L808:
+.L1039:
 	.word	gBattleTypeFlags
 	.word	0x200008
 	.word	Task_StartBattleAfterTransition
-.L767:
-	ldr	r1, .L810
-	ldr	r0, .L810+0x4
+.L996:
+	ldr	r1, .L1041
+	ldr	r0, .L1041+0x4
 	str	r0, [r1]
 	mov	r0, #0x1
 	bl	FillFrontierTrainersParties
-.L780:
-	ldr	r0, .L810+0x8
+.L1009:
+	ldr	r0, .L1041+0x8
 	mov	r1, #0x1
 	bl	CreateTask
 	mov	r0, #0x0
 	bl	PlayMapChosenOrBattleBGM
 	mov	r0, #0x7
-.L779:
+.L1008:
 	bl	GetSpecialBattleTransition
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	bl	BattleTransition_StartOnField
-	b	.L731
-.L811:
+	b	.L959
+.L1042:
 	.align	2, 0
-.L810:
+.L1041:
 	.word	gBattleTypeFlags
 	.word	0x8109
 	.word	Task_StartBattleAfterTransition
-.L768:
-	ldr	r1, .L812
-	ldr	r0, .L812+0x4
+.L997:
+	ldr	r1, .L1043
+	ldr	r0, .L1043+0x4
 	str	r0, [r1]
-	ldr	r5, .L812+0x8
+	ldr	r5, .L1043+0x8
 	add	r0, r5, #0
 	bl	FillPartnerParty
-	ldr	r4, .L812+0xc
+	ldr	r4, .L1043+0xc
 	mov	r0, #0x0
 	strb	r0, [r4]
-	ldr	r0, .L812+0x10
+	ldr	r0, .L1043+0x10
 	bl	BattleSetup_ConfigureTrainerBattle
 	mov	r0, #0x1
 	strb	r0, [r4]
-	ldr	r0, .L812+0x14
+	ldr	r0, .L1043+0x14
 	bl	BattleSetup_ConfigureTrainerBattle
-	ldr	r0, .L812+0x18
+	ldr	r0, .L1043+0x18
 	strh	r5, [r0]
-	ldr	r0, .L812+0x1c
+	ldr	r0, .L1043+0x1c
 	mov	r1, #0x1
 	bl	CreateTask
 	mov	r0, #0x0
 	bl	PlayMapChosenOrBattleBGM
 	mov	r0, #0x12
 	bl	BattleTransition_StartOnField
-	b	.L731
-.L813:
+	b	.L959
+.L1044:
 	.align	2, 0
-.L812:
+.L1043:
 	.word	gBattleTypeFlags
 	.word	0x408049
 	.word	0xc03
@@ -28081,79 +30668,79 @@ DoSpecialTrainerBattle:
 	.word	MossdeepCity_SpaceCenter_2F_EventScript_TabithaTrainer+0x1
 	.word	gPartnerTrainerId
 	.word	Task_StartBattleAfterTransition
-.L769:
-	ldr	r0, .L814
+.L998:
+	ldr	r0, .L1045
 	ldrh	r1, [r0]
 	mov	r0, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L770	@cond_branch
-	ldr	r1, .L814+0x4
-	ldr	r0, .L814+0x8
-	b	.L781
-.L815:
+	beq	.L999	@cond_branch
+	ldr	r1, .L1045+0x4
+	ldr	r0, .L1045+0x8
+	b	.L1010
+.L1046:
 	.align	2, 0
-.L814:
+.L1045:
 	.word	gSpecialVar_0x8005
 	.word	gBattleTypeFlags
 	.word	0x400041
-.L770:
+.L999:
 	mov	r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L772	@cond_branch
-	ldr	r1, .L816
-	ldr	r2, .L816+0x4
+	beq	.L1001	@cond_branch
+	ldr	r1, .L1047
+	ldr	r2, .L1047+0x4
 	add	r0, r2, #0
 	strh	r0, [r1]
-	ldr	r1, .L816+0x8
-	ldr	r0, .L816+0xc
-	b	.L781
-.L817:
+	ldr	r1, .L1047+0x8
+	ldr	r0, .L1047+0xc
+	b	.L1010
+.L1048:
 	.align	2, 0
-.L816:
+.L1047:
 	.word	gTrainerBattleOpponent_B
 	.word	0xffff
 	.word	gBattleTypeFlags
 	.word	0x400049
-.L772:
-	ldr	r1, .L818
-	ldr	r0, .L818+0x4
-.L781:
+.L1001:
+	ldr	r1, .L1049
+	ldr	r0, .L1049+0x4
+.L1010:
 	str	r0, [r1]
-	ldr	r0, .L818+0x8
+	ldr	r0, .L1049+0x8
 	ldrh	r0, [r0]
 	bl	VarGet
-	ldr	r1, .L818+0xc
+	ldr	r1, .L1049+0xc
 	strh	r0, [r1]
-	ldr	r4, .L818+0x10
-	ldr	r0, .L818+0x14
+	ldr	r4, .L1049+0x10
+	ldr	r0, .L1049+0x14
 	ldrh	r0, [r0]
 	bl	VarGet
-	ldr	r1, .L818+0x18
+	ldr	r1, .L1049+0x18
 	add	r0, r0, r1
 	strh	r0, [r4]
 	ldrh	r0, [r4]
 	bl	FillPartnerParty
-	ldr	r0, .L818+0x1c
+	ldr	r0, .L1049+0x1c
 	mov	r1, #0x1
 	bl	CreateTask
 	mov	r0, #0x0
 	bl	PlayMapChosenOrBattleBGM
-	ldr	r0, .L818+0x20
+	ldr	r0, .L1049+0x20
 	ldrh	r1, [r0]
 	mov	r0, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L774	@cond_branch
+	beq	.L1003	@cond_branch
 	bl	GetWildBattleTransition
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	bl	BattleTransition_StartOnField
-	b	.L775
-.L819:
+	b	.L1004
+.L1050:
 	.align	2, 0
-.L818:
+.L1049:
 	.word	gBattleTypeFlags
 	.word	0x408049
 	.word	gSpecialVar_0x8007
@@ -28163,47 +30750,47 @@ DoSpecialTrainerBattle:
 	.word	0xc04
 	.word	Task_StartBattleAfterTransition
 	.word	gSpecialVar_0x8005
-.L774:
+.L1003:
 	bl	GetTrainerBattleTransition
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	bl	BattleTransition_StartOnField
-.L775:
-	ldr	r0, .L820
+.L1004:
+	ldr	r0, .L1051
 	ldrh	r1, [r0]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L731	@cond_branch
-	ldr	r0, .L820+0x4
+	beq	.L959	@cond_branch
+	ldr	r0, .L1051+0x4
 	add	r0, r0, #0x26
 	mov	r1, #0xff
 	strb	r1, [r0]
-.L731:
+.L959:
 	add	sp, sp, #0x4
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L821:
+.L1052:
 	.align	2, 0
-.L820:
+.L1051:
 	.word	gSpecialVar_0x8005
 	.word	gBattleScripting
-.Lfe32:
-	.size	 DoSpecialTrainerBattle,.Lfe32-DoSpecialTrainerBattle
+.Lfe35:
+	.size	 DoSpecialTrainerBattle,.Lfe35-DoSpecialTrainerBattle
 	.align	2, 0
 	.type	 SaveCurrentWinStreak,function
 	.thumb_func
 SaveCurrentWinStreak:
 	push	{r4, r5, r6, lr}
-	ldr	r6, .L824
+	ldr	r6, .L1055
 	ldr	r0, [r6]
-	ldr	r1, .L824+0x4
+	ldr	r1, .L1055+0x4
 	add	r0, r0, r1
 	ldrb	r5, [r0]
 	lsl	r5, r5, #0x1e
 	lsr	r5, r5, #0x1e
-	ldr	r0, .L824+0x8
+	ldr	r0, .L1055+0x8
 	bl	VarGet
 	add	r4, r0, #0
 	lsl	r4, r4, #0x18
@@ -28223,20 +30810,20 @@ SaveCurrentWinStreak:
 	add	r1, r0, r5
 	ldrh	r0, [r1]
 	cmp	r0, r2
-	bcs	.L823	@cond_branch
+	bcs	.L1054	@cond_branch
 	strh	r2, [r1]
-.L823:
+.L1054:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L825:
+.L1056:
 	.align	2, 0
-.L824:
+.L1055:
 	.word	gSaveBlock2Ptr
 	.word	0xca9
 	.word	0x40ce
-.Lfe33:
-	.size	 SaveCurrentWinStreak,.Lfe33-SaveCurrentWinStreak
+.Lfe36:
+	.size	 SaveCurrentWinStreak,.Lfe36-SaveCurrentWinStreak
 	.align	2, 0
 	.type	 sub_8163EE4,function
 	.thumb_func
@@ -28245,27 +30832,27 @@ sub_8163EE4:
 	mov	r7, r9
 	mov	r6, r8
 	push	{r6, r7}
-	ldr	r4, .L841
+	ldr	r4, .L1072
 	ldr	r0, [r4]
-	ldr	r1, .L841+0x4
+	ldr	r1, .L1072+0x4
 	add	r5, r0, r1
 	add	r0, r5, #0
 	bl	ClearBattleTowerRecord
 	ldr	r0, [r4]
-	ldr	r2, .L841+0x8
+	ldr	r2, .L1072+0x8
 	add	r0, r0, r2
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1e
 	lsr	r6, r0, #0x1e
-	ldr	r0, .L841+0xc
+	ldr	r0, .L1072+0xc
 	bl	VarGet
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
 	ldr	r2, [r4]
 	ldrb	r0, [r2, #0x8]
 	cmp	r0, #0
-	beq	.L827	@cond_branch
-	ldr	r4, .L841+0x10
+	beq	.L1058	@cond_branch
+	ldr	r4, .L1072+0x10
 	ldrb	r0, [r2, #0xa]
 	ldrb	r1, [r2, #0xb]
 	add	r0, r0, r1
@@ -28274,17 +30861,17 @@ sub_8163EE4:
 	ldrb	r1, [r2, #0xd]
 	add	r0, r0, r1
 	mov	r1, #0x14
-	b	.L840
-.L842:
+	b	.L1071
+.L1073:
 	.align	2, 0
-.L841:
+.L1072:
 	.word	gSaveBlock2Ptr
 	.word	0x64c
 	.word	0xca9
 	.word	0x40ce
 	.word	gTowerFemaleFacilityClasses
-.L827:
-	ldr	r4, .L843
+.L1058:
+	ldr	r4, .L1074
 	ldrb	r0, [r2, #0xa]
 	ldrb	r1, [r2, #0xb]
 	add	r0, r0, r1
@@ -28293,7 +30880,7 @@ sub_8163EE4:
 	ldrb	r1, [r2, #0xd]
 	add	r0, r0, r1
 	mov	r1, #0x1e
-.L840:
+.L1071:
 	bl	__umodsi3
 	add	r0, r0, r4
 	ldrb	r0, [r0]
@@ -28301,7 +30888,7 @@ sub_8163EE4:
 	strb	r0, [r5, #0x1]
 	add	r0, r5, #0
 	add	r0, r0, #0xc
-	ldr	r4, .L843+0x4
+	ldr	r4, .L1074+0x4
 	ldr	r1, [r4]
 	add	r1, r1, #0xa
 	bl	CopyTrainerId
@@ -28324,13 +30911,13 @@ sub_8163EE4:
 	mov	r0, #0xe4
 	add	r0, r0, r5
 	mov	r8, r0
-.L832:
+.L1063:
 	lsl	r2, r4, #0x1
 	mov	r1, ip
 	add	r3, r1, r2
-	ldr	r0, .L843+0x8
+	ldr	r0, .L1074+0x8
 	ldr	r1, [r0]
-	ldr	r7, .L843+0xc
+	ldr	r7, .L1074+0xc
 	add	r0, r1, r7
 	add	r0, r0, r2
 	ldrh	r0, [r0]
@@ -28343,45 +30930,45 @@ sub_8163EE4:
 	ldrh	r0, [r0]
 	strh	r0, [r3]
 	add	r3, r6, r2
-	ldr	r0, .L843+0x10
+	ldr	r0, .L1074+0x10
 	add	r1, r1, r0
 	add	r1, r1, r2
 	ldrh	r0, [r1]
 	strh	r0, [r3]
 	add	r4, r4, #0x1
 	cmp	r4, #0x5
-	ble	.L832	@cond_branch
+	ble	.L1063	@cond_branch
 	mov	r4, #0x0
-.L837:
-	ldr	r6, .L843+0x4
+.L1068:
+	ldr	r6, .L1074+0x4
 	ldr	r0, [r6]
 	lsl	r1, r4, #0x1
-	ldr	r2, .L843+0x14
+	ldr	r2, .L1074+0x14
 	add	r0, r0, r2
 	add	r1, r0, r1
 	ldrh	r0, [r1]
 	cmp	r0, #0
-	beq	.L836	@cond_branch
+	beq	.L1067	@cond_branch
 	add	r1, r0, #0
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L843+0x18
+	ldr	r1, .L1074+0x18
 	add	r0, r0, r1
 	mov	r1, #0x2c
 	mul	r1, r1, r4
 	add	r1, r1, #0x34
 	add	r1, r5, r1
 	bl	sub_80686FC
-.L836:
+.L1067:
 	add	r4, r4, #0x1
 	cmp	r4, #0x3
-	ble	.L837	@cond_branch
-	ldr	r0, .L843+0x1c
+	ble	.L1068	@cond_branch
+	ldr	r0, .L1074+0x1c
 	ldrb	r0, [r0]
 	mov	r7, r8
 	strb	r0, [r7]
 	ldr	r0, [r6]
-	ldr	r1, .L843+0x20
+	ldr	r1, .L1074+0x20
 	add	r0, r0, r1
 	bl	CalcEmeraldBattleTowerChecksum
 	bl	SaveCurrentWinStreak
@@ -28391,9 +30978,9 @@ sub_8163EE4:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L844:
+.L1075:
 	.align	2, 0
-.L843:
+.L1074:
 	.word	gTowerMaleFacilityClasses
 	.word	gSaveBlock2Ptr
 	.word	gSaveBlock1Ptr
@@ -28403,21 +30990,21 @@ sub_8163EE4:
 	.word	gPlayerParty+-0x64
 	.word	gGameLanguage
 	.word	0x64c
-.Lfe34:
-	.size	 sub_8163EE4,.Lfe34-sub_8163EE4
+.Lfe37:
+	.size	 sub_8163EE4,.Lfe37-sub_8163EE4
 	.align	2, 0
 	.type	 SaveTowerChallenge,function
 	.thumb_func
 SaveTowerChallenge:
 	push	{r4, r5, lr}
-	ldr	r5, .L848
+	ldr	r5, .L1079
 	ldr	r0, [r5]
-	ldr	r1, .L848+0x4
+	ldr	r1, .L1079+0x4
 	add	r0, r0, r1
 	ldrb	r4, [r0]
 	lsl	r4, r4, #0x1e
 	lsr	r4, r4, #0x1e
-	ldr	r0, .L848+0x8
+	ldr	r0, .L1079+0x8
 	bl	VarGet
 	lsl	r0, r0, #0x10
 	ldr	r5, [r5]
@@ -28433,25 +31020,25 @@ SaveTowerChallenge:
 	bl	__udivsi3
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
-	ldr	r0, .L848+0xc
+	ldr	r0, .L1079+0xc
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	bne	.L846	@cond_branch
+	bne	.L1077	@cond_branch
 	cmp	r1, #0x1
-	bgt	.L847	@cond_branch
-	ldr	r1, .L848+0x10
+	bgt	.L1078	@cond_branch
+	ldr	r1, .L1079+0x10
 	add	r0, r5, r1
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	beq	.L846	@cond_branch
-.L847:
+	beq	.L1077	@cond_branch
+.L1078:
 	bl	sub_8163EE4
-.L846:
-	ldr	r4, .L848
+.L1077:
+	ldr	r4, .L1079
 	ldr	r0, [r4]
-	ldr	r1, .L848+0xc
+	ldr	r1, .L1079+0xc
 	ldrh	r1, [r1]
-	ldr	r2, .L848+0x14
+	ldr	r2, .L1079+0x14
 	add	r0, r0, r2
 	strb	r1, [r0]
 	mov	r0, #0x80
@@ -28459,7 +31046,7 @@ SaveTowerChallenge:
 	mov	r1, #0x0
 	bl	VarSet
 	ldr	r1, [r4]
-	ldr	r0, .L848+0x4
+	ldr	r0, .L1079+0x4
 	add	r1, r1, r0
 	ldrb	r0, [r1]
 	mov	r2, #0x4
@@ -28469,31 +31056,31 @@ SaveTowerChallenge:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L849:
+.L1080:
 	.align	2, 0
-.L848:
+.L1079:
 	.word	gSaveBlock2Ptr
 	.word	0xca9
 	.word	0x40ce
 	.word	gSpecialVar_0x8005
 	.word	0xcb2
 	.word	0xca8
-.Lfe35:
-	.size	 SaveTowerChallenge,.Lfe35-SaveTowerChallenge
+.Lfe38:
+	.size	 SaveTowerChallenge,.Lfe38-SaveTowerChallenge
 	.align	2, 0
 	.type	 nullsub_61,function
 	.thumb_func
 nullsub_61:
 	bx	lr
-.Lfe36:
-	.size	 nullsub_61,.Lfe36-nullsub_61
+.Lfe39:
+	.size	 nullsub_61,.Lfe39-nullsub_61
 	.align	2, 0
 	.type	 nullsub_116,function
 	.thumb_func
 nullsub_116:
 	bx	lr
-.Lfe37:
-	.size	 nullsub_116,.Lfe37-nullsub_116
+.Lfe40:
+	.size	 nullsub_116,.Lfe40-nullsub_116
 	.align	2, 0
 	.type	 GetApprenticeMultiPartnerParty,function
 	.thumb_func
@@ -28503,7 +31090,7 @@ GetApprenticeMultiPartnerParty:
 	add	r5, r0, #0
 	lsl	r5, r5, #0x10
 	lsr	r5, r5, #0x10
-	ldr	r4, .L864
+	ldr	r4, .L1095
 	add	r0, r4, #0
 	mov	r1, #0xb
 	mov	r2, #0x0
@@ -28519,9 +31106,9 @@ GetApprenticeMultiPartnerParty:
 	lsr	r4, r0, #0x10
 	mov	r6, #0x0
 	mov	r2, #0x0
-	ldr	r0, .L864+0x4
+	ldr	r0, .L1095+0x4
 	ldr	r1, [r0]
-	ldr	r0, .L864+0x8
+	ldr	r0, .L1095+0x8
 	add	r5, r5, r0
 	lsl	r0, r5, #0x4
 	add	r0, r0, r5
@@ -28529,21 +31116,21 @@ GetApprenticeMultiPartnerParty:
 	add	r1, r1, #0xe0
 	add	r0, r0, r1
 	mov	r3, sp
-.L856:
+.L1087:
 	ldrh	r1, [r0]
 	cmp	r1, r7
-	beq	.L855	@cond_branch
+	beq	.L1086	@cond_branch
 	cmp	r1, r4
-	beq	.L855	@cond_branch
+	beq	.L1086	@cond_branch
 	stmia	r3!, {r2}
 	add	r6, r6, #0x1
-.L855:
+.L1086:
 	add	r0, r0, #0xc
 	add	r2, r2, #0x1
 	cmp	r2, #0x2
-	ble	.L856	@cond_branch
+	ble	.L1087	@cond_branch
 	bl	Random
-	ldr	r4, .L864+0xc
+	ldr	r4, .L1095+0xc
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	add	r1, r6, #0
@@ -28552,7 +31139,7 @@ GetApprenticeMultiPartnerParty:
 	add	r0, r0, sp
 	ldr	r0, [r0]
 	strh	r0, [r4]
-.L859:
+.L1090:
 	bl	Random
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
@@ -28566,20 +31153,20 @@ GetApprenticeMultiPartnerParty:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r1, r0
-	beq	.L859	@cond_branch
+	beq	.L1090	@cond_branch
 	add	sp, sp, #0xc
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L865:
+.L1096:
 	.align	2, 0
-.L864:
+.L1095:
 	.word	gPlayerParty
 	.word	gSaveBlock2Ptr
 	.word	-0x190
 	.word	gFrontierTempParty
-.Lfe38:
-	.size	 GetApprenticeMultiPartnerParty,.Lfe38-GetApprenticeMultiPartnerParty
+.Lfe41:
+	.size	 GetApprenticeMultiPartnerParty,.Lfe41-GetApprenticeMultiPartnerParty
 	.align	2, 0
 	.type	 GetRecordMixFriendMultiPartnerParty,function
 	.thumb_func
@@ -28593,15 +31180,15 @@ GetRecordMixFriendMultiPartnerParty:
 	add	r5, r0, #0
 	lsl	r5, r5, #0x10
 	lsr	r5, r5, #0x10
-	ldr	r6, .L878
+	ldr	r6, .L1109
 	ldr	r0, [r6]
-	ldr	r1, .L878+0x4
+	ldr	r1, .L1109+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1e
 	lsr	r0, r0, #0x1e
 	str	r0, [sp, #0xc]
-	ldr	r4, .L878+0x8
+	ldr	r4, .L1109+0x8
 	add	r0, r4, #0
 	mov	r1, #0xb
 	mov	r2, #0x0
@@ -28621,15 +31208,15 @@ GetRecordMixFriendMultiPartnerParty:
 	mov	r8, r3
 	mov	r7, #0x0
 	add	r2, r6, #0
-	ldr	r0, .L878+0xc
+	ldr	r0, .L1109+0xc
 	add	r5, r5, r0
-	ldr	r6, .L878+0x10
+	ldr	r6, .L1109+0x10
 	mov	sl, sp
 	mov	r0, #0xec
 	mov	r1, r5
 	mul	r1, r1, r0
 	mov	r9, r1
-.L870:
+.L1101:
 	ldr	r1, [r2]
 	mov	r0, #0x2c
 	mul	r0, r0, r7
@@ -28640,10 +31227,10 @@ GetRecordMixFriendMultiPartnerParty:
 	ldrh	r0, [r0]
 	ldr	r3, [sp, #0x10]
 	cmp	r0, r3
-	beq	.L869	@cond_branch
+	beq	.L1100	@cond_branch
 	ldr	r3, [sp, #0x14]
 	cmp	r0, r3
-	beq	.L869	@cond_branch
+	beq	.L1100	@cond_branch
 	mov	r0, #0xef
 	lsl	r0, r0, #0x3
 	add	r4, r1, r0
@@ -28657,13 +31244,13 @@ GetRecordMixFriendMultiPartnerParty:
 	lsr	r0, r0, #0x18
 	ldr	r2, [sp, #0x18]
 	cmp	r1, r0
-	bhi	.L869	@cond_branch
+	bhi	.L1100	@cond_branch
 	ldr	r0, [r2]
 	add	r0, r0, r5
 	add	r0, r0, r6
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	beq	.L869	@cond_branch
+	beq	.L1100	@cond_branch
 	mov	r3, sl
 	add	r3, r3, #0x4
 	mov	sl, r3
@@ -28671,12 +31258,12 @@ GetRecordMixFriendMultiPartnerParty:
 	stmia	r3!, {r7}
 	mov	r0, #0x1
 	add	r8, r8, r0
-.L869:
+.L1100:
 	add	r7, r7, #0x1
 	cmp	r7, #0x3
-	ble	.L870	@cond_branch
+	ble	.L1101	@cond_branch
 	bl	Random
-	ldr	r4, .L878+0x14
+	ldr	r4, .L1109+0x14
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	mov	r1, r8
@@ -28685,7 +31272,7 @@ GetRecordMixFriendMultiPartnerParty:
 	add	r0, r0, sp
 	ldr	r0, [r0]
 	strh	r0, [r4, #0x4]
-.L873:
+.L1104:
 	bl	Random
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
@@ -28699,7 +31286,7 @@ GetRecordMixFriendMultiPartnerParty:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r1, r0
-	beq	.L873	@cond_branch
+	beq	.L1104	@cond_branch
 	add	sp, sp, #0x1c
 	pop	{r3, r4, r5}
 	mov	r8, r3
@@ -28708,17 +31295,17 @@ GetRecordMixFriendMultiPartnerParty:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L879:
+.L1110:
 	.align	2, 0
-.L878:
+.L1109:
 	.word	gSaveBlock2Ptr
 	.word	0xca9
 	.word	gPlayerParty
 	.word	-0x12c
 	.word	0x76c
 	.word	gFrontierTempParty
-.Lfe39:
-	.size	 GetRecordMixFriendMultiPartnerParty,.Lfe39-GetRecordMixFriendMultiPartnerParty
+.Lfe42:
+	.size	 GetRecordMixFriendMultiPartnerParty,.Lfe42-GetRecordMixFriendMultiPartnerParty
 	.align	2, 0
 	.type	 LoadMultiPartnerCandidatesData,function
 	.thumb_func
@@ -28729,21 +31316,21 @@ LoadMultiPartnerCandidatesData:
 	mov	r5, r8
 	push	{r5, r6, r7}
 	add	sp, sp, #-0x4c
-	ldr	r0, .L956
+	ldr	r0, .L1187
 	ldr	r0, [r0]
 	mov	r1, #0xc7
 	lsl	r1, r1, #0x4
 	add	r1, r0, r1
 	str	r1, [sp, #0x24]
-	ldr	r5, .L956+0x4
+	ldr	r5, .L1187+0x4
 	ldr	r0, [r5]
-	ldr	r2, .L956+0x8
+	ldr	r2, .L1187+0x8
 	add	r0, r0, r2
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1e
 	lsr	r0, r0, #0x1e
 	str	r0, [sp, #0x14]
-	ldr	r0, .L956+0xc
+	ldr	r0, .L1187+0xc
 	bl	VarGet
 	lsl	r0, r0, #0x10
 	ldr	r1, [r5]
@@ -28761,7 +31348,7 @@ LoadMultiPartnerCandidatesData:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	str	r0, [sp, #0x18]
-	ldr	r4, .L956+0x10
+	ldr	r4, .L1187+0x10
 	add	r0, r4, #0
 	mov	r1, #0xb
 	mov	r2, #0x0
@@ -28778,9 +31365,9 @@ LoadMultiPartnerCandidatesData:
 	ldr	r0, [sp, #0x18]
 	lsl	r0, r0, #0x18
 	mov	sl, r0
-.L881:
+.L1112:
 	lsl	r6, r7, #0x1
-.L884:
+.L1115:
 	mov	r1, sl
 	lsr	r0, r1, #0x18
 	mov	r1, #0x0
@@ -28791,40 +31378,40 @@ LoadMultiPartnerCandidatesData:
 	mov	r2, #0x0
 	mov	r9, r2
 	cmp	r9, r7
-	bge	.L886	@cond_branch
+	bge	.L1117	@cond_branch
 	ldr	r0, [r5]
-	ldr	r3, .L956+0x14
+	ldr	r3, .L1187+0x14
 	add	r1, r0, r3
 	ldrh	r0, [r1]
 	cmp	r0, r8
-	beq	.L886	@cond_branch
-	ldr	r0, .L956+0x18
+	beq	.L1117	@cond_branch
+	ldr	r0, .L1187+0x18
 	ldr	r2, [r0]
 	mov	r4, #0x34
 	mov	r0, r8
 	mul	r0, r0, r4
 	add	r0, r0, r2
 	ldrb	r3, [r0]
-.L891:
+.L1122:
 	ldrh	r0, [r1]
 	mul	r0, r0, r4
 	add	r0, r0, r2
 	ldrb	r0, [r0]
 	cmp	r0, r3
-	beq	.L886	@cond_branch
+	beq	.L1117	@cond_branch
 	add	r1, r1, #0x2
 	mov	r0, #0x1
 	add	r9, r9, r0
 	cmp	r9, r7
-	bge	.L886	@cond_branch
+	bge	.L1117	@cond_branch
 	ldrh	r0, [r1]
 	cmp	r0, r8
-	bne	.L891	@cond_branch
-.L886:
+	bne	.L1122	@cond_branch
+.L1117:
 	cmp	r9, r7
-	bne	.L884	@cond_branch
+	bne	.L1115	@cond_branch
 	ldr	r0, [r5]
-	ldr	r1, .L956+0x14
+	ldr	r1, .L1187+0x14
 	add	r0, r0, r1
 	add	r0, r0, r6
 	mov	r2, r8
@@ -28832,19 +31419,19 @@ LoadMultiPartnerCandidatesData:
 	mov	r7, r9
 	add	r7, r7, #0x1
 	cmp	r7, #0x5
-	ble	.L881	@cond_branch
+	ble	.L1112	@cond_branch
 	mov	r3, #0x8
 	mov	sl, r3
 	mov	r4, #0x0
 	mov	r9, r4
 	ldr	r0, [sp, #0x24]
 	str	r0, [sp, #0x40]
-.L901:
-	ldr	r1, .L956+0x4
+.L1132:
+	ldr	r1, .L1187+0x4
 	ldr	r0, [r1]
 	mov	r2, r9
 	lsl	r1, r2, #0x1
-	ldr	r3, .L956+0x14
+	ldr	r3, .L1187+0x14
 	add	r0, r0, r3
 	add	r0, r0, r1
 	ldrh	r0, [r0]
@@ -28853,7 +31440,7 @@ LoadMultiPartnerCandidatesData:
 	ldr	r4, [sp, #0x40]
 	strb	r0, [r4, #0x19]
 	mov	r7, #0x0
-.L905:
+.L1136:
 	add	r0, r7, #0x1
 	str	r0, [sp, #0x30]
 	mov	r1, sl
@@ -28866,7 +31453,7 @@ LoadMultiPartnerCandidatesData:
 	sub	r0, r0, #0x1
 	lsl	r0, r0, #0x1
 	str	r0, [sp, #0x28]
-.L908:
+.L1139:
 	mov	r0, r8
 	bl	GetRandomFrontierMonFromSet
 	lsl	r0, r0, #0x10
@@ -28874,15 +31461,15 @@ LoadMultiPartnerCandidatesData:
 	mov	r0, #0x1
 	and	r0, r0, r7
 	cmp	r0, #0
-	beq	.L909	@cond_branch
-	ldr	r3, .L956+0x4
+	beq	.L1140	@cond_branch
+	ldr	r3, .L1187+0x4
 	ldr	r0, [r3]
-	ldr	r4, .L956+0x14
+	ldr	r4, .L1187+0x14
 	add	r0, r0, r4
 	ldr	r1, [sp, #0x28]
 	add	r0, r0, r1
 	ldrh	r2, [r0]
-	ldr	r0, .L956+0x1c
+	ldr	r0, .L1187+0x1c
 	ldr	r0, [r0]
 	lsl	r2, r2, #0x4
 	add	r2, r2, r0
@@ -28891,45 +31478,45 @@ LoadMultiPartnerCandidatesData:
 	ldrb	r0, [r2, #0xa]
 	ldrb	r1, [r1, #0xa]
 	cmp	r0, r1
-	beq	.L908	@cond_branch
-.L909:
+	beq	.L1139	@cond_branch
+.L1140:
 	mov	r5, #0x8
 	cmp	r5, sl
-	bge	.L911	@cond_branch
-	ldr	r2, .L956+0x4
+	bge	.L1142	@cond_branch
+	ldr	r2, .L1187+0x4
 	ldr	r0, [r2]
-	ldr	r1, .L956+0x1c
+	ldr	r1, .L1187+0x1c
 	ldr	r3, [r1]
 	lsl	r1, r6, #0x4
 	add	r1, r1, r3
-	ldr	r4, .L956+0x20
+	ldr	r4, .L1187+0x20
 	add	r2, r0, r4
 	ldrh	r0, [r1]
 	mov	ip, r0
-.L913:
+.L1144:
 	ldrh	r0, [r2]
 	lsl	r0, r0, #0x4
 	add	r0, r0, r3
 	ldrh	r0, [r0]
 	cmp	r0, ip
-	beq	.L911	@cond_branch
+	beq	.L1142	@cond_branch
 	ldrh	r0, [r1]
 	ldr	r4, [sp, #0x1c]
 	cmp	r4, r0
-	beq	.L911	@cond_branch
+	beq	.L1142	@cond_branch
 	ldr	r4, [sp, #0x20]
 	cmp	r4, r0
-	beq	.L911	@cond_branch
+	beq	.L1142	@cond_branch
 	add	r2, r2, #0x2
 	add	r5, r5, #0x1
 	cmp	r5, sl
-	blt	.L913	@cond_branch
-.L911:
+	blt	.L1144	@cond_branch
+.L1142:
 	cmp	r5, sl
-	bne	.L908	@cond_branch
-	ldr	r1, .L956+0x4
+	bne	.L1139	@cond_branch
+	ldr	r1, .L1187+0x4
 	ldr	r0, [r1]
-	ldr	r2, .L956+0x14
+	ldr	r2, .L1187+0x14
 	add	r0, r0, r2
 	ldr	r3, [sp, #0x38]
 	add	r0, r0, r3
@@ -28938,7 +31525,7 @@ LoadMultiPartnerCandidatesData:
 	mov	sl, r4
 	ldr	r7, [sp, #0x30]
 	cmp	r7, #0x1
-	ble	.L905	@cond_branch
+	ble	.L1136	@cond_branch
 	ldr	r0, [sp, #0x40]
 	add	r0, r0, #0x18
 	str	r0, [sp, #0x40]
@@ -28946,25 +31533,25 @@ LoadMultiPartnerCandidatesData:
 	add	r9, r9, r1
 	mov	r2, r9
 	cmp	r2, #0x5
-	ble	.L901	@cond_branch
+	ble	.L1132	@cond_branch
 	mov	r3, #0x0
 	mov	sl, r3
 	bl	ValidateApprenticesChecksums
 	mov	r4, #0x0
 	mov	r9, r4
-	ldr	r0, .L956+0x4
+	ldr	r0, .L1187+0x4
 	ldr	r0, [r0]
 	mov	r2, #0x0
 	add	r6, r0, #0
 	add	r6, r6, #0xdc
 	mov	r8, sp
-.L925:
+.L1156:
 	ldrb	r0, [r6]
 	lsl	r4, r0, #0x19
 	lsr	r0, r4, #0x1e
 	cmp	r0, #0
-	beq	.L924	@cond_branch
-	ldr	r1, .L956+0x24
+	beq	.L1155	@cond_branch
+	ldr	r1, .L1187+0x24
 	ldrb	r0, [r6, #0x1]
 	add	r0, r0, r1
 	ldrb	r0, [r0]
@@ -28976,34 +31563,34 @@ LoadMultiPartnerCandidatesData:
 	ldr	r2, [sp, #0x44]
 	ldr	r1, [sp, #0x18]
 	cmp	r0, r1
-	bgt	.L924	@cond_branch
+	bgt	.L1155	@cond_branch
 	lsr	r0, r4, #0x1e
 	sub	r0, r0, #0x1
 	ldr	r3, [sp, #0x14]
 	cmp	r0, r3
-	bne	.L924	@cond_branch
+	bne	.L1155	@cond_branch
 	mov	r5, #0x0
-	ldr	r0, .L956+0x4
+	ldr	r0, .L1187+0x4
 	ldr	r0, [r0]
 	add	r0, r0, #0xe0
 	add	r1, r2, r0
 	mov	r7, #0x2
-.L930:
+.L1161:
 	ldrh	r0, [r1]
 	ldr	r4, [sp, #0x1c]
 	cmp	r4, r0
-	beq	.L929	@cond_branch
+	beq	.L1160	@cond_branch
 	ldr	r3, [sp, #0x20]
 	cmp	r3, r0
-	beq	.L929	@cond_branch
+	beq	.L1160	@cond_branch
 	add	r5, r5, #0x1
-.L929:
+.L1160:
 	add	r1, r1, #0xc
 	sub	r7, r7, #0x1
 	cmp	r7, #0
-	bge	.L930	@cond_branch
+	bge	.L1161	@cond_branch
 	cmp	r5, #0x2
-	ble	.L924	@cond_branch
+	ble	.L1155	@cond_branch
 	mov	r0, #0xc8
 	lsl	r0, r0, #0x1
 	add	r0, r0, r9
@@ -29014,19 +31601,19 @@ LoadMultiPartnerCandidatesData:
 	stmia	r4!, {r0}
 	mov	r0, #0x1
 	add	sl, sl, r0
-.L924:
+.L1155:
 	add	r2, r2, #0x44
 	add	r6, r6, #0x44
 	mov	r1, #0x1
 	add	r9, r9, r1
 	mov	r3, r9
 	cmp	r3, #0x3
-	ble	.L925	@cond_branch
+	ble	.L1156	@cond_branch
 	mov	r4, sl
 	cmp	r4, #0
-	beq	.L935	@cond_branch
+	beq	.L1166	@cond_branch
 	bl	Random
-	ldr	r6, .L956+0x4
+	ldr	r6, .L1187+0x4
 	ldr	r4, [r6]
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
@@ -29051,14 +31638,14 @@ LoadMultiPartnerCandidatesData:
 	add	r0, r0, r5
 	ldrh	r0, [r0]
 	bl	GetApprenticeMultiPartnerParty
-.L935:
+.L1166:
 	mov	r0, #0x0
 	mov	sl, r0
 	mov	r9, r0
 	mov	r1, sp
 	str	r1, [sp, #0x3c]
-.L939:
-	ldr	r0, .L956+0x4
+.L1170:
+	ldr	r0, .L1187+0x4
 	mov	r2, #0xec
 	mov	r1, r9
 	mul	r1, r1, r2
@@ -29073,20 +31660,20 @@ LoadMultiPartnerCandidatesData:
 	add	r4, r4, #0x1
 	str	r4, [sp, #0x2c]
 	add	r1, r0, r1
-.L943:
+.L1174:
 	ldmia	r1!, {r0}
 	orr	r2, r2, r0
 	add	r3, r3, r0
 	add	r7, r7, #0x1
 	cmp	r7, #0x39
-	bls	.L943	@cond_branch
-	ldr	r0, .L956+0x4
+	bls	.L1174	@cond_branch
+	ldr	r0, .L1187+0x4
 	ldr	r5, [r0]
 	mov	r1, #0xec
 	mov	r6, r9
 	mul	r6, r6, r1
 	add	r4, r5, r6
-	ldr	r1, .L956+0x28
+	ldr	r1, .L1187+0x28
 	add	r0, r4, r1
 	ldrh	r0, [r0]
 	mov	r1, #0x7
@@ -29099,28 +31686,28 @@ LoadMultiPartnerCandidatesData:
 	ldr	r3, [sp, #0x48]
 	ldr	r1, [sp, #0x18]
 	cmp	r0, r1
-	bgt	.L938	@cond_branch
+	bgt	.L1169	@cond_branch
 	mov	r1, #0xe7
 	lsl	r1, r1, #0x3
 	add	r0, r4, r1
 	ldrb	r0, [r0]
 	ldr	r4, [sp, #0x14]
 	cmp	r0, r4
-	bne	.L938	@cond_branch
+	bne	.L1169	@cond_branch
 	cmp	r2, #0
-	beq	.L938	@cond_branch
+	beq	.L1169	@cond_branch
 	add	r1, r1, #0xe8
 	add	r0, r5, r1
 	add	r0, r0, r6
 	ldr	r0, [r0]
 	cmp	r0, r3
-	bne	.L938	@cond_branch
+	bne	.L1169	@cond_branch
 	mov	r5, #0x0
 	mov	r7, #0x0
-	ldr	r2, .L956+0x4
+	ldr	r2, .L1187+0x4
 	mov	r8, r2
-	ldr	r3, .L956+0x2c
-.L949:
+	ldr	r3, .L1187+0x2c
+.L1180:
 	mov	r4, r8
 	ldr	r2, [r4]
 	mov	r0, #0x2c
@@ -29135,10 +31722,10 @@ LoadMultiPartnerCandidatesData:
 	ldrh	r0, [r0]
 	ldr	r1, [sp, #0x1c]
 	cmp	r1, r0
-	beq	.L948	@cond_branch
+	beq	.L1179	@cond_branch
 	ldr	r4, [sp, #0x20]
 	cmp	r4, r0
-	beq	.L948	@cond_branch
+	beq	.L1179	@cond_branch
 	mov	r0, #0xef
 	lsl	r0, r0, #0x3
 	add	r4, r2, r0
@@ -29152,17 +31739,17 @@ LoadMultiPartnerCandidatesData:
 	lsr	r0, r0, #0x18
 	ldr	r3, [sp, #0x48]
 	cmp	r1, r0
-	bhi	.L948	@cond_branch
+	bhi	.L1179	@cond_branch
 	mov	r2, r8
 	ldr	r0, [r2]
 	add	r0, r0, r6
 	add	r0, r0, r3
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	b	.L955
-.L957:
+	b	.L1186
+.L1188:
 	.align	2, 0
-.L956:
+.L1187:
 	.word	gSaveBlock1Ptr
 	.word	gSaveBlock2Ptr
 	.word	0xca9
@@ -29175,15 +31762,15 @@ LoadMultiPartnerCandidatesData:
 	.word	sApprenticeChallengeThreshold
 	.word	0x73a
 	.word	0x76c
-.L955:
-	beq	.L948	@cond_branch
+.L1186:
+	beq	.L1179	@cond_branch
 	add	r5, r5, #0x1
-.L948:
+.L1179:
 	add	r7, r7, #0x1
 	cmp	r7, #0x3
-	ble	.L949	@cond_branch
+	ble	.L1180	@cond_branch
 	cmp	r5, #0x1
-	ble	.L938	@cond_branch
+	ble	.L1169	@cond_branch
 	mov	r0, #0x96
 	lsl	r0, r0, #0x1
 	add	r0, r0, r9
@@ -29192,18 +31779,18 @@ LoadMultiPartnerCandidatesData:
 	str	r3, [sp, #0x3c]
 	mov	r4, #0x1
 	add	sl, sl, r4
-.L938:
+.L1169:
 	ldr	r0, [sp, #0x2c]
 	mov	r9, r0
 	cmp	r0, #0x4
-	bgt	.LCB7121
-	b	.L939	@long jump
-.LCB7121:
+	bgt	.LCB8507
+	b	.L1170	@long jump
+.LCB8507:
 	mov	r1, sl
 	cmp	r1, #0
-	beq	.L954	@cond_branch
+	beq	.L1185	@cond_branch
 	bl	Random
-	ldr	r6, .L958
+	ldr	r6, .L1189
 	ldr	r4, [r6]
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
@@ -29212,7 +31799,7 @@ LoadMultiPartnerCandidatesData:
 	lsl	r0, r0, #0x2
 	add	r0, r0, sp
 	ldr	r0, [r0]
-	ldr	r5, .L958+0x4
+	ldr	r5, .L1189+0x4
 	add	r4, r4, r5
 	strh	r0, [r4]
 	ldrh	r0, [r4]
@@ -29220,13 +31807,13 @@ LoadMultiPartnerCandidatesData:
 	ldr	r1, [sp, #0x24]
 	add	r1, r1, #0xc0
 	strb	r0, [r1, #0x1]
-	ldr	r0, .L958+0x8
+	ldr	r0, .L1189+0x8
 	bl	FlagClear
 	ldr	r0, [r6]
 	add	r0, r0, r5
 	ldrh	r0, [r0]
 	bl	GetRecordMixFriendMultiPartnerParty
-.L954:
+.L1185:
 	add	sp, sp, #0x4c
 	pop	{r3, r4, r5}
 	mov	r8, r3
@@ -29235,14 +31822,14 @@ LoadMultiPartnerCandidatesData:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L959:
+.L1190:
 	.align	2, 0
-.L958:
+.L1189:
 	.word	gSaveBlock2Ptr
 	.word	0xcc2
 	.word	0x361
-.Lfe40:
-	.size	 LoadMultiPartnerCandidatesData,.Lfe40-LoadMultiPartnerCandidatesData
+.Lfe43:
+	.size	 LoadMultiPartnerCandidatesData,.Lfe43-LoadMultiPartnerCandidatesData
 	.align	2, 0
 	.type	 sub_81646BC,function
 	.thumb_func
@@ -29263,11 +31850,11 @@ sub_81646BC:
 	mov	r0, #0xfa
 	lsl	r0, r0, #0x1
 	cmp	r5, r0
-	beq	.L961	@cond_branch
+	beq	.L1192	@cond_branch
 	sub	r0, r0, #0xc9
 	cmp	r5, r0
-	bhi	.L962	@cond_branch
-	ldr	r0, .L971
+	bhi	.L1193	@cond_branch
+	ldr	r0, .L1202
 	ldr	r1, [r0]
 	lsl	r0, r4, #0x4
 	add	r0, r0, r1
@@ -29275,19 +31862,19 @@ sub_81646BC:
 	mov	r9, r1
 	ldrh	r0, [r0]
 	mov	sl, r0
-	b	.L961
-.L972:
+	b	.L1192
+.L1203:
 	.align	2, 0
-.L971:
+.L1202:
 	.word	gFacilityTrainerMons
-.L962:
-	ldr	r0, .L973
+.L1193:
+	ldr	r0, .L1204
 	cmp	r5, r0
-	bhi	.L964	@cond_branch
-	ldr	r0, .L973+0x4
+	bhi	.L1195	@cond_branch
+	ldr	r0, .L1204+0x4
 	ldr	r3, [r0]
-	ldr	r1, .L973+0x8
-	ldr	r0, .L973+0xc
+	ldr	r1, .L1204+0x8
+	ldr	r0, .L1204+0xc
 	ldrh	r0, [r0]
 	add	r0, r0, #0x1
 	lsl	r0, r0, #0x1
@@ -29295,7 +31882,7 @@ sub_81646BC:
 	ldrh	r1, [r0]
 	mov	r0, #0x2c
 	mul	r1, r1, r0
-	ldr	r0, .L973+0x10
+	ldr	r0, .L1204+0x10
 	add	r2, r5, r0
 	mov	r0, #0xec
 	mul	r0, r0, r2
@@ -29306,25 +31893,25 @@ sub_81646BC:
 	add	r0, r3, r1
 	ldrh	r0, [r0]
 	mov	r9, r0
-	ldr	r2, .L973+0x14
+	ldr	r2, .L1204+0x14
 	add	r3, r3, r2
 	ldrh	r3, [r3]
 	mov	sl, r3
-	b	.L961
-.L974:
+	b	.L1192
+.L1205:
 	.align	2, 0
-.L973:
+.L1204:
 	.word	0x18f
 	.word	gSaveBlock2Ptr
 	.word	gFrontierTempParty
 	.word	gSpecialVar_0x8005
 	.word	-0x12c
 	.word	0x76c
-.L964:
-	ldr	r4, .L975
+.L1195:
+	ldr	r4, .L1206
 	ldr	r3, [r4]
-	ldr	r1, .L975+0x4
-	ldr	r0, .L975+0x8
+	ldr	r1, .L1206+0x4
+	ldr	r0, .L1206+0x8
 	ldrh	r0, [r0]
 	sub	r0, r0, #0x1
 	lsl	r0, r0, #0x1
@@ -29333,7 +31920,7 @@ sub_81646BC:
 	lsl	r0, r1, #0x1
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r2, .L975+0xc
+	ldr	r2, .L1206+0xc
 	add	r1, r5, r2
 	lsl	r2, r1, #0x4
 	add	r2, r2, r1
@@ -29348,14 +31935,14 @@ sub_81646BC:
 	ldrh	r3, [r3]
 	mov	sl, r3
 	mov	r3, #0x0
-	ldr	r7, .L975+0x10
+	ldr	r7, .L1206+0x10
 	mov	r8, r7
 	add	r0, r4, #0
 	mov	ip, r0
 	add	r4, r2, #0
 	mov	r6, #0x8a
 	lsl	r6, r6, #0x1
-.L969:
+.L1200:
 	mov	r1, r8
 	add	r2, r3, r1
 	mov	r1, ip
@@ -29367,38 +31954,38 @@ sub_81646BC:
 	strb	r0, [r2]
 	add	r3, r3, #0x1
 	cmp	r3, #0x6
-	ble	.L969	@cond_branch
+	ble	.L1200	@cond_branch
 	add	r1, r3, r7
 	mov	r0, #0xff
 	strb	r0, [r1]
-	ldr	r0, .L975
+	ldr	r0, .L1206
 	ldr	r2, [r0]
-	ldr	r0, .L975+0xc
+	ldr	r0, .L1206+0xc
 	add	r1, r5, r0
 	lsl	r0, r1, #0x4
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
 	add	r2, r2, r0
-	ldr	r1, .L975+0x14
+	ldr	r1, .L1206+0x14
 	add	r0, r2, r1
 	ldrb	r1, [r0]
 	add	r0, r7, #0
 	bl	ConvertInternationalString
-.L961:
-	ldr	r0, .L975+0x18
+.L1192:
+	ldr	r0, .L1206+0x18
 	mov	r1, #0xd
 	mov	r2, r9
 	mul	r2, r2, r1
 	add	r1, r2, #0
-	ldr	r2, .L975+0x1c
+	ldr	r2, .L1206+0x1c
 	add	r1, r1, r2
 	bl	StringCopy
-	ldr	r0, .L975+0x20
+	ldr	r0, .L1206+0x20
 	mov	r1, #0xb
 	mov	r2, sl
 	mul	r2, r2, r1
 	add	r1, r2, #0
-	ldr	r2, .L975+0x24
+	ldr	r2, .L1206+0x24
 	add	r1, r1, r2
 	bl	StringCopy
 	pop	{r3, r4, r5}
@@ -29408,9 +31995,9 @@ sub_81646BC:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L976:
+.L1207:
 	.align	2, 0
-.L975:
+.L1206:
 	.word	gSaveBlock2Ptr
 	.word	gFrontierTempParty
 	.word	gSpecialVar_0x8005
@@ -29421,8 +32008,8 @@ sub_81646BC:
 	.word	gMoveNames
 	.word	gStringVar2
 	.word	gSpeciesNames
-.Lfe41:
-	.size	 sub_81646BC,.Lfe41-sub_81646BC
+.Lfe44:
+	.size	 sub_81646BC,.Lfe44-sub_81646BC
 	.align	2, 0
 	.type	 ShowPartnerCandidateMessage,function
 	.thumb_func
@@ -29442,108 +32029,108 @@ ShowPartnerCandidateMessage:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	mov	r8, r0
-	ldr	r0, .L1032
+	ldr	r0, .L1263
 	ldrh	r0, [r0]
 	sub	r5, r0, #0x2
-	ldr	r0, .L1032+0x4
+	ldr	r0, .L1263+0x4
 	ldr	r0, [r0]
 	lsl	r1, r5, #0x1
-	ldr	r2, .L1032+0x8
+	ldr	r2, .L1263+0x8
 	add	r0, r0, r2
 	add	r0, r0, r1
 	ldrh	r7, [r0]
 	mov	r3, #0x0
 	str	r3, [sp]
-	ldr	r4, .L1032+0xc
+	ldr	r4, .L1263+0xc
 	lsl	r6, r7, #0x10
-	b	.L978
-.L1033:
+	b	.L1209
+.L1264:
 	.align	2, 0
-.L1032:
+.L1263:
 	.word	gSpecialVar_LastTalked
 	.word	gSaveBlock2Ptr
 	.word	0xcb4
 	.word	sPartnerTrainerTextTables
-.L980:
+.L1211:
 	add	r4, r4, #0x8
 	ldr	r0, [sp]
 	add	r0, r0, #0x1
 	str	r0, [sp]
-.L978:
+.L1209:
 	ldr	r1, [sp]
 	cmp	r1, #0x31
-	bhi	.L979	@cond_branch
+	bhi	.L1210	@cond_branch
 	lsr	r0, r6, #0x10
 	bl	GetFrontierTrainerFacilityClass
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	ldr	r1, [r4]
 	cmp	r1, r0
-	bne	.L980	@cond_branch
-.L979:
-	ldr	r0, .L1034
+	bne	.L1211	@cond_branch
+.L1210:
+	ldr	r0, .L1265
 	ldrh	r0, [r0]
 	cmp	r0, #0x4
-	bls	.LCB7467
-	b	.L984	@long jump
-.LCB7467:
+	bls	.LCB8853
+	b	.L1215	@long jump
+.LCB8853:
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1034+0x4
+	ldr	r1, .L1265+0x4
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L1035:
+.L1266:
 	.align	2, 0
-.L1034:
+.L1265:
 	.word	gSpecialVar_0x8005
-	.word	.L1021
+	.word	.L1252
 	.align	2, 0
 	.align	2, 0
-.L1021:
-	.word	.L985
-	.word	.L996
-	.word	.L997
-	.word	.L998
-	.word	.L984
-.L985:
+.L1252:
+	.word	.L1216
+	.word	.L1227
+	.word	.L1228
+	.word	.L1229
+	.word	.L1215
+.L1216:
 	mov	r0, #0xfa
 	lsl	r0, r0, #0x1
 	cmp	r7, r0
-	bne	.LCB7490
-	b	.L977	@long jump
-.LCB7490:
+	bne	.LCB8876
+	b	.L1208	@long jump
+.LCB8876:
 	sub	r0, r0, #0xc9
 	cmp	r7, r0
-	ble	.L1028	@cond_branch
-	ldr	r0, .L1036
+	ble	.L1259	@cond_branch
+	ldr	r0, .L1267
 	cmp	r7, r0
-	bgt	.L989	@cond_branch
-.L1028:
-	ldr	r0, .L1036+0x4
+	bgt	.L1220	@cond_branch
+.L1259:
+	ldr	r0, .L1267+0x4
 	add	r1, r7, #0
 	bl	GetFrontierTrainerName
-	b	.L984
-.L1037:
+	b	.L1215
+.L1268:
 	.align	2, 0
-.L1036:
+.L1267:
 	.word	0x18f
 	.word	gStringVar1
-.L989:
+.L1220:
 	mov	r3, #0x0
 	lsl	r2, r7, #0x10
 	mov	sl, r2
-	ldr	r6, .L1038
+	ldr	r6, .L1269
 	mov	r9, r6
-	ldr	r4, .L1038+0x4
+	ldr	r4, .L1269+0x4
 	mov	r8, r4
-	ldr	r5, .L1038+0x8
+	ldr	r5, .L1269+0x8
 	add	r1, r7, r5
 	lsl	r0, r1, #0x4
 	add	r0, r0, r1
 	lsl	r4, r0, #0x2
 	mov	r5, #0x8a
 	lsl	r5, r5, #0x1
-.L994:
+.L1225:
 	mov	r0, r9
 	add	r2, r3, r0
 	mov	r1, r8
@@ -29555,25 +32142,25 @@ ShowPartnerCandidateMessage:
 	strb	r0, [r2]
 	add	r3, r3, #0x1
 	cmp	r3, #0x6
-	ble	.L994	@cond_branch
+	ble	.L1225	@cond_branch
 	add	r1, r3, r6
 	mov	r0, #0xff
 	strb	r0, [r1]
-	ldr	r2, .L1038+0x4
+	ldr	r2, .L1269+0x4
 	ldr	r1, [r2]
-	ldr	r3, .L1038+0x8
+	ldr	r3, .L1269+0x8
 	add	r0, r7, r3
 	lsl	r4, r0, #0x4
 	add	r4, r4, r0
 	lsl	r4, r4, #0x2
 	add	r1, r1, r4
-	ldr	r5, .L1038+0xc
+	ldr	r5, .L1269+0xc
 	add	r0, r1, r5
 	ldrb	r1, [r0]
 	add	r0, r6, #0
 	bl	ConvertInternationalString
-	ldr	r0, .L1038+0x10
-	ldr	r2, .L1038+0x4
+	ldr	r0, .L1269+0x10
+	ldr	r2, .L1269+0x4
 	ldr	r1, [r2]
 	add	r1, r1, r4
 	add	r1, r1, #0xde
@@ -29581,125 +32168,125 @@ ShowPartnerCandidateMessage:
 	mov	r2, #0x0
 	mov	r3, #0x3
 	bl	ConvertIntToDecimalStringN
-	ldr	r0, .L1038+0x14
+	ldr	r0, .L1269+0x14
 	mov	r3, sl
 	lsr	r1, r3, #0x10
 	bl	GetFrontierTrainerName
-	b	.L984
-.L1039:
+	b	.L1215
+.L1270:
 	.align	2, 0
-.L1038:
+.L1269:
 	.word	gStringVar1
 	.word	gSaveBlock2Ptr
 	.word	-0x190
 	.word	0x11b
 	.word	gStringVar2
 	.word	gStringVar3
-.L996:
-	ldr	r0, .L1040
+.L1227:
+	ldr	r0, .L1271
 	ldr	r1, [r0]
 	lsl	r0, r5, #0x2
 	add	r1, r1, r0
-	ldr	r4, .L1040+0x4
+	ldr	r4, .L1271+0x4
 	add	r1, r1, r4
-	b	.L1029
-.L1041:
+	b	.L1260
+.L1272:
 	.align	2, 0
-.L1040:
+.L1271:
 	.word	gSaveBlock2Ptr
 	.word	0xcc4
-.L997:
-	ldr	r0, .L1042
+.L1228:
+	ldr	r0, .L1273
 	ldr	r1, [r0]
 	lsl	r0, r5, #0x2
 	add	r1, r1, r0
-	ldr	r5, .L1042+0x4
+	ldr	r5, .L1273+0x4
 	add	r1, r1, r5
-.L1029:
+.L1260:
 	add	r0, r7, #0
 	ldrh	r1, [r1]
 	bl	sub_81646BC
-	b	.L984
-.L1043:
+	b	.L1215
+.L1274:
 	.align	2, 0
-.L1042:
+.L1273:
 	.word	gSaveBlock2Ptr
 	.word	0xcc6
-.L998:
-	ldr	r0, .L1044
+.L1229:
+	ldr	r0, .L1275
 	strh	r7, [r0]
-	ldr	r0, .L1044+0x4
+	ldr	r0, .L1275+0x4
 	cmp	r7, r0
-	bgt	.L999	@cond_branch
-	ldr	r0, .L1044+0x8
+	bgt	.L1230	@cond_branch
+	ldr	r0, .L1275+0x8
 	ldr	r4, [r0]
 	lsl	r1, r5, #0x1
 	add	r0, r1, #0
 	add	r0, r0, #0x8
 	lsl	r0, r0, #0x1
-	ldr	r3, .L1044+0xc
+	ldr	r3, .L1275+0xc
 	add	r2, r4, r3
 	add	r0, r2, r0
 	ldrh	r3, [r0]
-	ldr	r5, .L1044+0x10
+	ldr	r5, .L1275+0x10
 	add	r0, r4, r5
 	strh	r3, [r0]
 	add	r1, r1, #0x9
 	lsl	r1, r1, #0x1
 	add	r2, r2, r1
 	ldrh	r0, [r2]
-	ldr	r1, .L1044+0x14
+	ldr	r1, .L1275+0x14
 	add	r4, r4, r1
 	strh	r0, [r4]
-	b	.L1000
-.L1045:
+	b	.L1231
+.L1276:
 	.align	2, 0
-.L1044:
+.L1275:
 	.word	gPartnerTrainerId
 	.word	0x12b
 	.word	gSaveBlock2Ptr
 	.word	0xcb4
 	.word	0xcd8
 	.word	0xcda
-.L999:
-	ldr	r0, .L1046
+.L1230:
+	ldr	r0, .L1277
 	cmp	r7, r0
-	bgt	.L1001	@cond_branch
-	ldr	r0, .L1046+0x4
+	bgt	.L1232	@cond_branch
+	ldr	r0, .L1277+0x4
 	ldr	r1, [r0]
-	ldr	r3, .L1046+0x8
+	ldr	r3, .L1277+0x8
 	ldrh	r2, [r3, #0x4]
-	ldr	r4, .L1046+0xc
+	ldr	r4, .L1277+0xc
 	add	r0, r1, r4
 	strh	r2, [r0]
 	ldrh	r0, [r3, #0x6]
-	b	.L1030
-.L1047:
+	b	.L1261
+.L1278:
 	.align	2, 0
-.L1046:
+.L1277:
 	.word	0x18f
 	.word	gSaveBlock2Ptr
 	.word	gFrontierTempParty
 	.word	0xcd8
-.L1001:
-	ldr	r0, .L1048
+.L1232:
+	ldr	r0, .L1279
 	ldr	r1, [r0]
-	ldr	r3, .L1048+0x4
+	ldr	r3, .L1279+0x4
 	ldrh	r2, [r3]
-	ldr	r4, .L1048+0x8
+	ldr	r4, .L1279+0x8
 	add	r0, r1, r4
 	strh	r2, [r0]
 	ldrh	r0, [r3, #0x2]
-.L1030:
-	ldr	r5, .L1048+0xc
+.L1261:
+	ldr	r5, .L1279+0xc
 	add	r1, r1, r5
 	strh	r0, [r1]
-.L1000:
+.L1231:
 	mov	r5, #0x0
 	mov	r0, r8
 	lsl	r0, r0, #0x18
 	str	r0, [sp, #0x4]
-.L1006:
+.L1237:
 	lsl	r1, r5, #0x1
 	mov	sl, r1
 	add	r2, r5, #0x1
@@ -29709,7 +32296,7 @@ ShowPartnerCandidateMessage:
 	asr	r0, r0, #0x1
 	lsl	r0, r0, #0x18
 	mov	r8, r0
-.L1009:
+.L1240:
 	ldr	r3, [sp, #0x4]
 	lsr	r0, r3, #0x18
 	mov	r4, r8
@@ -29717,64 +32304,64 @@ ShowPartnerCandidateMessage:
 	bl	GetRandomScaledFrontierTrainerId
 	lsl	r0, r0, #0x10
 	lsr	r3, r0, #0x10
-	ldr	r0, .L1048+0x10
+	ldr	r0, .L1279+0x10
 	ldrh	r0, [r0]
 	cmp	r0, r3
-	beq	.L1009	@cond_branch
+	beq	.L1240	@cond_branch
 	mov	r2, #0x0
 	cmp	r2, r5
-	bge	.L1012	@cond_branch
-	ldr	r1, .L1048
+	bge	.L1243	@cond_branch
+	ldr	r1, .L1279
 	ldr	r0, [r1]
-	ldr	r4, .L1048+0x14
+	ldr	r4, .L1279+0x14
 	add	r0, r0, r4
 	ldrh	r0, [r0]
 	cmp	r0, r3
-	beq	.L1012	@cond_branch
+	beq	.L1243	@cond_branch
 	add	r6, r1, #0
-.L1013:
+.L1244:
 	add	r2, r2, #0x1
 	cmp	r2, r5
-	bge	.L1012	@cond_branch
+	bge	.L1243	@cond_branch
 	ldr	r0, [r6]
 	lsl	r1, r2, #0x1
 	add	r0, r0, r4
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	cmp	r0, r3
-	bne	.L1013	@cond_branch
-.L1012:
+	bne	.L1244	@cond_branch
+.L1243:
 	cmp	r2, r5
-	bne	.L1009	@cond_branch
-	ldr	r5, .L1048
+	bne	.L1240	@cond_branch
+	ldr	r5, .L1279
 	ldr	r0, [r5]
-	ldr	r1, .L1048+0x14
+	ldr	r1, .L1279+0x14
 	add	r0, r0, r1
 	add	r0, r0, sl
 	strh	r3, [r0]
 	mov	r5, r9
 	cmp	r5, #0xd
-	ble	.L1006	@cond_branch
-	ldr	r2, .L1048
+	ble	.L1237	@cond_branch
+	ldr	r2, .L1279
 	ldr	r0, [r2]
-	ldr	r3, .L1048+0x18
+	ldr	r3, .L1279+0x18
 	add	r0, r0, r3
 	strh	r7, [r0]
-.L984:
+.L1215:
 	mov	r0, #0xfa
 	lsl	r0, r0, #0x1
 	cmp	r7, r0
-	beq	.L977	@cond_branch
+	beq	.L1208	@cond_branch
 	sub	r0, r0, #0xc9
 	cmp	r7, r0
-	bgt	.L1024	@cond_branch
-	ldr	r0, .L1048+0x1c
+	bgt	.L1255	@cond_branch
+	ldr	r0, .L1279+0x1c
 	ldr	r4, [sp]
 	lsl	r1, r4, #0x3
-	b	.L1031
-.L1049:
+	b	.L1262
+.L1280:
 	.align	2, 0
-.L1048:
+.L1279:
 	.word	gSaveBlock2Ptr
 	.word	gFrontierTempParty
 	.word	0xcd8
@@ -29783,34 +32370,34 @@ ShowPartnerCandidateMessage:
 	.word	0xcb4
 	.word	0xcd6
 	.word	sPartnerTrainerTextTables
-.L1024:
-	ldr	r0, .L1050
+.L1255:
+	ldr	r0, .L1281
 	cmp	r7, r0
-	bgt	.L1026	@cond_branch
-	ldr	r0, .L1050+0x4
+	bgt	.L1257	@cond_branch
+	ldr	r0, .L1281+0x4
 	ldr	r5, [sp]
 	lsl	r1, r5, #0x3
-.L1031:
+.L1262:
 	add	r0, r0, #0x4
 	add	r1, r1, r0
-	ldr	r0, .L1050+0x8
+	ldr	r0, .L1281+0x8
 	ldrh	r0, [r0]
 	ldr	r1, [r1]
 	lsl	r0, r0, #0x2
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	bl	ShowFieldMessage
-	b	.L977
-.L1051:
+	b	.L1208
+.L1282:
 	.align	2, 0
-.L1050:
+.L1281:
 	.word	0x18f
 	.word	sPartnerTrainerTextTables
 	.word	gSpecialVar_0x8005
-.L1026:
-	ldr	r0, .L1052
+.L1257:
+	ldr	r0, .L1283
 	ldr	r1, [r0]
-	ldr	r0, .L1052+0x4
+	ldr	r0, .L1283+0x4
 	add	r2, r7, r0
 	lsl	r0, r2, #0x4
 	add	r0, r0, r2
@@ -29819,17 +32406,17 @@ ShowPartnerCandidateMessage:
 	add	r1, r1, #0xdc
 	ldrb	r0, [r1]
 	lsl	r0, r0, #0x1b
-	ldr	r1, .L1052+0x8
+	ldr	r1, .L1283+0x8
 	lsr	r0, r0, #0x19
 	add	r0, r0, r1
-	ldr	r1, .L1052+0xc
+	ldr	r1, .L1283+0xc
 	ldrh	r1, [r1]
 	ldr	r0, [r0]
 	lsl	r1, r1, #0x2
 	add	r1, r1, r0
 	ldr	r0, [r1]
 	bl	ShowFieldMessage
-.L977:
+.L1208:
 	add	sp, sp, #0x8
 	pop	{r3, r4, r5}
 	mov	r8, r3
@@ -29838,15 +32425,15 @@ ShowPartnerCandidateMessage:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1053:
+.L1284:
 	.align	2, 0
-.L1052:
+.L1283:
 	.word	gSaveBlock2Ptr
 	.word	-0x190
 	.word	sPartnerApprenticeTextTables
 	.word	gSpecialVar_0x8005
-.Lfe42:
-	.size	 ShowPartnerCandidateMessage,.Lfe42-ShowPartnerCandidateMessage
+.Lfe45:
+	.size	 ShowPartnerCandidateMessage,.Lfe45-ShowPartnerCandidateMessage
 	.align	2, 0
 	.type	 LoadLinkMultiOpponentsData,function
 	.thumb_func
@@ -29856,62 +32443,62 @@ LoadLinkMultiOpponentsData:
 	mov	r6, r8
 	push	{r6, r7}
 	add	sp, sp, #-0x4
-	ldr	r4, .L1096
+	ldr	r4, .L1327
 	ldr	r0, [r4]
-	ldr	r1, .L1096+0x4
+	ldr	r1, .L1327+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1e
 	lsr	r7, r0, #0x1e
-	ldr	r0, .L1096+0x8
+	ldr	r0, .L1327+0x8
 	bl	VarGet
 	lsl	r0, r0, #0x10
 	lsr	r5, r0, #0x10
 	ldr	r0, [r4]
-	ldr	r2, .L1096+0xc
+	ldr	r2, .L1327+0xc
 	add	r0, r0, r2
 	ldrh	r6, [r0]
 	bl	GetMultiplayerId
-	ldr	r0, .L1096+0x10
+	ldr	r0, .L1327+0x10
 	ldrh	r0, [r0]
 	cmp	r0, #0x6
-	bls	.LCB7982
-	b	.L1054	@long jump
-.LCB7982:
+	bls	.LCB9368
+	b	.L1285	@long jump
+.LCB9368:
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1096+0x14
+	ldr	r1, .L1327+0x14
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L1097:
+.L1328:
 	.align	2, 0
-.L1096:
+.L1327:
 	.word	gSaveBlock2Ptr
 	.word	0xca9
 	.word	0x40ce
 	.word	0xcb2
 	.word	gSpecialVar_Result
-	.word	.L1091
+	.word	.L1322
 	.align	2, 0
 	.align	2, 0
-.L1091:
-	.word	.L1056
-	.word	.L1060
-	.word	.L1081
-	.word	.L1083
-	.word	.L1087
-	.word	.L1088
-	.word	.L1054
-.L1056:
+.L1322:
+	.word	.L1287
+	.word	.L1291
+	.word	.L1312
+	.word	.L1314
+	.word	.L1318
+	.word	.L1319
+	.word	.L1285
+.L1287:
 	cmp	r5, #0x3
-	beq	.LCB8007
-	b	.L1094	@long jump
-.LCB8007:
-	ldr	r0, .L1098
+	beq	.LCB9393
+	b	.L1325	@long jump
+.LCB9393:
+	ldr	r0, .L1329
 	ldr	r0, [r0]
 	lsl	r1, r7, #0x1
 	add	r0, r0, r1
-	ldr	r3, .L1098+0x4
+	ldr	r3, .L1329+0x4
 	add	r0, r0, r3
 	ldrh	r0, [r0]
 	mov	r1, #0x7
@@ -29922,55 +32509,55 @@ LoadLinkMultiOpponentsData:
 	bl	IsLinkTaskFinished
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.LCB8030
-	b	.L1054	@long jump
-.LCB8030:
+	bne	.LCB9416
+	b	.L1285	@long jump
+.LCB9416:
 	bl	bitmask_all_link_players_but_self
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	mov	r1, sp
 	mov	r2, #0x4
 	bl	SendBlock
-	ldr	r1, .L1098+0x8
+	ldr	r1, .L1329+0x8
 	mov	r0, #0x1
-	b	.L1093
-.L1099:
+	b	.L1324
+.L1330:
 	.align	2, 0
-.L1098:
+.L1329:
 	.word	gSaveBlock2Ptr
 	.word	0xcec
 	.word	gSpecialVar_Result
-.L1060:
+.L1291:
 	bl	GetBlockReceivedStatus
 	mov	r1, #0x3
 	and	r1, r1, r0
 	cmp	r1, #0x3
-	beq	.LCB8062
-	b	.L1054	@long jump
-.LCB8062:
+	beq	.LCB9448
+	b	.L1285	@long jump
+.LCB9448:
 	bl	ResetBlockReceivedFlags
-	ldr	r1, .L1100
+	ldr	r1, .L1331
 	mov	r0, #0x80
 	lsl	r0, r0, #0x1
 	add	r2, r1, r0
 	ldrh	r0, [r1]
 	ldrh	r3, [r2]
 	cmp	r0, r3
-	bhi	.L1095	@cond_branch
+	bhi	.L1326	@cond_branch
 	ldrh	r0, [r2]
-.L1095:
+.L1326:
 	str	r0, [sp]
 	mov	r4, #0x0
-	ldr	r0, .L1100+0x4
+	ldr	r0, .L1331+0x4
 	mov	r9, r0
-.L1067:
+.L1298:
 	add	r1, r4, #0x1
 	mov	r8, r1
 	lsr	r0, r4, #0x1f
 	add	r0, r4, r0
 	asr	r0, r0, #0x1
 	lsl	r7, r0, #0x18
-.L1068:
+.L1299:
 	ldr	r0, [sp]
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
@@ -29980,95 +32567,95 @@ LoadLinkMultiOpponentsData:
 	lsr	r3, r0, #0x10
 	mov	r2, #0x0
 	cmp	r2, r4
-	bge	.L1070	@cond_branch
+	bge	.L1301	@cond_branch
 	mov	r1, r9
 	ldr	r0, [r1]
-	ldr	r1, .L1100+0x8
+	ldr	r1, .L1331+0x8
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	cmp	r0, r3
-	beq	.L1070	@cond_branch
-	ldr	r6, .L1100+0x4
+	beq	.L1301	@cond_branch
+	ldr	r6, .L1331+0x4
 	add	r5, r1, #0
-.L1073:
+.L1304:
 	add	r2, r2, #0x1
 	cmp	r2, r4
-	bge	.L1070	@cond_branch
+	bge	.L1301	@cond_branch
 	ldr	r0, [r6]
 	lsl	r1, r2, #0x1
 	add	r0, r0, r5
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	cmp	r0, r3
-	bne	.L1073	@cond_branch
-.L1070:
+	bne	.L1304	@cond_branch
+.L1301:
 	cmp	r4, r2
-	bne	.L1068	@cond_branch
+	bne	.L1299	@cond_branch
 	mov	r2, r9
 	ldr	r0, [r2]
 	lsl	r1, r4, #0x1
-	ldr	r2, .L1100+0x8
+	ldr	r2, .L1331+0x8
 	add	r0, r0, r2
 	add	r0, r0, r1
 	strh	r3, [r0]
 	mov	r4, r8
 	cmp	r4, #0xd
-	ble	.L1067	@cond_branch
-	ldr	r1, .L1100+0xc
+	ble	.L1298	@cond_branch
+	ldr	r1, .L1331+0xc
 	mov	r0, #0x2
-	b	.L1093
-.L1101:
+	b	.L1324
+.L1332:
 	.align	2, 0
-.L1100:
+.L1331:
 	.word	gBlockRecvBuffer
 	.word	gSaveBlock2Ptr
 	.word	0xcb4
 	.word	gSpecialVar_Result
-.L1081:
+.L1312:
 	bl	IsLinkTaskFinished
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1054	@cond_branch
+	beq	.L1285	@cond_branch
 	bl	bitmask_all_link_players_but_self
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r1, .L1102
+	ldr	r1, .L1333
 	ldr	r1, [r1]
-	ldr	r3, .L1102+0x4
+	ldr	r3, .L1333+0x4
 	add	r1, r1, r3
 	mov	r2, #0x28
 	bl	SendBlock
-	ldr	r1, .L1102+0x8
+	ldr	r1, .L1333+0x8
 	mov	r0, #0x3
-	b	.L1093
-.L1103:
+	b	.L1324
+.L1334:
 	.align	2, 0
-.L1102:
+.L1333:
 	.word	gSaveBlock2Ptr
 	.word	0xcb4
 	.word	gSpecialVar_Result
-.L1083:
+.L1314:
 	bl	GetBlockReceivedStatus
 	mov	r1, #0x3
 	and	r1, r1, r0
 	cmp	r1, #0x3
-	bne	.L1054	@cond_branch
+	bne	.L1285	@cond_branch
 	bl	ResetBlockReceivedFlags
-	ldr	r4, .L1104
+	ldr	r4, .L1335
 	ldr	r0, [r4]
-	ldr	r5, .L1104+0x4
+	ldr	r5, .L1335+0x4
 	add	r0, r0, r5
-	ldr	r1, .L1104+0x8
+	ldr	r1, .L1335+0x8
 	mov	r2, #0x28
 	bl	memcpy
-	ldr	r2, .L1104+0xc
+	ldr	r2, .L1335+0xc
 	ldr	r1, [r4]
 	lsl	r0, r6, #0x2
 	add	r1, r1, r5
 	add	r0, r1, r0
 	ldrh	r0, [r0]
 	strh	r0, [r2]
-	ldr	r4, .L1104+0x10
+	ldr	r4, .L1335+0x10
 	lsl	r0, r6, #0x1
 	add	r0, r0, #0x1
 	lsl	r0, r0, #0x1
@@ -30081,20 +32668,20 @@ LoadLinkMultiOpponentsData:
 	ldrh	r0, [r4]
 	mov	r1, #0x1
 	bl	SetBattleFacilityTrainerGfxId
-	ldr	r0, .L1104+0x14
+	ldr	r0, .L1335+0x14
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L1094	@cond_branch
-	ldr	r0, .L1104+0x18
+	beq	.L1325	@cond_branch
+	ldr	r0, .L1335+0x18
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L1094	@cond_branch
-	ldr	r1, .L1104+0x1c
+	bne	.L1325	@cond_branch
+	ldr	r1, .L1335+0x1c
 	mov	r0, #0x4
-	b	.L1093
-.L1105:
+	b	.L1324
+.L1336:
 	.align	2, 0
-.L1104:
+.L1335:
 	.word	gSaveBlock2Ptr
 	.word	0xcb4
 	.word	gBlockRecvBuffer
@@ -30103,26 +32690,26 @@ LoadLinkMultiOpponentsData:
 	.word	gReceivedRemoteLinkPlayers
 	.word	gWirelessCommType
 	.word	gSpecialVar_Result
-.L1087:
+.L1318:
 	bl	SetCloseLinkCallback
-	ldr	r1, .L1106
+	ldr	r1, .L1337
 	mov	r0, #0x5
-	b	.L1093
-.L1107:
+	b	.L1324
+.L1338:
 	.align	2, 0
-.L1106:
+.L1337:
 	.word	gSpecialVar_Result
-.L1088:
-	ldr	r0, .L1108
+.L1319:
+	ldr	r0, .L1339
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L1054	@cond_branch
-.L1094:
-	ldr	r1, .L1108+0x4
+	bne	.L1285	@cond_branch
+.L1325:
+	ldr	r1, .L1339+0x4
 	mov	r0, #0x6
-.L1093:
+.L1324:
 	strh	r0, [r1]
-.L1054:
+.L1285:
 	add	sp, sp, #0x4
 	pop	{r3, r4}
 	mov	r8, r3
@@ -30130,111 +32717,111 @@ LoadLinkMultiOpponentsData:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1109:
+.L1340:
 	.align	2, 0
-.L1108:
+.L1339:
 	.word	gReceivedRemoteLinkPlayers
 	.word	gSpecialVar_Result
-.Lfe43:
-	.size	 LoadLinkMultiOpponentsData,.Lfe43-LoadLinkMultiOpponentsData
+.Lfe46:
+	.size	 LoadLinkMultiOpponentsData,.Lfe46-LoadLinkMultiOpponentsData
 	.align	2, 0
 	.type	 sub_8164DCC,function
 	.thumb_func
 sub_8164DCC:
 	push	{lr}
-	ldr	r0, .L1112
+	ldr	r0, .L1343
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L1111	@cond_branch
+	beq	.L1342	@cond_branch
 	bl	SetCloseLinkCallback
-.L1111:
+.L1342:
 	pop	{r0}
 	bx	r0
-.L1113:
+.L1344:
 	.align	2, 0
-.L1112:
+.L1343:
 	.word	gWirelessCommType
-.Lfe44:
-	.size	 sub_8164DCC,.Lfe44-sub_8164DCC
+.Lfe47:
+	.size	 sub_8164DCC,.Lfe47-sub_8164DCC
 	.align	2, 0
 	.type	 SetMultiPartnerGfx,function
 	.thumb_func
 SetMultiPartnerGfx:
 	push	{lr}
-	ldr	r0, .L1115
+	ldr	r0, .L1346
 	ldr	r0, [r0]
-	ldr	r1, .L1115+0x4
+	ldr	r1, .L1346+0x4
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	mov	r1, #0xf
 	bl	SetBattleFacilityTrainerGfxId
 	pop	{r0}
 	bx	r0
-.L1116:
+.L1347:
 	.align	2, 0
-.L1115:
+.L1346:
 	.word	gSaveBlock2Ptr
 	.word	0xcd6
-.Lfe45:
-	.size	 SetMultiPartnerGfx,.Lfe45-SetMultiPartnerGfx
+.Lfe48:
+	.size	 SetMultiPartnerGfx,.Lfe48-SetMultiPartnerGfx
 	.align	2, 0
 	.type	 SetTowerInterviewData,function
 	.thumb_func
 SetTowerInterviewData:
 	push	{r4, r5, r6, lr}
 	add	sp, sp, #-0x20
-	ldr	r0, .L1124
+	ldr	r0, .L1355
 	bl	VarGet
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bne	.L1117	@cond_branch
-	ldr	r5, .L1124+0x4
+	bne	.L1348	@cond_branch
+	ldr	r5, .L1355+0x4
 	ldrh	r1, [r5]
 	mov	r0, sp
 	bl	GetFrontierTrainerName
 	mov	r0, sp
 	bl	StripExtCtrlCodes
-	ldr	r4, .L1124+0x8
+	ldr	r4, .L1355+0x8
 	ldr	r0, [r4]
-	ldr	r1, .L1124+0xc
+	ldr	r1, .L1355+0xc
 	add	r0, r0, r1
 	mov	r1, sp
 	bl	StringCopy
 	ldr	r0, [r4]
-	ldr	r2, .L1124+0x10
+	ldr	r2, .L1355+0x10
 	add	r0, r0, r2
 	ldrh	r1, [r5]
 	bl	GetBattleTowerTrainerLanguage
-	ldr	r6, .L1124+0x14
+	ldr	r6, .L1355+0x14
 	ldrh	r0, [r6, #0x2]
 	mov	r5, #0x64
 	mul	r0, r0, r5
-	ldr	r1, .L1124+0x18
+	ldr	r1, .L1355+0x18
 	add	r0, r0, r1
 	mov	r1, #0xb
 	mov	r2, #0x0
 	bl	GetMonData
 	ldr	r1, [r4]
-	ldr	r2, .L1124+0x1c
+	ldr	r2, .L1355+0x1c
 	add	r1, r1, r2
 	strh	r0, [r1]
 	ldrh	r0, [r6]
 	mul	r0, r0, r5
-	ldr	r1, .L1124+0x20
+	ldr	r1, .L1355+0x20
 	add	r0, r0, r1
 	mov	r1, #0xb
 	mov	r2, #0x0
 	bl	GetMonData
 	ldr	r1, [r4]
-	ldr	r2, .L1124+0x24
+	ldr	r2, .L1355+0x24
 	add	r1, r1, r2
 	strh	r0, [r1]
 	mov	r2, #0x0
 	mov	r5, #0xbe
 	lsl	r5, r5, #0x4
-	ldr	r3, .L1124+0x28
+	ldr	r3, .L1355+0x28
 	add	r6, r4, #0
-.L1122:
+.L1353:
 	ldr	r0, [r4]
 	add	r0, r0, r5
 	add	r0, r0, r2
@@ -30243,21 +32830,21 @@ SetTowerInterviewData:
 	strb	r1, [r0]
 	add	r2, r2, #0x1
 	cmp	r2, #0xa
-	ble	.L1122	@cond_branch
+	ble	.L1353	@cond_branch
 	ldr	r0, [r6]
-	ldr	r1, .L1124+0x2c
+	ldr	r1, .L1355+0x2c
 	ldrb	r1, [r1]
-	ldr	r2, .L1124+0x30
+	ldr	r2, .L1355+0x30
 	add	r0, r0, r2
 	strb	r1, [r0]
-.L1117:
+.L1348:
 	add	sp, sp, #0x20
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1125:
+.L1356:
 	.align	2, 0
-.L1124:
+.L1355:
 	.word	0x40ce
 	.word	gTrainerBattleOpponent_A
 	.word	gSaveBlock2Ptr
@@ -30271,8 +32858,8 @@ SetTowerInterviewData:
 	.word	gBattleMons+0x32
 	.word	gBattleOutcome
 	.word	0xd06
-.Lfe46:
-	.size	 SetTowerInterviewData,.Lfe46-SetTowerInterviewData
+.Lfe49:
+	.size	 SetTowerInterviewData,.Lfe49-SetTowerInterviewData
 	.align	2, 0
 	.type	 ValidateBattleTowerRecordChecksums,function
 	.thumb_func
@@ -30280,34 +32867,34 @@ ValidateBattleTowerRecordChecksums:
 	push	{r4, r5, r6, r7, lr}
 	mov	r7, r8
 	push	{r7}
-	ldr	r0, .L1144
+	ldr	r0, .L1375
 	ldr	r0, [r0]
 	mov	r3, #0x0
 	mov	r2, #0x0
-	ldr	r4, .L1144+0x4
+	ldr	r4, .L1375+0x4
 	add	r1, r0, r4
-.L1130:
+.L1361:
 	ldmia	r1!, {r0}
 	add	r3, r3, r0
 	add	r2, r2, #0x1
 	cmp	r2, #0x39
-	bls	.L1130	@cond_branch
-	ldr	r5, .L1144
+	bls	.L1361	@cond_branch
+	ldr	r5, .L1375
 	ldr	r1, [r5]
-	ldr	r2, .L1144+0x8
+	ldr	r2, .L1375+0x8
 	add	r0, r1, r2
 	ldr	r0, [r0]
 	cmp	r0, r3
-	beq	.L1132	@cond_branch
-	ldr	r3, .L1144+0x4
+	beq	.L1363	@cond_branch
+	ldr	r3, .L1375+0x4
 	add	r0, r1, r3
 	bl	ClearBattleTowerRecord
-.L1132:
+.L1363:
 	mov	r4, #0x0
 	add	r7, r5, #0
 	mov	r6, #0xec
 	mov	r8, r7
-.L1136:
+.L1367:
 	mov	r0, r4
 	mul	r0, r0, r6
 	mov	r1, #0xe7
@@ -30318,12 +32905,12 @@ ValidateBattleTowerRecordChecksums:
 	mov	r2, #0x0
 	add	r5, r4, #0x1
 	add	r1, r1, r0
-.L1140:
+.L1371:
 	ldmia	r1!, {r0}
 	add	r3, r3, r0
 	add	r2, r2, #0x1
 	cmp	r2, #0x39
-	bls	.L1140	@cond_branch
+	bls	.L1371	@cond_branch
 	mov	r0, r8
 	ldr	r2, [r0]
 	mov	r1, r4
@@ -30334,29 +32921,29 @@ ValidateBattleTowerRecordChecksums:
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	cmp	r0, r3
-	beq	.L1135	@cond_branch
+	beq	.L1366	@cond_branch
 	mov	r3, #0xe7
 	lsl	r3, r3, #0x3
 	add	r0, r1, r3
 	add	r0, r2, r0
 	bl	ClearBattleTowerRecord
-.L1135:
+.L1366:
 	add	r4, r5, #0
 	cmp	r4, #0x4
-	ble	.L1136	@cond_branch
+	ble	.L1367	@cond_branch
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1145:
+.L1376:
 	.align	2, 0
-.L1144:
+.L1375:
 	.word	gSaveBlock2Ptr
 	.word	0x64c
 	.word	0x734
-.Lfe47:
-	.size	 ValidateBattleTowerRecordChecksums,.Lfe47-ValidateBattleTowerRecordChecksums
+.Lfe50:
+	.size	 ValidateBattleTowerRecordChecksums,.Lfe50-ValidateBattleTowerRecordChecksums
 	.align	2, 0
 	.globl	CalcEmeraldBattleTowerChecksum
 	.type	 CalcEmeraldBattleTowerChecksum,function
@@ -30369,19 +32956,19 @@ CalcEmeraldBattleTowerChecksum:
 	str	r1, [r2]
 	mov	r3, #0x0
 	add	r4, r0, #0
-.L1150:
+.L1381:
 	ldr	r0, [r2]
 	ldmia	r4!, {r1}
 	add	r0, r0, r1
 	str	r0, [r2]
 	add	r3, r3, #0x1
 	cmp	r3, #0x39
-	bls	.L1150	@cond_branch
+	bls	.L1381	@cond_branch
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.Lfe48:
-	.size	 CalcEmeraldBattleTowerChecksum,.Lfe48-CalcEmeraldBattleTowerChecksum
+.Lfe51:
+	.size	 CalcEmeraldBattleTowerChecksum,.Lfe51-CalcEmeraldBattleTowerChecksum
 	.align	2, 0
 	.globl	CalcRubyBattleTowerChecksum
 	.type	 CalcRubyBattleTowerChecksum,function
@@ -30394,19 +32981,19 @@ CalcRubyBattleTowerChecksum:
 	str	r1, [r2]
 	mov	r3, #0x0
 	add	r4, r0, #0
-.L1156:
+.L1387:
 	ldr	r0, [r2]
 	ldmia	r4!, {r1}
 	add	r0, r0, r1
 	str	r0, [r2]
 	add	r3, r3, #0x1
 	cmp	r3, #0x27
-	bls	.L1156	@cond_branch
+	bls	.L1387	@cond_branch
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.Lfe49:
-	.size	 CalcRubyBattleTowerChecksum,.Lfe49-CalcRubyBattleTowerChecksum
+.Lfe52:
+	.size	 CalcRubyBattleTowerChecksum,.Lfe52-CalcRubyBattleTowerChecksum
 	.align	2, 0
 	.type	 ClearBattleTowerRecord,function
 	.thumb_func
@@ -30414,15 +33001,15 @@ ClearBattleTowerRecord:
 	push	{lr}
 	mov	r1, #0x0
 	mov	r2, #0x0
-.L1162:
+.L1393:
 	stmia	r0!, {r2}
 	add	r1, r1, #0x1
 	cmp	r1, #0x3a
-	bls	.L1162	@cond_branch
+	bls	.L1393	@cond_branch
 	pop	{r0}
 	bx	r0
-.Lfe50:
-	.size	 ClearBattleTowerRecord,.Lfe50-ClearBattleTowerRecord
+.Lfe53:
+	.size	 ClearBattleTowerRecord,.Lfe53-ClearBattleTowerRecord
 	.align	2, 0
 	.globl	GetCurrentBattleTowerWinStreak
 	.type	 GetCurrentBattleTowerWinStreak,function
@@ -30431,7 +33018,7 @@ GetCurrentBattleTowerWinStreak:
 	push	{lr}
 	lsl	r0, r0, #0x18
 	lsl	r1, r1, #0x18
-	ldr	r2, .L1168
+	ldr	r2, .L1399
 	ldr	r2, [r2]
 	lsr	r0, r0, #0x17
 	lsr	r1, r1, #0x16
@@ -30441,20 +33028,20 @@ GetCurrentBattleTowerWinStreak:
 	add	r2, r2, r1
 	add	r2, r2, r0
 	ldrh	r0, [r2]
-	ldr	r1, .L1168+0x4
+	ldr	r1, .L1399+0x4
 	cmp	r0, r1
-	bls	.L1167	@cond_branch
+	bls	.L1398	@cond_branch
 	add	r0, r1, #0
-.L1167:
+.L1398:
 	pop	{r1}
 	bx	r1
-.L1169:
+.L1400:
 	.align	2, 0
-.L1168:
+.L1399:
 	.word	gSaveBlock2Ptr
 	.word	0x270f
-.Lfe51:
-	.size	 GetCurrentBattleTowerWinStreak,.Lfe51-GetCurrentBattleTowerWinStreak
+.Lfe54:
+	.size	 GetCurrentBattleTowerWinStreak,.Lfe54-GetCurrentBattleTowerWinStreak
 	.align	2, 0
 	.type	 GetMonCountForBattleMode,function
 	.thumb_func
@@ -30463,29 +33050,29 @@ GetMonCountForBattleMode:
 	add	sp, sp, #-0x4
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r1, .L1174
+	ldr	r1, .L1405
 	mov	r0, sp
 	mov	r2, #0x4
 	bl	memcpy
 	cmp	r4, #0x3
-	bls	.L1171	@cond_branch
+	bls	.L1402	@cond_branch
 	mov	r0, #0x3
-	b	.L1173
-.L1175:
+	b	.L1404
+.L1406:
 	.align	2, 0
-.L1174:
+.L1405:
 	.word	sBattleTowerPartySizes
-.L1171:
+.L1402:
 	mov	r1, sp
 	add	r0, r1, r4
 	ldrb	r0, [r0]
-.L1173:
+.L1404:
 	add	sp, sp, #0x4
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-.Lfe52:
-	.size	 GetMonCountForBattleMode,.Lfe52-GetMonCountForBattleMode
+.Lfe55:
+	.size	 GetMonCountForBattleMode,.Lfe55-GetMonCountForBattleMode
 	.align	2, 0
 	.type	 AwardBattleTowerRibbons,function
 	.thumb_func
@@ -30496,15 +33083,15 @@ AwardBattleTowerRibbons:
 	mov	r5, r8
 	push	{r5, r6, r7}
 	add	sp, sp, #-0xc
-	ldr	r0, .L1194
+	ldr	r0, .L1425
 	ldr	r0, [r0]
-	ldr	r1, .L1194+0x4
+	ldr	r1, .L1425+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1e
 	lsr	r0, r0, #0x1e
 	add	r5, r0, #0
-	ldr	r0, .L1194+0x8
+	ldr	r0, .L1425+0x8
 	bl	VarGet
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
@@ -30516,11 +33103,11 @@ AwardBattleTowerRibbons:
 	mov	r2, #0x44
 	mov	sl, r2
 	cmp	r5, #0
-	beq	.L1177	@cond_branch
+	beq	.L1408	@cond_branch
 	mov	r0, #0x45
 	mov	sl, r0
-.L1177:
-	ldr	r1, .L1194+0xc
+.L1408:
+	ldr	r1, .L1425+0xc
 	mov	r9, r1
 	mov	r0, #0x0
 	strh	r0, [r1]
@@ -30530,17 +33117,17 @@ AwardBattleTowerRibbons:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x37
-	bls	.L1179	@cond_branch
+	bls	.L1410	@cond_branch
 	mov	r6, #0x0
 	cmp	r6, r8
-	bge	.L1179	@cond_branch
-	ldr	r7, .L1194+0x10
+	bge	.L1410	@cond_branch
+	ldr	r7, .L1425+0x10
 	mov	r5, sp
-.L1183:
-	ldr	r0, .L1194
+.L1414:
+	ldr	r0, .L1425
 	ldr	r0, [r0]
 	lsl	r1, r6, #0x1
-	ldr	r2, .L1194+0x14
+	ldr	r2, .L1425+0x14
 	add	r0, r0, r2
 	add	r0, r0, r1
 	ldrh	r1, [r0]
@@ -30558,7 +33145,7 @@ AwardBattleTowerRibbons:
 	mov	r1, sl
 	bl	GetMonData
 	cmp	r0, #0
-	bne	.L1182	@cond_branch
+	bne	.L1413	@cond_branch
 	mov	r0, #0x1
 	mov	r2, r9
 	strh	r0, [r2]
@@ -30570,45 +33157,45 @@ AwardBattleTowerRibbons:
 	add	r0, r0, r4
 	bl	GetRibbonCount
 	strb	r0, [r5, #0x1]
-.L1182:
+.L1413:
 	add	r5, r5, #0x4
 	add	r6, r6, #0x1
 	cmp	r6, r8
-	blt	.L1183	@cond_branch
-.L1179:
-	ldr	r0, .L1194+0xc
+	blt	.L1414	@cond_branch
+.L1410:
+	ldr	r0, .L1425+0xc
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	beq	.L1186	@cond_branch
+	beq	.L1417	@cond_branch
 	mov	r0, #0x2a
 	bl	IncrementGameStat
 	mov	r0, r8
 	cmp	r0, #0x1
-	ble	.L1188	@cond_branch
+	ble	.L1419	@cond_branch
 	mov	r3, sp
 	add	r2, sp, #0x4
 	mov	r6, r8
 	sub	r6, r6, #0x1
-.L1190:
+.L1421:
 	ldrb	r1, [r3, #0x1]
 	ldrb	r0, [r2, #0x1]
 	cmp	r0, r1
-	bls	.L1189	@cond_branch
+	bls	.L1420	@cond_branch
 	ldr	r1, [sp]
 	ldr	r0, [r2]
 	str	r0, [sp]
 	str	r1, [r2]
-.L1189:
+.L1420:
 	add	r2, r2, #0x4
 	sub	r6, r6, #0x1
 	cmp	r6, #0
-	bne	.L1190	@cond_branch
-.L1188:
+	bne	.L1421	@cond_branch
+.L1419:
 	mov	r0, sp
 	ldrb	r0, [r0, #0x1]
 	cmp	r0, #0x4
-	bls	.L1186	@cond_branch
-	ldr	r2, .L1194+0x10
+	bls	.L1417	@cond_branch
+	ldr	r2, .L1425+0x10
 	mov	r0, sp
 	ldrb	r1, [r0]
 	mov	r0, #0x64
@@ -30620,7 +33207,7 @@ AwardBattleTowerRibbons:
 	add	r0, r0, r1
 	mov	r1, sl
 	bl	TryPutSpotTheCutiesOnAir
-.L1186:
+.L1417:
 	add	sp, sp, #0xc
 	pop	{r3, r4, r5}
 	mov	r8, r3
@@ -30629,17 +33216,17 @@ AwardBattleTowerRibbons:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1195:
+.L1426:
 	.align	2, 0
-.L1194:
+.L1425:
 	.word	gSaveBlock2Ptr
 	.word	0xca9
 	.word	0x40ce
 	.word	gSpecialVar_Result
 	.word	gSaveBlock1Ptr
 	.word	0xcaa
-.Lfe53:
-	.size	 AwardBattleTowerRibbons,.Lfe53-AwardBattleTowerRibbons
+.Lfe56:
+	.size	 AwardBattleTowerRibbons,.Lfe56-AwardBattleTowerRibbons
 	.align	2, 0
 	.type	 FillEReaderTrainerWithPlayerData,function
 	.thumb_func
@@ -30648,15 +33235,15 @@ FillEReaderTrainerWithPlayerData:
 	mov	r7, r9
 	mov	r6, r8
 	push	{r6, r7}
-	ldr	r1, .L1210
+	ldr	r1, .L1441
 	ldr	r2, [r1]
-	ldr	r0, .L1210+0x4
+	ldr	r0, .L1441+0x4
 	add	r7, r2, r0
 	ldrb	r0, [r2, #0x8]
 	add	r5, r1, #0
 	cmp	r0, #0
-	beq	.L1197	@cond_branch
-	ldr	r4, .L1210+0x8
+	beq	.L1428	@cond_branch
+	ldr	r4, .L1441+0x8
 	ldrb	r0, [r2, #0xa]
 	ldrb	r1, [r2, #0xb]
 	add	r0, r0, r1
@@ -30665,15 +33252,15 @@ FillEReaderTrainerWithPlayerData:
 	ldrb	r1, [r2, #0xd]
 	add	r0, r0, r1
 	mov	r1, #0x14
-	b	.L1209
-.L1211:
+	b	.L1440
+.L1442:
 	.align	2, 0
-.L1210:
+.L1441:
 	.word	gSaveBlock2Ptr
 	.word	0xbec
 	.word	gTowerFemaleFacilityClasses
-.L1197:
-	ldr	r4, .L1212
+.L1428:
+	ldr	r4, .L1443
 	ldrb	r0, [r2, #0xa]
 	ldrb	r1, [r2, #0xb]
 	add	r0, r0, r1
@@ -30682,7 +33269,7 @@ FillEReaderTrainerWithPlayerData:
 	ldrb	r1, [r2, #0xd]
 	add	r0, r0, r1
 	mov	r1, #0x1e
-.L1209:
+.L1440:
 	bl	__umodsi3
 	add	r0, r0, r4
 	ldrb	r0, [r0]
@@ -30699,17 +33286,17 @@ FillEReaderTrainerWithPlayerData:
 	strh	r0, [r7, #0x2]
 	mov	r6, #0x7
 	mov	r4, #0x0
-	ldr	r0, .L1212+0x4
+	ldr	r0, .L1443+0x4
 	mov	r8, r0
 	add	r5, r7, #0
 	add	r5, r5, #0x10
-	ldr	r1, .L1212+0x8
+	ldr	r1, .L1443+0x8
 	mov	ip, r1
 	add	r3, r7, #0
 	add	r3, r3, #0x28
 	add	r2, r7, #0
 	add	r2, r2, #0x1c
-.L1202:
+.L1433:
 	lsl	r0, r4, #0x1
 	mov	r9, r0
 	mov	r1, r8
@@ -30727,12 +33314,12 @@ FillEReaderTrainerWithPlayerData:
 	add	r2, r2, #0x2
 	add	r4, r4, #0x1
 	cmp	r4, #0x5
-	ble	.L1202	@cond_branch
+	ble	.L1433	@cond_branch
 	mov	r4, #0x0
-.L1207:
+.L1438:
 	mov	r0, #0x64
 	mul	r0, r0, r4
-	ldr	r1, .L1212+0xc
+	ldr	r1, .L1443+0xc
 	add	r0, r0, r1
 	mov	r1, #0x2c
 	mul	r1, r1, r4
@@ -30741,7 +33328,7 @@ FillEReaderTrainerWithPlayerData:
 	bl	sub_80686FC
 	add	r4, r4, #0x1
 	cmp	r4, #0x2
-	ble	.L1207	@cond_branch
+	ble	.L1438	@cond_branch
 	add	r0, r7, #0
 	bl	SetEReaderTrainerChecksum
 	pop	{r3, r4}
@@ -30750,59 +33337,59 @@ FillEReaderTrainerWithPlayerData:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1213:
+.L1444:
 	.align	2, 0
-.L1212:
+.L1443:
 	.word	gTowerMaleFacilityClasses
 	.word	gSaveBlock1Ptr
 	.word	0x2bbc
 	.word	gPlayerParty
-.Lfe54:
-	.size	 FillEReaderTrainerWithPlayerData,.Lfe54-FillEReaderTrainerWithPlayerData
+.Lfe57:
+	.size	 FillEReaderTrainerWithPlayerData,.Lfe57-FillEReaderTrainerWithPlayerData
 	.align	2, 0
 	.globl	GetEreaderTrainerFrontSpriteId
 	.type	 GetEreaderTrainerFrontSpriteId,function
 	.thumb_func
 GetEreaderTrainerFrontSpriteId:
-	ldr	r1, .L1215
-	ldr	r0, .L1215+0x4
+	ldr	r1, .L1446
+	ldr	r0, .L1446+0x4
 	ldr	r0, [r0]
-	ldr	r2, .L1215+0x8
+	ldr	r2, .L1446+0x8
 	add	r0, r0, r2
 	ldrb	r0, [r0]
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	bx	lr
-.L1216:
+.L1447:
 	.align	2, 0
-.L1215:
+.L1446:
 	.word	gFacilityClassToPicIndex
 	.word	gSaveBlock2Ptr
 	.word	0xbed
-.Lfe55:
-	.size	 GetEreaderTrainerFrontSpriteId,.Lfe55-GetEreaderTrainerFrontSpriteId
+.Lfe58:
+	.size	 GetEreaderTrainerFrontSpriteId,.Lfe58-GetEreaderTrainerFrontSpriteId
 	.align	2, 0
 	.globl	GetEreaderTrainerClassId
 	.type	 GetEreaderTrainerClassId,function
 	.thumb_func
 GetEreaderTrainerClassId:
-	ldr	r1, .L1218
-	ldr	r0, .L1218+0x4
+	ldr	r1, .L1449
+	ldr	r0, .L1449+0x4
 	ldr	r0, [r0]
-	ldr	r2, .L1218+0x8
+	ldr	r2, .L1449+0x8
 	add	r0, r0, r2
 	ldrb	r0, [r0]
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	bx	lr
-.L1219:
+.L1450:
 	.align	2, 0
-.L1218:
+.L1449:
 	.word	gFacilityClassToTrainerClass
 	.word	gSaveBlock2Ptr
 	.word	0xbed
-.Lfe56:
-	.size	 GetEreaderTrainerClassId,.Lfe56-GetEreaderTrainerClassId
+.Lfe59:
+	.size	 GetEreaderTrainerClassId,.Lfe59-GetEreaderTrainerClassId
 	.align	2, 0
 	.globl	GetEreaderTrainerName
 	.type	 GetEreaderTrainerName,function
@@ -30811,99 +33398,99 @@ GetEreaderTrainerName:
 	push	{r4, lr}
 	add	r3, r0, #0
 	mov	r2, #0x0
-	ldr	r0, .L1226
+	ldr	r0, .L1457
 	ldr	r0, [r0]
 	mov	r1, #0xbf
 	lsl	r1, r1, #0x4
 	add	r4, r0, r1
-.L1224:
+.L1455:
 	add	r0, r3, r2
 	add	r1, r4, r2
 	ldrb	r1, [r1]
 	strb	r1, [r0]
 	add	r2, r2, #0x1
 	cmp	r2, #0x4
-	ble	.L1224	@cond_branch
+	ble	.L1455	@cond_branch
 	add	r1, r3, r2
 	mov	r0, #0xff
 	strb	r0, [r1]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1227:
+.L1458:
 	.align	2, 0
-.L1226:
+.L1457:
 	.word	gSaveBlock2Ptr
-.Lfe57:
-	.size	 GetEreaderTrainerName,.Lfe57-GetEreaderTrainerName
+.Lfe60:
+	.size	 GetEreaderTrainerName,.Lfe60-GetEreaderTrainerName
 	.align	2, 0
 	.globl	ValidateEReaderTrainer
 	.type	 ValidateEReaderTrainer,function
 	.thumb_func
 ValidateEReaderTrainer:
 	push	{r4, r5, r6, lr}
-	ldr	r2, .L1241
+	ldr	r2, .L1472
 	mov	r0, #0x0
 	strh	r0, [r2]
-	ldr	r1, .L1241+0x4
+	ldr	r1, .L1472+0x4
 	ldr	r0, [r1]
-	ldr	r3, .L1241+0x8
+	ldr	r3, .L1472+0x8
 	add	r5, r0, r3
 	mov	r4, #0x0
 	mov	r3, #0x0
 	add	r6, r1, #0
 	add	r1, r5, #0
-.L1232:
+.L1463:
 	ldmia	r1!, {r0}
 	orr	r4, r4, r0
 	add	r3, r3, #0x1
 	cmp	r3, #0x2d
-	bls	.L1232	@cond_branch
+	bls	.L1463	@cond_branch
 	cmp	r4, #0
-	bne	.L1234	@cond_branch
+	bne	.L1465	@cond_branch
 	mov	r0, #0x1
 	strh	r0, [r2]
-	b	.L1228
-.L1242:
+	b	.L1459
+.L1473:
 	.align	2, 0
-.L1241:
+.L1472:
 	.word	gSpecialVar_Result
 	.word	gSaveBlock2Ptr
 	.word	0xbec
-.L1234:
+.L1465:
 	mov	r4, #0x0
 	mov	r3, #0x0
 	add	r2, r5, #0
-.L1238:
+.L1469:
 	ldmia	r2!, {r0}
 	add	r4, r4, r0
 	add	r3, r3, #0x1
 	cmp	r3, #0x2d
-	bls	.L1238	@cond_branch
+	bls	.L1469	@cond_branch
 	ldr	r1, [r6]
-	ldr	r2, .L1243
+	ldr	r2, .L1474
 	add	r0, r1, r2
 	ldr	r0, [r0]
 	cmp	r0, r4
-	beq	.L1228	@cond_branch
-	ldr	r3, .L1243+0x4
+	beq	.L1459	@cond_branch
+	ldr	r3, .L1474+0x4
 	add	r0, r1, r3
 	bl	ClearEReaderTrainer
-	ldr	r1, .L1243+0x8
+	ldr	r1, .L1474+0x8
 	mov	r0, #0x1
 	strh	r0, [r1]
-.L1228:
+.L1459:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1244:
+.L1475:
 	.align	2, 0
-.L1243:
+.L1474:
 	.word	0xca4
 	.word	0xbec
 	.word	gSpecialVar_Result
-.Lfe58:
-	.size	 ValidateEReaderTrainer,.Lfe58-ValidateEReaderTrainer
+.Lfe61:
+	.size	 ValidateEReaderTrainer,.Lfe61-ValidateEReaderTrainer
 	.align	2, 0
 	.type	 SetEReaderTrainerChecksum,function
 	.thumb_func
@@ -30915,19 +33502,19 @@ SetEReaderTrainerChecksum:
 	str	r1, [r2]
 	mov	r3, #0x0
 	add	r4, r0, #0
-.L1249:
+.L1480:
 	ldr	r0, [r2]
 	ldmia	r4!, {r1}
 	add	r0, r0, r1
 	str	r0, [r2]
 	add	r3, r3, #0x1
 	cmp	r3, #0x2d
-	bls	.L1249	@cond_branch
+	bls	.L1480	@cond_branch
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.Lfe59:
-	.size	 SetEReaderTrainerChecksum,.Lfe59-SetEReaderTrainerChecksum
+.Lfe62:
+	.size	 SetEReaderTrainerChecksum,.Lfe62-SetEReaderTrainerChecksum
 	.align	2, 0
 	.globl	ClearEReaderTrainer
 	.type	 ClearEReaderTrainer,function
@@ -30936,117 +33523,117 @@ ClearEReaderTrainer:
 	push	{lr}
 	mov	r1, #0x0
 	mov	r2, #0x0
-.L1255:
+.L1486:
 	stmia	r0!, {r2}
 	add	r1, r1, #0x1
 	cmp	r1, #0x2e
-	bls	.L1255	@cond_branch
+	bls	.L1486	@cond_branch
 	pop	{r0}
 	bx	r0
-.Lfe60:
-	.size	 ClearEReaderTrainer,.Lfe60-ClearEReaderTrainer
+.Lfe63:
+	.size	 ClearEReaderTrainer,.Lfe63-ClearEReaderTrainer
 	.align	2, 0
 	.globl	CopyEReaderTrainerGreeting
 	.type	 CopyEReaderTrainerGreeting,function
 	.thumb_func
 CopyEReaderTrainerGreeting:
 	push	{lr}
-	ldr	r0, .L1258
+	ldr	r0, .L1489
 	ldr	r0, [r0]
-	ldr	r1, .L1258+0x4
+	ldr	r1, .L1489+0x4
 	add	r0, r0, r1
 	bl	FrontierSpeechToString
 	pop	{r0}
 	bx	r0
-.L1259:
+.L1490:
 	.align	2, 0
-.L1258:
+.L1489:
 	.word	gSaveBlock2Ptr
 	.word	0xbfc
-.Lfe61:
-	.size	 CopyEReaderTrainerGreeting,.Lfe61-CopyEReaderTrainerGreeting
+.Lfe64:
+	.size	 CopyEReaderTrainerGreeting,.Lfe64-CopyEReaderTrainerGreeting
 	.align	2, 0
 	.type	 CopyEReaderTrainerFarewellMessage,function
 	.thumb_func
 CopyEReaderTrainerFarewellMessage:
 	push	{lr}
-	ldr	r0, .L1265
+	ldr	r0, .L1496
 	ldrb	r0, [r0]
 	cmp	r0, #0x3
-	bne	.L1261	@cond_branch
-	ldr	r1, .L1265+0x4
+	bne	.L1492	@cond_branch
+	ldr	r1, .L1496+0x4
 	mov	r0, #0xff
 	strb	r0, [r1]
-	b	.L1262
-.L1266:
+	b	.L1493
+.L1497:
 	.align	2, 0
-.L1265:
+.L1496:
 	.word	gBattleOutcome
 	.word	gStringVar4
-.L1261:
+.L1492:
 	cmp	r0, #0x1
-	bne	.L1263	@cond_branch
-	ldr	r0, .L1267
+	bne	.L1494	@cond_branch
+	ldr	r0, .L1498
 	ldr	r0, [r0]
-	ldr	r1, .L1267+0x4
+	ldr	r1, .L1498+0x4
 	add	r0, r0, r1
 	bl	FrontierSpeechToString
-	b	.L1262
-.L1268:
+	b	.L1493
+.L1499:
 	.align	2, 0
-.L1267:
+.L1498:
 	.word	gSaveBlock2Ptr
 	.word	0xc14
-.L1263:
-	ldr	r0, .L1269
+.L1494:
+	ldr	r0, .L1500
 	ldr	r0, [r0]
-	ldr	r1, .L1269+0x4
+	ldr	r1, .L1500+0x4
 	add	r0, r0, r1
 	bl	FrontierSpeechToString
-.L1262:
+.L1493:
 	pop	{r0}
 	bx	r0
-.L1270:
+.L1501:
 	.align	2, 0
-.L1269:
+.L1500:
 	.word	gSaveBlock2Ptr
 	.word	0xc08
-.Lfe62:
-	.size	 CopyEReaderTrainerFarewellMessage,.Lfe62-CopyEReaderTrainerFarewellMessage
+.Lfe65:
+	.size	 CopyEReaderTrainerFarewellMessage,.Lfe65-CopyEReaderTrainerFarewellMessage
 	.align	2, 0
 	.globl	TryHideBattleTowerReporter
 	.type	 TryHideBattleTowerReporter,function
 	.thumb_func
 TryHideBattleTowerReporter:
 	push	{lr}
-	ldr	r0, .L1274
+	ldr	r0, .L1505
 	ldr	r0, [r0]
-	ldr	r1, .L1274+0x4
+	ldr	r1, .L1505+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x1
-	bne	.L1272	@cond_branch
+	bne	.L1503	@cond_branch
 	bl	HideBattleTowerReporter
-.L1272:
+.L1503:
 	mov	r0, #0x77
 	bl	FlagGet
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.L1273	@cond_branch
+	bne	.L1504	@cond_branch
 	bl	HideBattleTowerReporter
 	mov	r0, #0x77
 	bl	FlagClear
-.L1273:
+.L1504:
 	pop	{r0}
 	bx	r0
-.L1275:
+.L1506:
 	.align	2, 0
-.L1274:
+.L1505:
 	.word	gSaveBlock2Ptr
 	.word	0xca8
-.Lfe63:
-	.size	 TryHideBattleTowerReporter,.Lfe63-TryHideBattleTowerReporter
+.Lfe66:
+	.size	 TryHideBattleTowerReporter,.Lfe66-TryHideBattleTowerReporter
 	.align	2, 0
 	.type	 FillPartnerParty,function
 	.thumb_func
@@ -31056,35 +33643,35 @@ FillPartnerParty:
 	mov	r6, r9
 	mov	r5, r8
 	push	{r5, r6, r7}
-	add	sp, sp, #-0x88
+	add	sp, sp, #-0x8c
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	str	r0, [sp, #0x5c]
 	bl	SetFacilityPtrsGetLevel
-	ldr	r0, .L1372
+	ldr	r0, .L1603
 	ldr	r1, [sp, #0x5c]
 	cmp	r1, r0
-	beq	.LCB9532
-	b	.L1277	@long jump
-.LCB9532:
+	beq	.LCB10918
+	b	.L1508	@long jump
+.LCB10918:
 	mov	r2, #0x0
 	mov	sl, r2
 	mov	r3, sp
 	add	r3, r3, #0x54
-	str	r3, [sp, #0x78]
-.L1281:
+	str	r3, [sp, #0x7c]
+.L1512:
 	mov	r4, sl
 	lsl	r4, r4, #0x2
-	mov	r9, r4
+	str	r4, [sp, #0x78]
 	mov	r7, sl
 	add	r7, r7, #0x1
 	str	r7, [sp, #0x70]
-	mov	r0, r9
+	add	r0, r4, #0
 	add	r0, r0, sl
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1372+0x4
+	ldr	r1, .L1603+0x4
 	add	r5, r0, r1
-.L1282:
+.L1513:
 	bl	Random
 	add	r4, r0, #0
 	bl	Random
@@ -31093,114 +33680,115 @@ FillPartnerParty:
 	lsl	r0, r0, #0x10
 	orr	r4, r4, r0
 	str	r4, [sp, #0x54]
-	ldr	r0, .L1372+0x8
+	ldr	r0, .L1603+0x8
 	add	r1, r4, #0
 	bl	IsShinyOtIdPersonality
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
 	cmp	r7, #0
-	bne	.L1282	@cond_branch
+	bne	.L1513	@cond_branch
 	ldr	r0, [sp, #0x54]
 	bl	GetNatureFromPersonality
 	ldrb	r1, [r5, #0x4]
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r1, r0
-	bne	.L1282	@cond_branch
-	mov	r2, #0x64
-	mov	r6, sl
-	mul	r6, r6, r2
-	ldr	r3, .L1372+0xc
-	mov	r8, r3
-	add	r0, r6, r3
-	mov	r5, r9
-	add	r5, r5, sl
-	lsl	r5, r5, #0x2
-	ldr	r4, .L1372+0x4
-	add	r3, r5, r4
+	bne	.L1513	@cond_branch
+	mov	r3, #0x64
+	mov	r2, sl
+	mul	r2, r2, r3
+	mov	r8, r2
+	ldr	r4, .L1603+0xc
+	mov	r9, r4
+	mov	r0, r8
+	add	r0, r0, r9
+	ldr	r6, [sp, #0x78]
+	add	r6, r6, sl
+	lsl	r6, r6, #0x2
+	ldr	r1, .L1603+0x4
+	add	r3, r6, r1
 	ldrh	r1, [r3]
 	ldrb	r2, [r3, #0x3]
 	ldrb	r3, [r3, #0x2]
-	mov	ip, r3
-	mov	r4, #0x1
-	str	r4, [sp]
-	mov	r3, sl
-	str	r3, [sp, #0x4]
-	str	r4, [sp, #0x8]
-	ldr	r4, .L1372+0x8
+	mov	r5, #0x1
+	str	r5, [sp]
+	ldr	r4, [sp, #0x54]
+	str	r4, [sp, #0x4]
+	str	r5, [sp, #0x8]
+	ldr	r4, .L1603+0x8
 	str	r4, [sp, #0xc]
-	mov	r3, ip
 	bl	CreateMon
 	str	r7, [sp, #0x54]
 	mov	r3, #0x0
 	mov	r4, r8
-	ldr	r0, .L1372+0x10
-	add	r5, r5, r0
-.L1290:
+	mov	r5, r9
+	ldr	r0, .L1603+0x10
+	add	r6, r6, r0
+.L1521:
 	add	r1, r3, #0
 	add	r1, r1, #0x1a
-	add	r2, r5, r3
-	add	r0, r6, r4
+	add	r2, r6, r3
+	add	r0, r4, r5
 	bl	SetMonData
 	ldr	r0, [sp, #0x54]
 	add	r0, r0, #0x1
 	str	r0, [sp, #0x54]
 	add	r3, r0, #0
 	cmp	r3, #0x5
-	ble	.L1290	@cond_branch
+	ble	.L1521	@cond_branch
 	mov	r0, #0x0
 	str	r0, [sp, #0x54]
 	mov	r1, #0x0
-	mov	r7, #0x64
+	mov	r2, #0x64
 	mov	r4, sl
-	mul	r4, r4, r7
-	ldr	r7, .L1372+0x14
-	ldr	r6, .L1372+0xc
-	mov	r0, r9
+	mul	r4, r4, r2
+	ldr	r7, .L1603+0x14
+	ldr	r5, .L1603+0xc
+	ldr	r0, [sp, #0x78]
 	add	r0, r0, sl
-	lsl	r5, r0, #0x2
-.L1295:
+	lsl	r6, r0, #0x2
+.L1526:
 	lsl	r0, r1, #0x1
-	add	r0, r0, r5
+	add	r0, r0, r6
 	add	r0, r0, r7
 	ldrh	r1, [r0]
-	ldr	r0, [sp, #0x78]
-	ldrb	r2, [r0]
-	add	r0, r4, r6
+	ldr	r3, [sp, #0x7c]
+	ldrb	r2, [r3]
+	add	r0, r4, r5
 	bl	SetMonMoveSlot
 	ldr	r0, [sp, #0x54]
 	add	r0, r0, #0x1
 	str	r0, [sp, #0x54]
 	add	r1, r0, #0
 	cmp	r1, #0x3
-	ble	.L1295	@cond_branch
-	mov	r1, #0x64
+	ble	.L1526	@cond_branch
+	mov	r7, #0x64
 	mov	r4, sl
-	mul	r4, r4, r1
-	ldr	r0, .L1372+0xc
+	mul	r4, r4, r7
+	ldr	r0, .L1603+0xc
 	add	r4, r4, r0
 	add	r0, r4, #0
 	mov	r1, #0x7
-	ldr	r2, .L1372+0x18
+	ldr	r2, .L1603+0x18
 	bl	SetMonData
 	mov	r0, #0x0
 	str	r0, [sp, #0x54]
 	add	r0, r4, #0
 	mov	r1, #0x31
-	ldr	r2, [sp, #0x78]
+	ldr	r2, [sp, #0x7c]
 	bl	SetMonData
 	add	r0, r4, #0
 	bl	CalculateMonStats
-	ldr	r2, [sp, #0x70]
-	mov	sl, r2
-	cmp	r2, #0x2
-	bgt	.LCB9717
-	b	.L1281	@long jump
-.LCB9717:
-	b	.L1298
-.L1373:
+	ldr	r0, [sp, #0x70]
+	mov	sl, r0
+	cmp	r0, #0x2
+	bgt	.LCB11104
+	b	.L1512	@long jump
+.LCB11104:
+	b	.L1529
+.L1604:
 	.align	2, 0
-.L1372:
+.L1603:
 	.word	0xc03
 	.word	sStevenMons
 	.word	0xef2a
@@ -31208,12 +33796,12 @@ FillPartnerParty:
 	.word	sStevenMons+0x5
 	.word	sStevenMons+0xc
 	.word	gTrainers+0x7da4
-.L1277:
-	ldr	r3, [sp, #0x5c]
-	cmp	r3, r0
-	bhi	.LCB9736
-	b	.L1299	@long jump
-.LCB9736:
+.L1508:
+	ldr	r1, [sp, #0x5c]
+	cmp	r1, r0
+	bhi	.LCB11123
+	b	.L1530	@long jump
+.LCB11123:
 	bl	Random
 	add	r4, r0, #0
 	bl	Random
@@ -31222,21 +33810,21 @@ FillPartnerParty:
 	lsl	r0, r0, #0x10
 	orr	r4, r4, r0
 	str	r4, [sp, #0x68]
-	ldr	r4, .L1374
+	ldr	r4, .L1605
 	add	r5, r4, #0
 	add	r5, r5, #0xc8
-.L1303:
+.L1534:
 	add	r0, r4, #0
 	bl	ZeroMonData
 	add	r4, r4, #0x64
 	cmp	r4, r5
-	ble	.L1303	@cond_branch
-	mov	r4, #0x0
-	mov	sl, r4
-	ldr	r2, .L1374+0x4
-	ldr	r7, [sp, #0x5c]
-	ldr	r0, .L1374+0x8
-	add	r1, r7, r0
+	ble	.L1534	@cond_branch
+	mov	r2, #0x0
+	mov	sl, r2
+	ldr	r2, .L1605+0x4
+	ldr	r3, [sp, #0x5c]
+	ldr	r4, .L1605+0x8
+	add	r1, r3, r4
 	lsl	r0, r1, #0x2
 	add	r0, r0, r1
 	lsl	r0, r0, #0x3
@@ -31244,19 +33832,19 @@ FillPartnerParty:
 	add	r0, r0, #0x20
 	ldrb	r0, [r0]
 	cmp	sl, r0
-	blt	.LCB9789
-	b	.L1298	@long jump
-.LCB9789:
-	lsl	r1, r7, #0x2
-	str	r1, [sp, #0x74]
-	ldr	r2, .L1374+0x8
-	add	r2, r7, r2
-	str	r2, [sp, #0x6c]
-.L1308:
-	mov	r3, sl
-	add	r3, r3, #0x1
-	str	r3, [sp, #0x70]
-.L1310:
+	blt	.LCB11176
+	b	.L1529	@long jump
+.LCB11176:
+	lsl	r7, r3, #0x2
+	str	r7, [sp, #0x74]
+	add	r0, r4, #0
+	add	r0, r3, r0
+	str	r0, [sp, #0x6c]
+.L1539:
+	mov	r1, sl
+	add	r1, r1, #0x1
+	str	r1, [sp, #0x70]
+.L1541:
 	bl	Random
 	add	r4, r0, #0
 	bl	Random
@@ -31272,36 +33860,36 @@ FillPartnerParty:
 	lsr	r0, r0, #0x18
 	mov	r9, r0
 	cmp	r0, #0
-	bne	.L1310	@cond_branch
-	ldr	r2, .L1374+0x4
-	ldr	r4, [sp, #0x6c]
-	lsl	r0, r4, #0x2
-	add	r0, r0, r4
+	bne	.L1541	@cond_branch
+	ldr	r2, .L1605+0x4
+	ldr	r3, [sp, #0x6c]
+	lsl	r0, r3, #0x2
+	add	r0, r0, r3
 	lsl	r1, r0, #0x3
 	add	r0, r1, r2
 	ldrb	r7, [r0]
 	cmp	r7, #0x1
-	beq	.L1317	@cond_branch
+	beq	.L1548	@cond_branch
 	cmp	r7, #0x1
-	bgt	.L1332	@cond_branch
+	bgt	.L1563	@cond_branch
 	cmp	r7, #0
-	beq	.L1316	@cond_branch
-	b	.L1315
-.L1375:
+	beq	.L1547	@cond_branch
+	b	.L1546
+.L1606:
 	.align	2, 0
-.L1374:
+.L1605:
 	.word	gPlayerParty+0x12c
 	.word	gTrainers
 	.word	-0xc04
-.L1332:
+.L1563:
 	cmp	r7, #0x2
-	beq	.L1323	@cond_branch
+	beq	.L1554	@cond_branch
 	cmp	r7, #0x3
-	bne	.LCB9859
-	b	.L1324	@long jump
-.LCB9859:
-	b	.L1315
-.L1316:
+	bne	.LCB11246
+	b	.L1555	@long jump
+.LCB11246:
+	b	.L1546
+.L1547:
 	add	r0, r2, #0
 	add	r0, r0, #0x24
 	add	r0, r1, r0
@@ -31309,7 +33897,7 @@ FillPartnerParty:
 	mov	r7, #0x64
 	mov	r4, sl
 	mul	r4, r4, r7
-	ldr	r0, .L1376
+	ldr	r0, .L1607
 	add	r4, r4, r0
 	mov	r2, sl
 	lsl	r0, r2, #0x3
@@ -31335,12 +33923,12 @@ FillPartnerParty:
 	add	r1, r5, #0
 	add	r2, r6, #0
 	bl	CreateMon
-	b	.L1315
-.L1377:
+	b	.L1546
+.L1608:
 	.align	2, 0
-.L1376:
+.L1607:
 	.word	gPlayerParty+0x12c
-.L1317:
+.L1548:
 	add	r0, r2, #0
 	add	r0, r0, #0x24
 	add	r0, r1, r0
@@ -31348,7 +33936,7 @@ FillPartnerParty:
 	mov	r1, #0x64
 	mov	r5, sl
 	mul	r5, r5, r1
-	ldr	r2, .L1378
+	ldr	r2, .L1609
 	add	r5, r5, r2
 	mov	r3, sl
 	lsl	r4, r3, #0x4
@@ -31378,7 +33966,7 @@ FillPartnerParty:
 	str	r2, [sp, #0x54]
 	mov	r0, #0x0
 	add	r6, r4, #0x6
-.L1321:
+.L1552:
 	add	r1, r0, #0
 	add	r1, r1, #0xd
 	lsl	r2, r0, #0x1
@@ -31395,7 +33983,7 @@ FillPartnerParty:
 	lsl	r2, r0, #0x2
 	add	r2, r2, r0
 	lsl	r2, r2, #0x2
-	ldr	r0, .L1378+0x4
+	ldr	r0, .L1609+0x4
 	add	r2, r2, r0
 	add	r0, r5, #0
 	bl	SetMonData
@@ -31403,14 +33991,14 @@ FillPartnerParty:
 	add	r0, r0, #0x1
 	str	r0, [sp, #0x54]
 	cmp	r0, #0x3
-	ble	.L1321	@cond_branch
-	b	.L1315
-.L1379:
+	ble	.L1552	@cond_branch
+	b	.L1546
+.L1610:
 	.align	2, 0
-.L1378:
+.L1609:
 	.word	gPlayerParty+0x12c
 	.word	gBattleMoves+0x5
-.L1323:
+.L1554:
 	add	r0, r2, #0
 	add	r0, r0, #0x24
 	add	r0, r1, r0
@@ -31418,7 +34006,7 @@ FillPartnerParty:
 	mov	r3, #0x64
 	mov	r5, sl
 	mul	r5, r5, r3
-	ldr	r4, .L1380
+	ldr	r4, .L1611
 	add	r5, r5, r4
 	mov	r7, sl
 	lsl	r4, r7, #0x3
@@ -31450,12 +34038,12 @@ FillPartnerParty:
 	mov	r1, #0xc
 	add	r2, r4, #0
 	bl	SetMonData
-	b	.L1315
-.L1381:
+	b	.L1546
+.L1612:
 	.align	2, 0
-.L1380:
+.L1611:
 	.word	gPlayerParty+0x12c
-.L1324:
+.L1555:
 	add	r0, r2, #0
 	add	r0, r0, #0x24
 	add	r0, r1, r0
@@ -31463,7 +34051,7 @@ FillPartnerParty:
 	mov	r3, #0x64
 	mov	r5, sl
 	mul	r5, r5, r3
-	ldr	r4, .L1382
+	ldr	r4, .L1613
 	add	r5, r5, r4
 	mov	r7, sl
 	lsl	r4, r7, #0x1
@@ -31502,7 +34090,7 @@ FillPartnerParty:
 	mov	r0, #0x0
 	add	r6, r4, #0
 	add	r6, r6, #0xe
-.L1328:
+.L1559:
 	add	r1, r0, #0
 	add	r1, r1, #0xd
 	lsl	r2, r0, #0x1
@@ -31519,7 +34107,7 @@ FillPartnerParty:
 	lsl	r2, r0, #0x2
 	add	r2, r2, r0
 	lsl	r2, r2, #0x2
-	ldr	r0, .L1382+0x4
+	ldr	r0, .L1613+0x4
 	add	r2, r2, r0
 	add	r0, r5, #0
 	bl	SetMonData
@@ -31527,20 +34115,20 @@ FillPartnerParty:
 	add	r0, r0, #0x1
 	str	r0, [sp, #0x54]
 	cmp	r0, #0x3
-	ble	.L1328	@cond_branch
-.L1315:
+	ble	.L1559	@cond_branch
+.L1546:
 	ldr	r4, [sp, #0x74]
 	ldr	r7, [sp, #0x5c]
 	add	r1, r4, r7
 	lsl	r1, r1, #0x3
-	ldr	r4, .L1382+0x8
+	ldr	r4, .L1613+0x8
 	add	r1, r1, r4
 	add	r0, sp, #0x10
 	bl	StringCopy
 	mov	r1, #0x64
 	mov	r0, sl
 	mul	r0, r0, r1
-	ldr	r2, .L1382
+	ldr	r2, .L1613
 	add	r0, r0, r2
 	mov	r1, #0x7
 	add	r2, sp, #0x10
@@ -31548,51 +34136,51 @@ FillPartnerParty:
 	ldr	r3, [sp, #0x70]
 	mov	sl, r3
 	cmp	r3, #0x2
-	ble	.LCB10179
-	b	.L1298	@long jump
-.LCB10179:
+	ble	.LCB11566
+	b	.L1529	@long jump
+.LCB11566:
 	ldr	r7, [sp, #0x6c]
 	lsl	r0, r7, #0x2
 	add	r0, r0, r7
 	lsl	r0, r0, #0x3
 	add	r0, r4, r0
-	ldr	r1, .L1382+0xc
+	ldr	r1, .L1613+0xc
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	sl, r0
-	bge	.LCB10192
-	b	.L1308	@long jump
-.LCB10192:
-	b	.L1298
-.L1383:
+	bge	.LCB11579
+	b	.L1539	@long jump
+.LCB11579:
+	b	.L1529
+.L1614:
 	.align	2, 0
-.L1382:
+.L1613:
 	.word	gPlayerParty+0x12c
 	.word	gBattleMoves+0x5
 	.word	gTrainers+-0x1e09c
 	.word	0x1e0bc
-.L1299:
+.L1530:
 	mov	r0, #0xfa
 	lsl	r0, r0, #0x1
 	ldr	r2, [sp, #0x5c]
 	cmp	r2, r0
-	bne	.L1335	@cond_branch
+	bne	.L1566	@cond_branch
 	add	r0, sp, #0x10
-	ldr	r1, .L1384
+	ldr	r1, .L1615
 	ldrb	r1, [r1]
 	strb	r1, [r0]
-	b	.L1298
-.L1385:
+	b	.L1529
+.L1616:
 	.align	2, 0
-.L1384:
+.L1615:
 	.word	gGameLanguage
-.L1335:
-	ldr	r0, .L1386
+.L1566:
+	ldr	r0, .L1617
 	ldr	r3, [sp, #0x5c]
 	cmp	r3, r0
-	bls	.LCB10232
-	b	.L1337	@long jump
-.LCB10232:
+	bls	.LCB11619
+	b	.L1568	@long jump
+.LCB11619:
 	bl	SetFacilityPtrsGetLevel
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
@@ -31614,31 +34202,31 @@ FillPartnerParty:
 	mov	sl, r4
 	mov	r7, sp
 	add	r7, r7, #0x54
-	str	r7, [sp, #0x78]
+	str	r7, [sp, #0x7c]
 	mov	r0, sp
 	add	r0, r0, #0x58
-	str	r0, [sp, #0x7c]
-.L1341:
-	ldr	r0, .L1386+0x4
+	str	r0, [sp, #0x80]
+	mov	r1, #0x64
+	mov	r9, r1
+.L1572:
+	ldr	r0, .L1617+0x4
 	ldr	r1, [r0]
 	mov	r0, sl
 	add	r0, r0, #0x12
 	lsl	r0, r0, #0x1
-	ldr	r2, .L1386+0x8
+	ldr	r2, .L1617+0x8
 	add	r1, r1, r2
 	add	r1, r1, r0
 	ldrh	r1, [r1]
-	str	r1, [sp, #0x84]
-	mov	r4, #0x64
-	mov	r3, sl
-	mul	r3, r3, r4
-	mov	r8, r3
-	ldr	r7, .L1386+0xc
-	mov	r9, r7
-	mov	r0, r8
-	add	r0, r0, r9
-	ldr	r6, .L1386+0x10
-	ldr	r4, [r6]
+	str	r1, [sp, #0x88]
+	mov	r3, r9
+	mov	r6, sl
+	mul	r6, r6, r3
+	ldr	r4, .L1617+0xc
+	mov	r8, r4
+	add	r0, r6, r4
+	ldr	r7, .L1617+0x10
+	ldr	r4, [r7]
 	lsl	r5, r1, #0x4
 	add	r4, r5, r4
 	ldrh	r1, [r4]
@@ -31661,10 +34249,10 @@ FillPartnerParty:
 	mov	r7, sl
 	add	r7, r7, #0x1
 	str	r7, [sp, #0x70]
-	mov	r4, r8
-	mov	r3, r9
-.L1345:
-	ldr	r0, [r6]
+	ldr	r4, .L1617+0x10
+	mov	r3, r8
+.L1576:
+	ldr	r0, [r4]
 	add	r0, r5, r0
 	lsl	r1, r2, #0x1
 	add	r0, r0, #0x2
@@ -31672,59 +34260,66 @@ FillPartnerParty:
 	ldrh	r1, [r0]
 	lsl	r2, r2, #0x18
 	lsr	r2, r2, #0x18
-	add	r0, r4, r3
-	str	r3, [sp, #0x80]
+	add	r0, r6, r3
+	str	r3, [sp, #0x84]
 	bl	SetMonMoveSlot
-	ldr	r0, [r6]
+	ldr	r0, [r4]
 	add	r0, r5, r0
 	ldr	r2, [sp, #0x54]
 	lsl	r1, r2, #0x1
 	add	r0, r0, #0x2
 	add	r0, r0, r1
 	ldrh	r0, [r0]
-	ldr	r3, [sp, #0x80]
+	ldr	r3, [sp, #0x84]
 	cmp	r0, #0xda
-	bne	.L1344	@cond_branch
+	bne	.L1575	@cond_branch
 	mov	r0, #0x0
 	str	r0, [sp, #0x58]
-.L1344:
+.L1575:
 	add	r0, r2, #0x1
 	str	r0, [sp, #0x54]
 	add	r2, r0, #0
 	cmp	r2, #0x3
-	ble	.L1345	@cond_branch
-	mov	r0, #0x64
+	ble	.L1576	@cond_branch
+	mov	r0, r9
 	mov	r4, sl
 	mul	r4, r4, r0
-	ldr	r0, .L1386+0xc
+	ldr	r0, .L1617+0xc
 	add	r4, r4, r0
 	add	r0, r4, #0
 	mov	r1, #0x20
-	ldr	r2, [sp, #0x7c]
+	ldr	r2, [sp, #0x80]
 	bl	SetMonData
-	ldr	r0, .L1386+0x10
-	ldr	r1, [r0]
-	ldr	r2, [sp, #0x84]
-	lsl	r0, r2, #0x4
-	add	r0, r0, r1
+	ldr	r1, .L1617+0x10
+	ldr	r0, [r1]
+	ldr	r2, [sp, #0x88]
+	lsl	r5, r2, #0x4
+	add	r0, r5, r0
 	ldrb	r2, [r0, #0xa]
 	lsl	r2, r2, #0x1
-	ldr	r0, .L1386+0x14
+	ldr	r0, .L1617+0x14
 	add	r2, r2, r0
 	add	r0, r4, #0
 	mov	r1, #0xc
 	bl	SetMonData
+	ldr	r3, .L1617+0x10
+	ldr	r2, [r3]
+	add	r2, r2, r5
+	add	r2, r2, #0xd
+	add	r0, r4, #0
+	mov	r1, #0x2e
+	bl	SetMonData
 	mov	r0, #0x0
 	str	r0, [sp, #0x54]
 	mov	r2, #0x0
-	ldr	r0, .L1386+0x18
+	ldr	r0, .L1617+0x18
 	ldr	r1, [r0]
 	mov	r0, #0x34
-	ldr	r3, [sp, #0x5c]
-	mul	r0, r0, r3
+	ldr	r4, [sp, #0x5c]
+	mul	r0, r0, r4
 	add	r0, r0, r1
 	add	r3, r0, #0x4
-.L1351:
+.L1582:
 	mov	r1, sp
 	add	r1, r1, r2
 	add	r1, r1, #0x10
@@ -31736,11 +34331,11 @@ FillPartnerParty:
 	str	r0, [sp, #0x54]
 	add	r2, r0, #0
 	cmp	r2, #0x7
-	ble	.L1351	@cond_branch
-	mov	r7, #0x64
+	ble	.L1582	@cond_branch
+	mov	r7, r9
 	mov	r4, sl
 	mul	r4, r4, r7
-	ldr	r0, .L1386+0xc
+	ldr	r0, .L1617+0xc
 	add	r4, r4, r0
 	add	r0, r4, #0
 	mov	r1, #0x7
@@ -31753,18 +34348,18 @@ FillPartnerParty:
 	str	r0, [sp, #0x54]
 	add	r0, r4, #0
 	mov	r1, #0x31
-	ldr	r2, [sp, #0x78]
+	ldr	r2, [sp, #0x7c]
 	bl	SetMonData
 	ldr	r0, [sp, #0x70]
 	mov	sl, r0
 	cmp	r0, #0x1
-	bgt	.LCB10446
-	b	.L1341	@long jump
-.LCB10446:
-	b	.L1298
-.L1387:
+	bgt	.LCB11841
+	b	.L1572	@long jump
+.LCB11841:
+	b	.L1529
+.L1618:
 	.align	2, 0
-.L1386:
+.L1617:
 	.word	0x12b
 	.word	gSaveBlock2Ptr
 	.word	0xcb4
@@ -31772,14 +34367,14 @@ FillPartnerParty:
 	.word	gFacilityTrainerMons
 	.word	gBattleFrontierHeldItems
 	.word	gFacilityTrainers
-.L1337:
-	ldr	r0, .L1388
+.L1568:
+	ldr	r0, .L1619
 	ldr	r1, [sp, #0x5c]
 	cmp	r1, r0
-	bls	.LCB10468
-	b	.L1355	@long jump
-.LCB10468:
-	ldr	r2, .L1388+0x4
+	bls	.LCB11863
+	b	.L1586	@long jump
+.LCB11863:
+	ldr	r2, .L1619+0x4
 	add	r0, r1, r2
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
@@ -31788,15 +34383,15 @@ FillPartnerParty:
 	mov	sl, r3
 	mov	r4, sp
 	add	r4, r4, #0x54
-	str	r4, [sp, #0x78]
+	str	r4, [sp, #0x7c]
 	add	r5, sp, #0x28
-	ldr	r7, .L1388+0x8
+	ldr	r7, .L1619+0x8
 	mov	r8, r7
-	ldr	r0, .L1388+0xc
+	ldr	r0, .L1619+0xc
 	mov	r9, r0
 	mov	r6, #0x24
-.L1359:
-	ldr	r1, .L1388+0x10
+.L1590:
+	ldr	r1, .L1619+0x10
 	mov	r0, #0xec
 	ldr	r2, [sp, #0x5c]
 	mov	r4, r2
@@ -31806,7 +34401,7 @@ FillPartnerParty:
 	add	r4, r4, r3
 	ldr	r0, [r1]
 	add	r4, r0, r4
-	ldr	r7, .L1388+0x14
+	ldr	r7, .L1619+0x14
 	add	r0, r0, r7
 	add	r0, r0, r6
 	ldrh	r1, [r0]
@@ -31829,12 +34424,12 @@ FillPartnerParty:
 	add	r4, r4, #0xe4
 	ldrb	r0, [r4]
 	cmp	r0, #0x1
-	bne	.L1360	@cond_branch
+	bne	.L1591	@cond_branch
 	ldrh	r0, [r5, #0x20]
 	mov	r4, r9
 	and	r0, r0, r4
 	cmp	r0, r8
-	beq	.L1362	@cond_branch
+	beq	.L1593	@cond_branch
 	mov	r1, sp
 	add	r1, r1, #0x4d
 	mov	r0, #0xff
@@ -31842,30 +34437,30 @@ FillPartnerParty:
 	add	r0, sp, #0x48
 	mov	r1, #0x1
 	bl	ConvertInternationalString
-	b	.L1362
-.L1389:
+	b	.L1593
+.L1620:
 	.align	2, 0
-.L1388:
+.L1619:
 	.word	0x18f
 	.word	-0x12c
 	.word	0x15fc
 	.word	0xffff
 	.word	gSaveBlock2Ptr
 	.word	0xcb4
-.L1360:
+.L1591:
 	ldrh	r0, [r5, #0x20]
 	mov	r7, r9
 	and	r0, r0, r7
 	cmp	r0, r8
-	bne	.L1362	@cond_branch
+	bne	.L1593	@cond_branch
 	add	r1, sp, #0x10
 	mov	r0, #0xff
 	strb	r0, [r1, #0x5]
-.L1362:
+.L1593:
 	mov	r0, #0x64
 	mov	r4, sl
 	mul	r4, r4, r0
-	ldr	r0, .L1390
+	ldr	r0, .L1621
 	add	r4, r4, r0
 	add	r0, r4, #0
 	add	r1, r5, #0
@@ -31887,22 +34482,22 @@ FillPartnerParty:
 	str	r0, [sp, #0x54]
 	add	r0, r4, #0
 	mov	r1, #0x31
-	ldr	r2, [sp, #0x78]
+	ldr	r2, [sp, #0x7c]
 	bl	SetMonData
 	add	r6, r6, #0x2
 	mov	r3, #0x1
 	add	sl, sl, r3
 	mov	r4, sl
 	cmp	r4, #0x1
-	ble	.L1359	@cond_branch
-	b	.L1298
-.L1391:
+	ble	.L1590	@cond_branch
+	b	.L1529
+.L1622:
 	.align	2, 0
-.L1390:
+.L1621:
 	.word	gPlayerParty+0x12c
-.L1355:
+.L1586:
 	ldr	r7, [sp, #0x5c]
-	ldr	r1, .L1392
+	ldr	r1, .L1623
 	add	r0, r7, r1
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
@@ -31911,8 +34506,8 @@ FillPartnerParty:
 	mov	sl, r2
 	mov	r3, sp
 	add	r3, r3, #0x54
-	str	r3, [sp, #0x78]
-	ldr	r7, .L1392+0x4
+	str	r3, [sp, #0x7c]
+	ldr	r7, .L1623+0x4
 	mov	r5, #0x24
 	lsl	r0, r0, #0x4
 	ldr	r4, [sp, #0x5c]
@@ -31920,15 +34515,15 @@ FillPartnerParty:
 	lsl	r0, r0, #0x2
 	add	r6, r0, #0
 	add	r6, r6, #0xdc
-.L1369:
+.L1600:
 	mov	r0, #0x64
 	mov	r4, sl
 	mul	r4, r4, r0
-	ldr	r0, .L1392+0x8
+	ldr	r0, .L1623+0x8
 	add	r4, r4, r0
 	ldr	r0, [r7]
 	add	r1, r0, r6
-	ldr	r2, .L1392+0xc
+	ldr	r2, .L1623+0xc
 	add	r0, r0, r2
 	add	r0, r0, r5
 	ldrb	r2, [r0]
@@ -31946,16 +34541,16 @@ FillPartnerParty:
 	str	r0, [sp, #0x54]
 	add	r0, r4, #0
 	mov	r1, #0x31
-	ldr	r2, [sp, #0x78]
+	ldr	r2, [sp, #0x7c]
 	bl	SetMonData
 	add	r5, r5, #0x2
 	mov	r2, #0x1
 	add	sl, sl, r2
 	mov	r3, sl
 	cmp	r3, #0x1
-	ble	.L1369	@cond_branch
-.L1298:
-	add	sp, sp, #0x88
+	ble	.L1600	@cond_branch
+.L1529:
+	add	sp, sp, #0x8c
 	pop	{r3, r4, r5}
 	mov	r8, r3
 	mov	r9, r4
@@ -31963,15 +34558,15 @@ FillPartnerParty:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1393:
+.L1624:
 	.align	2, 0
-.L1392:
+.L1623:
 	.word	-0x190
 	.word	gSaveBlock2Ptr
 	.word	gPlayerParty+0x12c
 	.word	0xcb4
-.Lfe64:
-	.size	 FillPartnerParty,.Lfe64-FillPartnerParty
+.Lfe67:
+	.size	 FillPartnerParty,.Lfe67-FillPartnerParty
 	.align	2, 0
 	.globl	RubyBattleTowerRecordToEmerald
 	.type	 RubyBattleTowerRecordToEmerald,function
@@ -31989,30 +34584,30 @@ RubyBattleTowerRecordToEmerald:
 	add	r1, r6, #0
 	add	r3, r6, #0
 	add	r3, r3, #0x58
-.L1398:
+.L1629:
 	ldrh	r0, [r1, #0x1c]
 	cmp	r0, #0
-	beq	.L1397	@cond_branch
+	beq	.L1628	@cond_branch
 	add	r2, r2, #0x1
-.L1397:
+.L1628:
 	add	r1, r1, #0x2c
 	cmp	r1, r3
-	ble	.L1398	@cond_branch
+	ble	.L1629	@cond_branch
 	cmp	r2, #0x3
-	beq	.L1401	@cond_branch
+	beq	.L1632	@cond_branch
 	add	r0, r5, #0
 	mov	r1, #0x0
 	mov	r2, #0xec
 	bl	memset
 	mov	r0, #0x0
-	b	.L1441
-.L1401:
+	b	.L1672
+.L1632:
 	ldrb	r0, [r6]
 	strb	r0, [r5]
 	ldrh	r0, [r6, #0x2]
 	strh	r0, [r5, #0x2]
 	mov	r2, #0x0
-	ldr	r0, .L1443
+	ldr	r0, .L1674
 	ldrb	r1, [r0]
 	ldrb	r3, [r6, #0x1]
 	mov	ip, r0
@@ -32038,93 +34633,93 @@ RubyBattleTowerRecordToEmerald:
 	add	r0, r0, #0x90
 	str	r0, [sp, #0x10]
 	cmp	r1, r3
-	beq	.L1404	@cond_branch
+	beq	.L1635	@cond_branch
 	mov	r1, ip
-.L1405:
+.L1636:
 	add	r1, r1, #0x2
 	add	r2, r2, #0x1
 	cmp	r2, #0x51
-	bgt	.L1404	@cond_branch
+	bgt	.L1635	@cond_branch
 	ldrb	r0, [r1]
 	cmp	r0, r3
-	bne	.L1405	@cond_branch
-.L1404:
+	bne	.L1636	@cond_branch
+.L1635:
 	cmp	r2, #0x52
-	beq	.L1409	@cond_branch
+	beq	.L1640	@cond_branch
 	lsl	r0, r2, #0x1
 	mov	r1, ip
 	add	r1, r1, #0x1
 	add	r0, r0, r1
 	ldrb	r0, [r0]
-	b	.L1442
-.L1444:
+	b	.L1673
+.L1675:
 	.align	2, 0
-.L1443:
+.L1674:
 	.word	sRubyFacilityClassToEmerald
-.L1409:
+.L1640:
 	mov	r0, #0x2b
-.L1442:
+.L1673:
 	strb	r0, [r5, #0x1]
 	mov	r2, #0x0
 	add	r3, r7, #0
-.L1414:
+.L1645:
 	add	r0, r4, r2
 	add	r1, r3, r2
 	ldrb	r1, [r1]
 	strb	r1, [r0]
 	add	r2, r2, #0x1
 	cmp	r2, #0x7
-	ble	.L1414	@cond_branch
+	ble	.L1645	@cond_branch
 	mov	r2, #0x0
 	mov	r4, r9
 	mov	r3, r8
-.L1419:
+.L1650:
 	add	r0, r4, r2
 	add	r1, r3, r2
 	ldrb	r1, [r1]
 	strb	r1, [r0]
 	add	r2, r2, #0x1
 	cmp	r2, #0x3
-	ble	.L1419	@cond_branch
+	ble	.L1650	@cond_branch
 	mov	r3, sl
 	ldr	r1, [sp, #0x4]
 	mov	r2, #0x5
-.L1424:
+.L1655:
 	ldrh	r0, [r3]
 	strh	r0, [r1]
 	add	r3, r3, #0x2
 	add	r1, r1, #0x2
 	sub	r2, r2, #0x1
 	cmp	r2, #0
-	bge	.L1424	@cond_branch
-	ldr	r3, .L1445
+	bge	.L1655	@cond_branch
+	ldr	r3, .L1676
 	ldr	r1, [sp, #0x8]
 	mov	r2, #0x5
-.L1429:
+.L1660:
 	ldrh	r0, [r3]
 	strh	r0, [r1]
 	add	r3, r3, #0x2
 	add	r1, r1, #0x2
 	sub	r2, r2, #0x1
 	cmp	r2, #0
-	bge	.L1429	@cond_branch
-	ldr	r3, .L1445+0x4
+	bge	.L1660	@cond_branch
+	ldr	r3, .L1676+0x4
 	ldr	r1, [sp, #0xc]
 	mov	r2, #0x5
-.L1434:
+.L1665:
 	ldrh	r0, [r3]
 	strh	r0, [r1]
 	add	r3, r3, #0x2
 	add	r1, r1, #0x2
 	sub	r2, r2, #0x1
 	cmp	r2, #0
-	bge	.L1434	@cond_branch
+	bge	.L1665	@cond_branch
 	add	r2, r6, #0
 	add	r3, r5, #0
 	mov	r4, #0x58
 	add	r4, r4, r2
 	mov	r8, r4
-.L1439:
+.L1670:
 	add	r1, r3, #0
 	add	r1, r1, #0x34
 	add	r0, r2, #0
@@ -32140,17 +34735,17 @@ RubyBattleTowerRecordToEmerald:
 	add	r2, r2, #0x2c
 	add	r3, r3, #0x2c
 	cmp	r2, r8
-	ble	.L1439	@cond_branch
+	ble	.L1670	@cond_branch
 	mov	r0, #0x0
 	str	r0, [sp]
-	ldr	r2, .L1445+0x8
+	ldr	r2, .L1676+0x8
 	mov	r0, sp
 	ldr	r1, [sp, #0x10]
 	bl	CpuSet
 	add	r0, r5, #0
 	bl	CalcEmeraldBattleTowerChecksum
 	mov	r0, #0x1
-.L1441:
+.L1672:
 	add	sp, sp, #0x14
 	pop	{r3, r4, r5}
 	mov	r8, r3
@@ -32159,14 +34754,14 @@ RubyBattleTowerRecordToEmerald:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.L1446:
+.L1677:
 	.align	2, 0
-.L1445:
+.L1676:
 	.word	sRecordTrainerSpeechWon
 	.word	sRecordTrainerSpeechLost
 	.word	0x500000b
-.Lfe65:
-	.size	 RubyBattleTowerRecordToEmerald,.Lfe65-RubyBattleTowerRecordToEmerald
+.Lfe68:
+	.size	 RubyBattleTowerRecordToEmerald,.Lfe68-RubyBattleTowerRecordToEmerald
 	.align	2, 0
 	.globl	EmeraldBattleTowerRecordToRuby
 	.type	 EmeraldBattleTowerRecordToRuby,function
@@ -32184,30 +34779,30 @@ EmeraldBattleTowerRecordToRuby:
 	add	r1, r4, #0
 	add	r3, r4, #0
 	add	r3, r3, #0x58
-.L1451:
+.L1682:
 	ldrh	r0, [r1, #0x34]
 	cmp	r0, #0
-	beq	.L1450	@cond_branch
+	beq	.L1681	@cond_branch
 	add	r2, r2, #0x1
-.L1450:
+.L1681:
 	add	r1, r1, #0x2c
 	cmp	r1, r3
-	ble	.L1451	@cond_branch
+	ble	.L1682	@cond_branch
 	cmp	r2, #0x3
-	beq	.L1454	@cond_branch
+	beq	.L1685	@cond_branch
 	add	r0, r6, #0
 	mov	r1, #0x0
 	mov	r2, #0xa4
 	bl	memset
 	mov	r0, #0x0
-	b	.L1484
-.L1454:
+	b	.L1715
+.L1685:
 	ldrb	r0, [r4]
 	strb	r0, [r6]
 	ldrh	r0, [r4, #0x2]
 	strh	r0, [r6, #0x2]
 	mov	r2, #0x0
-	ldr	r0, .L1486
+	ldr	r0, .L1717
 	ldrb	r1, [r0, #0x1]
 	ldrb	r3, [r4, #0x1]
 	mov	ip, r0
@@ -32226,70 +34821,70 @@ EmeraldBattleTowerRecordToRuby:
 	add	r0, r0, r4
 	mov	sl, r0
 	cmp	r1, r3
-	beq	.L1457	@cond_branch
+	beq	.L1688	@cond_branch
 	mov	r1, ip
 	add	r1, r1, #0x1
-.L1458:
+.L1689:
 	add	r1, r1, #0x2
 	add	r2, r2, #0x1
 	cmp	r2, #0x51
-	bgt	.L1457	@cond_branch
+	bgt	.L1688	@cond_branch
 	ldrb	r0, [r1]
 	cmp	r0, r3
-	bne	.L1458	@cond_branch
-.L1457:
+	bne	.L1689	@cond_branch
+.L1688:
 	cmp	r2, #0x52
-	beq	.L1462	@cond_branch
+	beq	.L1693	@cond_branch
 	lsl	r0, r2, #0x1
 	add	r0, r0, ip
 	ldrb	r0, [r0]
-	b	.L1485
-.L1487:
+	b	.L1716
+.L1718:
 	.align	2, 0
-.L1486:
+.L1717:
 	.word	sRubyFacilityClassToEmerald
-.L1462:
+.L1693:
 	mov	r0, #0x24
-.L1485:
+.L1716:
 	strb	r0, [r6, #0x1]
 	mov	r2, #0x0
 	add	r3, r7, #0
-.L1467:
+.L1698:
 	add	r0, r5, r2
 	add	r1, r3, r2
 	ldrb	r1, [r1]
 	strb	r1, [r0]
 	add	r2, r2, #0x1
 	cmp	r2, #0x7
-	ble	.L1467	@cond_branch
+	ble	.L1698	@cond_branch
 	mov	r2, #0x0
 	mov	r5, r9
 	mov	r3, r8
-.L1472:
+.L1703:
 	add	r0, r5, r2
 	add	r1, r3, r2
 	ldrb	r1, [r1]
 	strb	r1, [r0]
 	add	r2, r2, #0x1
 	cmp	r2, #0x3
-	ble	.L1472	@cond_branch
+	ble	.L1703	@cond_branch
 	mov	r3, sl
 	ldr	r1, [sp]
 	mov	r2, #0x5
-.L1477:
+.L1708:
 	ldrh	r0, [r3]
 	strh	r0, [r1]
 	add	r3, r3, #0x2
 	add	r1, r1, #0x2
 	sub	r2, r2, #0x1
 	cmp	r2, #0
-	bge	.L1477	@cond_branch
+	bge	.L1708	@cond_branch
 	add	r2, r4, #0
 	add	r3, r6, #0
 	mov	r4, #0x58
 	add	r4, r4, r2
 	mov	r8, r4
-.L1482:
+.L1713:
 	add	r1, r3, #0
 	add	r1, r1, #0x1c
 	add	r0, r2, #0
@@ -32305,11 +34900,11 @@ EmeraldBattleTowerRecordToRuby:
 	add	r2, r2, #0x2c
 	add	r3, r3, #0x2c
 	cmp	r2, r8
-	ble	.L1482	@cond_branch
+	ble	.L1713	@cond_branch
 	add	r0, r6, #0
 	bl	CalcRubyBattleTowerChecksum
 	mov	r0, #0x1
-.L1484:
+.L1715:
 	add	sp, sp, #0x4
 	pop	{r3, r4, r5}
 	mov	r8, r3
@@ -32318,8 +34913,8 @@ EmeraldBattleTowerRecordToRuby:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.Lfe66:
-	.size	 EmeraldBattleTowerRecordToRuby,.Lfe66-EmeraldBattleTowerRecordToRuby
+.Lfe69:
+	.size	 EmeraldBattleTowerRecordToRuby,.Lfe69-EmeraldBattleTowerRecordToRuby
 	.align	2, 0
 	.globl	CalcApprenticeChecksum
 	.type	 CalcApprenticeChecksum,function
@@ -32331,19 +34926,19 @@ CalcApprenticeChecksum:
 	str	r0, [r2, #0x40]
 	mov	r3, #0x0
 	add	r4, r2, #0
-.L1492:
+.L1723:
 	ldr	r0, [r2, #0x40]
 	ldmia	r4!, {r1}
 	add	r0, r0, r1
 	str	r0, [r2, #0x40]
 	add	r3, r3, #0x1
 	cmp	r3, #0xf
-	bls	.L1492	@cond_branch
+	bls	.L1723	@cond_branch
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.Lfe67:
-	.size	 CalcApprenticeChecksum,.Lfe67-CalcApprenticeChecksum
+.Lfe70:
+	.size	 CalcApprenticeChecksum,.Lfe70-CalcApprenticeChecksum
 	.align	2, 0
 	.type	 ClearApprentice,function
 	.thumb_func
@@ -32352,16 +34947,16 @@ ClearApprentice:
 	mov	r1, #0x0
 	mov	r3, #0x0
 	add	r2, r0, #0
-.L1498:
+.L1729:
 	stmia	r2!, {r3}
 	add	r1, r1, #0x1
 	cmp	r1, #0x10
-	bls	.L1498	@cond_branch
+	bls	.L1729	@cond_branch
 	bl	ResetApprenticeStruct
 	pop	{r0}
 	bx	r0
-.Lfe68:
-	.size	 ClearApprentice,.Lfe68-ClearApprentice
+.Lfe71:
+	.size	 ClearApprentice,.Lfe71-ClearApprentice
 	.align	2, 0
 	.type	 ValidateApprenticesChecksums,function
 	.thumb_func
@@ -32371,10 +34966,10 @@ ValidateApprenticesChecksums:
 	mov	r6, r8
 	push	{r6, r7}
 	mov	r5, #0x0
-	ldr	r0, .L1512
+	ldr	r0, .L1743
 	mov	r8, r0
 	mov	r9, r8
-.L1504:
+.L1735:
 	lsl	r0, r5, #0x4
 	add	r1, r0, r5
 	lsl	r1, r1, #0x2
@@ -32386,12 +34981,12 @@ ValidateApprenticesChecksums:
 	add	r6, r0, #0
 	add	r7, r5, #0x1
 	add	r2, r2, r1
-.L1508:
+.L1739:
 	ldmia	r2!, {r0}
 	add	r4, r4, r0
 	add	r3, r3, #0x1
 	cmp	r3, #0xf
-	bls	.L1508	@cond_branch
+	bls	.L1739	@cond_branch
 	mov	r0, r8
 	ldr	r2, [r0]
 	add	r0, r6, r5
@@ -32402,27 +34997,27 @@ ValidateApprenticesChecksums:
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	cmp	r0, r4
-	beq	.L1503	@cond_branch
+	beq	.L1734	@cond_branch
 	add	r0, r1, #0
 	add	r0, r0, #0xdc
 	add	r0, r2, r0
 	bl	ClearApprentice
-.L1503:
+.L1734:
 	add	r5, r7, #0
 	cmp	r5, #0x3
-	ble	.L1504	@cond_branch
+	ble	.L1735	@cond_branch
 	pop	{r3, r4}
 	mov	r8, r3
 	mov	r9, r4
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1513:
+.L1744:
 	.align	2, 0
-.L1512:
+.L1743:
 	.word	gSaveBlock2Ptr
-.Lfe69:
-	.size	 ValidateApprenticesChecksums,.Lfe69-ValidateApprenticesChecksums
+.Lfe72:
+	.size	 ValidateApprenticesChecksums,.Lfe72-ValidateApprenticesChecksums
 	.align	2, 0
 	.globl	GetBattleTowerTrainerLanguage
 	.type	 GetBattleTowerTrainerLanguage,function
@@ -32436,143 +35031,143 @@ GetBattleTowerTrainerLanguage:
 	mov	r0, #0xfa
 	lsl	r0, r0, #0x1
 	cmp	r2, r0
-	bne	.L1515	@cond_branch
-	ldr	r0, .L1527
-	b	.L1525
-.L1528:
+	bne	.L1746	@cond_branch
+	ldr	r0, .L1758
+	b	.L1756
+.L1759:
 	.align	2, 0
-.L1527:
+.L1758:
 	.word	gGameLanguage
-.L1515:
-	ldr	r0, .L1529
+.L1746:
+	ldr	r0, .L1760
 	cmp	r2, r0
-	bhi	.L1517	@cond_branch
-	ldr	r0, .L1529+0x4
-	b	.L1525
-.L1530:
+	bhi	.L1748	@cond_branch
+	ldr	r0, .L1760+0x4
+	b	.L1756
+.L1761:
 	.align	2, 0
-.L1529:
+.L1760:
 	.word	0x12b
 	.word	gGameLanguage
-.L1517:
-	ldr	r0, .L1531
+.L1748:
+	ldr	r0, .L1762
 	cmp	r2, r0
-	bhi	.L1519	@cond_branch
-	ldr	r0, .L1531+0x4
+	bhi	.L1750	@cond_branch
+	ldr	r0, .L1762+0x4
 	ldr	r0, [r0]
 	mov	r1, #0x80
 	lsl	r1, r1, #0x11
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1520	@cond_branch
+	beq	.L1751	@cond_branch
 	bl	GetRecordedBattleRecordMixFriendLanguage
-	b	.L1526
-.L1532:
+	b	.L1757
+.L1763:
 	.align	2, 0
-.L1531:
+.L1762:
 	.word	0x18f
 	.word	gBattleTypeFlags
-.L1520:
-	ldr	r0, .L1533
+.L1751:
+	ldr	r0, .L1764
 	ldr	r0, [r0]
-	ldr	r1, .L1533+0x4
+	ldr	r1, .L1764+0x4
 	add	r2, r2, r1
 	mov	r1, #0xec
 	mul	r1, r1, r2
 	add	r0, r0, r1
-	ldr	r1, .L1533+0x8
+	ldr	r1, .L1764+0x8
 	add	r0, r0, r1
-	b	.L1525
-.L1534:
+	b	.L1756
+.L1765:
 	.align	2, 0
-.L1533:
+.L1764:
 	.word	gSaveBlock2Ptr
 	.word	-0x12c
 	.word	0x81c
-.L1519:
-	ldr	r0, .L1535
+.L1750:
+	ldr	r0, .L1766
 	ldr	r0, [r0]
 	mov	r1, #0x80
 	lsl	r1, r1, #0x11
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1523	@cond_branch
+	beq	.L1754	@cond_branch
 	bl	GetRecordedBattleApprenticeLanguage
-	b	.L1526
-.L1536:
+	b	.L1757
+.L1767:
 	.align	2, 0
-.L1535:
+.L1766:
 	.word	gBattleTypeFlags
-.L1523:
-	ldr	r0, .L1537
+.L1754:
+	ldr	r0, .L1768
 	ldr	r2, [r0]
-	ldr	r0, .L1537+0x4
+	ldr	r0, .L1768+0x4
 	add	r1, r3, r0
 	lsl	r0, r1, #0x4
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
 	add	r2, r2, r0
-	ldr	r1, .L1537+0x8
+	ldr	r1, .L1768+0x8
 	add	r0, r2, r1
-.L1525:
+.L1756:
 	ldrb	r0, [r0]
-.L1526:
+.L1757:
 	strb	r0, [r4]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1538:
+.L1769:
 	.align	2, 0
-.L1537:
+.L1768:
 	.word	gSaveBlock2Ptr
 	.word	-0x190
 	.word	0x11b
-.Lfe70:
-	.size	 GetBattleTowerTrainerLanguage,.Lfe70-GetBattleTowerTrainerLanguage
+.Lfe73:
+	.size	 GetBattleTowerTrainerLanguage,.Lfe73-GetBattleTowerTrainerLanguage
 	.align	2, 0
 	.globl	SetFacilityPtrsGetLevel
 	.type	 SetFacilityPtrsGetLevel,function
 	.thumb_func
 SetFacilityPtrsGetLevel:
 	push	{lr}
-	ldr	r0, .L1545
+	ldr	r0, .L1776
 	ldr	r0, [r0]
-	ldr	r1, .L1545+0x4
+	ldr	r1, .L1776+0x4
 	add	r2, r0, r1
 	ldrb	r1, [r2]
 	mov	r0, #0x3
 	and	r0, r0, r1
 	cmp	r0, #0x2
-	beq	.L1540	@cond_branch
-	ldr	r1, .L1545+0x8
-	ldr	r0, .L1545+0xc
+	beq	.L1771	@cond_branch
+	ldr	r1, .L1776+0x8
+	ldr	r0, .L1776+0xc
 	str	r0, [r1]
-	ldr	r1, .L1545+0x10
-	ldr	r0, .L1545+0x14
+	ldr	r1, .L1776+0x10
+	ldr	r0, .L1776+0x14
 	str	r0, [r1]
 	ldrb	r0, [r2]
 	lsl	r0, r0, #0x1e
 	lsr	r0, r0, #0x1e
 	bl	GetFrontierEnemyMonLevel
-	b	.L1544
-.L1546:
+	b	.L1775
+.L1777:
 	.align	2, 0
-.L1545:
+.L1776:
 	.word	gSaveBlock2Ptr
 	.word	0xca9
 	.word	gFacilityTrainers
 	.word	gBattleFrontierTrainers
 	.word	gFacilityTrainerMons
 	.word	gBattleFrontierMons
-.L1540:
+.L1771:
 	bl	SetTentPtrsGetLevel
-.L1544:
+.L1775:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	pop	{r1}
 	bx	r1
-.Lfe71:
-	.size	 SetFacilityPtrsGetLevel,.Lfe71-SetFacilityPtrsGetLevel
+.Lfe74:
+	.size	 SetFacilityPtrsGetLevel,.Lfe74-SetFacilityPtrsGetLevel
 	.align	2, 0
 	.globl	GetFrontierEnemyMonLevel
 	.type	 GetFrontierEnemyMonLevel,function
@@ -32582,24 +35177,24 @@ GetFrontierEnemyMonLevel:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1550	@cond_branch
+	beq	.L1781	@cond_branch
 	cmp	r0, #0x1
-	beq	.L1551	@cond_branch
-.L1550:
+	beq	.L1782	@cond_branch
+.L1781:
 	mov	r0, #0x32
-	b	.L1548
-.L1551:
+	b	.L1779
+.L1782:
 	bl	GetHighestLevelInPlayerParty
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x3b
-	bhi	.L1548	@cond_branch
+	bhi	.L1779	@cond_branch
 	mov	r0, #0x3c
-.L1548:
+.L1779:
 	pop	{r1}
 	bx	r1
-.Lfe72:
-	.size	 GetFrontierEnemyMonLevel,.Lfe72-GetFrontierEnemyMonLevel
+.Lfe75:
+	.size	 GetFrontierEnemyMonLevel,.Lfe75-GetFrontierEnemyMonLevel
 	.align	2, 0
 	.globl	GetHighestLevelInPlayerParty
 	.type	 GetHighestLevelInPlayerParty,function
@@ -32608,98 +35203,71 @@ GetHighestLevelInPlayerParty:
 	push	{r4, r5, r6, lr}
 	mov	r6, #0x0
 	mov	r5, #0x0
-.L1558:
+.L1789:
 	mov	r0, #0x64
 	mov	r1, r5
 	mul	r1, r1, r0
-	ldr	r0, .L1562
+	ldr	r0, .L1793
 	add	r4, r1, r0
 	add	r0, r4, #0
 	mov	r1, #0xb
 	mov	r2, #0x0
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L1557	@cond_branch
+	beq	.L1788	@cond_branch
 	add	r0, r4, #0
 	mov	r1, #0x41
 	mov	r2, #0x0
 	bl	GetMonData
-	ldr	r1, .L1562+0x4
+	ldr	r1, .L1793+0x4
 	cmp	r0, r1
-	beq	.L1557	@cond_branch
+	beq	.L1788	@cond_branch
 	add	r0, r4, #0
 	mov	r1, #0x38
 	mov	r2, #0x0
 	bl	GetMonData
 	cmp	r0, r6
-	ble	.L1557	@cond_branch
+	ble	.L1788	@cond_branch
 	add	r6, r0, #0
-.L1557:
+.L1788:
 	add	r5, r5, #0x1
 	cmp	r5, #0x5
-	ble	.L1558	@cond_branch
+	ble	.L1789	@cond_branch
 	add	r0, r6, #0
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.L1563:
+.L1794:
 	.align	2, 0
-.L1562:
+.L1793:
 	.word	gPlayerParty
 	.word	0x432
-.Lfe73:
-	.size	 GetHighestLevelInPlayerParty,.Lfe73-GetHighestLevelInPlayerParty
+.Lfe76:
+	.size	 GetHighestLevelInPlayerParty,.Lfe76-GetHighestLevelInPlayerParty
 	.align	2, 0
 	.type	 GetFrontierTrainerFixedIvs,function
 	.thumb_func
 GetFrontierTrainerFixedIvs:
-	push	{lr}
-	lsl	r0, r0, #0x10
-	lsr	r0, r0, #0x10
-	mov	r1, #0x3
-	cmp	r0, #0x63
-	bls	.L1566	@cond_branch
-	mov	r1, #0x6
-	cmp	r0, #0x77
-	bls	.L1566	@cond_branch
-	mov	r1, #0x9
-	cmp	r0, #0x8b
-	bls	.L1566	@cond_branch
-	mov	r1, #0xc
-	cmp	r0, #0x9f
-	bls	.L1566	@cond_branch
-	mov	r1, #0xf
-	cmp	r0, #0xb3
-	bls	.L1566	@cond_branch
-	mov	r1, #0x12
-	cmp	r0, #0xc7
-	bls	.L1566	@cond_branch
-	mov	r1, #0x1f
-	cmp	r0, #0xdb
-	bhi	.L1566	@cond_branch
-	mov	r1, #0x15
-.L1566:
-	add	r0, r1, #0
-	pop	{r1}
-	bx	r1
-.Lfe74:
-	.size	 GetFrontierTrainerFixedIvs,.Lfe74-GetFrontierTrainerFixedIvs
+	mov	r0, #0x1f
+	bx	lr
+.Lfe77:
+	.size	 GetFrontierTrainerFixedIvs,.Lfe77-GetFrontierTrainerFixedIvs
 	.align	2, 0
 	.type	 sub_8165D40,function
 	.thumb_func
 sub_8165D40:
 	push	{lr}
-	ldr	r0, .L1590
+	ldr	r0, .L1807
 	bl	VarGet
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x2
-	beq	.L1589	@cond_branch
+	beq	.L1806	@cond_branch
 	cmp	r0, #0x3
-	beq	.L1589	@cond_branch
+	beq	.L1806	@cond_branch
 	cmp	r0, #0x4
-	bne	.L1584	@cond_branch
-.L1589:
+	bne	.L1801	@cond_branch
+.L1806:
 	bl	Random
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
@@ -32707,177 +35275,177 @@ sub_8165D40:
 	bl	__umodsi3
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
-	b	.L1588
-.L1591:
+	b	.L1805
+.L1808:
 	.align	2, 0
-.L1590:
+.L1807:
 	.word	0x40cf
-.L1584:
+.L1801:
 	mov	r0, #0x0
-.L1588:
+.L1805:
 	pop	{r1}
 	bx	r1
-.Lfe75:
-	.size	 sub_8165D40,.Lfe75-sub_8165D40
+.Lfe78:
+	.size	 sub_8165D40,.Lfe78-sub_8165D40
 	.align	2, 0
 	.type	 SetTentPtrsGetLevel,function
 	.thumb_func
 SetTentPtrsGetLevel:
 	push	{lr}
-	ldr	r0, .L1601
+	ldr	r0, .L1818
 	bl	VarGet
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x4
-	bne	.L1593	@cond_branch
-	ldr	r1, .L1601+0x4
-	ldr	r0, .L1601+0x8
+	bne	.L1810	@cond_branch
+	ldr	r1, .L1818+0x4
+	ldr	r0, .L1818+0x8
 	str	r0, [r1]
-	ldr	r1, .L1601+0xc
-	ldr	r0, .L1601+0x10
-	b	.L1600
-.L1602:
+	ldr	r1, .L1818+0xc
+	ldr	r0, .L1818+0x10
+	b	.L1817
+.L1819:
 	.align	2, 0
-.L1601:
+.L1818:
 	.word	0x40cf
 	.word	gFacilityTrainers
 	.word	gSlateportBattleTentTrainers
 	.word	gFacilityTrainerMons
 	.word	gSlateportBattleTentMons
-.L1593:
+.L1810:
 	cmp	r0, #0x2
-	bne	.L1595	@cond_branch
-	ldr	r1, .L1603
-	ldr	r0, .L1603+0x4
+	bne	.L1812	@cond_branch
+	ldr	r1, .L1820
+	ldr	r0, .L1820+0x4
 	str	r0, [r1]
-	ldr	r1, .L1603+0x8
-	ldr	r0, .L1603+0xc
-	b	.L1600
-.L1604:
+	ldr	r1, .L1820+0x8
+	ldr	r0, .L1820+0xc
+	b	.L1817
+.L1821:
 	.align	2, 0
-.L1603:
+.L1820:
 	.word	gFacilityTrainers
 	.word	gVerdanturfBattleTentTrainers
 	.word	gFacilityTrainerMons
 	.word	gVerdanturfBattleTentMons
-.L1595:
+.L1812:
 	cmp	r0, #0x3
-	bne	.L1597	@cond_branch
-	ldr	r1, .L1605
-	ldr	r0, .L1605+0x4
+	bne	.L1814	@cond_branch
+	ldr	r1, .L1822
+	ldr	r0, .L1822+0x4
 	str	r0, [r1]
-	ldr	r1, .L1605+0x8
-	ldr	r0, .L1605+0xc
-	b	.L1600
-.L1606:
+	ldr	r1, .L1822+0x8
+	ldr	r0, .L1822+0xc
+	b	.L1817
+.L1823:
 	.align	2, 0
-.L1605:
+.L1822:
 	.word	gFacilityTrainers
 	.word	gFallarborBattleTentTrainers
 	.word	gFacilityTrainerMons
 	.word	gFallarborBattleTentMons
-.L1597:
-	ldr	r1, .L1607
-	ldr	r0, .L1607+0x4
+.L1814:
+	ldr	r1, .L1824
+	ldr	r0, .L1824+0x4
 	str	r0, [r1]
-	ldr	r1, .L1607+0x8
-	ldr	r0, .L1607+0xc
-.L1600:
+	ldr	r1, .L1824+0x8
+	ldr	r0, .L1824+0xc
+.L1817:
 	str	r0, [r1]
 	bl	GetHighestLevelInPlayerParty
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1d
-	bhi	.L1599	@cond_branch
+	bhi	.L1816	@cond_branch
 	mov	r0, #0x1e
-.L1599:
+.L1816:
 	pop	{r1}
 	bx	r1
-.L1608:
+.L1825:
 	.align	2, 0
-.L1607:
+.L1824:
 	.word	gFacilityTrainers
 	.word	gBattleFrontierTrainers
 	.word	gFacilityTrainerMons
 	.word	gBattleFrontierMons
-.Lfe76:
-	.size	 SetTentPtrsGetLevel,.Lfe76-SetTentPtrsGetLevel
+.Lfe79:
+	.size	 SetTentPtrsGetLevel,.Lfe79-SetTentPtrsGetLevel
 	.align	2, 0
 	.type	 SetNextBattleTentOpponent,function
 	.thumb_func
 SetNextBattleTentOpponent:
 	push	{r4, r5, lr}
-	ldr	r5, .L1622
-.L1610:
+	ldr	r5, .L1839
+.L1827:
 	bl	sub_8165D40
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
 	mov	r3, #0x0
 	ldr	r1, [r5]
-	ldr	r2, .L1622+0x4
+	ldr	r2, .L1839+0x4
 	add	r0, r1, r2
 	ldrh	r0, [r0]
 	cmp	r3, r0
-	bge	.L1612	@cond_branch
+	bge	.L1829	@cond_branch
 	add	r2, r2, #0x2
 	add	r0, r1, r2
 	ldrh	r0, [r0]
 	cmp	r0, r4
-	beq	.L1612	@cond_branch
-	ldr	r0, .L1622
+	beq	.L1829	@cond_branch
+	ldr	r0, .L1839
 	ldr	r1, [r0]
 	sub	r2, r2, #0x2
 	add	r0, r1, r2
 	ldrh	r2, [r0]
-	ldr	r0, .L1622+0x8
+	ldr	r0, .L1839+0x8
 	add	r1, r1, r0
-.L1615:
+.L1832:
 	add	r1, r1, #0x2
 	add	r3, r3, #0x1
 	cmp	r3, r2
-	bge	.L1612	@cond_branch
+	bge	.L1829	@cond_branch
 	ldrh	r0, [r1]
 	cmp	r0, r4
-	bne	.L1615	@cond_branch
-.L1612:
+	bne	.L1832	@cond_branch
+.L1829:
 	ldr	r0, [r5]
-	ldr	r1, .L1622+0x4
+	ldr	r1, .L1839+0x4
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	cmp	r3, r0
-	bne	.L1610	@cond_branch
-	ldr	r5, .L1622+0xc
+	bne	.L1827	@cond_branch
+	ldr	r5, .L1839+0xc
 	strh	r4, [r5]
 	ldrh	r0, [r5]
 	mov	r1, #0x0
 	bl	SetBattleFacilityTrainerGfxId
-	ldr	r0, .L1622
+	ldr	r0, .L1839
 	ldr	r1, [r0]
-	ldr	r2, .L1622+0x4
+	ldr	r2, .L1839+0x4
 	add	r0, r1, r2
 	ldrh	r2, [r0]
 	add	r0, r2, #0x1
 	cmp	r0, #0x2
-	bgt	.L1621	@cond_branch
+	bgt	.L1838	@cond_branch
 	lsl	r0, r2, #0x1
-	ldr	r2, .L1622+0x8
+	ldr	r2, .L1839+0x8
 	add	r1, r1, r2
 	add	r1, r1, r0
 	ldrh	r0, [r5]
 	strh	r0, [r1]
-.L1621:
+.L1838:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1623:
+.L1840:
 	.align	2, 0
-.L1622:
+.L1839:
 	.word	gSaveBlock2Ptr
 	.word	0xcb2
 	.word	0xcb4
 	.word	gTrainerBattleOpponent_A
-.Lfe77:
-	.size	 SetNextBattleTentOpponent,.Lfe77-SetNextBattleTentOpponent
+.Lfe80:
+	.size	 SetNextBattleTentOpponent,.Lfe80-SetNextBattleTentOpponent
 	.align	2, 0
 	.type	 FillTentTrainerParty_,function
 	.thumb_func
@@ -32898,9 +35466,9 @@ FillTentTrainerParty_:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	str	r0, [sp, #0x20]
-	ldr	r0, .L1663
+	ldr	r0, .L1880
 	ldrh	r2, [r0]
-	ldr	r0, .L1663+0x4
+	ldr	r0, .L1880+0x4
 	ldr	r1, [r0]
 	mov	r0, #0x34
 	mul	r0, r0, r2
@@ -32911,13 +35479,13 @@ FillTentTrainerParty_:
 	str	r0, [sp, #0x24]
 	ldr	r2, [sp, #0x28]
 	ldrh	r1, [r2]
-	b	.L1662
-.L1664:
+	b	.L1879
+.L1881:
 	.align	2, 0
-.L1663:
+.L1880:
 	.word	gTrainerBattleOpponent_A
 	.word	gFacilityTrainers
-.L1661:
+.L1878:
 	ldr	r0, [sp, #0x24]
 	add	r0, r0, #0x1
 	lsl	r0, r0, #0x18
@@ -32927,10 +35495,10 @@ FillTentTrainerParty_:
 	ldr	r6, [sp, #0x28]
 	add	r0, r0, r6
 	ldrh	r1, [r0]
-.L1662:
-	ldr	r0, .L1665
+.L1879:
+	ldr	r0, .L1882
 	cmp	r1, r0
-	bne	.L1661	@cond_branch
+	bne	.L1878	@cond_branch
 	mov	r0, #0x0
 	mov	r8, r0
 	bl	Random
@@ -32941,12 +35509,12 @@ FillTentTrainerParty_:
 	lsl	r0, r0, #0x10
 	orr	r4, r4, r0
 	str	r4, [sp, #0x2c]
-	b	.L1630
-.L1666:
+	b	.L1847
+.L1883:
 	.align	2, 0
-.L1665:
+.L1882:
 	.word	0xffff
-.L1632:
+.L1849:
 	bl	Random
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
@@ -32959,40 +35527,40 @@ FillTentTrainerParty_:
 	mov	r6, #0x0
 	ldr	r7, [sp, #0x18]
 	add	r7, r7, r8
-	b	.L1633
-.L1635:
+	b	.L1850
+.L1852:
 	add	r6, r6, #0x1
-.L1633:
+.L1850:
 	cmp	r6, r7
-	bge	.L1634	@cond_branch
+	bge	.L1851	@cond_branch
 	mov	r1, #0x64
 	mov	r0, r6
 	mul	r0, r0, r1
-	ldr	r2, .L1667
+	ldr	r2, .L1884
 	add	r0, r0, r2
 	mov	r1, #0xb
 	mov	r2, #0x0
 	bl	GetMonData
-	ldr	r1, .L1667+0x4
+	ldr	r1, .L1884+0x4
 	ldr	r2, [r1]
 	lsl	r1, r4, #0x4
 	add	r1, r1, r2
 	ldrh	r1, [r1]
 	cmp	r0, r1
-	bne	.L1635	@cond_branch
-.L1634:
+	bne	.L1852	@cond_branch
+.L1851:
 	cmp	r6, r7
-	beq	.LCB12096
-	b	.L1630	@long jump
-.LCB12096:
+	beq	.LCB13465
+	b	.L1847	@long jump
+.LCB13465:
 	mov	r6, #0x0
 	cmp	r6, r7
-	bge	.L1641	@cond_branch
-	ldr	r0, .L1667+0x8
+	bge	.L1858	@cond_branch
+	ldr	r0, .L1884+0x8
 	mov	r9, r0
 	mov	r3, #0x0
-.L1643:
-	ldr	r1, .L1667
+.L1860:
+	ldr	r1, .L1884
 	add	r5, r3, r1
 	add	r0, r5, #0
 	mov	r1, #0xc
@@ -33001,12 +35569,12 @@ FillTentTrainerParty_:
 	bl	GetMonData
 	ldr	r3, [sp, #0x34]
 	cmp	r0, #0
-	beq	.L1642	@cond_branch
+	beq	.L1859	@cond_branch
 	add	r0, r5, #0
 	mov	r1, #0xc
 	mov	r2, #0x0
 	bl	GetMonData
-	ldr	r1, .L1667+0x4
+	ldr	r1, .L1884+0x4
 	ldr	r2, [r1]
 	lsl	r1, r4, #0x4
 	add	r1, r1, r2
@@ -33016,34 +35584,34 @@ FillTentTrainerParty_:
 	ldr	r3, [sp, #0x34]
 	ldrh	r1, [r1]
 	cmp	r0, r1
-	beq	.L1641	@cond_branch
-.L1642:
+	beq	.L1858	@cond_branch
+.L1859:
 	add	r3, r3, #0x64
 	add	r6, r6, #0x1
 	cmp	r6, r7
-	blt	.L1643	@cond_branch
-.L1641:
+	blt	.L1860	@cond_branch
+.L1858:
 	cmp	r6, r7
-	bne	.L1630	@cond_branch
+	bne	.L1847	@cond_branch
 	mov	r6, #0x0
 	cmp	r6, r8
-	bge	.L1648	@cond_branch
+	bge	.L1865	@cond_branch
 	add	r0, sp, #0xc
 	ldrh	r0, [r0]
 	cmp	r0, r4
-	beq	.L1648	@cond_branch
+	beq	.L1865	@cond_branch
 	add	r1, sp, #0xc
-.L1649:
+.L1866:
 	add	r1, r1, #0x2
 	add	r6, r6, #0x1
 	cmp	r6, r8
-	bge	.L1648	@cond_branch
+	bge	.L1865	@cond_branch
 	ldrh	r0, [r1]
 	cmp	r0, r4
-	bne	.L1649	@cond_branch
-.L1648:
+	bne	.L1866	@cond_branch
+.L1865:
 	cmp	r6, r8
-	bne	.L1630	@cond_branch
+	bne	.L1847	@cond_branch
 	mov	r2, r8
 	lsl	r0, r2, #0x1
 	add	r0, r0, sp
@@ -33052,9 +35620,9 @@ FillTentTrainerParty_:
 	mov	r6, #0x64
 	mov	r0, r7
 	mul	r0, r0, r6
-	ldr	r1, .L1667
+	ldr	r1, .L1884
 	add	r0, r0, r1
-	ldr	r5, .L1667+0x4
+	ldr	r5, .L1884+0x4
 	ldr	r2, [r5]
 	lsl	r4, r4, #0x4
 	add	r2, r4, r2
@@ -33081,9 +35649,9 @@ FillTentTrainerParty_:
 	mov	r8, r1
 	add	r3, r5, #0
 	mov	r5, r9
-	ldr	r2, .L1667
+	ldr	r2, .L1884
 	mov	sl, r2
-.L1657:
+.L1874:
 	ldr	r0, [r3]
 	add	r0, r5, r0
 	lsl	r4, r6, #0x1
@@ -33103,41 +35671,41 @@ FillTentTrainerParty_:
 	add	r0, r0, r4
 	ldrh	r0, [r0]
 	cmp	r0, #0xda
-	bne	.L1656	@cond_branch
+	bne	.L1873	@cond_branch
 	mov	r0, #0x0
 	mov	r1, sp
 	strb	r0, [r1, #0x14]
-.L1656:
+.L1873:
 	add	r6, r6, #0x1
 	cmp	r6, #0x3
-	ble	.L1657	@cond_branch
+	ble	.L1874	@cond_branch
 	mov	r2, #0x64
 	mov	r4, r7
 	mul	r4, r4, r2
-	ldr	r6, .L1667
+	ldr	r6, .L1884
 	add	r4, r4, r6
 	add	r0, r4, #0
 	mov	r1, #0x20
 	add	r2, sp, #0x14
 	bl	SetMonData
-	ldr	r0, .L1667+0x4
+	ldr	r0, .L1884+0x4
 	ldr	r0, [r0]
 	add	r0, r0, r9
 	ldrb	r2, [r0, #0xa]
 	lsl	r2, r2, #0x1
-	ldr	r0, .L1667+0x8
+	ldr	r0, .L1884+0x8
 	add	r2, r2, r0
 	add	r0, r4, #0
 	mov	r1, #0xc
 	bl	SetMonData
 	ldr	r0, [sp, #0x30]
 	mov	r8, r0
-.L1630:
+.L1847:
 	ldr	r1, [sp, #0x1c]
 	cmp	r8, r1
-	beq	.LCB12291
-	b	.L1632	@long jump
-.LCB12291:
+	beq	.LCB13660
+	b	.L1849	@long jump
+.LCB13660:
 	add	sp, sp, #0x38
 	pop	{r3, r4, r5}
 	mov	r8, r3
@@ -33146,14 +35714,14 @@ FillTentTrainerParty_:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1668:
+.L1885:
 	.align	2, 0
-.L1667:
+.L1884:
 	.word	gEnemyParty
 	.word	gFacilityTrainerMons
 	.word	gBattleFrontierHeldItems
-.Lfe78:
-	.size	 FillTentTrainerParty_,.Lfe78-FillTentTrainerParty_
+.Lfe81:
+	.size	 FillTentTrainerParty_,.Lfe81-FillTentTrainerParty_
 	.align	2, 0
 	.globl	FacilityClassToGraphicsId
 	.type	 FacilityClassToGraphicsId,function
@@ -33163,69 +35731,69 @@ FacilityClassToGraphicsId:
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	mov	r1, #0x0
-	ldr	r3, .L1688
+	ldr	r3, .L1905
 	ldrb	r0, [r3]
 	cmp	r0, r2
-	beq	.L1671	@cond_branch
-.L1672:
+	beq	.L1888	@cond_branch
+.L1889:
 	add	r0, r1, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
 	cmp	r1, #0x1d
-	bhi	.L1671	@cond_branch
+	bhi	.L1888	@cond_branch
 	add	r0, r1, r3
 	ldrb	r0, [r0]
 	cmp	r0, r2
-	bne	.L1672	@cond_branch
-.L1671:
+	bne	.L1889	@cond_branch
+.L1888:
 	cmp	r1, #0x1e
-	beq	.L1676	@cond_branch
-	ldr	r0, .L1688+0x4
-	b	.L1687
-.L1689:
+	beq	.L1893	@cond_branch
+	ldr	r0, .L1905+0x4
+	b	.L1904
+.L1906:
 	.align	2, 0
-.L1688:
+.L1905:
 	.word	gTowerMaleFacilityClasses
 	.word	gTowerMaleTrainerGfxIds
-.L1676:
+.L1893:
 	mov	r1, #0x0
-	ldr	r3, .L1690
+	ldr	r3, .L1907
 	ldrb	r0, [r3]
 	cmp	r0, r2
-	beq	.L1678	@cond_branch
-.L1679:
+	beq	.L1895	@cond_branch
+.L1896:
 	add	r0, r1, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
 	cmp	r1, #0x13
-	bhi	.L1678	@cond_branch
+	bhi	.L1895	@cond_branch
 	add	r0, r1, r3
 	ldrb	r0, [r0]
 	cmp	r0, r2
-	bne	.L1679	@cond_branch
-.L1678:
+	bne	.L1896	@cond_branch
+.L1895:
 	cmp	r1, #0x14
-	bne	.L1683	@cond_branch
+	bne	.L1900	@cond_branch
 	mov	r0, #0x7
-	b	.L1685
-.L1691:
+	b	.L1902
+.L1908:
 	.align	2, 0
-.L1690:
+.L1907:
 	.word	gTowerFemaleFacilityClasses
-.L1683:
-	ldr	r0, .L1692
-.L1687:
+.L1900:
+	ldr	r0, .L1909
+.L1904:
 	add	r0, r1, r0
 	ldrb	r0, [r0]
-.L1685:
+.L1902:
 	pop	{r1}
 	bx	r1
-.L1693:
+.L1910:
 	.align	2, 0
-.L1692:
+.L1909:
 	.word	gTowerFemaleTrainerGfxIds
-.Lfe79:
-	.size	 FacilityClassToGraphicsId,.Lfe79-FacilityClassToGraphicsId
+.Lfe82:
+	.size	 FacilityClassToGraphicsId,.Lfe82-FacilityClassToGraphicsId
 	.align	2, 0
 	.globl	ValidateBattleTowerRecord
 	.type	 ValidateBattleTowerRecord,function
@@ -33234,7 +35802,7 @@ ValidateBattleTowerRecord:
 	push	{r4, r5, r6, lr}
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-	ldr	r2, .L1706
+	ldr	r2, .L1923
 	mov	r0, #0xec
 	mul	r0, r0, r6
 	mov	r1, #0xe7
@@ -33245,18 +35813,18 @@ ValidateBattleTowerRecord:
 	mov	r4, #0x0
 	mov	r3, #0x0
 	add	r1, r1, r0
-.L1698:
+.L1915:
 	ldmia	r1!, {r0}
 	add	r5, r5, r0
 	orr	r4, r4, r0
 	add	r3, r3, #0x1
 	cmp	r3, #0x39
-	bls	.L1698	@cond_branch
+	bls	.L1915	@cond_branch
 	cmp	r5, #0
-	bne	.L1700	@cond_branch
+	bne	.L1917	@cond_branch
 	cmp	r4, #0
-	beq	.L1705	@cond_branch
-.L1700:
+	beq	.L1922	@cond_branch
+.L1917:
 	ldr	r2, [r2]
 	mov	r0, #0xec
 	mov	r1, r6
@@ -33267,51 +35835,51 @@ ValidateBattleTowerRecord:
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	cmp	r0, r5
-	bne	.L1702	@cond_branch
+	bne	.L1919	@cond_branch
 	mov	r0, #0x1
-	b	.L1704
-.L1707:
+	b	.L1921
+.L1924:
 	.align	2, 0
-.L1706:
+.L1923:
 	.word	gSaveBlock2Ptr
-.L1702:
+.L1919:
 	mov	r3, #0xe7
 	lsl	r3, r3, #0x3
 	add	r0, r1, r3
 	add	r0, r2, r0
 	bl	ClearBattleTowerRecord
-.L1705:
+.L1922:
 	mov	r0, #0x0
-.L1704:
+.L1921:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.Lfe80:
-	.size	 ValidateBattleTowerRecord,.Lfe80-ValidateBattleTowerRecord
+.Lfe83:
+	.size	 ValidateBattleTowerRecord,.Lfe83-ValidateBattleTowerRecord
 	.align	2, 0
 	.globl	sub_8166188
 	.type	 sub_8166188,function
 	.thumb_func
 sub_8166188:
 	push	{r4, r5, r6, r7, lr}
-	ldr	r0, .L1716
+	ldr	r0, .L1933
 	ldr	r0, [r0]
-	ldr	r1, .L1716+0x4
+	ldr	r1, .L1933+0x4
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1709	@cond_branch
+	beq	.L1926	@cond_branch
 	bl	SetFacilityPtrsGetLevel
 	lsl	r0, r0, #0x18
 	mov	r5, #0x0
-	ldr	r7, .L1716+0x8
+	ldr	r7, .L1933+0x8
 	lsr	r0, r0, #0x16
-	ldr	r1, .L1716+0xc
+	ldr	r1, .L1933+0xc
 	add	r6, r0, r1
-.L1713:
+.L1930:
 	mov	r0, #0x64
 	mov	r1, r5
 	mul	r1, r1, r0
-	ldr	r0, .L1716+0x10
+	ldr	r0, .L1933+0x10
 	add	r4, r1, r0
 	add	r0, r4, #0
 	mov	r1, #0xb
@@ -33319,7 +35887,7 @@ sub_8166188:
 	bl	GetMonData
 	add	r1, r0, #0
 	cmp	r1, #0
-	beq	.L1712	@cond_branch
+	beq	.L1929	@cond_branch
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
@@ -33335,24 +35903,24 @@ sub_8166188:
 	bl	SetMonData
 	add	r0, r4, #0
 	bl	CalculateMonStats
-.L1712:
+.L1929:
 	add	r5, r5, #0x1
 	cmp	r5, #0x5
-	ble	.L1713	@cond_branch
-.L1709:
+	ble	.L1930	@cond_branch
+.L1926:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1717:
+.L1934:
 	.align	2, 0
-.L1716:
+.L1933:
 	.word	gBattleTypeFlags
 	.word	0x2000002
 	.word	gBaseStats
 	.word	gExperienceTables
 	.word	gEnemyParty
-.Lfe81:
-	.size	 sub_8166188,.Lfe81-sub_8166188
+.Lfe84:
+	.size	 sub_8166188,.Lfe84-sub_8166188
 	.comm	gFrontierTempParty, 8	@ 8
 .text
 	.align	2, 0

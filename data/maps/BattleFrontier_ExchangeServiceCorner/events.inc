@@ -14,9 +14,9 @@ BattleFrontier_ExchangeServiceCorner_ObjectEvents:
 	object_event 9, OBJ_EVENT_GFX_GIRL_1, 0, 12, 10, 0, MOVEMENT_TYPE_WANDER_AROUND, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_ExchangeServiceCorner_EventScript_Girl, 0
 
 BattleFrontier_ExchangeServiceCorner_MapWarps:
-	warp_def 7, 10, 0, 6, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
-	warp_def 6, 10, 0, 6, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
-	warp_def 8, 10, 0, 6, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
+	warp_def 6, 10, 0, 0, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
+	warp_def 8, 10, 0, 0, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
+	warp_def 7, 10, 0, 0, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
 
 BattleFrontier_ExchangeServiceCorner_MapEvents::
 	map_events BattleFrontier_ExchangeServiceCorner_ObjectEvents, BattleFrontier_ExchangeServiceCorner_MapWarps, 0x0, 0x0

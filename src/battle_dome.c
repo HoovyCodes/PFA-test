@@ -2269,7 +2269,7 @@ static void InitDomeTrainers(void)
         for (j = 0; j < NUM_STATS; j++)
             gSaveBlock2Ptr->frontier.domePlayerPartyData[i].evs[j] = GetMonData(&gPlayerParty[gSaveBlock2Ptr->frontier.selectedPartyMons[i] - 1], MON_DATA_HP_EV + j, NULL);
 
-        gSaveBlock2Ptr->frontier.domePlayerPartyData[i].nature = GetNature(&gPlayerParty[gSaveBlock2Ptr->frontier.selectedPartyMons[i] - 1]);
+        gSaveBlock2Ptr->frontier.domePlayerPartyData[i].nature = GetNature(&gPlayerParty[gSaveBlock2Ptr->frontier.selectedPartyMons[i] - 1], FALSE);
     }
 
     // Populate the tourney roster with random frontier trainers (dependent on streak)
@@ -2843,8 +2843,7 @@ static int GetTypeEffectivenessPoints(int move, int targetSpecies, int arg2)
 //       To fix, see CreateDomeOpponentMon
 static u8 GetDomeTrainerMonIvs(u16 trainerId)
 {
-    u8 fixedIv;
-        fixedIv = 31;
+    u8 fixedIv =31;
 
     return fixedIv;
 }
@@ -5937,8 +5936,8 @@ static void DecideRoundWinners(u8 roundId)
         // Decide which one of two trainers wins!
         else if (tournamentId2 != 0xFF)
         {
-            // BUG: points1 and points2 are not cleared at the beginning of the loop resulting in not fair results.
-
+			points1 = 0;
+            points2 = 0;
             // Calculate points for both trainers.
             for (monId1 = 0; monId1 < FRONTIER_PARTY_SIZE; monId1++)
             {

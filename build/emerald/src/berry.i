@@ -1,6 +1,6 @@
-# 1 "src/berry.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/berry.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/berry.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -3967,7 +3967,6 @@ struct FieldInput
     bool8 input_field_1_6:1;
     bool8 input_field_1_7:1;
     u8 dpadDirection;
- bool8 pressedRButton:1;
 };
 
 void FieldClearPlayerInput(struct FieldInput *pStruct);
@@ -4647,90 +4646,90 @@ static u16 GetStageDurationByBerryType(u8);
 
 
 static const u8 sBerryDescriptionPart1_Cheri[] = _("Blooms with delicate pretty flowers.");
-static const u8 sBerryDescriptionPart2_Cheri[] = _("The bright red BERRY is very spicy.");
-static const u8 sBerryDescriptionPart1_Chesto[] = _("The BERRY's thick skin and fruit are");
+static const u8 sBerryDescriptionPart2_Cheri[] = _("The bright red berry is very spicy.");
+static const u8 sBerryDescriptionPart1_Chesto[] = _("The berry's thick skin and fruit are");
 static const u8 sBerryDescriptionPart2_Chesto[] = _("very tough. It is dry-tasting all over.");
 static const u8 sBerryDescriptionPart1_Pecha[] = _("Very sweet and delicious.");
-static const u8 sBerryDescriptionPart2_Pecha[] = _("Also very tender - handle with care.");
+static const u8 sBerryDescriptionPart2_Pecha[] = _("Also very tender--handle with care.");
 static const u8 sBerryDescriptionPart1_Rawst[] = _("If the leaves grow long and curly,");
-static const u8 sBerryDescriptionPart2_Rawst[] = _("the BERRY seems to grow very bitter.");
-static const u8 sBerryDescriptionPart1_Aspear[] = _("The hard BERRY is dense with a rich");
+static const u8 sBerryDescriptionPart2_Rawst[] = _("the berry seems to grow very bitter.");
+static const u8 sBerryDescriptionPart1_Aspear[] = _("The hard berry is dense with a rich");
 static const u8 sBerryDescriptionPart2_Aspear[] = _("juice. It is quite sour.");
-static const u8 sBerryDescriptionPart1_Leppa[] = _("Grows slower than CHERI and others.");
-static const u8 sBerryDescriptionPart2_Leppa[] = _("The smaller the BERRY, the tastier.");
-static const u8 sBerryDescriptionPart1_Oran[] = _("A peculiar BERRY with a mix of flavors.");
-static const u8 sBerryDescriptionPart2_Oran[] = _("BERRIES grow in half a day.");
-static const u8 sBerryDescriptionPart1_Persim[] = _("Loves sunlight. The BERRY's color");
+static const u8 sBerryDescriptionPart1_Leppa[] = _("Grows slower than Cheri and others.");
+static const u8 sBerryDescriptionPart2_Leppa[] = _("The smaller the berry, the tastier.");
+static const u8 sBerryDescriptionPart1_Oran[] = _("A peculiar berry with a mix of flavors.");
+static const u8 sBerryDescriptionPart2_Oran[] = _("berries grow in half a day.");
+static const u8 sBerryDescriptionPart1_Persim[] = _("Loves sunlight. The berry's color");
 static const u8 sBerryDescriptionPart2_Persim[] = _("grows vivid when exposed to the sun.");
 static const u8 sBerryDescriptionPart1_Lum[] = _("Slow to grow. If raised with loving");
-static const u8 sBerryDescriptionPart2_Lum[] = _("care, it may grow two BERRIES.");
-static const u8 sBerryDescriptionPart1_Sitrus[] = _("Closely related to ORAN. The large");
-static const u8 sBerryDescriptionPart2_Sitrus[] = _("BERRY has a well-rounded flavor.");
-static const u8 sBerryDescriptionPart1_Figy[] = _("The BERRY, which looks chewed up,");
+static const u8 sBerryDescriptionPart2_Lum[] = _("care, it may grow two berries.");
+static const u8 sBerryDescriptionPart1_Sitrus[] = _("Closely related to Oran. The large");
+static const u8 sBerryDescriptionPart2_Sitrus[] = _("berry has a well-rounded flavor.");
+static const u8 sBerryDescriptionPart1_Figy[] = _("The berry, which looks chewed up,");
 static const u8 sBerryDescriptionPart2_Figy[] = _("brims with spicy substances.");
-static const u8 sBerryDescriptionPart1_Wiki[] = _("The BERRY is said to have grown lumpy");
-static const u8 sBerryDescriptionPart2_Wiki[] = _("to help POKéMON grip it.");
-static const u8 sBerryDescriptionPart1_Mago[] = _("The BERRY turns curvy as it grows.");
+static const u8 sBerryDescriptionPart1_Wiki[] = _("The berry is said to have grown lumpy");
+static const u8 sBerryDescriptionPart2_Wiki[] = _("to help Pokémon grip it.");
+static const u8 sBerryDescriptionPart1_Mago[] = _("The berry turns curvy as it grows.");
 static const u8 sBerryDescriptionPart2_Mago[] = _("The curvier, the sweeter and tastier.");
 static const u8 sBerryDescriptionPart1_Aguav[] = _("The flower is dainty. It is rare in its");
 static const u8 sBerryDescriptionPart2_Aguav[] = _("ability to grow without light.");
-static const u8 sBerryDescriptionPart1_Iapapa[] = _("The BERRY is very big and sour.");
+static const u8 sBerryDescriptionPart1_Iapapa[] = _("The berry is very big and sour.");
 static const u8 sBerryDescriptionPart2_Iapapa[] = _("It takes at least a day to grow.");
-static const u8 sBerryDescriptionPart1_Razz[] = _("The red BERRY tastes slightly spicy.");
+static const u8 sBerryDescriptionPart1_Razz[] = _("The red berry tastes slightly spicy.");
 static const u8 sBerryDescriptionPart2_Razz[] = _("It grows quickly in just four hours.");
-static const u8 sBerryDescriptionPart1_Bluk[] = _("The BERRY is blue on the outside, but");
+static const u8 sBerryDescriptionPart1_Bluk[] = _("The berry is blue on the outside, but");
 static const u8 sBerryDescriptionPart2_Bluk[] = _("it blackens the mouth when eaten.");
-static const u8 sBerryDescriptionPart1_Nanab[] = _("This BERRY was the seventh");
+static const u8 sBerryDescriptionPart1_Nanab[] = _("This berry was the seventh");
 static const u8 sBerryDescriptionPart2_Nanab[] = _("discovered in the world. It is sweet.");
 static const u8 sBerryDescriptionPart1_Wepear[] = _("The flower is small and white. It has a");
 static const u8 sBerryDescriptionPart2_Wepear[] = _("delicate balance of bitter and sour.");
 static const u8 sBerryDescriptionPart1_Pinap[] = _("Weak against wind and cold.");
 static const u8 sBerryDescriptionPart2_Pinap[] = _("The fruit is spicy and the skin, sour.");
 static const u8 sBerryDescriptionPart1_Pomeg[] = _("However much it is watered,");
-static const u8 sBerryDescriptionPart2_Pomeg[] = _("it only grows up to six BERRIES.");
+static const u8 sBerryDescriptionPart2_Pomeg[] = _("it only grows up to six berries.");
 static const u8 sBerryDescriptionPart1_Kelpsy[] = _("A rare variety shaped like a root.");
 static const u8 sBerryDescriptionPart2_Kelpsy[] = _("Grows a very large flower.");
 static const u8 sBerryDescriptionPart1_Qualot[] = _("Loves water. Grows strong even in");
 static const u8 sBerryDescriptionPart2_Qualot[] = _("locations with constant rainfall.");
-static const u8 sBerryDescriptionPart1_Hondew[] = _("A BERRY that is very valuable and");
+static const u8 sBerryDescriptionPart1_Hondew[] = _("A berry that is very valuable and");
 static const u8 sBerryDescriptionPart2_Hondew[] = _("rarely seen. It is very delicious.");
 static const u8 sBerryDescriptionPart1_Grepa[] = _("Despite its tenderness and round");
-static const u8 sBerryDescriptionPart2_Grepa[] = _("shape, the BERRY is unimaginably sour.");
-static const u8 sBerryDescriptionPart1_Tamato[] = _("The BERRY is lip-bendingly spicy.");
+static const u8 sBerryDescriptionPart2_Grepa[] = _("shape, the berry is unimaginably sour.");
+static const u8 sBerryDescriptionPart1_Tamato[] = _("The berry is lip-bendingly spicy.");
 static const u8 sBerryDescriptionPart2_Tamato[] = _("It takes time to grow.");
-static const u8 sBerryDescriptionPart1_Cornn[] = _("A BERRY from an ancient era. May not");
+static const u8 sBerryDescriptionPart1_Cornn[] = _("A berry from an ancient era. May not");
 static const u8 sBerryDescriptionPart2_Cornn[] = _("grow unless planted in quantity.");
-static const u8 sBerryDescriptionPart1_Magost[] = _("A BERRY that is widely said to have");
+static const u8 sBerryDescriptionPart1_Magost[] = _("A berry that is widely said to have");
 static const u8 sBerryDescriptionPart2_Magost[] = _("a finely balanced flavor.");
 static const u8 sBerryDescriptionPart1_Rabuta[] = _("A rare variety that is overgrown with");
 static const u8 sBerryDescriptionPart2_Rabuta[] = _("hair. It is quite bitter.");
 static const u8 sBerryDescriptionPart1_Nomel[] = _("Quite sour. Just one bite makes it");
 static const u8 sBerryDescriptionPart2_Nomel[] = _("impossible to taste for three days.");
-static const u8 sBerryDescriptionPart1_Spelon[] = _("The vividly red BERRY is very spicy.");
+static const u8 sBerryDescriptionPart1_Spelon[] = _("The vividly red berry is very spicy.");
 static const u8 sBerryDescriptionPart2_Spelon[] = _("Its warts secrete a spicy substance.");
 static const u8 sBerryDescriptionPart1_Pamtre[] = _("Drifts on the sea from somewhere.");
 static const u8 sBerryDescriptionPart2_Pamtre[] = _("It is thought to grow elsewhere.");
-static const u8 sBerryDescriptionPart1_Watmel[] = _("A huge BERRY, with some over 20");
+static const u8 sBerryDescriptionPart1_Watmel[] = _("A huge berry, with some over 20");
 static const u8 sBerryDescriptionPart2_Watmel[] = _("inches discovered. Exceedingly sweet.");
 static const u8 sBerryDescriptionPart1_Durin[] = _("Bitter to even look at. It is so");
 static const u8 sBerryDescriptionPart2_Durin[] = _("bitter, no one has ever eaten it as is.");
 static const u8 sBerryDescriptionPart1_Belue[] = _("It is glossy and looks delicious, but");
 static const u8 sBerryDescriptionPart2_Belue[] = _("it is awfully sour. Takes time to grow.");
-static const u8 sBerryDescriptionPart1_Liechi[] = _("A mysterious BERRY. It is rumored to");
+static const u8 sBerryDescriptionPart1_Liechi[] = _("A mysterious berry. It is rumored to");
 static const u8 sBerryDescriptionPart2_Liechi[] = _("contain the power of the sea.");
-static const u8 sBerryDescriptionPart1_Ganlon[] = _("A mysterious BERRY. It is rumored to");
+static const u8 sBerryDescriptionPart1_Ganlon[] = _("A mysterious berry. It is rumored to");
 static const u8 sBerryDescriptionPart2_Ganlon[] = _("contain the power of the land.");
-static const u8 sBerryDescriptionPart1_Salac[] = _("A mysterious BERRY. It is rumored to");
+static const u8 sBerryDescriptionPart1_Salac[] = _("A mysterious berry. It is rumored to");
 static const u8 sBerryDescriptionPart2_Salac[] = _("contain the power of the sky.");
-static const u8 sBerryDescriptionPart1_Petaya[] = _("A mysterious BERRY. It is rumored to");
+static const u8 sBerryDescriptionPart1_Petaya[] = _("A mysterious berry. It is rumored to");
 static const u8 sBerryDescriptionPart2_Petaya[] = _("contain the power of all living things.");
-static const u8 sBerryDescriptionPart1_Apicot[] = _("A very mystifying BERRY. No telling");
+static const u8 sBerryDescriptionPart1_Apicot[] = _("A very mystifying berry. No telling");
 static const u8 sBerryDescriptionPart2_Apicot[] = _("what may happen or how it can be used.");
-static const u8 sBerryDescriptionPart1_Lansat[] = _("Said to be a legendary BERRY.");
+static const u8 sBerryDescriptionPart1_Lansat[] = _("Said to be a legendary berry.");
 static const u8 sBerryDescriptionPart2_Lansat[] = _("Holding it supposedly brings joy.");
 static const u8 sBerryDescriptionPart1_Starf[] = _("So strong, it was abandoned at the");
 static const u8 sBerryDescriptionPart2_Starf[] = _("world's edge. Considered a mirage.");
-static const u8 sBerryDescriptionPart1_Enigma[] = _("A completely enigmatic BERRY.");
+static const u8 sBerryDescriptionPart1_Enigma[] = _("A completely enigmatic berry.");
 static const u8 sBerryDescriptionPart2_Enigma[] = _("Appears to have the power of stars.");
 
 static const u8 sBerryDescriptionPart1_Occa[] = _("Said to grow in the tropics once,");
@@ -4774,7 +4773,7 @@ const struct Berry gBerries[] =
 {
     [144 - 144] =
     {
-        .name = _("CHERI"),
+        .name = _("Cheri"),
         .firmness = 2,
         .size = 20,
         .maxYield = 3,
@@ -4792,7 +4791,7 @@ const struct Berry gBerries[] =
 
     [145 - 144] =
     {
-        .name = _("CHESTO"),
+        .name = _("Chesto"),
         .firmness = 5,
         .size = 80,
         .maxYield = 3,
@@ -4810,7 +4809,7 @@ const struct Berry gBerries[] =
 
     [146 - 144] =
     {
-        .name = _("PECHA"),
+        .name = _("Pecha"),
         .firmness = 1,
         .size = 40,
         .maxYield = 3,
@@ -4828,7 +4827,7 @@ const struct Berry gBerries[] =
 
     [147 - 144] =
     {
-        .name = _("RAWST"),
+        .name = _("Rawst"),
         .firmness = 3,
         .size = 32,
         .maxYield = 3,
@@ -4846,7 +4845,7 @@ const struct Berry gBerries[] =
 
     [148 - 144] =
     {
-        .name = _("ASPEAR"),
+        .name = _("Aspear"),
         .firmness = 5,
         .size = 50,
         .maxYield = 3,
@@ -4864,7 +4863,7 @@ const struct Berry gBerries[] =
 
     [149 - 144] =
     {
-        .name = _("LEPPA"),
+        .name = _("Leppa"),
         .firmness = 4,
         .size = 28,
         .maxYield = 3,
@@ -4882,7 +4881,7 @@ const struct Berry gBerries[] =
 
     [150 - 144] =
     {
-        .name = _("ORAN"),
+        .name = _("Oran"),
         .firmness = 5,
         .size = 35,
         .maxYield = 3,
@@ -4900,7 +4899,7 @@ const struct Berry gBerries[] =
 
     [151 - 144] =
     {
-        .name = _("PERSIM"),
+        .name = _("Persim"),
         .firmness = 3,
         .size = 47,
         .maxYield = 3,
@@ -4918,7 +4917,7 @@ const struct Berry gBerries[] =
 
     [152 - 144] =
     {
-        .name = _("LUM"),
+        .name = _("Lum"),
         .firmness = 5,
         .size = 34,
         .maxYield = 2,
@@ -4936,7 +4935,7 @@ const struct Berry gBerries[] =
 
     [153 - 144] =
     {
-        .name = _("SITRUS"),
+        .name = _("Sitrus"),
         .firmness = 4,
         .size = 95,
         .maxYield = 3,
@@ -4954,7 +4953,7 @@ const struct Berry gBerries[] =
 
     [154 - 144] =
     {
-        .name = _("FIGY"),
+        .name = _("Figy"),
         .firmness = 2,
         .size = 100,
         .maxYield = 3,
@@ -4972,7 +4971,7 @@ const struct Berry gBerries[] =
 
     [155 - 144] =
     {
-        .name = _("WIKI"),
+        .name = _("Wiki"),
         .firmness = 3,
         .size = 115,
         .maxYield = 3,
@@ -4990,7 +4989,7 @@ const struct Berry gBerries[] =
 
     [156 - 144] =
     {
-        .name = _("MAGO"),
+        .name = _("Mago"),
         .firmness = 3,
         .size = 126,
         .maxYield = 3,
@@ -5008,7 +5007,7 @@ const struct Berry gBerries[] =
 
     [157 - 144] =
     {
-        .name = _("AGUAV"),
+        .name = _("Aguav"),
         .firmness = 5,
         .size = 64,
         .maxYield = 3,
@@ -5026,7 +5025,7 @@ const struct Berry gBerries[] =
 
     [158 - 144] =
     {
-        .name = _("IAPAPA"),
+        .name = _("Iapapa"),
         .firmness = 2,
         .size = 223,
         .maxYield = 3,
@@ -5044,7 +5043,7 @@ const struct Berry gBerries[] =
 
     [159 - 144] =
     {
-        .name = _("RAZZ"),
+        .name = _("Razz"),
         .firmness = 4,
         .size = 120,
         .maxYield = 6,
@@ -5062,7 +5061,7 @@ const struct Berry gBerries[] =
 
     [160 - 144] =
     {
-        .name = _("BLUK"),
+        .name = _("Bluk"),
         .firmness = 2,
         .size = 108,
         .maxYield = 6,
@@ -5080,7 +5079,7 @@ const struct Berry gBerries[] =
 
     [161 - 144] =
     {
-        .name = _("NANAB"),
+        .name = _("Nanab"),
         .firmness = 4,
         .size = 77,
         .maxYield = 6,
@@ -5098,7 +5097,7 @@ const struct Berry gBerries[] =
 
     [162 - 144] =
     {
-        .name = _("WEPEAR"),
+        .name = _("Wepear"),
         .firmness = 5,
         .size = 74,
         .maxYield = 6,
@@ -5116,7 +5115,7 @@ const struct Berry gBerries[] =
 
     [163 - 144] =
     {
-        .name = _("PINAP"),
+        .name = _("Pinap"),
         .firmness = 3,
         .size = 80,
         .maxYield = 6,
@@ -5134,7 +5133,7 @@ const struct Berry gBerries[] =
 
     [164 - 144] =
     {
-        .name = _("POMEG"),
+        .name = _("Pomeg"),
         .firmness = 4,
         .size = 135,
         .maxYield = 6,
@@ -5152,7 +5151,7 @@ const struct Berry gBerries[] =
 
     [165 - 144] =
     {
-        .name = _("KELPSY"),
+        .name = _("Kelpsy"),
         .firmness = 3,
         .size = 150,
         .maxYield = 6,
@@ -5170,7 +5169,7 @@ const struct Berry gBerries[] =
 
     [166 - 144] =
     {
-        .name = _("QUALOT"),
+        .name = _("Qualot"),
         .firmness = 3,
         .size = 110,
         .maxYield = 6,
@@ -5188,7 +5187,7 @@ const struct Berry gBerries[] =
 
     [167 - 144] =
     {
-        .name = _("HONDEW"),
+        .name = _("Hondey"),
         .firmness = 3,
         .size = 162,
         .maxYield = 6,
@@ -5206,7 +5205,7 @@ const struct Berry gBerries[] =
 
     [168 - 144] =
     {
-        .name = _("GREPA"),
+        .name = _("Grepa"),
         .firmness = 2,
         .size = 149,
         .maxYield = 6,
@@ -5224,7 +5223,7 @@ const struct Berry gBerries[] =
 
     [169 - 144] =
     {
-        .name = _("TAMATO"),
+        .name = _("Tamato"),
         .firmness = 2,
         .size = 200,
         .maxYield = 4,
@@ -5242,7 +5241,7 @@ const struct Berry gBerries[] =
 
     [170 - 144] =
     {
-        .name = _("CORNN"),
+        .name = _("Cornn"),
         .firmness = 3,
         .size = 75,
         .maxYield = 4,
@@ -5260,7 +5259,7 @@ const struct Berry gBerries[] =
 
     [171 - 144] =
     {
-        .name = _("MAGOST"),
+        .name = _("Magost"),
         .firmness = 3,
         .size = 140,
         .maxYield = 4,
@@ -5278,7 +5277,7 @@ const struct Berry gBerries[] =
 
     [172 - 144] =
     {
-        .name = _("RABUTA"),
+        .name = _("Rabuta"),
         .firmness = 2,
         .size = 226,
         .maxYield = 4,
@@ -5296,7 +5295,7 @@ const struct Berry gBerries[] =
 
     [173 - 144] =
     {
-        .name = _("NOMEL"),
+        .name = _("Nomel"),
         .firmness = 5,
         .size = 285,
         .maxYield = 4,
@@ -5314,7 +5313,7 @@ const struct Berry gBerries[] =
 
     [174 - 144] =
     {
-        .name = _("SPELON"),
+        .name = _("Spelon"),
         .firmness = 2,
         .size = 133,
         .maxYield = 2,
@@ -5332,7 +5331,7 @@ const struct Berry gBerries[] =
 
     [175 - 144] =
     {
-        .name = _("PAMTRE"),
+        .name = _("Pamtre"),
         .firmness = 1,
         .size = 244,
         .maxYield = 2,
@@ -5350,7 +5349,7 @@ const struct Berry gBerries[] =
 
     [176 - 144] =
     {
-        .name = _("WATMEL"),
+        .name = _("Watmel"),
         .firmness = 2,
         .size = 250,
         .maxYield = 2,
@@ -5368,7 +5367,7 @@ const struct Berry gBerries[] =
 
     [177 - 144] =
     {
-        .name = _("DURIN"),
+        .name = _("Durin"),
         .firmness = 3,
         .size = 280,
         .maxYield = 2,
@@ -5386,7 +5385,7 @@ const struct Berry gBerries[] =
 
     [178 - 144] =
     {
-        .name = _("BELUE"),
+        .name = _("Belue"),
         .firmness = 1,
         .size = 300,
         .maxYield = 2,
@@ -5404,7 +5403,7 @@ const struct Berry gBerries[] =
 
     [197 - 144] =
     {
-        .name = _("LIECHI"),
+        .name = _("Liechi"),
         .firmness = 4,
         .size = 111,
         .maxYield = 2,
@@ -5422,7 +5421,7 @@ const struct Berry gBerries[] =
 
     [198 - 144] =
     {
-        .name = _("GANLON"),
+        .name = _("Ganlon"),
         .firmness = 4,
         .size = 33,
         .maxYield = 2,
@@ -5440,7 +5439,7 @@ const struct Berry gBerries[] =
 
     [199 - 144] =
     {
-        .name = _("SALAC"),
+        .name = _("Salac"),
         .firmness = 4,
         .size = 95,
         .maxYield = 2,
@@ -5458,7 +5457,7 @@ const struct Berry gBerries[] =
 
     [200 - 144] =
     {
-        .name = _("PETAYA"),
+        .name = _("Petaya"),
         .firmness = 4,
         .size = 237,
         .maxYield = 2,
@@ -5476,7 +5475,7 @@ const struct Berry gBerries[] =
 
     [201 - 144] =
     {
-        .name = _("APICOT"),
+        .name = _("Apicot"),
         .firmness = 3,
         .size = 75,
         .maxYield = 2,
@@ -5494,7 +5493,7 @@ const struct Berry gBerries[] =
 
     [202 - 144] =
     {
-        .name = _("LANSAT"),
+        .name = _("Lansat"),
         .firmness = 2,
         .size = 97,
         .maxYield = 2,
@@ -5512,7 +5511,7 @@ const struct Berry gBerries[] =
 
     [203 - 144] =
     {
-        .name = _("STARF"),
+        .name = _("Starf"),
         .firmness = 5,
         .size = 153,
         .maxYield = 2,
@@ -5530,7 +5529,7 @@ const struct Berry gBerries[] =
 
     [205 - 144] =
     {
-        .name = _("ENIGMA"),
+        .name = _("Enigma"),
         .firmness = 0,
         .size = 0,
         .maxYield = 2,
@@ -5548,7 +5547,7 @@ const struct Berry gBerries[] =
 
     [179 - 144] =
     {
-        .name = _("OCCA"),
+        .name = _("Occa"),
         .firmness = 5,
         .size = 89,
         .maxYield = 5,
@@ -5566,7 +5565,7 @@ const struct Berry gBerries[] =
 
     [180 - 144] =
     {
-        .name = _("PASSHO"),
+        .name = _("Passho"),
         .firmness = 2,
         .size = 33,
         .maxYield = 5,
@@ -5584,7 +5583,7 @@ const struct Berry gBerries[] =
 
     [181 - 144] =
     {
-        .name = _("WACAN"),
+        .name = _("Wacan"),
         .firmness = 1,
         .size = 250,
         .maxYield = 5,
@@ -5602,7 +5601,7 @@ const struct Berry gBerries[] =
 
     [182 - 144] =
     {
-        .name = _("RINDO"),
+        .name = _("Rindo"),
         .firmness = 2,
         .size = 155,
         .maxYield = 5,
@@ -5620,7 +5619,7 @@ const struct Berry gBerries[] =
 
     [183 - 144] =
     {
-        .name = _("YACHE"),
+        .name = _("Yache"),
         .firmness = 4,
         .size = 135,
         .maxYield = 5,
@@ -5638,7 +5637,7 @@ const struct Berry gBerries[] =
 
     [184 - 144] =
     {
-        .name = _("CHOPLE"),
+        .name = _("Chople"),
         .firmness = 2,
         .size = 77,
         .maxYield = 5,
@@ -5656,7 +5655,7 @@ const struct Berry gBerries[] =
 
     [185 - 144] =
     {
-        .name = _("KEBIA"),
+        .name = _("Kebia"),
         .firmness = 3,
         .size = 89,
         .maxYield = 5,
@@ -5674,7 +5673,7 @@ const struct Berry gBerries[] =
 
     [186 - 144] =
     {
-        .name = _("SHUCA"),
+        .name = _("Shuca"),
         .firmness = 2,
         .size = 42,
         .maxYield = 5,
@@ -5692,7 +5691,7 @@ const struct Berry gBerries[] =
 
     [187 - 144] =
     {
-        .name = _("COBA"),
+        .name = _("Coba"),
         .firmness = 4,
         .size = 277,
         .maxYield = 5,
@@ -5710,7 +5709,7 @@ const struct Berry gBerries[] =
 
     [188 - 144] =
     {
-        .name = _("PAYAPA"),
+        .name = _("Payapa"),
         .firmness = 2,
         .size = 251,
         .maxYield = 5,
@@ -5728,7 +5727,7 @@ const struct Berry gBerries[] =
 
     [189 - 144] =
     {
-        .name = _("TANGA"),
+        .name = _("Tanga"),
         .firmness = 1,
         .size = 43,
         .maxYield = 5,
@@ -5746,7 +5745,7 @@ const struct Berry gBerries[] =
 
     [190 - 144] =
     {
-        .name = _("CHARTI"),
+        .name = _("Charti"),
         .firmness = 1,
         .size = 28,
         .maxYield = 5,
@@ -5764,7 +5763,7 @@ const struct Berry gBerries[] =
 
     [191 - 144] =
     {
-        .name = _("KASIB"),
+        .name = _("Kasib"),
         .firmness = 3,
         .size = 144,
         .maxYield = 5,
@@ -5782,7 +5781,7 @@ const struct Berry gBerries[] =
 
     [192 - 144] =
     {
-        .name = _("HABAN"),
+        .name = _("Haban"),
         .firmness = 2,
         .size = 23,
         .maxYield = 5,
@@ -5800,7 +5799,7 @@ const struct Berry gBerries[] =
 
     [193 - 144] =
     {
-        .name = _("COLBUR"),
+        .name = _("Colbur"),
         .firmness = 5,
         .size = 38,
         .maxYield = 5,
@@ -5818,7 +5817,7 @@ const struct Berry gBerries[] =
 
     [194 - 144] =
     {
-        .name = _("BABIRI"),
+        .name = _("Babiri"),
         .firmness = 5,
         .size = 265,
         .maxYield = 5,
@@ -5836,7 +5835,7 @@ const struct Berry gBerries[] =
 
     [195 - 144] =
     {
-        .name = _("CHILAN"),
+        .name = _("Chilan"),
         .firmness = 1,
         .size = 33,
         .maxYield = 5,
@@ -5854,7 +5853,7 @@ const struct Berry gBerries[] =
 
     [196 - 144] =
     {
-        .name = _("ROSELI"),
+        .name = _("Roseli"),
         .firmness = 2,
         .size = 35,
         .maxYield = 5,

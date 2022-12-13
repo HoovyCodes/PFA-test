@@ -1,6 +1,6 @@
-# 1 "src/battle_main.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/battle_main.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/battle_main.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -3144,6 +3144,13 @@ void ClearIllusionMon(u32 battlerId);
 bool32 SetIllusionMon(struct Pokemon *mon, u32 battlerId);
 bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
 u8 GetBattleMoveSplit(u32 moveId);
+bool32 CanSleep(u8 battlerId);
+bool32 CanBePoisoned(u8 battlerId);
+bool32 CanBeBurned(u8 battlerId);
+bool32 CanBeParalyzed(u8 battlerId);
+bool32 CanBeFrozen(u8 battlerId);
+bool32 CanBeConfused(u8 battlerId);
+bool32 IsBattlerTerrainAffected(u8 battlerId, u32 terrainFlag);
 # 9 "include/battle.h" 2
 # 1 "include/battle_script_commands.h" 1
 # 9 "include/battle_script_commands.h"
@@ -3809,8 +3816,9 @@ struct BattleStruct
     u8 sameMoveTurns[4];
     u16 moveEffect2;
     u16 changedSpecies[6];
+ u8 abilityPopUpSpriteIds[4][2];
 };
-# 579 "include/battle.h"
+# 580 "include/battle.h"
 struct BattleScripting
 {
     s32 painSplitHp;
@@ -3846,6 +3854,7 @@ struct BattleScripting
     u16 moveEffect;
     u16 multihitMoveEffect;
     u8 illusionNickHack;
+    bool8 fixedPopup;
 };
 
 
@@ -3920,6 +3929,7 @@ struct BattleBarInfo
     s32 oldValue;
     s32 receivedValue;
     s32 currValue;
+ u8 oddFrame;
 };
 
 struct BattleSpriteData
@@ -4933,7 +4943,7 @@ void SetHealthboxSpriteInvisible(u8 healthboxSpriteId);
 void SetHealthboxSpriteVisible(u8 healthboxSpriteId);
 void DestoryHealthboxSprite(u8 healthboxSpriteId);
 void DummyBattleInterfaceFunc(u8 healthboxSpriteId, bool8 isDoubleBattleBankOnly);
-void UpdateOamPriorityInAllHealthboxes(u8 priority);
+void UpdateOamPriorityInAllHealthboxes(u8 priority, bool32 hideHpBoxes);
 void InitBattlerHealthboxCoords(u8 battler);
 void UpdateHpTextInHealthbox(u8 healthboxSpriteId, s16 value, u8 maxOrCurrent);
 void SwapHpBarsWithHpText(void);
@@ -4951,6 +4961,7 @@ s32 MoveBattleBar(u8 battler, u8 healthboxSpriteId, u8 whichBar, u8 arg3);
 u8 GetScaledHPFraction(s16 hp, s16 maxhp, u8 scale);
 u8 GetHPBarLevel(s16 hp, s16 maxhp);
 void CreateAbilityPopUp(u8 battlerId, u32 ability, bool32 isDoubleBattle);
+void DestroyAbilityPopUp(u8 battlerId);
 # 8 "src/battle_main.c" 2
 # 1 "include/battle_main.h" 1
 # 9 "src/battle_main.c" 2
@@ -5232,8 +5243,8 @@ extern const u8 BattleScript_SturdiedMsg[];
 extern const u8 BattleScript_GravityEnds[];
 extern const u8 BattleScript_MoveStatDrain[];
 extern const u8 BattleScript_MoveStatDrain_PPLoss[];
-extern const u8 BattleScript_TargetAbilityStatRaise[];
-extern const u8 BattleScript_AngryPointActivates[];
+extern const u8 BattleScript_TargetAbilityStatRaiseOnMoveEnd[];
+extern const u8 BattleScript_TargetsStatWasMaxedOut[];
 extern const u8 BattleScript_AttackerAbilityStatRaise[];
 extern const u8 BattleScript_AttackerAbilityStatRaiseEnd3[];
 extern const u8 BattleScript_PoisonHealActivates[];
@@ -5261,7 +5272,9 @@ extern const u8 BattleScript_ToxicSpikesFree[];
 extern const u8 BattleScript_StickyWebFree[];
 extern const u8 BattleScript_StealthRockFree[];
 extern const u8 BattleScript_MegaEvolution[];
+extern const u8 BattleScript_MegaEvolutionQ[];
 extern const u8 BattleScript_WishMegaEvolution[];
+extern const u8 BattleScript_WishMegaEvolutionQ[];
 extern const u8 BattleScript_MoveEffectRecoilWithStatus[];
 extern const u8 BattleScript_EffectWithChance[];
 extern const u8 BattleScript_MoveEffectClearSmog[];
@@ -5332,7 +5345,14 @@ extern const u8 BattleScript_EmergencyExitNoPopUp[];
 extern const u8 BattleScript_EmergencyExitWild[];
 extern const u8 BattleScript_EmergencyExitWildNoPopUp[];
 extern const u8 BattleScript_CheekPouchActivates[];
+extern const u8 BattleScript_TotemVar[];
+extern const u8 BattleScript_TotemFlaredToLife[];
 extern const u8 BattleScript_AnnounceAirLockCloudNine[];
+extern const u8 BattleScript_BattlerAbilityStatRaiseOnSwitchIn[];
+extern const u8 BattleScript_CottonDownActivates[];
+extern const u8 BattleScript_BallFetch[];
+extern const u8 BattleScript_SandSpitActivates[];
+extern const u8 BattleScript_PerishBodyActivates[];
 # 12 "src/battle_main.c" 2
 # 1 "include/battle_setup.h" 1
 
@@ -17018,7 +17038,7 @@ void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
 
-bool8 CanLearnTutorMove(u16, u8);
+bool32 CanLearnTutorMove(u16, u8);
 # 34 "src/battle_main.c" 2
 # 1 "include/pokeball.h" 1
 # 35 "src/battle_main.c" 2
@@ -17972,8 +17992,11 @@ extern const u8 gText_ChikoritaDoll80BP[];
 extern const u8 gText_TotodileDoll80BP[];
 
 extern const u8 gText_Dolls[];
-extern const u8 gText_Cushions[];
+extern const u8 gText_MatDesk[];
+extern const u8 gText_OrnaPost[];
+extern const u8 gText_ChairPlant[];
 extern const u8 gText_Contest[];
+extern const u8 gText_TMs[];
 extern const u8 gText_MegaC[];
 extern const u8 gText_MegaB[];
 extern const u8 gText_MegaA[];
@@ -18151,8 +18174,11 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Doll[];
-extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Cushion[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MatDesk[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_OrnaPost[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChairPlant[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Contest[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TM[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaC[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaB[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaA[];
@@ -20791,25 +20817,25 @@ static const s8 gUnknown_0831ACE0[] ={-32, -16, -16, -32, -32, 0, 0, 0};
 
 const u8 gTypeNames[19][6 + 1] =
 {
-    _("NORMAL"),
-    _("FIGHT"),
-    _("FLYING"),
-    _("POISON"),
-    _("GROUND"),
-    _("ROCK"),
-    _("BUG"),
-    _("GHOST"),
-    _("STEEL"),
+    _("Normal"),
+    _("Fight"),
+    _("Flying"),
+    _("Poison"),
+    _("Ground"),
+    _("Rock"),
+    _("Bug"),
+    _("Ghost"),
+    _("Steel"),
     _("???"),
-    _("FIRE"),
-    _("WATER"),
-    _("GRASS"),
-    _("ELECTR"),
-    _("PSYCHC"),
-    _("ICE"),
-    _("DRAGON"),
-    _("DARK"),
-    _("FAIRY"),
+    _("Fire"),
+    _("Water"),
+    _("Grass"),
+    _("Electr"),
+    _("Psychc"),
+    _("Ice"),
+    _("Dragon"),
+    _("Dark"),
+    _("Fairy"),
 };
 
 
@@ -20846,7 +20872,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {0x24, 20},
     {0xa, 10},
     {0x25, 4},
-    {0x26, 50},
+    {0x26, 0},
     {0x27, 10},
     {0x28, 10},
     {0x29, 12},
@@ -20870,6 +20896,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {0x2, 10},
     {0x37, 8},
     {0x23, 10},
+ {0x42, 0},
     {0xFF, 5},
 };
 
@@ -21164,7 +21191,7 @@ const u8 gAbilityNames[268][12 + 1] =
     [28] = _("Synchronize"),
     [29] = _("Clear Body"),
     [30] = _("Natural Cure"),
-    [31] = _("Lightningrod"),
+    [31] = _("LightningRod"),
     [32] = _("Serene Grace"),
     [33] = _("Swift Swim"),
     [34] = _("Chlorophyll"),
@@ -21179,7 +21206,7 @@ const u8 gAbilityNames[268][12 + 1] =
     [43] = _("Soundproof"),
     [44] = _("Rain Dish"),
     [45] = _("Sand Stream"),
-    [46] = _("PRESSURE"),
+    [46] = _("Pressure"),
     [47] = _("Thick Fat"),
     [48] = _("Early Bird"),
     [49] = _("Flame Body"),
@@ -21322,13 +21349,13 @@ const u8 gAbilityNames[268][12 + 1] =
     [186] = _("Dark Aura"),
     [187] = _("Fairy Aura"),
     [188] = _("Aura Break"),
-    [189] = _("Primordial S"),
+    [189] = _("PrimrdialSea"),
     [190] = _("DesolateLand"),
     [191] = _("Delta Stream"),
     [192] = _("Stamina"),
     [193] = _("Wimp Out"),
-    [194] = _("Emergency Ex"),
-    [195] = _("Water Compac"),
+    [194] = _("EmrgncyExit"),
+    [195] = _("WtrCmpaction"),
     [196] = _("Merciless"),
     [197] = _("Shields Down"),
     [198] = _("Stakeout"),
@@ -21344,10 +21371,10 @@ const u8 gAbilityNames[268][12 + 1] =
     [208] = _("Schooling"),
     [209] = _("Disguise"),
     [210] = _("Battle Bond"),
-    [211] = _("Power Constr"),
+    [211] = _("PwrConstruct"),
     [212] = _("Corrosion"),
     [213] = _("Comatose"),
-    [214] = _("QueenMajesty"),
+    [214] = _("QueenlyMjsty"),
     [215] = _("Innards Out"),
     [216] = _("Dancer"),
     [217] = _("Battery"),
@@ -21356,23 +21383,23 @@ const u8 gAbilityNames[268][12 + 1] =
     [220] = _("Soul-Heart"),
     [221] = _("TanglingHair"),
     [222] = _("Receiver"),
-    [223] = _("Power Of Alc"),
+    [223] = _("PwrOfAlchemy"),
     [224] = _("Beast Boost"),
     [225] = _("RKS System"),
-    [226] = _("Elec Surge"),
-    [227] = _("Psy Surge"),
+    [226] = _("ElectrSurge"),
+    [227] = _("PsychicSurge"),
     [228] = _("Misty Surge"),
     [229] = _("Grassy Surge"),
-    [230] = _("FullMetalBod"),
+    [230] = _("FullMetalBdy"),
     [231] = _("ShadowShield"),
     [232] = _("Prism Armor"),
     [233] = _("Neuroforce"),
-    [234] = _("IntrepidSwor"),
-    [235] = _("DauntlessShi"),
+    [234] = _("IntrepidSwrd"),
+    [235] = _("DauntlssShld"),
     [236] = _("Libero"),
     [237] = _("Ball Fetch"),
     [238] = _("Cotton Down"),
-    [239] = _("PropellerTai"),
+    [239] = _("PrpellerTail"),
     [240] = _("Mirror Armor"),
     [241] = _("Gulp Missile"),
     [242] = _("Stalwart"),
@@ -21387,17 +21414,17 @@ const u8 gAbilityNames[268][12 + 1] =
     [251] = _("ScreenCleane"),
     [252] = _("SteelySpirit"),
     [253] = _("Perish Body"),
-    [254] = _("WanderingSpi"),
+    [254] = _("WandrngSprit"),
     [255] = _("GorillaTacti"),
-    [256] = _("Neutralizing"),
+    [256] = _("NutrlizngGas"),
     [257] = _("Pastel Veil"),
     [258] = _("HungerSwitch"),
     [259] = _("Quick Draw"),
     [260] = _("Unseen Fist"),
-    [261] = _("CuriousMedic"),
+    [261] = _("CuriusMedcne"),
     [262] = _("Transistor"),
     [263] = _("Dragon's Maw"),
-    [264] = _("ChillingNeig"),
+    [264] = _("ChillngNeigh"),
     [265] = _("Grim Neigh"),
     [266] = _("As One"),
     [267] = _("As One"),
@@ -21674,7 +21701,7 @@ const u8 *const gAbilityDescriptionPointers[268] =
     [266] = sAsOneIceRiderDescription,
     [267] = sAsOneShadowRiderDescription,
 };
-# 386 "src/battle_main.c" 2
+# 387 "src/battle_main.c" 2
 
 static void (* const sTurnActionsFuncsTable[])(void) =
 {
@@ -24188,8 +24215,16 @@ static void BattleStartClearSetData(void)
 
     if (!(gBattleTypeFlags & (1 << 24)))
     {
-        if (!(gBattleTypeFlags & (1 << 1)) && gSaveBlock2Ptr->optionsBattleSceneOff == 1)
-            gHitMarker |= (1 << 7);
+  if (!(gBattleTypeFlags & (1 << 1)) && gSaveBlock2Ptr->optionsBattleSceneOff == 1 && !(gTrainerBattleOpponent_A == 1022))
+  {
+   u8 trainerClass = 0;
+   if (gBattleTypeFlags & ((1 << 8) | (1 << 16) | (1 << 17) | (1 << 18) | (1 << 19) | (1 << 20) | (1 << 21)))
+    trainerClass = GetFrontierOpponentClass(gTrainerBattleOpponent_A);
+   else
+    trainerClass = gTrainers[gTrainerBattleOpponent_A].trainerClass;
+   if (!(trainerClass == 0x42 || trainerClass == 0x26))
+    gHitMarker |= (1 << 7);
+  }
     }
     else if (!(gBattleTypeFlags & ((1 << 1) | (1 << 25))) && GetBattleSceneInRecordedBattle())
     {
@@ -24197,7 +24232,7 @@ static void BattleStartClearSetData(void)
     }
 
     gBattleScripting.battleStyle = gSaveBlock2Ptr->optionsBattleStyle;
- gBattleScripting.expOnCatch = (3 >= 3);
+ gBattleScripting.expOnCatch = (4 >= 3);
  gBattleScripting.monCaught = 0;
 
     gMultiHitCounter = 0;
@@ -25558,7 +25593,7 @@ u32 GetBattlerTotalSpeedStat(u8 battlerId)
 
 
     if (gBattleMons[battlerId].status1 & (1 << 6) && ability != 95)
-        speed /= (3 >= 4 ? 2 : 4);
+        speed /= (4 >= 4 ? 2 : 4);
 
     return speed;
 }
@@ -25582,7 +25617,7 @@ s8 GetMovePriority(u32 battlerId, u16 move)
     priority = gBattleMoves[move].priority;
     if (GetBattlerAbility(battlerId) == 177
         && gBattleMoves[move].type == 2
-        && (3 <= 3 || (gBattleMons[battlerId].hp == gBattleMons[battlerId].maxHP)))
+        && (4 <= 3 || (gBattleMons[battlerId].hp == gBattleMons[battlerId].maxHP)))
     {
         priority++;
     }
@@ -25853,10 +25888,18 @@ static void CheckMegaEvolutionBeforeTurn(void)
             {
                 gBattleStruct->mega.toEvolve &= ~(gBitTable[gActiveBattler]);
                 gLastUsedItem = gBattleMons[gActiveBattler].item;
-                if (gBattleStruct->mega.isWishMegaEvo == 1)
-                    BattleScriptExecute(BattleScript_WishMegaEvolution);
-                else
-                    BattleScriptExecute(BattleScript_MegaEvolution);
+                if (gBattleStruct->mega.isWishMegaEvo == 1){
+     if (gHitMarker & (1 << 7))
+      BattleScriptExecute(BattleScript_WishMegaEvolutionQ);
+     else
+      BattleScriptExecute(BattleScript_WishMegaEvolution);
+    }
+                else{
+     if (gHitMarker & (1 << 7))
+      BattleScriptExecute(BattleScript_MegaEvolutionQ);
+     else
+      BattleScriptExecute(BattleScript_MegaEvolution);
+    }
                 return;
             }
         }

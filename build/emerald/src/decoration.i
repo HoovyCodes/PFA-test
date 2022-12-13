@@ -1,6 +1,6 @@
-# 1 "src/decoration.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/decoration.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/decoration.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -15384,8 +15384,11 @@ extern const u8 gText_ChikoritaDoll80BP[];
 extern const u8 gText_TotodileDoll80BP[];
 
 extern const u8 gText_Dolls[];
-extern const u8 gText_Cushions[];
+extern const u8 gText_MatDesk[];
+extern const u8 gText_OrnaPost[];
+extern const u8 gText_ChairPlant[];
 extern const u8 gText_Contest[];
+extern const u8 gText_TMs[];
 extern const u8 gText_MegaC[];
 extern const u8 gText_MegaB[];
 extern const u8 gText_MegaA[];
@@ -15563,8 +15566,11 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Doll[];
-extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Cushion[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MatDesk[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_OrnaPost[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChairPlant[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Contest[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TM[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaC[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaB[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaA[];
@@ -18673,8 +18679,8 @@ const u8 DecorDesc_SMALL_DESK[] = _(
 
 const u8 DecorDesc_POKEMON_DESK[] = _(
     "A small desk built in\n"
-        "the shape of a POKé\n"
-        "BALL.");
+        "the shape of a Poké\n"
+        "Ball.");
 
 const u8 DecorDesc_HEAVY_DESK[] = _(
     "A large desk made\n"
@@ -18718,7 +18724,7 @@ const u8 DecorDesc_SMALL_CHAIR[] = _(
 const u8 DecorDesc_POKEMON_CHAIR[] = _(
     "A small chair built\n"
         "in the shape of a\n"
-        "POKé BALL.");
+        "Poké Ball.");
 
 const u8 DecorDesc_HEAVY_CHAIR[] = _(
     "A small chair made\n"
@@ -18858,17 +18864,17 @@ const u8 DecorDesc_SAND_ORNAMENT[] = _(
 const u8 DecorDesc_SILVER_SHIELD[] = _(
     "Awarded for 50\n"
         "straight wins at\n"
-        "the BATTLE TOWER.");
+        "the Battle Tower.");
 
 const u8 DecorDesc_GOLD_SHIELD[] = _(
     "Awarded for 100\n"
         "straight wins at\n"
-        "the BATTLE TOWER.");
+        "the Battle Tower.");
 
 const u8 DecorDesc_GLASS_ORNAMENT[] = _(
     "A glass replica of\n"
         "a famous sculpture\n"
-        "at the ART MUSEUM.");
+        "at the Art Museum.");
 
 const u8 DecorDesc_TV[] = _(
     "A small, gray-\n"
@@ -18877,12 +18883,12 @@ const u8 DecorDesc_TV[] = _(
 const u8 DecorDesc_ROUND_TV[] = _(
     "A toy TV modeled\n"
         "in the image of a\n"
-        "SEEDOT.");
+        "Seedot.");
 
 const u8 DecorDesc_CUTE_TV[] = _(
     "A toy TV modeled\n"
         "in the image of a\n"
-        "SKITTY.");
+        "Skitty.");
 
 const u8 DecorDesc_GLITTER_MAT[] = _(
     "An odd mat that\n"
@@ -18946,138 +18952,138 @@ const u8 DecorDesc_SURF_MAT[] = _(
 
 const u8 DecorDesc_THUNDER_MAT[] = _(
     "A mat designed with\n"
-        "a THUNDER image.\n"
+        "a Thunder image.\n"
         "Put items on top.");
 
 const u8 DecorDesc_FIRE_BLAST_MAT[] = _(
     "A mat designed with\n"
-        "a FIRE BLAST image.\n"
+        "a Fire Blast image.\n"
         "Put items on top.");
 
 const u8 DecorDesc_POWDER_SNOW_MAT[] = _(
-    "A mat with a POWDER\n"
-        "SNOW image design.\n"
+    "A mat with a Powder\n"
+        "Snow image design.\n"
         "Put items on top.");
 
 const u8 DecorDesc_ATTRACT_MAT[] = _(
     "A mat designed with\n"
-        "an ATTRACT image.\n"
+        "an Attract image.\n"
         "Put items on top.");
 
 const u8 DecorDesc_FISSURE_MAT[] = _(
     "A mat designed with\n"
-        "a FISSURE image.\n"
+        "a Fissure image.\n"
         "Put items on top.");
 
 const u8 DecorDesc_SPIKES_MAT[] = _(
     "A mat designed with\n"
-        "a SPIKES image.\n"
+        "a Spikes image.\n"
         "Put items on top.");
 
 const u8 DecorDesc_BALL_POSTER[] = _(
     "A small poster\n"
-        "printed with POKé\n"
-        "BALLS.");
+        "printed with Poké\n"
+        "Balls.");
 
 const u8 DecorDesc_GREEN_POSTER[] = _(
     "A small poster with\n"
-        "a TREECKO print.");
+        "a Treecko print.");
 
 const u8 DecorDesc_RED_POSTER[] = _(
     "A small poster with\n"
-        "a TORCHIC print.");
+        "a Torchic print.");
 
 const u8 DecorDesc_BLUE_POSTER[] = _(
     "A small poster with\n"
-        "a MUDKIP print.");
+        "a Mudkip print.");
 
 const u8 DecorDesc_CUTE_POSTER[] = _(
     "A small poster with\n"
-        "an AZURILL print.");
+        "an Azurill print.");
 
 const u8 DecorDesc_PIKA_POSTER[] = _(
     "A large poster with\n"
-        "a PIKACHU and\n"
-        "PICHU print.");
+        "a Pikachu and\n"
+        "Pichu print.");
 
 const u8 DecorDesc_LONG_POSTER[] = _(
     "A large poster with\n"
-        "a SEVIPER print.");
+        "a Seviper print.");
 
 const u8 DecorDesc_SEA_POSTER[] = _(
     "A large poster with\n"
-        "a RELICANTH print.");
+        "a Relicanth print.");
 
 const u8 DecorDesc_SKY_POSTER[] = _(
     "A large poster with\n"
-        "a WINGULL print.");
+        "a Wingull print.");
 
 const u8 DecorDesc_KISS_POSTER[] = _(
     "A large poster with\n"
-        "a SMOOCHUM print.");
+        "a Smoochum print.");
 
 const u8 DecorDesc_PICHU_DOLL[] = _(
-    "A PICHU doll.\n"
+    "A Pichu doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_PIKACHU_DOLL[] = _(
-    "A PIKACHU doll.\n"
+    "A Pikachu doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_MARILL_DOLL[] = _(
-    "A MARILL doll.\n"
+    "A Marill doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_TOGEPI_DOLL[] = _(
-    "A TOGEPI doll.\n"
+    "A Togepi doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_CYNDAQUIL_DOLL[] = _(
-    "A CYNDAQUIL doll.\n"
+    "A Cyndaquil doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_CHIKORITA_DOLL[] = _(
-    "A CHIKORITA doll.\n"
+    "A Chikorita doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_TOTODILE_DOLL[] = _(
-    "A TOTODILE doll.\n"
+    "A Totodile doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_JIGGLYPUFF_DOLL[] = _(
-    "A JIGGLYPUFF doll.\n"
+    "A Jigglypuff doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_MEOWTH_DOLL[] = _(
-    "A MEOWTH doll.\n"
+    "A Meowth doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_CLEFAIRY_DOLL[] = _(
-    "A CLEFAIRY doll.\n"
+    "A Clefairy doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_DITTO_DOLL[] = _(
-    "A DITTO doll.\n"
+    "A Ditto doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_SMOOCHUM_DOLL[] = _(
-    "A SMOOCHUM doll.\n"
+    "A Smoochum doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_TREECKO_DOLL[] = _(
-    "A TREECKO doll.\n"
+    "A Treecko doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
@@ -19087,92 +19093,92 @@ const u8 DecorDesc_TORCHIC_DOLL[] = _(
         "or a desk.");
 
 const u8 DecorDesc_MUDKIP_DOLL[] = _(
-    "A MUDKIP doll.\n"
+    "A Mudkip doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_DUSKULL_DOLL[] = _(
-    "A DUSKULL doll.\n"
+    "A Duskull doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_WYNAUT_DOLL[] = _(
-    "A WYNAUT doll.\n"
+    "A Wyanut doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_BALTOY_DOLL[] = _(
-    "A BALTOY doll.\n"
+    "A Baltoy doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_KECLEON_DOLL[] = _(
-    "A KECLEON doll.\n"
+    "A Kecleon doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_AZURILL_DOLL[] = _(
-    "An AZURILL doll.\n"
+    "An Azurill doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_SKITTY_DOLL[] = _(
-    "A SKITTY doll.\n"
+    "A Skitty doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_SWABLU_DOLL[] = _(
-    "A SWABLU doll.\n"
+    "A Swablu doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_GULPIN_DOLL[] = _(
-    "A GULPIN doll.\n"
+    "A Gulpin doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_LOTAD_DOLL[] = _(
-    "A LOTAD doll.\n"
+    "A Lotad doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_SEEDOT_DOLL[] = _(
-    "A SEEDOT doll.\n"
+    "A Seedot doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_PIKA_CUSHION[] = _(
-    "A PIKACHU cushion.\n"
+    "A Pikachu cushion.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_ROUND_CUSHION[] = _(
-    "A MARILL cushion.\n"
+    "A Marill cushion.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_KISS_CUSHION[] = _(
-    "A SMOOCHUM\n"
+    "A Smoochum\n"
         "cushion. Place it on\n"
         "a mat or a desk.");
 
 const u8 DecorDesc_ZIGZAG_CUSHION[] = _(
-    "A ZIGZAGOON\n"
+    "A Zigzagoon\n"
         "cushion. Place it on\n"
         "a mat or a desk.");
 
 const u8 DecorDesc_SPIN_CUSHION[] = _(
-    "A SPINDA cushion.\n"
+    "A Spinda cushion.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_DIAMOND_CUSHION[] = _(
-    "A SABLEYE cushion.\n"
+    "A Sableye cushion.\n"
         "Place it on a mat\n"
         "or a desk.");
 
 const u8 DecorDesc_BALL_CUSHION[] = _(
-    "A BALL cushion.\n"
+    "A Ball cushion.\n"
         "Place it on a mat\n"
         "or a desk.");
 
@@ -19254,7 +19260,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_SMALL_DESK
     }, {
         1,
-        _("SMALL DESK"),
+        _("Small Desk"),
         DECORPERM_SOLID_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_DESK,
@@ -19263,7 +19269,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_SMALL_DESK
     }, {
         2,
-        _("POKéMON DESK"),
+        _("Pokémon Desk"),
         DECORPERM_SOLID_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_DESK,
@@ -19272,7 +19278,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_POKEMON_DESK
     }, {
         3,
-        _("HEAVY DESK"),
+        _("Heavy Desk"),
         DECORPERM_SOLID_FLOOR,
         DECORSHAPE_3x2,
         DECORCAT_DESK,
@@ -19281,7 +19287,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_HEAVY_DESK
     }, {
         4,
-        _("RAGGED DESK"),
+        _("Ragged Desk"),
         DECORPERM_SOLID_FLOOR,
         DECORSHAPE_3x2,
         DECORCAT_DESK,
@@ -19290,7 +19296,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_RAGGED_DESK
     }, {
         5,
-        _("COMFORT DESK"),
+        _("Comfort Desk"),
         DECORPERM_SOLID_FLOOR,
         DECORSHAPE_3x2,
         DECORCAT_DESK,
@@ -19299,7 +19305,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_COMFORT_DESK
     }, {
         6,
-        _("PRETTY DESK"),
+        _("Pretty Desk"),
         DECORPERM_SOLID_FLOOR,
         DECORSHAPE_3x3,
         DECORCAT_DESK,
@@ -19308,7 +19314,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_PRETTY_DESK
     }, {
         7,
-        _("BRICK DESK"),
+        _("Brick Desk"),
         DECORPERM_SOLID_FLOOR,
         DECORSHAPE_3x3,
         DECORCAT_DESK,
@@ -19317,7 +19323,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_BRICK_DESK
     }, {
         8,
-        _("CAMP DESK"),
+        _("Camp Desk"),
         DECORPERM_SOLID_FLOOR,
         DECORSHAPE_3x3,
         DECORCAT_DESK,
@@ -19326,7 +19332,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_CAMP_DESK
     }, {
         9,
-        _("HARD DESK"),
+        _("Hard Desk"),
         DECORPERM_SOLID_FLOOR,
         DECORSHAPE_3x3,
         DECORCAT_DESK,
@@ -19335,7 +19341,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_HARD_DESK
     }, {
         10,
-        _("SMALL CHAIR"),
+        _("Small Chair"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_CHAIR,
@@ -19344,7 +19350,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_SMALL_CHAIR
     }, {
         11,
-        _("POKéMON CHAIR"),
+        _("Pokémon Chair"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_CHAIR,
@@ -19353,7 +19359,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_POKEMON_CHAIR
     }, {
         12,
-        _("HEAVY CHAIR"),
+        _("Heavy Chair"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_CHAIR,
@@ -19362,7 +19368,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_HEAVY_CHAIR
     }, {
         13,
-        _("PRETTY CHAIR"),
+        _("Pretty Chair"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_CHAIR,
@@ -19371,7 +19377,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_PRETTY_CHAIR
     }, {
         14,
-        _("COMFORT CHAIR"),
+        _("Comfort Chair"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_CHAIR,
@@ -19380,7 +19386,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_COMFORT_CHAIR
     }, {
         15,
-        _("RAGGED CHAIR"),
+        _("Ragged Chair"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_CHAIR,
@@ -19389,7 +19395,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_RAGGED_CHAIR
     }, {
         16,
-        _("BRICK CHAIR"),
+        _("Brick Chair"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_CHAIR,
@@ -19398,7 +19404,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_BRICK_CHAIR
     }, {
         17,
-        _("CAMP CHAIR"),
+        _("Camp Chair"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_CHAIR,
@@ -19407,7 +19413,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_CAMP_CHAIR
     }, {
         18,
-        _("HARD CHAIR"),
+        _("Hard Chair"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_CHAIR,
@@ -19416,7 +19422,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_HARD_CHAIR
     }, {
         19,
-        _("RED PLANT"),
+        _("Red Plant"),
         DECORPERM_BEHIND_FLOOR,
         DECORSHAPE_1x2,
         DECORCAT_PLANT,
@@ -19425,7 +19431,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_RED_PLANT
     }, {
         20,
-        _("TROPICAL PLANT"),
+        _("Tropical Plant"),
         DECORPERM_BEHIND_FLOOR,
         DECORSHAPE_1x2,
         DECORCAT_PLANT,
@@ -19434,7 +19440,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_TROPICAL_PLANT
     }, {
         21,
-        _("PRETTY FLOWERS"),
+        _("Pretty Flowers"),
         DECORPERM_BEHIND_FLOOR,
         DECORSHAPE_1x2,
         DECORCAT_PLANT,
@@ -19443,7 +19449,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_PRETTY_FLOWERS
     }, {
         22,
-        _("COLORFUL PLANT"),
+        _("Colorful Plant"),
         DECORPERM_BEHIND_FLOOR,
         DECORSHAPE_2x2,
         DECORCAT_PLANT,
@@ -19452,7 +19458,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_COLORFUL_PLANT
     }, {
         23,
-        _("BIG PLANT"),
+        _("Big Plant"),
         DECORPERM_BEHIND_FLOOR,
         DECORSHAPE_2x2,
         DECORCAT_PLANT,
@@ -19461,7 +19467,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_BIG_PLANT
     }, {
         24,
-        _("GORGEOUS PLANT"),
+        _("Gorgeous Plant"),
         DECORPERM_BEHIND_FLOOR,
         DECORSHAPE_2x2,
         DECORCAT_PLANT,
@@ -19470,7 +19476,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_GORGEOUS_PLANT
     }, {
         25,
-        _("RED BRICK"),
+        _("Red Brick"),
         DECORPERM_SOLID_FLOOR,
         DECORSHAPE_1x2,
         DECORCAT_ORNAMENT,
@@ -19479,7 +19485,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_RED_BRICK
     }, {
         26,
-        _("YELLOW BRICK"),
+        _("Yellow Brick"),
         DECORPERM_SOLID_FLOOR,
         DECORSHAPE_1x2,
         DECORCAT_ORNAMENT,
@@ -19488,7 +19494,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_YELLOW_BRICK
     }, {
         27,
-        _("BLUE BRICK"),
+        _("Blue Brick"),
         DECORPERM_SOLID_FLOOR,
         DECORSHAPE_1x2,
         DECORCAT_ORNAMENT,
@@ -19497,7 +19503,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_BLUE_BRICK
     }, {
         28,
-        _("RED BALLOON"),
+        _("Red Balloon"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_ORNAMENT,
@@ -19506,7 +19512,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_RED_BALLOON
     }, {
         29,
-        _("BLUE BALLOON"),
+        _("Blue Balloon"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_ORNAMENT,
@@ -19515,7 +19521,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_BLUE_BALLOON
     }, {
         30,
-        _("YELLOW BALLOON"),
+        _("Yellow Balloon"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_ORNAMENT,
@@ -19524,7 +19530,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_YELLOW_BALLOON
     }, {
         31,
-        _("RED TENT"),
+        _("Red Tent"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_3x3,
         DECORCAT_ORNAMENT,
@@ -19533,7 +19539,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_RED_TENT
     }, {
         32,
-        _("BLUE TENT"),
+        _("Blue Tent"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_3x3,
         DECORCAT_ORNAMENT,
@@ -19542,7 +19548,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_BLUE_TENT
     }, {
         33,
-        _("SOLID BOARD"),
+        _("Solid Board"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x2,
         DECORCAT_ORNAMENT,
@@ -19560,7 +19566,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_SLIDE
     }, {
         35,
-        _("FENCE LENGTH"),
+        _("Fence Length"),
         DECORPERM_SOLID_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_ORNAMENT,
@@ -19569,7 +19575,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_FENCE_LENGTH
     }, {
         36,
-        _("FENCE WIDTH"),
+        _("Fence Width"),
         DECORPERM_SOLID_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_ORNAMENT,
@@ -19578,7 +19584,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_FENCE_WIDTH
     }, {
         37,
-        _("TIRE"),
+        _("Tire"),
         DECORPERM_SOLID_FLOOR,
         DECORSHAPE_2x2,
         DECORCAT_ORNAMENT,
@@ -19587,7 +19593,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_TIRE
     }, {
         38,
-        _("STAND"),
+        _("Stand"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_4x2,
         DECORCAT_ORNAMENT,
@@ -19596,7 +19602,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_STAND
     }, {
         39,
-        _("MUD BALL"),
+        _("Mud Ball"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_ORNAMENT,
@@ -19605,7 +19611,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_MUD_BALL
     }, {
         40,
-        _("BREAKABLE DOOR"),
+        _("Breakable Door"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x2,
         DECORCAT_ORNAMENT,
@@ -19614,7 +19620,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_BREAKABLE_DOOR
     }, {
         41,
-        _("SAND ORNAMENT"),
+        _("Sand Ornament"),
         DECORPERM_BEHIND_FLOOR,
         DECORSHAPE_1x2,
         DECORCAT_ORNAMENT,
@@ -19623,7 +19629,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_SAND_ORNAMENT
     }, {
         42,
-        _("SILVER SHIELD"),
+        _("Silver Shield"),
         DECORPERM_BEHIND_FLOOR,
         DECORSHAPE_1x2,
         DECORCAT_ORNAMENT,
@@ -19632,7 +19638,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_SILVER_SHIELD
     }, {
         43,
-        _("GOLD SHIELD"),
+        _("Gold Shield"),
         DECORPERM_BEHIND_FLOOR,
         DECORSHAPE_1x2,
         DECORCAT_ORNAMENT,
@@ -19641,7 +19647,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_GOLD_SHIELD
     }, {
         44,
-        _("GLASS ORNAMENT"),
+        _("Glass Ornament"),
         DECORPERM_BEHIND_FLOOR,
         DECORSHAPE_1x2,
         DECORCAT_ORNAMENT,
@@ -19659,7 +19665,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_TV
     }, {
         46,
-        _("ROUND TV"),
+        _("Round TV"),
         DECORPERM_SOLID_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_ORNAMENT,
@@ -19668,7 +19674,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_ROUND_TV
     }, {
         47,
-        _("CUTE TV"),
+        _("Cute TV"),
         DECORPERM_SOLID_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_ORNAMENT,
@@ -19677,7 +19683,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_CUTE_TV
     }, {
         48,
-        _("GLITTER MAT"),
+        _("Glitter Mat"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_MAT,
@@ -19686,7 +19692,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_GLITTER_MAT
     }, {
         49,
-        _("JUMP MAT"),
+        _("Jump Mat"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_MAT,
@@ -19695,7 +19701,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_JUMP_MAT
     }, {
         50,
-        _("SPIN MAT"),
+        _("Spin Mat"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_MAT,
@@ -19704,7 +19710,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_SPIN_MAT
     }, {
         51,
-        _("C Low NOTE MAT"),
+        _("C Low Note Mat"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_MAT,
@@ -19713,7 +19719,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_C_LOW_NOTE_MAT
     }, {
         52,
-        _("D NOTE MAT"),
+        _("D Note Mat"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_MAT,
@@ -19722,7 +19728,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_D_NOTE_MAT
     }, {
         53,
-        _("E NOTE MAT"),
+        _("E Note Mat"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_MAT,
@@ -19731,7 +19737,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_E_NOTE_MAT
     }, {
         54,
-        _("F NOTE MAT"),
+        _("F Note Mat"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_MAT,
@@ -19740,7 +19746,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_F_NOTE_MAT
     }, {
         55,
-        _("G NOTE MAT"),
+        _("G Note Mat"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_MAT,
@@ -19749,7 +19755,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_G_NOTE_MAT
     }, {
         56,
-        _("A NOTE MAT"),
+        _("A Note Mat"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_MAT,
@@ -19758,7 +19764,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_A_NOTE_MAT
     }, {
         57,
-        _("B NOTE MAT"),
+        _("B Note Mat"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_MAT,
@@ -19767,7 +19773,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_B_NOTE_MAT
     }, {
         58,
-        _("C High NOTE MAT"),
+        _("C High Note Mat"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_1x1,
         DECORCAT_MAT,
@@ -19776,7 +19782,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_C_HIGH_NOTE_MAT
     }, {
         59,
-        _("SURF MAT"),
+        _("Surf Mat"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_3x3,
         DECORCAT_MAT,
@@ -19785,7 +19791,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_SURF_MAT
     }, {
         60,
-        _("THUNDER MAT"),
+        _("Thunder Mat"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_3x3,
         DECORCAT_MAT,
@@ -19794,7 +19800,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_THUNDER_MAT
     }, {
         61,
-        _("FIRE BLAST MAT"),
+        _("Fire Blast Mat"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_3x3,
         DECORCAT_MAT,
@@ -19803,7 +19809,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_FIRE_BLAST_MAT
     }, {
         62,
-        _("POWDER SNOW MAT"),
+        _("Powder Snow Mat"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_3x3,
         DECORCAT_MAT,
@@ -19812,7 +19818,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_POWDER_SNOW_MAT
     }, {
         63,
-        _("ATTRACT MAT"),
+        _("Attract Mat"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_3x3,
         DECORCAT_MAT,
@@ -19821,7 +19827,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_ATTRACT_MAT
     }, {
         64,
-        _("FISSURE MAT"),
+        _("Fissure Mat"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_3x3,
         DECORCAT_MAT,
@@ -19830,7 +19836,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_FISSURE_MAT
     }, {
         65,
-        _("SPIKES MAT"),
+        _("Spikes Mat"),
         DECORPERM_PASS_FLOOR,
         DECORSHAPE_3x3,
         DECORCAT_MAT,
@@ -19839,7 +19845,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_SPIKES_MAT
     }, {
         66,
-        _("BALL POSTER"),
+        _("Ball Poster"),
         DECORPERM_NA_WALL,
         DECORSHAPE_1x1,
         DECORCAT_POSTER,
@@ -19848,7 +19854,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_BALL_POSTER
     }, {
         67,
-        _("GREEN POSTER"),
+        _("Green Poster"),
         DECORPERM_NA_WALL,
         DECORSHAPE_1x1,
         DECORCAT_POSTER,
@@ -19857,7 +19863,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_GREEN_POSTER
     }, {
         68,
-        _("RED POSTER"),
+        _("Red Poster"),
         DECORPERM_NA_WALL,
         DECORSHAPE_1x1,
         DECORCAT_POSTER,
@@ -19866,7 +19872,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_RED_POSTER
     }, {
         69,
-        _("BLUE POSTER"),
+        _("Blue Poster"),
         DECORPERM_NA_WALL,
         DECORSHAPE_1x1,
         DECORCAT_POSTER,
@@ -19875,7 +19881,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_BLUE_POSTER
     }, {
         70,
-        _("CUTE POSTER"),
+        _("Cute Poster"),
         DECORPERM_NA_WALL,
         DECORSHAPE_1x1,
         DECORCAT_POSTER,
@@ -19884,7 +19890,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_CUTE_POSTER
     }, {
         71,
-        _("PIKA POSTER"),
+        _("Pika Poster"),
         DECORPERM_NA_WALL,
         DECORSHAPE_2x1,
         DECORCAT_POSTER,
@@ -19893,7 +19899,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_PIKA_POSTER
     }, {
         72,
-        _("LONG POSTER"),
+        _("Long Poster"),
         DECORPERM_NA_WALL,
         DECORSHAPE_2x1,
         DECORCAT_POSTER,
@@ -19902,7 +19908,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_LONG_POSTER
     }, {
         73,
-        _("SEA POSTER"),
+        _("Sea Poster"),
         DECORPERM_NA_WALL,
         DECORSHAPE_2x1,
         DECORCAT_POSTER,
@@ -19911,7 +19917,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_SEA_POSTER
     }, {
         74,
-        _("SKY POSTER"),
+        _("Sky Poster"),
         DECORPERM_NA_WALL,
         DECORSHAPE_2x1,
         DECORCAT_POSTER,
@@ -19920,7 +19926,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_SKY_POSTER
     }, {
         75,
-        _("KISS POSTER"),
+        _("Kiss Poster"),
         DECORPERM_NA_WALL,
         DECORSHAPE_2x1,
         DECORCAT_POSTER,
@@ -19929,7 +19935,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_KISS_POSTER
     }, {
         76,
-        _("PICHU DOLL"),
+        _("Pichu Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -19938,7 +19944,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_PICHU_DOLL
     }, {
         77,
-        _("PIKACHU DOLL"),
+        _("Pikachu Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -19947,7 +19953,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_PIKACHU_DOLL
     }, {
         78,
-        _("MARILL DOLL"),
+        _("Marill Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -19956,7 +19962,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_MARILL_DOLL
     }, {
         79,
-        _("TOGEPI DOLL"),
+        _("Togepi Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -19965,7 +19971,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_TOGEPI_DOLL
     }, {
         80,
-        _("CYNDAQUIL DOLL"),
+        _("Cyndaquil Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -19974,7 +19980,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_CYNDAQUIL_DOLL
     }, {
         81,
-        _("CHIKORITA DOLL"),
+        _("Chikorita Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -19983,7 +19989,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_CHIKORITA_DOLL
     }, {
         82,
-        _("TOTODILE DOLL"),
+        _("Totodile Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -19992,7 +19998,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_TOTODILE_DOLL
     }, {
         83,
-        _("JIGGLYPUFF DOLL"),
+        _("Jigglypuff Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -20001,7 +20007,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_JIGGLYPUFF_DOLL
     }, {
         84,
-        _("MEOWTH DOLL"),
+        _("Meowth Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -20010,7 +20016,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_MEOWTH_DOLL
     }, {
         85,
-        _("CLEFAIRY DOLL"),
+        _("Clefairy Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -20019,7 +20025,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_CLEFAIRY_DOLL
     }, {
         86,
-        _("DITTO DOLL"),
+        _("Ditto Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -20028,7 +20034,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_DITTO_DOLL
     }, {
         87,
-        _("SMOOCHUM DOLL"),
+        _("Smoochum Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -20037,7 +20043,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_SMOOCHUM_DOLL
     }, {
         88,
-        _("TREECKO DOLL"),
+        _("Treecko Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -20046,7 +20052,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_TREECKO_DOLL
     }, {
         89,
-        _("TORCHIC DOLL"),
+        _("Torchic Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -20055,7 +20061,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_TORCHIC_DOLL
     }, {
         90,
-        _("MUDKIP DOLL"),
+        _("Mudkip Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -20064,7 +20070,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_MUDKIP_DOLL
     }, {
         91,
-        _("DUSKULL DOLL"),
+        _("Duskull Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -20073,7 +20079,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_DUSKULL_DOLL
     }, {
         92,
-        _("WYNAUT DOLL"),
+        _("Wynaut Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -20082,7 +20088,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_WYNAUT_DOLL
     }, {
         93,
-        _("BALTOY DOLL"),
+        _("Baltoy Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -20091,7 +20097,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_BALTOY_DOLL
     }, {
         94,
-        _("KECLEON DOLL"),
+        _("Kecleon Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -20100,7 +20106,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_KECLEON_DOLL
     }, {
         95,
-        _("AZURILL DOLL"),
+        _("Azurill Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -20109,7 +20115,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_AZURILL_DOLL
     }, {
         96,
-        _("SKITTY DOLL"),
+        _("Skitty Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -20118,7 +20124,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_SKITTY_DOLL
     }, {
         97,
-        _("SWABLU DOLL"),
+        _("Swablu Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -20127,7 +20133,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_SWABLU_DOLL
     }, {
         98,
-        _("GULPIN DOLL"),
+        _("Gulpin Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -20136,7 +20142,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_GULPIN_DOLL
     }, {
         99,
-        _("LOTAD DOLL"),
+        _("Lotad Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -20145,7 +20151,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_LOTAD_DOLL
     }, {
         100,
-        _("SEEDOT DOLL"),
+        _("Seedot Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_DOLL,
@@ -20154,7 +20160,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_SEEDOT_DOLL
     }, {
         101,
-        _("PIKA CUSHION"),
+        _("Pika Cushion"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_CUSHION,
@@ -20163,7 +20169,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_PIKA_CUSHION
     }, {
         102,
-        _("ROUND CUSHION"),
+        _("Round Cushion"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_CUSHION,
@@ -20172,7 +20178,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_ROUND_CUSHION
     }, {
         103,
-        _("KISS CUSHION"),
+        _("Kiss Cushion"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_CUSHION,
@@ -20181,7 +20187,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_KISS_CUSHION
     }, {
         104,
-        _("ZIGZAG CUSHION"),
+        _("Zigzag Cushion"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_CUSHION,
@@ -20190,7 +20196,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_ZIGZAG_CUSHION
     }, {
         105,
-        _("SPIN CUSHION"),
+        _("Spin Cushion"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_CUSHION,
@@ -20199,7 +20205,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_SPIN_CUSHION
     }, {
         106,
-        _("DIAMOND CUSHION"),
+        _("Diamond Cushion"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_CUSHION,
@@ -20208,7 +20214,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_DIAMOND_CUSHION
     }, {
         107,
-        _("BALL CUSHION"),
+        _("Ball Cushion"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_CUSHION,
@@ -20217,7 +20223,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_BALL_CUSHION
     }, {
         108,
-        _("GRASS CUSHION"),
+        _("Grass Cushion"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_CUSHION,
@@ -20226,7 +20232,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_GRASS_CUSHION
     }, {
         109,
-        _("FIRE CUSHION"),
+        _("Fire Cushion"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_CUSHION,
@@ -20235,7 +20241,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_FIRE_CUSHION
     }, {
         110,
-        _("WATER CUSHION"),
+        _("Water Cushion"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x1,
         DECORCAT_CUSHION,
@@ -20244,7 +20250,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_WATER_CUSHION
     }, {
         111,
-        _("SNORLAX DOLL"),
+        _("Snorlax Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,
@@ -20253,7 +20259,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_SNORLAX_DOLL
     }, {
         112,
-        _("RHYDON DOLL"),
+        _("Rhydon Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,
@@ -20262,7 +20268,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_RHYDON_DOLL
     }, {
         113,
-        _("LAPRAS DOLL"),
+        _("Lapras Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,
@@ -20271,7 +20277,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_LAPRAS_DOLL
     }, {
         114,
-        _("VENUSAUR DOLL"),
+        _("Venusaur Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,
@@ -20280,7 +20286,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_VENUSAUR_DOLL
     }, {
         115,
-        _("CHARIZARD DOLL"),
+        _("Charizard Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,
@@ -20289,7 +20295,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_CHARIZARD_DOLL
     }, {
         116,
-        _("BLASTOISE DOLL"),
+        _("Blastoise Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,
@@ -20298,7 +20304,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_BLASTOISE_DOLL
     }, {
         117,
-        _("WAILMER DOLL"),
+        _("Wailmer Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,
@@ -20307,7 +20313,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_WAILMER_DOLL
     }, {
         118,
-        _("REGIROCK DOLL"),
+        _("Regirock Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,
@@ -20316,7 +20322,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_REGIROCK_DOLL
     }, {
         119,
-        _("REGICE DOLL"),
+        _("Regice Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,
@@ -20325,7 +20331,7 @@ const struct Decoration gDecorations[] = {
         DecorGfx_REGICE_DOLL
     }, {
         120,
-        _("REGISTEEL DOLL"),
+        _("Registeel Doll"),
         DECORPERM_SPRITE,
         DECORSHAPE_1x2,
         DECORCAT_DOLL,

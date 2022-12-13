@@ -1371,7 +1371,7 @@ static void Task_NewGameBirchSpeechSub_InitPokeBall(u8 taskId)
     u8 spriteId = gTasks[sBirchSpeechMainTaskId].tLotadSpriteId;
 
     gSprites[spriteId].pos1.x = 100;
-    gSprites[spriteId].pos1.y = 75;
+    gSprites[spriteId].pos1.y = 65;
     gSprites[spriteId].invisible = FALSE;
     gSprites[spriteId].data[0] = 0;
 
@@ -1675,7 +1675,7 @@ static void Task_NewGameBirchSpeech_ReshowBirchLotad(u8 taskId)
         gSprites[spriteId].oam.objMode = ST_OAM_OBJ_BLEND;
         spriteId = gTasks[taskId].tLotadSpriteId;
         gSprites[spriteId].pos1.x = 100;
-        gSprites[spriteId].pos1.y = 75;
+        gSprites[spriteId].pos1.y = 65;
         gSprites[spriteId].invisible = FALSE;
         gSprites[spriteId].oam.objMode = ST_OAM_OBJ_BLEND;
         NewGameBirchSpeech_StartFadeInTarget1OutTarget2(taskId, 2);
@@ -1882,7 +1882,7 @@ static void SpriteCB_MovePlayerDownWhileShrinking(struct Sprite *sprite)
 
 static u8 NewGameBirchSpeech_CreateLotadSprite(u8 a, u8 b)
 {
-    return CreatePicSprite2(SPECIES_LOTAD, SHINY_ODDS, 0, 1, a, b, 14, -1);
+    return CreatePicSprite2(SPECIES_BISHARP, SHINY_ODDS, 0, 1, a, b, 14, -1);
 }
 
 static void AddBirchSpeechObjects(u8 taskId)
@@ -2166,34 +2166,29 @@ static void MainMenu_FormatSavegamePokedex(void)
 {
     u8 str[0x20];
     u16 dexCount;
-
-    if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
-    {
-        if (IsNationalPokedexEnabled())
-            dexCount = GetNationalPokedexCount(FLAG_GET_CAUGHT);
-        else
-            dexCount = GetHoennPokedexCount(FLAG_GET_CAUGHT);
-        StringExpandPlaceholders(gStringVar4, gText_ContinueMenuPokedex);
-        AddTextPrinterParameterized3(2, 1, 0, 33, sTextColor_MenuInfo, -1, gStringVar4);
-        ConvertIntToDecimalStringN(str, dexCount, STR_CONV_MODE_LEFT_ALIGN, 3);
-        AddTextPrinterParameterized3(2, 1, GetStringRightAlignXOffset(1, str, 100), 33, sTextColor_MenuInfo, -1, str);
-    }
+	
+    dexCount = gSaveBlock2Ptr->frontier.battlePoints;
+    StringExpandPlaceholders(gStringVar4, gText_ContinueMenuPokedex);
+    AddTextPrinterParameterized3(2, 1, 0, 33, sTextColor_MenuInfo, -1, gStringVar4);
+    ConvertIntToDecimalStringN(str, dexCount, STR_CONV_MODE_LEFT_ALIGN, 3);
+    AddTextPrinterParameterized3(2, 1, GetStringRightAlignXOffset(1, str, 100), 33, sTextColor_MenuInfo, -1, str);
+    
 }
 
 static void MainMenu_FormatSavegameBadges(void)
 {
     u8 str[0x20];
-    u8 badgeCount = 0;
+    u16 badgeCount = 0;
     u32 i;
-
-    for (i = FLAG_BADGE01_GET; i < FLAG_BADGE01_GET + NUM_BADGES; i++)
+	
+    for (i = FLAG_SYS_TOWER_SILVER; i < FLAG_SYS_TOWER_SILVER + NUM_SYMBOLS; i++)
     {
         if (FlagGet(i))
             badgeCount++;
     }
     StringExpandPlaceholders(gStringVar4, gText_ContinueMenuBadges);
     AddTextPrinterParameterized3(2, 1, 0x6C, 33, sTextColor_MenuInfo, -1, gStringVar4);
-    ConvertIntToDecimalStringN(str, badgeCount, STR_CONV_MODE_LEADING_ZEROS, 1);
+    ConvertIntToDecimalStringN(str, badgeCount, STR_CONV_MODE_LEFT_ALIGN, 3);
     AddTextPrinterParameterized3(2, 1, GetStringRightAlignXOffset(1, str, 0xD0), 33, sTextColor_MenuInfo, -1, str);
 }
 

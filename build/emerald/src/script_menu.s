@@ -3731,6 +3731,6067 @@ ScriptMenu_AdjustLeftCoordFromWidth:
 	bx	r1
 .Lfe31:
 	.size	 ScriptMenu_AdjustLeftCoordFromWidth,.Lfe31-ScriptMenu_AdjustLeftCoordFromWidth
+	.section .rodata
+	.type	 sText_HP,object
+sText_HP:
+	.byte	0xc2
+	.byte	0xca
+	.byte	0xff
+	.size	 sText_HP,3
+	.type	 sText_Attack,object
+sText_Attack:
+	.byte	0xbb
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_Attack,7
+	.type	 sText_Defense,object
+sText_Defense:
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Defense,8
+	.type	 sText_Speed,object
+sText_Speed:
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_Speed,6
+	.type	 sText_SpAttack,object
+sText_SpAttack:
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xad
+	.byte	0x0
+	.byte	0xbb
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_SpAttack,11
+	.type	 sText_SpDefense,object
+sText_SpDefense:
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xad
+	.byte	0x0
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_SpDefense,12
+	.type	 sText_Lonely,object
+sText_Lonely:
+	.byte	0xc6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xed
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xbb
+	.byte	0xe8
+	.byte	0xdf
+	.byte	0xba
+	.byte	0xae
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xff
+	.size	 sText_Lonely,17
+	.type	 sText_Adamant,object
+sText_Adamant:
+	.byte	0xbb
+	.byte	0xd8
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xbb
+	.byte	0xe8
+	.byte	0xdf
+	.byte	0xba
+	.byte	0xae
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xad
+	.byte	0xbb
+	.byte	0xe8
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_Adamant,21
+	.type	 sText_Naughty,object
+sText_Naughty:
+	.byte	0xc8
+	.byte	0xd5
+	.byte	0xe9
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe8
+	.byte	0xed
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xbb
+	.byte	0xe8
+	.byte	0xdf
+	.byte	0xba
+	.byte	0xae
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xad
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xff
+	.size	 sText_Naughty,21
+	.type	 sText_Brave,object
+sText_Brave:
+	.byte	0xbc
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xbb
+	.byte	0xe8
+	.byte	0xdf
+	.byte	0xba
+	.byte	0xae
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_Brave,16
+	.type	 sText_Bold,object
+sText_Bold:
+	.byte	0xbc
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd8
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xba
+	.byte	0xae
+	.byte	0xbb
+	.byte	0xe8
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_Bold,15
+	.type	 sText_Impish,object
+sText_Impish:
+	.byte	0xc3
+	.byte	0xe1
+	.byte	0xe4
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xba
+	.byte	0xae
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xad
+	.byte	0xbb
+	.byte	0xe8
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_Impish,20
+	.type	 sText_Lax,object
+sText_Lax:
+	.byte	0xc6
+	.byte	0xd5
+	.byte	0xec
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xba
+	.byte	0xae
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xad
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xff
+	.size	 sText_Lax,17
+	.type	 sText_Relaxed,object
+sText_Relaxed:
+	.byte	0xcc
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xec
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xba
+	.byte	0xae
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_Relaxed,18
+	.type	 sText_Modest,object
+sText_Modest:
+	.byte	0xc7
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xad
+	.byte	0xbb
+	.byte	0xe8
+	.byte	0xdf
+	.byte	0xba
+	.byte	0xae
+	.byte	0xbb
+	.byte	0xe8
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_Modest,20
+	.type	 sText_Mild,object
+sText_Mild:
+	.byte	0xc7
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xd8
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xad
+	.byte	0xbb
+	.byte	0xe8
+	.byte	0xdf
+	.byte	0xba
+	.byte	0xae
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xff
+	.size	 sText_Mild,18
+	.type	 sText_Rash,object
+sText_Rash:
+	.byte	0xcc
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xad
+	.byte	0xbb
+	.byte	0xe8
+	.byte	0xdf
+	.byte	0xba
+	.byte	0xae
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xad
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xff
+	.size	 sText_Rash,21
+	.type	 sText_Quiet,object
+sText_Quiet:
+	.byte	0xcb
+	.byte	0xe9
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xad
+	.byte	0xbb
+	.byte	0xe8
+	.byte	0xdf
+	.byte	0xba
+	.byte	0xae
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_Quiet,19
+	.type	 sText_Calm,object
+sText_Calm:
+	.byte	0xbd
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe1
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xad
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xba
+	.byte	0xae
+	.byte	0xbb
+	.byte	0xe8
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_Calm,18
+	.type	 sText_Gentle,object
+sText_Gentle:
+	.byte	0xc1
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xad
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xba
+	.byte	0xae
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xff
+	.size	 sText_Gentle,20
+	.type	 sText_Careful,object
+sText_Careful:
+	.byte	0xbd
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xad
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xba
+	.byte	0xae
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xad
+	.byte	0xbb
+	.byte	0xe8
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_Careful,24
+	.type	 sText_Sassy,object
+sText_Sassy:
+	.byte	0xcd
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xed
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xad
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xba
+	.byte	0xae
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_Sassy,19
+	.type	 sText_Timid,object
+sText_Timid:
+	.byte	0xce
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xd8
+	.byte	0xba
+	.byte	0xae
+	.byte	0xbb
+	.byte	0xe8
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_Timid,16
+	.type	 sText_Hasty,object
+sText_Hasty:
+	.byte	0xc2
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xed
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xd8
+	.byte	0xba
+	.byte	0xae
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xff
+	.size	 sText_Hasty,16
+	.type	 sText_Jolly,object
+sText_Jolly:
+	.byte	0xc4
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xed
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xd8
+	.byte	0xba
+	.byte	0xae
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xad
+	.byte	0xbb
+	.byte	0xe8
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_Jolly,19
+	.type	 sText_Naive,object
+sText_Naive:
+	.byte	0xc8
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0x2e
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xd8
+	.byte	0xba
+	.byte	0xae
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xad
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xff
+	.size	 sText_Naive,19
+	.type	 sText_DCN,object
+sText_DCN:
+	.byte	0xbe
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xbd
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xc8
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_DCN,20
+	.type	 sText_25toBP,object
+sText_25toBP:
+	.byte	0xa3
+	.byte	0xa6
+	.byte	0x0
+	.byte	0xbd
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0x0
+	.byte	0x0
+	.byte	0x0
+	.byte	0x0
+	.byte	0x0
+	.byte	0x0
+	.byte	0x0
+	.byte	0x0
+	.byte	0xa2
+	.byte	0x0
+	.byte	0xbc
+	.byte	0xca
+	.byte	0xff
+	.size	 sText_25toBP,21
+	.type	 sText_250toBP,object
+sText_250toBP:
+	.byte	0xa3
+	.byte	0xa6
+	.byte	0xa1
+	.byte	0x0
+	.byte	0xbd
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0x0
+	.byte	0x0
+	.byte	0x0
+	.byte	0x0
+	.byte	0x0
+	.byte	0x0
+	.byte	0x0
+	.byte	0xa2
+	.byte	0xa1
+	.byte	0xbc
+	.byte	0xca
+	.byte	0xff
+	.size	 sText_250toBP,21
+	.type	 sText_Cancel,object
+sText_Cancel:
+	.byte	0xbd
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xff
+	.size	 sText_Cancel,7
+	.type	 sText_NU1,object
+sText_NU1:
+	.byte	0xbb
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xff
+	.size	 sText_NU1,10
+	.type	 sText_NU2,object
+sText_NU2:
+	.byte	0xbb
+	.byte	0xd7
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_NU2,9
+	.type	 sText_NU3,object
+sText_NU3:
+	.byte	0xbb
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xe8
+	.byte	0xed
+	.byte	0xe0
+	.byte	0xff
+	.size	 sText_NU3,11
+	.type	 sText_NU4,object
+sText_NU4:
+	.byte	0xbb
+	.byte	0xe1
+	.byte	0xd6
+	.byte	0xdd
+	.byte	0xe4
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xff
+	.size	 sText_NU4,8
+	.type	 sText_NU5,object
+sText_NU5:
+	.byte	0xbb
+	.byte	0xe9
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xff
+	.size	 sText_NU5,7
+	.type	 sText_NU6,object
+sText_NU6:
+	.byte	0xbc
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_NU6,10
+	.type	 sText_NU7,object
+sText_NU7:
+	.byte	0xbc
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xed
+	.byte	0xff
+	.size	 sText_NU7,9
+	.type	 sText_NU8,object
+sText_NU8:
+	.byte	0xbd
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xeb
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xee
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_NU8,10
+	.type	 sText_NU9,object
+sText_NU9:
+	.byte	0xbd
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xed
+	.byte	0xff
+	.size	 sText_NU9,7
+	.type	 sText_NU10,object
+sText_NU10:
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0xe9
+	.byte	0xd9
+	.byte	0xed
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_NU10,10
+	.type	 sText_NU11,object
+sText_NU11:
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xe4
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xec
+	.byte	0xff
+	.size	 sText_NU11,8
+	.type	 sText_NU12,object
+sText_NU12:
+	.byte	0xbe
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_NU12,9
+	.type	 sText_NU13,object
+sText_NU13:
+	.byte	0xbe
+	.byte	0xe6
+	.byte	0xe9
+	.byte	0xd8
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_NU13,10
+	.type	 sText_NU14,object
+sText_NU14:
+	.byte	0xbb
+	.byte	0xad
+	.byte	0x0
+	.byte	0xbf
+	.byte	0xec
+	.byte	0xd9
+	.byte	0xdb
+	.byte	0xdb
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xff
+	.size	 sText_NU14,14
+	.type	 sText_NU15,object
+sText_NU15:
+	.byte	0xc1
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_NU15,9
+	.type	 sText_NU16,object
+sText_NU16:
+	.byte	0xc1
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_NU16,7
+	.type	 sText_NU17,object
+sText_NU17:
+	.byte	0xc2
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xed
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_NU17,9
+	.type	 sText_NU18,object
+sText_NU18:
+	.byte	0xc2
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_NU18,10
+	.type	 sText_NU19,object
+sText_NU19:
+	.byte	0xc2
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_NU19,10
+	.type	 sText_NU20,object
+sText_NU20:
+	.byte	0xc2
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe4
+	.byte	0xff
+	.size	 sText_NU20,10
+	.type	 sText_NU21,object
+sText_NU21:
+	.byte	0xc3
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_NU21,11
+	.type	 sText_NU22,object
+sText_NU22:
+	.byte	0xc5
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdf
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xff
+	.size	 sText_NU22,10
+	.type	 sText_NU23,object
+sText_NU23:
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_NU23,10
+	.type	 sText_NU24,object
+sText_NU24:
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_NU24,8
+	.type	 sText_NU25,object
+sText_NU25:
+	.byte	0xc7
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xff
+	.size	 sText_NU25,9
+	.type	 sText_NU26,object
+sText_NU26:
+	.byte	0xbd
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xee
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_NU26,10
+	.type	 sText_NU27,object
+sText_NU27:
+	.byte	0xc7
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_NU27,8
+	.type	 sText_NU28,object
+sText_NU28:
+	.byte	0xc7
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_NU28,7
+	.type	 sText_NU29,object
+sText_NU29:
+	.byte	0xc7
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_NU29,10
+	.type	 sText_NU30,object
+sText_NU30:
+	.byte	0xca
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_NU30,10
+	.type	 sText_NU31,object
+sText_NU31:
+	.byte	0xca
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xff
+	.size	 sText_NU31,8
+	.type	 sText_NU32,object
+sText_NU32:
+	.byte	0xca
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_NU32,10
+	.type	 sText_NU33,object
+sText_NU33:
+	.byte	0xcc
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xff
+	.size	 sText_NU33,6
+	.type	 sText_NU34,object
+sText_NU34:
+	.byte	0xcd
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_NU34,9
+	.type	 sText_NU35,object
+sText_NU35:
+	.byte	0xcd
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xe4
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_NU35,9
+	.type	 sText_NU36,object
+sText_NU36:
+	.byte	0xcd
+	.byte	0xd7
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xda
+	.byte	0xe8
+	.byte	0xed
+	.byte	0xff
+	.size	 sText_NU36,8
+	.type	 sText_NU37,object
+sText_NU37:
+	.byte	0xcd
+	.byte	0xd9
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_NU37,11
+	.type	 sText_NU38,object
+sText_NU38:
+	.byte	0xcd
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xed
+	.byte	0xe4
+	.byte	0xdc
+	.byte	0xff
+	.size	 sText_NU38,9
+	.type	 sText_NU39,object
+sText_NU39:
+	.byte	0xcd
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xdf
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xff
+	.size	 sText_NU39,9
+	.type	 sText_NU40,object
+sText_NU40:
+	.byte	0xcd
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xec
+	.byte	0xff
+	.size	 sText_NU40,8
+	.type	 sText_NU41,object
+sText_NU41:
+	.byte	0xce
+	.byte	0xe3
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe9
+	.byte	0xff
+	.size	 sText_NU41,11
+	.type	 sText_NU42,object
+sText_NU42:
+	.byte	0xce
+	.byte	0xed
+	.byte	0xe4
+	.byte	0xdc
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_NU42,11
+	.type	 sText_NU43,object
+sText_NU43:
+	.byte	0xd0
+	.byte	0xd5
+	.byte	0xe4
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_NU43,9
+	.type	 sText_NU44,object
+sText_NU44:
+	.byte	0xd0
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_NU44,9
+	.type	 sText_NU45,object
+sText_NU45:
+	.byte	0xd0
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_NU45,9
+	.type	 sText_NU46,object
+sText_NU46:
+	.byte	0xd1
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xee
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xff
+	.size	 sText_NU46,8
+	.type	 sText_NU47,object
+sText_NU47:
+	.byte	0xd1
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_NU47,11
+	.type	 sText_NU48,object
+sText_NU48:
+	.byte	0xd2
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xff
+	.size	 sText_NU48,5
+	.type	 sText_NU49,object
+sText_NU49:
+	.byte	0xbc
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_NU49,11
+	.type	 sText_NU50,object
+sText_NU50:
+	.byte	0xbc
+	.byte	0xe6
+	.byte	0xe9
+	.byte	0xec
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xff
+	.size	 sText_NU50,8
+	.type	 sText_NU51,object
+sText_NU51:
+	.byte	0xbd
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe9
+	.byte	0xe4
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_NU51,9
+	.type	 sText_NU52,object
+sText_NU52:
+	.byte	0xbd
+	.byte	0xe3
+	.byte	0xda
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_NU52,11
+	.type	 sText_NU53,object
+sText_NU53:
+	.byte	0xbf
+	.byte	0xe1
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_NU53,7
+	.type	 sText_NU54,object
+sText_NU54:
+	.byte	0xbf
+	.byte	0xec
+	.byte	0xe4
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_NU54,8
+	.type	 sText_NU55,object
+sText_NU55:
+	.byte	0xc5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xd8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_NU55,8
+	.type	 sText_NU56,object
+sText_NU56:
+	.byte	0xcd
+	.byte	0xe0
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe4
+	.byte	0xe9
+	.byte	0xda
+	.byte	0xda
+	.byte	0xff
+	.size	 sText_NU56,9
+	.type	 sText_NU57,object
+sText_NU57:
+	.byte	0xd0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xe9
+	.byte	0xec
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_NU57,10
+	.type	 sText_NU58,object
+sText_NU58:
+	.byte	0xd0
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe4
+	.byte	0xe0
+	.byte	0xe9
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_NU58,10
+	.type	 sText_NU59,object
+sText_NU59:
+	.byte	0xbb
+	.byte	0xe6
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe3
+	.byte	0xe4
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_NU59,9
+	.type	 sText_NU60,object
+sText_NU60:
+	.byte	0xbb
+	.byte	0xd6
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xff
+	.size	 sText_NU60,6
+	.type	 sText_NU61,object
+sText_NU61:
+	.byte	0xbb
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_NU61,11
+	.type	 sText_NU62,object
+sText_NU62:
+	.byte	0xbb
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_NU62,8
+	.type	 sText_NU63,object
+sText_NU63:
+	.byte	0xbd
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xd7
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xff
+	.size	 sText_NU63,9
+	.type	 sText_NU64,object
+sText_NU64:
+	.byte	0xc1
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_NU64,8
+	.type	 sText_NU65,object
+sText_NU65:
+	.byte	0xc1
+	.byte	0xe9
+	.byte	0xee
+	.byte	0xee
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_NU65,9
+	.type	 sText_NU66,object
+sText_NU66:
+	.byte	0xc5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_NU66,8
+	.type	 sText_NU67,object
+sText_NU67:
+	.byte	0xc6
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_NU67,10
+	.type	 sText_NU68,object
+sText_NU68:
+	.byte	0xca
+	.byte	0xed
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_NU68,7
+	.type	 sText_NU69,object
+sText_NU69:
+	.byte	0xca
+	.byte	0xed
+	.byte	0xe9
+	.byte	0xdf
+	.byte	0xe9
+	.byte	0xe1
+	.byte	0xe9
+	.byte	0xdf
+	.byte	0xe9
+	.byte	0xff
+	.size	 sText_NU69,10
+	.type	 sText_NU70,object
+sText_NU70:
+	.byte	0xcc
+	.byte	0xd9
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_NU70,9
+	.type	 sText_NU71,object
+sText_NU71:
+	.byte	0xcd
+	.byte	0xd5
+	.byte	0xeb
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_NU71,5
+	.type	 sText_NU72,object
+sText_NU72:
+	.byte	0xce
+	.byte	0xd5
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_NU72,7
+	.type	 sText_NU73,object
+sText_NU73:
+	.byte	0xcd
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xea
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xed
+	.byte	0xff
+	.size	 sText_NU73,9
+	.type	 sText_NU74,object
+sText_NU74:
+	.byte	0xc7
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe4
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_NU74,8
+	.type	 sText_RU1,object
+sText_RU1:
+	.byte	0xbb
+	.byte	0xe1
+	.byte	0xe4
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_RU1,9
+	.type	 sText_RU2,object
+sText_RU2:
+	.byte	0xbb
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe5
+	.byte	0xe9
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_RU2,10
+	.type	 sText_RU3,object
+sText_RU3:
+	.byte	0xbb
+	.byte	0xe6
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_RU3,9
+	.type	 sText_RU4,object
+sText_RU4:
+	.byte	0xbc
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_RU4,8
+	.type	 sText_RU5,object
+sText_RU5:
+	.byte	0xbc
+	.byte	0xd9
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_RU5,7
+	.type	 sText_RU6,object
+sText_RU6:
+	.byte	0xbc
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xee
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xff
+	.size	 sText_RU6,9
+	.type	 sText_RU7,object
+sText_RU7:
+	.byte	0xbd
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xed
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_RU7,9
+	.type	 sText_RU8,object
+sText_RU8:
+	.byte	0xbe
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe4
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_RU8,8
+	.type	 sText_RU9,object
+sText_RU9:
+	.byte	0xbe
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_RU9,9
+	.type	 sText_RU10,object
+sText_RU10:
+	.byte	0xbe
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe4
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_RU10,8
+	.type	 sText_RU11,object
+sText_RU11:
+	.byte	0xbf
+	.byte	0xe7
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_RU11,11
+	.type	 sText_RU12,object
+sText_RU12:
+	.byte	0xbf
+	.byte	0xe7
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_RU12,7
+	.type	 sText_RU13,object
+sText_RU13:
+	.byte	0xc0
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_RU13,8
+	.type	 sText_RU14,object
+sText_RU14:
+	.byte	0xc0
+	.byte	0xe0
+	.byte	0xed
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_RU14,7
+	.type	 sText_RU15,object
+sText_RU15:
+	.byte	0xc0
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_RU15,11
+	.type	 sText_RU16,object
+sText_RU16:
+	.byte	0xc1
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xea
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_RU16,11
+	.type	 sText_RU17,object
+sText_RU17:
+	.byte	0xcd
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_RU17,8
+	.type	 sText_RU18,object
+sText_RU18:
+	.byte	0xc1
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xff
+	.size	 sText_RU18,9
+	.type	 sText_RU19,object
+sText_RU19:
+	.byte	0xc1
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0xe4
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_RU19,10
+	.type	 sText_RU20,object
+sText_RU20:
+	.byte	0xc1
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_RU20,7
+	.type	 sText_RU21,object
+sText_RU21:
+	.byte	0xc2
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xdf
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xff
+	.size	 sText_RU21,10
+	.type	 sText_RU22,object
+sText_RU22:
+	.byte	0xc4
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_RU22,8
+	.type	 sText_RU23,object
+sText_RU23:
+	.byte	0xc6
+	.byte	0xed
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xd7
+	.byte	0x0
+	.byte	0x5c
+	.byte	0xbe
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xdf
+	.byte	0x5d
+	.byte	0xff
+	.size	 sText_RU23,16
+	.type	 sText_RU24,object
+sText_RU24:
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xe4
+	.byte	0xff
+	.size	 sText_RU24,8
+	.type	 sText_RU25,object
+sText_RU25:
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xd6
+	.byte	0xe9
+	.byte	0xee
+	.byte	0xee
+	.byte	0xff
+	.size	 sText_RU25,10
+	.type	 sText_RU26,object
+sText_RU26:
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_RU26,8
+	.type	 sText_RU27,object
+sText_RU27:
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0x0
+	.byte	0x5c
+	.byte	0xbb
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0x5d
+	.byte	0xff
+	.size	 sText_RU27,17
+	.type	 sText_RU28,object
+sText_RU28:
+	.byte	0xc7
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_RU28,10
+	.type	 sText_RU29,object
+sText_RU29:
+	.byte	0xc7
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xff
+	.size	 sText_RU29,8
+	.type	 sText_RU30,object
+sText_RU30:
+	.byte	0xc8
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe5
+	.byte	0xe9
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_RU30,10
+	.type	 sText_RU31,object
+sText_RU31:
+	.byte	0xc8
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_RU31,10
+	.type	 sText_RU32,object
+sText_RU32:
+	.byte	0xc8
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_RU32,8
+	.type	 sText_RU33,object
+sText_RU33:
+	.byte	0xcc
+	.byte	0xdc
+	.byte	0xed
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_RU33,10
+	.type	 sText_RU34,object
+sText_RU34:
+	.byte	0xcc
+	.byte	0xdd
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_RU34,9
+	.type	 sText_RU35,object
+sText_RU35:
+	.byte	0xcc
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_RU35,9
+	.type	 sText_RU36,object
+sText_RU36:
+	.byte	0xcc
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0x0
+	.byte	0x5c
+	.byte	0xc7
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0x5d
+	.byte	0xff
+	.size	 sText_RU36,12
+	.type	 sText_RU37,object
+sText_RU37:
+	.byte	0xcd
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xee
+	.byte	0xee
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_RU37,9
+	.type	 sText_RU38,object
+sText_RU38:
+	.byte	0xbe
+	.byte	0xcf
+	.byte	0xc7
+	.byte	0xc7
+	.byte	0xd3
+	.byte	0xff
+	.size	 sText_RU38,6
+	.type	 sText_RU39,object
+sText_RU39:
+	.byte	0xcd
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd6
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xff
+	.size	 sText_RU39,8
+	.type	 sText_RU40,object
+sText_RU40:
+	.byte	0xcd
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xec
+	.byte	0xff
+	.size	 sText_RU40,8
+	.type	 sText_RU41,object
+sText_RU41:
+	.byte	0xcd
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xff
+	.size	 sText_RU41,8
+	.type	 sText_RU42,object
+sText_RU42:
+	.byte	0xce
+	.byte	0xe3
+	.byte	0xec
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_RU42,10
+	.type	 sText_RU43,object
+sText_RU43:
+	.byte	0xce
+	.byte	0xe7
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_RU43,9
+	.type	 sText_RU44,object
+sText_RU44:
+	.byte	0xce
+	.byte	0xed
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xe9
+	.byte	0xe1
+	.byte	0xff
+	.size	 sText_RU44,10
+	.type	 sText_RU45,object
+sText_RU45:
+	.byte	0xcf
+	.byte	0xe1
+	.byte	0xd6
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_RU45,8
+	.type	 sText_RU46,object
+sText_RU46:
+	.byte	0xd0
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xd5
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_RU46,9
+	.type	 sText_RU47,object
+sText_RU47:
+	.byte	0xd3
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xdb
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_RU47,8
+	.type	 sText_RU48,object
+sText_RU48:
+	.byte	0xce
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_RU48,9
+	.type	 sText_RU49,object
+sText_RU49:
+	.byte	0xbe
+	.byte	0xcf
+	.byte	0xc7
+	.byte	0xc7
+	.byte	0xd3
+	.byte	0xff
+	.size	 sText_RU49,6
+	.type	 sText_RU50,object
+sText_RU50:
+	.byte	0xbe
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_RU50,11
+	.type	 sText_RU51,object
+sText_RU51:
+	.byte	0xbe
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_RU51,7
+	.type	 sText_RU52,object
+sText_RU52:
+	.byte	0xc2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_RU52,10
+	.type	 sText_RU53,object
+sText_RU53:
+	.byte	0xc2
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xff
+	.size	 sText_RU53,9
+	.type	 sText_RU54,object
+sText_RU54:
+	.byte	0xc6
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_RU54,8
+	.type	 sText_RU55,object
+sText_RU55:
+	.byte	0xc7
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe3
+	.byte	0xff
+	.size	 sText_RU55,9
+	.type	 sText_RU56,object
+sText_RU56:
+	.byte	0xcc
+	.byte	0xd9
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xe0
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_RU56,10
+	.type	 sText_RU57,object
+sText_RU57:
+	.byte	0xcd
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xff
+	.size	 sText_RU57,9
+	.type	 sText_RU58,object
+sText_RU58:
+	.byte	0xce
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xda
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_RU58,11
+	.type	 sText_RU59,object
+sText_RU59:
+	.byte	0xd0
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xff
+	.size	 sText_RU59,9
+	.type	 sText_RU60,object
+sText_RU60:
+	.byte	0xd4
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_RU60,8
+	.type	 sText_RU61,object
+sText_RU61:
+	.byte	0xbd
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_RU61,10
+	.type	 sText_RU62,object
+sText_RU62:
+	.byte	0xbe
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_RU62,8
+	.type	 sText_RU63,object
+sText_RU63:
+	.byte	0xc1
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_RU63,10
+	.type	 sText_RU64,object
+sText_RU64:
+	.byte	0xc2
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe4
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_RU64,6
+	.type	 sText_RU65,object
+sText_RU65:
+	.byte	0xc8
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xee
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_RU65,9
+	.type	 sText_RU66,object
+sText_RU66:
+	.byte	0xcc
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xff
+	.size	 sText_RU66,7
+	.type	 sText_RU67,object
+sText_RU67:
+	.byte	0xcc
+	.byte	0xd9
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xff
+	.size	 sText_RU67,10
+	.type	 sText_RU68,object
+sText_RU68:
+	.byte	0xcf
+	.byte	0xec
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_RU68,5
+	.type	 sText_RU69,object
+sText_RU69:
+	.byte	0xd0
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xee
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_RU69,9
+	.type	 sText_RU70,object
+sText_RU70:
+	.byte	0xd4
+	.byte	0xed
+	.byte	0xdb
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xa2
+	.byte	0xa1
+	.byte	0x5b
+	.byte	0xff
+	.size	 sText_RU70,12
+	.type	 sText_RU71,object
+sText_RU71:
+	.byte	0xc5
+	.byte	0xed
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xff
+	.size	 sText_RU71,7
+	.type	 sText_RU72,object
+sText_RU72:
+	.byte	0xc7
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_RU72,9
+	.type	 sText_RU73,object
+sText_RU73:
+	.byte	0xcd
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_RU73,10
+	.type	 sText_RU74,object
+sText_RU74:
+	.byte	0xce
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_RU74,9
+	.type	 sText_RU75,object
+sText_RU75:
+	.byte	0xbf
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xdd
+	.byte	0xff
+	.size	 sText_RU75,6
+	.type	 sText_UU1,object
+sText_UU1:
+	.byte	0xbb
+	.byte	0xdb
+	.byte	0xdb
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_UU1,7
+	.type	 sText_UU2,object
+sText_UU2:
+	.byte	0xbb
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_UU2,10
+	.type	 sText_UU3,object
+sText_UU3:
+	.byte	0xbb
+	.byte	0xe0
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_UU3,8
+	.type	 sText_UU4,object
+sText_UU4:
+	.byte	0xbb
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_UU4,10
+	.type	 sText_UU5,object
+sText_UU5:
+	.byte	0xbc
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xff
+	.size	 sText_UU5,9
+	.type	 sText_UU6,object
+sText_UU6:
+	.byte	0xbc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe4
+	.byte	0xff
+	.size	 sText_UU6,8
+	.type	 sText_UU7,object
+sText_UU7:
+	.byte	0xbc
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xed
+	.byte	0xff
+	.size	 sText_UU7,8
+	.type	 sText_UU8,object
+sText_UU8:
+	.byte	0xbd
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_UU8,11
+	.type	 sText_UU9,object
+sText_UU9:
+	.byte	0xbd
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xe9
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_UU9,11
+	.type	 sText_UU10,object
+sText_UU10:
+	.byte	0xbd
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xeb
+	.byte	0xd8
+	.byte	0xd5
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_UU10,10
+	.type	 sText_UU11,object
+sText_UU11:
+	.byte	0xbd
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_UU11,7
+	.type	 sText_UU12,object
+sText_UU12:
+	.byte	0xbf
+	.byte	0xe1
+	.byte	0xe4
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_UU12,9
+	.type	 sText_UU13,object
+sText_UU13:
+	.byte	0xc0
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_UU13,11
+	.type	 sText_UU14,object
+sText_UU14:
+	.byte	0xc0
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_UU14,9
+	.type	 sText_UU15,object
+sText_UU15:
+	.byte	0xc1
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_UU15,7
+	.type	 sText_UU16,object
+sText_UU16:
+	.byte	0xc2
+	.byte	0xd5
+	.byte	0xec
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_UU16,8
+	.type	 sText_UU17,object
+sText_UU17:
+	.byte	0xc2
+	.byte	0xdd
+	.byte	0xe4
+	.byte	0xe4
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_UU17,10
+	.type	 sText_UU18,object
+sText_UU18:
+	.byte	0xc2
+	.byte	0xed
+	.byte	0xd8
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_UU18,10
+	.type	 sText_UU19,object
+sText_UU19:
+	.byte	0xc5
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xdf
+	.byte	0xdd
+	.byte	0xff
+	.size	 sText_UU19,7
+	.type	 sText_UU20,object
+sText_UU20:
+	.byte	0xc5
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xdf
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_UU20,11
+	.type	 sText_UU21,object
+sText_UU21:
+	.byte	0xc6
+	.byte	0xe9
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xff
+	.size	 sText_UU21,8
+	.type	 sText_UU22,object
+sText_UU22:
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xeb
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_UU22,10
+	.type	 sText_UU23,object
+sText_UU23:
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xff
+	.size	 sText_UU23,10
+	.type	 sText_UU24,object
+sText_UU24:
+	.byte	0xc7
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xed
+	.byte	0xe9
+	.byte	0xff
+	.size	 sText_UU24,8
+	.type	 sText_UU25,object
+sText_UU25:
+	.byte	0xc7
+	.byte	0xe9
+	.byte	0xdf
+	.byte	0x0
+	.byte	0x5c
+	.byte	0xbb
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0x5d
+	.byte	0xff
+	.size	 sText_UU25,13
+	.type	 sText_UU26,object
+sText_UU26:
+	.byte	0xc8
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xdf
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xff
+	.size	 sText_UU26,9
+	.type	 sText_UU27,object
+sText_UU27:
+	.byte	0xca
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_UU27,8
+	.type	 sText_UU28,object
+sText_UU28:
+	.byte	0xca
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_UU28,10
+	.type	 sText_UU29,object
+sText_UU29:
+	.byte	0xcb
+	.byte	0xe9
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_UU29,9
+	.type	 sText_UU30,object
+sText_UU30:
+	.byte	0xcc
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0x0
+	.byte	0x5c
+	.byte	0xc2
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x5d
+	.byte	0xff
+	.size	 sText_UU30,13
+	.type	 sText_UU31,object
+sText_UU31:
+	.byte	0xcd
+	.byte	0xd7
+	.byte	0xdd
+	.byte	0xee
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_UU31,7
+	.type	 sText_UU32,object
+sText_UU32:
+	.byte	0xcd
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xbe
+	.byte	0xcf
+	.byte	0xc7
+	.byte	0xc7
+	.byte	0xc7
+	.byte	0xd3
+	.byte	0xff
+	.size	 sText_UU32,16
+	.type	 sText_UU33,object
+sText_UU33:
+	.byte	0xcd
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_UU33,8
+	.type	 sText_UU34,object
+sText_UU34:
+	.byte	0xcd
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_UU34,9
+	.type	 sText_UU35,object
+sText_UU35:
+	.byte	0xcd
+	.byte	0xed
+	.byte	0xe0
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_UU35,8
+	.type	 sText_UU36,object
+sText_UU36:
+	.byte	0xce
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xe6
+	.byte	0xe9
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xff
+	.size	 sText_UU36,11
+	.type	 sText_UU37,object
+sText_UU37:
+	.byte	0xce
+	.byte	0xe3
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xdf
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_UU37,9
+	.type	 sText_UU38,object
+sText_UU38:
+	.byte	0xbb
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0xd5
+	.byte	0xee
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xff
+	.size	 sText_UU38,9
+	.type	 sText_UU39,object
+sText_UU39:
+	.byte	0xbc
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xff
+	.size	 sText_UU39,8
+	.type	 sText_UU40,object
+sText_UU40:
+	.byte	0xbd
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xd8
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_UU40,11
+	.type	 sText_UU41,object
+sText_UU41:
+	.byte	0xbe
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe7
+	.byte	0xd6
+	.byte	0xed
+	.byte	0xff
+	.size	 sText_UU41,10
+	.type	 sText_UU42,object
+sText_UU42:
+	.byte	0xbe
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_UU42,10
+	.type	 sText_UU43,object
+sText_UU43:
+	.byte	0xbe
+	.byte	0xcf
+	.byte	0xc7
+	.byte	0xc7
+	.byte	0xd3
+	.byte	0xff
+	.size	 sText_UU43,6
+	.type	 sText_UU44,object
+sText_UU44:
+	.byte	0xbe
+	.byte	0xcf
+	.byte	0xc7
+	.byte	0xc7
+	.byte	0xd3
+	.byte	0xff
+	.size	 sText_UU44,6
+	.type	 sText_UU45,object
+sText_UU45:
+	.byte	0xc1
+	.byte	0xed
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_UU45,9
+	.type	 sText_UU46,object
+sText_UU46:
+	.byte	0xc8
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0x0
+	.byte	0x5c
+	.byte	0xbb
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0x5d
+	.byte	0xff
+	.size	 sText_UU46,19
+	.type	 sText_UU47,object
+sText_UU47:
+	.byte	0xca
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_UU47,7
+	.type	 sText_UU48,object
+sText_UU48:
+	.byte	0xca
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xed
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xae
+	.byte	0xd4
+	.byte	0xff
+	.size	 sText_UU48,10
+	.type	 sText_UU49,object
+sText_UU49:
+	.byte	0xcd
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_UU49,10
+	.type	 sText_UU50,object
+sText_UU50:
+	.byte	0xcd
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_UU50,10
+	.type	 sText_UU51,object
+sText_UU51:
+	.byte	0xcd
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe4
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_UU51,10
+	.type	 sText_UU52,object
+sText_UU52:
+	.byte	0xd1
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_UU52,8
+	.type	 sText_UU53,object
+sText_UU53:
+	.byte	0xbb
+	.byte	0xee
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xda
+	.byte	0xff
+	.size	 sText_UU53,6
+	.type	 sText_UU54,object
+sText_UU54:
+	.byte	0xbd
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xd6
+	.byte	0xdd
+	.byte	0xff
+	.size	 sText_UU54,7
+	.type	 sText_UU55,object
+sText_UU55:
+	.byte	0xbd
+	.byte	0xe3
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_UU55,9
+	.type	 sText_UU56,object
+sText_UU56:
+	.byte	0xc6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_UU56,7
+	.type	 sText_UU57,object
+sText_UU57:
+	.byte	0xc7
+	.byte	0xd9
+	.byte	0xeb
+	.byte	0xff
+	.size	 sText_UU57,4
+	.type	 sText_UU58,object
+sText_UU58:
+	.byte	0xc7
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_UU58,8
+	.type	 sText_UU59,object
+sText_UU59:
+	.byte	0xc8
+	.byte	0xdd
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xff
+	.size	 sText_UU59,9
+	.type	 sText_UU60,object
+sText_UU60:
+	.byte	0xcd
+	.byte	0xe9
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_UU60,8
+	.type	 sText_UU61,object
+sText_UU61:
+	.byte	0xce
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_UU61,10
+	.type	 sText_UU62,object
+sText_UU62:
+	.byte	0xd0
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_UU62,10
+	.type	 sText_UU63,object
+sText_UU63:
+	.byte	0xd4
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_UU63,8
+	.type	 sText_UU64,object
+sText_UU64:
+	.byte	0xbc
+	.byte	0xe9
+	.byte	0xee
+	.byte	0xee
+	.byte	0xeb
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_UU64,9
+	.type	 sText_UU65,object
+sText_UU65:
+	.byte	0xc2
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe4
+	.byte	0xd5
+	.byte	0xae
+	.byte	0xcf
+	.byte	0xe2
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_UU65,14
+	.type	 sText_UU66,object
+sText_UU66:
+	.byte	0xc6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_UU66,7
+	.type	 sText_UU67,object
+sText_UU67:
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_UU67,10
+	.type	 sText_UU68,object
+sText_UU68:
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xae
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_UU68,18
+	.type	 sText_UU69,object
+sText_UU69:
+	.byte	0xd2
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xdf
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_UU69,10
+	.type	 sText_OU1,object
+sText_OU1:
+	.byte	0xbb
+	.byte	0xee
+	.byte	0xe9
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xff
+	.size	 sText_OU1,10
+	.type	 sText_OU2,object
+sText_OU2:
+	.byte	0xbd
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd5
+	.byte	0xd6
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_OU2,9
+	.type	 sText_OU3,object
+sText_OU3:
+	.byte	0xbf
+	.byte	0xec
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xff
+	.size	 sText_OU3,10
+	.type	 sText_OU4,object
+sText_OU4:
+	.byte	0xc0
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_OU4,11
+	.type	 sText_OU5,object
+sText_OU5:
+	.byte	0xc1
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xe4
+	.byte	0xff
+	.size	 sText_OU5,9
+	.type	 sText_OU6,object
+sText_OU6:
+	.byte	0xc1
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_OU6,8
+	.type	 sText_OU7,object
+sText_OU7:
+	.byte	0xc2
+	.byte	0xd5
+	.byte	0xeb
+	.byte	0xe0
+	.byte	0xe9
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_OU7,9
+	.type	 sText_OU8,object
+sText_OU8:
+	.byte	0xc5
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xae
+	.byte	0xc9
+	.byte	0xff
+	.size	 sText_OU8,8
+	.type	 sText_OU9,object
+sText_OU9:
+	.byte	0xbc
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xe4
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_OU9,12
+	.type	 sText_OU10,object
+sText_OU10:
+	.byte	0xbd
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_OU10,11
+	.type	 sText_OU11,object
+sText_OU11:
+	.byte	0xbe
+	.byte	0xcf
+	.byte	0xc7
+	.byte	0xc7
+	.byte	0xd3
+	.byte	0xff
+	.size	 sText_OU11,6
+	.type	 sText_OU12,object
+sText_OU12:
+	.byte	0xc2
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_OU12,8
+	.type	 sText_OU13,object
+sText_OU13:
+	.byte	0xc4
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xff
+	.size	 sText_OU13,8
+	.type	 sText_OU14,object
+sText_OU14:
+	.byte	0xc5
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_OU14,8
+	.type	 sText_OU15,object
+sText_OU15:
+	.byte	0xc5
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe3
+	.byte	0xff
+	.size	 sText_OU15,7
+	.type	 sText_OU16,object
+sText_OU16:
+	.byte	0xc5
+	.byte	0xed
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xbc
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_OU16,13
+	.type	 sText_OU17,object
+sText_OU17:
+	.byte	0xc6
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xae
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_OU17,17
+	.type	 sText_OU19,object
+sText_OU19:
+	.byte	0xc6
+	.byte	0xe3
+	.byte	0xe4
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xed
+	.byte	0xff
+	.size	 sText_OU19,8
+	.type	 sText_OU20,object
+sText_OU20:
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_OU20,9
+	.type	 sText_OU21,object
+sText_OU21:
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xee
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_OU21,10
+	.type	 sText_OU22,object
+sText_OU22:
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xe4
+	.byte	0xdc
+	.byte	0xed
+	.byte	0xff
+	.size	 sText_OU22,8
+	.type	 sText_OU23,object
+sText_OU23:
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xeb
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_OU23,7
+	.type	 sText_OU24,object
+sText_OU24:
+	.byte	0xca
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe4
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_OU24,9
+	.type	 sText_OU25,object
+sText_OU25:
+	.byte	0xcc
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0x0
+	.byte	0x5c
+	.byte	0xd1
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0x5d
+	.byte	0xff
+	.size	 sText_OU25,13
+	.type	 sText_OU26,object
+sText_OU26:
+	.byte	0xcd
+	.byte	0xd5
+	.byte	0xd6
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xed
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_OU26,8
+	.type	 sText_OU27,object
+sText_OU27:
+	.byte	0xcd
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_OU27,10
+	.type	 sText_OU28,object
+sText_OU28:
+	.byte	0xcd
+	.byte	0xdf
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xed
+	.byte	0xff
+	.size	 sText_OU28,9
+	.type	 sText_OU29,object
+sText_OU29:
+	.byte	0xce
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xff
+	.size	 sText_OU29,10
+	.type	 sText_OU30,object
+sText_OU30:
+	.byte	0xce
+	.byte	0xd5
+	.byte	0xe4
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xbc
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xe9
+	.byte	0xff
+	.size	 sText_OU30,10
+	.type	 sText_OU31,object
+sText_OU31:
+	.byte	0xce
+	.byte	0xd5
+	.byte	0xe4
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xc0
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xff
+	.size	 sText_OU31,10
+	.type	 sText_OU32,object
+sText_OU32:
+	.byte	0xce
+	.byte	0xd5
+	.byte	0xe4
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
+	.byte	0xe3
+	.byte	0xff
+	.size	 sText_OU32,10
+	.type	 sText_OU33,object
+sText_OU33:
+	.byte	0xce
+	.byte	0xd5
+	.byte	0xe4
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xc6
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_OU33,10
+	.type	 sText_OU34,object
+sText_OU34:
+	.byte	0xce
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xae
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_OU34,17
+	.type	 sText_OU35,object
+sText_OU35:
+	.byte	0xce
+	.byte	0xe3
+	.byte	0xec
+	.byte	0xd5
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xec
+	.byte	0xff
+	.size	 sText_OU35,8
+	.type	 sText_OU36,object
+sText_OU36:
+	.byte	0xce
+	.byte	0xed
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_OU36,10
+	.type	 sText_OU37,object
+sText_OU37:
+	.byte	0xd0
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xff
+	.size	 sText_OU37,8
+	.type	 sText_OU38,object
+sText_OU38:
+	.byte	0xd0
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_OU38,10
+	.type	 sText_OU39,object
+sText_OU39:
+	.byte	0xd4
+	.byte	0xd5
+	.byte	0xe4
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_OU39,7
+	.type	 sText_Random,object
+sText_Random:
+	.byte	0xcc
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xff
+	.size	 sText_Random,7
+	.type	 sText_Move1,object
+sText_Move1:
+	.byte	0xc1
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xca
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Move1,13
+	.type	 sText_Move2,object
+sText_Move2:
+	.byte	0xc0
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xca
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Move2,12
+	.type	 sText_Move3,object
+sText_Move3:
+	.byte	0xd1
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xca
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Move3,13
+	.type	 sText_Move4,object
+sText_Move4:
+	.byte	0xc0
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xee
+	.byte	0xed
+	.byte	0x0
+	.byte	0xca
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_Move4,13
+	.type	 sText_Move5,object
+sText_Move5:
+	.byte	0xbc
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xbc
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_Move5,11
+	.type	 sText_Move6,object
+sText_Move6:
+	.byte	0xc2
+	.byte	0xed
+	.byte	0xd8
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xbd
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_Move6,13
+	.type	 sText_Move7,object
+sText_Move7:
+	.byte	0xbe
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xc7
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_Move7,13
+	.type	 sText_Move8,object
+sText_Move8:
+	.byte	0xbe
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xbb
+	.byte	0xe7
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_Move8,14
+	.type	 sText_Move9,object
+sText_Move9:
+	.byte	0xcd
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xcd
+	.byte	0xeb
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_Move9,13
+	.type	 sText_Move10,object
+sText_Move10:
+	.byte	0xcc
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0x0
+	.byte	0xcd
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xff
+	.size	 sText_Move10,11
+	.type	 sText_Move11,object
+sText_Move11:
+	.byte	0xc0
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xed
+	.byte	0x0
+	.byte	0xbd
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_Move11,12
+	.type	 sText_Move12,object
+sText_Move12:
+	.byte	0xcc
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_Move12,8
+	.type	 sText_Move13,object
+sText_Move13:
+	.byte	0xcd
+	.byte	0xd9
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0x0
+	.byte	0xce
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_Move13,13
+	.type	 sText_Move14,object
+sText_Move14:
+	.byte	0xbd
+	.byte	0xe3
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_Move14,6
+	.type	 sText_Move15,object
+sText_Move15:
+	.byte	0xd0
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xe9
+	.byte	0xe9
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xd1
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Move15,12
+	.type	 sText_Move16,object
+sText_Move16:
+	.byte	0xcd
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0x0
+	.byte	0xd1
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Move16,11
+	.type	 sText_Move17,object
+sText_Move17:
+	.byte	0xbc
+	.byte	0xe9
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xbc
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Move17,9
+	.type	 sText_Move18,object
+sText_Move18:
+	.byte	0xbb
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xbd
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_Move18,11
+	.type	 sText_Move19,object
+sText_Move19:
+	.byte	0xcd
+	.byte	0xeb
+	.byte	0xdd
+	.byte	0xda
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_Move19,6
+	.type	 sText_Move20,object
+sText_Move20:
+	.byte	0xcd
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xff
+	.size	 sText_Move20,7
+	.type	 sText_Move21,object
+sText_Move21:
+	.byte	0xc7
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xff
+	.size	 sText_Move21,6
+	.type	 sText_Move22,object
+sText_Move22:
+	.byte	0xc7
+	.byte	0xe9
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xcd
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe4
+	.byte	0xff
+	.size	 sText_Move22,9
+	.type	 sText_Move23,object
+sText_Move23:
+	.byte	0xc7
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Move23,10
+	.type	 sText_Move24,object
+sText_Move24:
+	.byte	0xc9
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd1
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_Move24,13
+	.type	 sText_Move25,object
+sText_Move25:
+	.byte	0xcd
+	.byte	0xe9
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xc0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xff
+	.size	 sText_Move25,11
+	.type	 sText_Move26,object
+sText_Move26:
+	.byte	0xbd
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_Move26,8
+	.type	 sText_Move27,object
+sText_Move27:
+	.byte	0xcd
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xbc
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xff
+	.size	 sText_Move27,12
+	.type	 sText_Move28,object
+sText_Move28:
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xdb
+	.byte	0xff
+	.size	 sText_Move28,6
+	.type	 sText_Move29,object
+sText_Move29:
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0x0
+	.byte	0xbd
+	.byte	0xe3
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_Move29,11
+	.type	 sText_Move30,object
+sText_Move30:
+	.byte	0xc1
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xed
+	.byte	0xff
+	.size	 sText_Move30,8
+	.type	 sText_Move31,object
+sText_Move31:
+	.byte	0xcd
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xbc
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd6
+	.byte	0xff
+	.size	 sText_Move31,10
+	.type	 sText_Move32,object
+sText_Move32:
+	.byte	0xbe
+	.byte	0xed
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0x0
+	.byte	0xca
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xff
+	.size	 sText_Move32,14
+	.type	 sText_Move33,object
+sText_Move33:
+	.byte	0xcd
+	.byte	0xed
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_Move33,10
+	.type	 sText_Move34,object
+sText_Move34:
+	.byte	0xca
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_Move34,11
+	.type	 sText_Move35,object
+sText_Move35:
+	.byte	0xcf
+	.byte	0xe4
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_Move35,7
+	.type	 sText_Move36,object
+sText_Move36:
+	.byte	0xc2
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xbd
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xeb
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_Move36,11
+	.type	 sText_Move37,object
+sText_Move37:
+	.byte	0xbf
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_Move37,9
+	.type	 sText_Move38,object
+sText_Move38:
+	.byte	0xd1
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xed
+	.byte	0x0
+	.byte	0xcd
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_Move38,11
+	.type	 sText_Move39,object
+sText_Move39:
+	.byte	0xca
+	.byte	0xe7
+	.byte	0xed
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0x0
+	.byte	0xcf
+	.byte	0xe4
+	.byte	0xff
+	.size	 sText_Move39,9
+	.type	 sText_Move40,object
+sText_Move40:
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xca
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xff
+	.size	 sText_Move40,14
+	.type	 sText_Move41,object
+sText_Move41:
+	.byte	0xc0
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xca
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xff
+	.size	 sText_Move41,11
+	.type	 sText_Move42,object
+sText_Move42:
+	.byte	0xc3
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xca
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xff
+	.size	 sText_Move42,10
+	.type	 sText_Move43,object
+sText_Move43:
+	.byte	0xc3
+	.byte	0xd7
+	.byte	0xed
+	.byte	0x0
+	.byte	0xd1
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_Move43,9
+	.type	 sText_Move44,object
+sText_Move44:
+	.byte	0xbf
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xd6
+	.byte	0xff
+	.size	 sText_Move44,11
+	.type	 sText_Move45,object
+sText_Move45:
+	.byte	0xc6
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0x0
+	.byte	0xc5
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_Move45,9
+	.type	 sText_Move46,object
+sText_Move46:
+	.byte	0xc3
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xbe
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Move46,13
+	.type	 sText_Move47,object
+sText_Move47:
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xcc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Move47,12
+	.type	 sText_Move48,object
+sText_Move48:
+	.byte	0xce
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xeb
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_Move48,9
+	.type	 sText_Move49,object
+sText_Move49:
+	.byte	0xd4
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xc2
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xd6
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_Move49,13
+	.type	 sText_Move50,object
+sText_Move50:
+	.byte	0xbe
+	.byte	0xe9
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xbd
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe4
+	.byte	0xff
+	.size	 sText_Move50,10
+	.type	 sText_Move51,object
+sText_Move51:
+	.byte	0xbc
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xed
+	.byte	0x0
+	.byte	0xcd
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xff
+	.size	 sText_Move51,10
+	.type	 sText_Move52,object
+sText_Move52:
+	.byte	0xbc
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Move52,6
+	.type	 sText_Move53,object
+sText_Move53:
+	.byte	0xcd
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_Move53,8
+	.type	 sText_Move54,object
+sText_Move54:
+	.byte	0xc3
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xc2
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_Move54,10
+	.type	 sText_Move55,object
+sText_Move55:
+	.byte	0xcd
+	.byte	0xe3
+	.byte	0xda
+	.byte	0xe8
+	.byte	0xae
+	.byte	0xbc
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_Move55,12
+	.type	 sText_Move56,object
+sText_Move56:
+	.byte	0xc6
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xcc
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_Move56,12
+	.type	 sText_Move57,object
+sText_Move57:
+	.byte	0xcc
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xca
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xff
+	.size	 sText_Move57,10
+	.type	 sText_Move58,object
+sText_Move58:
+	.byte	0xbe
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xcc
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_Move58,10
+	.type	 sText_Move59,object
+sText_Move59:
+	.byte	0xce
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_Move59,6
+	.type	 sText_Move60,object
+sText_Move60:
+	.byte	0xbb
+	.byte	0xe5
+	.byte	0xe9
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xce
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xff
+	.size	 sText_Move60,10
+	.type	 sText_Move61,object
+sText_Move61:
+	.byte	0xcd
+	.byte	0xdf
+	.byte	0xed
+	.byte	0x0
+	.byte	0xbb
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xff
+	.size	 sText_Move61,11
+	.type	 sText_Move62,object
+sText_Move62:
+	.byte	0xc0
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xca
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xff
+	.size	 sText_Move62,10
+	.type	 sText_Move63,object
+sText_Move63:
+	.byte	0xbe
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xd6
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xae
+	.byte	0xbf
+	.byte	0xd8
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Move63,12
+	.type	 sText_Move64,object
+sText_Move64:
+	.byte	0xbc
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Move64,7
+	.type	 sText_Move65,object
+sText_Move65:
+	.byte	0xc2
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xbc
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xff
+	.size	 sText_Move65,10
+	.type	 sText_Move66,object
+sText_Move66:
+	.byte	0xcd
+	.byte	0xe9
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe4
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_Move66,11
+	.type	 sText_Move67,object
+sText_Move67:
+	.byte	0xc2
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xe4
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xc2
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_Move67,13
+	.type	 sText_Move68,object
+sText_Move68:
+	.byte	0xc2
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd1
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Move68,10
+	.type	 sText_Move69,object
+sText_Move69:
+	.byte	0xc9
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Move69,8
+	.type	 sText_Move70,object
+sText_Move70:
+	.byte	0xc5
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0x0
+	.byte	0xc9
+	.byte	0xda
+	.byte	0xda
+	.byte	0xff
+	.size	 sText_Move70,10
+	.type	 sText_Move71,object
+sText_Move71:
+	.byte	0xc6
+	.byte	0xdd
+	.byte	0xe5
+	.byte	0xe9
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_Move71,12
+	.type	 sText_Move72,object
+sText_Move72:
+	.byte	0xc2
+	.byte	0xed
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xd0
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Move72,12
+	.type	 sText_Move73,object
+sText_Move73:
+	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0x0
+	.byte	0xca
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_Move73,12
+	.type	 sText_Move74,object
+sText_Move74:
+	.byte	0xc1
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xdf
+	.byte	0x0
+	.byte	0xcd
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xff
+	.size	 sText_Move74,10
+	.type	 sText_Move75,object
+sText_Move75:
+	.byte	0xbb
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xcd
+	.byte	0xe4
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Move75,12
+	.type	 sText_Move76,object
+sText_Move76:
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xbd
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe4
+	.byte	0xff
+	.size	 sText_Move76,12
+	.type	 sText_Move77,object
+sText_Move77:
+	.byte	0xc1
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xbb
+	.byte	0xd7
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_Move77,12
+	.type	 sText_Move78,object
+sText_Move78:
+	.byte	0xca
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xc1
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xff
+	.size	 sText_Move78,10
+	.type	 sText_Move79,object
+sText_Move79:
+	.byte	0xc2
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Move79,10
+	.type	 sText_Bet1BP,object
+sText_Bet1BP:
+	.byte	0xa2
+	.byte	0x0
+	.byte	0xbc
+	.byte	0xca
+	.byte	0xff
+	.size	 sText_Bet1BP,5
+	.type	 sText_Bet3BP,object
+sText_Bet3BP:
+	.byte	0xa4
+	.byte	0x0
+	.byte	0xbc
+	.byte	0xca
+	.byte	0xff
+	.size	 sText_Bet3BP,5
+	.type	 sText_Bet5BP,object
+sText_Bet5BP:
+	.byte	0xa6
+	.byte	0x0
+	.byte	0xbc
+	.byte	0xca
+	.byte	0xff
+	.size	 sText_Bet5BP,5
+	.type	 sText_Red,object
+sText_Red:
+	.byte	0xcc
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_Red,4
+	.type	 sText_Blue,object
+sText_Blue:
+	.byte	0xbc
+	.byte	0xe0
+	.byte	0xe9
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Blue,5
+	.type	 sText_Lance,object
+sText_Lance:
+	.byte	0xc6
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Lance,6
+	.type	 sText_Steven,object
+sText_Steven:
+	.byte	0xcd
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xff
+	.size	 sText_Steven,7
+	.type	 sText_Wallace,object
+sText_Wallace:
+	.byte	0xd1
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_Wallace,8
+	.type	 sText_Cynthia,object
+sText_Cynthia:
+	.byte	0xbd
+	.byte	0xed
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_Cynthia,8
+	.type	 sText_Alder,object
+sText_Alder:
+	.byte	0xbb
+	.byte	0xe0
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xff
+	.size	 sText_Alder,6
+	.type	 sText_Iris,object
+sText_Iris:
+	.byte	0xc3
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xff
+	.size	 sText_Iris,5
+	.type	 sText_Diantha,object
+sText_Diantha:
+	.byte	0xbe
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xff
+	.size	 sText_Diantha,8
+	.type	 sText_Kukui,object
+sText_Kukui:
+	.byte	0xc5
+	.byte	0xe9
+	.byte	0xdf
+	.byte	0xe9
+	.byte	0xdd
+	.byte	0xff
+	.size	 sText_Kukui,6
+	.type	 sText_Hau,object
+sText_Hau:
+	.byte	0xc2
+	.byte	0xd5
+	.byte	0xe9
+	.byte	0xff
+	.size	 sText_Hau,4
+	.type	 sText_CFT,object
+sText_CFT:
+	.byte	0xbd
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xff
+	.size	 sText_CFT,10
+	.type	 sText_Record,object
+sText_Record:
+	.byte	0xd0
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xeb
+	.byte	0x0
+	.byte	0xcc
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd8
+	.byte	0xff
+	.size	 sText_Record,12
+	.type	 sText_Ability1,object
+sText_Ability1:
+	.byte	0xfd
+	.byte	0x2
+	.byte	0xff
+	.size	 sText_Ability1,3
+	.type	 sText_Ability2,object
+sText_Ability2:
+	.byte	0xfd
+	.byte	0x3
+	.byte	0xff
+	.size	 sText_Ability2,3
+	.type	 sText_Ability3,object
+sText_Ability3:
+	.byte	0xfd
+	.byte	0x4
+	.byte	0xff
+	.size	 sText_Ability3,3
+	.align	2, 0
+	.type	 sSet1,object
+sSet1:
+	.word	sText_HP
+	.word	0x0
+	.word	sText_Attack
+	.word	0x1
+	.word	sText_Defense
+	.word	0x2
+	.word	sText_Speed
+	.word	0x3
+	.word	sText_SpAttack
+	.word	0x4
+	.word	sText_SpDefense
+	.word	0x5
+	.size	 sSet1,48
+	.align	2, 0
+	.type	 sSet2,object
+sSet2:
+	.word	sText_DCN
+	.word	0x7f
+	.word	sText_Lonely
+	.word	0x0
+	.word	sText_Adamant
+	.word	0x1
+	.word	sText_Naughty
+	.word	0x2
+	.word	sText_Brave
+	.word	0x3
+	.word	sText_Bold
+	.word	0x4
+	.word	sText_Impish
+	.word	0x5
+	.word	sText_Lax
+	.word	0x6
+	.word	sText_Relaxed
+	.word	0x7
+	.word	sText_Modest
+	.word	0x8
+	.word	sText_Mild
+	.word	0x9
+	.word	sText_Rash
+	.word	0xa
+	.word	sText_Quiet
+	.word	0xb
+	.word	sText_Calm
+	.word	0xc
+	.word	sText_Gentle
+	.word	0xd
+	.word	sText_Careful
+	.word	0xe
+	.word	sText_Sassy
+	.word	0xf
+	.word	sText_Timid
+	.word	0x10
+	.word	sText_Hasty
+	.word	0x11
+	.word	sText_Jolly
+	.word	0x12
+	.word	sText_Naive
+	.word	0x13
+	.size	 sSet2,168
+	.align	2, 0
+	.type	 sSet3,object
+sSet3:
+	.word	sText_25toBP
+	.word	0x0
+	.word	sText_250toBP
+	.word	0x1
+	.word	sText_Cancel
+	.word	0x7f
+	.size	 sSet3,24
+	.align	2, 0
+	.type	 sSet4,object
+sSet4:
+	.word	sText_Random
+	.word	0x63
+	.word	sText_NU1
+	.word	0x0
+	.word	sText_NU60
+	.word	0x3b
+	.word	sText_NU2
+	.word	0x1
+	.word	sText_NU3
+	.word	0x2
+	.word	sText_NU4
+	.word	0x3
+	.word	sText_NU59
+	.word	0x3a
+	.word	sText_NU61
+	.word	0x3c
+	.word	sText_NU5
+	.word	0x4
+	.word	sText_NU62
+	.word	0x3d
+	.word	sText_NU49
+	.word	0x30
+	.word	sText_NU6
+	.word	0x5
+	.word	sText_NU7
+	.word	0x6
+	.word	sText_NU50
+	.word	0x31
+	.word	sText_NU26
+	.word	0x19
+	.word	sText_NU51
+	.word	0x32
+	.word	sText_NU63
+	.word	0x3e
+	.word	sText_NU8
+	.word	0x7
+	.word	sText_NU52
+	.word	0x33
+	.word	sText_NU9
+	.word	0x8
+	.word	sText_NU10
+	.word	0x9
+	.word	sText_NU11
+	.word	0xa
+	.word	sText_NU12
+	.word	0xb
+	.word	sText_NU13
+	.word	0xc
+	.word	sText_NU53
+	.word	0x34
+	.word	sText_NU14
+	.word	0xd
+	.word	sText_NU54
+	.word	0x35
+	.word	sText_NU64
+	.word	0x3f
+	.word	sText_NU15
+	.word	0xe
+	.word	sText_NU16
+	.word	0xf
+	.word	sText_NU65
+	.word	0x40
+	.word	sText_NU17
+	.word	0x10
+	.word	sText_NU18
+	.word	0x11
+	.word	sText_NU19
+	.word	0x12
+	.word	sText_NU20
+	.word	0x13
+	.word	sText_NU21
+	.word	0x14
+	.word	sText_NU55
+	.word	0x36
+	.word	sText_NU66
+	.word	0x41
+	.word	sText_NU22
+	.word	0x15
+	.word	sText_NU67
+	.word	0x42
+	.word	sText_NU23
+	.word	0x16
+	.word	sText_NU24
+	.word	0x17
+	.word	sText_NU25
+	.word	0x18
+	.word	sText_NU74
+	.word	0x49
+	.word	sText_NU27
+	.word	0x1a
+	.word	sText_NU28
+	.word	0x1b
+	.word	sText_NU29
+	.word	0x1c
+	.word	sText_NU30
+	.word	0x1d
+	.word	sText_NU31
+	.word	0x1e
+	.word	sText_NU32
+	.word	0x1f
+	.word	sText_NU68
+	.word	0x43
+	.word	sText_NU69
+	.word	0x44
+	.word	sText_NU70
+	.word	0x45
+	.word	sText_NU33
+	.word	0x20
+	.word	sText_NU34
+	.word	0x21
+	.word	sText_NU71
+	.word	0x46
+	.word	sText_NU35
+	.word	0x22
+	.word	sText_NU36
+	.word	0x23
+	.word	sText_NU37
+	.word	0x24
+	.word	sText_NU38
+	.word	0x25
+	.word	sText_NU73
+	.word	0x48
+	.word	sText_NU39
+	.word	0x26
+	.word	sText_NU56
+	.word	0x37
+	.word	sText_NU40
+	.word	0x27
+	.word	sText_NU72
+	.word	0x47
+	.word	sText_NU41
+	.word	0x28
+	.word	sText_NU42
+	.word	0x29
+	.word	sText_NU57
+	.word	0x38
+	.word	sText_NU43
+	.word	0x2a
+	.word	sText_NU44
+	.word	0x2b
+	.word	sText_NU58
+	.word	0x39
+	.word	sText_NU45
+	.word	0x2c
+	.word	sText_NU46
+	.word	0x2d
+	.word	sText_NU47
+	.word	0x2e
+	.word	sText_NU48
+	.word	0x2f
+	.word	sText_Cancel
+	.word	0x7f
+	.size	 sSet4,608
+	.align	2, 0
+	.type	 sSet5,object
+sSet5:
+	.word	sText_Random
+	.word	0x63
+	.word	sText_RU1
+	.word	0x0
+	.word	sText_RU2
+	.word	0x1
+	.word	sText_RU3
+	.word	0x2
+	.word	sText_RU4
+	.word	0x3
+	.word	sText_RU5
+	.word	0x4
+	.word	sText_RU6
+	.word	0x5
+	.word	sText_RU61
+	.word	0x3c
+	.word	sText_RU7
+	.word	0x6
+	.word	sText_RU50
+	.word	0x31
+	.word	sText_RU62
+	.word	0x3d
+	.word	sText_RU8
+	.word	0x7
+	.word	sText_RU9
+	.word	0x8
+	.word	sText_RU10
+	.word	0x9
+	.word	sText_RU51
+	.word	0x32
+	.word	sText_RU75
+	.word	0x4a
+	.word	sText_RU11
+	.word	0xa
+	.word	sText_RU12
+	.word	0xb
+	.word	sText_RU13
+	.word	0xc
+	.word	sText_RU14
+	.word	0xd
+	.word	sText_RU15
+	.word	0xe
+	.word	sText_RU16
+	.word	0xf
+	.word	sText_RU63
+	.word	0x3e
+	.word	sText_RU18
+	.word	0x11
+	.word	sText_RU19
+	.word	0x12
+	.word	sText_RU20
+	.word	0x13
+	.word	sText_RU52
+	.word	0x33
+	.word	sText_RU21
+	.word	0x14
+	.word	sText_RU64
+	.word	0x3f
+	.word	sText_RU53
+	.word	0x34
+	.word	sText_RU22
+	.word	0x15
+	.word	sText_RU71
+	.word	0x46
+	.word	sText_RU54
+	.word	0x35
+	.word	sText_RU23
+	.word	0x16
+	.word	sText_RU24
+	.word	0x17
+	.word	sText_RU25
+	.word	0x18
+	.word	sText_RU26
+	.word	0x19
+	.word	sText_RU27
+	.word	0x1a
+	.word	sText_RU72
+	.word	0x47
+	.word	sText_RU28
+	.word	0x1b
+	.word	sText_RU55
+	.word	0x36
+	.word	sText_RU29
+	.word	0x1c
+	.word	sText_RU65
+	.word	0x40
+	.word	sText_RU30
+	.word	0x1d
+	.word	sText_RU31
+	.word	0x1e
+	.word	sText_RU32
+	.word	0x1f
+	.word	sText_RU66
+	.word	0x41
+	.word	sText_RU67
+	.word	0x42
+	.word	sText_RU56
+	.word	0x37
+	.word	sText_RU33
+	.word	0x20
+	.word	sText_RU34
+	.word	0x21
+	.word	sText_RU35
+	.word	0x22
+	.word	sText_RU36
+	.word	0x23
+	.word	sText_RU37
+	.word	0x24
+	.word	sText_RU57
+	.word	0x38
+	.word	sText_RU17
+	.word	0x10
+	.word	sText_RU39
+	.word	0x26
+	.word	sText_RU40
+	.word	0x27
+	.word	sText_RU73
+	.word	0x48
+	.word	sText_RU41
+	.word	0x28
+	.word	sText_RU58
+	.word	0x39
+	.word	sText_RU48
+	.word	0x2f
+	.word	sText_RU74
+	.word	0x49
+	.word	sText_RU42
+	.word	0x29
+	.word	sText_RU43
+	.word	0x2a
+	.word	sText_RU44
+	.word	0x2b
+	.word	sText_RU45
+	.word	0x2c
+	.word	sText_RU68
+	.word	0x43
+	.word	sText_RU59
+	.word	0x3a
+	.word	sText_RU46
+	.word	0x2d
+	.word	sText_RU69
+	.word	0x44
+	.word	sText_RU47
+	.word	0x2e
+	.word	sText_RU60
+	.word	0x3b
+	.word	sText_RU70
+	.word	0x45
+	.word	sText_Cancel
+	.word	0x7f
+	.size	 sSet5,600
+	.align	2, 0
+	.type	 sSet6,object
+sSet6:
+	.word	sText_Random
+	.word	0x63
+	.word	sText_UU1
+	.word	0x0
+	.word	sText_UU38
+	.word	0x25
+	.word	sText_UU2
+	.word	0x1
+	.word	sText_UU3
+	.word	0x2
+	.word	sText_UU4
+	.word	0x3
+	.word	sText_UU53
+	.word	0x34
+	.word	sText_UU5
+	.word	0x4
+	.word	sText_UU6
+	.word	0x5
+	.word	sText_UU7
+	.word	0x6
+	.word	sText_UU39
+	.word	0x26
+	.word	sText_UU64
+	.word	0x3f
+	.word	sText_UU8
+	.word	0x7
+	.word	sText_UU9
+	.word	0x8
+	.word	sText_UU54
+	.word	0x35
+	.word	sText_UU55
+	.word	0x36
+	.word	sText_UU40
+	.word	0x27
+	.word	sText_UU10
+	.word	0x9
+	.word	sText_UU11
+	.word	0xa
+	.word	sText_UU41
+	.word	0x28
+	.word	sText_UU42
+	.word	0x29
+	.word	sText_UU12
+	.word	0xb
+	.word	sText_UU13
+	.word	0xc
+	.word	sText_UU14
+	.word	0xd
+	.word	sText_UU15
+	.word	0xe
+	.word	sText_UU45
+	.word	0x2c
+	.word	sText_UU16
+	.word	0xf
+	.word	sText_UU17
+	.word	0x10
+	.word	sText_UU65
+	.word	0x40
+	.word	sText_UU18
+	.word	0x11
+	.word	sText_UU19
+	.word	0x12
+	.word	sText_UU20
+	.word	0x13
+	.word	sText_UU56
+	.word	0x37
+	.word	sText_UU66
+	.word	0x41
+	.word	sText_UU21
+	.word	0x14
+	.word	sText_UU22
+	.word	0x15
+	.word	sText_UU23
+	.word	0x16
+	.word	sText_UU57
+	.word	0x38
+	.word	sText_UU58
+	.word	0x39
+	.word	sText_UU24
+	.word	0x17
+	.word	sText_UU25
+	.word	0x18
+	.word	sText_UU26
+	.word	0x19
+	.word	sText_UU59
+	.word	0x3a
+	.word	sText_UU46
+	.word	0x2d
+	.word	sText_UU27
+	.word	0x1a
+	.word	sText_UU47
+	.word	0x2e
+	.word	sText_UU48
+	.word	0x2f
+	.word	sText_UU28
+	.word	0x1b
+	.word	sText_UU29
+	.word	0x1c
+	.word	sText_UU30
+	.word	0x1d
+	.word	sText_UU49
+	.word	0x30
+	.word	sText_UU31
+	.word	0x1e
+	.word	sText_UU50
+	.word	0x31
+	.word	sText_UU51
+	.word	0x32
+	.word	sText_UU33
+	.word	0x20
+	.word	sText_UU60
+	.word	0x3b
+	.word	sText_UU34
+	.word	0x21
+	.word	sText_UU35
+	.word	0x22
+	.word	sText_UU36
+	.word	0x23
+	.word	sText_UU61
+	.word	0x3c
+	.word	sText_UU67
+	.word	0x42
+	.word	sText_UU68
+	.word	0x43
+	.word	sText_UU37
+	.word	0x24
+	.word	sText_UU62
+	.word	0x3d
+	.word	sText_UU52
+	.word	0x33
+	.word	sText_UU69
+	.word	0x44
+	.word	sText_UU63
+	.word	0x3e
+	.word	sText_Cancel
+	.word	0x7f
+	.size	 sSet6,544
+	.align	2, 0
+	.type	 sSet7,object
+sSet7:
+	.word	sText_Random
+	.word	0x63
+	.word	sText_OU1
+	.word	0x0
+	.word	sText_OU9
+	.word	0x8
+	.word	sText_OU10
+	.word	0x9
+	.word	sText_OU2
+	.word	0x1
+	.word	sText_OU3
+	.word	0x2
+	.word	sText_OU4
+	.word	0x3
+	.word	sText_OU5
+	.word	0x4
+	.word	sText_OU6
+	.word	0x5
+	.word	sText_OU7
+	.word	0x6
+	.word	sText_OU12
+	.word	0xb
+	.word	sText_OU8
+	.word	0x7
+	.word	sText_OU13
+	.word	0xc
+	.word	sText_OU14
+	.word	0xd
+	.word	sText_OU15
+	.word	0xe
+	.word	sText_OU16
+	.word	0xf
+	.word	sText_OU17
+	.word	0x10
+	.word	sText_OU19
+	.word	0x12
+	.word	sText_OU20
+	.word	0x13
+	.word	sText_OU21
+	.word	0x14
+	.word	sText_OU22
+	.word	0x15
+	.word	sText_OU23
+	.word	0x16
+	.word	sText_OU24
+	.word	0x17
+	.word	sText_OU25
+	.word	0x18
+	.word	sText_OU26
+	.word	0x19
+	.word	sText_OU27
+	.word	0x1a
+	.word	sText_OU28
+	.word	0x1b
+	.word	sText_OU29
+	.word	0x1c
+	.word	sText_OU30
+	.word	0x1d
+	.word	sText_OU31
+	.word	0x1e
+	.word	sText_OU32
+	.word	0x1f
+	.word	sText_OU33
+	.word	0x20
+	.word	sText_OU34
+	.word	0x21
+	.word	sText_OU35
+	.word	0x22
+	.word	sText_OU36
+	.word	0x23
+	.word	sText_OU37
+	.word	0x24
+	.word	sText_OU38
+	.word	0x25
+	.word	sText_OU39
+	.word	0x26
+	.word	sText_Cancel
+	.word	0x7f
+	.size	 sSet7,312
+	.align	2, 0
+	.type	 sSet8,object
+sSet8:
+	.word	sText_Move1
+	.word	0x1
+	.word	sText_Move2
+	.word	0x2
+	.word	sText_Move3
+	.word	0x3
+	.word	sText_Move4
+	.word	0x4
+	.word	sText_Move5
+	.word	0x5
+	.word	sText_Move6
+	.word	0x6
+	.word	sText_Move7
+	.word	0x7
+	.word	sText_Move8
+	.word	0x8
+	.word	sText_Move9
+	.word	0x9
+	.word	sText_Move10
+	.word	0xa
+	.word	sText_Cancel
+	.word	0x7f
+	.size	 sSet8,88
+	.align	2, 0
+	.type	 sSet9,object
+sSet9:
+	.word	sText_Move11
+	.word	0xb
+	.word	sText_Move12
+	.word	0xc
+	.word	sText_Move13
+	.word	0xd
+	.word	sText_Move14
+	.word	0xe
+	.word	sText_Move15
+	.word	0xf
+	.word	sText_Move16
+	.word	0x10
+	.word	sText_Move17
+	.word	0x11
+	.word	sText_Move18
+	.word	0x12
+	.word	sText_Move19
+	.word	0x13
+	.word	sText_Move20
+	.word	0x14
+	.word	sText_Move21
+	.word	0x15
+	.word	sText_Move22
+	.word	0x16
+	.word	sText_Move23
+	.word	0x17
+	.word	sText_Move24
+	.word	0x18
+	.word	sText_Move25
+	.word	0x19
+	.word	sText_Move26
+	.word	0x1a
+	.word	sText_Move27
+	.word	0x1b
+	.word	sText_Move28
+	.word	0x1c
+	.word	sText_Move29
+	.word	0x1d
+	.word	sText_Move30
+	.word	0x1e
+	.word	sText_Move31
+	.word	0x1f
+	.word	sText_Move32
+	.word	0x20
+	.word	sText_Move33
+	.word	0x21
+	.word	sText_Move34
+	.word	0x22
+	.word	sText_Move35
+	.word	0x23
+	.word	sText_Move36
+	.word	0x24
+	.word	sText_Move37
+	.word	0x25
+	.word	sText_Move38
+	.word	0x26
+	.word	sText_Move39
+	.word	0x27
+	.word	sText_Cancel
+	.word	0x7f
+	.size	 sSet9,240
+	.align	2, 0
+	.type	 sSet10,object
+sSet10:
+	.word	sText_Move40
+	.word	0x28
+	.word	sText_Move41
+	.word	0x29
+	.word	sText_Move42
+	.word	0x2a
+	.word	sText_Move43
+	.word	0x2b
+	.word	sText_Move44
+	.word	0x2c
+	.word	sText_Move45
+	.word	0x2d
+	.word	sText_Move46
+	.word	0x2e
+	.word	sText_Move47
+	.word	0x2f
+	.word	sText_Move48
+	.word	0x30
+	.word	sText_Move49
+	.word	0x31
+	.word	sText_Move50
+	.word	0x32
+	.word	sText_Move51
+	.word	0x33
+	.word	sText_Move52
+	.word	0x34
+	.word	sText_Move53
+	.word	0x35
+	.word	sText_Move54
+	.word	0x36
+	.word	sText_Move55
+	.word	0x37
+	.word	sText_Move56
+	.word	0x38
+	.word	sText_Move57
+	.word	0x39
+	.word	sText_Move58
+	.word	0x3a
+	.word	sText_Move59
+	.word	0x3b
+	.word	sText_Cancel
+	.word	0x7f
+	.size	 sSet10,168
+	.align	2, 0
+	.type	 sSet11,object
+sSet11:
+	.word	sText_Move60
+	.word	0x3c
+	.word	sText_Move61
+	.word	0x3d
+	.word	sText_Move62
+	.word	0x3e
+	.word	sText_Move63
+	.word	0x3f
+	.word	sText_Move64
+	.word	0x40
+	.word	sText_Move65
+	.word	0x41
+	.word	sText_Move66
+	.word	0x42
+	.word	sText_Move67
+	.word	0x43
+	.word	sText_Move68
+	.word	0x44
+	.word	sText_Move69
+	.word	0x45
+	.word	sText_Move70
+	.word	0x46
+	.word	sText_Move71
+	.word	0x47
+	.word	sText_Move72
+	.word	0x48
+	.word	sText_Move73
+	.word	0x49
+	.word	sText_Move74
+	.word	0x4a
+	.word	sText_Move75
+	.word	0x4b
+	.word	sText_Move76
+	.word	0x4c
+	.word	sText_Move77
+	.word	0x4d
+	.word	sText_Move78
+	.word	0x4e
+	.word	sText_Move79
+	.word	0x4f
+	.word	sText_Cancel
+	.word	0x7f
+	.size	 sSet11,168
+	.align	2, 0
+	.type	 sSet12,object
+sSet12:
+	.word	sText_Bet1BP
+	.word	0x1
+	.word	sText_Bet3BP
+	.word	0x3
+	.word	sText_Bet5BP
+	.word	0x5
+	.word	sText_Cancel
+	.word	0x7f
+	.size	 sSet12,32
+	.align	2, 0
+	.type	 sSet13,object
+sSet13:
+	.word	sText_CFT
+	.word	0x0
+	.word	sText_Record
+	.word	0x1
+	.word	sText_Cancel
+	.word	0x7f
+	.size	 sSet13,24
+	.align	2, 0
+	.type	 sSet14,object
+sSet14:
+	.word	sText_Red
+	.word	0x0
+	.word	sText_Blue
+	.word	0x1
+	.word	sText_Lance
+	.word	0x2
+	.word	sText_Steven
+	.word	0x3
+	.word	sText_Wallace
+	.word	0x4
+	.word	sText_Cynthia
+	.word	0x5
+	.word	sText_Alder
+	.word	0x6
+	.word	sText_Iris
+	.word	0x7
+	.word	sText_Diantha
+	.word	0x8
+	.word	sText_Hau
+	.word	0x9
+	.word	sText_Kukui
+	.word	0xa
+	.word	sText_Cancel
+	.word	0x7f
+	.size	 sSet14,96
+	.align	2, 0
+	.type	 sSet15,object
+sSet15:
+	.word	gStringVar1
+	.word	0x0
+	.word	gStringVar2
+	.word	0x1
+	.word	gStringVar3
+	.word	0x2
+	.size	 sSet15,24
+	.align	2, 0
+	.type	 sScrollingSets,object
+sScrollingSets:
+	.word	sSet1
+	.word	0x6
+	.word	sSet2
+	.word	0x15
+	.word	sSet3
+	.word	0x3
+	.word	sSet4
+	.word	0x4c
+	.word	sSet5
+	.word	0x4b
+	.word	sSet6
+	.word	0x44
+	.word	sSet7
+	.word	0x27
+	.word	sSet8
+	.word	0xb
+	.word	sSet9
+	.word	0x1e
+	.word	sSet10
+	.word	0x15
+	.word	sSet11
+	.word	0x15
+	.word	sSet12
+	.word	0x4
+	.word	sSet13
+	.word	0x3
+	.word	sSet14
+	.word	0xc
+	.word	sSet15
+	.word	0x3
+	.size	 sScrollingSets,120
+	.align	2, 0
+	.type	 sMultichoiceListTemplate,object
+	.size	 sMultichoiceListTemplate,24
+sMultichoiceListTemplate:
+	.space	17
+	.byte	0x0
+	.byte	0x8
+	.byte	0x0
+	.byte	0x21
+	.byte	0x31
+	.byte	0x1
+	.byte	0x1
+.text
+	.align	2, 0
+	.globl	ScriptMenu_ScrollingMultichoice
+	.type	 ScriptMenu_ScrollingMultichoice,function
+	.thumb_func
+ScriptMenu_ScrollingMultichoice:
+	push	{r4, r5, r6, r7, lr}
+	mov	r7, sl
+	mov	r6, r9
+	mov	r5, r8
+	push	{r5, r6, r7}
+	add	sp, sp, #-0xc
+	mov	r7, #0x0
+	ldr	r0, .L278
+	ldrh	r0, [r0]
+	str	r0, [sp]
+	ldr	r0, .L278+0x4
+	ldrh	r0, [r0]
+	mov	r8, r0
+	ldr	r0, .L278+0x8
+	ldrh	r0, [r0]
+	str	r0, [sp, #0x4]
+	ldr	r0, .L278+0xc
+	ldrh	r0, [r0]
+	str	r0, [sp, #0x8]
+	mov	r6, #0x0
+	ldr	r2, .L278+0x10
+	ldr	r0, [sp]
+	lsl	r5, r0, #0x3
+	add	r1, r2, #0x4
+	add	r0, r5, r1
+	ldr	r0, [r0]
+	cmp	r7, r0
+	bge	.L274	@cond_branch
+	mov	sl, r2
+	mov	r9, r1
+.L276:
+	add	r4, r5, #0
+	mov	r1, sl
+	add	r0, r5, r1
+	ldr	r1, [r0]
+	lsl	r0, r6, #0x3
+	add	r0, r0, r1
+	ldr	r0, [r0]
+	add	r1, r7, #0
+	bl	DisplayTextAndGetWidth
+	add	r7, r0, #0
+	add	r6, r6, #0x1
+	add	r4, r4, r9
+	ldr	r0, [r4]
+	cmp	r6, r0
+	blt	.L276	@cond_branch
+.L274:
+	add	r0, r7, #0
+	bl	ConvertPixelWidthToTileWidth
+	add	r7, r0, #0
+	mov	r0, r8
+	add	r1, r7, #0
+	bl	ScriptMenu_AdjustLeftCoordFromWidth
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	ldr	r2, [sp, #0x4]
+	lsl	r1, r2, #0x18
+	lsr	r1, r1, #0x18
+	lsl	r2, r7, #0x18
+	lsr	r2, r2, #0x18
+	ldr	r4, [sp, #0x8]
+	lsl	r3, r4, #0x19
+	lsr	r3, r3, #0x18
+	bl	CreateWindowFromRect
+	add	r5, r0, #0
+	lsl	r5, r5, #0x18
+	lsr	r5, r5, #0x18
+	add	r0, r5, #0
+	mov	r1, #0x0
+	bl	SetStandardWindowBorderStyle
+	add	r0, r5, #0
+	mov	r1, #0x3
+	bl	CopyWindowToVram
+	ldr	r6, .L278+0x14
+	add	r1, r6, #0
+	ldr	r0, .L278+0x18
+	ldmia	r0!, {r2, r3, r4}
+	stmia	r1!, {r2, r3, r4}
+	ldmia	r0!, {r2, r3, r4}
+	stmia	r1!, {r2, r3, r4}
+	strb	r5, [r6, #0x10]
+	ldr	r1, .L278+0x10
+	ldr	r0, [sp]
+	lsl	r2, r0, #0x3
+	add	r0, r2, r1
+	ldr	r0, [r0]
+	str	r0, [r6]
+	add	r1, r1, #0x4
+	add	r2, r2, r1
+	ldr	r0, [r2]
+	strh	r0, [r6, #0xc]
+	mov	r1, sp
+	ldrh	r1, [r1, #0x8]
+	strh	r1, [r6, #0xe]
+	ldr	r0, .L278+0x1c
+	mov	r1, #0x0
+	bl	CreateTask
+	add	r4, r0, #0
+	lsl	r4, r4, #0x18
+	lsr	r4, r4, #0x18
+	add	r0, r6, #0
+	mov	r1, #0x0
+	mov	r2, #0x0
+	bl	ListMenuInit
+	ldr	r2, .L278+0x20
+	lsl	r1, r4, #0x2
+	add	r1, r1, r4
+	lsl	r1, r1, #0x3
+	add	r1, r1, r2
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	strh	r0, [r1, #0x8]
+	ldr	r0, .L278+0x24
+	ldrh	r0, [r0]
+	strh	r0, [r1, #0xa]
+	strh	r5, [r1, #0xc]
+	add	sp, sp, #0xc
+	pop	{r3, r4, r5}
+	mov	r8, r3
+	mov	r9, r4
+	mov	sl, r5
+	pop	{r4, r5, r6, r7}
+	pop	{r0}
+	bx	r0
+.L279:
+	.align	2, 0
+.L278:
+	.word	gSpecialVar_0x8004
+	.word	gSpecialVar_0x8005
+	.word	gSpecialVar_0x8006
+	.word	gSpecialVar_0x8007
+	.word	sScrollingSets
+	.word	gMultiuseListMenuTemplate
+	.word	sMultichoiceListTemplate
+	.word	Task_ScrollingMultichoiceInput
+	.word	gTasks
+	.word	gSpecialVar_0x8008
+.Lfe32:
+	.size	 ScriptMenu_ScrollingMultichoice,.Lfe32-ScriptMenu_ScrollingMultichoice
+	.align	2, 0
+	.type	 Task_ScrollingMultichoiceInput,function
+	.thumb_func
+Task_ScrollingMultichoiceInput:
+	push	{r4, r5, r6, lr}
+	lsl	r0, r0, #0x18
+	lsr	r5, r0, #0x18
+	mov	r6, #0x0
+	ldr	r1, .L291
+	lsl	r0, r5, #0x2
+	add	r0, r0, r5
+	lsl	r0, r0, #0x3
+	add	r4, r0, r1
+	ldrb	r0, [r4, #0x8]
+	bl	ListMenu_ProcessInput
+	add	r1, r0, #0
+	mov	r0, #0x2
+	neg	r0, r0
+	cmp	r1, r0
+	beq	.L284	@cond_branch
+	cmp	r1, r0
+	bgt	.L288	@cond_branch
+	sub	r0, r0, #0x1
+	cmp	r1, r0
+	beq	.L281	@cond_branch
+	b	.L286
+.L292:
+	.align	2, 0
+.L291:
+	.word	gTasks
+.L288:
+	mov	r0, #0x1
+	neg	r0, r0
+	cmp	r1, r0
+	bne	.L286	@cond_branch
+	b	.L281
+.L284:
+	mov	r1, #0xa
+	ldrsh	r0, [r4, r1]
+	cmp	r0, #0
+	beq	.L281	@cond_branch
+	ldr	r1, .L293
+	mov	r0, #0x7f
+	strh	r0, [r1]
+	b	.L290
+.L294:
+	.align	2, 0
+.L293:
+	.word	gSpecialVar_Result
+.L286:
+	ldr	r0, .L295
+	strh	r1, [r0]
+	mov	r6, #0x1
+.L281:
+	cmp	r6, #0
+	beq	.L289	@cond_branch
+.L290:
+	ldr	r0, .L295+0x4
+	lsl	r4, r5, #0x2
+	add	r4, r4, r5
+	lsl	r4, r4, #0x3
+	add	r4, r4, r0
+	ldrb	r0, [r4, #0x8]
+	mov	r1, #0x0
+	mov	r2, #0x0
+	bl	DestroyListMenuTask
+	ldrb	r0, [r4, #0xc]
+	mov	r1, #0x1
+	bl	ClearStdWindowAndFrame
+	ldrb	r0, [r4, #0xc]
+	bl	RemoveWindow
+	bl	EnableBothScriptContexts
+	add	r0, r5, #0
+	bl	DestroyTask
+.L289:
+	pop	{r4, r5, r6}
+	pop	{r0}
+	bx	r0
+.L296:
+	.align	2, 0
+.L295:
+	.word	gSpecialVar_Result
+	.word	gTasks
+.Lfe33:
+	.size	 Task_ScrollingMultichoiceInput,.Lfe33-Task_ScrollingMultichoiceInput
 
 	.lcomm	sLilycoveSSTidalSelections,7
 .text

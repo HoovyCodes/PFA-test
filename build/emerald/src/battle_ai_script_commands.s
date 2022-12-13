@@ -319,7 +319,7 @@ BattleAI_SetupFlags:
 	ldr	r0, .L45+0x4
 	ldr	r0, [r0]
 	ldr	r1, [r0, #0x14]
-	mov	r0, #0x7
+	ldr	r0, .L45+0x8
 	str	r0, [r1, #0xc]
 	b	.L19
 .L46:
@@ -327,6 +327,7 @@ BattleAI_SetupFlags:
 .L45:
 	.word	0xc3f0900
 	.word	gBattleResources
+	.word	0x10f
 .L28:
 	mov	r0, #0x80
 	lsl	r0, r0, #0x8
@@ -871,16 +872,16 @@ ChooseMoveOrAction_Singles:
 	ldrb	r0, [r2]
 	bl	CountUsablePartyMons
 	cmp	r0, #0
-	bgt	.LCB887
+	bgt	.LCB888
 	b	.L119	@long jump
-.LCB887:
+.LCB888:
 	mov	r1, r9
 	ldrb	r0, [r1]
 	bl	IsAbilityPreventingEscape
 	cmp	r0, #0
-	beq	.LCB894
+	beq	.LCB895
 	b	.L119	@long jump
-.LCB894:
+.LCB895:
 	ldr	r5, .L144+0x4
 	ldrb	r2, [r6]
 	mov	r4, #0x5c
@@ -893,9 +894,9 @@ ChooseMoveOrAction_Singles:
 	ldr	r1, .L144+0x8
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.LCB906
+	beq	.LCB907
 	b	.L119	@long jump
-.LCB906:
+.LCB907:
 	ldr	r1, .L144+0xc
 	lsl	r0, r2, #0x2
 	add	r0, r0, r1
@@ -904,18 +905,18 @@ ChooseMoveOrAction_Singles:
 	lsl	r1, r1, #0x3
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.LCB915
+	beq	.LCB916
 	b	.L119	@long jump
-.LCB915:
+.LCB916:
 	ldr	r0, .L144+0x10
 	ldr	r0, [r0]
 	mov	r1, #0xc0
 	lsl	r1, r1, #0xb
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.LCB922
+	beq	.LCB923
 	b	.L119	@long jump
-.LCB922:
+.LCB923:
 	mov	r2, r8
 	ldr	r0, [r2]
 	ldr	r0, [r0, #0x14]
@@ -923,9 +924,9 @@ ChooseMoveOrAction_Singles:
 	mov	r1, #0x47
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.LCB930
+	bne	.LCB931
 	b	.L119	@long jump
-.LCB930:
+.LCB931:
 	mov	r1, r9
 	ldrb	r0, [r1]
 	mul	r0, r0, r4
@@ -1411,9 +1412,9 @@ ChooseMoveOrAction_Doubles:
 	add	r8, r8, r1
 	mov	r2, r8
 	cmp	r2, #0x3
-	bgt	.LCB1571
+	bgt	.LCB1572
 	b	.L154	@long jump
-.LCB1571:
+.LCB1572:
 	mov	r0, sp
 	ldrh	r5, [r0]
 	mov	r0, #0x0
@@ -1498,9 +1499,9 @@ BattleAI_DoAIProcessing:
 	ldrb	r0, [r0]
 	add	r6, r7, #0
 	cmp	r0, #0x2
-	bne	.LCB1688
+	bne	.LCB1689
 	b	.L202	@long jump
-.LCB1688:
+.LCB1689:
 	mov	r9, r7
 	ldr	r0, .L220+0x4
 	mov	r8, r0
@@ -1636,9 +1637,9 @@ BattleAI_DoAIProcessing:
 	ldr	r0, [r0, #0x14]
 	ldrb	r0, [r0]
 	cmp	r0, #0x2
-	beq	.LCB1860
+	beq	.LCB1861
 	b	.L203	@long jump
-.LCB1860:
+.LCB1861:
 .L202:
 	pop	{r3, r4}
 	mov	r8, r3
@@ -4781,17 +4782,17 @@ Cmd_get_how_powerful_move_is:
 	add	r0, r0, r6
 	ldrb	r0, [r0, #0x2]
 	cmp	r0, #0
-	bne	.LCB5692
+	bne	.LCB5693
 	b	.L638	@long jump
-.LCB5692:
+.LCB5693:
 	lsl	r0, r4, #0x1
 	add	r0, r0, r5
 	ldrh	r1, [r0]
 	ldr	r0, .L678+0x4
 	cmp	r1, r0
-	beq	.LCB5703
+	beq	.LCB5704
 	b	.L638	@long jump
-.LCB5703:
+.LCB5704:
 	mov	r0, #0x0
 	ldr	r2, .L678+0x10
 	mov	ip, r2

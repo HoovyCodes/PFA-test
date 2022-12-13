@@ -2842,6 +2842,8 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
         value = personality & 1;
         SetBoxMonData(boxMon, MON_DATA_ABILITY_NUM, &value);
     }
+	value = HIDDEN_NATURE_NONE;
+	SetBoxMonData(boxMon, MON_DATA_HIDDEN_NATURE, &value);
 
     GiveBoxMonInitialMoveset(boxMon);
 }
@@ -3250,7 +3252,7 @@ static u16 GetDeoxysStat(struct Pokemon *mon, s32 statId)
     ivVal = GetMonData(mon, MON_DATA_HP_IV + statId, NULL);
     evVal = GetMonData(mon, MON_DATA_HP_EV + statId, NULL);
     statValue = ((sDeoxysBaseStats[statId] * 2 + ivVal + evVal / 4) * mon->level) / 100 + 5;
-    nature = GetNature(mon);
+    nature = GetNature(mon, TRUE);
     statValue = ModifyStatByNature(nature, statValue, (u8)statId);
     return statValue;
 }
@@ -3358,7 +3360,7 @@ static u16 CalculateBoxMonChecksum(struct BoxPokemon *boxMon)
 {                                                               \
     u8 baseStat = gBaseStats[species].base;                     \
     s32 n = (((2 * baseStat + iv + ev / 4) * level) / 100) + 5; \
-    u8 nature = GetNature(mon);                                 \
+    u8 nature = GetNature(mon, TRUE);                                 \
     n = ModifyStatByNature(nature, n, statIndex);               \
     SetMonData(mon, field, &n);                                 \
 }
@@ -3418,10 +3420,11 @@ void CalculateMonStats(struct Pokemon *mon)
     {
         if (currentHP == 0 && oldMaxHP == 0)
             currentHP = newMaxHP;
-        else if (currentHP != 0)
-            // BUG: currentHP is unintentionally able to become <= 0 after the instruction below. This causes the pomeg berry glitch.
-            // To fix that set currentHP = 1 if currentHP <= 0.
+        else if (currentHP != 0){
             currentHP += newMaxHP - oldMaxHP;
+			if (currentHP <= 0)
+				currentHP = 1;
+		}
         else
             return;
     }
@@ -4293,6 +4296,9 @@ u32 GetBoxMonData(struct BoxPokemon *boxMon, s32 field, u8 *data)
                 | (substruct3->giftRibbon7 << 26);
         }
         break;
+		case MON_DATA_HIDDEN_NATURE:
+        retVal = substruct0->hiddenNature;
+        break;
     default:
         break;
     }
@@ -4611,6 +4617,9 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
         substruct3->spDefenseIV = (ivs >> 25) & 0x1F;
         break;
     }
+	case MON_DATA_HIDDEN_NATURE:
+        SET8(substruct0->hiddenNature);
+        break;
     default:
         break;
     }
@@ -5226,6 +5235,11 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                             if (dataUnsigned == 0)
                                 dataUnsigned = 1;
                             break;
+						case ITEM6_HEAL_QUARTER:
+							dataUnsigned = GetMonData(mon, MON_DATA_MAX_HP, NULL) / 4;
+							if (dataUnsigned == 0)
+								dataUnsigned = 1;
+							break;
                         case ITEM6_HEAL_LVL_UP:
                             dataUnsigned = gBattleScripting.levelUpHP;
                             break;
@@ -5680,9 +5694,12 @@ u8 *UseStatIncreaseItem(u16 itemId)
     return gDisplayedStringBattle;
 }
 
-u8 GetNature(struct Pokemon *mon)
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden)
 {
-    return GetMonData(mon, MON_DATA_PERSONALITY, 0) % NUM_NATURES;
+    if (!checkHidden || GetMonData(mon, MON_DATA_HIDDEN_NATURE, 0) == HIDDEN_NATURE_NONE)
+        return GetNatureFromPersonality(GetMonData(mon, MON_DATA_PERSONALITY, 0));
+    else
+        return GetMonData(mon, MON_DATA_HIDDEN_NATURE, 0);
 }
 
 u8 GetNatureFromPersonality(u32 personality)
@@ -6686,7 +6703,20 @@ void ClearBattleMonForms(void)
 
 u16 GetBattleBGM(void)
 {
-    if (gBattleTypeFlags & BATTLE_TYPE_KYOGRE_GROUDON)
+	u8 chance=0;
+	if (VarGet(VAR_TEMP_8)==12 && !(gTrainerBattleOpponent_A == TRAINER_FRONTIER_BRAIN))
+	{
+		chance = Random()%3;
+		switch (chance){
+			case 0:
+				return MUS_VS_GYM_LEADER;
+			case 1:
+				return MUS_RG_VS_GYM_LEADER;
+			case 2:
+				return MUS_VS_LEADER_DPPT;
+		}
+	}
+    else if (gBattleTypeFlags & BATTLE_TYPE_KYOGRE_GROUDON)
         return MUS_VS_KYOGRE_GROUDON;
     else if (gBattleTypeFlags & BATTLE_TYPE_REGI)
         return MUS_VS_REGI;
@@ -6735,13 +6765,31 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_PYRAMID_KING:
             return MUS_VS_FRONTIER_BRAIN;
         default:
-            return MUS_VS_TRAINER;
-        }
-    }
-    else
-        return MUS_VS_WILD;
+			chance = Random()%5;
+			switch (chance){
+				case 0:
+					return MUS_VS_TRAINER;
+				case 1:
+					return MUS_VS_TRAINER_DPPT;
+				case 2:
+					return MUS_VS_TRAINER_HGSS;
+				case 3:
+					return MUS_VS_TRAINER_BW;
+				case 4:
+					return MUS_VS_TRAINER_COLO;
+			}
+		}
+	}
+    else{
+		chance = Random()%2;
+		switch (chance){
+			case 0:
+				return MUS_VS_WILD;
+			case 1:
+				return MUS_RG_VS_WILD;
+		}
+	}
 }
-
 void PlayBattleBGM(void)
 {
     ResetMapMusic();
@@ -6858,7 +6906,7 @@ bool8 IsMonSpriteNotFlipped(u16 species)
 
 s8 GetMonFlavorRelation(struct Pokemon *mon, u8 flavor)
 {
-    u8 nature = GetNature(mon);
+    u8 nature = GetNature(mon, FALSE);
     return gPokeblockFlavorCompatibilityTable[nature * FLAVOR_COUNT + flavor];
 }
 

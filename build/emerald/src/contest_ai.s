@@ -6232,19 +6232,20 @@ ContestAICmd_if_user_doesnt_have_exciting_move:
 	.type	 ContestAICmd_check_user_has_move,function
 	.thumb_func
 ContestAICmd_check_user_has_move:
-	push	{r4, r5, r6, lr}
-	mov	r6, #0x0
-	ldr	r3, .L780
-	ldr	r0, [r3]
-	ldrb	r5, [r0, #0x1]
+	push	{r4, r5, r6, r7, lr}
+	mov	r7, #0x0
+	ldr	r4, .L780
+	ldr	r0, [r4]
+	ldrb	r6, [r0, #0x1]
 	ldrb	r0, [r0, #0x2]
 	lsl	r0, r0, #0x8
-	orr	r5, r5, r0
-	mov	r4, #0x0
-	ldr	r0, .L780+0x4
+	orr	r6, r6, r0
+	mov	r5, #0x0
+	ldr	r2, .L780+0x4
+	ldr	r0, .L780+0x8
 	mov	ip, r0
-	ldr	r2, .L780+0x8
-	ldr	r0, [r2]
+	ldr	r3, .L780+0xc
+	ldr	r0, [r3]
 	ldr	r0, [r0, #0xc]
 	add	r0, r0, #0x41
 	ldrb	r0, [r0]
@@ -6258,14 +6259,15 @@ ContestAICmd_check_user_has_move:
 	.align	2, 0
 .L780:
 	.word	gAIScriptPtr
+	.word	gContestMoves
 	.word	gContestMons
 	.word	gContestResources
 .L775:
-	add	r4, r4, #0x1
-	cmp	r4, #0x3
+	add	r5, r5, #0x1
+	cmp	r5, #0x3
 	bgt	.L774	@cond_branch
-	lsl	r1, r4, #0x1
-	ldr	r0, [r2]
+	lsl	r1, r5, #0x1
+	ldr	r0, [r3]
 	ldr	r0, [r0, #0xc]
 	add	r0, r0, #0x41
 	ldrb	r0, [r0]
@@ -6276,17 +6278,20 @@ ContestAICmd_check_user_has_move:
 	add	r1, r1, r0
 	ldrh	r0, [r1]
 .L779:
-	cmp	r0, r5
+	lsl	r0, r0, #0x3
+	add	r0, r0, r2
+	ldrb	r0, [r0]
+	cmp	r0, r6
 	bne	.L775	@cond_branch
-	mov	r6, #0x1
+	mov	r7, #0x1
 .L774:
-	ldr	r0, [r2]
-	ldr	r0, [r0, #0xc]
-	strh	r6, [r0, #0x18]
 	ldr	r0, [r3]
+	ldr	r0, [r0, #0xc]
+	strh	r7, [r0, #0x18]
+	ldr	r0, [r4]
 	add	r0, r0, #0x3
-	str	r0, [r3]
-	pop	{r4, r5, r6}
+	str	r0, [r4]
+	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
 .Lfe140:

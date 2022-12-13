@@ -744,8 +744,9 @@ bool8 TextPrinterWaitAutoMode(struct TextPrinter *textPrinter)
 {
     struct TextPrinterSubStruct *subStruct = (struct TextPrinterSubStruct *)(&textPrinter->subStructFields);
 
-    if (subStruct->autoScrollDelay == 49)
+    if ((subStruct->autoScrollDelay == 30))
     {
+		subStruct->autoScrollDelay = 0;
         return TRUE;
     }
     else
@@ -844,13 +845,13 @@ u16 RenderText(struct TextPrinter *textPrinter)
     switch (textPrinter->state)
     {
     case 0:
-        if ((JOY_HELD(A_BUTTON | B_BUTTON)) && subStruct->hasPrintBeenSpedUp)
+        if (subStruct->hasPrintBeenSpedUp)
             textPrinter->delayCounter = 0;
 
         if (textPrinter->delayCounter && textPrinter->textSpeed)
         {
             textPrinter->delayCounter--;
-            if (gTextFlags.canABSpeedUpPrint && (JOY_NEW(A_BUTTON | B_BUTTON)))
+            if (gTextFlags.canABSpeedUpPrint)
             {
                 subStruct->hasPrintBeenSpedUp = TRUE;
                 textPrinter->delayCounter = 0;

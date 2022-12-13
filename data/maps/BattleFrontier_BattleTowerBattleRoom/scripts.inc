@@ -40,7 +40,7 @@ BattleFrontier_BattleTowerBattleRoom_EventScript_OpponentEnter:: @ 8241BC3
 	addobject LOCALID_OPPONENT
 	applymovement LOCALID_OPPONENT, BattleFrontier_BattleTowerBattleRoom_Movement_OpponentEnter
 	waitmovement 0
-	tower_getopponentintro 0
+	special getintro
 	msgbox gStringVar4, MSGBOX_DEFAULT
 	waitmessage
 	call BattleFrontier_BattleTowerBattleRoom_EventScript_DoTowerBattle
@@ -69,8 +69,6 @@ BattleFrontier_BattleTowerBattleRoom_EventScript_DefeatedOpponent:: @ 8241C2F
 	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattleTowerBattleRoom_Movement_PlayerFaceAttendant
 	waitmovement 0
 	msgbox BattleFrontier_BattleTowerBattleRoom_Text_RestoreMonsToFullHealth, MSGBOX_DEFAULT
-	playfanfare MUS_HEAL
-	waitfanfare
 	special HealPlayerParty
 BattleFrontier_BattleTowerBattleRoom_EventScript_AskReadyForOpponent:: @ 8241C8F
 	frontier_getbrainstatus
@@ -311,6 +309,9 @@ BattleFrontier_BattleTowerBattleRoom_EventScript_DoTowerBattle:: @ 824210E
 	closemessage
 	setvar VAR_TEMP_2, 0
 	frontier_set FRONTIER_DATA_RECORD_DISABLED, FALSE
+	frontier_get FRONTIER_DATA_BATTLE_NUM
+	compare VAR_RESULT, 6
+	call_if_eq BattleFrontier_BattleTowerBattleRoom_EventScript_ChangeMusic
 	special HealPlayerParty
 	setvar VAR_0x8004, SPECIAL_BATTLE_TOWER
 	setvar VAR_0x8005, 0
@@ -325,6 +326,8 @@ BattleFrontier_BattleTowerBattleRoom_EventScript_DoTowerBattle:: @ 824210E
 BattleFrontier_BattleTowerBattleRoom_EventScript_EndTowerBattle:: @ 824215A
 	tower_setinterviewdata
 	frontier_get FRONTIER_DATA_BATTLE_OUTCOME
+BattleFrontier_BattleTowerBattleRoom_EventScript_ChangeMusic::
+	setvar VAR_TEMP_8, 12
 	return
 
 BattleFrontier_EventScript_SetBrainObjectGfx:: @ 8242170
@@ -332,9 +335,9 @@ BattleFrontier_EventScript_SetBrainObjectGfx:: @ 8242170
 	return
 
 BattleFrontier_BattleTowerBattleRoom_Movement_PlayerEnter: @ 8242179
-	walk_up
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	face_right
 	step_end
 
@@ -347,32 +350,32 @@ BattleFrontier_BattleTowerBattleRoom_Movement_PlayerFaceBattle: @ 8242180
 	step_end
 
 BattleFrontier_BattleTowerBattleRoom_Movement_OpponentEnter: @ 8242182
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
 	face_left
 	step_end
 
 BattleFrontier_BattleTowerBattleRoom_Movement_OpponentExit: @ 8242188
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 BattleFrontier_BattleTowerBattleRoom_Movement_AttendantApproachPlayer: @ 824218D
-	walk_right
-	walk_right
-	walk_right
-	walk_up
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_up
 	step_end
 
 BattleFrontier_BattleTowerBattleRoom_Movement_AttendantReturnToPos: @ 8242192
-	walk_down
-	walk_left
-	walk_left
-	walk_left
+	walk_fast_down
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
 	face_right
 	step_end
 
@@ -383,16 +386,16 @@ BattleFrontier_BattleTowerBattleRoom_Movement_SetInvisible: @ 8242198
 BattleFrontier_BattleTowerBattleRoom_Movement_SecondAttendantEnter: @ 824219A
 	set_visible
 	delay_16
-	walk_up
-	walk_left
-	walk_left
+	walk_fast_up
+	walk_fast_left
+	walk_fast_left
 	delay_8
 	step_end
 
 BattleFrontier_BattleTowerBattleRoom_Movement_SecondAttendantExit: @ 82421A1
-	walk_right
-	walk_right
-	walk_down
+	walk_fast_right
+	walk_fast_right
+	walk_fast_down
 	set_invisible
 	step_end
 
@@ -454,8 +457,8 @@ BattleFrontier_BattleTowerBattleRoom_EventScript_RetireChallenge:: @ 824220E
 	end
 
 BattleFrontier_BattleTowerBattleRoom_Text_RestoreMonsToFullHealth: @ 8242217
-	.string "We will restore your POKéMON to\n"
-	.string "full health.$"
+	.string "Your Pokémon have been\n"
+	.string "restored to full health.$"
 
 @ Unused
 BattleFrontier_BattleTowerBattleRoom_Text_ReadyForOpponent: @ 8242244
@@ -488,11 +491,11 @@ BattleFrontier_BattleTowerBattleRoom_Text_ReadyFor7thOpponent: @ 8242371
 
 BattleFrontier_BattleTowerBattleRoom_Text_RecordYourBattle: @ 82423A3
 	.string "Record your battle on your\n"
-	.string "FRONTIER PASS?$"
+	.string "Frontier Pass?$"
 
 BattleFrontier_BattleTowerLobby_Text_BattleRecordedOnPass: @ 82423CD
 	.string "{PLAYER}'s battle was recorded\n"
-	.string "on the FRONTIER PASS.$"
+	.string "on the Frontier Pass.$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_SaveAndQuitGame: @ 82423FC
 	.string "Would you like to save and\n"
@@ -503,8 +506,8 @@ BattleFrontier_BattleTowerBattleRoom_Text_SavingPleaseWait: @ 8242426
 	.string "Please wait.$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_CancelYourChallenge: @ 824244C
-	.string "Would you like to cancel your BATTLE\n"
-	.string "ROOM challenge?$"
+	.string "Would you like to cancel your Battle\n"
+	.string "Room challenge?$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_RecordCouldntBeSaved:: @ 8242481
 	.string "There was an error of some sort.\n"
@@ -512,19 +515,19 @@ BattleFrontier_BattleTowerBattleRoom_Text_RecordCouldntBeSaved:: @ 8242481
 
 BattleFrontier_BattleTowerBattleRoom_Text_SalonMaidenOnHerWay: @ 82424C2
 	.string "Excuse me, but…\p"
-	.string "Our leader, the SALON MAIDEN, is on\n"
+	.string "Our leader, the Salon Maiden, is on\n"
 	.string "her way here in hopes of battling you.\p"
 	.string "She should be arriving very shortly.$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_ReadyForSalonMaiden: @ 8242542
-	.string "You will be facing the SALON MAIDEN.\n"
+	.string "You will be facing the Salon Maiden.\n"
 	.string "Are you prepared?$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_GreetingsImAnabel: @ 8242579
 	.string "Greetings…\n"
-	.string "My name is ANABEL.\p"
-	.string "I am the SALON MAIDEN, and I am in\n"
-	.string "charge of running the BATTLE TOWER…\p"
+	.string "My name is Anabel.\p"
+	.string "I am the Salon Maiden, and I am in\n"
+	.string "charge of running the Battle Tower…\p"
 	.string "I have heard several rumors\n"
 	.string "about you…\p"
 	.string "In all honesty, what I have heard does\n"
@@ -537,17 +540,17 @@ BattleFrontier_BattleTowerBattleRoom_Text_LetMeSeeYourTalent: @ 824268C
 	.string "its entirety…$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_AnabelTalentShallBeRecognized: @ 82426B4
-	.string "ANABEL: Fufufu, nicely done…\p"
-	.string "Your FRONTIER PASS, please…\n"
+	.string "Anabel: Fufufu, nicely done…\p"
+	.string "Your Frontier Pass, please…\n"
 	.string "Your talent shall be recognized.$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_ReceivedAbilitySymbol: @ 824270E
 	.string "The Ability Symbol was embossed on\n"
-	.string "the FRONTIER PASS!$"
+	.string "the Frontier Pass!$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_UntilNextTime: @ 8242744
 	.string "… … … … … …\p"
-	.string "You have confidence in your POKéMON\n"
+	.string "You have confidence in your Pokémon\n"
 	.string "battling talent, don't you?\p"
 	.string "I urge you to keep battling and\n"
 	.string "keep on winning.\p"
@@ -555,7 +558,7 @@ BattleFrontier_BattleTowerBattleRoom_Text_UntilNextTime: @ 8242744
 	.string "Until the next time we meet…$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_AnabelYouCameBack: @ 82427F9
-	.string "ANABEL: You really did come back to\n"
+	.string "Anabel: You really did come back to\n"
 	.string "see me…\p"
 	.string "… … … … … …\p"
 	.string "You've won straight matches to see me…\n"
@@ -568,8 +571,8 @@ BattleFrontier_BattleTowerBattleRoom_Text_LetsBeginShallWe: @ 82428E0
 	.string "Let's begin, shall we?$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_AnabelCongratsYourPassPlease: @ 82428F7
-	.string "ANABEL: Fufu, congratulations…\n"
-	.string "Your FRONTIER PASS, please…$"
+	.string "Anabel: Fufu, congratulations…\n"
+	.string "Your Frontier Pass, please…$"
 
 BattleFrontier_BattleTowerBattleRoom_Text_AbilitySymbolTookGoldenShine: @ 8242932
 	.string "The Ability Symbol took on\n"
@@ -577,7 +580,7 @@ BattleFrontier_BattleTowerBattleRoom_Text_AbilitySymbolTookGoldenShine: @ 824293
 
 BattleFrontier_BattleTowerBattleRoom_Text_WishICouldBattleYouAgain: @ 824295D
 	.string "That was fun…\p"
-	.string "I have never had a POKéMON battle\n"
+	.string "I have never had a Pokémon battle\n"
 	.string "so enjoyable before…\p"
 	.string "I wish I could battle with you again…$"
 

@@ -13,6 +13,8 @@
 #include "palette.h"
 #include "script.h"
 #include "battle_setup.h"
+#include "string_util.h"
+#include "international_string_util.h"
 #include "constants/event_objects.h"
 #include "constants/battle_frontier.h"
 #include "constants/frontier_util.h"
@@ -189,7 +191,7 @@ static const struct PikeWildMon sLvlOpen_Mons1[] =
         .moves = {MOVE_TOXIC, MOVE_HYPNOSIS, MOVE_BODY_SLAM, MOVE_ICE_BEAM}
     },
     {
-        .species = SPECIES_DUSCLOPS,
+        .species = SPECIES_DUSKNOIR,
         .levelDelta = 5,
         .moves = {MOVE_WILL_O_WISP, MOVE_MEAN_LOOK, MOVE_TOXIC, MOVE_ICE_BEAM}
     }
@@ -208,9 +210,9 @@ static const struct PikeWildMon sLvlOpen_Mons2[] =
         .moves = {MOVE_TOXIC, MOVE_HYPNOSIS, MOVE_BODY_SLAM, MOVE_ICE_BEAM}
     },
     {
-        .species = SPECIES_ELECTRODE,
+        .species = SPECIES_TOGEDEMARU,
         .levelDelta = 5,
-        .moves = {MOVE_EXPLOSION, MOVE_SELF_DESTRUCT, MOVE_THUNDER, MOVE_TOXIC}
+        .moves = {MOVE_NUZZLE, MOVE_SPIKY_SHIELD, MOVE_THUNDER, MOVE_TOXIC}
     }
 };
 
@@ -227,7 +229,7 @@ static const struct PikeWildMon sLvlOpen_Mons3[] =
         .moves = {MOVE_TOXIC, MOVE_HYPNOSIS, MOVE_BODY_SLAM, MOVE_ICE_BEAM}
     },
     {
-        .species = SPECIES_BRELOOM,
+        .species = SPECIES_SHIINOTIC,
         .levelDelta = 5,
         .moves = {MOVE_SPORE, MOVE_STUN_SPORE, MOVE_POISON_POWDER, MOVE_HIDDEN_POWER}
     }
@@ -420,6 +422,7 @@ static const struct PikeRoomNPC sNPCTable[] =
     }
 };
 
+
 static const u16 sNPCSpeeches[][EASY_CHAT_BATTLE_WORDS_COUNT] =
 {
     {EC_WORD_I_AM, EC_WORD_LOST, EC_WORD_I, EC_WORD_NEED, EC_WORD_A, EC_MOVE2(HELPING_HAND)},
@@ -434,11 +437,11 @@ static const u16 sNPCSpeeches[][EASY_CHAT_BATTLE_WORDS_COUNT] =
     {EC_WORD_READY, EC_WORD_TO, EC_WORD_GIVE_UP, EC_WORD_YET, EC_WORD_QUES, 0xFFFF},
     {EC_WORD_OH, EC_WORD_NO, EC_WORD_WHO, EC_WORD_ARE, EC_WORD_YOU, EC_WORD_QUES},
     {EC_WORD_I_VE, EC_WORD_BEEN, EC_WORD_WANDERING, EC_WORD_ABOUT, EC_WORD_FOREVER, EC_WORD_ELLIPSIS},
-    {EC_WORD_I, EC_WORD_THINK, EC_WORD_I, EC_WORD_WILL, EC_WORD_GIVE_UP, 0xFFFF},
+    {EC_WORD_I, EC_WORD_THINK, EC_WORD_I, EC_WORD_WILL, EC_WORD_GIVE_UP, 0xFFFF}, 
     {EC_WORD_WHAT, EC_WORD_SHOULD, EC_WORD_I, EC_WORD_DO, EC_WORD_NEXT, EC_WORD_QUES},
     {EC_WORD_I, EC_WORD_CAN_WIN, EC_WORD_WITH, EC_WORD_MY, EC_MOVE(SHEER_COLD), EC_WORD_GENIUS},
     {EC_WORD_WON_T, EC_WORD_SOMEONE, EC_WORD_COOL, EC_WORD_SHOW, EC_WORD_UP, EC_WORD_QUES},
-    {EC_WORD_BATTLE, EC_WORD_GAME, EC_WORD_IS, EC_WORD_AWESOME, EC_WORD_EXCL, 0xFFFF},
+    {EC_WORD_BATTLE, EC_WORD_GAME, EC_WORD_IS, EC_WORD_AWESOME, EC_WORD_EXCL, 0xFFFF}, //
     {EC_WORD_I, EC_WORD_CAN_T, EC_WORD_TAKE, EC_WORD_THIS, EC_WORD_ANY, EC_WORD_MORE},
     {EC_WORD_I, EC_WORD_DON_T, EC_WORD_KNOW, EC_WORD_IF, EC_WORD_IT_S, EC_WORD_OKAY},
     {EC_WORD_OH, EC_WORD_NO, EC_WORD_EXCL, EC_WORD_NOT, EC_WORD_ANOTHER, EC_WORD_TRAINER},
@@ -447,7 +450,7 @@ static const u16 sNPCSpeeches[][EASY_CHAT_BATTLE_WORDS_COUNT] =
     {EC_WORD_THIS, EC_WORD_IS, EC_WORD_TOTALLY, EC_WORD_EASY, EC_WORD_ISN_T_IT_QUES, 0xFFFF},
     {EC_WORD_I_AM, EC_WORD_GOING, EC_WORD_TO, EC_WORD_POWER, EC_WORD_ON, 0xFFFF},
     {EC_WORD_THERE, EC_WORD_IS, EC_WORD_NO, EC_WORD_GIVE_UP, EC_WORD_IN, EC_WORD_ME},
-    {EC_WORD_I_AM, EC_WORD_NOT, EC_WORD_GOING, EC_WORD_TO, EC_WORD_MAKE, EC_WORD_IT},
+    {EC_WORD_I_AM, EC_WORD_NOT, EC_WORD_GOING, EC_WORD_TO, EC_WORD_MAKE, EC_WORD_IT}, ////////////////
     {EC_WORD_GO, EC_WORD_ON, EC_WORD_I, EC_WORD_CAN_T, EC_WORD_ANY, EC_WORD_MORE},
     {EC_WORD_A, EC_WORD_TRAINER, EC_WORD_AFTER, EC_WORD_ANOTHER, EC_WORD_ELLIPSIS, 0xFFFF},
     {EC_WORD_DO, EC_WORD_YOU, EC_WORD_LIKE, EC_WORD_STEEL, EC_WORD_POKEMON, EC_WORD_QUES},
@@ -760,6 +763,59 @@ static void HealOneOrTwoMons(void)
     gSpecialVar_Result = toHeal;
 }
 
+static const u8 sText_Dia0[] = _("I'm lost.\n I need a helping hand.$");
+static const u8 sText_Dia1[] = _("I have no idea where I am.$");
+static const u8 sText_Dia2[] = _("What should I do now?$");
+static const u8 sText_Dia3[] = _("This is too exciting for me.$");
+static const u8 sText_Dia4[] = _("Did you make a mistake?$");
+static const u8 sText_Dia5[] = _("It's mean and awful in here.$");
+static const u8 sText_Dia6[] = _("I'm so tired of this place.$");
+static const u8 sText_Dia7[] = _("I quite enjoy this challenge.$");
+static const u8 sText_Dia8[] = _("Look at how I tackle this.$");
+static const u8 sText_Dia9[] = _("Ready to give up yet?.$");
+static const u8 sText_Dia10[] = _("Oh no! Who are you?$");
+static const u8 sText_Dia11[] = _("I've been wandering for about forever...$");
+static const u8 sText_Dia12[] = _("I think I'll give up now.$");
+
+static const u8 sText_Dia13[] = _("What should I do next?$");
+static const u8 sText_Dia14[] = _("Ready to give up yet?.$");
+static const u8 sText_Dia15[] = _("I can win with my sheer genius!$");
+static const u8 sText_Dia16[] = _("Won't someone cool show up?$");
+static const u8 sText_Dia17[] = _("The Battle Pike is awesome!$");
+
+static const u8 sText_Dia18[] = _("I can't take this any more!$");
+static const u8 sText_Dia19[] = _("I don't know if this is OK.$");
+static const u8 sText_Dia20[] = _("I've got to pick left next.$");
+static const u8 sText_Dia21[] = _("It must be over soon, right?$");
+static const u8 sText_Dia22[] = _("This is totally easy, yeah?$");
+
+static const u8 sText_Dia23[] = _("I'm going to power on.$");
+static const u8 sText_Dia24[] = _("There's no way I can give up now.$");
+static const u8 sText_Dia25[] = _("I'm not going to make it!$");
+
+static const u8 sText_Dia26[] = _("Go on ahead. I'm done for.$");
+static const u8 sText_Dia27[] = _("It's one trainer after another...$");
+static const u8 sText_Dia28[] = _("Do you like Steel-types?$");
+
+static const u8 sText_Dia29[] = _("Every trainer here's so weak.$");
+static const u8 sText_Dia30[] = _("Do you think this's easy?$");
+static const u8 sText_Dia31[] = _("What'll be next?$");
+
+
+static const u8 sText_Dia32[] = _("I'm just so confused!$");
+static const u8 sText_Dia33[] = _("I just want to go home...$");
+static const u8 sText_Dia34[] = _("Yeehaw! This place is a pushover.$");
+
+static const u8 sText_Dia35[] = _("I haven't been in a battle yet.$");
+static const u8 sText_Dia36[] = _("Maybe it's right next? I hope so...$");
+static const u8 sText_Dia37[] = _("Waah! It wasn't this way!$");
+
+static const u8 sText_Dia38[] = _("My Pokémon are too tired...$");
+static const u8 sText_Dia39[] = _("My Pokémon aren't weak to poison.$");
+static const u8 sText_Dia40[] = _("Lalala! Lalala! I'm so awesome!$");
+
+static const u8 sText_Dia41[] = _("Toxic is a terrible thing, isn't it?$");
+
 static void BufferNPCMessage(void)
 {
     int speechId;
@@ -770,8 +826,134 @@ static void BufferNPCMessage(void)
         speechId = sNPCTable[sNpcId].speechId2;
     else
         speechId = sNPCTable[sNpcId].speechId3;
-
-    FrontierSpeechToString(sNPCSpeeches[speechId]);
+	switch (speechId){
+		case 0:
+    StringCopy(gStringVar4, sText_Dia0);
+    break;
+case 1:
+    StringCopy(gStringVar4, sText_Dia1);
+    break;
+case 2:
+    StringCopy(gStringVar4, sText_Dia2);
+    break;
+case 3:
+    StringCopy(gStringVar4, sText_Dia3);
+    break;
+case 4:
+    StringCopy(gStringVar4, sText_Dia4);
+    break;
+case 5:
+    StringCopy(gStringVar4, sText_Dia5);
+    break;
+case 6:
+    StringCopy(gStringVar4, sText_Dia6);
+    break;
+case 7:
+    StringCopy(gStringVar4, sText_Dia7);
+    break;
+case 8:
+    StringCopy(gStringVar4, sText_Dia8);
+    break;
+case 9:
+    StringCopy(gStringVar4, sText_Dia9);
+    break;
+case 10:
+    StringCopy(gStringVar4, sText_Dia10);
+    break;
+case 11:
+    StringCopy(gStringVar4, sText_Dia11);
+    break;
+case 12:
+    StringCopy(gStringVar4, sText_Dia12);
+    break;
+case 13:
+    StringCopy(gStringVar4, sText_Dia13);
+    break;
+case 14:
+    StringCopy(gStringVar4, sText_Dia14);
+    break;
+case 15:
+    StringCopy(gStringVar4, sText_Dia15);
+    break;
+case 16:
+    StringCopy(gStringVar4, sText_Dia16);
+    break;
+case 17:
+    StringCopy(gStringVar4, sText_Dia17);
+    break;
+case 18:
+    StringCopy(gStringVar4, sText_Dia18);
+    break;
+case 19:
+    StringCopy(gStringVar4, sText_Dia19);
+    break;
+case 20:
+    StringCopy(gStringVar4, sText_Dia20);
+    break;
+case 21:
+    StringCopy(gStringVar4, sText_Dia21);
+    break;
+case 22:
+    StringCopy(gStringVar4, sText_Dia22);
+    break;
+case 23:
+    StringCopy(gStringVar4, sText_Dia23);
+    break;
+case 24:
+    StringCopy(gStringVar4, sText_Dia24);
+    break;
+case 25:
+    StringCopy(gStringVar4, sText_Dia25);
+    break;
+case 26:
+    StringCopy(gStringVar4, sText_Dia26);
+    break;
+case 27:
+    StringCopy(gStringVar4, sText_Dia27);
+    break;
+case 28:
+    StringCopy(gStringVar4, sText_Dia28);
+    break;
+case 29:
+    StringCopy(gStringVar4, sText_Dia29);
+    break;
+case 30:
+    StringCopy(gStringVar4, sText_Dia30);
+    break;
+case 31:
+    StringCopy(gStringVar4, sText_Dia31);
+    break;
+case 32:
+    StringCopy(gStringVar4, sText_Dia32);
+    break;
+case 33:
+    StringCopy(gStringVar4, sText_Dia33);
+    break;
+case 34:
+    StringCopy(gStringVar4, sText_Dia34);
+    break;
+case 35:
+    StringCopy(gStringVar4, sText_Dia35);
+    break;
+case 36:
+    StringCopy(gStringVar4, sText_Dia36);
+    break;
+case 37:
+    StringCopy(gStringVar4, sText_Dia37);
+    break;
+case 38:
+    StringCopy(gStringVar4, sText_Dia38);
+    break;
+case 39:
+    StringCopy(gStringVar4, sText_Dia39);
+    break;
+case 40:
+    StringCopy(gStringVar4, sText_Dia40);
+    break;
+case 41:
+    StringCopy(gStringVar4, sText_Dia41);
+    break;
+	}
 }
 
 static void StatusInflictionScreenFlash(void)

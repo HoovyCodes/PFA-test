@@ -2742,20 +2742,20 @@ sMapName_SafariZone:
 	.type	 sMapName_BattleFrontier,object
 sMapName_BattleFrontier:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xc0
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 sMapName_BattleFrontier,16
 	.type	 sMapName_PetalburgWoods,object
@@ -3121,16 +3121,16 @@ sMapName_SkyPillar:
 	.type	 sMapName_SecretBase,object
 sMapName_SecretBase:
 	.byte	0xcd
-	.byte	0xbf
-	.byte	0xbd
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xce
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xff
 	.size	 sMapName_SecretBase,12
 	.type	 sMapName_None,object

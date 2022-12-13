@@ -1817,7 +1817,7 @@ static u16 GetFrontierStreakInfo(u16 facilityId, u32 *topicTextId)
         }
         *topicTextId = 3;
         break;
-    case FRONTIER_FACILITY_FACTORY:
+    case FRONTIER_FACILITY_PIKE:
         for (i = 0; i < 2; i++)
         {
             // BUG: should be looking at battle factory records.
@@ -1848,7 +1848,7 @@ static u16 GetFrontierStreakInfo(u16 facilityId, u32 *topicTextId)
         }
         *topicTextId = 2;
         break;
-    case FRONTIER_FACILITY_PIKE:
+    case FRONTIER_FACILITY_FACTORY:
         for (i = 0; i < 2; i++)
         {
             for (j = 0; j < 2; j++)

@@ -4689,7 +4689,7 @@ const struct MonCoords gMonBackPicCoords[] =
     [SPECIES_ROTOM_FROST] =
     {
         .size = 0x77,
-        .y_offset = 5,
+        .y_offset = 6,
     },
     [SPECIES_ROTOM_FAN] =
     {
@@ -5097,7 +5097,7 @@ const struct MonCoords gMonBackPicCoords[] =
     [SPECIES_FURFROU_DEBUTANTE_TRIM] =
     {
         .size = 0x78,
-        .y_offset = 0,
+        .y_offset = 1,
     },
     [SPECIES_FURFROU_MATRON_TRIM] =
     {

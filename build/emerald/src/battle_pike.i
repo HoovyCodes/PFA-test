@@ -1,6 +1,6 @@
-# 1 "src/battle_pike.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/battle_pike.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/battle_pike.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -3432,6 +3432,13 @@ void ClearIllusionMon(u32 battlerId);
 bool32 SetIllusionMon(struct Pokemon *mon, u32 battlerId);
 bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
 u8 GetBattleMoveSplit(u32 moveId);
+bool32 CanSleep(u8 battlerId);
+bool32 CanBePoisoned(u8 battlerId);
+bool32 CanBeBurned(u8 battlerId);
+bool32 CanBeParalyzed(u8 battlerId);
+bool32 CanBeFrozen(u8 battlerId);
+bool32 CanBeConfused(u8 battlerId);
+bool32 IsBattlerTerrainAffected(u8 battlerId, u32 terrainFlag);
 # 9 "include/battle.h" 2
 # 1 "include/battle_script_commands.h" 1
 # 9 "include/battle_script_commands.h"
@@ -4097,8 +4104,9 @@ struct BattleStruct
     u8 sameMoveTurns[4];
     u16 moveEffect2;
     u16 changedSpecies[6];
+ u8 abilityPopUpSpriteIds[4][2];
 };
-# 579 "include/battle.h"
+# 580 "include/battle.h"
 struct BattleScripting
 {
     s32 painSplitHp;
@@ -4134,6 +4142,7 @@ struct BattleScripting
     u16 moveEffect;
     u16 multihitMoveEffect;
     u8 illusionNickHack;
+    bool8 fixedPopup;
 };
 
 
@@ -4208,6 +4217,7 @@ struct BattleBarInfo
     s32 oldValue;
     s32 receivedValue;
     s32 currValue;
+ u8 oddFrame;
 };
 
 struct BattleSpriteData
@@ -4578,7 +4588,7 @@ void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
 
-bool8 CanLearnTutorMove(u16, u8);
+bool32 CanLearnTutorMove(u16, u8);
 # 12 "src/battle_pike.c" 2
 # 1 "gflib/malloc.h" 1
 # 15 "gflib/malloc.h"
@@ -4881,22 +4891,544 @@ bool8 IsTrainerReadyForRematch(void);
 void ShouldTryGetTrainerScript(void);
 u16 CountBattledRematchTeams(u16 trainerId);
 # 16 "src/battle_pike.c" 2
-# 1 "include/constants/event_objects.h" 1
+# 1 "gflib/string_util.h" 1
+
+
+
+extern u8 gStringVar1[];
+extern u8 gStringVar2[];
+extern u8 gStringVar3[];
+extern u8 gStringVar4[];
+
+enum StringConvertMode
+{
+    STR_CONV_MODE_LEFT_ALIGN,
+    STR_CONV_MODE_RIGHT_ALIGN,
+    STR_CONV_MODE_LEADING_ZEROS
+};
+
+u8 *StringCopy10(u8 *dest, const u8 *src);
+u8 *StringGetEnd10(u8 *str);
+u8 *StringCopy7(u8 *dest, const u8 *src);
+u8 *StringCopy(u8 *dest, const u8 *src);
+u8 *StringAppend(u8 *dest, const u8 *src);
+u8 *StringCopyN(u8 *dest, const u8 *src, u8 n);
+u8 *StringAppendN(u8 *dest, const u8 *src, u8 n);
+u16 StringLength(const u8 *str);
+s32 StringCompare(const u8 *str1, const u8 *str2);
+s32 StringCompareN(const u8 *str1, const u8 *str2, u32 n);
+bool8 IsStringLengthAtLeast(const u8 *str, s32 n);
+u8 *ConvertIntToDecimalStringN(u8 *dest, s32 value, enum StringConvertMode mode, u8 n);
+u8 *ConvertUIntToDecimalStringN(u8 *dest, u32 value, enum StringConvertMode mode, u8 n);
+u8 *ConvertIntToHexStringN(u8 *dest, s32 value, enum StringConvertMode mode, u8 n);
+u8 *StringExpandPlaceholders(u8 *dest, const u8 *src);
+u8 *StringBraille(u8 *dest, const u8 *src);
+const u8 *GetExpandedPlaceholder(u32 id);
+u8 *StringFill(u8 *dest, u8 c, u16 n);
+u8 *StringCopyPadded(u8 *dest, const u8 *src, u8 c, u16 n);
+u8 *StringFillWithTerminator(u8 *dest, u16 n);
+u8 *StringCopyN_Multibyte(u8 *dest, u8 *src, u32 n);
+u32 StringLength_Multibyte(const u8 *str);
+u8 *WriteColorChangeControlCode(u8 *dest, u32 colorType, u8 color);
+bool32 IsStringJapanese(u8 *str);
+bool32 sub_800924C(u8 *str, s32 n);
+u8 GetExtCtrlCodeLength(u8 code);
+s32 StringCompareWithoutExtCtrlCodes(const u8 *str1, const u8 *str2);
+void ConvertInternationalString(u8 *s, u8 language);
+void StripExtCtrlCodes(u8 *str);
 # 17 "src/battle_pike.c" 2
-# 1 "include/constants/battle_frontier.h" 1
+# 1 "include/international_string_util.h" 1
+
+
+
+# 1 "include/menu.h" 1
+
+
+
+
+# 1 "gflib/text.h" 1
+# 272 "gflib/text.h"
+enum
+{
+    FONTATTR_MAX_LETTER_WIDTH,
+    FONTATTR_MAX_LETTER_HEIGHT,
+    FONTATTR_LETTER_SPACING,
+    FONTATTR_LINE_SPACING,
+    FONTATTR_UNKNOWN,
+    FONTATTR_COLOR_FOREGROUND,
+    FONTATTR_COLOR_BACKGROUND,
+    FONTATTR_COLOR_SHADOW
+};
+
+struct TextPrinterSubStruct
+{
+    u8 glyphId:4;
+    bool8 hasPrintBeenSpedUp:1;
+    u8 unk:3;
+    u8 downArrowDelay:5;
+    u8 downArrowYPosIdx:2;
+    bool8 hasGlyphIdBeenSet:1;
+    u8 autoScrollDelay;
+};
+
+struct TextPrinterTemplate
+{
+    const u8* currentChar;
+    u8 windowId;
+    u8 fontId;
+    u8 x;
+    u8 y;
+    u8 currentX;
+    u8 currentY;
+    u8 letterSpacing;
+    u8 lineSpacing;
+    u8 unk:4;
+    u8 fgColor:4;
+    u8 bgColor:4;
+    u8 shadowColor:4;
+};
+
+struct TextPrinter
+{
+    struct TextPrinterTemplate printerTemplate;
+
+    void (*callback)(struct TextPrinterTemplate *, u16);
+
+    u8 subStructFields[7];
+    u8 active;
+    u8 state;
+    u8 textSpeed;
+    u8 delayCounter;
+    u8 scrollDistance;
+    u8 minLetterSpacing;
+    u8 japanese;
+};
+
+struct FontInfo
+{
+    u16 (*fontFunction)(struct TextPrinter *x);
+    u8 maxLetterWidth;
+    u8 maxLetterHeight;
+    u8 letterSpacing;
+    u8 lineSpacing;
+    u8 unk:4;
+    u8 fgColor:4;
+    u8 bgColor:4;
+    u8 shadowColor:4;
+};
+
+extern const struct FontInfo *gFonts;
+
+struct GlyphWidthFunc
+{
+    u32 fontId;
+    u32 (*func)(u16 glyphId, bool32 isJapanese);
+};
+
+struct KeypadIcon
+{
+    u16 tileOffset;
+    u8 width;
+    u8 height;
+};
+
+typedef struct {
+    bool8 canABSpeedUpPrint:1;
+    bool8 useAlternateDownArrow:1;
+    bool8 autoScroll:1;
+    bool8 forceMidTextSpeed:1;
+} TextFlags;
+
+struct Struct_03002F90
+{
+    u32 unk0[8];
+    u32 unk20[8];
+    u32 unk40[8];
+    u32 unk60[8];
+    u8 width;
+    u8 height;
+};
+
+extern TextFlags gTextFlags;
+
+extern u8 gUnknown_03002F84;
+extern struct Struct_03002F90 gUnknown_03002F90;
+
+void SetFontsPointer(const struct FontInfo *fonts);
+void DeactivateAllTextPrinters(void);
+u16 AddTextPrinterParameterized(u8 windowId, u8 fontId, const u8 *str, u8 x, u8 y, u8 speed, void (*callback)(struct TextPrinterTemplate *, u16));
+bool16 AddTextPrinter(struct TextPrinterTemplate *template, u8 speed, void (*callback)(struct TextPrinterTemplate *, u16));
+void RunTextPrinters(void);
+bool16 IsTextPrinterActive(u8 id);
+u32 RenderFont(struct TextPrinter *textPrinter);
+void GenerateFontHalfRowLookupTable(u8 fgColor, u8 bgColor, u8 shadowColor);
+void SaveTextColors(u8 *fgColor, u8 *bgColor, u8 *shadowColor);
+void RestoreTextColors(u8 *fgColor, u8 *bgColor, u8 *shadowColor);
+void DecompressGlyphTile(const void *src_, void *dest_);
+u8 GetLastTextColor(u8 colorType);
+void CopyGlyphToWindow(struct TextPrinter *x);
+void ClearTextSpan(struct TextPrinter *textPrinter, u32 width);
+u8 GetMenuCursorDimensionByFont(u8, u8);
+
+u16 Font0Func(struct TextPrinter *textPrinter);
+u16 Font1Func(struct TextPrinter *textPrinter);
+u16 Font2Func(struct TextPrinter *textPrinter);
+u16 Font3Func(struct TextPrinter *textPrinter);
+u16 Font4Func(struct TextPrinter *textPrinter);
+u16 Font5Func(struct TextPrinter *textPrinter);
+u16 Font7Func(struct TextPrinter *textPrinter);
+u16 Font8Func(struct TextPrinter *textPrinter);
+
+void TextPrinterInitDownArrowCounters(struct TextPrinter *textPrinter);
+void TextPrinterDrawDownArrow(struct TextPrinter *textPrinter);
+void TextPrinterClearDownArrow(struct TextPrinter *textPrinter);
+bool8 TextPrinterWaitAutoMode(struct TextPrinter *textPrinter);
+bool16 TextPrinterWaitWithDownArrow(struct TextPrinter *textPrinter);
+bool16 TextPrinterWait(struct TextPrinter *textPrinter);
+void DrawDownArrow(u8 windowId, u16 x, u16 y, u8 bgColor, bool8 drawArrow, u8 *counter, u8 *yCoordIndex);
+u16 RenderText(struct TextPrinter *textPrinter);
+u32 GetStringWidthFixedWidthFont(const u8 *str, u8 fontId, u8 letterSpacing);
+u32 (*GetFontWidthFunc(u8 glyphId))(u16, bool32);
+s32 GetStringWidth(u8 fontId, const u8 *str, s16 letterSpacing);
+u8 RenderTextFont9(u8 *pixels, u8 fontId, u8 *str);
+u8 DrawKeypadIcon(u8 windowId, u8 keypadIconId, u16 x, u16 y);
+u8 GetKeypadIconTileOffset(u8 keypadIconId);
+u8 GetKeypadIconWidth(u8 keypadIconId);
+u8 GetKeypadIconHeight(u8 keypadIconId);
+void SetDefaultFontsPointer(void);
+u8 GetFontAttribute(u8 fontId, u8 attributeId);
+u8 GetMenuCursorDimensionByFont(u8 fontId, u8 whichDimension);
+void DecompressGlyphFont0(u16 glyphId, bool32 isJapanese);
+u32 GetGlyphWidthFont0(u16 glyphId, bool32 isJapanese);
+void DecompressGlyphFont7(u16 glyphId, bool32 isJapanese);
+u32 GetGlyphWidthFont7(u16 glyphId, bool32 isJapanese);
+void DecompressGlyphFont8(u16 glyphId, bool32 isJapanese);
+u32 GetGlyphWidthFont8(u16 glyphId, bool32 isJapanese);
+void DecompressGlyphFont2(u16 glyphId, bool32 isJapanese);
+u32 GetGlyphWidthFont2(u16 glyphId, bool32 isJapanese);
+void DecompressGlyphFont1(u16 glyphId, bool32 isJapanese);
+u32 GetGlyphWidthFont1(u16 glyphId, bool32 isJapanese);
+void DecompressGlyphFont9(u16 glyphId);
+
+
+u16 Font6Func(struct TextPrinter *textPrinter);
+u32 GetGlyphWidthFont6(u16 glyphId, bool32 isJapanese);
+# 6 "include/menu.h" 2
+# 1 "gflib/window.h" 1
+
+
+
+
+
+enum
+{
+    WINDOW_BG,
+    WINDOW_TILEMAP_LEFT,
+    WINDOW_TILEMAP_TOP,
+    WINDOW_WIDTH,
+    WINDOW_HEIGHT,
+    WINDOW_PALETTE_NUM,
+    WINDOW_BASE_BLOCK,
+    WINDOW_TILE_DATA
+};
+
+struct WindowTemplate
+{
+    u8 bg;
+    u8 tilemapLeft;
+    u8 tilemapTop;
+    u8 width;
+    u8 height;
+    u8 paletteNum;
+    u16 baseBlock;
+};
+# 40 "gflib/window.h"
+struct Window
+{
+    struct WindowTemplate window;
+    u8 *tileData;
+};
+
+bool16 InitWindows(const struct WindowTemplate *templates);
+u16 AddWindow(const struct WindowTemplate *template);
+int AddWindowWithoutTileMap(const struct WindowTemplate *template);
+void RemoveWindow(u8 windowId);
+void FreeAllWindowBuffers(void);
+void CopyWindowToVram(u8 windowId, u8 mode);
+void CopyWindowRectToVram(u32 windowId, u32 mode, u32 x, u32 y, u32 w, u32 h);
+void PutWindowTilemap(u8 windowId);
+void PutWindowRectTilemapOverridePalette(u8 windowId, u8 x, u8 y, u8 width, u8 height, u8 palette);
+void ClearWindowTilemap(u8 windowId);
+void PutWindowRectTilemap(u8 windowId, u8 x, u8 y, u8 width, u8 height);
+void BlitBitmapToWindow(u8 windowId, const u8 *pixels, u16 x, u16 y, u16 width, u16 height);
+void BlitBitmapRectToWindow(u8 windowId, const u8 *pixels, u16 srcX, u16 srcY, u16 srcWidth, int srcHeight, u16 destX, u16 destY, u16 rectWidth, u16 rectHeight);
+void FillWindowPixelRect(u8 windowId, u8 fillValue, u16 x, u16 y, u16 width, u16 height);
+void CopyToWindowPixelBuffer(u8 windowId, const void *src, u16 size, u16 tileOffset);
+void FillWindowPixelBuffer(u8 windowId, u8 fillValue);
+void ScrollWindow(u8 windowId, u8 direction, u8 distance, u8 fillValue);
+void CallWindowFunction(u8 windowId, void ( *func)(u8, u8, u8, u8, u8, u8));
+bool8 SetWindowAttribute(u8 windowId, u8 attributeId, u32 value);
+u32 GetWindowAttribute(u8 windowId, u8 attributeId);
+u16 AddWindow8Bit(const struct WindowTemplate *template);
+void FillWindowPixelBuffer8Bit(u8 windowId, u8 fillValue);
+void FillWindowPixelRect8Bit(u8 windowId, u8 fillValue, u16 x, u16 y, u16 width, u16 height);
+void BlitBitmapRectToWindow4BitTo8Bit(u8 windowId, const u8 *pixels, u16 srcX, u16 srcY, u16 srcWidth, int srcHeight, u16 destX, u16 destY, u16 rectWidth, u16 rectHeight, u8 paletteNum);
+void CopyWindowToVram8Bit(u8 windowId, u8 mode);
+
+extern struct Window gWindows[];
+extern void* gUnknown_03002F70[];
+extern u32 filler_03002F58;
+extern u32 filler_03002F5C;
+extern u32 filler_03002F64;
+# 7 "include/menu.h" 2
+# 26 "include/menu.h"
+enum
+{
+    SAVE_MENU_NAME,
+    SAVE_MENU_CAUGHT,
+    SAVE_MENU_PLAY_TIME,
+    SAVE_MENU_LOCATION,
+    SAVE_MENU_BADGES,
+};
+
+struct MenuAction
+{
+    const u8 *text;
+    union {
+        void (*void_u8)(u8);
+        u8 (*u8_void)(void);
+    } func;
+};
+
+extern const u16 gUnknown_0860F074[];
+
+void FreeAllOverworldWindowBuffers(void);
+void InitStandardTextBoxWindows(void);
+void InitTextBoxGfxAndPrinters(void);
+u16 RunTextPrintersAndIsPrinter0Active(void);
+void LoadMessageBoxAndBorderGfx(void);
+void DrawDialogueFrame(u8 windowId, bool8 copyToVram);
+void ClearStdWindowAndFrame(u8 windowId, bool8 copyToVram);
+u16 AddTextPrinterParameterized2(u8 windowId, u8 fontId, const u8 *str, u8 speed, void (*callback)(struct TextPrinterTemplate *, u16), u8 fgColor, u8 bgColor, u8 shadowColor);
+void PrintPlayerNameOnWindow(u8, const u8*, u16, u16);
+void ClearDialogWindowAndFrame(u8 windowId, bool8 copyToVram);
+void SetStandardWindowBorderStyle(u8 windowId, bool8 copyToVram);
+void DisplayYesNoMenuDefaultYes(void);
+u32 GetPlayerTextSpeed(void);
+u8 GetPlayerTextSpeedDelay(void);
+void Menu_LoadStdPalAt(u16 arg0);
+void AddTextPrinterWithCallbackForMessage(bool8 a1, void (*callback)(struct TextPrinterTemplate *, u16));
+void sub_8199DF0(u32 bg, u8 a1, int a2, int a3);
+void AddTextPrinterParameterized3(u8 windowId, u8 fontId, u8 left, u8 top, const u8 *color, s8 speed, const u8 *str);
+void ClearStdWindowAndFrameToTransparent(u8 windowId, bool8 copyToVram);
+void SetWindowTemplateFields(struct WindowTemplate* template, u8 priority, u8 tilemapLeft, u8 tilemapTop, u8 width, u8 height, u8 palNum, u16 baseBlock);
+void DrawStdFrameWithCustomTileAndPalette(u8 windowId, bool8 copyToVram, u16 tileStart, u8 palette);
+void ScheduleBgCopyTilemapToVram(u8 bgNum);
+void PrintMenuTable(u8 windowId, u8 itemCount, const struct MenuAction *strs);
+u8 InitMenuInUpperLeftCornerPlaySoundWhenAPressed(u8 windowId, u8 numItems, u8 initialCursorPos);
+u8 Menu_GetCursorPos(void);
+s8 Menu_ProcessInput(void);
+s8 Menu_ProcessInputNoWrap(void);
+void BlitMenuInfoIcon(u8 winId, u8 a2, u16 x, u16 y);
+void ResetTempTileDataBuffers(void);
+void *DecompressAndCopyTileDataToVram(u8 bgId, const void *src, u32 size, u16 offset, u8 mode);
+bool8 FreeTempTileDataBuffersIfPossible(void);
+struct WindowTemplate CreateWindowTemplate(u8 bg, u8 left, u8 top, u8 width, u8 height, u8 paletteNum, u16 baseBlock);
+void CreateYesNoMenu(const struct WindowTemplate *windowTemplate, u16 borderFirstTileNum, u8 borderPalette, u8 initialCursorPos);
+void DecompressAndLoadBgGfxUsingHeap(u8 bgId, const void *src, u32 size, u16 offset, u8 mode);
+s8 Menu_ProcessInputNoWrapClearOnChoose(void);
+s8 ProcessMenuInput_other(void);
+void DoScheduledBgTilemapCopiesToVram(void);
+void ClearScheduledBgCopiesToVram(void);
+void AddTextPrinterParameterized4(u8 windowId, u8 fontId, u8 x, u8 y, u8 letterSpacing, u8 lineSpacing, const u8 *color, s8 speed, const u8 *str);
+void DrawDialogFrameWithCustomTileAndPalette(u8 windowId, bool8 copyToVram, u16 a2, u8 a3);
+void sub_81995E4(u8 windowId, u8 optionsNo, const struct MenuAction *actions, const u8 *actionIds);
+void ClearDialogWindowAndFrameToTransparent(u8 windowId, bool8 copyToVram);
+u16 sub_8198AA4(u8, u8, u8, u8, u8, u8, u16);
+void *malloc_and_decompress(const void *src, u32 *sizeOut);
+u16 copy_decompressed_tile_data_to_vram(u8 bgId, const void *src, u16 size, u16 offset, u8 mode);
+void AddTextPrinterForMessage(bool8 allowSkippingDelayWithButtonPress);
+void AddItemMenuActionTextPrinters(u8 windowId, u8 fontId, u8 left, u8 top, u8 letterSpacing, u8 lineHeight, u8 itemCount, const struct MenuAction *strs, const u8 *a8);
+void sub_8198DBC(u8 windowId, u8 fontId, u8 left, u8 top, u8 a4, u8 itemCount, u8 itemCount2, const struct MenuAction *strs, const u8 *a8);
+u8 sub_8199944(u8 windowId, u8 optionWidth, u8 columns, u8 rows, u8 initialCursorPos);
+u8 ChangeListMenuCursorPosition(s8 deltaX, s8 deltaY);
+u8 GetStartMenuWindowId(void);
+void ListMenuLoadStdPalAt(u8, u8);
+u8 Menu_MoveCursor(s8 cursorDelta);
+u8 Menu_MoveCursorNoWrapAround(s8 cursorDelta);
+void DrawStdWindowFrame(u8 windowId, bool8 CopyToVram);
+u8 sub_81979C4(u8 a1);
+u8 sub_81983AC(u8 windowId, u8 fontId, u8 left, u8 top, u8 cursorHeight, u8 numChoices, u8 initialCursorPos);
+void sub_819786C(u8 windowId, bool8 copyToVram);
+void AddTextPrinterForMessage_2(bool8 allowSkippingDelayWithButtonPress);
+void RemoveStartMenuWindow(void);
+void DisplayYesNoMenuWithDefault(u8 initialCursorPos);
+void BufferSaveMenuText(u8 textId, u8 *dest, u8 color);
+void RemoveMapNamePopUpWindow(void);
+u8 GetMapNamePopUpWindowId(void);
+u8 AddMapNamePopUpWindow(void);
+void AddTextPrinterParameterized5(u8 windowId, u8 fontId, const u8 *str, u8 left, u8 top, u8 speed, void (*callback)(struct TextPrinterTemplate *, u16), u8 letterSpacing, u8 lineSpacing);
+void SetBgTilemapPalette(u8 bgId, u8 left, u8 top, u8 width, u8 height, u8 palette);
+void sub_8199D3C(void *ptr, int delta, int width, int height, bool32 is8BPP);
+void sub_8198204(const u8 *string, const u8 *string2, u8 a3, u8 a4, bool8 copyToVram);
+void sub_8197AE8(bool8 copyToVram);
+void PrintMenuGridTable(u8 windowId, u8 optionWidth, u8 columns, u8 rows, const struct MenuAction *strs);
+s8 Menu_ProcessInputGridLayout(void);
+u8 InitMenuInUpperLeftCorner(u8 windowId, u8 itemCount, u8 initialCursorPos, bool8 APressMuted);
+s8 Menu_ProcessInputNoWrapAround_other(void);
+void CopyToBufferFromBgTilemap(u8 bgId, u16 *dest, u8 left, u8 top, u8 width, u8 height);
+u8 sub_81980F0(u8 bg, u8 xPos, u8 yPos, u8 palette, u16 baseTile);
+void sub_8198314(void);
+void sub_8198180(const u8 *string, u8 a2, bool8 copyToVram);
+void ResetBgPositions(void);
+void AddTextPrinterWithCustomSpeedForMessage(bool8 allowSkippingDelayWithButtonPress, u8 speed);
+void sub_8198C78(void);
+void PrintTextArray(u8 windowId, u8 fontId, u8 left, u8 top, u8 lineHeight, u8 itemCount, const struct MenuAction *strs);
+# 5 "include/international_string_util.h" 2
+# 1 "include/list_menu.h" 1
+# 14 "include/list_menu.h"
+enum
+{
+    SCROLL_ARROW_LEFT,
+    SCROLL_ARROW_RIGHT,
+    SCROLL_ARROW_UP,
+    SCROLL_ARROW_DOWN
+};
+
+struct ListMenu;
+
+struct ListMenuItem
+{
+    const u8 *name;
+    s32 id;
+};
+
+struct ListMenuTemplate
+{
+    const struct ListMenuItem *items;
+    void (* moveCursorFunc)(s32 itemIndex, bool8 onInit, struct ListMenu *list);
+    void (* itemPrintFunc)(u8 windowId, s32 itemId, u8 y);
+    u16 totalItems;
+    u16 maxShowed;
+    u8 windowId;
+    u8 header_X;
+    u8 item_X;
+    u8 cursor_X;
+    u8 upText_Y:4;
+    u8 cursorPal:4;
+    u8 fillValue:4;
+    u8 cursorShadowPal:4;
+    u8 lettersSpacing:3;
+    u8 itemVerticalPadding:3;
+    u8 scrollMultiple:2;
+    u8 fontId:6;
+    u8 cursorKind:2;
+};
+
+struct ListMenu
+{
+    struct ListMenuTemplate template;
+    u16 scrollOffset;
+    u16 selectedRow;
+    u8 unk_1C;
+    u8 unk_1D;
+    u8 taskId;
+    u8 unk_1F;
+};
+
+struct ListMenuWindowRect
+{
+    u8 x;
+    u8 y;
+    u8 width;
+    u8 height;
+    u8 palNum;
+};
+
+struct ScrollArrowsTemplate
+{
+    u8 firstArrowType;
+    u8 firstX;
+    u8 firstY;
+    u8 secondArrowType;
+    u8 secondX;
+    u8 secondY;
+    u16 fullyUpThreshold;
+    u16 fullyDownThreshold;
+    u16 tileTag;
+    u16 palTag;
+    u8 palNum;
+};
+
+struct CursorStruct
+{
+    u8 left;
+    u8 top;
+    u16 rowWidth;
+    u16 rowHeight;
+    u16 tileTag;
+    u16 palTag;
+    u8 palNum;
+};
+
+extern struct ScrollArrowsTemplate gTempScrollArrowTemplate;
+extern struct ListMenuTemplate gMultiuseListMenuTemplate;
+
+s32 DoMysteryGiftListMenu(const struct WindowTemplate *windowTemplate, const struct ListMenuTemplate *listMenuTemplate, u8 arg2, u16 tileNum, u16 palNum);
+u8 ListMenuInit(struct ListMenuTemplate *listMenuTemplate, u16 scrollOffset, u16 selectedRow);
+u8 ListMenuInitInRect(struct ListMenuTemplate *listMenuTemplate, struct ListMenuWindowRect *arg1, u16 scrollOffset, u16 selectedRow);
+s32 ListMenu_ProcessInput(u8 listTaskId);
+void DestroyListMenuTask(u8 listTaskId, u16 *scrollOffset, u16 *selectedRow);
+void RedrawListMenu(u8 listTaskId);
+void ChangeListMenuPals(u8 listTaskId, u8 cursorPal, u8 fillValue, u8 cursorShadowPal);
+void ChangeListMenuCoords(u8 listTaskId, u8 x, u8 y);
+s32 ListMenuTestInput(struct ListMenuTemplate *template, u32 scrollOffset, u32 selectedRow, u16 keys, u16 *newScrollOffset, u16 *newSelectedRow);
+void ListMenuGetCurrentItemArrayId(u8 listTaskId, u16 *arrayId);
+void ListMenuGetScrollAndRow(u8 listTaskId, u16 *scrollOffset, u16 *selectedRow);
+u16 ListMenuGetYCoordForPrintingArrowCursor(u8 listTaskId);
+void ListMenuOverrideSetColors(u8 cursorPal, u8 fillValue, u8 cursorShadowPal);
+void ListMenuDefaultCursorMoveFunc(s32 arg0, u8 arg1, struct ListMenu *list);
+s32 ListMenuGetUnkIndicatorsStructFields(u8 taskId, u8 field);
+void ListMenuSetUnkIndicatorsStructField(u8 taskId, u8 field, s32 value);
+u8 AddScrollIndicatorArrowPair(const struct ScrollArrowsTemplate *arrowInfo, u16 *arg1);
+u8 AddScrollIndicatorArrowPairParameterized(u32 arrowType, s32 commonPos, s32 firstPos, s32 secondPos, s32 fullyDownThreshold, s32 tileTag, s32 palTag, u16 *currItemPtr);
+void RemoveScrollIndicatorArrowPair(u8 taskId);
+void Task_ScrollIndicatorArrowPairOnMainMenu(u8 taskId);
+# 6 "include/international_string_util.h" 2
+
+void sub_81DB52C(u8 *src);
+void TVShowConvertInternationalString(u8 *dest, const u8 *src, int language);
+int GetStringCenterAlignXOffset(int fontId, const u8 *str, int totalWidth);
+int GetStringRightAlignXOffset(int fontId, const u8 *str, int totalWidth);
+int GetStringCenterAlignXOffsetWithLetterSpacing(int fontId, const u8 *str, int totalWidth, int letterSpacing);
+int GetStringWidthDifference(int fontId, const u8 *str, int totalWidth, int letterSpacing);
+int GetMaxWidthInMenuTable(const struct MenuAction *str, int arg1);
+int sub_81DB3D8(const struct MenuAction *str, const u8* arg1, int arg2);
+int Intl_GetListMenuWidth(const struct ListMenuTemplate *listMenu);
+void CopyMonCategoryText(int dexNum, u8 *dest);
+u8 *sub_81DB494(u8 *str, int fontId, const u8 *str2, int totalStringWidth);
+void PadNameString(u8 *dest, u8 padChar);
+void sub_81DB554(u8 *, u8);
+void sub_81DB5AC(u8 *);
+int sub_81DB604(u8 *);
+void sub_81DB620(int windowId, int columnStart, int rowStart, int numFillTiles, int numRows);
 # 18 "src/battle_pike.c" 2
-# 1 "include/constants/frontier_util.h" 1
+# 1 "include/constants/event_objects.h" 1
 # 19 "src/battle_pike.c" 2
-# 1 "include/constants/abilities.h" 1
+# 1 "include/constants/battle_frontier.h" 1
 # 20 "src/battle_pike.c" 2
-# 1 "include/constants/battle_config.h" 1
+# 1 "include/constants/frontier_util.h" 1
 # 21 "src/battle_pike.c" 2
-# 1 "include/constants/easy_chat.h" 1
+# 1 "include/constants/abilities.h" 1
 # 22 "src/battle_pike.c" 2
-# 1 "include/constants/layouts.h" 1
+# 1 "include/constants/battle_config.h" 1
 # 23 "src/battle_pike.c" 2
-# 1 "include/constants/rgb.h" 1
+# 1 "include/constants/easy_chat.h" 1
 # 24 "src/battle_pike.c" 2
+# 1 "include/constants/layouts.h" 1
+# 25 "src/battle_pike.c" 2
+# 1 "include/constants/rgb.h" 1
+# 26 "src/battle_pike.c" 2
 # 1 "include/constants/trainers.h" 1
 
 
@@ -4904,13 +5436,13 @@ u16 CountBattledRematchTeams(u16 trainerId);
 
 # 1 "include/constants/battle_frontier_trainers.h" 1
 # 6 "include/constants/trainers.h" 2
-# 25 "src/battle_pike.c" 2
-# 1 "include/constants/moves.h" 1
-# 26 "src/battle_pike.c" 2
-# 1 "include/constants/party_menu.h" 1
 # 27 "src/battle_pike.c" 2
-# 1 "include/constants/battle_pike.h" 1
+# 1 "include/constants/moves.h" 1
 # 28 "src/battle_pike.c" 2
+# 1 "include/constants/party_menu.h" 1
+# 29 "src/battle_pike.c" 2
+# 1 "include/constants/battle_pike.h" 1
+# 30 "src/battle_pike.c" 2
 
 struct PikeRoomNPC
 {
@@ -5075,7 +5607,7 @@ static const struct PikeWildMon sLvlOpen_Mons1[] =
         .moves = {92, 95, 34, 58}
     },
     {
-        .species = 356,
+        .species = 477,
         .levelDelta = 5,
         .moves = {261, 212, 92, 58}
     }
@@ -5094,9 +5626,9 @@ static const struct PikeWildMon sLvlOpen_Mons2[] =
         .moves = {92, 95, 34, 58}
     },
     {
-        .species = 101,
+        .species = 777,
         .levelDelta = 5,
-        .moves = {153, 120, 87, 92}
+        .moves = {609, 596, 87, 92}
     }
 };
 
@@ -5113,7 +5645,7 @@ static const struct PikeWildMon sLvlOpen_Mons3[] =
         .moves = {92, 95, 34, 58}
     },
     {
-        .species = 286,
+        .species = 756,
         .levelDelta = 5,
         .moves = {147, 78, 77, 237}
     }
@@ -5305,6 +5837,7 @@ static const struct PikeRoomNPC sNPCTable[] =
         .speechId3 = 27
     }
 };
+
 
 static const u16 sNPCSpeeches[][6] =
 {
@@ -5646,6 +6179,59 @@ static void HealOneOrTwoMons(void)
     gSpecialVar_Result = toHeal;
 }
 
+static const u8 sText_Dia0[] = _("I'm lost.\n I need a helping hand.$");
+static const u8 sText_Dia1[] = _("I have no idea where I am.$");
+static const u8 sText_Dia2[] = _("What should I do now?$");
+static const u8 sText_Dia3[] = _("This is too exciting for me.$");
+static const u8 sText_Dia4[] = _("Did you make a mistake?$");
+static const u8 sText_Dia5[] = _("It's mean and awful in here.$");
+static const u8 sText_Dia6[] = _("I'm so tired of this place.$");
+static const u8 sText_Dia7[] = _("I quite enjoy this challenge.$");
+static const u8 sText_Dia8[] = _("Look at how I tackle this.$");
+static const u8 sText_Dia9[] = _("Ready to give up yet?.$");
+static const u8 sText_Dia10[] = _("Oh no! Who are you?$");
+static const u8 sText_Dia11[] = _("I've been wandering for about forever...$");
+static const u8 sText_Dia12[] = _("I think I'll give up now.$");
+
+static const u8 sText_Dia13[] = _("What should I do next?$");
+static const u8 sText_Dia14[] = _("Ready to give up yet?.$");
+static const u8 sText_Dia15[] = _("I can win with my sheer genius!$");
+static const u8 sText_Dia16[] = _("Won't someone cool show up?$");
+static const u8 sText_Dia17[] = _("The Battle Pike is awesome!$");
+
+static const u8 sText_Dia18[] = _("I can't take this any more!$");
+static const u8 sText_Dia19[] = _("I don't know if this is OK.$");
+static const u8 sText_Dia20[] = _("I've got to pick left next.$");
+static const u8 sText_Dia21[] = _("It must be over soon, right?$");
+static const u8 sText_Dia22[] = _("This is totally easy, yeah?$");
+
+static const u8 sText_Dia23[] = _("I'm going to power on.$");
+static const u8 sText_Dia24[] = _("There's no way I can give up now.$");
+static const u8 sText_Dia25[] = _("I'm not going to make it!$");
+
+static const u8 sText_Dia26[] = _("Go on ahead. I'm done for.$");
+static const u8 sText_Dia27[] = _("It's one trainer after another...$");
+static const u8 sText_Dia28[] = _("Do you like Steel-types?$");
+
+static const u8 sText_Dia29[] = _("Every trainer here's so weak.$");
+static const u8 sText_Dia30[] = _("Do you think this's easy?$");
+static const u8 sText_Dia31[] = _("What'll be next?$");
+
+
+static const u8 sText_Dia32[] = _("I'm just so confused!$");
+static const u8 sText_Dia33[] = _("I just want to go home...$");
+static const u8 sText_Dia34[] = _("Yeehaw! This place is a pushover.$");
+
+static const u8 sText_Dia35[] = _("I haven't been in a battle yet.$");
+static const u8 sText_Dia36[] = _("Maybe it's right next? I hope so...$");
+static const u8 sText_Dia37[] = _("Waah! It wasn't this way!$");
+
+static const u8 sText_Dia38[] = _("My Pokémon are too tired...$");
+static const u8 sText_Dia39[] = _("My Pokémon aren't weak to poison.$");
+static const u8 sText_Dia40[] = _("Lalala! Lalala! I'm so awesome!$");
+
+static const u8 sText_Dia41[] = _("Toxic is a terrible thing, isn't it?$");
+
 static void BufferNPCMessage(void)
 {
     int speechId;
@@ -5656,8 +6242,134 @@ static void BufferNPCMessage(void)
         speechId = sNPCTable[sNpcId].speechId2;
     else
         speechId = sNPCTable[sNpcId].speechId3;
-
-    FrontierSpeechToString(sNPCSpeeches[speechId]);
+ switch (speechId){
+  case 0:
+    StringCopy(gStringVar4, sText_Dia0);
+    break;
+case 1:
+    StringCopy(gStringVar4, sText_Dia1);
+    break;
+case 2:
+    StringCopy(gStringVar4, sText_Dia2);
+    break;
+case 3:
+    StringCopy(gStringVar4, sText_Dia3);
+    break;
+case 4:
+    StringCopy(gStringVar4, sText_Dia4);
+    break;
+case 5:
+    StringCopy(gStringVar4, sText_Dia5);
+    break;
+case 6:
+    StringCopy(gStringVar4, sText_Dia6);
+    break;
+case 7:
+    StringCopy(gStringVar4, sText_Dia7);
+    break;
+case 8:
+    StringCopy(gStringVar4, sText_Dia8);
+    break;
+case 9:
+    StringCopy(gStringVar4, sText_Dia9);
+    break;
+case 10:
+    StringCopy(gStringVar4, sText_Dia10);
+    break;
+case 11:
+    StringCopy(gStringVar4, sText_Dia11);
+    break;
+case 12:
+    StringCopy(gStringVar4, sText_Dia12);
+    break;
+case 13:
+    StringCopy(gStringVar4, sText_Dia13);
+    break;
+case 14:
+    StringCopy(gStringVar4, sText_Dia14);
+    break;
+case 15:
+    StringCopy(gStringVar4, sText_Dia15);
+    break;
+case 16:
+    StringCopy(gStringVar4, sText_Dia16);
+    break;
+case 17:
+    StringCopy(gStringVar4, sText_Dia17);
+    break;
+case 18:
+    StringCopy(gStringVar4, sText_Dia18);
+    break;
+case 19:
+    StringCopy(gStringVar4, sText_Dia19);
+    break;
+case 20:
+    StringCopy(gStringVar4, sText_Dia20);
+    break;
+case 21:
+    StringCopy(gStringVar4, sText_Dia21);
+    break;
+case 22:
+    StringCopy(gStringVar4, sText_Dia22);
+    break;
+case 23:
+    StringCopy(gStringVar4, sText_Dia23);
+    break;
+case 24:
+    StringCopy(gStringVar4, sText_Dia24);
+    break;
+case 25:
+    StringCopy(gStringVar4, sText_Dia25);
+    break;
+case 26:
+    StringCopy(gStringVar4, sText_Dia26);
+    break;
+case 27:
+    StringCopy(gStringVar4, sText_Dia27);
+    break;
+case 28:
+    StringCopy(gStringVar4, sText_Dia28);
+    break;
+case 29:
+    StringCopy(gStringVar4, sText_Dia29);
+    break;
+case 30:
+    StringCopy(gStringVar4, sText_Dia30);
+    break;
+case 31:
+    StringCopy(gStringVar4, sText_Dia31);
+    break;
+case 32:
+    StringCopy(gStringVar4, sText_Dia32);
+    break;
+case 33:
+    StringCopy(gStringVar4, sText_Dia33);
+    break;
+case 34:
+    StringCopy(gStringVar4, sText_Dia34);
+    break;
+case 35:
+    StringCopy(gStringVar4, sText_Dia35);
+    break;
+case 36:
+    StringCopy(gStringVar4, sText_Dia36);
+    break;
+case 37:
+    StringCopy(gStringVar4, sText_Dia37);
+    break;
+case 38:
+    StringCopy(gStringVar4, sText_Dia38);
+    break;
+case 39:
+    StringCopy(gStringVar4, sText_Dia39);
+    break;
+case 40:
+    StringCopy(gStringVar4, sText_Dia40);
+    break;
+case 41:
+    StringCopy(gStringVar4, sText_Dia41);
+    break;
+ }
 }
 
 static void StatusInflictionScreenFlash(void)
@@ -5743,7 +6455,7 @@ static bool8 DoesTypePreventStatus(u16 species, u32 status)
         break;
     case (1 << 6):
         if (gBaseStats[species].type1 == 4 || gBaseStats[species].type2 == 4
-            || (3 >= 3 &&
+            || (4 >= 3 &&
                 (gBaseStats[species].type1 == 13 || gBaseStats[species].type2 == 13)))
             ret = 1;
         break;

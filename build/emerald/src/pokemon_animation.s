@@ -392,7 +392,512 @@ sSpeciesToBackAnimSet:
 	.byte	0xd
 	.byte	0x11
 	.byte	0x14
-	.space	687
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.space	50
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.space	78
+	.byte	0x8
+	.space	4
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.space	10
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.space	9
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.space	1
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.byte	0x8
+	.space	36
 	.type	 sUnknown_0860AA64,object
 sUnknown_0860AA64:
 	.byte	0x0
@@ -1010,6 +1515,7 @@ LaunchAnimationTaskForBackSprite:
 	mul	r0, r0, r1
 	ldr	r1, .L27+0xc
 	add	r0, r0, r1
+	mov	r1, #0x0
 	bl	GetNature
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
@@ -1290,7 +1796,7 @@ sub_817F77C:
 	lsr	r3, r3, #0x1e
 	add	r0, r4, #0
 	bl	CalcCenterToCornerVec
-	ldr	r0, .L59
+	ldr	r0, .L60
 	ldr	r0, [r0]
 	cmp	r0, #0x1
 	bne	.L56	@cond_branch
@@ -1305,9 +1811,9 @@ sub_817F77C:
 	strb	r0, [r1]
 	add	r5, r1, #0
 	b	.L58
-.L60:
+.L61:
 	.align	2, 0
-.L59:
+.L60:
 	.word	sUnknown_03001274
 .L57:
 	add	r0, r4, #0
@@ -1342,10 +1848,18 @@ sub_817F77C:
 	neg	r0, r0
 	and	r0, r0, r1
 	strb	r0, [r4, #0x1]
+	b	.L59
 .L56:
+	ldr	r0, .L62
+	str	r0, [r4, #0x10]
+.L59:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
+.L63:
+	.align	2, 0
+.L62:
+	.word	gUnknown_082FF694
 .Lfe15:
 	.size	 sub_817F77C,.Lfe15-sub_817F77C
 	.align	2, 0
@@ -1357,14 +1871,14 @@ pokemonanimfunc_01:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0
-	bne	.L62	@cond_branch
+	bne	.L65	@cond_branch
 	add	r0, r6, #0
 	bl	HandleStartAffineAnim
-.L62:
+.L65:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0x28
-	ble	.L63	@cond_branch
+	ble	.L66	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r6, #0
@@ -1373,14 +1887,14 @@ pokemonanimfunc_01:
 	bl	HandleSetAffineData
 	add	r0, r6, #0
 	bl	sub_817F77C
-	ldr	r0, .L66
+	ldr	r0, .L69
 	str	r0, [r6, #0x1c]
-	b	.L64
-.L67:
+	b	.L67
+.L70:
 	.align	2, 0
-.L66:
+.L69:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L63:
+.L66:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	lsl	r0, r0, #0x9
@@ -1388,9 +1902,9 @@ pokemonanimfunc_01:
 	bl	__divsi3
 	add	r4, r0, #0
 	cmp	r0, #0
-	bge	.L65	@cond_branch
+	bge	.L68	@cond_branch
 	add	r4, r4, #0xff
-.L65:
+.L68:
 	asr	r4, r4, #0x8
 	lsl	r4, r4, #0x8
 	sub	r4, r0, r4
@@ -1416,7 +1930,7 @@ pokemonanimfunc_01:
 	add	r0, r6, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-.L64:
+.L67:
 	ldrh	r0, [r6, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r6, #0x32]
@@ -1435,23 +1949,23 @@ pokemonanimfunc_02:
 	mov	r2, #0x32
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0x28
-	ble	.L69	@cond_branch
-	ldr	r0, .L75
+	ble	.L72	@cond_branch
+	ldr	r0, .L78
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
-	b	.L74
-.L76:
+	b	.L77
+.L79:
 	.align	2, 0
-.L75:
+.L78:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L69:
+.L72:
 	mov	r0, #0x1
 	and	r0, r0, r1
 	mov	r5, #0xff
 	cmp	r0, #0
-	bne	.L71	@cond_branch
+	bne	.L74	@cond_branch
 	mov	r5, #0x1
-.L71:
+.L74:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	lsl	r0, r0, #0x7
@@ -1459,9 +1973,9 @@ pokemonanimfunc_02:
 	bl	__divsi3
 	add	r1, r0, #0
 	cmp	r1, #0
-	bge	.L73	@cond_branch
+	bge	.L76	@cond_branch
 	add	r0, r0, #0xff
-.L73:
+.L76:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -1474,7 +1988,7 @@ pokemonanimfunc_02:
 	mov	r2, r0
 	mul	r2, r2, r1
 	add	r0, r2, #0
-.L74:
+.L77:
 	strh	r0, [r4, #0x24]
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
@@ -1496,16 +2010,16 @@ sub_817F8FC:
 	mov	r2, #0x2e
 	ldrsh	r0, [r4, r2]
 	cmp	r1, r0
-	ble	.L78	@cond_branch
-	ldr	r0, .L82
+	ble	.L81	@cond_branch
+	ldr	r0, .L85
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
-	b	.L81
-.L83:
+	b	.L84
+.L86:
 	.align	2, 0
-.L82:
+.L85:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L78:
+.L81:
 	mov	r0, #0x32
 	ldrsh	r1, [r4, r0]
 	lsl	r0, r1, #0x1
@@ -1516,9 +2030,9 @@ sub_817F8FC:
 	bl	__divsi3
 	add	r1, r0, #0
 	cmp	r1, #0
-	bge	.L80	@cond_branch
+	bge	.L83	@cond_branch
 	add	r0, r0, #0xff
-.L80:
+.L83:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -1526,7 +2040,7 @@ sub_817F8FC:
 	asr	r0, r0, #0x10
 	mov	r1, #0x6
 	bl	Sin
-.L81:
+.L84:
 	strh	r0, [r4, #0x24]
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
@@ -1548,14 +2062,14 @@ pokemonanimfunc_03:
 	strh	r0, [r4, #0x2e]
 	add	r0, r4, #0
 	bl	sub_817F8FC
-	ldr	r0, .L85
+	ldr	r0, .L88
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L86:
+.L89:
 	.align	2, 0
-.L85:
+.L88:
 	.word	sub_817F8FC
 .Lfe19:
 	.size	 pokemonanimfunc_03,.Lfe19-pokemonanimfunc_03
@@ -1571,16 +2085,16 @@ sub_817F978:
 	mov	r2, #0x2e
 	ldrsh	r0, [r4, r2]
 	cmp	r1, r0
-	ble	.L88	@cond_branch
-	ldr	r0, .L92
+	ble	.L91	@cond_branch
+	ldr	r0, .L95
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
-	b	.L91
-.L93:
+	b	.L94
+.L96:
 	.align	2, 0
-.L92:
+.L95:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L88:
+.L91:
 	mov	r0, #0x32
 	ldrsh	r1, [r4, r0]
 	lsl	r0, r1, #0x1
@@ -1591,9 +2105,9 @@ sub_817F978:
 	bl	__divsi3
 	add	r1, r0, #0
 	cmp	r1, #0
-	bge	.L90	@cond_branch
+	bge	.L93	@cond_branch
 	add	r0, r0, #0xff
-.L90:
+.L93:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -1602,7 +2116,7 @@ sub_817F978:
 	mov	r1, #0x6
 	bl	Sin
 	neg	r0, r0
-.L91:
+.L94:
 	strh	r0, [r4, #0x26]
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
@@ -1624,14 +2138,14 @@ pokemonanimfunc_04:
 	strh	r0, [r4, #0x2e]
 	add	r0, r4, #0
 	bl	sub_817F978
-	ldr	r0, .L95
+	ldr	r0, .L98
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L96:
+.L99:
 	.align	2, 0
-.L95:
+.L98:
 	.word	sub_817F978
 .Lfe21:
 	.size	 pokemonanimfunc_04,.Lfe21-pokemonanimfunc_04
@@ -1646,32 +2160,32 @@ sub_817F9F4:
 	mov	r0, #0xc0
 	lsl	r0, r0, #0x1
 	cmp	r1, r0
-	ble	.L98	@cond_branch
-	ldr	r0, .L111
+	ble	.L101	@cond_branch
+	ldr	r0, .L114
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
 	strh	r0, [r4, #0x24]
-	b	.L109
-.L112:
+	b	.L112
+.L115:
 	.align	2, 0
-.L111:
+.L114:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L98:
+.L101:
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L100	@cond_branch
+	bge	.L103	@cond_branch
 	add	r0, r0, #0x7f
-.L100:
+.L103:
 	asr	r2, r0, #0x7
 	lsl	r0, r2, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0
-	blt	.L99	@cond_branch
+	blt	.L102	@cond_branch
 	cmp	r0, #0x1
-	ble	.L103	@cond_branch
+	ble	.L106	@cond_branch
 	cmp	r0, #0x3
-	bgt	.L99	@cond_branch
-	ldr	r2, .L113
+	bgt	.L102	@cond_branch
+	ldr	r2, .L116
 	add	r1, r1, r2
 	lsl	r0, r1, #0x10
 	asr	r0, r0, #0x10
@@ -1680,12 +2194,12 @@ sub_817F9F4:
 	lsl	r1, r2, #0x1
 	add	r1, r1, r2
 	lsl	r1, r1, #0x10
-	b	.L110
-.L114:
+	b	.L113
+.L117:
 	.align	2, 0
-.L113:
+.L116:
 	.word	-0x100
-.L103:
+.L106:
 	lsl	r0, r2, #0x7
 	sub	r0, r1, r0
 	lsl	r0, r0, #0x10
@@ -1693,13 +2207,13 @@ sub_817F9F4:
 	mov	r2, #0x2e
 	ldrsh	r1, [r4, r2]
 	lsl	r1, r1, #0x11
-.L110:
+.L113:
 	asr	r1, r1, #0x10
 	bl	Sin
 	neg	r0, r0
-.L109:
+.L112:
 	strh	r0, [r4, #0x26]
-.L99:
+.L102:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0xc
 	strh	r0, [r4, #0x32]
@@ -1718,14 +2232,14 @@ pokemonanimfunc_1E:
 	strh	r0, [r4, #0x2e]
 	add	r0, r4, #0
 	bl	sub_817F9F4
-	ldr	r0, .L116
+	ldr	r0, .L119
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L117:
+.L120:
 	.align	2, 0
-.L116:
+.L119:
 	.word	sub_817F9F4
 .Lfe23:
 	.size	 pokemonanimfunc_1E,.Lfe23-pokemonanimfunc_1E
@@ -1740,67 +2254,50 @@ pokemonanimfunc_06:
 	mov	r0, #0xc0
 	lsl	r0, r0, #0x2
 	cmp	r2, r0
-	ble	.L119	@cond_branch
-	ldr	r0, .L140
+	ble	.L122	@cond_branch
+	ldr	r0, .L143
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
 	strh	r0, [r4, #0x24]
-	b	.L138
-.L141:
+	b	.L141
+.L144:
 	.align	2, 0
-.L140:
+.L143:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L119:
+.L122:
 	add	r0, r2, #0
 	cmp	r2, #0
-	bge	.L121	@cond_branch
+	bge	.L124	@cond_branch
 	add	r0, r0, #0x7f
-.L121:
+.L124:
 	lsl	r0, r0, #0x9
 	asr	r0, r0, #0x10
 	cmp	r0, #0x5
-	bhi	.L122	@cond_branch
+	bhi	.L125	@cond_branch
 	lsl	r0, r0, #0x2
-	ldr	r1, .L142
+	ldr	r1, .L145
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L143:
+.L146:
 	.align	2, 0
-.L142:
-	.word	.L135
+.L145:
+	.word	.L138
 	.align	2, 0
 	.align	2, 0
-.L135:
-	.word	.L124
-	.word	.L124
-	.word	.L125
-	.word	.L126
+.L138:
+	.word	.L127
+	.word	.L127
+	.word	.L128
 	.word	.L129
 	.word	.L132
-.L124:
-	mov	r0, #0x0
-	b	.L139
-.L125:
-	mov	r2, #0x0
-	b	.L122
-.L126:
-	add	r0, r2, #0
-	cmp	r2, #0
-	bge	.L127	@cond_branch
-	add	r0, r0, #0x7f
+	.word	.L135
 .L127:
-	asr	r0, r0, #0x7
-	lsl	r0, r0, #0x7
-	sub	r0, r2, r0
-	lsl	r0, r0, #0x3
-	neg	r0, r0
-	cmp	r0, #0
-	bge	.L128	@cond_branch
-	add	r0, r0, #0x7f
+	mov	r0, #0x0
+	b	.L142
 .L128:
-	asr	r0, r0, #0x7
-	b	.L139
+	mov	r2, #0x0
+	b	.L125
 .L129:
 	add	r0, r2, #0
 	cmp	r2, #0
@@ -1810,13 +2307,14 @@ pokemonanimfunc_06:
 	asr	r0, r0, #0x7
 	lsl	r0, r0, #0x7
 	sub	r0, r2, r0
+	lsl	r0, r0, #0x3
+	neg	r0, r0
 	cmp	r0, #0
 	bge	.L131	@cond_branch
-	add	r0, r0, #0x7
+	add	r0, r0, #0x7f
 .L131:
-	asr	r0, r0, #0x3
-	sub	r0, r0, #0x8
-	b	.L139
+	asr	r0, r0, #0x7
+	b	.L142
 .L132:
 	add	r0, r2, #0
 	cmp	r2, #0
@@ -1826,22 +2324,38 @@ pokemonanimfunc_06:
 	asr	r0, r0, #0x7
 	lsl	r0, r0, #0x7
 	sub	r0, r2, r0
+	cmp	r0, #0
+	bge	.L134	@cond_branch
+	add	r0, r0, #0x7
+.L134:
+	asr	r0, r0, #0x3
+	sub	r0, r0, #0x8
+	b	.L142
+.L135:
+	add	r0, r2, #0
+	cmp	r2, #0
+	bge	.L136	@cond_branch
+	add	r0, r0, #0x7f
+.L136:
+	asr	r0, r0, #0x7
+	lsl	r0, r0, #0x7
+	sub	r0, r2, r0
 	lsl	r0, r0, #0x3
 	neg	r0, r0
 	cmp	r0, #0
-	bge	.L134	@cond_branch
-	add	r0, r0, #0x7f
-.L134:
-	asr	r0, r0, #0x7
-	add	r0, r0, #0x8
-.L139:
-	strh	r0, [r4, #0x24]
-.L122:
-	add	r0, r2, #0
-	cmp	r2, #0
 	bge	.L137	@cond_branch
 	add	r0, r0, #0x7f
 .L137:
+	asr	r0, r0, #0x7
+	add	r0, r0, #0x8
+.L142:
+	strh	r0, [r4, #0x24]
+.L125:
+	add	r0, r2, #0
+	cmp	r2, #0
+	bge	.L140	@cond_branch
+	add	r0, r0, #0x7f
+.L140:
 	asr	r0, r0, #0x7
 	lsl	r0, r0, #0x7
 	sub	r0, r2, r0
@@ -1850,7 +2364,7 @@ pokemonanimfunc_06:
 	mov	r1, #0x8
 	bl	Sin
 	neg	r0, r0
-.L138:
+.L141:
 	strh	r0, [r4, #0x26]
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0xc
@@ -1869,14 +2383,14 @@ pokemonanimfunc_09:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0
-	bne	.L145	@cond_branch
+	bne	.L148	@cond_branch
 	add	r0, r6, #0
 	bl	HandleStartAffineAnim
-.L145:
+.L148:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0x28
-	ble	.L146	@cond_branch
+	ble	.L149	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r6, #0
@@ -1885,14 +2399,14 @@ pokemonanimfunc_09:
 	bl	HandleSetAffineData
 	add	r0, r6, #0
 	bl	sub_817F77C
-	ldr	r0, .L152
+	ldr	r0, .L155
 	str	r0, [r6, #0x1c]
-	b	.L147
-.L153:
+	b	.L150
+.L156:
 	.align	2, 0
-.L152:
+.L155:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L146:
+.L149:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	lsl	r0, r0, #0x8
@@ -1900,9 +2414,9 @@ pokemonanimfunc_09:
 	bl	__divsi3
 	add	r1, r0, #0
 	cmp	r1, #0
-	bge	.L148	@cond_branch
+	bge	.L151	@cond_branch
 	add	r0, r0, #0xff
-.L148:
+.L151:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -1912,7 +2426,7 @@ pokemonanimfunc_09:
 	mov	r1, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L149	@cond_branch
+	bne	.L152	@cond_branch
 	lsl	r4, r4, #0x10
 	asr	r4, r4, #0x10
 	add	r0, r4, #0
@@ -1925,8 +2439,8 @@ pokemonanimfunc_09:
 	strh	r0, [r6, #0x36]
 	add	r0, r4, #0
 	mov	r1, #0x20
-	b	.L151
-.L149:
+	b	.L154
+.L152:
 	lsl	r4, r4, #0x10
 	asr	r4, r4, #0x10
 	add	r0, r4, #0
@@ -1939,7 +2453,7 @@ pokemonanimfunc_09:
 	strh	r0, [r6, #0x36]
 	add	r0, r4, #0
 	mov	r1, #0x8
-.L151:
+.L154:
 	bl	Sin
 	add	r0, r0, r5
 	strh	r0, [r6, #0x38]
@@ -1950,7 +2464,7 @@ pokemonanimfunc_09:
 	add	r0, r6, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-.L147:
+.L150:
 	ldrh	r0, [r6, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r6, #0x32]
@@ -2004,10 +2518,10 @@ sub_817FC20:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L155	@cond_branch
+	bne	.L158	@cond_branch
 	strh	r0, [r4, #0x34]
-.L155:
-	ldr	r2, .L161
+.L158:
+	ldr	r2, .L164
 	mov	r5, #0x34
 	ldrsh	r1, [r4, r5]
 	lsl	r0, r1, #0x1
@@ -2019,25 +2533,25 @@ sub_817FC20:
 	mov	r5, #0x32
 	ldrsh	r0, [r4, r5]
 	cmp	r1, r0
-	bne	.L156	@cond_branch
+	bne	.L159	@cond_branch
 	add	r0, r1, #0
 	cmp	r0, #0
-	bne	.L157	@cond_branch
-	ldr	r0, .L161+0x4
+	bne	.L160	@cond_branch
+	ldr	r0, .L164+0x4
 	str	r0, [r4, #0x1c]
-	b	.L156
-.L162:
+	b	.L159
+.L165:
 	.align	2, 0
-.L161:
+.L164:
 	.word	sUnknown_0860AD70
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L157:
+.L160:
 	ldrh	r0, [r4, #0x34]
 	add	r0, r0, #0x1
 	mov	r1, #0x0
 	strh	r0, [r4, #0x34]
 	strh	r1, [r4, #0x32]
-.L156:
+.L159:
 	mov	r0, #0x34
 	ldrsh	r1, [r4, r0]
 	lsl	r0, r1, #0x1
@@ -2048,15 +2562,15 @@ sub_817FC20:
 	lsl	r0, r0, #24
 	asr	r0, r0, #24
 	cmp	r0, #0
-	bne	.L159	@cond_branch
-	ldr	r0, .L163
+	bne	.L162	@cond_branch
+	ldr	r0, .L166
 	str	r0, [r4, #0x1c]
-	b	.L160
-.L164:
+	b	.L163
+.L167:
 	.align	2, 0
-.L163:
+.L166:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L159:
+.L162:
 	add	r0, r1, r2
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #24
@@ -2081,7 +2595,7 @@ sub_817FC20:
 	strh	r0, [r4, #0x32]
 	add	r0, r4, #0
 	bl	sub_817F70C
-.L160:
+.L163:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
@@ -2094,14 +2608,14 @@ pokemonanimfunc_0A:
 	push	{r4, lr}
 	add	r4, r0, #0
 	bl	sub_817FC20
-	ldr	r0, .L166
+	ldr	r0, .L169
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L167:
+.L170:
 	.align	2, 0
-.L166:
+.L169:
 	.word	sub_817FC20
 .Lfe27:
 	.size	 pokemonanimfunc_0A,.Lfe27-pokemonanimfunc_0A
@@ -2116,21 +2630,21 @@ sub_817FCDC:
 	mov	r0, #0x90
 	lsl	r0, r0, #0x4
 	cmp	r1, r0
-	ble	.L169	@cond_branch
-	ldr	r0, .L173
+	ble	.L172	@cond_branch
+	ldr	r0, .L176
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
-	b	.L172
-.L174:
+	b	.L175
+.L177:
 	.align	2, 0
-.L173:
+.L176:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L169:
+.L172:
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L171	@cond_branch
+	bge	.L174	@cond_branch
 	add	r0, r0, #0xff
-.L171:
+.L174:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -2139,7 +2653,7 @@ sub_817FCDC:
 	mov	r2, #0x3c
 	ldrsh	r1, [r4, r2]
 	bl	Sin
-.L172:
+.L175:
 	strh	r0, [r4, #0x24]
 	ldrh	r0, [r4, #0x2e]
 	ldrh	r1, [r4, #0x32]
@@ -2162,14 +2676,14 @@ pokemonanimfunc_0F:
 	strh	r0, [r4, #0x3c]
 	add	r0, r4, #0
 	bl	sub_817FCDC
-	ldr	r0, .L176
+	ldr	r0, .L179
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L177:
+.L180:
 	.align	2, 0
-.L176:
+.L179:
 	.word	sub_817FCDC
 .Lfe29:
 	.size	 pokemonanimfunc_0F,.Lfe29-pokemonanimfunc_0F
@@ -2184,21 +2698,21 @@ sub_817FD44:
 	mov	r0, #0x90
 	lsl	r0, r0, #0x4
 	cmp	r1, r0
-	ble	.L179	@cond_branch
-	ldr	r0, .L183
+	ble	.L182	@cond_branch
+	ldr	r0, .L186
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
-	b	.L182
-.L184:
+	b	.L185
+.L187:
 	.align	2, 0
-.L183:
+.L186:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L179:
+.L182:
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L181	@cond_branch
+	bge	.L184	@cond_branch
 	add	r0, r0, #0xff
-.L181:
+.L184:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -2206,7 +2720,7 @@ sub_817FD44:
 	asr	r0, r0, #0x10
 	mov	r1, #0x3
 	bl	Sin
-.L182:
+.L185:
 	strh	r0, [r4, #0x26]
 	ldrh	r0, [r4, #0x2e]
 	ldrh	r1, [r4, #0x32]
@@ -2227,14 +2741,14 @@ pokemonanimfunc_10:
 	strh	r0, [r4, #0x2e]
 	add	r0, r4, #0
 	bl	sub_817FD44
-	ldr	r0, .L186
+	ldr	r0, .L189
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L187:
+.L190:
 	.align	2, 0
-.L186:
+.L189:
 	.word	sub_817FD44
 .Lfe31:
 	.size	 pokemonanimfunc_10,.Lfe31-pokemonanimfunc_10
@@ -2250,31 +2764,31 @@ pokemonanimfunc_11:
 	mov	r0, #0x80
 	lsl	r0, r0, #0x2
 	cmp	r1, r0
-	ble	.L189	@cond_branch
-	ldr	r0, .L195
+	ble	.L192	@cond_branch
+	ldr	r0, .L198
 	str	r0, [r7, #0x1c]
 	mov	r0, #0x0
 	strh	r0, [r7, #0x24]
 	strh	r0, [r7, #0x26]
-	b	.L190
-.L196:
+	b	.L193
+.L199:
 	.align	2, 0
-.L195:
+.L198:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L189:
+.L192:
 	mov	r0, #0x1
 	and	r0, r0, r2
 	mov	r5, #0xff
 	cmp	r0, #0
-	bne	.L191	@cond_branch
+	bne	.L194	@cond_branch
 	mov	r5, #0x1
-.L191:
+.L194:
 	mov	r1, #0x32
 	ldrsh	r0, [r7, r1]
 	cmp	r0, #0
-	bge	.L193	@cond_branch
+	bge	.L196	@cond_branch
 	add	r0, r0, #0x3
-.L193:
+.L196:
 	asr	r0, r0, #0x2
 	mov	r1, #0x8
 	bl	Sin
@@ -2284,9 +2798,9 @@ pokemonanimfunc_11:
 	ldrsh	r1, [r7, r0]
 	add	r4, r1, #0
 	cmp	r1, #0
-	bge	.L194	@cond_branch
+	bge	.L197	@cond_branch
 	add	r4, r4, #0xff
-.L194:
+.L197:
 	asr	r4, r4, #0x8
 	lsl	r4, r4, #0x8
 	sub	r4, r1, r4
@@ -2308,7 +2822,7 @@ pokemonanimfunc_11:
 	mul	r1, r1, r5
 	add	r0, r1, #0
 	strh	r0, [r7, #0x24]
-.L190:
+.L193:
 	ldrh	r0, [r7, #0x32]
 	add	r0, r0, #0x9
 	strh	r0, [r7, #0x32]
@@ -2323,7 +2837,7 @@ pokemonanimfunc_11:
 sub_817FE30:
 	push	{r4, r5, r6, lr}
 	add	r4, r0, #0
-	ldr	r2, .L206
+	ldr	r2, .L209
 	ldrh	r6, [r4, #0x2e]
 	mov	r0, #0x2e
 	ldrsh	r1, [r4, r0]
@@ -2333,30 +2847,30 @@ sub_817FE30:
 	add	r5, r0, r2
 	ldrh	r0, [r5]
 	cmp	r0, #0
-	beq	.L198	@cond_branch
+	beq	.L201	@cond_branch
 	sub	r0, r0, #0x1
 	strh	r0, [r5]
-	b	.L199
-.L207:
+	b	.L202
+.L210:
 	.align	2, 0
-.L206:
+.L209:
 	.word	sUnknown_03001240
-.L198:
+.L201:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L200	@cond_branch
+	bne	.L203	@cond_branch
 	mov	r2, #0x8
 	ldrsh	r0, [r5, r2]
 	cmp	r0, #0
-	bne	.L200	@cond_branch
+	bne	.L203	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r5, #0x8]
 	add	r0, r0, #0x1
 	strh	r0, [r5, #0x8]
-.L200:
-	ldr	r2, .L208
+.L203:
+	ldr	r2, .L211
 	lsl	r1, r6, #0x10
 	asr	r1, r1, #0x10
 	lsl	r0, r1, #0x1
@@ -2368,7 +2882,7 @@ sub_817FE30:
 	mov	r2, #0x6
 	ldrsh	r0, [r5, r2]
 	cmp	r1, r0
-	ble	.L201	@cond_branch
+	ble	.L204	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r4, #0
@@ -2379,36 +2893,36 @@ sub_817FE30:
 	mov	r2, #0x4
 	ldrsh	r0, [r5, r2]
 	cmp	r0, #0x1
-	ble	.L202	@cond_branch
+	ble	.L205	@cond_branch
 	sub	r0, r1, #0x1
 	mov	r1, #0x0
 	strh	r0, [r5, #0x4]
 	mov	r0, #0xa
 	strh	r0, [r5]
 	strh	r1, [r4, #0x32]
-	b	.L204
-.L209:
+	b	.L207
+.L212:
 	.align	2, 0
-.L208:
+.L211:
 	.word	sUnknown_03001240
-.L202:
+.L205:
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L210
+	ldr	r0, .L213
 	str	r0, [r4, #0x1c]
-	b	.L204
-.L211:
+	b	.L207
+.L214:
 	.align	2, 0
-.L210:
+.L213:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L201:
+.L204:
 	mov	r0, #0x32
 	ldrsh	r1, [r4, r0]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L205	@cond_branch
+	bge	.L208	@cond_branch
 	add	r0, r0, #0xff
-.L205:
+.L208:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -2424,11 +2938,11 @@ sub_817FE30:
 	add	r0, r4, #0
 	add	r1, r2, #0
 	bl	HandleSetAffineData
-.L204:
+.L207:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x10
 	strh	r0, [r4, #0x32]
-.L199:
+.L202:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
@@ -2445,7 +2959,7 @@ pokemonanimfunc_12:
 	lsr	r0, r0, #0x18
 	mov	r3, #0x0
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L213
+	ldr	r2, .L216
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -2456,14 +2970,14 @@ pokemonanimfunc_12:
 	strh	r3, [r1]
 	add	r0, r4, #0
 	bl	sub_817FE30
-	ldr	r0, .L213+0x4
+	ldr	r0, .L216+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L214:
+.L217:
 	.align	2, 0
-.L213:
+.L216:
 	.word	sUnknown_03001240
 	.word	sub_817FE30
 .Lfe34:
@@ -2480,20 +2994,20 @@ sub_817FF3C:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L216	@cond_branch
+	bne	.L219	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
-.L216:
+.L219:
 	mov	r2, #0x32
 	ldrsh	r6, [r4, r2]
-	ldr	r1, .L219
+	ldr	r1, .L222
 	lsl	r0, r5, #0x1
 	add	r0, r0, r5
 	lsl	r0, r0, #0x2
 	add	r0, r0, r1
 	ldrh	r1, [r0]
 	cmp	r6, r1
-	ble	.L217	@cond_branch
+	ble	.L220	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r4, #0
@@ -2502,15 +3016,15 @@ sub_817FF3C:
 	bl	HandleSetAffineData
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L219+0x4
+	ldr	r0, .L222+0x4
 	str	r0, [r4, #0x1c]
-	b	.L218
-.L220:
+	b	.L221
+.L223:
 	.align	2, 0
-.L219:
+.L222:
 	.word	sUnknown_03001240
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L217:
+.L220:
 	mov	r2, #0x8
 	ldrsh	r1, [r0, r2]
 	mov	r0, #0x80
@@ -2524,7 +3038,7 @@ sub_817FF3C:
 	add	r0, r4, #0
 	add	r1, r2, #0
 	bl	HandleSetAffineData
-.L218:
+.L221:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
@@ -2543,7 +3057,7 @@ pokemonanimfunc_1F:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L222
+	ldr	r2, .L225
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -2554,14 +3068,14 @@ pokemonanimfunc_1F:
 	strh	r0, [r1, #0x8]
 	add	r0, r4, #0
 	bl	sub_817FF3C
-	ldr	r0, .L222+0x4
+	ldr	r0, .L225+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L223:
+.L226:
 	.align	2, 0
-.L222:
+.L225:
 	.word	sUnknown_03001240
 	.word	sub_817FF3C
 .Lfe36:
@@ -2577,7 +3091,7 @@ sub_817FFF0:
 	lsr	r7, r0, #0x18
 	add	r0, r5, #0
 	bl	sub_817F70C
-	ldr	r1, .L228
+	ldr	r1, .L231
 	lsl	r0, r7, #0x1
 	add	r0, r0, r7
 	lsl	r0, r0, #0x2
@@ -2587,29 +3101,29 @@ sub_817FFF0:
 	mov	r2, #0x6
 	ldrsh	r0, [r6, r2]
 	cmp	r1, r0
-	ble	.L225	@cond_branch
+	ble	.L228	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r5, #0x24]
 	strh	r0, [r5, #0x26]
-	ldr	r0, .L228+0x4
+	ldr	r0, .L231+0x4
 	str	r0, [r5, #0x1c]
-	b	.L226
-.L229:
+	b	.L229
+.L232:
 	.align	2, 0
-.L228:
+.L231:
 	.word	sUnknown_03001240
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L225:
+.L228:
 	mov	r0, #0x32
 	ldrsh	r1, [r5, r0]
 	add	r0, r1, #0
 	add	r0, r0, #0xc0
 	add	r4, r0, #0
 	cmp	r0, #0
-	bge	.L227	@cond_branch
-	ldr	r2, .L230
+	bge	.L230	@cond_branch
+	ldr	r2, .L233
 	add	r4, r1, r2
-.L227:
+.L230:
 	asr	r4, r4, #0x8
 	lsl	r4, r4, #0x8
 	sub	r4, r0, r4
@@ -2630,8 +3144,8 @@ sub_817FFF0:
 	ldrh	r1, [r6, #0x8]
 	add	r0, r0, r1
 	strh	r0, [r5, #0x26]
-.L226:
-	ldr	r0, .L230+0x4
+.L229:
+	ldr	r0, .L233+0x4
 	lsl	r1, r7, #0x1
 	add	r1, r1, r7
 	lsl	r1, r1, #0x2
@@ -2645,9 +3159,9 @@ sub_817FFF0:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L231:
+.L234:
 	.align	2, 0
-.L230:
+.L233:
 	.word	0x1bf
 	.word	sUnknown_03001240
 .Lfe37:
@@ -2662,7 +3176,7 @@ pokemonanimfunc_14:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L233
+	ldr	r2, .L236
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -2676,14 +3190,14 @@ pokemonanimfunc_14:
 	strh	r0, [r1, #0x2]
 	add	r0, r4, #0
 	bl	sub_817FFF0
-	ldr	r0, .L233+0x4
+	ldr	r0, .L236+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L234:
+.L237:
 	.align	2, 0
-.L233:
+.L236:
 	.word	sUnknown_03001240
 	.word	sub_817FFF0
 .Lfe38:
@@ -2697,7 +3211,7 @@ pokemonanimfunc_15:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L236	@cond_branch
+	bne	.L239	@cond_branch
 	ldrb	r0, [r4, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -2706,24 +3220,24 @@ pokemonanimfunc_15:
 	add	r1, r2, #0
 	add	r0, r0, r1
 	strh	r0, [r4, #0x3c]
-.L236:
+.L239:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x80
-	ble	.L237	@cond_branch
+	ble	.L240	@cond_branch
 	ldrh	r0, [r4, #0x3c]
 	mov	r1, #0x10
 	mov	r2, #0x0
 	mov	r3, #0x0
 	bl	BlendPalette
-	ldr	r0, .L239
+	ldr	r0, .L242
 	str	r0, [r4, #0x1c]
-	b	.L238
-.L240:
+	b	.L241
+.L243:
 	.align	2, 0
-.L239:
+.L242:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L237:
+.L240:
 	mov	r2, #0x32
 	ldrsh	r0, [r4, r2]
 	mov	r1, #0x10
@@ -2736,7 +3250,7 @@ pokemonanimfunc_15:
 	mov	r1, #0x10
 	mov	r3, #0x0
 	bl	BlendPalette
-.L238:
+.L241:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
@@ -2755,15 +3269,15 @@ pokemonanimfunc_16:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0
-	bne	.L242	@cond_branch
+	bne	.L245	@cond_branch
 	add	r0, r6, #0
 	bl	HandleStartAffineAnim
-.L242:
+.L245:
 	ldrh	r5, [r6, #0x32]
 	mov	r2, #0x32
 	ldrsh	r0, [r6, r2]
 	cmp	r0, #0x28
-	ble	.L243	@cond_branch
+	ble	.L246	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r6, #0
@@ -2772,14 +3286,14 @@ pokemonanimfunc_16:
 	bl	HandleSetAffineData
 	add	r0, r6, #0
 	bl	sub_817F77C
-	ldr	r0, .L248
+	ldr	r0, .L251
 	str	r0, [r6, #0x1c]
-	b	.L244
-.L249:
+	b	.L247
+.L252:
 	.align	2, 0
-.L248:
+.L251:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L243:
+.L246:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	lsl	r0, r0, #0x7
@@ -2792,17 +3306,17 @@ pokemonanimfunc_16:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x13
-	bhi	.L245	@cond_branch
+	bhi	.L248	@cond_branch
 	ldrh	r0, [r6, #0x3c]
 	add	r0, r0, #0x33
 	strh	r0, [r6, #0x3c]
 	mov	r7, #0xff
 	and	r7, r7, r0
-.L245:
+.L248:
 	mov	r2, #0x30
 	ldrsh	r0, [r6, r2]
 	cmp	r0, #0
-	bne	.L246	@cond_branch
+	bne	.L249	@cond_branch
 	lsl	r5, r4, #0x10
 	asr	r0, r5, #0x10
 	mov	r1, #0x28
@@ -2811,17 +3325,17 @@ pokemonanimfunc_16:
 	add	r0, r7, #0
 	mov	r1, #0x10
 	bl	Sin
-	ldr	r1, .L250
+	ldr	r1, .L253
 	add	r0, r0, r1
 	add	r4, r4, r0
 	strh	r4, [r6, #0x36]
 	add	r4, r5, #0
-	b	.L247
-.L251:
+	b	.L250
+.L254:
 	.align	2, 0
-.L250:
+.L253:
 	.word	-0x100
-.L246:
+.L249:
 	add	r0, r7, #0
 	mov	r1, #0x10
 	bl	Sin
@@ -2836,7 +3350,7 @@ pokemonanimfunc_16:
 	sub	r1, r1, r5
 	sub	r1, r1, r0
 	strh	r1, [r6, #0x36]
-.L247:
+.L250:
 	asr	r0, r4, #0x10
 	mov	r1, #0x10
 	bl	Sin
@@ -2851,7 +3365,7 @@ pokemonanimfunc_16:
 	add	r0, r6, #0
 	mov	r3, #0x0
 	bl	SetAffineData
-.L244:
+.L247:
 	ldrh	r0, [r6, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r6, #0x32]
@@ -2874,15 +3388,15 @@ pokemonanimfunc_17:
 	mov	r1, #0x32
 	ldrsh	r0, [r5, r1]
 	cmp	r0, #0
-	bne	.L253	@cond_branch
+	bne	.L256	@cond_branch
 	add	r0, r5, #0
 	bl	HandleStartAffineAnim
-.L253:
+.L256:
 	ldrh	r6, [r5, #0x32]
 	mov	r2, #0x32
 	ldrsh	r0, [r5, r2]
 	cmp	r0, #0x28
-	ble	.L254	@cond_branch
+	ble	.L257	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r5, #0
@@ -2891,16 +3405,16 @@ pokemonanimfunc_17:
 	bl	HandleSetAffineData
 	add	r0, r5, #0
 	bl	sub_817F77C
-	ldr	r0, .L262
+	ldr	r0, .L265
 	str	r0, [r5, #0x1c]
 	mov	r0, r8
 	strh	r0, [r5, #0x26]
-	b	.L255
-.L263:
+	b	.L258
+.L266:
 	.align	2, 0
-.L262:
+.L265:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L254:
+.L257:
 	mov	r1, #0x32
 	ldrsh	r0, [r5, r1]
 	lsl	r0, r0, #0x7
@@ -2913,31 +3427,31 @@ pokemonanimfunc_17:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x13
-	bhi	.L256	@cond_branch
+	bhi	.L259	@cond_branch
 	ldrh	r0, [r5, #0x3c]
 	add	r0, r0, #0x33
 	strh	r0, [r5, #0x3c]
 	mov	r7, #0xff
 	and	r7, r7, r0
-.L256:
+.L259:
 	mov	r2, #0x30
 	ldrsh	r0, [r5, r2]
 	cmp	r0, #0
-	bne	.L257	@cond_branch
+	bne	.L260	@cond_branch
 	lsl	r4, r4, #0x10
 	asr	r0, r4, #0x10
 	mov	r1, #0x10
 	bl	Sin
-	ldr	r2, .L264
+	ldr	r2, .L267
 	add	r1, r2, #0
 	sub	r1, r1, r0
 	strh	r1, [r5, #0x36]
-	b	.L261
-.L265:
+	b	.L264
+.L268:
 	.align	2, 0
-.L264:
+.L267:
 	.word	-0x100
-.L257:
+.L260:
 	lsl	r4, r4, #0x10
 	asr	r0, r4, #0x10
 	mov	r1, #0x10
@@ -2946,7 +3460,7 @@ pokemonanimfunc_17:
 	lsl	r1, r1, #0x1
 	add	r0, r0, r1
 	strh	r0, [r5, #0x36]
-.L261:
+.L264:
 	add	r6, r4, #0
 	add	r0, r7, #0
 	mov	r1, #0x8
@@ -2966,18 +3480,18 @@ pokemonanimfunc_17:
 	lsl	r1, r1, #0x10
 	asr	r1, r1, #0x10
 	cmp	r4, r1
-	beq	.L259	@cond_branch
+	beq	.L262	@cond_branch
 	mov	r2, #0x38
 	ldrsh	r0, [r5, r2]
 	sub	r0, r1, r0
 	cmp	r0, #0
-	bge	.L260	@cond_branch
+	bge	.L263	@cond_branch
 	add	r0, r0, #0x7
-.L260:
+.L263:
 	lsl	r0, r0, #0xd
 	lsr	r0, r0, #0x10
 	mov	r8, r0
-.L259:
+.L262:
 	mov	r1, r8
 	lsl	r0, r1, #0x10
 	asr	r0, r0, #0x10
@@ -2990,7 +3504,7 @@ pokemonanimfunc_17:
 	add	r0, r5, #0
 	mov	r3, #0x0
 	bl	SetAffineData
-.L255:
+.L258:
 	ldrh	r0, [r5, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r5, #0x32]
@@ -3016,7 +3530,7 @@ sub_818031C:
 	ldrh	r0, [r4, #0x3a]
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	ldr	r2, .L274
+	ldr	r2, .L277
 	mov	r1, #0x38
 	ldrsh	r0, [r4, r1]
 	lsl	r0, r0, #0x1
@@ -3027,47 +3541,47 @@ sub_818031C:
 	ldrb	r6, [r0]
 	mov	r1, #0x0
 	cmp	r5, #0xfe
-	beq	.L268	@cond_branch
+	beq	.L271	@cond_branch
 	sub	r0, r6, r7
 	mul	r0, r0, r5
 	add	r1, r6, #0
 	bl	__divsi3
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
-.L268:
+.L271:
 	cmp	r5, #0xff
-	bne	.L269	@cond_branch
-	ldr	r0, .L274+0x4
+	bne	.L272	@cond_branch
+	ldr	r0, .L277+0x4
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
 	strh	r0, [r4, #0x26]
-	b	.L270
-.L275:
+	b	.L273
+.L278:
 	.align	2, 0
-.L274:
+.L277:
 	.word	sUnknown_0860AA80
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L269:
+.L272:
 	mov	r0, r8
 	bl	Sin
 	strh	r0, [r4, #0x26]
 	cmp	r7, r6
-	bne	.L271	@cond_branch
+	bne	.L274	@cond_branch
 	ldrh	r0, [r4, #0x38]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x38]
 	mov	r0, #0x0
-	b	.L273
-.L271:
+	b	.L276
+.L274:
 	ldrh	r0, [r4, #0x2e]
 	ldrh	r1, [r4, #0x32]
 	add	r0, r0, r1
 	strh	r0, [r4, #0x32]
 	ldrh	r0, [r4, #0x3a]
 	add	r0, r0, #0x1
-.L273:
+.L276:
 	strh	r0, [r4, #0x3a]
-.L270:
+.L273:
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
@@ -3085,14 +3599,14 @@ pokemonanimfunc_19:
 	strh	r0, [r4, #0x2e]
 	add	r0, r4, #0
 	bl	sub_818031C
-	ldr	r0, .L277
+	ldr	r0, .L280
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L278:
+.L281:
 	.align	2, 0
-.L277:
+.L280:
 	.word	sub_818031C
 .Lfe43:
 	.size	 pokemonanimfunc_19,.Lfe43-pokemonanimfunc_19
@@ -3110,14 +3624,14 @@ pokemonanimfunc_1A:
 	lsr	r5, r7, #0x18
 	mov	r8, r5
 	cmp	r0, #0
-	bne	.L280	@cond_branch
+	bne	.L283	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
-.L280:
+.L283:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x23
-	ble	.L281	@cond_branch
+	ble	.L284	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r4, #0
@@ -3126,16 +3640,16 @@ pokemonanimfunc_1A:
 	bl	HandleSetAffineData
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L287
+	ldr	r0, .L290
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
 	strh	r0, [r4, #0x24]
-	b	.L282
-.L288:
+	b	.L285
+.L291:
 	.align	2, 0
-.L287:
+.L290:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L281:
+.L284:
 	add	r6, r5, #0
 	sub	r6, r6, #0xa
 	lsl	r0, r6, #0x7
@@ -3144,7 +3658,7 @@ pokemonanimfunc_1A:
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
 	cmp	r5, #0x9
-	bhi	.L283	@cond_branch
+	bhi	.L286	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	lsr	r3, r7, #0x19
@@ -3152,20 +3666,20 @@ pokemonanimfunc_1A:
 	add	r0, r4, #0
 	add	r1, r2, #0
 	bl	HandleSetAffineData
-	b	.L282
-.L283:
+	b	.L285
+.L286:
 	lsl	r0, r6, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x13
-	bhi	.L285	@cond_branch
+	bhi	.L288	@cond_branch
 	lsl	r0, r1, #0x10
 	asr	r0, r0, #0x10
 	mov	r1, #0x5
 	bl	Sin
 	neg	r0, r0
 	strh	r0, [r4, #0x24]
-	b	.L282
-.L285:
+	b	.L285
+.L288:
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	mov	r3, #0x23
@@ -3179,7 +3693,7 @@ pokemonanimfunc_1A:
 	add	r0, r4, #0
 	add	r1, r2, #0
 	bl	HandleSetAffineData
-.L282:
+.L285:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
@@ -3201,14 +3715,14 @@ pokemonanimfunc_1B:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0
-	bne	.L290	@cond_branch
+	bne	.L293	@cond_branch
 	add	r0, r6, #0
 	bl	HandleStartAffineAnim
-.L290:
+.L293:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0x64
-	ble	.L291	@cond_branch
+	ble	.L294	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r6, #0
@@ -3219,14 +3733,14 @@ pokemonanimfunc_1B:
 	strh	r0, [r6, #0x26]
 	add	r0, r6, #0
 	bl	sub_817F77C
-	ldr	r0, .L293
+	ldr	r0, .L296
 	str	r0, [r6, #0x1c]
-	b	.L292
-.L294:
+	b	.L295
+.L297:
 	.align	2, 0
-.L293:
+.L296:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L291:
+.L294:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	lsl	r0, r0, #0x8
@@ -3241,7 +3755,7 @@ pokemonanimfunc_1B:
 	strh	r0, [r6, #0x26]
 	mov	r5, #0x80
 	lsl	r5, r5, #0x1
-	ldr	r1, .L295
+	ldr	r1, .L298
 	add	r0, r4, #0
 	bl	Sin
 	add	r3, r0, #0
@@ -3251,16 +3765,16 @@ pokemonanimfunc_1B:
 	add	r1, r5, #0
 	add	r2, r5, #0
 	bl	HandleSetAffineData
-.L292:
+.L295:
 	ldrh	r0, [r6, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r6, #0x32]
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L296:
+.L299:
 	.align	2, 0
-.L295:
+.L298:
 	.word	0xccc
 .Lfe45:
 	.size	 pokemonanimfunc_1B,.Lfe45-pokemonanimfunc_1B
@@ -3274,14 +3788,14 @@ sub_81804F8:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0
-	bne	.L298	@cond_branch
+	bne	.L301	@cond_branch
 	add	r0, r6, #0
 	bl	HandleStartAffineAnim
-.L298:
+.L301:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0x64
-	ble	.L299	@cond_branch
+	ble	.L302	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r6, #0
@@ -3291,14 +3805,14 @@ sub_81804F8:
 	strh	r5, [r6, #0x26]
 	add	r0, r6, #0
 	bl	sub_817F77C
-	ldr	r0, .L301
+	ldr	r0, .L304
 	str	r0, [r6, #0x1c]
-	b	.L300
-.L302:
+	b	.L303
+.L305:
 	.align	2, 0
-.L301:
+.L304:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L299:
+.L302:
 	mov	r0, #0x32
 	ldrsh	r5, [r6, r0]
 	lsl	r0, r5, #0x8
@@ -3324,7 +3838,7 @@ sub_81804F8:
 	mov	r4, #0x80
 	lsl	r4, r4, #0x1
 	add	r0, r5, #0
-	ldr	r1, .L303
+	ldr	r1, .L306
 	bl	Sin
 	add	r3, r0, #0
 	lsl	r3, r3, #0x10
@@ -3333,16 +3847,16 @@ sub_81804F8:
 	add	r1, r4, #0
 	add	r2, r4, #0
 	bl	HandleSetAffineData
-.L300:
+.L303:
 	ldrh	r0, [r6, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r6, #0x32]
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L304:
+.L307:
 	.align	2, 0
-.L303:
+.L306:
 	.word	0xccc
 .Lfe46:
 	.size	 sub_81804F8,.Lfe46-sub_81804F8
@@ -3356,14 +3870,14 @@ pokemonanimfunc_1C:
 	strh	r0, [r4, #0x2e]
 	add	r0, r4, #0
 	bl	sub_81804F8
-	ldr	r0, .L306
+	ldr	r0, .L309
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L307:
+.L310:
 	.align	2, 0
-.L306:
+.L309:
 	.word	sub_81804F8
 .Lfe47:
 	.size	 pokemonanimfunc_1C,.Lfe47-pokemonanimfunc_1C
@@ -3377,14 +3891,14 @@ sub_81805B0:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0
-	bne	.L309	@cond_branch
+	bne	.L312	@cond_branch
 	add	r0, r6, #0
 	bl	HandleStartAffineAnim
-.L309:
+.L312:
 	mov	r2, #0x32
 	ldrsh	r0, [r6, r2]
 	cmp	r0, #0x64
-	ble	.L310	@cond_branch
+	ble	.L313	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r6, #0
@@ -3394,14 +3908,14 @@ sub_81805B0:
 	strh	r5, [r6, #0x26]
 	add	r0, r6, #0
 	bl	sub_817F77C
-	ldr	r0, .L312
+	ldr	r0, .L315
 	str	r0, [r6, #0x1c]
-	b	.L311
-.L313:
+	b	.L314
+.L316:
 	.align	2, 0
-.L312:
+.L315:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L310:
+.L313:
 	mov	r0, #0x32
 	ldrsh	r5, [r6, r0]
 	lsl	r0, r5, #0x8
@@ -3432,7 +3946,7 @@ sub_81805B0:
 	mov	r4, #0x80
 	lsl	r4, r4, #0x1
 	add	r0, r5, #0
-	ldr	r1, .L314
+	ldr	r1, .L317
 	bl	Sin
 	add	r3, r0, #0
 	lsl	r3, r3, #0x10
@@ -3441,16 +3955,16 @@ sub_81805B0:
 	add	r1, r4, #0
 	add	r2, r4, #0
 	bl	HandleSetAffineData
-.L311:
+.L314:
 	ldrh	r0, [r6, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r6, #0x32]
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L315:
+.L318:
 	.align	2, 0
-.L314:
+.L317:
 	.word	0xccc
 .Lfe48:
 	.size	 sub_81805B0,.Lfe48-sub_81805B0
@@ -3464,14 +3978,14 @@ pokemonanimfunc_18:
 	strh	r0, [r4, #0x2e]
 	add	r0, r4, #0
 	bl	sub_81805B0
-	ldr	r0, .L317
+	ldr	r0, .L320
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L318:
+.L321:
 	.align	2, 0
-.L317:
+.L320:
 	.word	sub_81805B0
 .Lfe49:
 	.size	 pokemonanimfunc_18,.Lfe49-pokemonanimfunc_18
@@ -3486,14 +4000,14 @@ pokemonanimfunc_1D:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0
-	bne	.L320	@cond_branch
+	bne	.L323	@cond_branch
 	add	r0, r6, #0
 	bl	HandleStartAffineAnim
-.L320:
+.L323:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0x64
-	ble	.L321	@cond_branch
+	ble	.L324	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r6, #0
@@ -3503,14 +4017,14 @@ pokemonanimfunc_1D:
 	strh	r5, [r6, #0x24]
 	add	r0, r6, #0
 	bl	sub_817F77C
-	ldr	r0, .L323
+	ldr	r0, .L326
 	str	r0, [r6, #0x1c]
-	b	.L322
-.L324:
+	b	.L325
+.L327:
 	.align	2, 0
-.L323:
+.L326:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L321:
+.L324:
 	mov	r0, #0x32
 	ldrsh	r5, [r6, r0]
 	lsl	r0, r5, #0x8
@@ -3535,7 +4049,7 @@ pokemonanimfunc_1D:
 	mov	r4, #0x80
 	lsl	r4, r4, #0x1
 	add	r0, r5, #0
-	ldr	r1, .L325
+	ldr	r1, .L328
 	bl	Sin
 	add	r3, r0, #0
 	lsl	r3, r3, #0x10
@@ -3544,7 +4058,7 @@ pokemonanimfunc_1D:
 	add	r1, r4, #0
 	add	r2, r4, #0
 	bl	HandleSetAffineData
-.L322:
+.L325:
 	ldrh	r0, [r6, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r6, #0x32]
@@ -3553,9 +4067,9 @@ pokemonanimfunc_1D:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L326:
+.L329:
 	.align	2, 0
-.L325:
+.L328:
 	.word	0xccc
 .Lfe50:
 	.size	 pokemonanimfunc_1D,.Lfe50-pokemonanimfunc_1D
@@ -3569,11 +4083,11 @@ sub_8180714:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L328	@cond_branch
+	bne	.L331	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	strh	r6, [r4, #0x34]
-.L328:
+.L331:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	mov	r0, #0x32
@@ -3583,7 +4097,7 @@ sub_8180714:
 	lsl	r0, r1, #0x1
 	add	r0, r0, r1
 	cmp	r2, r0
-	ble	.L329	@cond_branch
+	ble	.L332	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r4, #0
@@ -3593,14 +4107,14 @@ sub_8180714:
 	strh	r6, [r4, #0x26]
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L334
+	ldr	r0, .L337
 	str	r0, [r4, #0x1c]
-	b	.L330
-.L335:
+	b	.L333
+.L338:
 	.align	2, 0
-.L334:
+.L337:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L329:
+.L332:
 	mov	r1, #0x36
 	ldrsh	r0, [r4, r1]
 	mov	r1, #0x20
@@ -3615,33 +4129,33 @@ sub_8180714:
 	mov	r2, #0x2e
 	ldrsh	r0, [r4, r2]
 	cmp	r1, r0
-	ble	.L331	@cond_branch
+	ble	.L334	@cond_branch
 	add	r2, r0, #0
 	lsl	r0, r2, #0x1
 	cmp	r1, r0
-	bge	.L331	@cond_branch
+	bge	.L334	@cond_branch
 	mov	r0, #0x80
 	add	r1, r2, #0
 	bl	__divsi3
 	ldrh	r1, [r4, #0x34]
 	add	r1, r1, r0
 	strh	r1, [r4, #0x34]
-.L331:
+.L334:
 	lsl	r0, r5, #0x10
 	asr	r1, r0, #0x10
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r5, r0, #0
 	cmp	r1, r2
-	ble	.L332	@cond_branch
+	ble	.L335	@cond_branch
 	sub	r0, r2, r1
 	cmp	r0, #0
-	bge	.L333	@cond_branch
+	bge	.L336	@cond_branch
 	add	r0, r0, #0x7
-.L333:
+.L336:
 	lsl	r0, r0, #0xd
 	lsr	r6, r0, #0x10
-.L332:
+.L335:
 	mov	r1, #0x34
 	ldrsh	r0, [r4, r1]
 	mov	r1, #0xa
@@ -3677,7 +4191,7 @@ sub_8180714:
 	mov	r0, #0xff
 	and	r1, r1, r0
 	strh	r1, [r4, #0x36]
-.L330:
+.L333:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4, r5, r6}
@@ -3695,14 +4209,14 @@ pokemonanimfunc_00:
 	strh	r0, [r4, #0x2e]
 	add	r0, r4, #0
 	bl	sub_8180714
-	ldr	r0, .L337
+	ldr	r0, .L340
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L338:
+.L341:
 	.align	2, 0
-.L337:
+.L340:
 	.word	sub_8180714
 .Lfe52:
 	.size	 pokemonanimfunc_00,.Lfe52-pokemonanimfunc_00
@@ -3723,7 +4237,7 @@ sub_8180828:
 	ldrsh	r1, [r5, r2]
 	mul	r0, r0, r1
 	cmp	r4, r0
-	ble	.L340	@cond_branch
+	ble	.L343	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r5, #0
@@ -3733,14 +4247,14 @@ sub_8180828:
 	strh	r6, [r5, #0x26]
 	add	r0, r5, #0
 	bl	sub_817F77C
-	ldr	r0, .L344
+	ldr	r0, .L347
 	str	r0, [r5, #0x1c]
-	b	.L341
-.L345:
+	b	.L344
+.L348:
 	.align	2, 0
-.L344:
+.L347:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L340:
+.L343:
 	mov	r1, #0x36
 	ldrsh	r0, [r5, r1]
 	mov	r1, #0x20
@@ -3755,15 +4269,15 @@ sub_8180828:
 	lsl	r1, r1, #0x10
 	asr	r1, r1, #0x10
 	cmp	r0, r1
-	ble	.L342	@cond_branch
+	ble	.L345	@cond_branch
 	sub	r0, r1, r0
 	cmp	r0, #0
-	bge	.L343	@cond_branch
+	bge	.L346	@cond_branch
 	add	r0, r0, #0x7
-.L343:
+.L346:
 	lsl	r0, r0, #0xd
 	lsr	r6, r0, #0x10
-.L342:
+.L345:
 	lsl	r0, r6, #0x10
 	asr	r0, r0, #0x10
 	neg	r0, r0
@@ -3792,7 +4306,7 @@ sub_8180828:
 	mov	r1, #0xff
 	and	r0, r0, r1
 	strh	r0, [r5, #0x36]
-.L341:
+.L344:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
@@ -3807,14 +4321,14 @@ pokemonanimfunc_13:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L347	@cond_branch
+	bne	.L350	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	mov	r0, #0x3
 	strh	r0, [r4, #0x3c]
 	mov	r0, #0x8
 	strh	r0, [r4, #0x3a]
-.L347:
+.L350:
 	add	r0, r4, #0
 	bl	sub_8180828
 	pop	{r4}
@@ -3890,14 +4404,14 @@ sub_8180900:
 	ldrh	r1, [r4, #0x2e]
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
-	ldr	r2, .L356
+	ldr	r2, .L359
 	lsl	r0, r1, #0x1
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
 	add	r0, r0, r2
 	ldrh	r1, [r0, #0x6]
 	str	r1, [sp]
-	ldr	r5, .L356+0x4
+	ldr	r5, .L359+0x4
 	mov	r3, #0x36
 	ldrsh	r2, [r4, r3]
 	lsl	r1, r2, #0x1
@@ -3925,13 +4439,13 @@ sub_8180900:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L349	@cond_branch
+	bne	.L352	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
-.L349:
+.L352:
 	mov	r2, #0x36
 	ldrsh	r1, [r4, r2]
 	lsl	r0, r1, #0x1
@@ -3943,7 +4457,7 @@ sub_8180900:
 	mov	r5, #0x0
 	ldrsb	r5, [r1, r5]
 	cmp	r5, #0
-	bne	.L350	@cond_branch
+	bne	.L353	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r4, #0
@@ -3954,16 +4468,16 @@ sub_8180900:
 	strh	r5, [r4, #0x26]
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L356+0x8
+	ldr	r0, .L359+0x8
 	str	r0, [r4, #0x1c]
-	b	.L351
-.L357:
+	b	.L354
+.L360:
 	.align	2, 0
-.L356:
+.L359:
 	.word	sUnknown_03001240
 	.word	sUnknown_0860AD8E
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L350:
+.L353:
 	lsl	r0, r7, #0x10
 	asr	r5, r0, #0x10
 	lsl	r0, r5, #0x7
@@ -4001,9 +4515,9 @@ sub_8180900:
 	mul	r0, r0, r1
 	neg	r0, r0
 	cmp	r0, #0
-	bge	.L352	@cond_branch
+	bge	.L355	@cond_branch
 	add	r0, r0, #0x7
-.L352:
+.L355:
 	lsl	r3, r0, #0xd
 	lsr	r3, r3, #0x10
 	mov	r2, #0x80
@@ -4021,18 +4535,18 @@ sub_8180900:
 	lsl	r0, r0, #24
 	asr	r0, r0, #24
 	cmp	r5, r0
-	bne	.L353	@cond_branch
+	bne	.L356	@cond_branch
 	ldrh	r0, [r4, #0x36]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x36]
 	mov	r0, #0x0
-	b	.L355
-.L353:
+	b	.L358
+.L356:
 	ldrh	r0, [r4, #0x34]
 	add	r0, r0, #0x1
-.L355:
+.L358:
 	strh	r0, [r4, #0x34]
-.L351:
+.L354:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	add	sp, sp, #0x4
@@ -4055,7 +4569,7 @@ pokemonanimfunc_05:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L359
+	ldr	r2, .L362
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -4067,14 +4581,14 @@ pokemonanimfunc_05:
 	strh	r0, [r1, #0x8]
 	add	r0, r4, #0
 	bl	sub_8180900
-	ldr	r0, .L359+0x4
+	ldr	r0, .L362+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L360:
+.L363:
 	.align	2, 0
-.L359:
+.L362:
 	.word	sUnknown_03001240
 	.word	sub_8180900
 .Lfe56:
@@ -4088,7 +4602,7 @@ pokemonanimfunc_20:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L362	@cond_branch
+	bne	.L365	@cond_branch
 	ldrb	r0, [r4, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -4097,25 +4611,25 @@ pokemonanimfunc_20:
 	add	r1, r2, #0
 	add	r0, r0, r1
 	strh	r0, [r4, #0x3c]
-.L362:
+.L365:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x80
-	ble	.L363	@cond_branch
+	ble	.L366	@cond_branch
 	ldrh	r0, [r4, #0x3c]
-	ldr	r3, .L365
+	ldr	r3, .L368
 	mov	r1, #0x10
 	mov	r2, #0x0
 	bl	BlendPalette
-	ldr	r0, .L365+0x4
+	ldr	r0, .L368+0x4
 	str	r0, [r4, #0x1c]
-	b	.L364
-.L366:
+	b	.L367
+.L369:
 	.align	2, 0
-.L365:
+.L368:
 	.word	0x2df
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L363:
+.L366:
 	mov	r2, #0x32
 	ldrsh	r0, [r4, r2]
 	mov	r1, #0xc
@@ -4125,19 +4639,19 @@ pokemonanimfunc_20:
 	ldrh	r0, [r4, #0x3c]
 	lsl	r2, r2, #0x18
 	lsr	r2, r2, #0x18
-	ldr	r3, .L367
+	ldr	r3, .L370
 	mov	r1, #0x10
 	bl	BlendPalette
-.L364:
+.L367:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x2
 	strh	r0, [r4, #0x32]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L368:
+.L371:
 	.align	2, 0
-.L367:
+.L370:
 	.word	0x2df
 .Lfe57:
 	.size	 pokemonanimfunc_20,.Lfe57-pokemonanimfunc_20
@@ -4150,7 +4664,7 @@ pokemonanimfunc_21:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L370	@cond_branch
+	bne	.L373	@cond_branch
 	ldrb	r0, [r4, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -4159,24 +4673,24 @@ pokemonanimfunc_21:
 	add	r1, r2, #0
 	add	r0, r0, r1
 	strh	r0, [r4, #0x3c]
-.L370:
+.L373:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x80
-	ble	.L371	@cond_branch
+	ble	.L374	@cond_branch
 	ldrh	r0, [r4, #0x3c]
 	mov	r1, #0x10
 	mov	r2, #0x0
 	mov	r3, #0x1f
 	bl	BlendPalette
-	ldr	r0, .L373
+	ldr	r0, .L376
 	str	r0, [r4, #0x1c]
-	b	.L372
-.L374:
+	b	.L375
+.L377:
 	.align	2, 0
-.L373:
+.L376:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L371:
+.L374:
 	mov	r2, #0x32
 	ldrsh	r0, [r4, r2]
 	mov	r1, #0xc
@@ -4189,7 +4703,7 @@ pokemonanimfunc_21:
 	mov	r1, #0x10
 	mov	r3, #0x1f
 	bl	BlendPalette
-.L372:
+.L375:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x2
 	strh	r0, [r4, #0x32]
@@ -4207,7 +4721,7 @@ pokemonanimfunc_22:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L376	@cond_branch
+	bne	.L379	@cond_branch
 	ldrb	r0, [r4, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -4216,25 +4730,25 @@ pokemonanimfunc_22:
 	add	r1, r2, #0
 	add	r0, r0, r1
 	strh	r0, [r4, #0x3c]
-.L376:
+.L379:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x80
-	ble	.L377	@cond_branch
+	ble	.L380	@cond_branch
 	ldrh	r0, [r4, #0x3c]
 	mov	r3, #0xf8
 	lsl	r3, r3, #0x7
 	mov	r1, #0x10
 	mov	r2, #0x0
 	bl	BlendPalette
-	ldr	r0, .L379
+	ldr	r0, .L382
 	str	r0, [r4, #0x1c]
-	b	.L378
-.L380:
+	b	.L381
+.L383:
 	.align	2, 0
-.L379:
+.L382:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L377:
+.L380:
 	mov	r2, #0x32
 	ldrsh	r0, [r4, r2]
 	mov	r1, #0xc
@@ -4248,7 +4762,7 @@ pokemonanimfunc_22:
 	lsl	r3, r3, #0x7
 	mov	r1, #0x10
 	bl	BlendPalette
-.L378:
+.L381:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x2
 	strh	r0, [r4, #0x32]
@@ -4266,7 +4780,7 @@ pokemonanimfunc_23:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L382	@cond_branch
+	bne	.L385	@cond_branch
 	ldrb	r0, [r4, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -4275,25 +4789,25 @@ pokemonanimfunc_23:
 	add	r1, r2, #0
 	add	r0, r0, r1
 	strh	r0, [r4, #0x3c]
-.L382:
+.L385:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x80
-	ble	.L383	@cond_branch
+	ble	.L386	@cond_branch
 	ldrh	r0, [r4, #0x3c]
-	ldr	r3, .L385
+	ldr	r3, .L388
 	mov	r1, #0x10
 	mov	r2, #0x0
 	bl	BlendPalette
-	ldr	r0, .L385+0x4
+	ldr	r0, .L388+0x4
 	str	r0, [r4, #0x1c]
-	b	.L384
-.L386:
+	b	.L387
+.L389:
 	.align	2, 0
-.L385:
+.L388:
 	.word	0x3ff
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L383:
+.L386:
 	mov	r2, #0x32
 	ldrsh	r0, [r4, r2]
 	mov	r1, #0xc
@@ -4303,19 +4817,19 @@ pokemonanimfunc_23:
 	ldrh	r0, [r4, #0x3c]
 	lsl	r2, r2, #0x18
 	lsr	r2, r2, #0x18
-	ldr	r3, .L387
+	ldr	r3, .L390
 	mov	r1, #0x10
 	bl	BlendPalette
-.L384:
+.L387:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x2
 	strh	r0, [r4, #0x32]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L388:
+.L391:
 	.align	2, 0
-.L387:
+.L390:
 	.word	0x3ff
 .Lfe60:
 	.size	 pokemonanimfunc_23,.Lfe60-pokemonanimfunc_23
@@ -4328,7 +4842,7 @@ pokemonanimfunc_24:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L390	@cond_branch
+	bne	.L393	@cond_branch
 	ldrb	r0, [r4, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -4337,25 +4851,25 @@ pokemonanimfunc_24:
 	add	r1, r2, #0
 	add	r0, r0, r1
 	strh	r0, [r4, #0x3c]
-.L390:
+.L393:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x80
-	ble	.L391	@cond_branch
+	ble	.L394	@cond_branch
 	ldrh	r0, [r4, #0x3c]
-	ldr	r3, .L393
+	ldr	r3, .L396
 	mov	r1, #0x10
 	mov	r2, #0x0
 	bl	BlendPalette
-	ldr	r0, .L393+0x4
+	ldr	r0, .L396+0x4
 	str	r0, [r4, #0x1c]
-	b	.L392
-.L394:
+	b	.L395
+.L397:
 	.align	2, 0
-.L393:
+.L396:
 	.word	0x6018
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L391:
+.L394:
 	mov	r2, #0x32
 	ldrsh	r0, [r4, r2]
 	mov	r1, #0xc
@@ -4365,19 +4879,19 @@ pokemonanimfunc_24:
 	ldrh	r0, [r4, #0x3c]
 	lsl	r2, r2, #0x18
 	lsr	r2, r2, #0x18
-	ldr	r3, .L395
+	ldr	r3, .L398
 	mov	r1, #0x10
 	bl	BlendPalette
-.L392:
+.L395:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x2
 	strh	r0, [r4, #0x32]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L396:
+.L399:
 	.align	2, 0
-.L395:
+.L398:
 	.word	0x6018
 .Lfe61:
 	.size	 pokemonanimfunc_24,.Lfe61-pokemonanimfunc_24
@@ -4388,14 +4902,14 @@ pokemonanimfunc_25:
 	push	{r4, lr}
 	add	r4, r0, #0
 	bl	HandleStartAffineAnim
-	ldr	r0, .L398
+	ldr	r0, .L401
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L399:
+.L402:
 	.align	2, 0
-.L398:
+.L401:
 	.word	sub_8180CB4
 .Lfe62:
 	.size	 pokemonanimfunc_25,.Lfe62-pokemonanimfunc_25
@@ -4412,22 +4926,22 @@ sub_8180CB4:
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x7
-	ble	.L401	@cond_branch
+	ble	.L404	@cond_branch
 	mov	r0, #0x8
 	strh	r0, [r4, #0x24]
 	mov	r0, #0x2
 	strh	r0, [r4, #0x3c]
-	ldr	r0, .L402
+	ldr	r0, .L405
 	str	r0, [r4, #0x1c]
-.L401:
+.L404:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L403:
+.L406:
 	.align	2, 0
-.L402:
+.L405:
 	.word	sub_8180CE8
 .Lfe63:
 	.size	 sub_8180CB4,.Lfe63-sub_8180CB4
@@ -4447,16 +4961,16 @@ sub_8180CE8:
 	strh	r0, [r4, #0x3c]
 	lsl	r1, r1, #0x10
 	cmp	r1, #0
-	bgt	.L405	@cond_branch
+	bgt	.L408	@cond_branch
 	lsl	r0, r2, #0x18
 	lsr	r2, r0, #0x18
 	mov	r0, #0x0
 	strh	r0, [r4, #0x3a]
 	ldrh	r1, [r4, #0x24]
-	ldr	r5, .L411
+	ldr	r5, .L414
 	mov	r3, #0x8
 	neg	r3, r3
-.L406:
+.L409:
 	sub	r0, r1, r2
 	lsl	r0, r0, #0x10
 	ldrh	r1, [r4, #0x3a]
@@ -4468,19 +4982,19 @@ sub_8180CE8:
 	lsr	r1, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, r3
-	bgt	.L406	@cond_branch
+	bgt	.L409	@cond_branch
 	mov	r0, #0x1
 	strh	r0, [r4, #0x38]
 	str	r5, [r4, #0x1c]
-.L405:
+.L408:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L412:
+.L415:
 	.align	2, 0
-.L411:
+.L414:
 	.word	sub_8180D44
 .Lfe64:
 	.size	 sub_8180CE8,.Lfe64-sub_8180CE8
@@ -4516,9 +5030,9 @@ sub_8180D44:
 	mov	r3, #0x3a
 	ldrsh	r1, [r4, r3]
 	cmp	r0, r1
-	ble	.L414	@cond_branch
+	ble	.L417	@cond_branch
 	strh	r2, [r4, #0x38]
-.L414:
+.L417:
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	lsl	r3, r5, #0x8
@@ -4530,24 +5044,24 @@ sub_8180D44:
 	mov	r1, #0x8
 	neg	r1, r1
 	cmp	r0, r1
-	bge	.L415	@cond_branch
+	bge	.L418	@cond_branch
 	strh	r1, [r4, #0x24]
 	mov	r0, #0x2
 	strh	r0, [r4, #0x36]
 	mov	r0, #0x0
 	strh	r0, [r4, #0x34]
 	strh	r5, [r4, #0x32]
-	ldr	r0, .L416
+	ldr	r0, .L419
 	str	r0, [r4, #0x1c]
-.L415:
+.L418:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L417:
+.L420:
 	.align	2, 0
-.L416:
+.L419:
 	.word	sub_8180DC0
 .Lfe65:
 	.size	 sub_8180D44,.Lfe65-sub_8180D44
@@ -4562,16 +5076,16 @@ sub_8180DC0:
 	mov	r2, #0x34
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0xb
-	ble	.L419	@cond_branch
+	ble	.L422	@cond_branch
 	ldrh	r0, [r4, #0x32]
 	sub	r0, r0, #0x2
 	strh	r0, [r4, #0x32]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bge	.L420	@cond_branch
+	bge	.L423	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r4, #0x32]
-.L420:
+.L423:
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	ldrh	r3, [r4, #0x32]
@@ -4583,15 +5097,15 @@ sub_8180DC0:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L422	@cond_branch
-	ldr	r0, .L423
+	bne	.L425	@cond_branch
+	ldr	r0, .L426
 	str	r0, [r4, #0x1c]
-	b	.L422
-.L424:
+	b	.L425
+.L427:
 	.align	2, 0
-.L423:
+.L426:
 	.word	sub_8180E28
-.L419:
+.L422:
 	ldrh	r0, [r4, #0x36]
 	ldrh	r2, [r4, #0x24]
 	add	r0, r0, r2
@@ -4602,7 +5116,7 @@ sub_8180DC0:
 	strh	r0, [r4, #0x36]
 	add	r0, r1, #0x1
 	strh	r0, [r4, #0x34]
-.L422:
+.L425:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
@@ -4622,22 +5136,22 @@ sub_8180E28:
 	strh	r0, [r4, #0x24]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	ble	.L426	@cond_branch
+	ble	.L429	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r4, #0x24]
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L427
+	ldr	r0, .L430
 	str	r0, [r4, #0x1c]
-.L426:
+.L429:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L428:
+.L431:
 	.align	2, 0
-.L427:
+.L430:
 	.word	SpriteCB_SetDummyOnAnimEnd
 .Lfe67:
 	.size	 sub_8180E28,.Lfe67-sub_8180E28
@@ -4650,14 +5164,14 @@ pokemonanimfunc_26:
 	bl	HandleStartAffineAnim
 	mov	r0, #0x0
 	strh	r0, [r4, #0x34]
-	ldr	r0, .L430
+	ldr	r0, .L433
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L431:
+.L434:
 	.align	2, 0
-.L430:
+.L433:
 	.word	sub_8180E78
 .Lfe68:
 	.size	 pokemonanimfunc_26,.Lfe68-pokemonanimfunc_26
@@ -4678,35 +5192,35 @@ sub_8180E78:
 	mov	r1, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L433	@cond_branch
+	bne	.L436	@cond_branch
 	mov	r1, #0x34
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bgt	.L433	@cond_branch
+	bgt	.L436	@cond_branch
 	mov	r0, #0xa
 	strh	r0, [r4, #0x34]
-.L433:
+.L436:
 	mov	r1, #0x24
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x7
-	ble	.L434	@cond_branch
+	ble	.L437	@cond_branch
 	mov	r1, #0x0
 	mov	r0, #0x8
 	strh	r0, [r4, #0x24]
-	ldr	r0, .L435
+	ldr	r0, .L438
 	strh	r0, [r4, #0x26]
 	strh	r1, [r4, #0x36]
-	ldr	r0, .L435+0x4
+	ldr	r0, .L438+0x4
 	str	r0, [r4, #0x1c]
-.L434:
+.L437:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L436:
+.L439:
 	.align	2, 0
-.L435:
+.L438:
 	.word	0xfff8
 	.word	sub_8180ED0
 .Lfe69:
@@ -4733,32 +5247,32 @@ sub_8180ED0:
 	mov	r1, #0x36
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x3f
-	ble	.L438	@cond_branch
+	ble	.L441	@cond_branch
 	mov	r0, #0xa0
 	strh	r0, [r4, #0x32]
 	mov	r0, #0xa
 	strh	r0, [r4, #0x34]
-	ldr	r0, .L440
+	ldr	r0, .L443
 	str	r0, [r4, #0x1c]
-.L438:
+.L441:
 	ldrh	r0, [r4, #0x36]
 	add	r0, r0, #0x8
 	strh	r0, [r4, #0x36]
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x40
-	ble	.L439	@cond_branch
+	ble	.L442	@cond_branch
 	mov	r0, #0x40
 	strh	r0, [r4, #0x36]
-.L439:
+.L442:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L441:
+.L444:
 	.align	2, 0
-.L440:
+.L443:
 	.word	sub_8180F2C
 .Lfe70:
 	.size	 sub_8180ED0,.Lfe70-sub_8180ED0
@@ -4773,11 +5287,11 @@ sub_8180F2C:
 	mov	r2, #0x34
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0
-	ble	.L443	@cond_branch
+	ble	.L446	@cond_branch
 	sub	r0, r1, #0x1
 	strh	r0, [r4, #0x34]
-	b	.L444
-.L443:
+	b	.L447
+.L446:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	mov	r1, #0x5
@@ -4808,22 +5322,22 @@ sub_8180F2C:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x20
-	bgt	.L444	@cond_branch
+	bgt	.L447	@cond_branch
 	strh	r5, [r4, #0x24]
 	strh	r5, [r4, #0x26]
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L446
+	ldr	r0, .L449
 	str	r0, [r4, #0x1c]
-.L444:
+.L447:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L447:
+.L450:
 	.align	2, 0
-.L446:
+.L449:
 	.word	SpriteCB_SetDummyOnAnimEnd
 .Lfe71:
 	.size	 sub_8180F2C,.Lfe71-sub_8180F2C
@@ -4837,17 +5351,17 @@ pokemonanimfunc_27:
 	mov	r2, #0x34
 	ldrsh	r0, [r3, r2]
 	cmp	r0, #0
-	ble	.L449	@cond_branch
+	ble	.L452	@cond_branch
 	sub	r0, r1, #0x1
-	b	.L453
-.L449:
+	b	.L456
+.L452:
 	mov	r2, #0x0
 	mov	r1, #0x36
 	ldrsh	r0, [r3, r1]
 	cmp	r0, #0
-	bne	.L451	@cond_branch
+	bne	.L454	@cond_branch
 	mov	r2, #0x1
-.L451:
+.L454:
 	strh	r2, [r3, #0x36]
 	mov	r0, #0x3e
 	add	r0, r0, r3
@@ -4867,24 +5381,24 @@ pokemonanimfunc_27:
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x13
-	ble	.L452	@cond_branch
+	ble	.L455	@cond_branch
 	ldrb	r0, [r1]
 	add	r1, r4, #0
 	and	r1, r1, r0
 	mov	r2, ip
 	strb	r1, [r2]
-	ldr	r0, .L454
+	ldr	r0, .L457
 	str	r0, [r3, #0x1c]
-.L452:
+.L455:
 	mov	r0, #0x2
-.L453:
+.L456:
 	strh	r0, [r3, #0x34]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L455:
+.L458:
 	.align	2, 0
-.L454:
+.L457:
 	.word	SpriteCB_SetDummyOnAnimEnd
 .Lfe72:
 	.size	 pokemonanimfunc_27,.Lfe72-pokemonanimfunc_27
@@ -4895,14 +5409,14 @@ pokemonanimfunc_28:
 	push	{r4, lr}
 	add	r4, r0, #0
 	bl	HandleStartAffineAnim
-	ldr	r0, .L457
+	ldr	r0, .L460
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L458:
+.L461:
 	.align	2, 0
-.L457:
+.L460:
 	.word	sub_8181024
 .Lfe73:
 	.size	 pokemonanimfunc_28,.Lfe73-pokemonanimfunc_28
@@ -4924,24 +5438,24 @@ sub_8181024:
 	mov	r1, #0x10
 	neg	r1, r1
 	cmp	r0, r1
-	bgt	.L460	@cond_branch
-	ldr	r0, .L461
+	bgt	.L463	@cond_branch
+	ldr	r0, .L464
 	strh	r0, [r4, #0x24]
 	mov	r0, #0x10
 	strh	r0, [r4, #0x26]
-	ldr	r0, .L461+0x4
+	ldr	r0, .L464+0x4
 	str	r0, [r4, #0x1c]
 	mov	r0, #0xa0
 	strh	r0, [r4, #0x32]
-.L460:
+.L463:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L462:
+.L465:
 	.align	2, 0
-.L461:
+.L464:
 	.word	0xfff0
 	.word	sub_8181068
 .Lfe74:
@@ -4980,18 +5494,18 @@ sub_8181068:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x20
-	bgt	.L464	@cond_branch
-	ldr	r0, .L465
+	bgt	.L467	@cond_branch
+	ldr	r0, .L468
 	str	r0, [r4, #0x1c]
-.L464:
+.L467:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L466:
+.L469:
 	.align	2, 0
-.L465:
+.L468:
 	.word	sub_81810C4
 .Lfe75:
 	.size	 sub_8181068,.Lfe75-sub_8181068
@@ -5010,20 +5524,20 @@ sub_81810C4:
 	strh	r0, [r4, #0x26]
 	lsl	r1, r1, #0x10
 	cmp	r1, #0
-	bgt	.L468	@cond_branch
+	bgt	.L471	@cond_branch
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L469
+	ldr	r0, .L472
 	str	r0, [r4, #0x1c]
-.L468:
+.L471:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L470:
+.L473:
 	.align	2, 0
-.L469:
+.L472:
 	.word	SpriteCB_SetDummyOnAnimEnd
 .Lfe76:
 	.size	 sub_81810C4,.Lfe76-sub_81810C4
@@ -5034,14 +5548,14 @@ pokemonanimfunc_29:
 	push	{r4, lr}
 	add	r4, r0, #0
 	bl	HandleStartAffineAnim
-	ldr	r0, .L472
+	ldr	r0, .L475
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L473:
+.L476:
 	.align	2, 0
-.L472:
+.L475:
 	.word	sub_8181110
 .Lfe77:
 	.size	 pokemonanimfunc_29,.Lfe77-pokemonanimfunc_29
@@ -5061,20 +5575,20 @@ sub_8181110:
 	lsl	r1, r1, #0x10
 	asr	r1, r1, #0x10
 	cmp	r1, #0xf
-	ble	.L475	@cond_branch
+	ble	.L478	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r4, #0x32]
-	ldr	r0, .L476
+	ldr	r0, .L479
 	str	r0, [r4, #0x1c]
-.L475:
+.L478:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L477:
+.L480:
 	.align	2, 0
-.L476:
+.L479:
 	.word	sub_8181144
 .Lfe78:
 	.size	 sub_8181110,.Lfe78-sub_8181110
@@ -5094,28 +5608,28 @@ sub_8181144:
 	mov	r0, #0x10
 	neg	r0, r0
 	cmp	r1, r0
-	bgt	.L479	@cond_branch
-	ldr	r0, .L481
+	bgt	.L482	@cond_branch
+	ldr	r0, .L484
 	strh	r0, [r4, #0x24]
 	mov	r0, #0x10
 	strh	r0, [r4, #0x26]
 	mov	r0, #0x0
 	strh	r0, [r4, #0x32]
-	ldr	r0, .L481+0x4
+	ldr	r0, .L484+0x4
 	str	r0, [r4, #0x1c]
-	b	.L480
-.L482:
+	b	.L483
+.L485:
 	.align	2, 0
-.L481:
+.L484:
 	.word	0xfff0
 	.word	sub_81811A4
-.L479:
+.L482:
 	sub	r0, r2, #0x2
 	strh	r0, [r4, #0x24]
 	ldrh	r0, [r4, #0x26]
 	add	r0, r0, #0x2
 	strh	r0, [r4, #0x26]
-.L480:
+.L483:
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	ldrh	r3, [r4, #0x32]
@@ -5147,22 +5661,22 @@ sub_81811A4:
 	strh	r0, [r4, #0x26]
 	lsl	r1, r1, #0x10
 	cmp	r1, #0
-	blt	.L484	@cond_branch
+	blt	.L487	@cond_branch
 	strh	r2, [r4, #0x24]
 	strh	r2, [r4, #0x26]
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L485
+	ldr	r0, .L488
 	str	r0, [r4, #0x1c]
-.L484:
+.L487:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L486:
+.L489:
 	.align	2, 0
-.L485:
+.L488:
 	.word	SpriteCB_SetDummyOnAnimEnd
 .Lfe80:
 	.size	 sub_81811A4,.Lfe80-sub_81811A4
@@ -5176,7 +5690,7 @@ pokemonanimfunc_2A:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L488
+	ldr	r2, .L491
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -5185,14 +5699,14 @@ pokemonanimfunc_2A:
 	strh	r0, [r1, #0x2]
 	add	r0, r4, #0
 	bl	sub_8181214
-	ldr	r0, .L488+0x4
+	ldr	r0, .L491+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L489:
+.L492:
 	.align	2, 0
-.L488:
+.L491:
 	.word	sUnknown_03001240
 	.word	sub_8181214
 .Lfe81:
@@ -5203,7 +5717,7 @@ pokemonanimfunc_2A:
 sub_8181214:
 	push	{r4, r5, r6, lr}
 	add	r4, r0, #0
-	ldr	r6, .L501
+	ldr	r6, .L504
 	mov	r0, #0x2e
 	ldrsh	r1, [r4, r0]
 	lsl	r0, r1, #0x1
@@ -5212,22 +5726,22 @@ sub_8181214:
 	add	r1, r0, r6
 	ldrh	r0, [r1]
 	cmp	r0, #0
-	beq	.L491	@cond_branch
+	beq	.L494	@cond_branch
 	sub	r0, r0, #0x1
 	strh	r0, [r1]
-	b	.L492
-.L502:
+	b	.L495
+.L505:
 	.align	2, 0
-.L501:
+.L504:
 	.word	sUnknown_03001240
-.L491:
+.L494:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	ldrh	r0, [r4, #0x32]
 	mov	r1, #0x32
 	ldrsh	r5, [r4, r1]
 	cmp	r5, #0
-	bne	.L493	@cond_branch
+	bne	.L496	@cond_branch
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
 	add	r0, r4, #0
@@ -5240,14 +5754,14 @@ sub_8181214:
 	add	r0, r0, r6
 	ldrh	r0, [r0, #0x2]
 	strh	r0, [r4, #0x3c]
-	ldr	r0, .L503
+	ldr	r0, .L506
 	strh	r0, [r4, #0x34]
 	mov	r0, #0x1
 	neg	r0, r0
 	strh	r0, [r4, #0x36]
 	strh	r5, [r4, #0x38]
 	strh	r5, [r4, #0x3a]
-.L493:
+.L496:
 	mov	r3, #0x3c
 	ldrsh	r1, [r4, r3]
 	mov	r6, #0x34
@@ -5272,7 +5786,7 @@ sub_8181214:
 	lsl	r1, r1, #0x10
 	lsr	r1, r1, #0x10
 	cmp	r1, #0x1e
-	bls	.L494	@cond_branch
+	bls	.L497	@cond_branch
 	mov	r1, #0x34
 	ldrsh	r0, [r4, r1]
 	lsl	r0, r0, #0x4
@@ -5281,18 +5795,18 @@ sub_8181214:
 	ldrsh	r0, [r4, r2]
 	neg	r0, r0
 	strh	r0, [r4, #0x34]
-	b	.L500
-.L504:
+	b	.L503
+.L507:
 	.align	2, 0
-.L503:
+.L506:
 	.word	0xffff
-.L494:
+.L497:
 	add	r0, r2, #0
 	add	r0, r0, #0xf
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x1e
-	bls	.L495	@cond_branch
+	bls	.L498	@cond_branch
 	mov	r3, #0x36
 	ldrsh	r0, [r4, r3]
 	lsl	r0, r0, #0x4
@@ -5301,23 +5815,23 @@ sub_8181214:
 	ldrsh	r0, [r4, r6]
 	neg	r0, r0
 	strh	r0, [r4, #0x36]
-.L500:
+.L503:
 	ldrh	r0, [r4, #0x38]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x38]
-.L495:
+.L498:
 	mov	r1, #0x38
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x5
-	ble	.L497	@cond_branch
+	ble	.L500	@cond_branch
 	mov	r2, #0x24
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0
-	bgt	.L497	@cond_branch
+	bgt	.L500	@cond_branch
 	mov	r3, #0x0
 	strh	r3, [r4, #0x24]
 	strh	r3, [r4, #0x26]
-	ldr	r5, .L505
+	ldr	r5, .L508
 	mov	r6, #0x2e
 	ldrsh	r0, [r4, r6]
 	lsl	r1, r0, #0x1
@@ -5328,7 +5842,7 @@ sub_8181214:
 	mov	r6, #0x4
 	ldrsh	r0, [r1, r6]
 	cmp	r0, #0x1
-	ble	.L498	@cond_branch
+	ble	.L501	@cond_branch
 	sub	r0, r2, #0x1
 	strh	r0, [r1, #0x4]
 	strh	r3, [r4, #0x38]
@@ -5341,17 +5855,17 @@ sub_8181214:
 	add	r0, r0, r5
 	mov	r1, #0xa
 	strh	r1, [r0]
-	b	.L497
-.L506:
+	b	.L500
+.L509:
 	.align	2, 0
-.L505:
+.L508:
 	.word	sUnknown_03001240
-.L498:
+.L501:
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L507
+	ldr	r0, .L510
 	str	r0, [r4, #0x1c]
-.L497:
+.L500:
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	ldrh	r3, [r4, #0x3a]
@@ -5362,13 +5876,13 @@ sub_8181214:
 	bl	HandleSetAffineData
 	add	r0, r4, #0
 	bl	sub_817F70C
-.L492:
+.L495:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L508:
+.L511:
 	.align	2, 0
-.L507:
+.L510:
 	.word	SpriteCB_SetDummyOnAnimEnd
 .Lfe82:
 	.size	 sub_8181214,.Lfe82-sub_8181214
@@ -5382,14 +5896,14 @@ pokemonanimfunc_2B:
 	mov	r0, #0x0
 	strh	r0, [r4, #0x3a]
 	strh	r0, [r4, #0x3c]
-	ldr	r0, .L510
+	ldr	r0, .L513
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L511:
+.L514:
 	.align	2, 0
-.L510:
+.L513:
 	.word	sub_8181370
 .Lfe83:
 	.size	 pokemonanimfunc_2B,.Lfe83-pokemonanimfunc_2B
@@ -5421,40 +5935,40 @@ sub_8181370:
 	mov	r1, #0x3a
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0xc0
-	ble	.L513	@cond_branch
+	ble	.L516	@cond_branch
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x1
-	bne	.L513	@cond_branch
+	bne	.L516	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r4, #0
 	add	r1, r2, #0
-	b	.L517
-.L513:
+	b	.L520
+.L516:
 	mov	r1, #0x3a
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x40
-	ble	.L514	@cond_branch
+	ble	.L517	@cond_branch
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L514	@cond_branch
-	ldr	r1, .L518
+	bne	.L517	@cond_branch
+	ldr	r1, .L521
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r4, #0
-.L517:
+.L520:
 	mov	r3, #0x0
 	bl	HandleSetAffineData
 	ldrh	r0, [r4, #0x3c]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x3c]
-.L514:
+.L517:
 	mov	r1, #0x3a
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0xff
-	ble	.L516	@cond_branch
+	ble	.L519	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r4, #0x24]
 	strh	r0, [r4, #0x26]
@@ -5466,17 +5980,17 @@ sub_8181370:
 	bl	HandleSetAffineData
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L518+0x4
+	ldr	r0, .L521+0x4
 	str	r0, [r4, #0x1c]
-.L516:
+.L519:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L519:
+.L522:
 	.align	2, 0
-.L518:
+.L521:
 	.word	-0x100
 	.word	SpriteCB_SetDummyOnAnimEnd
 .Lfe84:
@@ -5494,7 +6008,7 @@ pokemonanimfunc_2C:
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x1
-	bne	.L521	@cond_branch
+	bne	.L524	@cond_branch
 	ldrb	r0, [r4, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -5506,8 +6020,8 @@ pokemonanimfunc_2C:
 	strh	r2, [r4, #0x3a]
 	strh	r2, [r4, #0x38]
 	strh	r2, [r4, #0x36]
-.L521:
-	ldr	r1, .L529
+.L524:
+	ldr	r1, .L532
 	mov	r2, #0x3a
 	ldrsh	r0, [r4, r2]
 	lsl	r2, r0, #0x1
@@ -5515,45 +6029,45 @@ pokemonanimfunc_2C:
 	add	r0, r2, r0
 	ldrb	r0, [r0]
 	cmp	r0, #0xff
-	bne	.L522	@cond_branch
-	ldr	r0, .L529+0x4
+	bne	.L525	@cond_branch
+	ldr	r0, .L532+0x4
 	str	r0, [r4, #0x1c]
-	b	.L523
-.L530:
+	b	.L526
+.L533:
 	.align	2, 0
-.L529:
+.L532:
 	.word	sUnknown_0860AA64
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L522:
+.L525:
 	mov	r3, #0x36
 	ldrsh	r0, [r4, r3]
 	cmp	r0, #0x1
-	bne	.L524	@cond_branch
+	bne	.L527	@cond_branch
 	add	r0, r2, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L525	@cond_branch
+	beq	.L528	@cond_branch
 	ldrh	r0, [r4, #0x3c]
-	ldr	r3, .L531
+	ldr	r3, .L534
 	mov	r1, #0x10
 	mov	r2, #0x10
 	bl	BlendPalette
-	b	.L526
-.L532:
+	b	.L529
+.L535:
 	.align	2, 0
-.L531:
+.L534:
 	.word	0x3ff
-.L525:
+.L528:
 	ldrh	r0, [r4, #0x3c]
-	ldr	r3, .L533
+	ldr	r3, .L536
 	mov	r1, #0x10
 	mov	r2, #0x0
 	bl	BlendPalette
-.L526:
+.L529:
 	mov	r0, #0x0
 	strh	r0, [r4, #0x36]
-	ldr	r1, .L533+0x4
-.L524:
+	ldr	r1, .L536+0x4
+.L527:
 	mov	r2, #0x3a
 	ldrsh	r0, [r4, r2]
 	lsl	r0, r0, #0x1
@@ -5563,7 +6077,7 @@ pokemonanimfunc_2C:
 	mov	r3, #0x38
 	ldrsh	r0, [r4, r3]
 	cmp	r1, r0
-	bne	.L527	@cond_branch
+	bne	.L530	@cond_branch
 	mov	r1, #0x0
 	mov	r0, #0x1
 	strh	r0, [r4, #0x36]
@@ -5571,17 +6085,17 @@ pokemonanimfunc_2C:
 	ldrh	r0, [r4, #0x3a]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x3a]
-	b	.L523
-.L534:
+	b	.L526
+.L537:
 	.align	2, 0
-.L533:
+.L536:
 	.word	0x3ff
 	.word	sUnknown_0860AA64
-.L527:
+.L530:
 	ldrh	r0, [r4, #0x38]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x38]
-.L523:
+.L526:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
@@ -5596,13 +6110,13 @@ sub_81814D4:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0
-	bne	.L536	@cond_branch
+	bne	.L539	@cond_branch
 	add	r0, r6, #0
 	bl	HandleStartAffineAnim
-.L536:
+.L539:
 	add	r0, r6, #0
 	bl	sub_817F70C
-	ldr	r4, .L541
+	ldr	r4, .L544
 	mov	r3, #0x2e
 	ldrsh	r1, [r6, r3]
 	lsl	r0, r1, #0x1
@@ -5614,7 +6128,7 @@ sub_81814D4:
 	mov	r3, #0x8
 	ldrsh	r0, [r2, r3]
 	cmp	r1, r0
-	ble	.L537	@cond_branch
+	ble	.L540	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r6, #0
@@ -5633,26 +6147,26 @@ sub_81814D4:
 	mov	r4, #0x4
 	ldrsh	r0, [r1, r4]
 	cmp	r0, #0x1
-	ble	.L538	@cond_branch
+	ble	.L541	@cond_branch
 	sub	r0, r2, #0x1
 	strh	r0, [r1, #0x4]
 	strh	r3, [r6, #0x32]
-	b	.L540
-.L542:
+	b	.L543
+.L545:
 	.align	2, 0
-.L541:
+.L544:
 	.word	sUnknown_03001240
-.L538:
+.L541:
 	add	r0, r6, #0
 	bl	sub_817F77C
-	ldr	r0, .L543
+	ldr	r0, .L546
 	str	r0, [r6, #0x1c]
-	b	.L540
-.L544:
+	b	.L543
+.L547:
 	.align	2, 0
-.L543:
+.L546:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L537:
+.L540:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	lsl	r0, r0, #0x8
@@ -5669,7 +6183,7 @@ sub_81814D4:
 	strh	r0, [r6, #0x24]
 	mov	r5, #0x80
 	lsl	r5, r5, #0x1
-	ldr	r1, .L545
+	ldr	r1, .L548
 	add	r0, r4, #0
 	bl	Sin
 	add	r3, r0, #0
@@ -5679,7 +6193,7 @@ sub_81814D4:
 	add	r1, r5, #0
 	add	r2, r5, #0
 	bl	HandleSetAffineData
-.L540:
+.L543:
 	ldrh	r0, [r6, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r6, #0x32]
@@ -5688,9 +6202,9 @@ sub_81814D4:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L546:
+.L549:
 	.align	2, 0
-.L545:
+.L548:
 	.word	0xccc
 .Lfe86:
 	.size	 sub_81814D4,.Lfe86-sub_81814D4
@@ -5704,7 +6218,7 @@ pokemonanimfunc_2D:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L548
+	ldr	r2, .L551
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -5713,14 +6227,14 @@ pokemonanimfunc_2D:
 	strh	r0, [r1, #0x8]
 	add	r0, r4, #0
 	bl	sub_81814D4
-	ldr	r0, .L548+0x4
+	ldr	r0, .L551+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L549:
+.L552:
 	.align	2, 0
-.L548:
+.L551:
 	.word	sUnknown_03001240
 	.word	sub_81814D4
 .Lfe87:
@@ -5734,13 +6248,13 @@ sub_81815D4:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0
-	bne	.L551	@cond_branch
+	bne	.L554	@cond_branch
 	add	r0, r6, #0
 	bl	HandleStartAffineAnim
-.L551:
+.L554:
 	add	r0, r6, #0
 	bl	sub_817F70C
-	ldr	r4, .L556
+	ldr	r4, .L559
 	mov	r3, #0x2e
 	ldrsh	r1, [r6, r3]
 	lsl	r0, r1, #0x1
@@ -5752,7 +6266,7 @@ sub_81815D4:
 	mov	r3, #0x8
 	ldrsh	r0, [r2, r3]
 	cmp	r1, r0
-	ble	.L552	@cond_branch
+	ble	.L555	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r6, #0
@@ -5771,26 +6285,26 @@ sub_81815D4:
 	mov	r4, #0x4
 	ldrsh	r0, [r1, r4]
 	cmp	r0, #0x1
-	ble	.L553	@cond_branch
+	ble	.L556	@cond_branch
 	sub	r0, r2, #0x1
 	strh	r0, [r1, #0x4]
 	strh	r3, [r6, #0x32]
-	b	.L555
-.L557:
+	b	.L558
+.L560:
 	.align	2, 0
-.L556:
+.L559:
 	.word	sUnknown_03001240
-.L553:
+.L556:
 	add	r0, r6, #0
 	bl	sub_817F77C
-	ldr	r0, .L558
+	ldr	r0, .L561
 	str	r0, [r6, #0x1c]
-	b	.L555
-.L559:
+	b	.L558
+.L562:
 	.align	2, 0
-.L558:
+.L561:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L552:
+.L555:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	lsl	r0, r0, #0x8
@@ -5807,7 +6321,7 @@ sub_81815D4:
 	strh	r0, [r6, #0x24]
 	mov	r5, #0x80
 	lsl	r5, r5, #0x1
-	ldr	r1, .L560
+	ldr	r1, .L563
 	add	r0, r4, #0
 	bl	Sin
 	add	r3, r0, #0
@@ -5818,7 +6332,7 @@ sub_81815D4:
 	add	r1, r5, #0
 	add	r2, r5, #0
 	bl	HandleSetAffineData
-.L555:
+.L558:
 	ldrh	r0, [r6, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r6, #0x32]
@@ -5827,9 +6341,9 @@ sub_81815D4:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L561:
+.L564:
 	.align	2, 0
-.L560:
+.L563:
 	.word	0xccc
 .Lfe88:
 	.size	 sub_81815D4,.Lfe88-sub_81815D4
@@ -5843,7 +6357,7 @@ pokemonanimfunc_2E:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L563
+	ldr	r2, .L566
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -5852,14 +6366,14 @@ pokemonanimfunc_2E:
 	strh	r0, [r1, #0x8]
 	add	r0, r4, #0
 	bl	sub_81815D4
-	ldr	r0, .L563+0x4
+	ldr	r0, .L566+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L564:
+.L567:
 	.align	2, 0
-.L563:
+.L566:
 	.word	sUnknown_03001240
 	.word	sub_81815D4
 .Lfe89:
@@ -5884,14 +6398,14 @@ pokemonanimfunc_2F:
 	strh	r0, [r4, #0x3a]
 	mov	r0, #0x80
 	strh	r0, [r4, #0x3c]
-	ldr	r0, .L566
+	ldr	r0, .L569
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L567:
+.L570:
 	.align	2, 0
-.L566:
+.L569:
 	.word	sub_8181708
 .Lfe90:
 	.size	 pokemonanimfunc_2F,.Lfe90-pokemonanimfunc_2F
@@ -5932,22 +6446,22 @@ sub_8181708:
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x78
-	bgt	.L569	@cond_branch
+	bgt	.L572	@cond_branch
 	mov	r0, #0x78
 	strh	r0, [r4, #0x3c]
 	mov	r0, #0x0
 	strh	r0, [r4, #0x34]
-	ldr	r0, .L570
+	ldr	r0, .L573
 	str	r0, [r4, #0x1c]
-.L569:
+.L572:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L571:
+.L574:
 	.align	2, 0
-.L570:
+.L573:
 	.word	sub_8181770
 .Lfe91:
 	.size	 sub_8181708,.Lfe91-sub_8181708
@@ -5960,20 +6474,20 @@ sub_8181770:
 	mov	r2, #0x34
 	ldrsh	r0, [r1, r2]
 	cmp	r0, #0x14
-	bne	.L573	@cond_branch
-	ldr	r0, .L574
+	bne	.L576	@cond_branch
+	ldr	r0, .L577
 	str	r0, [r1, #0x1c]
 	mov	r0, #0x0
 	strh	r0, [r1, #0x34]
-.L573:
+.L576:
 	ldrh	r0, [r1, #0x34]
 	add	r0, r0, #0x1
 	strh	r0, [r1, #0x34]
 	pop	{r0}
 	bx	r0
-.L575:
+.L578:
 	.align	2, 0
-.L574:
+.L577:
 	.word	sub_8181794
 .Lfe92:
 	.size	 sub_8181770,.Lfe92-sub_8181770
@@ -6016,7 +6530,7 @@ sub_8181794:
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x7f
-	ble	.L577	@cond_branch
+	ble	.L580	@cond_branch
 	strh	r6, [r4, #0x24]
 	strh	r6, [r4, #0x26]
 	add	r0, r4, #0
@@ -6027,17 +6541,17 @@ sub_8181794:
 	strh	r6, [r4, #0x32]
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L578
+	ldr	r0, .L581
 	str	r0, [r4, #0x1c]
-.L577:
+.L580:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L579:
+.L582:
 	.align	2, 0
-.L578:
+.L581:
 	.word	pokemonanimfunc_10
 .Lfe93:
 	.size	 sub_8181794,.Lfe93-sub_8181794
@@ -6047,7 +6561,7 @@ sub_8181794:
 sub_8181810:
 	push	{r4, r5, r6, lr}
 	add	r5, r0, #0
-	ldr	r4, .L591
+	ldr	r4, .L594
 	mov	r0, #0x2e
 	ldrsh	r1, [r5, r0]
 	lsl	r0, r1, #0x1
@@ -6057,30 +6571,30 @@ sub_8181810:
 	ldrh	r0, [r1]
 	add	r6, r0, #0
 	cmp	r6, #0
-	beq	.L581	@cond_branch
+	beq	.L584	@cond_branch
 	sub	r0, r0, #0x1
 	strh	r0, [r1]
-	b	.L582
-.L592:
+	b	.L585
+.L595:
 	.align	2, 0
-.L591:
+.L594:
 	.word	sUnknown_03001240
-.L581:
+.L584:
 	mov	r1, #0x32
 	ldrsh	r0, [r5, r1]
 	cmp	r0, #0
-	bne	.L583	@cond_branch
+	bne	.L586	@cond_branch
 	add	r0, r5, #0
 	bl	HandleStartAffineAnim
 	strh	r6, [r5, #0x36]
 	strh	r6, [r5, #0x38]
 	mov	r0, #0x1
 	strh	r0, [r5, #0x32]
-.L583:
+.L586:
 	mov	r3, #0x38
 	ldrsh	r0, [r5, r3]
 	cmp	r0, #0
-	bne	.L584	@cond_branch
+	bne	.L587	@cond_branch
 	mov	r1, #0x36
 	ldrsh	r0, [r5, r1]
 	mov	r4, #0x80
@@ -6112,14 +6626,14 @@ sub_8181810:
 	mov	r3, #0x36
 	ldrsh	r0, [r5, r3]
 	cmp	r0, #0x80
-	bne	.L586	@cond_branch
+	bne	.L589	@cond_branch
 	strh	r6, [r5, #0x36]
 	mov	r0, #0x1
 	strh	r0, [r5, #0x38]
-	b	.L586
-.L584:
+	b	.L589
+.L587:
 	cmp	r0, #0x1
-	bne	.L586	@cond_branch
+	bne	.L589	@cond_branch
 	mov	r1, #0x36
 	ldrsh	r0, [r5, r1]
 	mov	r1, #0x20
@@ -6153,7 +6667,7 @@ sub_8181810:
 	mov	r1, #0x36
 	ldrsh	r0, [r5, r1]
 	cmp	r0, #0x80
-	bne	.L586	@cond_branch
+	bne	.L589	@cond_branch
 	mov	r3, #0x2e
 	ldrsh	r0, [r5, r3]
 	lsl	r1, r0, #0x1
@@ -6164,7 +6678,7 @@ sub_8181810:
 	mov	r3, #0x4
 	ldrsh	r0, [r1, r3]
 	cmp	r0, #0x1
-	ble	.L589	@cond_branch
+	ble	.L592	@cond_branch
 	sub	r0, r2, #0x1
 	strh	r0, [r1, #0x4]
 	mov	r0, #0x2e
@@ -6177,8 +6691,8 @@ sub_8181810:
 	strh	r1, [r0]
 	strh	r6, [r5, #0x36]
 	strh	r6, [r5, #0x38]
-	b	.L586
-.L589:
+	b	.L589
+.L592:
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r5, #0
@@ -6187,10 +6701,10 @@ sub_8181810:
 	bl	HandleSetAffineData
 	add	r0, r5, #0
 	bl	sub_817F77C
-	ldr	r0, .L593
+	ldr	r0, .L596
 	str	r0, [r5, #0x1c]
-.L586:
-	ldr	r2, .L593+0x4
+.L589:
+	ldr	r2, .L596+0x4
 	mov	r3, #0x2e
 	ldrsh	r1, [r5, r3]
 	lsl	r0, r1, #0x1
@@ -6201,13 +6715,13 @@ sub_8181810:
 	ldrh	r1, [r5, #0x36]
 	add	r0, r0, r1
 	strh	r0, [r5, #0x36]
-.L582:
+.L585:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L594:
+.L597:
 	.align	2, 0
-.L593:
+.L596:
 	.word	SpriteCB_SetDummyOnAnimEnd
 	.word	sUnknown_03001240
 .Lfe94:
@@ -6222,7 +6736,7 @@ pokemonanimfunc_30:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L596
+	ldr	r2, .L599
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -6231,14 +6745,14 @@ pokemonanimfunc_30:
 	strh	r0, [r1, #0x6]
 	add	r0, r4, #0
 	bl	sub_8181810
-	ldr	r0, .L596+0x4
+	ldr	r0, .L599+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L597:
+.L600:
 	.align	2, 0
-.L596:
+.L599:
 	.word	sUnknown_03001240
 	.word	sub_8181810
 .Lfe95:
@@ -6256,54 +6770,37 @@ pokemonanimfunc_31:
 	mov	r0, #0x80
 	lsl	r0, r0, #0x2
 	cmp	r4, r0
-	ble	.L599	@cond_branch
-	ldr	r0, .L621
+	ble	.L602	@cond_branch
+	ldr	r0, .L624
 	str	r0, [r5, #0x1c]
 	mov	r0, #0x0
 	strh	r0, [r5, #0x24]
-	b	.L619
-.L622:
+	b	.L622
+.L625:
 	.align	2, 0
-.L621:
+.L624:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L599:
+.L602:
 	mov	r1, #0x32
 	ldrsh	r0, [r5, r1]
 	cmp	r0, #0
-	bge	.L616	@cond_branch
+	bge	.L619	@cond_branch
 	add	r0, r0, #0x7f
-.L616:
+.L619:
 	asr	r0, r0, #0x7
 	cmp	r0, #0x1
-	beq	.L605	@cond_branch
-	cmp	r0, #0x1
-	bgt	.L617	@cond_branch
-	cmp	r0, #0
-	beq	.L602	@cond_branch
-	b	.L601
-.L617:
-	cmp	r0, #0x2
 	beq	.L608	@cond_branch
-	cmp	r0, #0x3
-	beq	.L611	@cond_branch
-	b	.L601
-.L602:
-	add	r0, r4, #0
-	cmp	r4, #0
-	bge	.L603	@cond_branch
-	add	r0, r0, #0x7f
-.L603:
-	asr	r0, r0, #0x7
-	lsl	r0, r0, #0x7
-	sub	r0, r4, r0
-	lsl	r0, r0, #0x3
-	neg	r0, r0
+	cmp	r0, #0x1
+	bgt	.L620	@cond_branch
 	cmp	r0, #0
-	bge	.L604	@cond_branch
-	add	r0, r0, #0x7f
-.L604:
-	asr	r0, r0, #0x7
-	b	.L620
+	beq	.L605	@cond_branch
+	b	.L604
+.L620:
+	cmp	r0, #0x2
+	beq	.L611	@cond_branch
+	cmp	r0, #0x3
+	beq	.L614	@cond_branch
+	b	.L604
 .L605:
 	add	r0, r4, #0
 	cmp	r4, #0
@@ -6313,13 +6810,14 @@ pokemonanimfunc_31:
 	asr	r0, r0, #0x7
 	lsl	r0, r0, #0x7
 	sub	r0, r4, r0
+	lsl	r0, r0, #0x3
+	neg	r0, r0
 	cmp	r0, #0
 	bge	.L607	@cond_branch
-	add	r0, r0, #0xf
+	add	r0, r0, #0x7f
 .L607:
-	asr	r0, r0, #0x4
-	sub	r0, r0, #0x8
-	b	.L620
+	asr	r0, r0, #0x7
+	b	.L623
 .L608:
 	add	r0, r4, #0
 	cmp	r4, #0
@@ -6334,7 +6832,8 @@ pokemonanimfunc_31:
 	add	r0, r0, #0xf
 .L610:
 	asr	r0, r0, #0x4
-	b	.L620
+	sub	r0, r0, #0x8
+	b	.L623
 .L611:
 	add	r0, r4, #0
 	cmp	r4, #0
@@ -6344,22 +6843,37 @@ pokemonanimfunc_31:
 	asr	r0, r0, #0x7
 	lsl	r0, r0, #0x7
 	sub	r0, r4, r0
+	cmp	r0, #0
+	bge	.L613	@cond_branch
+	add	r0, r0, #0xf
+.L613:
+	asr	r0, r0, #0x4
+	b	.L623
+.L614:
+	add	r0, r4, #0
+	cmp	r4, #0
+	bge	.L615	@cond_branch
+	add	r0, r0, #0x7f
+.L615:
+	asr	r0, r0, #0x7
+	lsl	r0, r0, #0x7
+	sub	r0, r4, r0
 	lsl	r0, r0, #0x3
 	neg	r0, r0
 	cmp	r0, #0
-	bge	.L613	@cond_branch
+	bge	.L616	@cond_branch
 	add	r0, r0, #0x7f
-.L613:
+.L616:
 	asr	r0, r0, #0x7
 	add	r0, r0, #0x8
-.L620:
+.L623:
 	strh	r0, [r5, #0x24]
-.L601:
+.L604:
 	add	r0, r4, #0
 	cmp	r4, #0
-	bge	.L618	@cond_branch
+	bge	.L621	@cond_branch
 	add	r0, r0, #0x7f
-.L618:
+.L621:
 	asr	r0, r0, #0x7
 	lsl	r0, r0, #0x7
 	sub	r0, r4, r0
@@ -6368,7 +6882,7 @@ pokemonanimfunc_31:
 	mov	r1, #0x8
 	bl	Sin
 	neg	r0, r0
-.L619:
+.L622:
 	strh	r0, [r5, #0x26]
 	ldrh	r0, [r5, #0x32]
 	add	r0, r0, #0xc
@@ -6391,26 +6905,26 @@ pokemonanimfunc_32:
 	lsr	r0, r0, #0x18
 	mov	r5, #0x0
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L624
+	ldr	r2, .L627
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
 	add	r1, r1, r2
-	ldr	r0, .L624+0x4
+	ldr	r0, .L627+0x4
 	strh	r0, [r1, #0x8]
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	strh	r5, [r4, #0x34]
 	add	r0, r4, #0
 	bl	sub_8181ABC
-	ldr	r0, .L624+0x8
+	ldr	r0, .L627+0x8
 	str	r0, [r4, #0x1c]
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L625:
+.L628:
 	.align	2, 0
-.L624:
+.L627:
 	.word	sUnknown_03001240
 	.word	0xffff
 	.word	sub_8181ABC
@@ -6422,7 +6936,7 @@ pokemonanimfunc_32:
 sub_8181ABC:
 	push	{r4, r5, r6, lr}
 	add	r4, r0, #0
-	ldr	r6, .L634
+	ldr	r6, .L637
 	mov	r0, #0x2e
 	ldrsh	r1, [r4, r0]
 	lsl	r0, r1, #0x1
@@ -6432,31 +6946,31 @@ sub_8181ABC:
 	ldrh	r0, [r1]
 	add	r5, r0, #0
 	cmp	r5, #0
-	beq	.L627	@cond_branch
+	beq	.L630	@cond_branch
 	sub	r0, r0, #0x1
 	strh	r0, [r1]
-	b	.L628
-.L635:
+	b	.L631
+.L638:
 	.align	2, 0
-.L634:
+.L637:
 	.word	sUnknown_03001240
-.L627:
+.L630:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	mov	r1, #0x32
 	ldrsh	r2, [r4, r1]
 	add	r0, r2, #0
 	cmp	r0, #0x80
-	ble	.L629	@cond_branch
+	ble	.L632	@cond_branch
 	strh	r5, [r4, #0x32]
-	ldr	r0, .L636
+	ldr	r0, .L639
 	str	r0, [r4, #0x1c]
-	b	.L630
-.L637:
+	b	.L633
+.L640:
 	.align	2, 0
-.L636:
+.L639:
 	.word	sub_8181B4C
-.L629:
+.L632:
 	mov	r1, #0x2e
 	ldrsh	r0, [r4, r1]
 	lsl	r1, r0, #0x1
@@ -6468,18 +6982,18 @@ sub_8181ABC:
 	lsl	r3, r0, #0x3
 	add	r0, r2, #0
 	cmp	r2, #0
-	bge	.L631	@cond_branch
+	bge	.L634	@cond_branch
 	add	r0, r0, #0x7f
-.L631:
+.L634:
 	asr	r0, r0, #0x7
 	lsl	r0, r0, #0x7
 	sub	r1, r2, r0
 	mov	r0, r3
 	mul	r0, r0, r1
 	cmp	r0, #0
-	bge	.L632	@cond_branch
+	bge	.L635	@cond_branch
 	add	r0, r0, #0x7f
-.L632:
+.L635:
 	asr	r0, r0, #0x7
 	strh	r0, [r4, #0x24]
 	lsl	r0, r1, #0x10
@@ -6491,10 +7005,10 @@ sub_8181ABC:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0xc
 	strh	r0, [r4, #0x32]
-.L630:
+.L633:
 	add	r0, r4, #0
 	bl	sub_817F70C
-.L628:
+.L631:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
@@ -6510,7 +7024,7 @@ sub_8181B4C:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x30
-	ble	.L639	@cond_branch
+	ble	.L642	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r4, #0
@@ -6520,14 +7034,14 @@ sub_8181B4C:
 	mov	r0, #0x0
 	strh	r0, [r4, #0x26]
 	strh	r0, [r4, #0x32]
-	ldr	r0, .L644
+	ldr	r0, .L647
 	str	r0, [r4, #0x1c]
-	b	.L640
-.L645:
+	b	.L643
+.L648:
 	.align	2, 0
-.L644:
+.L647:
 	.word	sub_8181C2C
-.L639:
+.L642:
 	mov	r2, #0x36
 	ldrsh	r0, [r4, r2]
 	mov	r1, #0x40
@@ -6543,11 +7057,11 @@ sub_8181B4C:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0xf
-	bhi	.L641	@cond_branch
+	bhi	.L644	@cond_branch
 	ldrh	r0, [r4, #0x34]
 	add	r0, r0, #0x8
 	strh	r0, [r4, #0x34]
-	ldr	r2, .L646
+	ldr	r2, .L649
 	mov	r0, #0x2e
 	ldrsh	r1, [r4, r0]
 	lsl	r0, r1, #0x1
@@ -6558,7 +7072,7 @@ sub_8181B4C:
 	ldrh	r0, [r0, #0x8]
 	sub	r1, r1, r0
 	strh	r1, [r4, #0x24]
-.L641:
+.L644:
 	mov	r5, #0x0
 	lsl	r1, r3, #0x10
 	asr	r2, r1, #0x10
@@ -6566,15 +7080,15 @@ sub_8181B4C:
 	asr	r0, r0, #0x10
 	add	r6, r1, #0
 	cmp	r2, r0
-	ble	.L642	@cond_branch
+	ble	.L645	@cond_branch
 	sub	r0, r0, r2
 	cmp	r0, #0
-	bge	.L643	@cond_branch
+	bge	.L646	@cond_branch
 	add	r0, r0, #0x7
-.L643:
+.L646:
 	lsl	r0, r0, #0xd
 	lsr	r5, r0, #0x10
-.L642:
+.L645:
 	mov	r1, #0x34
 	ldrsh	r0, [r4, r1]
 	mov	r1, #0x14
@@ -6606,15 +7120,15 @@ sub_8181B4C:
 	mov	r1, #0xff
 	and	r0, r0, r1
 	strh	r0, [r4, #0x36]
-.L640:
+.L643:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L647:
+.L650:
 	.align	2, 0
-.L646:
+.L649:
 	.word	sUnknown_03001240
 .Lfe99:
 	.size	 sub_8181B4C,.Lfe99-sub_8181B4C
@@ -6628,8 +7142,8 @@ sub_8181C2C:
 	mov	r0, #0x32
 	ldrsh	r3, [r4, r0]
 	cmp	r3, #0x80
-	ble	.L649	@cond_branch
-	ldr	r3, .L658
+	ble	.L652	@cond_branch
+	ldr	r3, .L661
 	mov	r1, #0x2e
 	ldrsh	r0, [r4, r1]
 	lsl	r1, r0, #0x1
@@ -6640,7 +7154,7 @@ sub_8181C2C:
 	mov	r5, #0x4
 	ldrsh	r0, [r1, r5]
 	cmp	r0, #0x1
-	ble	.L650	@cond_branch
+	ble	.L653	@cond_branch
 	sub	r0, r2, #0x1
 	mov	r2, #0x0
 	strh	r0, [r1, #0x4]
@@ -6655,28 +7169,28 @@ sub_8181C2C:
 	strh	r2, [r4, #0x34]
 	strh	r2, [r4, #0x32]
 	strh	r2, [r4, #0x36]
-	ldr	r0, .L658+0x4
-	b	.L656
-.L659:
+	ldr	r0, .L661+0x4
+	b	.L659
+.L662:
 	.align	2, 0
-.L658:
+.L661:
 	.word	sUnknown_03001240
 	.word	sub_8181ABC
-.L650:
+.L653:
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L660
-.L656:
+	ldr	r0, .L663
+.L659:
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
 	strh	r0, [r4, #0x24]
-	b	.L657
-.L661:
+	b	.L660
+.L664:
 	.align	2, 0
-.L660:
+.L663:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L649:
-	ldr	r2, .L662
+.L652:
+	ldr	r2, .L665
 	mov	r5, #0x2e
 	ldrsh	r1, [r4, r5]
 	lsl	r0, r1, #0x1
@@ -6688,18 +7202,18 @@ sub_8181C2C:
 	lsl	r1, r5, #0x3
 	add	r0, r3, #0
 	cmp	r3, #0
-	bge	.L653	@cond_branch
+	bge	.L656	@cond_branch
 	add	r0, r0, #0x7f
-.L653:
+.L656:
 	asr	r0, r0, #0x7
 	lsl	r0, r0, #0x7
 	sub	r2, r3, r0
 	mov	r0, r1
 	mul	r0, r0, r2
 	cmp	r0, #0
-	bge	.L654	@cond_branch
+	bge	.L657	@cond_branch
 	add	r0, r0, #0x7f
-.L654:
+.L657:
 	asr	r0, r0, #0x7
 	lsl	r1, r5, #0x3
 	sub	r0, r0, r1
@@ -6709,7 +7223,7 @@ sub_8181C2C:
 	mov	r1, #0x8
 	bl	Sin
 	neg	r0, r0
-.L657:
+.L660:
 	strh	r0, [r4, #0x26]
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0xc
@@ -6719,9 +7233,9 @@ sub_8181C2C:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L663:
+.L666:
 	.align	2, 0
-.L662:
+.L665:
 	.word	sUnknown_03001240
 .Lfe100:
 	.size	 sub_8181C2C,.Lfe100-sub_8181C2C
@@ -6734,19 +7248,19 @@ sub_8181CE8:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L665	@cond_branch
+	bne	.L668	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
-.L665:
+.L668:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	mov	r3, #0x3c
 	ldrsh	r0, [r4, r3]
 	cmp	r0, #0xfe
-	ble	.L666	@cond_branch
+	ble	.L669	@cond_branch
 	mov	r5, #0x0
 	strh	r5, [r4, #0x24]
 	strh	r5, [r4, #0x26]
@@ -6756,7 +7270,7 @@ sub_8181CE8:
 	add	r1, r2, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-	ldr	r2, .L670
+	ldr	r2, .L673
 	mov	r0, #0x2e
 	ldrsh	r1, [r4, r0]
 	lsl	r0, r1, #0x1
@@ -6767,30 +7281,30 @@ sub_8181CE8:
 	mov	r3, #0x4
 	ldrsh	r0, [r1, r3]
 	cmp	r0, #0x1
-	ble	.L667	@cond_branch
+	ble	.L670	@cond_branch
 	sub	r0, r2, #0x1
 	strh	r0, [r1, #0x4]
 	strh	r5, [r4, #0x32]
 	strh	r5, [r4, #0x3c]
-	b	.L668
-.L671:
+	b	.L671
+.L674:
 	.align	2, 0
-.L670:
+.L673:
 	.word	sUnknown_03001240
-.L667:
+.L670:
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L672
+	ldr	r0, .L675
 	str	r0, [r4, #0x1c]
-.L668:
+.L671:
 	add	r0, r4, #0
 	bl	sub_817F70C
-	b	.L669
-.L673:
+	b	.L672
+.L676:
 	.align	2, 0
-.L672:
+.L675:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L666:
+.L669:
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
 	mov	r1, #0x10
@@ -6809,7 +7323,7 @@ sub_8181CE8:
 	add	r0, r4, #0
 	add	r1, r2, #0
 	bl	HandleSetAffineData
-	ldr	r2, .L674
+	ldr	r2, .L677
 	mov	r0, #0x2e
 	ldrsh	r1, [r4, r0]
 	lsl	r0, r1, #0x1
@@ -6822,13 +7336,13 @@ sub_8181CE8:
 	strh	r0, [r4, #0x3c]
 	add	r0, r4, #0
 	bl	sub_817F70C
-.L669:
+.L672:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L675:
+.L678:
 	.align	2, 0
-.L674:
+.L677:
 	.word	sUnknown_03001240
 .Lfe101:
 	.size	 sub_8181CE8,.Lfe101-sub_8181CE8
@@ -6842,7 +7356,7 @@ pokemonanimfunc_33:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L677
+	ldr	r2, .L680
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -6851,14 +7365,14 @@ pokemonanimfunc_33:
 	strh	r0, [r1, #0x6]
 	add	r0, r4, #0
 	bl	sub_8181CE8
-	ldr	r0, .L677+0x4
+	ldr	r0, .L680+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L678:
+.L681:
 	.align	2, 0
-.L677:
+.L680:
 	.word	sUnknown_03001240
 	.word	sub_8181CE8
 .Lfe102:
@@ -6872,19 +7386,19 @@ pokemonanimfunc_34:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L680	@cond_branch
+	bne	.L683	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
-.L680:
+.L683:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0xfe
-	ble	.L681	@cond_branch
+	ble	.L684	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r4, #0x24]
 	strh	r0, [r4, #0x26]
@@ -6896,16 +7410,16 @@ pokemonanimfunc_34:
 	bl	HandleSetAffineData
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L684
+	ldr	r0, .L687
 	str	r0, [r4, #0x1c]
 	add	r0, r4, #0
 	bl	sub_817F70C
-	b	.L682
-.L685:
+	b	.L685
+.L688:
 	.align	2, 0
-.L684:
+.L687:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L681:
+.L684:
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
 	mov	r1, #0x10
@@ -6916,9 +7430,9 @@ pokemonanimfunc_34:
 	ldrsh	r1, [r4, r0]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L683	@cond_branch
+	bge	.L686	@cond_branch
 	add	r0, r0, #0x7f
-.L683:
+.L686:
 	asr	r0, r0, #0x7
 	lsl	r0, r0, #0x7
 	sub	r0, r1, r0
@@ -6945,7 +7459,7 @@ pokemonanimfunc_34:
 	strh	r0, [r4, #0x3c]
 	add	r0, r4, #0
 	bl	sub_817F70C
-.L682:
+.L685:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
@@ -6960,9 +7474,9 @@ pokemonanimfunc_35:
 	mov	r1, #0x32
 	ldrsh	r0, [r3, r1]
 	cmp	r0, #0
-	bne	.L687	@cond_branch
+	bne	.L690	@cond_branch
 	strh	r0, [r3, #0x3c]
-.L687:
+.L690:
 	ldrh	r4, [r3, #0x32]
 	mov	r5, #0x32
 	ldrsh	r1, [r3, r5]
@@ -6970,7 +7484,7 @@ pokemonanimfunc_35:
 	mov	r5, #0x3c
 	ldrsh	r0, [r3, r5]
 	cmp	r1, r0
-	bne	.L688	@cond_branch
+	bne	.L691	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r3, #0x3c]
 	add	r0, r4, #0x1
@@ -6983,8 +7497,8 @@ pokemonanimfunc_35:
 	and	r0, r0, r2
 	strb	r0, [r1]
 	add	r2, r1, #0
-	b	.L689
-.L688:
+	b	.L692
+.L691:
 	add	r0, r2, #0x1
 	strh	r0, [r3, #0x3c]
 	add	r2, r3, #0
@@ -6993,25 +7507,25 @@ pokemonanimfunc_35:
 	mov	r1, #0x4
 	orr	r0, r0, r1
 	strb	r0, [r2]
-.L689:
+.L692:
 	mov	r1, #0x32
 	ldrsh	r0, [r3, r1]
 	cmp	r0, #0xa
-	ble	.L690	@cond_branch
+	ble	.L693	@cond_branch
 	ldrb	r0, [r2]
 	mov	r1, #0x5
 	neg	r1, r1
 	and	r1, r1, r0
 	strb	r1, [r2]
-	ldr	r0, .L691
+	ldr	r0, .L694
 	str	r0, [r3, #0x1c]
-.L690:
+.L693:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L692:
+.L695:
 	.align	2, 0
-.L691:
+.L694:
 	.word	SpriteCB_SetDummyOnAnimEnd
 .Lfe104:
 	.size	 pokemonanimfunc_35,.Lfe104-pokemonanimfunc_35
@@ -7024,14 +7538,14 @@ pokemonanimfunc_36:
 	bl	HandleStartAffineAnim
 	mov	r0, #0x0
 	strh	r0, [r4, #0x3c]
-	ldr	r0, .L694
+	ldr	r0, .L697
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L695:
+.L698:
 	.align	2, 0
-.L694:
+.L697:
 	.word	sub_8181F14
 .Lfe105:
 	.size	 pokemonanimfunc_36,.Lfe105-pokemonanimfunc_36
@@ -7045,22 +7559,22 @@ sub_8181F14:
 	mov	r2, #0x3c
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0x1f
-	ble	.L697	@cond_branch
+	ble	.L700	@cond_branch
 	mov	r0, #0x0
 	mov	r1, #0x20
 	strh	r1, [r4, #0x3c]
 	strh	r0, [r4, #0x32]
-	ldr	r0, .L699
+	ldr	r0, .L702
 	str	r0, [r4, #0x1c]
-	b	.L698
-.L700:
+	b	.L701
+.L703:
 	.align	2, 0
-.L699:
+.L702:
 	.word	sub_8181F50
-.L697:
+.L700:
 	add	r0, r1, #0x4
 	strh	r0, [r4, #0x3c]
-.L698:
+.L701:
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	ldrh	r3, [r4, #0x3c]
@@ -7086,35 +7600,35 @@ sub_8181F50:
 	mov	r0, #0x80
 	lsl	r0, r0, #0x2
 	cmp	r1, r0
-	ble	.L702	@cond_branch
-	ldr	r0, .L706
+	ble	.L705	@cond_branch
+	ldr	r0, .L709
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
 	strh	r0, [r4, #0x3a]
-	b	.L703
-.L707:
+	b	.L706
+.L710:
 	.align	2, 0
-.L706:
+.L709:
 	.word	sub_8181FC0
-.L702:
+.L705:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	lsl	r0, r0, #0x4
 	neg	r0, r0
 	cmp	r0, #0
-	bge	.L704	@cond_branch
-	ldr	r1, .L708
+	bge	.L707	@cond_branch
+	ldr	r1, .L711
 	add	r0, r0, r1
-.L704:
+.L707:
 	asr	r0, r0, #0x9
 	strh	r0, [r4, #0x24]
 	mov	r0, #0x32
 	ldrsh	r1, [r4, r0]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L705	@cond_branch
+	bge	.L708	@cond_branch
 	add	r0, r0, #0x7f
-.L705:
+.L708:
 	asr	r0, r0, #0x7
 	lsl	r0, r0, #0x7
 	sub	r0, r1, r0
@@ -7127,15 +7641,15 @@ sub_8181F50:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0xc
 	strh	r0, [r4, #0x32]
-.L703:
+.L706:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L709:
+.L712:
 	.align	2, 0
-.L708:
+.L711:
 	.word	0x1ff
 .Lfe107:
 	.size	 sub_8181F50,.Lfe107-sub_8181F50
@@ -7152,19 +7666,19 @@ sub_8181FC0:
 	strh	r0, [r4, #0x3c]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bge	.L711	@cond_branch
+	bge	.L714	@cond_branch
 	strh	r1, [r4, #0x3c]
 	strh	r1, [r4, #0x24]
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L713
+	ldr	r0, .L716
 	str	r0, [r4, #0x1c]
-	b	.L712
-.L714:
+	b	.L715
+.L717:
 	.align	2, 0
-.L713:
+.L716:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L711:
+.L714:
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
 	lsl	r0, r0, #0x11
@@ -7173,7 +7687,7 @@ sub_8181FC0:
 	bl	Sin
 	neg	r0, r0
 	strh	r0, [r4, #0x24]
-.L712:
+.L715:
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	ldrh	r3, [r4, #0x3c]
@@ -7198,35 +7712,35 @@ pokemonanimfunc_37:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L716	@cond_branch
+	bne	.L719	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
 	strh	r5, [r4, #0x3c]
-.L716:
+.L719:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	ldrh	r1, [r4, #0x3c]
 	mov	r2, #0x3c
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0xff
-	ble	.L717	@cond_branch
+	ble	.L720	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r4, #0x24]
 	strh	r0, [r4, #0x26]
 	strh	r0, [r4, #0x3c]
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L722
+	ldr	r0, .L725
 	str	r0, [r4, #0x1c]
-	b	.L718
-.L723:
+	b	.L721
+.L726:
 	.align	2, 0
-.L722:
+.L725:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L717:
+.L720:
 	add	r0, r1, #0
 	add	r0, r0, #0x10
 	strh	r0, [r4, #0x3c]
@@ -7234,9 +7748,9 @@ pokemonanimfunc_37:
 	ldrsh	r1, [r4, r0]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L719	@cond_branch
+	bge	.L722	@cond_branch
 	add	r0, r0, #0x7f
-.L719:
+.L722:
 	asr	r0, r0, #0x7
 	lsl	r0, r0, #0x7
 	sub	r0, r1, r0
@@ -7250,9 +7764,9 @@ pokemonanimfunc_37:
 	ldrsh	r1, [r4, r2]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L720	@cond_branch
+	bge	.L723	@cond_branch
 	add	r0, r0, #0x7f
-.L720:
+.L723:
 	asr	r0, r0, #0x7
 	lsl	r0, r0, #0x7
 	sub	r0, r1, r0
@@ -7262,14 +7776,14 @@ pokemonanimfunc_37:
 	bl	Sin
 	neg	r0, r0
 	strh	r0, [r4, #0x26]
-.L718:
+.L721:
 	mov	r0, #0x3c
 	ldrsh	r1, [r4, r0]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L721	@cond_branch
+	bge	.L724	@cond_branch
 	add	r0, r0, #0x7f
-.L721:
+.L724:
 	asr	r0, r0, #0x7
 	lsl	r0, r0, #0x7
 	sub	r0, r1, r0
@@ -7302,14 +7816,14 @@ pokemonanimfunc_38:
 	mov	r0, #0x0
 	strh	r0, [r4, #0x3c]
 	strh	r0, [r4, #0x36]
-	ldr	r0, .L725
+	ldr	r0, .L728
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L726:
+.L729:
 	.align	2, 0
-.L725:
+.L728:
 	.word	sub_81820FC
 .Lfe110:
 	.size	 pokemonanimfunc_38,.Lfe110-pokemonanimfunc_38
@@ -7324,24 +7838,24 @@ sub_81820FC:
 	mov	r2, #0x3c
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0x18
-	ble	.L728	@cond_branch
+	ble	.L731	@cond_branch
 	ldrh	r0, [r4, #0x36]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x36]
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x4
-	ble	.L730	@cond_branch
+	ble	.L733	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r4, #0x36]
-	ldr	r0, .L731
+	ldr	r0, .L734
 	str	r0, [r4, #0x1c]
-	b	.L730
-.L732:
+	b	.L733
+.L735:
 	.align	2, 0
-.L731:
+.L734:
 	.word	sub_818216C
-.L728:
+.L731:
 	add	r0, r1, #0x2
 	strh	r0, [r4, #0x3c]
 	mov	r1, #0x3c
@@ -7355,7 +7869,7 @@ sub_81820FC:
 	bl	Sin
 	neg	r0, r0
 	strh	r0, [r4, #0x26]
-.L730:
+.L733:
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	ldrh	r3, [r4, #0x3c]
@@ -7383,17 +7897,17 @@ sub_818216C:
 	mov	r2, #0x3c
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0x20
-	ble	.L734	@cond_branch
+	ble	.L737	@cond_branch
 	mov	r0, #0x1
 	strh	r0, [r4, #0x3a]
-	ldr	r0, .L736
+	ldr	r0, .L739
 	str	r0, [r4, #0x1c]
-	b	.L735
-.L737:
+	b	.L738
+.L740:
 	.align	2, 0
-.L736:
+.L739:
 	.word	sub_81821CC
-.L734:
+.L737:
 	add	r0, r1, #0x2
 	strh	r0, [r4, #0x3c]
 	mov	r1, #0x3c
@@ -7407,7 +7921,7 @@ sub_818216C:
 	bl	Sin
 	neg	r0, r0
 	strh	r0, [r4, #0x26]
-.L735:
+.L738:
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	ldrh	r3, [r4, #0x3c]
@@ -7440,12 +7954,12 @@ sub_81821CC:
 	mov	r1, #0x38
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x9
-	ble	.L739	@cond_branch
+	ble	.L742	@cond_branch
 	mov	r0, #0x20
 	strh	r0, [r4, #0x3c]
-	ldr	r0, .L741
+	ldr	r0, .L744
 	str	r0, [r4, #0x1c]
-.L739:
+.L742:
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
 	mov	r1, #0x8
@@ -7462,7 +7976,7 @@ sub_81821CC:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x6
-	bls	.L740	@cond_branch
+	bls	.L743	@cond_branch
 	mov	r1, #0x3a
 	ldrsh	r0, [r4, r1]
 	neg	r0, r0
@@ -7470,7 +7984,7 @@ sub_81821CC:
 	ldrh	r0, [r4, #0x38]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x38]
-.L740:
+.L743:
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	ldrh	r3, [r4, #0x3c]
@@ -7485,9 +7999,9 @@ sub_81821CC:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L742:
+.L745:
 	.align	2, 0
-.L741:
+.L744:
 	.word	sub_8182248
 .Lfe113:
 	.size	 sub_81821CC,.Lfe113-sub_81821CC
@@ -7502,19 +8016,19 @@ sub_8182248:
 	mov	r2, #0x3c
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0
-	bgt	.L744	@cond_branch
+	bgt	.L747	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r4, #0x3c]
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L746
+	ldr	r0, .L749
 	str	r0, [r4, #0x1c]
-	b	.L745
-.L747:
+	b	.L748
+.L750:
 	.align	2, 0
-.L746:
+.L749:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L744:
+.L747:
 	sub	r0, r1, #0x2
 	strh	r0, [r4, #0x3c]
 	mov	r1, #0x3c
@@ -7528,7 +8042,7 @@ sub_8182248:
 	bl	Sin
 	neg	r0, r0
 	strh	r0, [r4, #0x26]
-.L745:
+.L748:
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	ldrh	r3, [r4, #0x3c]
@@ -7556,31 +8070,31 @@ pokemonanimfunc_39:
 	mov	r2, #0x32
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0x28
-	ble	.L749	@cond_branch
-	ldr	r0, .L759
+	ble	.L752	@cond_branch
+	ldr	r0, .L762
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
 	strh	r0, [r4, #0x24]
-	b	.L750
-.L760:
+	b	.L753
+.L763:
 	.align	2, 0
-.L759:
+.L762:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L749:
+.L752:
 	mov	r0, #0x1
 	and	r0, r0, r1
 	mov	r5, #0xff
 	cmp	r0, #0
-	bne	.L751	@cond_branch
+	bne	.L754	@cond_branch
 	mov	r5, #0x1
-.L751:
+.L754:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	add	r0, r2, #0
 	cmp	r2, #0
-	bge	.L754	@cond_branch
+	bge	.L757	@cond_branch
 	add	r0, r2, #0x3
-.L754:
+.L757:
 	asr	r0, r0, #0x2
 	lsl	r0, r0, #0x2
 	sub	r0, r2, r0
@@ -7590,15 +8104,15 @@ pokemonanimfunc_39:
 	add	r1, r1, r0
 	asr	r1, r1, #0x1
 	cmp	r1, #0
-	bne	.L753	@cond_branch
+	bne	.L756	@cond_branch
 	lsl	r0, r2, #0x7
 	mov	r1, #0x28
 	bl	__divsi3
 	add	r1, r0, #0
 	cmp	r1, #0
-	bge	.L755	@cond_branch
+	bge	.L758	@cond_branch
 	add	r0, r0, #0xff
-.L755:
+.L758:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -7613,16 +8127,16 @@ pokemonanimfunc_39:
 	add	r0, r2, #0
 	strh	r0, [r4, #0x24]
 	neg	r0, r0
-	b	.L758
-.L753:
+	b	.L761
+.L756:
 	lsl	r0, r2, #0x7
 	mov	r1, #0x28
 	bl	__divsi3
 	add	r1, r0, #0
 	cmp	r1, #0
-	bge	.L757	@cond_branch
+	bge	.L760	@cond_branch
 	add	r0, r0, #0xff
-.L757:
+.L760:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -7637,9 +8151,9 @@ pokemonanimfunc_39:
 	asr	r1, r1, #0x18
 	mul	r0, r0, r1
 	strh	r0, [r4, #0x24]
-.L758:
+.L761:
 	strh	r0, [r4, #0x26]
-.L750:
+.L753:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
@@ -7660,7 +8174,7 @@ pokemonanimfunc_3A:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L762	@cond_branch
+	bne	.L765	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	strh	r5, [r4, #0x38]
@@ -7669,18 +8183,18 @@ pokemonanimfunc_3A:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
-.L762:
+.L765:
 	ldrh	r1, [r4, #0x3a]
 	mov	r2, #0x3a
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0
-	ble	.L763	@cond_branch
+	ble	.L766	@cond_branch
 	sub	r0, r1, #0x1
 	strh	r0, [r4, #0x3a]
 	mov	r1, #0x38
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x3
-	beq	.L765	@cond_branch
+	beq	.L768	@cond_branch
 	mov	r2, #0x3a
 	ldrsh	r0, [r4, r2]
 	lsl	r0, r0, #0x3
@@ -7707,16 +8221,16 @@ pokemonanimfunc_3A:
 	add	r1, r2, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-	b	.L765
-.L763:
+	b	.L768
+.L766:
 	mov	r2, #0x38
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0x3
-	bne	.L766	@cond_branch
+	bne	.L769	@cond_branch
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x3f
-	ble	.L767	@cond_branch
+	ble	.L770	@cond_branch
 	mov	r0, #0x40
 	strh	r0, [r4, #0x3c]
 	mov	r2, #0x80
@@ -7727,21 +8241,21 @@ pokemonanimfunc_3A:
 	bl	HandleSetAffineData
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L775
+	ldr	r0, .L778
 	str	r0, [r4, #0x1c]
-.L767:
+.L770:
 	mov	r2, #0x3c
 	ldrsh	r0, [r4, r2]
 	mov	r1, #0x40
 	bl	Cos
 	lsl	r0, r0, #0x10
 	lsr	r3, r0, #0x10
-	b	.L768
-.L776:
+	b	.L771
+.L779:
 	.align	2, 0
-.L775:
+.L778:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L766:
+.L769:
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
 	mov	r1, #0x40
@@ -7751,40 +8265,40 @@ pokemonanimfunc_3A:
 	mov	r2, #0x3c
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0x3f
-	ble	.L769	@cond_branch
+	ble	.L772	@cond_branch
 	mov	r0, #0x0
 	mov	r1, #0x3
 	strh	r1, [r4, #0x38]
 	mov	r1, #0xa
 	strh	r1, [r4, #0x3a]
 	strh	r0, [r4, #0x3c]
-	b	.L768
-.L769:
+	b	.L771
+.L772:
 	lsl	r0, r3, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x30
-	ble	.L771	@cond_branch
+	ble	.L774	@cond_branch
 	mov	r1, #0x38
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x1
-	bne	.L771	@cond_branch
+	bne	.L774	@cond_branch
 	mov	r0, #0x2
-	b	.L774
-.L771:
+	b	.L777
+.L774:
 	lsl	r0, r3, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x10
-	ble	.L768	@cond_branch
+	ble	.L771	@cond_branch
 	mov	r2, #0x38
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0
-	bne	.L768	@cond_branch
+	bne	.L771	@cond_branch
 	mov	r0, #0x1
-.L774:
+.L777:
 	strh	r0, [r4, #0x38]
 	mov	r0, #0x14
 	strh	r0, [r4, #0x3a]
-.L768:
+.L771:
 	ldrh	r0, [r4, #0x3c]
 	add	r0, r0, #0x2
 	strh	r0, [r4, #0x3c]
@@ -7800,7 +8314,7 @@ pokemonanimfunc_3A:
 	add	r1, r2, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-.L765:
+.L768:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4, r5}
@@ -7817,20 +8331,20 @@ pokemonanimfunc_3B:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L778	@cond_branch
+	bne	.L781	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
 	strh	r5, [r4, #0x3c]
-.L778:
+.L781:
 	mov	r0, #0x3c
 	ldrsh	r1, [r4, r0]
 	mov	r0, #0x80
 	lsl	r0, r0, #0x2
 	cmp	r1, r0
-	ble	.L779	@cond_branch
+	ble	.L782	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r4, #0x26]
 	mov	r2, #0x80
@@ -7841,21 +8355,21 @@ pokemonanimfunc_3B:
 	bl	HandleSetAffineData
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L783
+	ldr	r0, .L786
 	str	r0, [r4, #0x1c]
-	b	.L780
-.L784:
+	b	.L783
+.L787:
 	.align	2, 0
-.L783:
+.L786:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L779:
+.L782:
 	mov	r0, #0x3c
 	ldrsh	r1, [r4, r0]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L781	@cond_branch
+	bge	.L784	@cond_branch
 	add	r0, r0, #0xff
-.L781:
+.L784:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -7871,9 +8385,9 @@ pokemonanimfunc_3B:
 	ldrsh	r1, [r4, r0]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L782	@cond_branch
+	bge	.L785	@cond_branch
 	add	r0, r0, #0x7f
-.L782:
+.L785:
 	asr	r0, r0, #0x7
 	lsl	r0, r0, #0x7
 	sub	r0, r1, r0
@@ -7892,7 +8406,7 @@ pokemonanimfunc_3B:
 	add	r0, r4, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-.L780:
+.L783:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
@@ -7907,20 +8421,20 @@ pokemonanimfunc_3C:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L786	@cond_branch
+	bne	.L789	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
 	strh	r5, [r4, #0x3c]
-.L786:
+.L789:
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
 	mov	r5, #0x80
 	lsl	r5, r5, #0x1
 	cmp	r0, r5
-	ble	.L787	@cond_branch
+	ble	.L790	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r4, #0x26]
 	add	r0, r4, #0
@@ -7930,14 +8444,14 @@ pokemonanimfunc_3C:
 	bl	HandleSetAffineData
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L790
+	ldr	r0, .L793
 	str	r0, [r4, #0x1c]
-	b	.L788
-.L791:
+	b	.L791
+.L794:
 	.align	2, 0
-.L790:
+.L793:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L787:
+.L790:
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
 	mov	r1, #0x10
@@ -7950,9 +8464,9 @@ pokemonanimfunc_3C:
 	ldrsh	r1, [r4, r0]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L789	@cond_branch
+	bge	.L792	@cond_branch
 	add	r0, r0, #0x3f
-.L789:
+.L792:
 	asr	r0, r0, #0x6
 	lsl	r0, r0, #0x6
 	sub	r0, r1, r0
@@ -7970,7 +8484,7 @@ pokemonanimfunc_3C:
 	add	r1, r5, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-.L788:
+.L791:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
@@ -7983,16 +8497,16 @@ pokemonanimfunc_3D:
 	push	{r4, lr}
 	add	r4, r0, #0
 	bl	HandleStartAffineAnim
-	ldr	r0, .L793
+	ldr	r0, .L796
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
 	strh	r0, [r4, #0x3c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L794:
+.L797:
 	.align	2, 0
-.L793:
+.L796:
 	.word	sub_81825F8
 .Lfe119:
 	.size	 pokemonanimfunc_3D,.Lfe119-pokemonanimfunc_3D
@@ -8009,21 +8523,21 @@ sub_81825F8:
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x3f
-	ble	.L796	@cond_branch
+	ble	.L799	@cond_branch
 	strh	r1, [r4, #0x3c]
 	strh	r1, [r4, #0x3a]
-	ldr	r0, .L799
+	ldr	r0, .L802
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x40
-	b	.L798
-.L800:
+	b	.L801
+.L803:
 	.align	2, 0
-.L799:
+.L802:
 	.word	sub_8182648
-.L796:
+.L799:
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
-.L798:
+.L801:
 	mov	r1, #0x80
 	bl	Sin
 	lsl	r0, r0, #0x10
@@ -8055,7 +8569,7 @@ sub_8182648:
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x5f
-	ble	.L802	@cond_branch
+	ble	.L805	@cond_branch
 	mov	r0, #0x0
 	mov	r1, #0x80
 	bl	Cos
@@ -8066,8 +8580,8 @@ sub_8182648:
 	ldrh	r0, [r4, #0x3a]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x3a]
-	b	.L803
-.L802:
+	b	.L806
+.L805:
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
 	mov	r1, #0x8
@@ -8082,21 +8596,21 @@ sub_8182648:
 	mov	r2, #0x3c
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0x3f
-	ble	.L804	@cond_branch
-	ldr	r5, .L807
+	ble	.L807	@cond_branch
+	ldr	r5, .L810
 	add	r0, r1, #0
 	sub	r0, r0, #0x40
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
-	b	.L805
-.L808:
+	b	.L808
+.L811:
 	.align	2, 0
-.L807:
+.L810:
 	.word	0xffff
-.L804:
+.L807:
 	mov	r5, #0x1
 	mov	r0, #0x0
-.L805:
+.L808:
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0xf
 	ldrh	r1, [r4, #0x3c]
@@ -8112,7 +8626,7 @@ sub_8182648:
 	add	r0, r2, #0
 	lsl	r0, r0, #0x10
 	lsr	r2, r0, #0x10
-.L803:
+.L806:
 	mov	r1, #0x80
 	lsl	r1, r1, #0x1
 	lsl	r2, r2, #0x10
@@ -8126,18 +8640,18 @@ sub_8182648:
 	mov	r1, #0x3a
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x3
-	bne	.L806	@cond_branch
+	bne	.L809	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r4, #0x3c]
-	ldr	r0, .L809
+	ldr	r0, .L812
 	str	r0, [r4, #0x1c]
-.L806:
+.L809:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L810:
+.L813:
 	.align	2, 0
-.L809:
+.L812:
 	.word	sub_81826F8
 .Lfe121:
 	.size	 sub_8182648,.Lfe121-sub_8182648
@@ -8165,10 +8679,10 @@ sub_81826F8:
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x3f
-	ble	.L812	@cond_branch
+	ble	.L815	@cond_branch
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L813
+	ldr	r0, .L816
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
 	strh	r0, [r4, #0x26]
@@ -8178,7 +8692,7 @@ sub_81826F8:
 	add	r1, r2, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-.L812:
+.L815:
 	mov	r1, #0x80
 	lsl	r1, r1, #0x1
 	lsl	r2, r5, #0x10
@@ -8192,9 +8706,9 @@ sub_81826F8:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L814:
+.L817:
 	.align	2, 0
-.L813:
+.L816:
 	.word	SpriteCB_SetDummyOnAnimEnd
 .Lfe122:
 	.size	 sub_81826F8,.Lfe122-sub_81826F8
@@ -8209,12 +8723,12 @@ sub_8182764:
 	mov	r2, #0x38
 	ldrsh	r0, [r4, r2]
 	cmp	r1, r0
-	ble	.L816	@cond_branch
+	ble	.L819	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r4, #0x24]
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L820
+	ldr	r0, .L823
 	str	r0, [r4, #0x1c]
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
@@ -8222,19 +8736,19 @@ sub_8182764:
 	add	r1, r2, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-	b	.L817
-.L821:
+	b	.L820
+.L824:
 	.align	2, 0
-.L820:
+.L823:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L816:
+.L819:
 	mov	r0, #0x3c
 	ldrsh	r1, [r4, r0]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L818	@cond_branch
+	bge	.L821	@cond_branch
 	add	r0, r0, #0xff
-.L818:
+.L821:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -8252,9 +8766,9 @@ sub_8182764:
 	ldrsh	r1, [r4, r2]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L819	@cond_branch
+	bge	.L822	@cond_branch
 	add	r0, r0, #0x7f
-.L819:
+.L822:
 	asr	r0, r0, #0x7
 	lsl	r0, r0, #0x7
 	sub	r0, r1, r0
@@ -8273,7 +8787,7 @@ sub_8182764:
 	add	r0, r4, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-.L817:
+.L820:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
@@ -8288,7 +8802,7 @@ pokemonanimfunc_3E:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L823	@cond_branch
+	bne	.L826	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x32]
@@ -8301,7 +8815,7 @@ pokemonanimfunc_3E:
 	lsl	r0, r0, #0x2
 	strh	r0, [r4, #0x38]
 	strh	r1, [r4, #0x36]
-.L823:
+.L826:
 	add	r0, r4, #0
 	bl	sub_8182764
 	pop	{r4, r5}
@@ -8320,12 +8834,12 @@ sub_8182830:
 	mov	r2, #0x38
 	ldrsh	r0, [r4, r2]
 	cmp	r1, r0
-	ble	.L825	@cond_branch
+	ble	.L828	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r4, #0x24]
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L829
+	ldr	r0, .L832
 	str	r0, [r4, #0x1c]
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
@@ -8333,19 +8847,19 @@ sub_8182830:
 	add	r1, r2, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-	b	.L826
-.L830:
+	b	.L829
+.L833:
 	.align	2, 0
-.L829:
+.L832:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L825:
+.L828:
 	mov	r0, #0x3c
 	ldrsh	r1, [r4, r0]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L827	@cond_branch
+	bge	.L830	@cond_branch
 	add	r0, r0, #0xff
-.L827:
+.L830:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -8363,9 +8877,9 @@ sub_8182830:
 	ldrsh	r1, [r4, r2]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L828	@cond_branch
+	bge	.L831	@cond_branch
 	add	r0, r0, #0x3f
-.L828:
+.L831:
 	asr	r0, r0, #0x6
 	lsl	r0, r0, #0x6
 	sub	r0, r1, r0
@@ -8384,7 +8898,7 @@ sub_8182830:
 	add	r0, r4, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-.L826:
+.L829:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
@@ -8399,7 +8913,7 @@ pokemonanimfunc_3F:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L832	@cond_branch
+	bne	.L835	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x32]
@@ -8412,7 +8926,7 @@ pokemonanimfunc_3F:
 	strh	r0, [r4, #0x38]
 	mov	r0, #0x10
 	strh	r0, [r4, #0x36]
-.L832:
+.L835:
 	add	r0, r4, #0
 	bl	sub_8182830
 	pop	{r4, r5}
@@ -8430,20 +8944,20 @@ pokemonanimfunc_40:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L834	@cond_branch
+	bne	.L837	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
 	strh	r5, [r4, #0x3c]
-.L834:
+.L837:
 	mov	r0, #0x3c
 	ldrsh	r1, [r4, r0]
 	mov	r0, #0x80
 	lsl	r0, r0, #0x2
 	cmp	r1, r0
-	ble	.L835	@cond_branch
+	ble	.L838	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r4, #0x24]
 	add	r0, r4, #0
@@ -8454,21 +8968,21 @@ pokemonanimfunc_40:
 	add	r1, r2, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-	ldr	r0, .L839
+	ldr	r0, .L842
 	str	r0, [r4, #0x1c]
-	b	.L836
-.L840:
+	b	.L839
+.L843:
 	.align	2, 0
-.L839:
+.L842:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L835:
+.L838:
 	mov	r0, #0x3c
 	ldrsh	r1, [r4, r0]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L837	@cond_branch
+	bge	.L840	@cond_branch
 	add	r0, r0, #0xff
-.L837:
+.L840:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -8484,9 +8998,9 @@ pokemonanimfunc_40:
 	ldrsh	r1, [r4, r0]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L838	@cond_branch
+	bge	.L841	@cond_branch
 	add	r0, r0, #0x7f
-.L838:
+.L841:
 	asr	r0, r0, #0x7
 	lsl	r0, r0, #0x7
 	sub	r0, r1, r0
@@ -8504,7 +9018,7 @@ pokemonanimfunc_40:
 	add	r1, r2, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-.L836:
+.L839:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4, r5}
@@ -8522,20 +9036,20 @@ pokemonanimfunc_41:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L842	@cond_branch
+	bne	.L845	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
 	strh	r5, [r4, #0x3c]
-.L842:
+.L845:
 	mov	r0, #0x3c
 	ldrsh	r1, [r4, r0]
 	mov	r0, #0x80
 	lsl	r0, r0, #0x2
 	cmp	r1, r0
-	ble	.L843	@cond_branch
+	ble	.L846	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r4, #0x24]
 	add	r0, r4, #0
@@ -8546,21 +9060,21 @@ pokemonanimfunc_41:
 	add	r1, r2, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-	ldr	r0, .L847
+	ldr	r0, .L850
 	str	r0, [r4, #0x1c]
-	b	.L844
-.L848:
+	b	.L847
+.L851:
 	.align	2, 0
-.L847:
+.L850:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L843:
+.L846:
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
 	add	r1, r0, #0
 	cmp	r0, #0
-	bge	.L845	@cond_branch
+	bge	.L848	@cond_branch
 	add	r1, r1, #0xff
-.L845:
+.L848:
 	asr	r1, r1, #0x8
 	lsl	r1, r1, #0x8
 	sub	r1, r0, r1
@@ -8580,9 +9094,9 @@ pokemonanimfunc_41:
 	ldrsh	r0, [r4, r1]
 	add	r1, r0, #0
 	cmp	r0, #0
-	bge	.L846	@cond_branch
+	bge	.L849	@cond_branch
 	add	r1, r1, #0xff
-.L846:
+.L849:
 	asr	r1, r1, #0x8
 	lsl	r1, r1, #0x8
 	sub	r1, r0, r1
@@ -8604,7 +9118,7 @@ pokemonanimfunc_41:
 	add	r1, r2, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-.L844:
+.L847:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4, r5}
@@ -8622,20 +9136,20 @@ pokemonanimfunc_42:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L850	@cond_branch
+	bne	.L853	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
 	strh	r5, [r4, #0x3c]
-.L850:
+.L853:
 	mov	r0, #0x3c
 	ldrsh	r1, [r4, r0]
 	mov	r0, #0x80
 	lsl	r0, r0, #0x2
 	cmp	r1, r0
-	ble	.L851	@cond_branch
+	ble	.L854	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r4, #0x24]
 	add	r0, r4, #0
@@ -8646,21 +9160,21 @@ pokemonanimfunc_42:
 	add	r1, r2, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-	ldr	r0, .L855
+	ldr	r0, .L858
 	str	r0, [r4, #0x1c]
-	b	.L852
-.L856:
+	b	.L855
+.L859:
 	.align	2, 0
-.L855:
+.L858:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L851:
+.L854:
 	mov	r0, #0x3c
 	ldrsh	r1, [r4, r0]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L853	@cond_branch
+	bge	.L856	@cond_branch
 	add	r0, r0, #0xff
-.L853:
+.L856:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -8677,9 +9191,9 @@ pokemonanimfunc_42:
 	ldrsh	r0, [r4, r1]
 	add	r1, r0, #0
 	cmp	r0, #0
-	bge	.L854	@cond_branch
+	bge	.L857	@cond_branch
 	add	r1, r1, #0xff
-.L854:
+.L857:
 	asr	r1, r1, #0x8
 	lsl	r1, r1, #0x8
 	sub	r1, r0, r1
@@ -8700,7 +9214,7 @@ pokemonanimfunc_42:
 	add	r1, r2, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-.L852:
+.L855:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4, r5}
@@ -8720,83 +9234,71 @@ pokemonanimfunc_43:
 	mov	r0, #0x80
 	lsl	r0, r0, #0x4
 	cmp	r1, r0
-	ble	.L858	@cond_branch
-	ldr	r0, .L880
+	ble	.L861	@cond_branch
+	ldr	r0, .L883
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
 	strh	r0, [r4, #0x3a]
-	b	.L859
-.L881:
+	b	.L862
+.L884:
 	.align	2, 0
-.L880:
+.L883:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L858:
+.L861:
 	mov	r1, #0x32
 	ldrsh	r2, [r4, r1]
 	add	r0, r2, #0
 	cmp	r2, #0
-	bge	.L860	@cond_branch
-	ldr	r1, .L882
+	bge	.L863	@cond_branch
+	ldr	r1, .L885
 	add	r0, r2, r1
-.L860:
+.L863:
 	asr	r3, r0, #0x9
 	add	r1, r3, #0
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L861	@cond_branch
+	bge	.L864	@cond_branch
 	add	r0, r1, #0x3
-.L861:
+.L864:
 	asr	r0, r0, #0x2
 	lsl	r0, r0, #0x2
 	sub	r0, r1, r0
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x1
-	beq	.L866	@cond_branch
-	cmp	r0, #0x1
-	bgt	.L877	@cond_branch
-	cmp	r0, #0
-	beq	.L863	@cond_branch
-	b	.L862
-.L883:
-	.align	2, 0
-.L882:
-	.word	0x1ff
-.L877:
-	cmp	r0, #0x2
 	beq	.L869	@cond_branch
-	cmp	r0, #0x3
+	cmp	r0, #0x1
+	bgt	.L880	@cond_branch
+	cmp	r0, #0
+	beq	.L866	@cond_branch
+	b	.L865
+.L886:
+	.align	2, 0
+.L885:
+	.word	0x1ff
+.L880:
+	cmp	r0, #0x2
 	beq	.L872	@cond_branch
-	b	.L862
-.L863:
+	cmp	r0, #0x3
+	beq	.L875	@cond_branch
+	b	.L865
+.L866:
 	lsl	r0, r3, #0x9
 	sub	r0, r2, r0
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0xc
 	neg	r0, r0
 	cmp	r0, #0
-	bge	.L865	@cond_branch
-	ldr	r1, .L884
-	add	r0, r0, r1
-.L865:
-	asr	r0, r0, #0x9
-	b	.L879
-.L885:
-	.align	2, 0
-.L884:
-	.word	0x1ff
-.L866:
-	lsl	r0, r3, #0x9
-	sub	r0, r2, r0
-	lsl	r0, r0, #0x10
-	asr	r0, r0, #0x10
-	cmp	r0, #0
 	bge	.L868	@cond_branch
-	add	r0, r0, #0x1f
+	ldr	r1, .L887
+	add	r0, r0, r1
 .L868:
-	asr	r0, r0, #0x5
-	sub	r0, r0, #0x10
-	b	.L879
+	asr	r0, r0, #0x9
+	b	.L882
+.L888:
+	.align	2, 0
+.L887:
+	.word	0x1ff
 .L869:
 	lsl	r0, r3, #0x9
 	sub	r0, r2, r0
@@ -8807,30 +9309,42 @@ pokemonanimfunc_43:
 	add	r0, r0, #0x1f
 .L871:
 	asr	r0, r0, #0x5
-	b	.L879
+	sub	r0, r0, #0x10
+	b	.L882
 .L872:
+	lsl	r0, r3, #0x9
+	sub	r0, r2, r0
+	lsl	r0, r0, #0x10
+	asr	r0, r0, #0x10
+	cmp	r0, #0
+	bge	.L874	@cond_branch
+	add	r0, r0, #0x1f
+.L874:
+	asr	r0, r0, #0x5
+	b	.L882
+.L875:
 	lsl	r0, r3, #0x9
 	sub	r0, r2, r0
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0xc
 	neg	r0, r0
 	cmp	r0, #0
-	bge	.L874	@cond_branch
-	ldr	r1, .L886
+	bge	.L877	@cond_branch
+	ldr	r1, .L889
 	add	r0, r0, r1
-.L874:
+.L877:
 	asr	r0, r0, #0x9
 	add	r0, r0, #0x10
-.L879:
+.L882:
 	strh	r0, [r4, #0x24]
-.L862:
+.L865:
 	mov	r0, #0x32
 	ldrsh	r1, [r4, r0]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L878	@cond_branch
+	bge	.L881	@cond_branch
 	add	r0, r0, #0x7f
-.L878:
+.L881:
 	asr	r0, r0, #0x7
 	lsl	r0, r0, #0x7
 	sub	r0, r1, r0
@@ -8843,15 +9357,15 @@ pokemonanimfunc_43:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x18
 	strh	r0, [r4, #0x32]
-.L859:
+.L862:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L887:
+.L890:
 	.align	2, 0
-.L886:
+.L889:
 	.word	0x1ff
 .Lfe130:
 	.size	 pokemonanimfunc_43,.Lfe130-pokemonanimfunc_43
@@ -8866,13 +9380,13 @@ pokemonanimfunc_44:
 	mov	r2, #0x32
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0
-	bne	.L889	@cond_branch
+	bne	.L892	@cond_branch
 	strh	r0, [r4, #0x3a]
 	mov	r0, #0x40
 	strh	r0, [r4, #0x3c]
 	add	r0, r1, #0x1
 	strh	r0, [r4, #0x32]
-.L889:
+.L892:
 	ldrh	r0, [r4, #0x3c]
 	add	r1, r0, #0
 	add	r1, r1, #0x8
@@ -8882,44 +9396,44 @@ pokemonanimfunc_44:
 	mov	r5, #0x3a
 	ldrsh	r0, [r4, r5]
 	cmp	r0, #0x4
-	bne	.L890	@cond_branch
+	bne	.L893	@cond_branch
 	lsl	r0, r1, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x3f
-	ble	.L892	@cond_branch
-	b	.L902
-.L890:
+	ble	.L895	@cond_branch
+	b	.L905
+.L893:
 	lsl	r0, r1, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x7f
-	ble	.L892	@cond_branch
-.L902:
+	ble	.L895	@cond_branch
+.L905:
 	strh	r3, [r4, #0x3c]
 	add	r0, r2, #0x1
 	strh	r0, [r4, #0x3a]
-.L892:
+.L895:
 	mov	r1, #0x3a
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x4
-	bhi	.L900	@cond_branch
+	bhi	.L903	@cond_branch
 	lsl	r0, r0, #0x2
-	ldr	r1, .L903
+	ldr	r1, .L906
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
+.L907:
+	.align	2, 0
+.L906:
+	.word	.L904
+	.align	2, 0
+	.align	2, 0
 .L904:
-	.align	2, 0
-.L903:
-	.word	.L901
-	.align	2, 0
-	.align	2, 0
-.L901:
+	.word	.L902
+	.word	.L898
 	.word	.L899
-	.word	.L895
-	.word	.L896
-	.word	.L897
-	.word	.L899
-.L895:
+	.word	.L900
+	.word	.L902
+.L898:
 	mov	r2, #0x3c
 	ldrsh	r0, [r4, r2]
 	mov	r1, #0x8
@@ -8932,39 +9446,39 @@ pokemonanimfunc_44:
 	bl	Sin
 	sub	r0, r0, #0x8
 	strh	r0, [r4, #0x26]
-	b	.L894
-.L896:
-	ldrh	r0, [r4, #0x3c]
-	add	r0, r0, #0x80
-	lsl	r0, r0, #0x10
-	asr	r0, r0, #0x10
-	mov	r1, #0x8
-	bl	Sin
-	add	r0, r0, #0x8
-	strh	r0, [r4, #0x24]
-	mov	r1, #0x3c
-	ldrsh	r0, [r4, r1]
-	mov	r1, #0x8
-	bl	Cos
-	neg	r0, r0
-	strh	r0, [r4, #0x26]
-	b	.L894
-.L897:
-	mov	r2, #0x3c
-	ldrsh	r0, [r4, r2]
-	mov	r1, #0x8
-	bl	Cos
-	strh	r0, [r4, #0x24]
-	ldrh	r0, [r4, #0x3c]
-	add	r0, r0, #0x80
-	lsl	r0, r0, #0x10
-	asr	r0, r0, #0x10
-	mov	r1, #0x8
-	bl	Sin
-	add	r0, r0, #0x8
-	strh	r0, [r4, #0x26]
-	b	.L894
+	b	.L897
 .L899:
+	ldrh	r0, [r4, #0x3c]
+	add	r0, r0, #0x80
+	lsl	r0, r0, #0x10
+	asr	r0, r0, #0x10
+	mov	r1, #0x8
+	bl	Sin
+	add	r0, r0, #0x8
+	strh	r0, [r4, #0x24]
+	mov	r1, #0x3c
+	ldrsh	r0, [r4, r1]
+	mov	r1, #0x8
+	bl	Cos
+	neg	r0, r0
+	strh	r0, [r4, #0x26]
+	b	.L897
+.L900:
+	mov	r2, #0x3c
+	ldrsh	r0, [r4, r2]
+	mov	r1, #0x8
+	bl	Cos
+	strh	r0, [r4, #0x24]
+	ldrh	r0, [r4, #0x3c]
+	add	r0, r0, #0x80
+	lsl	r0, r0, #0x10
+	asr	r0, r0, #0x10
+	mov	r1, #0x8
+	bl	Sin
+	add	r0, r0, #0x8
+	strh	r0, [r4, #0x26]
+	b	.L897
+.L902:
 	mov	r5, #0x3c
 	ldrsh	r0, [r4, r5]
 	mov	r1, #0x8
@@ -8976,22 +9490,22 @@ pokemonanimfunc_44:
 	mov	r1, #0x8
 	bl	Cos
 	strh	r0, [r4, #0x26]
-	b	.L894
-.L900:
+	b	.L897
+.L903:
 	mov	r0, #0x0
 	strh	r0, [r4, #0x24]
 	strh	r0, [r4, #0x26]
-	ldr	r0, .L905
+	ldr	r0, .L908
 	str	r0, [r4, #0x1c]
-.L894:
+.L897:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L906:
+.L909:
 	.align	2, 0
-.L905:
+.L908:
 	.word	SpriteCB_SetDummyOnAnimEnd
 .Lfe131:
 	.size	 pokemonanimfunc_44,.Lfe131-pokemonanimfunc_44
@@ -9005,14 +9519,14 @@ pokemonanimfunc_45:
 	strh	r0, [r4, #0x2e]
 	add	r0, r4, #0
 	bl	sub_8180714
-	ldr	r0, .L908
+	ldr	r0, .L911
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L909:
+.L912:
 	.align	2, 0
-.L908:
+.L911:
 	.word	sub_8180714
 .Lfe132:
 	.size	 pokemonanimfunc_45,.Lfe132-pokemonanimfunc_45
@@ -9026,14 +9540,14 @@ pokemonanimfunc_46:
 	strh	r0, [r4, #0x2e]
 	add	r0, r4, #0
 	bl	sub_817F8FC
-	ldr	r0, .L911
+	ldr	r0, .L914
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L912:
+.L915:
 	.align	2, 0
-.L911:
+.L914:
 	.word	sub_817F8FC
 .Lfe133:
 	.size	 pokemonanimfunc_46,.Lfe133-pokemonanimfunc_46
@@ -9047,14 +9561,14 @@ pokemonanimfunc_47:
 	strh	r0, [r4, #0x2e]
 	add	r0, r4, #0
 	bl	sub_817F978
-	ldr	r0, .L914
+	ldr	r0, .L917
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L915:
+.L918:
 	.align	2, 0
-.L914:
+.L917:
 	.word	sub_817F978
 .Lfe134:
 	.size	 pokemonanimfunc_47,.Lfe134-pokemonanimfunc_47
@@ -9068,7 +9582,7 @@ pokemonanimfunc_48:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L917
+	ldr	r2, .L920
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -9080,14 +9594,14 @@ pokemonanimfunc_48:
 	strh	r0, [r1, #0x8]
 	add	r0, r4, #0
 	bl	sub_8180900
-	ldr	r0, .L917+0x4
+	ldr	r0, .L920+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L918:
+.L921:
 	.align	2, 0
-.L917:
+.L920:
 	.word	sUnknown_03001240
 	.word	sub_8180900
 .Lfe135:
@@ -9125,21 +9639,21 @@ pokemonanimfunc_4B:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L922	@cond_branch
+	bne	.L925	@cond_branch
 	strh	r0, [r4, #0x2e]
-.L922:
+.L925:
 	ldrh	r1, [r4, #0x2e]
 	mov	r2, #0x2e
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0
-	bgt	.L923	@cond_branch
+	bgt	.L926	@cond_branch
 	add	r0, r4, #0
 	bl	sub_817FC20
 	mov	r0, #0x1
-	b	.L925
-.L923:
+	b	.L928
+.L926:
 	sub	r0, r1, #0x1
-.L925:
+.L928:
 	strh	r0, [r4, #0x2e]
 	pop	{r4}
 	pop	{r0}
@@ -9158,14 +9672,14 @@ pokemonanimfunc_4C:
 	strh	r0, [r4, #0x3c]
 	add	r0, r4, #0
 	bl	sub_817FCDC
-	ldr	r0, .L927
+	ldr	r0, .L930
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L928:
+.L931:
 	.align	2, 0
-.L927:
+.L930:
 	.word	sub_817FCDC
 .Lfe139:
 	.size	 pokemonanimfunc_4C,.Lfe139-pokemonanimfunc_4C
@@ -9179,14 +9693,14 @@ pokemonanimfunc_4D:
 	strh	r0, [r4, #0x2e]
 	add	r0, r4, #0
 	bl	sub_817FD44
-	ldr	r0, .L930
+	ldr	r0, .L933
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L931:
+.L934:
 	.align	2, 0
-.L930:
+.L933:
 	.word	sub_817FD44
 .Lfe140:
 	.size	 pokemonanimfunc_4D,.Lfe140-pokemonanimfunc_4D
@@ -9201,7 +9715,7 @@ pokemonanimfunc_4E:
 	lsr	r0, r0, #0x18
 	mov	r3, #0x0
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L933
+	ldr	r2, .L936
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -9214,14 +9728,14 @@ pokemonanimfunc_4E:
 	strh	r0, [r1, #0x4]
 	add	r0, r4, #0
 	bl	sub_817FE30
-	ldr	r0, .L933+0x4
+	ldr	r0, .L936+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L934:
+.L937:
 	.align	2, 0
-.L933:
+.L936:
 	.word	sUnknown_03001240
 	.word	sub_817FE30
 .Lfe141:
@@ -9236,7 +9750,7 @@ pokemonanimfunc_4F:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L936
+	ldr	r2, .L939
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -9250,14 +9764,14 @@ pokemonanimfunc_4F:
 	strh	r0, [r1, #0x2]
 	add	r0, r4, #0
 	bl	sub_817FFF0
-	ldr	r0, .L936+0x4
+	ldr	r0, .L939+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L937:
+.L940:
 	.align	2, 0
-.L936:
+.L939:
 	.word	sUnknown_03001240
 	.word	sub_817FFF0
 .Lfe142:
@@ -9272,14 +9786,14 @@ pokemonanimfunc_50:
 	strh	r0, [r4, #0x2e]
 	add	r0, r4, #0
 	bl	sub_818031C
-	ldr	r0, .L939
+	ldr	r0, .L942
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L940:
+.L943:
 	.align	2, 0
-.L939:
+.L942:
 	.word	sub_818031C
 .Lfe143:
 	.size	 pokemonanimfunc_50,.Lfe143-pokemonanimfunc_50
@@ -9293,14 +9807,14 @@ pokemonanimfunc_51:
 	strh	r0, [r4, #0x2e]
 	add	r0, r4, #0
 	bl	sub_81804F8
-	ldr	r0, .L942
+	ldr	r0, .L945
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L943:
+.L946:
 	.align	2, 0
-.L942:
+.L945:
 	.word	sub_81804F8
 .Lfe144:
 	.size	 pokemonanimfunc_51,.Lfe144-pokemonanimfunc_51
@@ -9314,14 +9828,14 @@ pokemonanimfunc_52:
 	strh	r0, [r4, #0x2e]
 	add	r0, r4, #0
 	bl	sub_817F9F4
-	ldr	r0, .L945
+	ldr	r0, .L948
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L946:
+.L949:
 	.align	2, 0
-.L945:
+.L948:
 	.word	sub_817F9F4
 .Lfe145:
 	.size	 pokemonanimfunc_52,.Lfe145-pokemonanimfunc_52
@@ -9335,7 +9849,7 @@ pokemonanimfunc_53:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L948
+	ldr	r2, .L951
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -9346,14 +9860,14 @@ pokemonanimfunc_53:
 	strh	r0, [r1, #0x8]
 	add	r0, r4, #0
 	bl	sub_817FF3C
-	ldr	r0, .L948+0x4
+	ldr	r0, .L951+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L949:
+.L952:
 	.align	2, 0
-.L948:
+.L951:
 	.word	sUnknown_03001240
 	.word	sub_817FF3C
 .Lfe146:
@@ -9368,7 +9882,7 @@ pokemonanimfunc_54:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L951
+	ldr	r2, .L954
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -9379,14 +9893,14 @@ pokemonanimfunc_54:
 	strh	r0, [r1, #0x4]
 	add	r0, r4, #0
 	bl	sub_8181214
-	ldr	r0, .L951+0x4
+	ldr	r0, .L954+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L952:
+.L955:
 	.align	2, 0
-.L951:
+.L954:
 	.word	sUnknown_03001240
 	.word	sub_8181214
 .Lfe147:
@@ -9401,7 +9915,7 @@ pokemonanimfunc_55:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L954
+	ldr	r2, .L957
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -9412,14 +9926,14 @@ pokemonanimfunc_55:
 	strh	r0, [r1, #0x4]
 	add	r0, r4, #0
 	bl	sub_8181810
-	ldr	r0, .L954+0x4
+	ldr	r0, .L957+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L955:
+.L958:
 	.align	2, 0
-.L954:
+.L957:
 	.word	sUnknown_03001240
 	.word	sub_8181810
 .Lfe148:
@@ -9435,7 +9949,7 @@ pokemonanimfunc_56:
 	lsr	r0, r0, #0x18
 	mov	r5, #0x0
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L957
+	ldr	r2, .L960
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -9449,14 +9963,14 @@ pokemonanimfunc_56:
 	strh	r5, [r4, #0x34]
 	add	r0, r4, #0
 	bl	sub_8181ABC
-	ldr	r0, .L957+0x4
+	ldr	r0, .L960+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L958:
+.L961:
 	.align	2, 0
-.L957:
+.L960:
 	.word	sUnknown_03001240
 	.word	sub_8181ABC
 .Lfe149:
@@ -9471,7 +9985,7 @@ pokemonanimfunc_07:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L960
+	ldr	r2, .L963
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -9480,14 +9994,14 @@ pokemonanimfunc_07:
 	strh	r0, [r1, #0x6]
 	add	r0, r4, #0
 	bl	sub_8181CE8
-	ldr	r0, .L960+0x4
+	ldr	r0, .L963+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L961:
+.L964:
 	.align	2, 0
-.L960:
+.L963:
 	.word	sUnknown_03001240
 	.word	sub_8181CE8
 .Lfe150:
@@ -9502,7 +10016,7 @@ pokemonanimfunc_08:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L963
+	ldr	r2, .L966
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -9513,14 +10027,14 @@ pokemonanimfunc_08:
 	strh	r0, [r1, #0x4]
 	add	r0, r4, #0
 	bl	sub_8181CE8
-	ldr	r0, .L963+0x4
+	ldr	r0, .L966+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L964:
+.L967:
 	.align	2, 0
-.L963:
+.L966:
 	.word	sUnknown_03001240
 	.word	sub_8181CE8
 .Lfe151:
@@ -9535,7 +10049,7 @@ pokemonanimfunc_0B:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L966
+	ldr	r2, .L969
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -9544,14 +10058,14 @@ pokemonanimfunc_0B:
 	strh	r0, [r1, #0x8]
 	add	r0, r4, #0
 	bl	sub_81814D4
-	ldr	r0, .L966+0x4
+	ldr	r0, .L969+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L967:
+.L970:
 	.align	2, 0
-.L966:
+.L969:
 	.word	sUnknown_03001240
 	.word	sub_81814D4
 .Lfe152:
@@ -9566,7 +10080,7 @@ pokemonanimfunc_0C:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L969
+	ldr	r2, .L972
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -9577,14 +10091,14 @@ pokemonanimfunc_0C:
 	strh	r0, [r1, #0x4]
 	add	r0, r4, #0
 	bl	sub_81814D4
-	ldr	r0, .L969+0x4
+	ldr	r0, .L972+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L970:
+.L973:
 	.align	2, 0
-.L969:
+.L972:
 	.word	sUnknown_03001240
 	.word	sub_81814D4
 .Lfe153:
@@ -9599,7 +10113,7 @@ pokemonanimfunc_0D:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L972
+	ldr	r2, .L975
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -9608,14 +10122,14 @@ pokemonanimfunc_0D:
 	strh	r0, [r1, #0x8]
 	add	r0, r4, #0
 	bl	sub_81815D4
-	ldr	r0, .L972+0x4
+	ldr	r0, .L975+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L973:
+.L976:
 	.align	2, 0
-.L972:
+.L975:
 	.word	sUnknown_03001240
 	.word	sub_81815D4
 .Lfe154:
@@ -9630,7 +10144,7 @@ pokemonanimfunc_0E:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L975
+	ldr	r2, .L978
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -9641,14 +10155,14 @@ pokemonanimfunc_0E:
 	strh	r0, [r1, #0x4]
 	add	r0, r4, #0
 	bl	sub_81815D4
-	ldr	r0, .L975+0x4
+	ldr	r0, .L978+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L976:
+.L979:
 	.align	2, 0
-.L975:
+.L978:
 	.word	sUnknown_03001240
 	.word	sub_81815D4
 .Lfe155:
@@ -9664,24 +10178,24 @@ sub_8183140:
 	mov	r0, #0x90
 	lsl	r0, r0, #0x4
 	cmp	r2, r0
-	ble	.L978	@cond_branch
-	ldr	r0, .L982
+	ble	.L981	@cond_branch
+	ldr	r0, .L985
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
-	b	.L981
-.L983:
+	b	.L984
+.L986:
 	.align	2, 0
-.L982:
+.L985:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L978:
+.L981:
 	add	r1, r2, #0
 	add	r1, r1, #0xc0
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L980	@cond_branch
-	ldr	r3, .L984
+	bge	.L983	@cond_branch
+	ldr	r3, .L987
 	add	r0, r2, r3
-.L980:
+.L983:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -9692,7 +10206,7 @@ sub_8183140:
 	bl	Sin
 	ldrh	r1, [r4, #0x3c]
 	add	r0, r0, r1
-.L981:
+.L984:
 	strh	r0, [r4, #0x26]
 	ldrh	r0, [r4, #0x2e]
 	ldrh	r3, [r4, #0x32]
@@ -9701,9 +10215,9 @@ sub_8183140:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L985:
+.L988:
 	.align	2, 0
-.L984:
+.L987:
 	.word	0x1bf
 .Lfe156:
 	.size	 sub_8183140,.Lfe156-sub_8183140
@@ -9719,14 +10233,14 @@ pokemonanimfunc_57:
 	strh	r0, [r4, #0x3c]
 	add	r0, r4, #0
 	bl	sub_8183140
-	ldr	r0, .L987
+	ldr	r0, .L990
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L988:
+.L991:
 	.align	2, 0
-.L987:
+.L990:
 	.word	sub_8183140
 .Lfe157:
 	.size	 pokemonanimfunc_57,.Lfe157-pokemonanimfunc_57
@@ -9742,14 +10256,14 @@ pokemonanimfunc_58:
 	strh	r0, [r4, #0x3c]
 	add	r0, r4, #0
 	bl	sub_8183140
-	ldr	r0, .L990
+	ldr	r0, .L993
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L991:
+.L994:
 	.align	2, 0
-.L990:
+.L993:
 	.word	sub_8183140
 .Lfe158:
 	.size	 pokemonanimfunc_58,.Lfe158-pokemonanimfunc_58
@@ -9765,82 +10279,65 @@ pokemonanimfunc_59:
 	mov	r0, #0x80
 	lsl	r0, r0, #0x4
 	cmp	r1, r0
-	ble	.L993	@cond_branch
-	ldr	r0, .L1015
+	ble	.L996	@cond_branch
+	ldr	r0, .L1018
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
 	strh	r0, [r4, #0x3a]
-	b	.L994
-.L1016:
+	b	.L997
+.L1019:
 	.align	2, 0
-.L1015:
+.L1018:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L993:
+.L996:
 	mov	r1, #0x32
 	ldrsh	r2, [r4, r1]
 	add	r0, r2, #0
 	cmp	r2, #0
-	bge	.L995	@cond_branch
-	ldr	r1, .L1017
+	bge	.L998	@cond_branch
+	ldr	r1, .L1020
 	add	r0, r2, r1
-.L995:
+.L998:
 	asr	r3, r0, #0x9
 	add	r1, r3, #0
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L996	@cond_branch
+	bge	.L999	@cond_branch
 	add	r0, r1, #0x3
-.L996:
+.L999:
 	asr	r0, r0, #0x2
 	lsl	r0, r0, #0x2
 	sub	r0, r1, r0
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x1
-	beq	.L1004	@cond_branch
-	cmp	r0, #0x1
-	bgt	.L1012	@cond_branch
-	cmp	r0, #0
-	beq	.L998	@cond_branch
-	b	.L997
-.L1018:
-	.align	2, 0
-.L1017:
-	.word	0x1ff
-.L1012:
-	cmp	r0, #0x2
-	beq	.L1001	@cond_branch
-	cmp	r0, #0x3
 	beq	.L1007	@cond_branch
-	b	.L997
-.L998:
+	cmp	r0, #0x1
+	bgt	.L1015	@cond_branch
+	cmp	r0, #0
+	beq	.L1001	@cond_branch
+	b	.L1000
+.L1021:
+	.align	2, 0
+.L1020:
+	.word	0x1ff
+.L1015:
+	cmp	r0, #0x2
+	beq	.L1004	@cond_branch
+	cmp	r0, #0x3
+	beq	.L1010	@cond_branch
+	b	.L1000
+.L1001:
 	lsl	r0, r3, #0x9
 	sub	r0, r2, r0
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0
-	bge	.L1000	@cond_branch
-	add	r0, r0, #0x1f
-.L1000:
-	asr	r0, r0, #0x5
-	b	.L1014
-.L1001:
-	lsl	r0, r3, #0x9
-	sub	r0, r2, r0
-	lsl	r0, r0, #0x10
-	asr	r0, r0, #0xc
-	neg	r0, r0
-	cmp	r0, #0
 	bge	.L1003	@cond_branch
-	ldr	r1, .L1019
-	add	r0, r0, r1
+	add	r0, r0, #0x1f
 .L1003:
-	asr	r0, r0, #0x9
-	b	.L1014
-.L1020:
-	.align	2, 0
-.L1019:
-	.word	0x1ff
+	asr	r0, r0, #0x5
+	b	.L1017
 .L1004:
 	lsl	r0, r3, #0x9
 	sub	r0, r2, r0
@@ -9849,37 +10346,54 @@ pokemonanimfunc_59:
 	neg	r0, r0
 	cmp	r0, #0
 	bge	.L1006	@cond_branch
-	ldr	r1, .L1021
+	ldr	r1, .L1022
 	add	r0, r0, r1
 .L1006:
 	asr	r0, r0, #0x9
-	add	r0, r0, #0x10
-	b	.L1014
-.L1022:
+	b	.L1017
+.L1023:
 	.align	2, 0
-.L1021:
+.L1022:
 	.word	0x1ff
 .L1007:
 	lsl	r0, r3, #0x9
 	sub	r0, r2, r0
 	lsl	r0, r0, #0x10
-	asr	r0, r0, #0x10
+	asr	r0, r0, #0xc
+	neg	r0, r0
 	cmp	r0, #0
 	bge	.L1009	@cond_branch
-	add	r0, r0, #0x1f
+	ldr	r1, .L1024
+	add	r0, r0, r1
 .L1009:
+	asr	r0, r0, #0x9
+	add	r0, r0, #0x10
+	b	.L1017
+.L1025:
+	.align	2, 0
+.L1024:
+	.word	0x1ff
+.L1010:
+	lsl	r0, r3, #0x9
+	sub	r0, r2, r0
+	lsl	r0, r0, #0x10
+	asr	r0, r0, #0x10
+	cmp	r0, #0
+	bge	.L1012	@cond_branch
+	add	r0, r0, #0x1f
+.L1012:
 	asr	r0, r0, #0x5
 	sub	r0, r0, #0x10
-.L1014:
+.L1017:
 	strh	r0, [r4, #0x24]
-.L997:
+.L1000:
 	mov	r0, #0x32
 	ldrsh	r1, [r4, r0]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L1013	@cond_branch
+	bge	.L1016	@cond_branch
 	add	r0, r0, #0x7f
-.L1013:
+.L1016:
 	asr	r0, r0, #0x7
 	lsl	r0, r0, #0x7
 	sub	r0, r1, r0
@@ -9891,7 +10405,7 @@ pokemonanimfunc_59:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x18
 	strh	r0, [r4, #0x32]
-.L994:
+.L997:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
@@ -9915,7 +10429,7 @@ sub_81832C8:
 	mov	r2, #0x3a
 	ldrsh	r0, [r6, r2]
 	cmp	r1, r0
-	ble	.L1024	@cond_branch
+	ble	.L1027	@cond_branch
 	mov	r0, r8
 	strh	r0, [r6, #0x26]
 	strh	r0, [r6, #0x38]
@@ -9929,23 +10443,23 @@ sub_81832C8:
 	mov	r2, #0x36
 	ldrsh	r0, [r6, r2]
 	cmp	r0, #0x1
-	bgt	.L1025	@cond_branch
+	bgt	.L1028	@cond_branch
 	add	r0, r6, #0
 	bl	sub_817F77C
-	ldr	r0, .L1033
+	ldr	r0, .L1036
 	str	r0, [r6, #0x1c]
-	b	.L1027
-.L1034:
+	b	.L1030
+.L1037:
 	.align	2, 0
-.L1033:
+.L1036:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L1025:
+.L1028:
 	sub	r0, r1, #0x1
 	strh	r0, [r6, #0x36]
 	mov	r0, r8
 	strh	r0, [r6, #0x3c]
-	b	.L1027
-.L1024:
+	b	.L1030
+.L1027:
 	mov	r1, #0x38
 	ldrsh	r5, [r6, r1]
 	lsl	r0, r5, #0x7
@@ -9956,9 +10470,9 @@ sub_81832C8:
 	lsl	r0, r0, #0x10
 	lsr	r2, r0, #0x10
 	cmp	r4, #0
-	bge	.L1028	@cond_branch
+	bge	.L1031	@cond_branch
 	add	r4, r4, #0x3
-.L1028:
+.L1031:
 	asr	r1, r4, #0x2
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
@@ -9967,9 +10481,9 @@ sub_81832C8:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r5, r1
-	blt	.L1029	@cond_branch
+	blt	.L1032	@cond_branch
 	cmp	r5, r0
-	bge	.L1029	@cond_branch
+	bge	.L1032	@cond_branch
 	ldrh	r0, [r6, #0x3c]
 	add	r0, r0, #0x33
 	strh	r0, [r6, #0x3c]
@@ -9977,27 +10491,27 @@ sub_81832C8:
 	mov	r8, r1
 	and	r1, r1, r0
 	mov	r8, r1
-.L1029:
+.L1032:
 	mov	r1, #0x30
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0
-	bne	.L1030	@cond_branch
+	bne	.L1033	@cond_branch
 	lsl	r4, r2, #0x10
 	asr	r0, r4, #0x10
 	mov	r1, #0x10
 	bl	Sin
-	ldr	r2, .L1035
+	ldr	r2, .L1038
 	add	r1, r2, #0
 	sub	r1, r1, r0
 	lsl	r1, r1, #0x10
 	lsr	r1, r1, #0x10
 	mov	r9, r1
-	b	.L1032
-.L1036:
+	b	.L1035
+.L1039:
 	.align	2, 0
-.L1035:
+.L1038:
 	.word	-0x100
-.L1030:
+.L1033:
 	lsl	r4, r2, #0x10
 	asr	r0, r4, #0x10
 	mov	r1, #0x10
@@ -10008,7 +10522,7 @@ sub_81832C8:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	mov	r9, r0
-.L1032:
+.L1035:
 	add	r7, r4, #0
 	ldrh	r4, [r6, #0x34]
 	lsl	r4, r4, #0x18
@@ -10042,7 +10556,7 @@ sub_81832C8:
 	ldrh	r0, [r6, #0x38]
 	add	r0, r0, #0x1
 	strh	r0, [r6, #0x38]
-.L1027:
+.L1030:
 	pop	{r3, r4}
 	mov	r8, r3
 	mov	r9, r4
@@ -10060,7 +10574,7 @@ pokemonanimfunc_5A:
 	mov	r0, #0x32
 	ldrsh	r6, [r5, r0]
 	cmp	r6, #0
-	bne	.L1038	@cond_branch
+	bne	.L1041	@cond_branch
 	mov	r4, #0x1
 	strh	r4, [r5, #0x32]
 	add	r0, r5, #0
@@ -10071,7 +10585,7 @@ pokemonanimfunc_5A:
 	strh	r0, [r5, #0x34]
 	strh	r6, [r5, #0x38]
 	strh	r6, [r5, #0x3c]
-.L1038:
+.L1041:
 	add	r0, r5, #0
 	bl	sub_81832C8
 	pop	{r4, r5, r6}
@@ -10095,7 +10609,7 @@ sub_8183418:
 	mov	r2, #0x3a
 	ldrsh	r0, [r6, r2]
 	cmp	r1, r0
-	ble	.L1040	@cond_branch
+	ble	.L1043	@cond_branch
 	mov	r0, r8
 	strh	r0, [r6, #0x38]
 	mov	r2, #0x80
@@ -10108,23 +10622,23 @@ sub_8183418:
 	mov	r2, #0x36
 	ldrsh	r0, [r6, r2]
 	cmp	r0, #0x1
-	bgt	.L1041	@cond_branch
+	bgt	.L1044	@cond_branch
 	add	r0, r6, #0
 	bl	sub_817F77C
-	ldr	r0, .L1048
+	ldr	r0, .L1051
 	str	r0, [r6, #0x1c]
-	b	.L1043
-.L1049:
+	b	.L1046
+.L1052:
 	.align	2, 0
-.L1048:
+.L1051:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L1041:
+.L1044:
 	sub	r0, r1, #0x1
 	strh	r0, [r6, #0x36]
 	mov	r0, r8
 	strh	r0, [r6, #0x3c]
-	b	.L1043
-.L1040:
+	b	.L1046
+.L1043:
 	mov	r1, #0x38
 	ldrsh	r5, [r6, r1]
 	lsl	r0, r5, #0x7
@@ -10136,9 +10650,9 @@ sub_8183418:
 	lsr	r0, r0, #0x10
 	mov	r9, r0
 	cmp	r4, #0
-	bge	.L1044	@cond_branch
+	bge	.L1047	@cond_branch
 	add	r4, r4, #0x3
-.L1044:
+.L1047:
 	asr	r1, r4, #0x2
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
@@ -10147,9 +10661,9 @@ sub_8183418:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r5, r1
-	blt	.L1045	@cond_branch
+	blt	.L1048	@cond_branch
 	cmp	r5, r0
-	bge	.L1045	@cond_branch
+	bge	.L1048	@cond_branch
 	ldrh	r0, [r6, #0x3c]
 	add	r0, r0, #0x33
 	strh	r0, [r6, #0x3c]
@@ -10158,14 +10672,14 @@ sub_8183418:
 	mov	r2, r8
 	and	r2, r2, r0
 	mov	r8, r2
-.L1045:
+.L1048:
 	ldrh	r0, [r6, #0x34]
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
 	mov	r1, #0x30
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0
-	bne	.L1046	@cond_branch
+	bne	.L1049	@cond_branch
 	mov	r2, r9
 	lsl	r0, r2, #0x10
 	asr	r0, r0, #0x10
@@ -10181,17 +10695,17 @@ sub_8183418:
 	lsr	r1, r1, #0x17
 	add	r0, r5, #0
 	bl	Sin
-	ldr	r1, .L1050
+	ldr	r1, .L1053
 	add	r0, r0, r1
 	add	r4, r4, r0
 	lsl	r4, r4, #0x10
 	lsr	r1, r4, #0x10
-	b	.L1047
-.L1051:
+	b	.L1050
+.L1054:
 	.align	2, 0
-.L1050:
+.L1053:
 	.word	-0x100
-.L1046:
+.L1049:
 	mov	r4, r8
 	add	r0, r7, #0
 	mov	r1, #0x5
@@ -10214,7 +10728,7 @@ sub_8183418:
 	sub	r1, r1, r0
 	lsl	r1, r1, #0x10
 	lsr	r1, r1, #0x10
-.L1047:
+.L1050:
 	lsl	r1, r1, #0x10
 	asr	r1, r1, #0x10
 	mov	r2, #0x80
@@ -10225,7 +10739,7 @@ sub_8183418:
 	ldrh	r0, [r6, #0x38]
 	add	r0, r0, #0x1
 	strh	r0, [r6, #0x38]
-.L1043:
+.L1046:
 	pop	{r3, r4}
 	mov	r8, r3
 	mov	r9, r4
@@ -10243,7 +10757,7 @@ pokemonanimfunc_5B:
 	mov	r0, #0x32
 	ldrsh	r6, [r5, r0]
 	cmp	r6, #0
-	bne	.L1053	@cond_branch
+	bne	.L1056	@cond_branch
 	mov	r4, #0x1
 	strh	r4, [r5, #0x32]
 	add	r0, r5, #0
@@ -10254,7 +10768,7 @@ pokemonanimfunc_5B:
 	strh	r0, [r5, #0x34]
 	strh	r6, [r5, #0x38]
 	strh	r6, [r5, #0x3c]
-.L1053:
+.L1056:
 	add	r0, r5, #0
 	bl	sub_8183418
 	pop	{r4, r5, r6}
@@ -10279,7 +10793,7 @@ sub_8183574:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	mov	r9, r0
-	ldr	r3, .L1064
+	ldr	r3, .L1067
 	mov	r1, #0x38
 	ldrsh	r0, [r4, r1]
 	lsl	r1, r0, #0x1
@@ -10287,17 +10801,17 @@ sub_8183574:
 	ldrb	r5, [r0]
 	add	r2, r5, #0
 	cmp	r5, #0xff
-	beq	.L1056	@cond_branch
+	beq	.L1059	@cond_branch
 	ldrh	r0, [r4, #0x3c]
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
-.L1056:
+.L1059:
 	add	r0, r3, #0x1
 	add	r0, r1, r0
 	ldrb	r6, [r0]
 	mov	r7, #0x0
 	cmp	r2, #0xfe
-	beq	.L1057	@cond_branch
+	beq	.L1060	@cond_branch
 	mov	r1, r9
 	sub	r0, r6, r1
 	mul	r0, r0, r5
@@ -10305,20 +10819,20 @@ sub_8183574:
 	bl	__divsi3
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-.L1057:
+.L1060:
 	cmp	r5, #0xff
-	bne	.L1058	@cond_branch
-	ldr	r0, .L1064+0x4
+	bne	.L1061	@cond_branch
+	ldr	r0, .L1067+0x4
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
 	strh	r0, [r4, #0x26]
-	b	.L1059
-.L1065:
+	b	.L1062
+.L1068:
 	.align	2, 0
-.L1064:
+.L1067:
 	.word	sUnknown_0860AA80
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L1058:
+.L1061:
 	mov	r1, r8
 	add	r1, r1, #0xc0
 	add	r0, r1, #0
@@ -10330,22 +10844,22 @@ sub_8183574:
 	add	r0, r0, r7
 	strh	r0, [r4, #0x26]
 	cmp	r9, r6
-	bne	.L1061	@cond_branch
+	bne	.L1064	@cond_branch
 	ldrh	r0, [r4, #0x38]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x38]
 	mov	r0, #0x0
-	b	.L1063
-.L1061:
+	b	.L1066
+.L1064:
 	ldrh	r0, [r4, #0x2e]
 	ldrh	r1, [r4, #0x32]
 	add	r0, r0, r1
 	strh	r0, [r4, #0x32]
 	ldrh	r0, [r4, #0x3a]
 	add	r0, r0, #0x1
-.L1063:
+.L1066:
 	strh	r0, [r4, #0x3a]
-.L1059:
+.L1062:
 	pop	{r3, r4}
 	mov	r8, r3
 	mov	r9, r4
@@ -10366,14 +10880,14 @@ pokemonanimfunc_5C:
 	strh	r0, [r4, #0x3c]
 	add	r0, r4, #0
 	bl	sub_8183574
-	ldr	r0, .L1067
+	ldr	r0, .L1070
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1068:
+.L1071:
 	.align	2, 0
-.L1067:
+.L1070:
 	.word	sub_8183574
 .Lfe165:
 	.size	 pokemonanimfunc_5C,.Lfe165-pokemonanimfunc_5C
@@ -10389,14 +10903,14 @@ pokemonanimfunc_5D:
 	strh	r0, [r4, #0x3c]
 	add	r0, r4, #0
 	bl	sub_817FCDC
-	ldr	r0, .L1070
+	ldr	r0, .L1073
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1071:
+.L1074:
 	.align	2, 0
-.L1070:
+.L1073:
 	.word	sub_817FCDC
 .Lfe166:
 	.size	 pokemonanimfunc_5D,.Lfe166-pokemonanimfunc_5D
@@ -10410,14 +10924,14 @@ pokemonanimfunc_5E:
 	strh	r0, [r4, #0x2e]
 	add	r0, r4, #0
 	bl	sub_817F8FC
-	ldr	r0, .L1073
+	ldr	r0, .L1076
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1074:
+.L1077:
 	.align	2, 0
-.L1073:
+.L1076:
 	.word	sub_817F8FC
 .Lfe167:
 	.size	 pokemonanimfunc_5E,.Lfe167-pokemonanimfunc_5E
@@ -10431,23 +10945,23 @@ pokemonanimfunc_5F:
 	mov	r2, #0x32
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0x28
-	ble	.L1076	@cond_branch
-	ldr	r0, .L1082
+	ble	.L1079	@cond_branch
+	ldr	r0, .L1085
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
-	b	.L1081
-.L1083:
+	b	.L1084
+.L1086:
 	.align	2, 0
-.L1082:
+.L1085:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L1076:
+.L1079:
 	mov	r0, #0x1
 	and	r0, r0, r1
 	mov	r5, #0xff
 	cmp	r0, #0
-	bne	.L1078	@cond_branch
+	bne	.L1081	@cond_branch
 	mov	r5, #0x1
-.L1078:
+.L1081:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	lsl	r0, r0, #0x7
@@ -10455,9 +10969,9 @@ pokemonanimfunc_5F:
 	bl	__divsi3
 	add	r1, r0, #0
 	cmp	r1, #0
-	bge	.L1080	@cond_branch
+	bge	.L1083	@cond_branch
 	add	r0, r0, #0xff
-.L1080:
+.L1083:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -10470,7 +10984,7 @@ pokemonanimfunc_5F:
 	mov	r2, r0
 	mul	r2, r2, r1
 	add	r0, r2, #0
-.L1081:
+.L1084:
 	strh	r0, [r4, #0x24]
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
@@ -10490,23 +11004,23 @@ pokemonanimfunc_60:
 	mov	r2, #0x32
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0x28
-	ble	.L1085	@cond_branch
-	ldr	r0, .L1091
+	ble	.L1088	@cond_branch
+	ldr	r0, .L1094
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
-	b	.L1090
-.L1092:
+	b	.L1093
+.L1095:
 	.align	2, 0
-.L1091:
+.L1094:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L1085:
+.L1088:
 	mov	r0, #0x1
 	and	r0, r0, r1
 	mov	r5, #0xff
 	cmp	r0, #0
-	bne	.L1087	@cond_branch
+	bne	.L1090	@cond_branch
 	mov	r5, #0x1
-.L1087:
+.L1090:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	lsl	r0, r0, #0x7
@@ -10514,9 +11028,9 @@ pokemonanimfunc_60:
 	bl	__divsi3
 	add	r1, r0, #0
 	cmp	r1, #0
-	bge	.L1089	@cond_branch
+	bge	.L1092	@cond_branch
 	add	r0, r0, #0xff
-.L1089:
+.L1092:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -10529,7 +11043,7 @@ pokemonanimfunc_60:
 	mov	r2, r0
 	mul	r2, r2, r1
 	add	r0, r2, #0
-.L1090:
+.L1093:
 	strh	r0, [r4, #0x24]
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
@@ -10551,14 +11065,14 @@ pokemonanimfunc_61:
 	strh	r0, [r4, #0x3c]
 	add	r0, r4, #0
 	bl	sub_8183140
-	ldr	r0, .L1094
+	ldr	r0, .L1097
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1095:
+.L1098:
 	.align	2, 0
-.L1094:
+.L1097:
 	.word	sub_8183140
 .Lfe170:
 	.size	 pokemonanimfunc_61,.Lfe170-pokemonanimfunc_61
@@ -10574,14 +11088,14 @@ pokemonanimfunc_62:
 	strh	r0, [r4, #0x3c]
 	add	r0, r4, #0
 	bl	sub_8183574
-	ldr	r0, .L1097
+	ldr	r0, .L1100
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1098:
+.L1101:
 	.align	2, 0
-.L1097:
+.L1100:
 	.word	sub_8183574
 .Lfe171:
 	.size	 pokemonanimfunc_62,.Lfe171-pokemonanimfunc_62
@@ -10597,14 +11111,14 @@ pokemonanimfunc_63:
 	strh	r0, [r4, #0x3c]
 	add	r0, r4, #0
 	bl	sub_8183574
-	ldr	r0, .L1100
+	ldr	r0, .L1103
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1101:
+.L1104:
 	.align	2, 0
-.L1100:
+.L1103:
 	.word	sub_8183574
 .Lfe172:
 	.size	 pokemonanimfunc_63,.Lfe172-pokemonanimfunc_63
@@ -10618,7 +11132,7 @@ pokemonanimfunc_64:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L1103
+	ldr	r2, .L1106
 	lsl	r1, r0, #0x1
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -10632,14 +11146,14 @@ pokemonanimfunc_64:
 	strh	r0, [r1, #0x2]
 	add	r0, r4, #0
 	bl	sub_817FFF0
-	ldr	r0, .L1103+0x4
+	ldr	r0, .L1106+0x4
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1104:
+.L1107:
 	.align	2, 0
-.L1103:
+.L1106:
 	.word	sUnknown_03001240
 	.word	sub_817FFF0
 .Lfe173:
@@ -10660,7 +11174,7 @@ sub_81837DC:
 	mov	r2, #0x3a
 	ldrsh	r0, [r7, r2]
 	cmp	r1, r0
-	ble	.L1106	@cond_branch
+	ble	.L1109	@cond_branch
 	strh	r5, [r7, #0x26]
 	strh	r5, [r7, #0x38]
 	mov	r2, #0x80
@@ -10673,22 +11187,22 @@ sub_81837DC:
 	mov	r2, #0x36
 	ldrsh	r0, [r7, r2]
 	cmp	r0, #0x1
-	bgt	.L1107	@cond_branch
+	bgt	.L1110	@cond_branch
 	add	r0, r7, #0
 	bl	sub_817F77C
-	ldr	r0, .L1114
+	ldr	r0, .L1117
 	str	r0, [r7, #0x1c]
-	b	.L1109
-.L1115:
+	b	.L1112
+.L1118:
 	.align	2, 0
-.L1114:
+.L1117:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L1107:
+.L1110:
 	sub	r0, r1, #0x1
 	strh	r0, [r7, #0x36]
 	strh	r5, [r7, #0x3c]
-	b	.L1109
-.L1106:
+	b	.L1112
+.L1109:
 	mov	r0, #0x38
 	ldrsh	r6, [r7, r0]
 	lsl	r0, r6, #0x7
@@ -10699,9 +11213,9 @@ sub_81837DC:
 	lsl	r0, r0, #0x10
 	lsr	r2, r0, #0x10
 	cmp	r4, #0
-	bge	.L1110	@cond_branch
+	bge	.L1113	@cond_branch
 	add	r4, r4, #0x3
-.L1110:
+.L1113:
 	asr	r1, r4, #0x2
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
@@ -10710,15 +11224,15 @@ sub_81837DC:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r6, r1
-	blt	.L1111	@cond_branch
+	blt	.L1114	@cond_branch
 	cmp	r6, r0
-	bge	.L1111	@cond_branch
+	bge	.L1114	@cond_branch
 	ldrh	r0, [r7, #0x3c]
 	add	r0, r0, #0x33
 	strh	r0, [r7, #0x3c]
 	mov	r5, #0xff
 	and	r5, r5, r0
-.L1111:
+.L1114:
 	ldrh	r0, [r7, #0x34]
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
@@ -10726,7 +11240,7 @@ sub_81837DC:
 	mov	r1, #0x30
 	ldrsh	r0, [r7, r1]
 	cmp	r0, #0
-	bne	.L1112	@cond_branch
+	bne	.L1115	@cond_branch
 	lsl	r2, r2, #0x10
 	mov	r8, r2
 	asr	r0, r2, #0x10
@@ -10743,19 +11257,19 @@ sub_81837DC:
 	lsr	r1, r1, #0x17
 	add	r0, r5, #0
 	bl	Sin
-	ldr	r2, .L1116
+	ldr	r2, .L1119
 	add	r4, r4, r2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	mov	sl, r0
 	mov	r0, r8
-	b	.L1113
-.L1117:
+	b	.L1116
+.L1120:
 	.align	2, 0
-.L1116:
+.L1119:
 	.word	-0x100
-.L1112:
+.L1115:
 	lsl	r2, r2, #0x10
 	mov	r8, r2
 	asr	r0, r2, #0x10
@@ -10782,7 +11296,7 @@ sub_81837DC:
 	mov	sl, r1
 	mov	r0, r8
 	add	r6, r5, #0
-.L1113:
+.L1116:
 	asr	r0, r0, #0x10
 	mov	r1, r9
 	bl	Sin
@@ -10812,7 +11326,7 @@ sub_81837DC:
 	ldrh	r0, [r7, #0x38]
 	add	r0, r0, #0x1
 	strh	r0, [r7, #0x38]
-.L1109:
+.L1112:
 	pop	{r3, r4, r5}
 	mov	r8, r3
 	mov	r9, r4
@@ -10831,7 +11345,7 @@ pokemonanimfunc_65:
 	mov	r0, #0x32
 	ldrsh	r6, [r5, r0]
 	cmp	r6, #0
-	bne	.L1119	@cond_branch
+	bne	.L1122	@cond_branch
 	mov	r4, #0x1
 	strh	r4, [r5, #0x32]
 	add	r0, r5, #0
@@ -10842,7 +11356,7 @@ pokemonanimfunc_65:
 	strh	r0, [r5, #0x34]
 	strh	r6, [r5, #0x38]
 	strh	r6, [r5, #0x3c]
-.L1119:
+.L1122:
 	add	r0, r5, #0
 	bl	sub_81837DC
 	pop	{r4, r5, r6}
@@ -10862,82 +11376,65 @@ pokemonanimfunc_66:
 	mov	r0, #0x80
 	lsl	r0, r0, #0x4
 	cmp	r1, r0
-	ble	.L1121	@cond_branch
-	ldr	r0, .L1143
+	ble	.L1124	@cond_branch
+	ldr	r0, .L1146
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
 	strh	r0, [r4, #0x3a]
-	b	.L1122
-.L1144:
+	b	.L1125
+.L1147:
 	.align	2, 0
-.L1143:
+.L1146:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L1121:
+.L1124:
 	mov	r1, #0x32
 	ldrsh	r2, [r4, r1]
 	add	r0, r2, #0
 	cmp	r2, #0
-	bge	.L1123	@cond_branch
-	ldr	r1, .L1145
+	bge	.L1126	@cond_branch
+	ldr	r1, .L1148
 	add	r0, r2, r1
-.L1123:
+.L1126:
 	asr	r3, r0, #0x9
 	add	r1, r3, #0
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L1124	@cond_branch
+	bge	.L1127	@cond_branch
 	add	r0, r1, #0x3
-.L1124:
+.L1127:
 	asr	r0, r0, #0x2
 	lsl	r0, r0, #0x2
 	sub	r0, r1, r0
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x1
-	beq	.L1132	@cond_branch
-	cmp	r0, #0x1
-	bgt	.L1140	@cond_branch
-	cmp	r0, #0
-	beq	.L1126	@cond_branch
-	b	.L1125
-.L1146:
-	.align	2, 0
-.L1145:
-	.word	0x1ff
-.L1140:
-	cmp	r0, #0x2
-	beq	.L1129	@cond_branch
-	cmp	r0, #0x3
 	beq	.L1135	@cond_branch
-	b	.L1125
-.L1126:
+	cmp	r0, #0x1
+	bgt	.L1143	@cond_branch
+	cmp	r0, #0
+	beq	.L1129	@cond_branch
+	b	.L1128
+.L1149:
+	.align	2, 0
+.L1148:
+	.word	0x1ff
+.L1143:
+	cmp	r0, #0x2
+	beq	.L1132	@cond_branch
+	cmp	r0, #0x3
+	beq	.L1138	@cond_branch
+	b	.L1128
+.L1129:
 	lsl	r0, r3, #0x9
 	sub	r0, r2, r0
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0
-	bge	.L1128	@cond_branch
-	add	r0, r0, #0x1f
-.L1128:
-	asr	r0, r0, #0x5
-	b	.L1142
-.L1129:
-	lsl	r0, r3, #0x9
-	sub	r0, r2, r0
-	lsl	r0, r0, #0x10
-	asr	r0, r0, #0xc
-	neg	r0, r0
-	cmp	r0, #0
 	bge	.L1131	@cond_branch
-	ldr	r1, .L1147
-	add	r0, r0, r1
+	add	r0, r0, #0x1f
 .L1131:
-	asr	r0, r0, #0x9
-	b	.L1142
-.L1148:
-	.align	2, 0
-.L1147:
-	.word	0x1ff
+	asr	r0, r0, #0x5
+	b	.L1145
 .L1132:
 	lsl	r0, r3, #0x9
 	sub	r0, r2, r0
@@ -10946,37 +11443,54 @@ pokemonanimfunc_66:
 	neg	r0, r0
 	cmp	r0, #0
 	bge	.L1134	@cond_branch
-	ldr	r1, .L1149
+	ldr	r1, .L1150
 	add	r0, r0, r1
 .L1134:
 	asr	r0, r0, #0x9
-	add	r0, r0, #0x10
-	b	.L1142
-.L1150:
+	b	.L1145
+.L1151:
 	.align	2, 0
-.L1149:
+.L1150:
 	.word	0x1ff
 .L1135:
 	lsl	r0, r3, #0x9
 	sub	r0, r2, r0
 	lsl	r0, r0, #0x10
-	asr	r0, r0, #0x10
+	asr	r0, r0, #0xc
+	neg	r0, r0
 	cmp	r0, #0
 	bge	.L1137	@cond_branch
-	add	r0, r0, #0x1f
+	ldr	r1, .L1152
+	add	r0, r0, r1
 .L1137:
+	asr	r0, r0, #0x9
+	add	r0, r0, #0x10
+	b	.L1145
+.L1153:
+	.align	2, 0
+.L1152:
+	.word	0x1ff
+.L1138:
+	lsl	r0, r3, #0x9
+	sub	r0, r2, r0
+	lsl	r0, r0, #0x10
+	asr	r0, r0, #0x10
+	cmp	r0, #0
+	bge	.L1140	@cond_branch
+	add	r0, r0, #0x1f
+.L1140:
 	asr	r0, r0, #0x5
 	sub	r0, r0, #0x10
-.L1142:
+.L1145:
 	strh	r0, [r4, #0x24]
-.L1125:
+.L1128:
 	mov	r0, #0x32
 	ldrsh	r1, [r4, r0]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L1141	@cond_branch
+	bge	.L1144	@cond_branch
 	add	r0, r0, #0x7f
-.L1141:
+.L1144:
 	asr	r0, r0, #0x7
 	lsl	r0, r0, #0x7
 	sub	r0, r1, r0
@@ -10988,7 +11502,7 @@ pokemonanimfunc_66:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x30
 	strh	r0, [r4, #0x32]
-.L1122:
+.L1125:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
@@ -11008,82 +11522,65 @@ pokemonanimfunc_67:
 	mov	r0, #0x80
 	lsl	r0, r0, #0x4
 	cmp	r1, r0
-	ble	.L1152	@cond_branch
-	ldr	r0, .L1173
+	ble	.L1155	@cond_branch
+	ldr	r0, .L1176
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
 	strh	r0, [r4, #0x3a]
-	b	.L1153
-.L1174:
+	b	.L1156
+.L1177:
 	.align	2, 0
-.L1173:
+.L1176:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L1152:
+.L1155:
 	mov	r1, #0x32
 	ldrsh	r2, [r4, r1]
 	add	r0, r2, #0
 	cmp	r2, #0
-	bge	.L1154	@cond_branch
-	ldr	r1, .L1175
+	bge	.L1157	@cond_branch
+	ldr	r1, .L1178
 	add	r0, r2, r1
-.L1154:
+.L1157:
 	asr	r3, r0, #0x9
 	add	r1, r3, #0
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L1155	@cond_branch
+	bge	.L1158	@cond_branch
 	add	r0, r1, #0x3
-.L1155:
+.L1158:
 	asr	r0, r0, #0x2
 	lsl	r0, r0, #0x2
 	sub	r0, r1, r0
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x1
-	beq	.L1163	@cond_branch
-	cmp	r0, #0x1
-	bgt	.L1171	@cond_branch
-	cmp	r0, #0
-	beq	.L1157	@cond_branch
-	b	.L1156
-.L1176:
-	.align	2, 0
-.L1175:
-	.word	0x1ff
-.L1171:
-	cmp	r0, #0x2
-	beq	.L1160	@cond_branch
-	cmp	r0, #0x3
 	beq	.L1166	@cond_branch
-	b	.L1156
-.L1157:
+	cmp	r0, #0x1
+	bgt	.L1174	@cond_branch
+	cmp	r0, #0
+	beq	.L1160	@cond_branch
+	b	.L1159
+.L1179:
+	.align	2, 0
+.L1178:
+	.word	0x1ff
+.L1174:
+	cmp	r0, #0x2
+	beq	.L1163	@cond_branch
+	cmp	r0, #0x3
+	beq	.L1169	@cond_branch
+	b	.L1159
+.L1160:
 	lsl	r0, r3, #0x9
 	sub	r0, r2, r0
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0
-	bge	.L1159	@cond_branch
-	add	r0, r0, #0x1f
-.L1159:
-	asr	r0, r0, #0x5
-	b	.L1172
-.L1160:
-	lsl	r0, r3, #0x9
-	sub	r0, r2, r0
-	lsl	r0, r0, #0x10
-	asr	r0, r0, #0xc
-	neg	r0, r0
-	cmp	r0, #0
 	bge	.L1162	@cond_branch
-	ldr	r1, .L1177
-	add	r0, r0, r1
+	add	r0, r0, #0x1f
 .L1162:
-	asr	r0, r0, #0x9
-	b	.L1172
-.L1178:
-	.align	2, 0
-.L1177:
-	.word	0x1ff
+	asr	r0, r0, #0x5
+	b	.L1175
 .L1163:
 	lsl	r0, r3, #0x9
 	sub	r0, r2, r0
@@ -11092,30 +11589,47 @@ pokemonanimfunc_67:
 	neg	r0, r0
 	cmp	r0, #0
 	bge	.L1165	@cond_branch
-	ldr	r1, .L1179
+	ldr	r1, .L1180
 	add	r0, r0, r1
 .L1165:
 	asr	r0, r0, #0x9
-	add	r0, r0, #0x10
-	b	.L1172
-.L1180:
+	b	.L1175
+.L1181:
 	.align	2, 0
-.L1179:
+.L1180:
 	.word	0x1ff
 .L1166:
 	lsl	r0, r3, #0x9
 	sub	r0, r2, r0
 	lsl	r0, r0, #0x10
-	asr	r0, r0, #0x10
+	asr	r0, r0, #0xc
+	neg	r0, r0
 	cmp	r0, #0
 	bge	.L1168	@cond_branch
-	add	r0, r0, #0x1f
+	ldr	r1, .L1182
+	add	r0, r0, r1
 .L1168:
+	asr	r0, r0, #0x9
+	add	r0, r0, #0x10
+	b	.L1175
+.L1183:
+	.align	2, 0
+.L1182:
+	.word	0x1ff
+.L1169:
+	lsl	r0, r3, #0x9
+	sub	r0, r2, r0
+	lsl	r0, r0, #0x10
+	asr	r0, r0, #0x10
+	cmp	r0, #0
+	bge	.L1171	@cond_branch
+	add	r0, r0, #0x1f
+.L1171:
 	asr	r0, r0, #0x5
 	sub	r0, r0, #0x10
-.L1172:
+.L1175:
 	strh	r0, [r4, #0x24]
-.L1156:
+.L1159:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	mov	r1, #0x60
@@ -11128,7 +11642,7 @@ pokemonanimfunc_67:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x40
 	strh	r0, [r4, #0x32]
-.L1153:
+.L1156:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
@@ -11163,10 +11677,10 @@ sub_8183B4C:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L1182	@cond_branch
+	bne	.L1185	@cond_branch
 	strh	r0, [r4, #0x34]
-.L1182:
-	ldr	r7, .L1188
+.L1185:
+	ldr	r7, .L1191
 	mov	r2, #0x34
 	ldrsh	r1, [r4, r2]
 	lsl	r0, r1, #0x1
@@ -11182,13 +11696,13 @@ sub_8183B4C:
 	mov	r2, #0x32
 	ldrsh	r1, [r4, r2]
 	cmp	r0, r1
-	bne	.L1183	@cond_branch
+	bne	.L1186	@cond_branch
 	ldrh	r0, [r4, #0x34]
 	add	r0, r0, #0x1
 	mov	r1, #0x0
 	strh	r0, [r4, #0x34]
 	strh	r1, [r4, #0x32]
-.L1183:
+.L1186:
 	mov	r0, #0x34
 	ldrsh	r1, [r4, r0]
 	lsl	r0, r1, #0x1
@@ -11203,25 +11717,25 @@ sub_8183B4C:
 	bl	__divsi3
 	add	r1, r0, #0
 	cmp	r1, #0
-	bne	.L1184	@cond_branch
+	bne	.L1187	@cond_branch
 	ldrh	r0, [r4, #0x3a]
 	sub	r0, r0, #0x1
 	strh	r0, [r4, #0x3a]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bne	.L1185	@cond_branch
-	ldr	r0, .L1188+0x4
+	bne	.L1188	@cond_branch
+	ldr	r0, .L1191+0x4
 	str	r0, [r4, #0x1c]
-	b	.L1187
-.L1189:
+	b	.L1190
+.L1192:
 	.align	2, 0
-.L1188:
+.L1191:
 	.word	sUnknown_0860ADBE
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L1185:
+.L1188:
 	strh	r1, [r4, #0x32]
-	b	.L1187
-.L1184:
+	b	.L1190
+.L1187:
 	add	r0, r6, r7
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #24
@@ -11250,7 +11764,7 @@ sub_8183B4C:
 	strh	r0, [r4, #0x32]
 	add	r0, r4, #0
 	bl	sub_817F70C
-.L1187:
+.L1190:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
@@ -11267,14 +11781,14 @@ pokemonanimfunc_68:
 	strh	r0, [r4, #0x3a]
 	add	r0, r4, #0
 	bl	sub_8183B4C
-	ldr	r0, .L1191
+	ldr	r0, .L1194
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1192:
+.L1195:
 	.align	2, 0
-.L1191:
+.L1194:
 	.word	sub_8183B4C
 .Lfe179:
 	.size	 pokemonanimfunc_68,.Lfe179-pokemonanimfunc_68
@@ -11290,14 +11804,14 @@ pokemonanimfunc_69:
 	strh	r0, [r4, #0x3a]
 	add	r0, r4, #0
 	bl	sub_8183B4C
-	ldr	r0, .L1194
+	ldr	r0, .L1197
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1195:
+.L1198:
 	.align	2, 0
-.L1194:
+.L1197:
 	.word	sub_8183B4C
 .Lfe180:
 	.size	 pokemonanimfunc_69,.Lfe180-pokemonanimfunc_69
@@ -11312,14 +11826,14 @@ pokemonanimfunc_6A:
 	strh	r0, [r4, #0x3a]
 	add	r0, r4, #0
 	bl	sub_8183B4C
-	ldr	r0, .L1197
+	ldr	r0, .L1200
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1198:
+.L1201:
 	.align	2, 0
-.L1197:
+.L1200:
 	.word	sub_8183B4C
 .Lfe181:
 	.size	 pokemonanimfunc_6A,.Lfe181-pokemonanimfunc_6A
@@ -11333,15 +11847,15 @@ sub_8183C6C:
 	mov	r2, #0x3c
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0xff
-	ble	.L1200	@cond_branch
+	ble	.L1203	@cond_branch
 	ldrh	r1, [r4, #0x38]
 	mov	r2, #0x38
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0x1
-	bgt	.L1201	@cond_branch
+	bgt	.L1204	@cond_branch
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L1205
+	ldr	r0, .L1208
 	str	r0, [r4, #0x1c]
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
@@ -11349,18 +11863,18 @@ sub_8183C6C:
 	add	r1, r2, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-	b	.L1203
-.L1206:
+	b	.L1206
+.L1209:
 	.align	2, 0
-.L1205:
+.L1208:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L1201:
+.L1204:
 	sub	r0, r1, #0x1
 	mov	r1, #0x0
 	strh	r0, [r4, #0x38]
 	strh	r1, [r4, #0x3c]
-	b	.L1203
-.L1200:
+	b	.L1206
+.L1203:
 	ldrh	r0, [r4, #0x3a]
 	add	r0, r1, r0
 	strh	r0, [r4, #0x3c]
@@ -11369,9 +11883,9 @@ sub_8183C6C:
 	mov	r5, #0x80
 	lsl	r5, r5, #0x1
 	cmp	r0, r5
-	ble	.L1204	@cond_branch
+	ble	.L1207	@cond_branch
 	strh	r5, [r4, #0x3c]
-.L1204:
+.L1207:
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
 	lsr	r1, r0, #0x1f
@@ -11389,7 +11903,7 @@ sub_8183C6C:
 	add	r1, r2, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-.L1203:
+.L1206:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
@@ -11405,7 +11919,7 @@ pokemonanimfunc_6B:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L1208	@cond_branch
+	bne	.L1211	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x32]
@@ -11416,7 +11930,7 @@ pokemonanimfunc_6B:
 	strh	r0, [r4, #0x3a]
 	mov	r0, #0x1
 	strh	r0, [r4, #0x38]
-.L1208:
+.L1211:
 	add	r0, r4, #0
 	bl	sub_8183C6C
 	add	r0, r4, #0
@@ -11436,7 +11950,7 @@ pokemonanimfunc_6C:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L1210	@cond_branch
+	bne	.L1213	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x32]
@@ -11447,7 +11961,7 @@ pokemonanimfunc_6C:
 	strh	r0, [r4, #0x3a]
 	mov	r0, #0x2
 	strh	r0, [r4, #0x38]
-.L1210:
+.L1213:
 	add	r0, r4, #0
 	bl	sub_8183C6C
 	add	r0, r4, #0
@@ -11466,7 +11980,7 @@ pokemonanimfunc_6D:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L1212	@cond_branch
+	bne	.L1215	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x32]
@@ -11480,7 +11994,7 @@ pokemonanimfunc_6D:
 	strh	r0, [r4, #0x38]
 	mov	r0, #0x10
 	strh	r0, [r4, #0x36]
-.L1212:
+.L1215:
 	add	r0, r4, #0
 	bl	sub_8182764
 	pop	{r4, r5}
@@ -11497,7 +12011,7 @@ pokemonanimfunc_6E:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L1214	@cond_branch
+	bne	.L1217	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x32]
@@ -11510,7 +12024,7 @@ pokemonanimfunc_6E:
 	strh	r0, [r4, #0x38]
 	mov	r0, #0x10
 	strh	r0, [r4, #0x36]
-.L1214:
+.L1217:
 	add	r0, r4, #0
 	bl	sub_8182764
 	pop	{r4, r5}
@@ -11527,7 +12041,7 @@ pokemonanimfunc_6F:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L1216	@cond_branch
+	bne	.L1219	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x32]
@@ -11541,7 +12055,7 @@ pokemonanimfunc_6F:
 	strh	r0, [r4, #0x38]
 	mov	r0, #0x10
 	strh	r0, [r4, #0x36]
-.L1216:
+.L1219:
 	add	r0, r4, #0
 	bl	sub_8182830
 	pop	{r4, r5}
@@ -11558,7 +12072,7 @@ pokemonanimfunc_70:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L1218	@cond_branch
+	bne	.L1221	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x32]
@@ -11571,7 +12085,7 @@ pokemonanimfunc_70:
 	lsl	r0, r0, #0x2
 	strh	r0, [r4, #0x38]
 	strh	r1, [r4, #0x36]
-.L1218:
+.L1221:
 	add	r0, r4, #0
 	bl	sub_8182830
 	pop	{r4, r5}
@@ -11588,14 +12102,14 @@ pokemonanimfunc_71:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L1220	@cond_branch
+	bne	.L1223	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	mov	r0, #0x5
 	strh	r0, [r4, #0x3c]
 	mov	r0, #0x8
 	strh	r0, [r4, #0x3a]
-.L1220:
+.L1223:
 	add	r0, r4, #0
 	bl	sub_8180828
 	pop	{r4}
@@ -11612,14 +12126,14 @@ pokemonanimfunc_72:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L1222	@cond_branch
+	bne	.L1225	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	mov	r0, #0x3
 	strh	r0, [r4, #0x3c]
 	mov	r0, #0x4
 	strh	r0, [r4, #0x3a]
-.L1222:
+.L1225:
 	add	r0, r4, #0
 	bl	sub_8180828
 	pop	{r4}
@@ -11636,7 +12150,7 @@ pokemonanimfunc_73:
 	mov	r0, #0x32
 	ldrsh	r6, [r5, r0]
 	cmp	r6, #0
-	bne	.L1224	@cond_branch
+	bne	.L1227	@cond_branch
 	mov	r4, #0x1
 	strh	r4, [r5, #0x32]
 	add	r0, r5, #0
@@ -11647,7 +12161,7 @@ pokemonanimfunc_73:
 	mov	r0, #0x3c
 	strh	r0, [r5, #0x34]
 	strh	r6, [r5, #0x3c]
-.L1224:
+.L1227:
 	add	r0, r5, #0
 	bl	sub_81832C8
 	pop	{r4, r5, r6}
@@ -11664,7 +12178,7 @@ pokemonanimfunc_74:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L1226	@cond_branch
+	bne	.L1229	@cond_branch
 	mov	r0, #0x1
 	strh	r0, [r4, #0x32]
 	add	r0, r4, #0
@@ -11676,7 +12190,7 @@ pokemonanimfunc_74:
 	mov	r0, #0x46
 	strh	r0, [r4, #0x34]
 	strh	r5, [r4, #0x3c]
-.L1226:
+.L1229:
 	add	r0, r4, #0
 	bl	sub_81832C8
 	pop	{r4, r5}
@@ -11693,7 +12207,7 @@ pokemonanimfunc_75:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L1228	@cond_branch
+	bne	.L1231	@cond_branch
 	mov	r0, #0x1
 	strh	r0, [r4, #0x32]
 	add	r0, r4, #0
@@ -11706,7 +12220,7 @@ pokemonanimfunc_75:
 	strh	r0, [r4, #0x34]
 	strh	r5, [r4, #0x38]
 	strh	r5, [r4, #0x3c]
-.L1228:
+.L1231:
 	add	r0, r4, #0
 	bl	sub_8183418
 	pop	{r4, r5}
@@ -11723,7 +12237,7 @@ pokemonanimfunc_76:
 	mov	r0, #0x32
 	ldrsh	r6, [r5, r0]
 	cmp	r6, #0
-	bne	.L1230	@cond_branch
+	bne	.L1233	@cond_branch
 	mov	r4, #0x1
 	strh	r4, [r5, #0x32]
 	add	r0, r5, #0
@@ -11735,7 +12249,7 @@ pokemonanimfunc_76:
 	strh	r0, [r5, #0x34]
 	strh	r6, [r5, #0x38]
 	strh	r6, [r5, #0x3c]
-.L1230:
+.L1233:
 	add	r0, r5, #0
 	bl	sub_8183418
 	pop	{r4, r5, r6}
@@ -11752,7 +12266,7 @@ pokemonanimfunc_77:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L1232	@cond_branch
+	bne	.L1235	@cond_branch
 	mov	r0, #0x1
 	strh	r0, [r4, #0x32]
 	add	r0, r4, #0
@@ -11765,7 +12279,7 @@ pokemonanimfunc_77:
 	strh	r0, [r4, #0x34]
 	strh	r5, [r4, #0x38]
 	strh	r5, [r4, #0x3c]
-.L1232:
+.L1235:
 	add	r0, r4, #0
 	bl	sub_81837DC
 	pop	{r4, r5}
@@ -11782,7 +12296,7 @@ pokemonanimfunc_78:
 	mov	r0, #0x32
 	ldrsh	r6, [r5, r0]
 	cmp	r6, #0
-	bne	.L1234	@cond_branch
+	bne	.L1237	@cond_branch
 	mov	r4, #0x1
 	strh	r4, [r5, #0x32]
 	add	r0, r5, #0
@@ -11794,7 +12308,7 @@ pokemonanimfunc_78:
 	strh	r0, [r5, #0x34]
 	strh	r6, [r5, #0x38]
 	strh	r6, [r5, #0x3c]
-.L1234:
+.L1237:
 	add	r0, r5, #0
 	bl	sub_81837DC
 	pop	{r4, r5, r6}
@@ -11811,38 +12325,38 @@ sub_8183FA8:
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0xff
-	ble	.L1236	@cond_branch
+	ble	.L1239	@cond_branch
 	ldrh	r2, [r4, #0x3a]
 	mov	r3, #0x3a
 	ldrsh	r0, [r4, r3]
 	cmp	r0, #0x1
-	bgt	.L1237	@cond_branch
-	ldr	r0, .L1243
+	bgt	.L1240	@cond_branch
+	ldr	r0, .L1246
 	str	r0, [r4, #0x1c]
 	mov	r0, #0x0
 	strh	r0, [r4, #0x24]
 	strh	r0, [r4, #0x26]
-	b	.L1240
-.L1244:
+	b	.L1243
+.L1247:
 	.align	2, 0
-.L1243:
+.L1246:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L1237:
+.L1240:
 	mov	r0, #0x3c
 	ldrsh	r1, [r4, r0]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L1239	@cond_branch
+	bge	.L1242	@cond_branch
 	add	r0, r0, #0xff
-.L1239:
+.L1242:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
 	strh	r0, [r4, #0x3c]
 	sub	r0, r2, #0x1
 	strh	r0, [r4, #0x3a]
-	b	.L1240
-.L1236:
+	b	.L1243
+.L1239:
 	mov	r1, #0x3c
 	ldrsh	r0, [r4, r1]
 	mov	r2, #0x38
@@ -11856,10 +12370,10 @@ sub_8183FA8:
 	add	r1, r1, #0xc0
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L1241	@cond_branch
-	ldr	r3, .L1245
+	bge	.L1244	@cond_branch
+	ldr	r3, .L1248
 	add	r0, r2, r3
-.L1241:
+.L1244:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -11871,12 +12385,12 @@ sub_8183FA8:
 	strh	r0, [r4, #0x26]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	ble	.L1242	@cond_branch
+	ble	.L1245	@cond_branch
 	mov	r3, #0x26
 	ldrsh	r0, [r4, r3]
 	neg	r0, r0
 	strh	r0, [r4, #0x26]
-.L1242:
+.L1245:
 	ldrh	r0, [r4, #0x36]
 	ldrh	r1, [r4, #0x26]
 	add	r0, r0, r1
@@ -11885,13 +12399,13 @@ sub_8183FA8:
 	ldrh	r2, [r4, #0x3c]
 	add	r0, r0, r2
 	strh	r0, [r4, #0x3c]
-.L1240:
+.L1243:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1246:
+.L1249:
 	.align	2, 0
-.L1245:
+.L1248:
 	.word	0x1bf
 .Lfe197:
 	.size	 sub_8183FA8,.Lfe197-sub_8183FA8
@@ -11904,7 +12418,7 @@ pokemonanimfunc_79:
 	mov	r0, #0x32
 	ldrsh	r2, [r1, r0]
 	cmp	r2, #0
-	bne	.L1248	@cond_branch
+	bne	.L1251	@cond_branch
 	mov	r0, #0x1
 	strh	r0, [r1, #0x32]
 	strh	r0, [r1, #0x3a]
@@ -11914,7 +12428,7 @@ pokemonanimfunc_79:
 	strh	r0, [r1, #0x36]
 	mov	r0, #0x4
 	strh	r0, [r1, #0x34]
-.L1248:
+.L1251:
 	add	r0, r1, #0
 	bl	sub_8183FA8
 	pop	{r0}
@@ -11930,7 +12444,7 @@ pokemonanimfunc_7A:
 	mov	r0, #0x32
 	ldrsh	r2, [r1, r0]
 	cmp	r2, #0
-	bne	.L1250	@cond_branch
+	bne	.L1253	@cond_branch
 	mov	r0, #0x1
 	strh	r0, [r1, #0x32]
 	strh	r0, [r1, #0x3a]
@@ -11940,7 +12454,7 @@ pokemonanimfunc_7A:
 	strh	r0, [r1, #0x36]
 	mov	r0, #0x6
 	strh	r0, [r1, #0x34]
-.L1250:
+.L1253:
 	add	r0, r1, #0
 	bl	sub_8183FA8
 	pop	{r0}
@@ -11956,7 +12470,7 @@ pokemonanimfunc_7B:
 	mov	r0, #0x32
 	ldrsh	r2, [r1, r0]
 	cmp	r2, #0
-	bne	.L1252	@cond_branch
+	bne	.L1255	@cond_branch
 	mov	r0, #0x1
 	strh	r0, [r1, #0x32]
 	mov	r0, #0x2
@@ -11967,7 +12481,7 @@ pokemonanimfunc_7B:
 	strh	r0, [r1, #0x36]
 	mov	r0, #0x8
 	strh	r0, [r1, #0x34]
-.L1252:
+.L1255:
 	add	r0, r1, #0
 	bl	sub_8183FA8
 	pop	{r0}
@@ -11985,45 +12499,45 @@ sub_81840C4:
 	mov	r1, #0x80
 	lsl	r1, r1, #0x1
 	cmp	r0, r1
-	ble	.L1254	@cond_branch
+	ble	.L1257	@cond_branch
 	mov	r2, #0x3a
 	ldrsh	r1, [r5, r2]
 	ldrh	r2, [r5, #0x36]
 	mov	r3, #0x36
 	ldrsh	r0, [r5, r3]
 	cmp	r1, r0
-	bgt	.L1255	@cond_branch
-	ldr	r0, .L1266
+	bgt	.L1258	@cond_branch
+	ldr	r0, .L1269
 	str	r0, [r5, #0x1c]
-	b	.L1256
-.L1267:
+	b	.L1259
+.L1270:
 	.align	2, 0
-.L1266:
+.L1269:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L1255:
+.L1258:
 	add	r0, r2, #0x1
 	mov	r1, #0x0
 	strh	r0, [r5, #0x36]
 	strh	r1, [r5, #0x3c]
-.L1256:
+.L1259:
 	mov	r0, #0x0
 	strh	r0, [r5, #0x24]
 	strh	r0, [r5, #0x26]
-	b	.L1257
-.L1254:
+	b	.L1260
+.L1257:
 	cmp	r0, #0x9f
-	ble	.L1258	@cond_branch
+	ble	.L1261	@cond_branch
 	cmp	r0, r1
-	ble	.L1259	@cond_branch
+	ble	.L1262	@cond_branch
 	strh	r1, [r5, #0x3c]
-.L1259:
+.L1262:
 	mov	r0, #0x3c
 	ldrsh	r1, [r5, r0]
 	add	r0, r1, #0
 	cmp	r1, #0
-	bge	.L1260	@cond_branch
+	bge	.L1263	@cond_branch
 	add	r0, r0, #0xff
-.L1260:
+.L1263:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -12032,10 +12546,10 @@ sub_81840C4:
 	mov	r1, #0x8
 	bl	Sin
 	neg	r0, r0
-	b	.L1265
-.L1258:
+	b	.L1268
+.L1261:
 	cmp	r0, #0x5f
-	ble	.L1262	@cond_branch
+	ble	.L1265	@cond_branch
 	mov	r0, #0x60
 	mov	r1, #0x6
 	bl	Sin
@@ -12049,15 +12563,15 @@ sub_81840C4:
 	bl	Sin
 	sub	r4, r4, r0
 	strh	r4, [r5, #0x26]
-	b	.L1261
-.L1262:
+	b	.L1264
+.L1265:
 	mov	r2, #0x3c
 	ldrsh	r0, [r5, r2]
 	mov	r1, #0x6
 	bl	Sin
-.L1265:
+.L1268:
 	strh	r0, [r5, #0x26]
-.L1261:
+.L1264:
 	mov	r3, #0x3c
 	ldrsh	r0, [r5, r3]
 	lsr	r1, r0, #0x1f
@@ -12073,17 +12587,17 @@ sub_81840C4:
 	mov	r1, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1264	@cond_branch
+	bne	.L1267	@cond_branch
 	lsl	r0, r2, #0x10
 	neg	r0, r0
 	lsr	r2, r0, #0x10
-.L1264:
+.L1267:
 	strh	r2, [r5, #0x24]
 	ldrh	r0, [r5, #0x34]
 	ldrh	r3, [r5, #0x3c]
 	add	r0, r0, r3
 	strh	r0, [r5, #0x3c]
-.L1257:
+.L1260:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
@@ -12098,7 +12612,7 @@ pokemonanimfunc_7C:
 	mov	r0, #0x32
 	ldrsh	r3, [r2, r0]
 	cmp	r3, #0
-	bne	.L1269	@cond_branch
+	bne	.L1272	@cond_branch
 	mov	r1, #0x1
 	strh	r1, [r2, #0x32]
 	mov	r0, #0x2
@@ -12109,7 +12623,7 @@ pokemonanimfunc_7C:
 	strh	r1, [r2, #0x36]
 	mov	r0, #0x4
 	strh	r0, [r2, #0x34]
-.L1269:
+.L1272:
 	add	r0, r2, #0
 	bl	sub_81840C4
 	pop	{r0}
@@ -12125,7 +12639,7 @@ pokemonanimfunc_7D:
 	mov	r0, #0x32
 	ldrsh	r3, [r2, r0]
 	cmp	r3, #0
-	bne	.L1271	@cond_branch
+	bne	.L1274	@cond_branch
 	mov	r1, #0x1
 	strh	r1, [r2, #0x32]
 	mov	r0, #0x2
@@ -12136,7 +12650,7 @@ pokemonanimfunc_7D:
 	strh	r1, [r2, #0x36]
 	mov	r0, #0x6
 	strh	r0, [r2, #0x34]
-.L1271:
+.L1274:
 	add	r0, r2, #0
 	bl	sub_81840C4
 	pop	{r0}
@@ -12152,7 +12666,7 @@ pokemonanimfunc_7E:
 	mov	r0, #0x32
 	ldrsh	r3, [r2, r0]
 	cmp	r3, #0
-	bne	.L1273	@cond_branch
+	bne	.L1276	@cond_branch
 	mov	r1, #0x1
 	strh	r1, [r2, #0x32]
 	mov	r0, #0x3
@@ -12163,7 +12677,7 @@ pokemonanimfunc_7E:
 	strh	r1, [r2, #0x36]
 	mov	r0, #0x8
 	strh	r0, [r2, #0x34]
-.L1273:
+.L1276:
 	add	r0, r2, #0
 	bl	sub_81840C4
 	pop	{r0}
@@ -12179,7 +12693,7 @@ pokemonanimfunc_7F:
 	mov	r0, #0x32
 	ldrsh	r1, [r2, r0]
 	cmp	r1, #0
-	bne	.L1275	@cond_branch
+	bne	.L1278	@cond_branch
 	mov	r0, #0x1
 	strh	r0, [r2, #0x32]
 	strh	r0, [r2, #0x3a]
@@ -12189,7 +12703,7 @@ pokemonanimfunc_7F:
 	mov	r0, #0x6
 	strh	r0, [r2, #0x36]
 	strh	r1, [r2, #0x34]
-.L1275:
+.L1278:
 	add	r0, r2, #0
 	bl	sub_8183FA8
 	pop	{r0}
@@ -12205,7 +12719,7 @@ pokemonanimfunc_80:
 	mov	r0, #0x32
 	ldrsh	r2, [r1, r0]
 	cmp	r2, #0
-	bne	.L1277	@cond_branch
+	bne	.L1280	@cond_branch
 	mov	r0, #0x1
 	strh	r0, [r1, #0x32]
 	strh	r0, [r1, #0x3a]
@@ -12215,7 +12729,7 @@ pokemonanimfunc_80:
 	mov	r0, #0x6
 	strh	r0, [r1, #0x36]
 	strh	r0, [r1, #0x34]
-.L1277:
+.L1280:
 	add	r0, r1, #0
 	bl	sub_8183FA8
 	pop	{r0}
@@ -12231,7 +12745,7 @@ pokemonanimfunc_81:
 	mov	r0, #0x32
 	ldrsh	r2, [r1, r0]
 	cmp	r2, #0
-	bne	.L1279	@cond_branch
+	bne	.L1282	@cond_branch
 	mov	r0, #0x1
 	strh	r0, [r1, #0x32]
 	mov	r0, #0x2
@@ -12243,7 +12757,7 @@ pokemonanimfunc_81:
 	strh	r0, [r1, #0x36]
 	mov	r0, #0x8
 	strh	r0, [r1, #0x34]
-.L1279:
+.L1282:
 	add	r0, r1, #0
 	bl	sub_8183FA8
 	pop	{r0}
@@ -12298,25 +12812,25 @@ pokemonanimfunc_82:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L1282	@cond_branch
+	bne	.L1285	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	mov	r0, #0x3c
 	strh	r0, [r4, #0x3c]
 	mov	r0, #0x8
 	strh	r0, [r4, #0x38]
-	ldr	r0, .L1287
+	ldr	r0, .L1290
 	strh	r0, [r4, #0x36]
 	mov	r0, #0x1
 	strh	r0, [r4, #0x34]
 	strh	r5, [r4, #0x2e]
-.L1282:
+.L1285:
 	mov	r2, #0x32
 	ldrsh	r1, [r4, r2]
 	mov	r3, #0x3c
 	ldrsh	r0, [r4, r3]
 	cmp	r1, r0
-	ble	.L1283	@cond_branch
+	ble	.L1286	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r4, #0
@@ -12334,28 +12848,28 @@ pokemonanimfunc_82:
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r1, r0
-	bgt	.L1284	@cond_branch
+	bgt	.L1287	@cond_branch
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L1287+0x4
+	ldr	r0, .L1290+0x4
 	str	r0, [r4, #0x1c]
-	b	.L1281
-.L1288:
+	b	.L1284
+.L1291:
 	.align	2, 0
-.L1287:
+.L1290:
 	.word	0xffe0
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L1284:
+.L1287:
 	strh	r2, [r4, #0x32]
-	b	.L1286
-.L1283:
+	b	.L1289
+.L1286:
 	add	r0, r4, #0
 	bl	sub_8184290
-.L1286:
+.L1289:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
-.L1281:
+.L1284:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
@@ -12370,25 +12884,25 @@ pokemonanimfunc_83:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L1290	@cond_branch
+	bne	.L1293	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	mov	r0, #0x5a
 	strh	r0, [r4, #0x3c]
 	mov	r0, #0x8
 	strh	r0, [r4, #0x38]
-	ldr	r0, .L1295
+	ldr	r0, .L1298
 	strh	r0, [r4, #0x36]
 	mov	r0, #0x1
 	strh	r0, [r4, #0x34]
 	strh	r5, [r4, #0x2e]
-.L1290:
+.L1293:
 	mov	r2, #0x32
 	ldrsh	r1, [r4, r2]
 	mov	r3, #0x3c
 	ldrsh	r0, [r4, r3]
 	cmp	r1, r0
-	ble	.L1291	@cond_branch
+	ble	.L1294	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r4, #0
@@ -12406,28 +12920,28 @@ pokemonanimfunc_83:
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r1, r0
-	bgt	.L1292	@cond_branch
+	bgt	.L1295	@cond_branch
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L1295+0x4
+	ldr	r0, .L1298+0x4
 	str	r0, [r4, #0x1c]
-	b	.L1289
-.L1296:
+	b	.L1292
+.L1299:
 	.align	2, 0
-.L1295:
+.L1298:
 	.word	0xffe0
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L1292:
+.L1295:
 	strh	r2, [r4, #0x32]
-	b	.L1294
-.L1291:
+	b	.L1297
+.L1294:
 	add	r0, r4, #0
 	bl	sub_8184290
-.L1294:
+.L1297:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
-.L1289:
+.L1292:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
@@ -12442,25 +12956,25 @@ pokemonanimfunc_84:
 	mov	r0, #0x32
 	ldrsh	r5, [r4, r0]
 	cmp	r5, #0
-	bne	.L1298	@cond_branch
+	bne	.L1301	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	mov	r0, #0x1e
 	strh	r0, [r4, #0x3c]
 	mov	r0, #0x8
 	strh	r0, [r4, #0x38]
-	ldr	r0, .L1303
+	ldr	r0, .L1306
 	strh	r0, [r4, #0x36]
 	mov	r0, #0x2
 	strh	r0, [r4, #0x34]
 	strh	r5, [r4, #0x2e]
-.L1298:
+.L1301:
 	mov	r2, #0x32
 	ldrsh	r1, [r4, r2]
 	mov	r3, #0x3c
 	ldrsh	r0, [r4, r3]
 	cmp	r1, r0
-	ble	.L1299	@cond_branch
+	ble	.L1302	@cond_branch
 	mov	r2, #0x80
 	lsl	r2, r2, #0x1
 	add	r0, r4, #0
@@ -12478,28 +12992,28 @@ pokemonanimfunc_84:
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r1, r0
-	bgt	.L1300	@cond_branch
+	bgt	.L1303	@cond_branch
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L1303+0x4
+	ldr	r0, .L1306+0x4
 	str	r0, [r4, #0x1c]
-	b	.L1297
-.L1304:
+	b	.L1300
+.L1307:
 	.align	2, 0
-.L1303:
+.L1306:
 	.word	0xffe0
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L1300:
+.L1303:
 	strh	r2, [r4, #0x32]
-	b	.L1302
-.L1299:
+	b	.L1305
+.L1302:
 	add	r0, r4, #0
 	bl	sub_8184290
-.L1302:
+.L1305:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
-.L1297:
+.L1300:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
@@ -12516,7 +13030,7 @@ sub_8184468:
 	mov	r2, #0x3c
 	ldrsh	r0, [r6, r2]
 	cmp	r1, r0
-	ble	.L1306	@cond_branch
+	ble	.L1309	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r6, #0x26]
 	mov	r2, #0x80
@@ -12527,14 +13041,14 @@ sub_8184468:
 	bl	HandleSetAffineData
 	add	r0, r6, #0
 	bl	sub_817F77C
-	ldr	r0, .L1313
+	ldr	r0, .L1316
 	str	r0, [r6, #0x1c]
-	b	.L1307
-.L1314:
+	b	.L1310
+.L1317:
 	.align	2, 0
-.L1313:
+.L1316:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L1306:
+.L1309:
 	mov	r1, #0x32
 	ldrsh	r0, [r6, r1]
 	mov	r2, #0x3a
@@ -12547,9 +13061,9 @@ sub_8184468:
 	bl	__divsi3
 	add	r1, r0, #0
 	cmp	r1, #0
-	bge	.L1308	@cond_branch
+	bge	.L1311	@cond_branch
 	add	r0, r0, #0xff
-.L1308:
+.L1311:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -12559,7 +13073,7 @@ sub_8184468:
 	mov	r1, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1309	@cond_branch
+	bne	.L1312	@cond_branch
 	lsl	r4, r4, #0x10
 	asr	r4, r4, #0x10
 	add	r0, r4, #0
@@ -12577,8 +13091,8 @@ sub_8184468:
 	strh	r0, [r6, #0x38]
 	add	r0, r4, #0
 	mov	r1, #0x20
-	b	.L1312
-.L1309:
+	b	.L1315
+.L1312:
 	lsl	r4, r4, #0x10
 	asr	r4, r4, #0x10
 	add	r0, r4, #0
@@ -12596,16 +13110,16 @@ sub_8184468:
 	strh	r0, [r6, #0x38]
 	add	r0, r4, #0
 	mov	r1, #0x8
-.L1312:
+.L1315:
 	bl	Sin
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	lsl	r0, r0, #0x18
 	asr	r0, r0, #0x18
 	cmp	r0, #0
-	bge	.L1311	@cond_branch
+	bge	.L1314	@cond_branch
 	add	r0, r0, #0x7
-.L1311:
+.L1314:
 	lsr	r0, r0, #0x3
 	strh	r0, [r6, #0x26]
 	mov	r0, #0x36
@@ -12615,7 +13129,7 @@ sub_8184468:
 	add	r0, r6, #0
 	mov	r3, #0x0
 	bl	HandleSetAffineData
-.L1307:
+.L1310:
 	ldrh	r0, [r6, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r6, #0x32]
@@ -12633,7 +13147,7 @@ pokemonanimfunc_85:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L1316	@cond_branch
+	bne	.L1319	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x26]
@@ -12643,7 +13157,7 @@ pokemonanimfunc_85:
 	strh	r0, [r4, #0x3a]
 	mov	r0, #0x50
 	strh	r0, [r4, #0x3c]
-.L1316:
+.L1319:
 	add	r0, r4, #0
 	bl	sub_8184468
 	pop	{r4}
@@ -12660,7 +13174,7 @@ pokemonanimfunc_86:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L1318	@cond_branch
+	bne	.L1321	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x26]
@@ -12669,7 +13183,7 @@ pokemonanimfunc_86:
 	mov	r0, #0x28
 	strh	r0, [r4, #0x3a]
 	strh	r0, [r4, #0x3c]
-.L1318:
+.L1321:
 	add	r0, r4, #0
 	bl	sub_8184468
 	pop	{r4}
@@ -12686,7 +13200,7 @@ pokemonanimfunc_87:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L1320	@cond_branch
+	bne	.L1323	@cond_branch
 	add	r0, r4, #0
 	bl	HandleStartAffineAnim
 	ldrh	r0, [r4, #0x26]
@@ -12695,7 +13209,7 @@ pokemonanimfunc_87:
 	mov	r0, #0x50
 	strh	r0, [r4, #0x3a]
 	strh	r0, [r4, #0x3c]
-.L1320:
+.L1323:
 	add	r0, r4, #0
 	bl	sub_8184468
 	pop	{r4}
@@ -12719,23 +13233,23 @@ sub_81845D4:
 	mov	r2, #0x3a
 	ldrsh	r0, [r4, r2]
 	cmn	r1, r0
-	bgt	.L1322	@cond_branch
+	bgt	.L1325	@cond_branch
 	ldrh	r0, [r4, #0x3a]
 	neg	r0, r0
 	strh	r0, [r4, #0x24]
 	mov	r0, #0x2
 	strh	r0, [r4, #0x3c]
-	ldr	r0, .L1323
+	ldr	r0, .L1326
 	str	r0, [r4, #0x1c]
-.L1322:
+.L1325:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1324:
+.L1327:
 	.align	2, 0
-.L1323:
+.L1326:
 	.word	sub_8184610
 .Lfe216:
 	.size	 sub_81845D4,.Lfe216-sub_81845D4
@@ -12754,18 +13268,18 @@ sub_8184610:
 	strh	r0, [r4, #0x3c]
 	lsl	r1, r1, #0x10
 	cmp	r1, #0
-	blt	.L1326	@cond_branch
-	ldr	r0, .L1327
+	blt	.L1329	@cond_branch
+	ldr	r0, .L1330
 	str	r0, [r4, #0x1c]
-.L1326:
+.L1329:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1328:
+.L1331:
 	.align	2, 0
-.L1327:
+.L1330:
 	.word	sub_8184640
 .Lfe217:
 	.size	 sub_8184610,.Lfe217-sub_8184610
@@ -12788,19 +13302,19 @@ sub_8184640:
 	mov	r3, #0x3a
 	ldrsh	r0, [r4, r3]
 	cmp	r1, r0
-	ble	.L1330	@cond_branch
+	ble	.L1333	@cond_branch
 	strh	r2, [r4, #0x24]
-	ldr	r0, .L1331
+	ldr	r0, .L1334
 	str	r0, [r4, #0x1c]
-.L1330:
+.L1333:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1332:
+.L1335:
 	.align	2, 0
-.L1331:
+.L1334:
 	.word	sub_8184678
 .Lfe218:
 	.size	 sub_8184640,.Lfe218-sub_8184640
@@ -12817,15 +13331,15 @@ sub_8184678:
 	mov	r3, #0x38
 	ldrsh	r0, [r4, r3]
 	cmp	r1, r0
-	blt	.L1334	@cond_branch
-	ldr	r0, .L1336
+	blt	.L1337	@cond_branch
+	ldr	r0, .L1339
 	str	r0, [r4, #0x1c]
-	b	.L1335
-.L1337:
+	b	.L1338
+.L1340:
 	.align	2, 0
-.L1336:
+.L1339:
 	.word	sub_81846B8
-.L1334:
+.L1337:
 	ldrh	r0, [r4, #0x36]
 	ldrh	r1, [r4, #0x24]
 	add	r0, r0, r1
@@ -12836,7 +13350,7 @@ sub_8184678:
 	strh	r0, [r4, #0x36]
 	add	r0, r2, #0x1
 	strh	r0, [r4, #0x34]
-.L1335:
+.L1338:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
@@ -12856,22 +13370,22 @@ sub_81846B8:
 	strh	r0, [r4, #0x24]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bgt	.L1339	@cond_branch
+	bgt	.L1342	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r4, #0x24]
 	add	r0, r4, #0
 	bl	sub_817F77C
-	ldr	r0, .L1340
+	ldr	r0, .L1343
 	str	r0, [r4, #0x1c]
-.L1339:
+.L1342:
 	add	r0, r4, #0
 	bl	sub_817F70C
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1341:
+.L1344:
 	.align	2, 0
-.L1340:
+.L1343:
 	.word	SpriteCB_SetDummyOnAnimEnd
 .Lfe220:
 	.size	 sub_81846B8,.Lfe220-sub_81846B8
@@ -12893,14 +13407,14 @@ pokemonanimfunc_88:
 	strh	r2, [r4, #0x34]
 	mov	r0, #0x2
 	strh	r0, [r4, #0x32]
-	ldr	r0, .L1343
+	ldr	r0, .L1346
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1344:
+.L1347:
 	.align	2, 0
-.L1343:
+.L1346:
 	.word	sub_81845D4
 .Lfe221:
 	.size	 pokemonanimfunc_88,.Lfe221-pokemonanimfunc_88
@@ -12922,14 +13436,14 @@ pokemonanimfunc_89:
 	strh	r2, [r4, #0x34]
 	mov	r0, #0x1
 	strh	r0, [r4, #0x32]
-	ldr	r0, .L1346
+	ldr	r0, .L1349
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1347:
+.L1350:
 	.align	2, 0
-.L1346:
+.L1349:
 	.word	sub_81845D4
 .Lfe222:
 	.size	 pokemonanimfunc_89,.Lfe222-pokemonanimfunc_89
@@ -12950,14 +13464,14 @@ pokemonanimfunc_8A:
 	strh	r1, [r4, #0x34]
 	mov	r0, #0x1
 	strh	r0, [r4, #0x32]
-	ldr	r0, .L1349
+	ldr	r0, .L1352
 	str	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1350:
+.L1353:
 	.align	2, 0
-.L1349:
+.L1352:
 	.word	sub_81845D4
 .Lfe223:
 	.size	 pokemonanimfunc_8A,.Lfe223-pokemonanimfunc_8A
@@ -12973,16 +13487,16 @@ sub_8184770:
 	mov	r3, #0x2e
 	ldrsh	r0, [r1, r3]
 	cmp	r0, #0x1
-	ble	.L1352	@cond_branch
+	ble	.L1355	@cond_branch
 	mov	r2, #0x30
 	ldrsh	r0, [r1, r2]
 	neg	r0, r0
 	strh	r0, [r1, #0x30]
 	mov	r0, #0x0
-	b	.L1354
-.L1352:
+	b	.L1357
+.L1355:
 	add	r0, r2, #0x1
-.L1354:
+.L1357:
 	strh	r0, [r1, #0x2e]
 	pop	{r0}
 	bx	r0
@@ -13147,7 +13661,7 @@ sUnknown_0860AE7C:
 BackAnimBlendYellow:
 	push	{r4, r5, lr}
 	add	r4, r0, #0
-	ldr	r1, .L1363
+	ldr	r1, .L1366
 	mov	r2, #0x34
 	ldrsh	r0, [r4, r2]
 	lsl	r0, r0, #0x2
@@ -13161,45 +13675,45 @@ BackAnimBlendYellow:
 	add	r1, r0, r5
 	ldrb	r0, [r1, #0x1]
 	cmp	r0, #0xff
-	bne	.L1356	@cond_branch
+	bne	.L1359	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r4, #0x24]
-	ldr	r0, .L1363+0x4
+	ldr	r0, .L1366+0x4
 	str	r0, [r4, #0x1c]
-	b	.L1357
-.L1364:
+	b	.L1360
+.L1367:
 	.align	2, 0
-.L1363:
+.L1366:
 	.word	sUnknown_0860AE7C
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L1356:
+.L1359:
 	mov	r2, #0x36
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0x1
-	bne	.L1358	@cond_branch
+	bne	.L1361	@cond_branch
 	ldrb	r0, [r1]
 	cmp	r0, #0
-	beq	.L1359	@cond_branch
+	beq	.L1362	@cond_branch
 	ldrh	r0, [r4, #0x3c]
-	ldr	r3, .L1365
+	ldr	r3, .L1368
 	mov	r1, #0x10
 	mov	r2, #0x10
 	bl	BlendPalette
-	b	.L1360
-.L1366:
+	b	.L1363
+.L1369:
 	.align	2, 0
-.L1365:
+.L1368:
 	.word	0x3ff
-.L1359:
+.L1362:
 	ldrh	r0, [r4, #0x3c]
-	ldr	r3, .L1367
+	ldr	r3, .L1370
 	mov	r1, #0x10
 	mov	r2, #0x0
 	bl	BlendPalette
-.L1360:
+.L1363:
 	mov	r0, #0x0
 	strh	r0, [r4, #0x36]
-.L1358:
+.L1361:
 	mov	r1, #0x3a
 	ldrsh	r0, [r4, r1]
 	lsl	r0, r0, #0x2
@@ -13208,7 +13722,7 @@ BackAnimBlendYellow:
 	mov	r2, #0x38
 	ldrsh	r0, [r4, r2]
 	cmp	r1, r0
-	bne	.L1361	@cond_branch
+	bne	.L1364	@cond_branch
 	mov	r1, #0x0
 	mov	r0, #0x1
 	strh	r0, [r4, #0x36]
@@ -13216,16 +13730,16 @@ BackAnimBlendYellow:
 	ldrh	r0, [r4, #0x3a]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x3a]
-	b	.L1357
-.L1368:
+	b	.L1360
+.L1371:
 	.align	2, 0
-.L1367:
+.L1370:
 	.word	0x3ff
-.L1361:
+.L1364:
 	ldrh	r0, [r4, #0x38]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x38]
-.L1357:
+.L1360:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
@@ -13244,7 +13758,7 @@ pokemonanimfunc_8B:
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x1
-	bne	.L1370	@cond_branch
+	bne	.L1373	@cond_branch
 	ldrb	r0, [r2, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -13257,7 +13771,7 @@ pokemonanimfunc_8B:
 	strh	r3, [r2, #0x38]
 	strh	r3, [r2, #0x36]
 	strh	r3, [r2, #0x34]
-.L1370:
+.L1373:
 	add	r0, r2, #0
 	bl	BackAnimBlendYellow
 	pop	{r4}
@@ -13278,7 +13792,7 @@ pokemonanimfunc_8C:
 	lsl	r0, r0, #0x10
 	asr	r4, r0, #0x10
 	cmp	r4, #0x1
-	bne	.L1372	@cond_branch
+	bne	.L1375	@cond_branch
 	ldrb	r0, [r2, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -13291,7 +13805,7 @@ pokemonanimfunc_8C:
 	strh	r3, [r2, #0x38]
 	strh	r3, [r2, #0x36]
 	strh	r4, [r2, #0x34]
-.L1372:
+.L1375:
 	add	r0, r2, #0
 	bl	BackAnimBlendYellow
 	pop	{r4, r5}
@@ -13312,7 +13826,7 @@ pokemonanimfunc_8D:
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x1
-	bne	.L1374	@cond_branch
+	bne	.L1377	@cond_branch
 	ldrb	r0, [r2, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -13326,7 +13840,7 @@ pokemonanimfunc_8D:
 	strh	r3, [r2, #0x36]
 	mov	r0, #0x2
 	strh	r0, [r2, #0x34]
-.L1374:
+.L1377:
 	add	r0, r2, #0
 	bl	BackAnimBlendYellow
 	pop	{r4}
@@ -13354,20 +13868,20 @@ BackAnimBlend:
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x7f
-	ble	.L1376	@cond_branch
+	ble	.L1379	@cond_branch
 	ldrh	r0, [r4, #0x3c]
 	mov	r1, #0x10
 	mov	r2, #0x0
 	mov	r3, #0x1f
 	bl	BlendPalette
-	ldr	r0, .L1378
+	ldr	r0, .L1381
 	str	r0, [r4, #0x1c]
-	b	.L1377
-.L1379:
+	b	.L1380
+.L1382:
 	.align	2, 0
-.L1378:
+.L1381:
 	.word	SpriteCB_SetDummyOnAnimEnd
-.L1376:
+.L1379:
 	mov	r5, #0x32
 	ldrsh	r0, [r4, r5]
 	mov	r1, #0xc
@@ -13377,7 +13891,7 @@ BackAnimBlend:
 	ldrh	r0, [r4, #0x3c]
 	lsl	r2, r2, #0x18
 	lsr	r2, r2, #0x18
-	ldr	r3, .L1380
+	ldr	r3, .L1383
 	mov	r5, #0x30
 	ldrsh	r1, [r4, r5]
 	lsl	r1, r1, #0x1
@@ -13385,13 +13899,13 @@ BackAnimBlend:
 	ldrh	r3, [r1]
 	mov	r1, #0x10
 	bl	BlendPalette
-.L1377:
+.L1380:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1381:
+.L1384:
 	.align	2, 0
-.L1380:
+.L1383:
 	.word	sColors.687
 .Lfe229:
 	.size	 BackAnimBlend,.Lfe229-BackAnimBlend
@@ -13406,7 +13920,7 @@ sub_8184934:
 	mov	r2, #0x36
 	ldrsh	r0, [r4, r2]
 	cmp	r1, r0
-	bge	.L1383	@cond_branch
+	bge	.L1386	@cond_branch
 	add	r0, r4, #0
 	bl	sub_817F70C
 	mov	r3, #0x38
@@ -13414,7 +13928,7 @@ sub_8184934:
 	mov	r2, #0x2e
 	ldrsh	r0, [r4, r2]
 	cmp	r1, r0
-	ble	.L1384	@cond_branch
+	ble	.L1387	@cond_branch
 	ldrh	r0, [r4, #0x34]
 	add	r0, r0, #0x1
 	mov	r2, #0x0
@@ -13424,12 +13938,12 @@ sub_8184934:
 	mov	r3, #0x36
 	ldrsh	r1, [r4, r3]
 	cmp	r0, r1
-	bge	.L1385	@cond_branch
+	bge	.L1388	@cond_branch
 	strh	r2, [r4, #0x38]
-.L1385:
+.L1388:
 	strh	r2, [r4, #0x24]
-	b	.L1386
-.L1384:
+	b	.L1389
+.L1387:
 	mov	r0, #0x34
 	ldrsh	r1, [r4, r0]
 	lsr	r0, r1, #0x1f
@@ -13453,9 +13967,9 @@ sub_8184934:
 	bl	__divsi3
 	add	r1, r0, #0
 	cmp	r1, #0
-	bge	.L1387	@cond_branch
+	bge	.L1390	@cond_branch
 	add	r0, r0, #0xff
-.L1387:
+.L1390:
 	asr	r0, r0, #0x8
 	lsl	r0, r0, #0x8
 	sub	r0, r1, r0
@@ -13472,10 +13986,10 @@ sub_8184934:
 	ldrh	r0, [r4, #0x38]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x38]
-.L1386:
+.L1389:
 	add	r0, r4, #0
 	bl	sub_817F70C
-.L1383:
+.L1386:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
@@ -13490,7 +14004,7 @@ pokemonanimfunc_8E:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	cmp	r2, #0
-	bne	.L1389	@cond_branch
+	bne	.L1392	@cond_branch
 	ldrb	r0, [r4, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -13506,15 +14020,15 @@ pokemonanimfunc_8E:
 	strh	r0, [r4, #0x36]
 	strh	r2, [r4, #0x34]
 	strh	r2, [r4, #0x30]
-.L1389:
+.L1392:
 	ldrh	r0, [r4, #0x32]
 	mov	r1, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1390	@cond_branch
+	bne	.L1393	@cond_branch
 	add	r0, r4, #0
 	bl	BackAnimBlend
-.L1390:
+.L1393:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	mov	r3, #0x2e
@@ -13528,10 +14042,10 @@ pokemonanimfunc_8E:
 	add	r0, r0, r1
 	asr	r0, r0, #0x1
 	cmp	r2, r0
-	blt	.L1391	@cond_branch
+	blt	.L1394	@cond_branch
 	add	r0, r4, #0
 	bl	sub_8184934
-.L1391:
+.L1394:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
@@ -13549,7 +14063,7 @@ pokemonanimfunc_8F:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	cmp	r2, #0
-	bne	.L1393	@cond_branch
+	bne	.L1396	@cond_branch
 	ldrb	r0, [r4, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -13565,15 +14079,15 @@ pokemonanimfunc_8F:
 	strh	r0, [r4, #0x36]
 	strh	r2, [r4, #0x34]
 	strh	r2, [r4, #0x30]
-.L1393:
+.L1396:
 	ldrh	r0, [r4, #0x32]
 	mov	r1, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1394	@cond_branch
+	bne	.L1397	@cond_branch
 	add	r0, r4, #0
 	bl	BackAnimBlend
-.L1394:
+.L1397:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	mov	r3, #0x2e
@@ -13587,10 +14101,10 @@ pokemonanimfunc_8F:
 	add	r0, r0, r1
 	asr	r0, r0, #0x1
 	cmp	r2, r0
-	blt	.L1395	@cond_branch
+	blt	.L1398	@cond_branch
 	add	r0, r4, #0
 	bl	sub_8184934
-.L1395:
+.L1398:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
@@ -13608,7 +14122,7 @@ pokemonanimfunc_90:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	cmp	r2, #0
-	bne	.L1397	@cond_branch
+	bne	.L1400	@cond_branch
 	ldrb	r0, [r4, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -13624,15 +14138,15 @@ pokemonanimfunc_90:
 	strh	r0, [r4, #0x36]
 	strh	r2, [r4, #0x34]
 	strh	r2, [r4, #0x30]
-.L1397:
+.L1400:
 	ldrh	r0, [r4, #0x32]
 	mov	r1, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1398	@cond_branch
+	bne	.L1401	@cond_branch
 	add	r0, r4, #0
 	bl	BackAnimBlend
-.L1398:
+.L1401:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	mov	r3, #0x2e
@@ -13646,10 +14160,10 @@ pokemonanimfunc_90:
 	add	r0, r0, r1
 	asr	r0, r0, #0x1
 	cmp	r2, r0
-	blt	.L1399	@cond_branch
+	blt	.L1402	@cond_branch
 	add	r0, r4, #0
 	bl	sub_8184934
-.L1399:
+.L1402:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
@@ -13667,7 +14181,7 @@ pokemonanimfunc_91:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	cmp	r2, #0
-	bne	.L1401	@cond_branch
+	bne	.L1404	@cond_branch
 	ldrb	r0, [r4, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -13684,15 +14198,15 @@ pokemonanimfunc_91:
 	strh	r2, [r4, #0x34]
 	mov	r0, #0x1
 	strh	r0, [r4, #0x30]
-.L1401:
+.L1404:
 	ldrh	r0, [r4, #0x32]
 	mov	r1, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1402	@cond_branch
+	bne	.L1405	@cond_branch
 	add	r0, r4, #0
 	bl	BackAnimBlend
-.L1402:
+.L1405:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	mov	r3, #0x2e
@@ -13706,10 +14220,10 @@ pokemonanimfunc_91:
 	add	r0, r0, r1
 	asr	r0, r0, #0x1
 	cmp	r2, r0
-	blt	.L1403	@cond_branch
+	blt	.L1406	@cond_branch
 	add	r0, r4, #0
 	bl	sub_8184934
-.L1403:
+.L1406:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
@@ -13727,7 +14241,7 @@ pokemonanimfunc_92:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	cmp	r2, #0
-	bne	.L1405	@cond_branch
+	bne	.L1408	@cond_branch
 	ldrb	r0, [r4, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -13743,15 +14257,15 @@ pokemonanimfunc_92:
 	strh	r0, [r4, #0x36]
 	strh	r2, [r4, #0x34]
 	strh	r0, [r4, #0x30]
-.L1405:
+.L1408:
 	ldrh	r0, [r4, #0x32]
 	mov	r1, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1406	@cond_branch
+	bne	.L1409	@cond_branch
 	add	r0, r4, #0
 	bl	BackAnimBlend
-.L1406:
+.L1409:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	mov	r3, #0x2e
@@ -13765,10 +14279,10 @@ pokemonanimfunc_92:
 	add	r0, r0, r1
 	asr	r0, r0, #0x1
 	cmp	r2, r0
-	blt	.L1407	@cond_branch
+	blt	.L1410	@cond_branch
 	add	r0, r4, #0
 	bl	sub_8184934
-.L1407:
+.L1410:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
@@ -13786,7 +14300,7 @@ pokemonanimfunc_93:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	cmp	r2, #0
-	bne	.L1409	@cond_branch
+	bne	.L1412	@cond_branch
 	ldrb	r0, [r4, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -13802,15 +14316,15 @@ pokemonanimfunc_93:
 	strh	r0, [r4, #0x36]
 	strh	r2, [r4, #0x34]
 	strh	r0, [r4, #0x30]
-.L1409:
+.L1412:
 	ldrh	r0, [r4, #0x32]
 	mov	r1, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1410	@cond_branch
+	bne	.L1413	@cond_branch
 	add	r0, r4, #0
 	bl	BackAnimBlend
-.L1410:
+.L1413:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	mov	r3, #0x2e
@@ -13824,10 +14338,10 @@ pokemonanimfunc_93:
 	add	r0, r0, r1
 	asr	r0, r0, #0x1
 	cmp	r2, r0
-	blt	.L1411	@cond_branch
+	blt	.L1414	@cond_branch
 	add	r0, r4, #0
 	bl	sub_8184934
-.L1411:
+.L1414:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
@@ -13845,7 +14359,7 @@ pokemonanimfunc_94:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	cmp	r2, #0
-	bne	.L1413	@cond_branch
+	bne	.L1416	@cond_branch
 	ldrb	r0, [r4, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -13861,15 +14375,15 @@ pokemonanimfunc_94:
 	strh	r0, [r4, #0x36]
 	strh	r2, [r4, #0x34]
 	strh	r0, [r4, #0x30]
-.L1413:
+.L1416:
 	ldrh	r0, [r4, #0x32]
 	mov	r1, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1414	@cond_branch
+	bne	.L1417	@cond_branch
 	add	r0, r4, #0
 	bl	BackAnimBlend
-.L1414:
+.L1417:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	mov	r3, #0x2e
@@ -13883,10 +14397,10 @@ pokemonanimfunc_94:
 	add	r0, r0, r1
 	asr	r0, r0, #0x1
 	cmp	r2, r0
-	blt	.L1415	@cond_branch
+	blt	.L1418	@cond_branch
 	add	r0, r4, #0
 	bl	sub_8184934
-.L1415:
+.L1418:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
@@ -13904,7 +14418,7 @@ pokemonanimfunc_95:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	cmp	r2, #0
-	bne	.L1417	@cond_branch
+	bne	.L1420	@cond_branch
 	ldrb	r0, [r4, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -13921,15 +14435,15 @@ pokemonanimfunc_95:
 	strh	r2, [r4, #0x34]
 	mov	r0, #0x2
 	strh	r0, [r4, #0x30]
-.L1417:
+.L1420:
 	ldrh	r0, [r4, #0x32]
 	mov	r1, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1418	@cond_branch
+	bne	.L1421	@cond_branch
 	add	r0, r4, #0
 	bl	BackAnimBlend
-.L1418:
+.L1421:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	mov	r3, #0x2e
@@ -13943,10 +14457,10 @@ pokemonanimfunc_95:
 	add	r0, r0, r1
 	asr	r0, r0, #0x1
 	cmp	r2, r0
-	blt	.L1419	@cond_branch
+	blt	.L1422	@cond_branch
 	add	r0, r4, #0
 	bl	sub_8184934
-.L1419:
+.L1422:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
@@ -13964,7 +14478,7 @@ pokemonanimfunc_96:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	cmp	r2, #0
-	bne	.L1421	@cond_branch
+	bne	.L1424	@cond_branch
 	ldrb	r0, [r4, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -13981,15 +14495,15 @@ pokemonanimfunc_96:
 	strh	r2, [r4, #0x34]
 	mov	r0, #0x2
 	strh	r0, [r4, #0x30]
-.L1421:
+.L1424:
 	ldrh	r0, [r4, #0x32]
 	mov	r1, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1422	@cond_branch
+	bne	.L1425	@cond_branch
 	add	r0, r4, #0
 	bl	BackAnimBlend
-.L1422:
+.L1425:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	mov	r3, #0x2e
@@ -14003,10 +14517,10 @@ pokemonanimfunc_96:
 	add	r0, r0, r1
 	asr	r0, r0, #0x1
 	cmp	r2, r0
-	blt	.L1423	@cond_branch
+	blt	.L1426	@cond_branch
 	add	r0, r4, #0
 	bl	sub_8184934
-.L1423:
+.L1426:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
@@ -14024,7 +14538,7 @@ pokemonanimfunc_97:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	cmp	r2, #0
-	bne	.L1425	@cond_branch
+	bne	.L1428	@cond_branch
 	ldrb	r0, [r4, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -14041,15 +14555,15 @@ pokemonanimfunc_97:
 	strh	r2, [r4, #0x34]
 	mov	r0, #0x3
 	strh	r0, [r4, #0x30]
-.L1425:
+.L1428:
 	ldrh	r0, [r4, #0x32]
 	mov	r1, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1426	@cond_branch
+	bne	.L1429	@cond_branch
 	add	r0, r4, #0
 	bl	BackAnimBlend
-.L1426:
+.L1429:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	mov	r3, #0x2e
@@ -14063,10 +14577,10 @@ pokemonanimfunc_97:
 	add	r0, r0, r1
 	asr	r0, r0, #0x1
 	cmp	r2, r0
-	blt	.L1427	@cond_branch
+	blt	.L1430	@cond_branch
 	add	r0, r4, #0
 	bl	sub_8184934
-.L1427:
+.L1430:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
@@ -14084,7 +14598,7 @@ pokemonanimfunc_98:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	cmp	r2, #0
-	bne	.L1429	@cond_branch
+	bne	.L1432	@cond_branch
 	ldrb	r0, [r4, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -14101,15 +14615,15 @@ pokemonanimfunc_98:
 	strh	r2, [r4, #0x34]
 	mov	r0, #0x4
 	strh	r0, [r4, #0x30]
-.L1429:
+.L1432:
 	ldrh	r0, [r4, #0x32]
 	mov	r1, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1430	@cond_branch
+	bne	.L1433	@cond_branch
 	add	r0, r4, #0
 	bl	BackAnimBlend
-.L1430:
+.L1433:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	mov	r3, #0x2e
@@ -14123,10 +14637,10 @@ pokemonanimfunc_98:
 	add	r0, r0, r1
 	asr	r0, r0, #0x1
 	cmp	r2, r0
-	blt	.L1431	@cond_branch
+	blt	.L1434	@cond_branch
 	add	r0, r4, #0
 	bl	sub_8184934
-.L1431:
+.L1434:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
@@ -14144,7 +14658,7 @@ pokemonanimfunc_99:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	cmp	r2, #0
-	bne	.L1433	@cond_branch
+	bne	.L1436	@cond_branch
 	ldrb	r0, [r4, #0x5]
 	lsr	r0, r0, #0x4
 	lsl	r0, r0, #0x4
@@ -14161,15 +14675,15 @@ pokemonanimfunc_99:
 	strh	r2, [r4, #0x34]
 	mov	r0, #0x5
 	strh	r0, [r4, #0x30]
-.L1433:
+.L1436:
 	ldrh	r0, [r4, #0x32]
 	mov	r1, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1434	@cond_branch
+	bne	.L1437	@cond_branch
 	add	r0, r4, #0
 	bl	BackAnimBlend
-.L1434:
+.L1437:
 	mov	r0, #0x32
 	ldrsh	r2, [r4, r0]
 	mov	r3, #0x2e
@@ -14183,10 +14697,10 @@ pokemonanimfunc_99:
 	add	r0, r0, r1
 	asr	r0, r0, #0x1
 	cmp	r2, r0
-	blt	.L1435	@cond_branch
+	blt	.L1438	@cond_branch
 	add	r0, r4, #0
 	bl	sub_8184934
-.L1435:
+.L1438:
 	ldrh	r0, [r4, #0x32]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x32]
@@ -14206,15 +14720,15 @@ SpriteCB_SetDummyOnAnimEnd:
 	mov	r0, #0x10
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1437	@cond_branch
-	ldr	r0, .L1438
+	beq	.L1440	@cond_branch
+	ldr	r0, .L1441
 	str	r0, [r2, #0x1c]
-.L1437:
+.L1440:
 	pop	{r0}
 	bx	r0
-.L1439:
+.L1442:
 	.align	2, 0
-.L1438:
+.L1441:
 	.word	SpriteCallbackDummy
 .Lfe243:
 	.size	 SpriteCB_SetDummyOnAnimEnd,.Lfe243-SpriteCB_SetDummyOnAnimEnd

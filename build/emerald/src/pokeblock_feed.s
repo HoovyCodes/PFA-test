@@ -2071,6 +2071,7 @@ Task_HandleMonAtePokeblock:
 	ldr	r4, [r1]
 	add	r4, r4, r0
 	add	r0, r5, #0
+	mov	r1, #0x0
 	bl	GetNature
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
@@ -2275,6 +2276,7 @@ CreateMonSprite:
 	mov	r2, r8
 	strb	r2, [r0]
 	add	r0, r5, #0
+	mov	r1, #0x0
 	bl	GetNature
 	mov	r2, r9
 	ldr	r1, [r2]
@@ -2656,9 +2658,9 @@ sub_817A634:
 	add	r0, r4, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x5a
-	bls	.LCB1774
+	bls	.LCB1776
 	b	.L201	@long jump
-.LCB1774:
+.LCB1776:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L219+0x8
 	add	r0, r0, r1

@@ -1,6 +1,6 @@
-# 1 "src/battle_dome.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/battle_dome.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/battle_dome.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -3153,6 +3153,13 @@ void ClearIllusionMon(u32 battlerId);
 bool32 SetIllusionMon(struct Pokemon *mon, u32 battlerId);
 bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
 u8 GetBattleMoveSplit(u32 moveId);
+bool32 CanSleep(u8 battlerId);
+bool32 CanBePoisoned(u8 battlerId);
+bool32 CanBeBurned(u8 battlerId);
+bool32 CanBeParalyzed(u8 battlerId);
+bool32 CanBeFrozen(u8 battlerId);
+bool32 CanBeConfused(u8 battlerId);
+bool32 IsBattlerTerrainAffected(u8 battlerId, u32 terrainFlag);
 # 9 "include/battle.h" 2
 # 1 "include/battle_script_commands.h" 1
 # 9 "include/battle_script_commands.h"
@@ -3818,8 +3825,9 @@ struct BattleStruct
     u8 sameMoveTurns[4];
     u16 moveEffect2;
     u16 changedSpecies[6];
+ u8 abilityPopUpSpriteIds[4][2];
 };
-# 579 "include/battle.h"
+# 580 "include/battle.h"
 struct BattleScripting
 {
     s32 painSplitHp;
@@ -3855,6 +3863,7 @@ struct BattleScripting
     u16 moveEffect;
     u16 multihitMoveEffect;
     u8 illusionNickHack;
+    bool8 fixedPopup;
 };
 
 
@@ -3929,6 +3938,7 @@ struct BattleBarInfo
     s32 oldValue;
     s32 receivedValue;
     s32 currValue;
+ u8 oddFrame;
 };
 
 struct BattleSpriteData
@@ -5746,8 +5756,11 @@ extern const u8 gText_ChikoritaDoll80BP[];
 extern const u8 gText_TotodileDoll80BP[];
 
 extern const u8 gText_Dolls[];
-extern const u8 gText_Cushions[];
+extern const u8 gText_MatDesk[];
+extern const u8 gText_OrnaPost[];
+extern const u8 gText_ChairPlant[];
 extern const u8 gText_Contest[];
+extern const u8 gText_TMs[];
 extern const u8 gText_MegaC[];
 extern const u8 gText_MegaB[];
 extern const u8 gText_MegaA[];
@@ -5925,8 +5938,11 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Doll[];
-extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Cushion[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MatDesk[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_OrnaPost[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChairPlant[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Contest[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TM[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaC[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaB[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaA[];
@@ -8333,7 +8349,7 @@ void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
 
-bool8 CanLearnTutorMove(u16, u8);
+bool32 CanLearnTutorMove(u16, u8);
 # 25 "src/battle_dome.c" 2
 # 1 "include/menu.h" 1
 # 26 "include/menu.h"
@@ -19757,7 +19773,7 @@ static void InitDomeTrainers(void)
         for (j = 0; j < 6; j++)
             gSaveBlock2Ptr->frontier.domePlayerPartyData[i].evs[j] = GetMonData(&gPlayerParty[gSaveBlock2Ptr->frontier.selectedPartyMons[i] - 1], 26 + j, ((void *)0));
 
-        gSaveBlock2Ptr->frontier.domePlayerPartyData[i].nature = GetNature(&gPlayerParty[gSaveBlock2Ptr->frontier.selectedPartyMons[i] - 1]);
+        gSaveBlock2Ptr->frontier.domePlayerPartyData[i].nature = GetNature(&gPlayerParty[gSaveBlock2Ptr->frontier.selectedPartyMons[i] - 1], 0);
     }
 
 
@@ -20316,8 +20332,7 @@ static int GetTypeEffectivenessPoints(int move, int targetSpecies, int arg2)
 
 static u8 GetDomeTrainerMonIvs(u16 trainerId)
 {
-    u8 fixedIv;
-        fixedIv = 31;
+    u8 fixedIv =31;
 
     return fixedIv;
 }
@@ -20807,7 +20822,7 @@ static void SpriteCb_VerticalScrollArrow(struct Sprite *sprite)
         }
     }
 }
-# 3351 "src/battle_dome.c"
+# 3350 "src/battle_dome.c"
 static void Task_HandleInfoCardInput(u8 taskId)
 {
     int i;
@@ -21525,7 +21540,7 @@ static void Task_HandleInfoCardInput(u8 taskId)
         break;
     }
 }
-# 4080 "src/battle_dome.c"
+# 4079 "src/battle_dome.c"
 static u8 Task_GetInfoCardInput(u8 taskId)
 {
     u8 input = 0;
@@ -22344,7 +22359,7 @@ static void ShowPreviousDomeTourneyTree(void)
     gTasks[taskId].data[4] = 1;
     SetMainCallback2(CB2_TourneyTree);
 }
-# 4907 "src/battle_dome.c"
+# 4906 "src/battle_dome.c"
 static void Task_HandleTourneyTreeInput(u8 taskId)
 {
     u8 newTaskId = 0;
@@ -22432,7 +22447,7 @@ static void Task_HandleTourneyTreeInput(u8 taskId)
         break;
     }
 }
-# 5012 "src/battle_dome.c"
+# 5011 "src/battle_dome.c"
 static u8 UpdateTourneyTreeCursor(u8 taskId)
 {
     u8 selection = 1;
@@ -22481,7 +22496,7 @@ static u8 UpdateTourneyTreeCursor(u8 taskId)
 
     return selection;
 }
-# 5068 "src/battle_dome.c"
+# 5067 "src/battle_dome.c"
 static void ShowNonInteractiveDomeTourneyTree(void)
 {
     u8 taskId = CreateTask(Task_ShowTourneyTree, 0);
@@ -22878,7 +22893,7 @@ static void DrawTourneyAdvancementLine(u8 tournamentId, u8 roundId)
 
     CopyBgTilemapBufferToVram(1);
 }
-# 5472 "src/battle_dome.c"
+# 5471 "src/battle_dome.c"
 static void Task_HandleStaticTourneyTreeInput(u8 taskId)
 {
     int i;
@@ -23347,8 +23362,8 @@ static void DecideRoundWinners(u8 roundId)
 
         else if (tournamentId2 != 0xFF)
         {
-
-
+   points1 = 0;
+            points2 = 0;
 
             for (monId1 = 0; monId1 < 3; monId1++)
             {

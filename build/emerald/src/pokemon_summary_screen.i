@@ -1,6 +1,6 @@
-# 1 "src/pokemon_summary_screen.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/pokemon_summary_screen.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/pokemon_summary_screen.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -3220,6 +3220,13 @@ void ClearIllusionMon(u32 battlerId);
 bool32 SetIllusionMon(struct Pokemon *mon, u32 battlerId);
 bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
 u8 GetBattleMoveSplit(u32 moveId);
+bool32 CanSleep(u8 battlerId);
+bool32 CanBePoisoned(u8 battlerId);
+bool32 CanBeBurned(u8 battlerId);
+bool32 CanBeParalyzed(u8 battlerId);
+bool32 CanBeFrozen(u8 battlerId);
+bool32 CanBeConfused(u8 battlerId);
+bool32 IsBattlerTerrainAffected(u8 battlerId, u32 terrainFlag);
 # 9 "include/battle.h" 2
 # 1 "include/battle_script_commands.h" 1
 # 9 "include/battle_script_commands.h"
@@ -3885,8 +3892,9 @@ struct BattleStruct
     u8 sameMoveTurns[4];
     u16 moveEffect2;
     u16 changedSpecies[6];
+ u8 abilityPopUpSpriteIds[4][2];
 };
-# 579 "include/battle.h"
+# 580 "include/battle.h"
 struct BattleScripting
 {
     s32 painSplitHp;
@@ -3922,6 +3930,7 @@ struct BattleScripting
     u16 moveEffect;
     u16 multihitMoveEffect;
     u8 illusionNickHack;
+    bool8 fixedPopup;
 };
 
 
@@ -3996,6 +4005,7 @@ struct BattleBarInfo
     s32 oldValue;
     s32 receivedValue;
     s32 currValue;
+ u8 oddFrame;
 };
 
 struct BattleSpriteData
@@ -15768,7 +15778,7 @@ void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
 
-bool8 CanLearnTutorMove(u16, u8);
+bool32 CanLearnTutorMove(u16, u8);
 # 28 "src/pokemon_summary_screen.c" 2
 # 1 "include/palette.h" 1
 # 29 "src/pokemon_summary_screen.c" 2
@@ -16795,8 +16805,11 @@ extern const u8 gText_ChikoritaDoll80BP[];
 extern const u8 gText_TotodileDoll80BP[];
 
 extern const u8 gText_Dolls[];
-extern const u8 gText_Cushions[];
+extern const u8 gText_MatDesk[];
+extern const u8 gText_OrnaPost[];
+extern const u8 gText_ChairPlant[];
 extern const u8 gText_Contest[];
+extern const u8 gText_TMs[];
 extern const u8 gText_MegaC[];
 extern const u8 gText_MegaB[];
 extern const u8 gText_MegaA[];
@@ -16974,8 +16987,11 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Doll[];
-extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Cushion[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MatDesk[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_OrnaPost[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChairPlant[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Contest[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TM[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaC[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaB[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaA[];
@@ -19327,6 +19343,7 @@ static __attribute__((section("ewram_data"))) struct PokemonSummaryScreenData
         u8 ppBonuses;
         u8 sanity;
         u8 OTName[17];
+  u8 hiddenNature;
         u32 OTID;
     } summary;
     u16 bgTilemapBuffers[PSS_PAGE_COUNT][2][0x400];
@@ -19536,7 +19553,7 @@ static const u8 sRazorWindDescription[] = _(
 
 static const u8 sSwordsDanceDescription[] = _(
     "A fighting dance that\n"
-    "sharply raises ATTACK.");
+    "sharply raises Attack.");
 
 static const u8 sCutDescription[] = _(
     "Cuts the foe with sharp\n"
@@ -19636,7 +19653,7 @@ static const u8 sDoubleEdgeDescription[] = _(
 
 static const u8 sTailWhipDescription[] = _(
     "Wags the tail to lower the\n"
-    "foe's DEFENSE.");
+    "foe's Defense.");
 
 static const u8 sPoisonStingDescription[] = _(
     "A toxic attack with barbs,\n"
@@ -19652,7 +19669,7 @@ static const u8 sPinMissileDescription[] = _(
 
 static const u8 sLeerDescription[] = _(
     "Frightens the foe with a\n"
-    "leer to lower DEFENSE.");
+    "leer to lower Defense.");
 
 static const u8 sBiteDescription[] = _(
     "Bites with vicious fangs.\n"
@@ -19660,7 +19677,7 @@ static const u8 sBiteDescription[] = _(
 
 static const u8 sGrowlDescription[] = _(
     "Growls cutely to reduce the\n"
-    "foe's ATTACK.");
+    "foe's Attack.");
 
 static const u8 sRoarDescription[] = _(
     "Makes the foe flee to end\n"
@@ -19684,7 +19701,7 @@ static const u8 sDisableDescription[] = _(
 
 static const u8 sAcidDescription[] = _(
     "Sprays a hide-melting acid.\n"
-    "May lower DEFENSE.");
+    "May lower Defense.");
 
 static const u8 sEmberDescription[] = _(
     "A weak fire attack that may\n"
@@ -19724,11 +19741,11 @@ static const u8 sPsybeamDescription[] = _(
 
 static const u8 sBubbleBeamDescription[] = _(
     "Forcefully sprays bubbles\n"
-    "that may lower SPEED.");
+    "that may lower Speed.");
 
 static const u8 sAuroraBeamDescription[] = _(
     "Fires a rainbow-colored\n"
-    "beam that may lower ATTACK.");
+    "beam that may lower Attack.");
 
 static const u8 sHyperBeamDescription[] = _(
     "Powerful, but leaves the\n"
@@ -19776,7 +19793,7 @@ static const u8 sLeechSeedDescription[] = _(
 
 static const u8 sGrowthDescription[] = _(
     "Forces the body to grow\n"
-    "and heightens SP. ATK.");
+    "and heightens Sp. Atk.");
 
 static const u8 sRazorLeafDescription[] = _(
     "Cuts the enemy with leaves.\n"
@@ -19804,7 +19821,7 @@ static const u8 sPetalDanceDescription[] = _(
 
 static const u8 sStringShotDescription[] = _(
     "Binds the foe with string\n"
-    "to reduce its SPEED.");
+    "to reduce its Speed.");
 
 static const u8 sDragonRageDescription[] = _(
     "Launches shock waves that\n"
@@ -19856,7 +19873,7 @@ static const u8 sConfusionDescription[] = _(
 
 static const u8 sPsychicDescription[] = _(
     "A powerful psychic attack\n"
-    "that may lower SP. DEF.");
+    "that may lower Sp. Def.");
 
 static const u8 sHypnosisDescription[] = _(
     "A hypnotizing move that\n"
@@ -19864,18 +19881,18 @@ static const u8 sHypnosisDescription[] = _(
 
 static const u8 sMeditateDescription[] = _(
     "Meditates in a peaceful\n"
-    "fashion to raise ATTACK.");
+    "fashion to raise Attack.");
 
 static const u8 sAgilityDescription[] = _(
     "Relaxes the body to sharply\n"
-    "boost SPEED.");
+    "boost Speed.");
 
 static const u8 sQuickAttackDescription[] = _(
     "An extremely fast attack\n"
     "that always strikes first.");
 
 static const u8 sRageDescription[] = _(
-    "Raises the user's ATTACK\n"
+    "Raises the user's Attack\n"
     "every time it is hit.");
 
 static const u8 sTeleportDescription[] = _(
@@ -19892,7 +19909,7 @@ static const u8 sMimicDescription[] = _(
 
 static const u8 sScreechDescription[] = _(
     "Emits a screech to sharply\n"
-    "reduce the foe's DEFENSE.");
+    "reduce the foe's Defense.");
 
 static const u8 sDoubleTeamDescription[] = _(
     "Creates illusory copies to\n"
@@ -19904,7 +19921,7 @@ static const u8 sRecoverDescription[] = _(
 
 static const u8 sHardenDescription[] = _(
     "Stiffens the body's \n"
-    "muscles to raise DEFENSE.");
+    "muscles to raise Defense.");
 
 static const u8 sMinimizeDescription[] = _(
     "Minimizes the user's size\n"
@@ -19920,19 +19937,19 @@ static const u8 sConfuseRayDescription[] = _(
 
 static const u8 sWithdrawDescription[] = _(
     "Withdraws the body into its\n"
-    "hard shell to raise DEFENSE.");
+    "hard shell to raise Defense.");
 
 static const u8 sDefenseCurlDescription[] = _(
     "Curls up to conceal weak\n"
-    "spots and raise DEFENSE.");
+    "spots and raise Defense.");
 
 static const u8 sBarrierDescription[] = _(
     "Creates a barrier that\n"
-    "sharply raises DEFENSE.");
+    "sharply raises Defense.");
 
 static const u8 sLightScreenDescription[] = _(
     "Creates a wall of light that\n"
-    "lowers SP. ATK damage.");
+    "lowers Sp. Atk damage.");
 
 static const u8 sHazeDescription[] = _(
     "Creates a black haze that\n"
@@ -19952,7 +19969,7 @@ static const u8 sBideDescription[] = _(
 
 static const u8 sMetronomeDescription[] = _(
     "Waggles a finger to use any\n"
-    "POKéMON move at random.");
+    "Pokémon move at random.");
 
 static const u8 sMirrorMoveDescription[] = _(
     "Counters the foe's attack\n"
@@ -20008,11 +20025,11 @@ static const u8 sSpikeCannonDescription[] = _(
 
 static const u8 sConstrictDescription[] = _(
     "Constricts to inflict pain.\n"
-    "May lower SPEED.");
+    "May lower Speed.");
 
 static const u8 sAmnesiaDescription[] = _(
     "Forgets about something\n"
-    "and sharply raises SP. DEF.");
+    "and sharply raises Sp. Def.");
 
 static const u8 sKinesisDescription[] = _(
     "Distracts the foe.\n"
@@ -20060,7 +20077,7 @@ static const u8 sTransformDescription[] = _(
 
 static const u8 sBubbleDescription[] = _(
     "An attack using bubbles.\n"
-    "May lower the foe's SPEED.");
+    "May lower the foe's Speed.");
 
 static const u8 sDizzyPunchDescription[] = _(
     "A rhythmic punch that may\n"
@@ -20084,7 +20101,7 @@ static const u8 sSplashDescription[] = _(
 
 static const u8 sAcidArmorDescription[] = _(
     "Liquifies the user's body\n"
-    "to sharply raise DEFENSE.");
+    "to sharply raise Defense.");
 
 static const u8 sCrabhammerDescription[] = _(
     "Hammers with a pincer. Has a\n"
@@ -20116,7 +20133,7 @@ static const u8 sHyperFangDescription[] = _(
 
 static const u8 sSharpenDescription[] = _(
     "Reduces the polygon count\n"
-    "and raises ATTACK.");
+    "and raises Attack.");
 
 static const u8 sConversionDescription[] = _(
     "Changes the user's type\n"
@@ -20176,7 +20193,7 @@ static const u8 sSnoreDescription[] = _(
 
 static const u8 sCurseDescription[] = _(
     "A move that functions\n"
-    "differently for GHOSTS.");
+    "differently for Ghost-types.");
 
 static const u8 sFlailDescription[] = _(
     "Inflicts more damage when\n"
@@ -20192,7 +20209,7 @@ static const u8 sAeroblastDescription[] = _(
 
 static const u8 sCottonSporeDescription[] = _(
     "Spores cling to the foe,\n"
-    "sharply reducing SPEED.");
+    "sharply reducing Speed.");
 
 static const u8 sReversalDescription[] = _(
     "Inflicts more damage when\n"
@@ -20216,7 +20233,7 @@ static const u8 sMachPunchDescription[] = _(
 
 static const u8 sScaryFaceDescription[] = _(
     "Frightens with a scary face\n"
-    "to sharply reduce SPEED.");
+    "to sharply reduce Speed.");
 
 static const u8 sFaintAttackDescription[] = _(
     "Draws the foe close, then\n"
@@ -20227,7 +20244,7 @@ static const u8 sSweetKissDescription[] = _(
     "look. May cause confusion.");
 
 static const u8 sBellyDrumDescription[] = _(
-    "Maximizes ATTACK while\n"
+    "Maximizes Attack while\n"
     "sacrificing HP.");
 
 static const u8 sSludgeBombDescription[] = _(
@@ -20259,12 +20276,12 @@ static const u8 sDestinyBondDescription[] = _(
     "is also made to faint.");
 
 static const u8 sPerishSongDescription[] = _(
-    "Any POKéMON hearing this\n"
+    "Any Pokémon hearing this\n"
     "song faints in 3 turns.");
 
 static const u8 sIcyWindDescription[] = _(
     "A chilling attack that\n"
-    "lowers the foe's SPEED.");
+    "lowers the foe's Speed.");
 
 static const u8 sDetectDescription[] = _(
     "Evades attack, but may fail\n"
@@ -20292,11 +20309,11 @@ static const u8 sGigaDrainDescription[] = _(
 
 static const u8 sEndureDescription[] = _(
     "Endures any attack for\n"
-    "1 turn, leaving at least 1HP.");
+    "1 turn, leaving at least 1 HP.");
 
 static const u8 sCharmDescription[] = _(
     "Charms the foe and sharply\n"
-    "reduces its ATTACK.");
+    "reduces its Attack.");
 
 static const u8 sRolloutDescription[] = _(
     "An attack lasting 5 turns\n"
@@ -20308,7 +20325,7 @@ static const u8 sFalseSwipeDescription[] = _(
 
 static const u8 sSwaggerDescription[] = _(
     "Confuses the foe, but also\n"
-    "sharply raises ATTACK.");
+    "sharply raises Attack.");
 
 static const u8 sMilkDrinkDescription[] = _(
     "Recovers up to half the\n"
@@ -20352,7 +20369,7 @@ static const u8 sPresentDescription[] = _(
 
 static const u8 sFrustrationDescription[] = _(
     "An attack that is stronger\n"
-    "if the TRAINER is disliked.");
+    "if the Trainer is disliked.");
 
 static const u8 sSafeguardDescription[] = _(
     "A mystical force prevents\n"
@@ -20404,11 +20421,11 @@ static const u8 sSweetScentDescription[] = _(
 
 static const u8 sIronTailDescription[] = _(
     "Attacks with a rock-hard\n"
-    "tail. May lower DEFENSE.");
+    "tail. May lower Defense.");
 
 static const u8 sMetalClawDescription[] = _(
     "A claw attack that may\n"
-    "raise the user's ATTACK.");
+    "raise the user's Attack.");
 
 static const u8 sVitalThrowDescription[] = _(
     "Makes the user's move last,\n"
@@ -20439,16 +20456,16 @@ static const u8 sTwisterDescription[] = _(
     "to tear at the foe.");
 
 static const u8 sRainDanceDescription[] = _(
-    "Boosts the power of WATER-\n"
+    "Boosts the power of Water-\n"
     "type moves for 5 turns.");
 
 static const u8 sSunnyDayDescription[] = _(
-    "Boosts the power of FIRE-\n"
+    "Boosts the power of Fire-\n"
     "type moves for 5 turns.");
 
 static const u8 sCrunchDescription[] = _(
     "Crunches with sharp fangs.\n"
-    "May lower DEFENSE.");
+    "May lower Defense.");
 
 static const u8 sMirrorCoatDescription[] = _(
     "Counters the foe's special\n"
@@ -20468,7 +20485,7 @@ static const u8 sAncientPowerDescription[] = _(
 
 static const u8 sShadowBallDescription[] = _(
     "Hurls a black blob that may\n"
-    "lower the foe's SP. DEF.");
+    "lower the foe's Sp. Def.");
 
 static const u8 sFutureSightDescription[] = _(
     "Heightens inner power to\n"
@@ -20476,14 +20493,14 @@ static const u8 sFutureSightDescription[] = _(
 
 static const u8 sRockSmashDescription[] = _(
     "A rock-crushing attack\n"
-    "that may lower DEFENSE.");
+    "that may lower Defense.");
 
 static const u8 sWhirlpoolDescription[] = _(
     "Traps and hurts the foe in\n"
     "a whirlpool for 2 to 5 turns.");
 
 static const u8 sBeatUpDescription[] = _(
-    "Summons party POKéMON to\n"
+    "Summons party Pokémon to\n"
     "join in the attack.");
 
 static const u8 sFakeOutDescription[] = _(
@@ -20520,7 +20537,7 @@ static const u8 sTormentDescription[] = _(
 
 static const u8 sFlatterDescription[] = _(
     "Confuses the foe, but\n"
-    "raises its SP. ATK.");
+    "raises its Sp. Atk.");
 
 static const u8 sWillOWispDescription[] = _(
     "Inflicts a burn on the foe\n"
@@ -20531,7 +20548,7 @@ static const u8 sMementoDescription[] = _(
     "the foe's abilities.");
 
 static const u8 sFacadeDescription[] = _(
-    "Boosts ATTACK when burned,\n"
+    "Boosts Attack when burned,\n"
     "paralyzed, or poisoned.");
 
 static const u8 sFocusPunchDescription[] = _(
@@ -20600,7 +20617,7 @@ static const u8 sRevengeDescription[] = _(
 
 static const u8 sBrickBreakDescription[] = _(
     "Destroys barriers such as\n"
-    "REFLECT and causes damage.");
+    "Refelct and causes damage.");
 
 static const u8 sYawnDescription[] = _(
     "Lulls the foe into yawning,\n"
@@ -20651,27 +20668,27 @@ static const u8 sArmThrustDescription[] = _(
     "strike the foe 2 to 5 times.");
 
 static const u8 sCamouflageDescription[] = _(
-    "Alters the POKéMON's type\n"
+    "Alters the Pokémon's type\n"
     "depending on the location.");
 
 static const u8 sTailGlowDescription[] = _(
     "Flashes a light that sharply\n"
-    "raises SP. ATK.");
+    "raises Sp. Atk.");
 
 static const u8 sLusterPurgeDescription[] = _(
     "Attacks with a burst of\n"
-    "light. May lower SP. DEF.");
+    "light. May lower Sp. Def.");
 
 static const u8 sMistBallDescription[] = _(
     "Attacks with a flurry of\n"
-    "down. May lower SP. ATK.");
+    "down. May lower Sp. Atk.");
 
 static const u8 sFeatherDanceDescription[] = _(
     "Envelops the foe with down\n"
-    "to sharply reduce ATTACK.");
+    "to sharply reduce Attack.");
 
 static const u8 sTeeterDanceDescription[] = _(
-    "Confuses all POKéMON on\n"
+    "Confuses all Pokémon on\n"
     "the scene.");
 
 static const u8 sBlazeKickDescription[] = _(
@@ -20704,7 +20721,7 @@ static const u8 sPoisonFangDescription[] = _(
 
 static const u8 sCrushClawDescription[] = _(
     "Tears at the foe with sharp\n"
-    "claws. May lower DEFENSE.");
+    "claws. May lower Defense.");
 
 static const u8 sBlastBurnDescription[] = _(
     "Powerful, but leaves the\n"
@@ -20716,7 +20733,7 @@ static const u8 sHydroCannonDescription[] = _(
 
 static const u8 sMeteorMashDescription[] = _(
     "Fires a meteor-like punch.\n"
-    "May raise ATTACK.");
+    "May raise Attack.");
 
 static const u8 sAstonishDescription[] = _(
     "An attack that may shock\n"
@@ -20732,7 +20749,7 @@ static const u8 sAromatherapyDescription[] = _(
 
 static const u8 sFakeTearsDescription[] = _(
     "Feigns crying to sharply\n"
-    "lower the foe's SP. DEF.");
+    "lower the foe's Sp. Def.");
 
 static const u8 sAirCutterDescription[] = _(
     "Hacks with razorlike wind.\n"
@@ -20740,7 +20757,7 @@ static const u8 sAirCutterDescription[] = _(
 
 static const u8 sOverheatDescription[] = _(
     "Allows a full-power attack,\n"
-    "but sharply lowers SP. ATK.");
+    "but sharply lowers Sp. Atk.");
 
 static const u8 sOdorSleuthDescription[] = _(
     "Negates the foe's efforts\n"
@@ -20748,7 +20765,7 @@ static const u8 sOdorSleuthDescription[] = _(
 
 static const u8 sRockTombDescription[] = _(
     "Stops the foe from moving\n"
-    "with rocks and cuts SPEED.");
+    "with rocks and cuts Speed.");
 
 static const u8 sSilverWindDescription[] = _(
     "A powdery attack that may\n"
@@ -20756,7 +20773,7 @@ static const u8 sSilverWindDescription[] = _(
 
 static const u8 sMetalSoundDescription[] = _(
     "Emits a horrible screech\n"
-    "that sharply lowers SP. DEF.");
+    "that sharply lowers Sp. Def.");
 
 static const u8 sGrassWhistleDescription[] = _(
     "Lulls the foe into sleep\n"
@@ -20764,10 +20781,10 @@ static const u8 sGrassWhistleDescription[] = _(
 
 static const u8 sTickleDescription[] = _(
     "Makes the foe laugh to\n"
-    "lower ATTACK and DEFENSE.");
+    "lower Attack and Defense.");
 
 static const u8 sCosmicPowerDescription[] = _(
-    "Raises DEFENSE and SP. DEF\n"
+    "Raises Defense and Sp. Def\n"
     "with a mystic power.");
 
 static const u8 sWaterSpoutDescription[] = _(
@@ -20816,7 +20833,7 @@ static const u8 sIcicleSpearDescription[] = _(
 
 static const u8 sIronDefenseDescription[] = _(
     "Hardens the body's surface\n"
-    "to sharply raise DEFENSE.");
+    "to sharply raise Defense.");
 
 static const u8 sBlockDescription[] = _(
     "Blocks the foe's way to\n"
@@ -20824,7 +20841,7 @@ static const u8 sBlockDescription[] = _(
 
 static const u8 sHowlDescription[] = _(
     "Howls to raise the spirit\n"
-    "and boosts ATTACK.");
+    "and boosts Attack.");
 
 static const u8 sDragonClawDescription[] = _(
     "Slashes the foe with sharp\n"
@@ -20836,7 +20853,7 @@ static const u8 sFrenzyPlantDescription[] = _(
 
 static const u8 sBulkUpDescription[] = _(
     "Bulks up the body to boost\n"
-    "both ATTACK and DEFENSE.");
+    "both Attack and Defense.");
 
 static const u8 sBounceDescription[] = _(
     "Bounces up, then down the\n"
@@ -20844,7 +20861,7 @@ static const u8 sBounceDescription[] = _(
 
 static const u8 sMudShotDescription[] = _(
     "Hurls mud at the foe and\n"
-    "reduces SPEED.");
+    "reduces Speed.");
 
 static const u8 sPoisonTailDescription[] = _(
     "Has a high critical-hit\n"
@@ -20867,7 +20884,7 @@ static const u8 sWaterSportDescription[] = _(
     "raise resistance to fire.");
 
 static const u8 sCalmMindDescription[] = _(
-    "Raises SP. ATK and SP. DEF\n"
+    "Raises Sp. Atk and Sp. Def\n"
     "by focusing the mind.");
 
 static const u8 sLeafBladeDescription[] = _(
@@ -20876,7 +20893,7 @@ static const u8 sLeafBladeDescription[] = _(
 
 static const u8 sDragonDanceDescription[] = _(
     "A mystical dance that ups\n"
-    "ATTACK and SPEED.");
+    "Attack and Speed.");
 
 static const u8 sRockBlastDescription[] = _(
     "Hurls boulders at the foe\n"
@@ -20896,7 +20913,7 @@ static const u8 sDoomDesireDescription[] = _(
 
 static const u8 sPsychoBoostDescription[] = _(
     "Allows a full-power attack,\n"
-    "but sharply lowers SP. ATK.");
+    "but sharply lowers Sp. Atk.");
 
 static const u8 sROOSTDescription[] = _(
     "Restores the user's HP by\n"
@@ -20907,8 +20924,8 @@ static const u8 sGRAVITYDescription[] = _(
     "negating levitation.");
 
 static const u8 sMIRACLE_EYEDescription[] = _(
-    "Makes GHOSTS and evasive\n"
-    "foes easier to hit.");
+    "Makes Ghost-types and\n"
+    "evasive foes easier to hit.");
 
 static const u8 sWAKE_UP_SLAPDescription[] = _(
     "Powerful against sleeping\n"
@@ -21199,7 +21216,7 @@ static const u8 sDEFOGDescription[] = _(
     "lowers evasion.");
 
 static const u8 sTRICK_ROOMDescription[] = _(
-    "Slower POKéMON get to move\n"
+    "Slower Pokémon get to move\n"
     "first for 5 turns.");
 
 static const u8 sDRACO_METEORDescription[] = _(
@@ -21266,7 +21283,7 @@ static const u8 sAQUA_JETDescription[] = _(
     "Strikes first by dashing\n"
     "at the foe at a high speed.");
 
-static const u8 sATTACK_ORDERDescription[] = _(
+static const u8 sAttack_ORDERDescription[] = _(
     "Underlings pummel the foe.\n"
     "High critical-hit ratio.");
 
@@ -21664,7 +21681,7 @@ static const u8 sBELCHDescription[] = _(
 
 static const u8 sROTOTILLERDescription[] = _(
     "Ups the Attack and Sp. Atk\n"
-    "of Grass-type POKéMON.");
+    "of Grass-type Pokémon.");
 
 static const u8 sSTICKY_WEBDescription[] = _(
     "Weaves a sticky net that\n"
@@ -21724,7 +21741,7 @@ static const u8 sCRAFTY_SHIELDDescription[] = _(
 
 static const u8 sFLOWER_SHIELDDescription[] = _(
     "Raises the Defense of\n"
-    "Grass-type POKéMON.");
+    "Grass-type Pokémon.");
 
 static const u8 sGRASSY_TERRAINDescription[] = _(
     "The ground turns to grass\n"
@@ -21796,7 +21813,7 @@ static const u8 sSPIKY_SHIELDDescription[] = _(
 
 static const u8 sAROMATIC_MISTDescription[] = _(
     "Raises the Sp. Def of a\n"
-    "partner POKéMON.");
+    "partner Pokémon.");
 
 static const u8 sEERIE_IMPULSEDescription[] = _(
     "Exposes the foe to a pulse\n"
@@ -21912,7 +21929,7 @@ static const u8 sSPARKLING_ARIADescription[] = _(
 
 static const u8 sICE_HAMMERDescription[] = _(
     "Swings the fist to strike.\n"
-    "Lowers the user's SPEED.");
+    "Lowers the user's Speed.");
 
 static const u8 sFLORAL_HEALINGDescription[] = _(
     "Restores an ally's HP.\n"
@@ -21936,7 +21953,7 @@ static const u8 sLEAFAGEDescription[] = _(
 
 static const u8 sSPOTLIGHTDescription[] = _(
     "Makes the foe attack the\n"
-    "spotlighted POKéMON.");
+    "spotlighted Pokémon.");
 
 static const u8 sTOXIC_THREADDescription[] = _(
     "Attacks with a thread that\n"
@@ -22249,7 +22266,7 @@ static const u8 sBEHEMOTH_BASHDescription[] = _(
 
 static const u8 sAURA_WHEELDescription[] = _(
     "Raises Speed to attack. The\n"
-    "Type is based on its form.");
+    "type is based on its form.");
 
 static const u8 sBREAKING_SWIPEDescription[] = _(
     "Swings its tail to attack.\n"
@@ -22850,7 +22867,7 @@ const u8 *const gMoveDescriptionPointers[747 - 1] =
     [451 - 1] = sCHARGE_BEAMDescription,
     [452 - 1] = sWOOD_HAMMERDescription,
     [453 - 1] = sAQUA_JETDescription,
-    [454 - 1] = sATTACK_ORDERDescription,
+    [454 - 1] = sAttack_ORDERDescription,
     [455 - 1] = sDEFEND_ORDERDescription,
     [456 - 1] = sHEAL_ORDERDescription,
     [457 - 1] = sHEAD_SMASHDescription,
@@ -23147,33 +23164,33 @@ const u8 *const gMoveDescriptionPointers[747 - 1] =
     [746 - 1] = sSURGING_STRIKESDescription,
 
 };
-# 306 "src/pokemon_summary_screen.c" 2
+# 307 "src/pokemon_summary_screen.c" 2
 # 1 "src/data/text/nature_names.h" 1
-static const u8 sHardyNatureName[] = _("HARDY");
-static const u8 sLonelyNatureName[] = _("LONELY");
-static const u8 sBraveNatureName[] = _("BRAVE");
-static const u8 sAdamantNatureName[] = _("ADAMANT");
-static const u8 sNaughtyNatureName[] = _("NAUGHTY");
-static const u8 sBoldNatureName[] = _("BOLD");
-static const u8 sDocileNatureName[] = _("DOCILE");
-static const u8 sRelaxedNatureName[] = _("RELAXED");
-static const u8 sImpishNatureName[] = _("IMPISH");
-static const u8 sLaxNatureName[] = _("LAX");
-static const u8 sTimidNatureName[] = _("TIMID");
-static const u8 sHastyNatureName[] = _("HASTY");
-static const u8 sSeriousNatureName[] = _("SERIOUS");
-static const u8 sJollyNatureName[] = _("JOLLY");
-static const u8 sNaiveNatureName[] = _("NAIVE");
-static const u8 sModestNatureName[] = _("MODEST");
-static const u8 sMildNatureName[] = _("MILD");
-static const u8 sQuietNatureName[] = _("QUIET");
-static const u8 sBashfulNatureName[] = _("BASHFUL");
-static const u8 sRashNatureName[] = _("RASH");
-static const u8 sCalmNatureName[] = _("CALM");
-static const u8 sGentleNatureName[] = _("GENTLE");
-static const u8 sSassyNatureName[] = _("SASSY");
-static const u8 sCarefulNatureName[] = _("CAREFUL");
-static const u8 sQuirkyNatureName[] = _("QUIRKY");
+static const u8 sHardyNatureName[] = _("Hardy");
+static const u8 sLonelyNatureName[] = _("Lonely");
+static const u8 sBraveNatureName[] = _("Brave");
+static const u8 sAdamantNatureName[] = _("Adamant");
+static const u8 sNaughtyNatureName[] = _("Naughty");
+static const u8 sBoldNatureName[] = _("Bold");
+static const u8 sDocileNatureName[] = _("Docile");
+static const u8 sRelaxedNatureName[] = _("Relaxed");
+static const u8 sImpishNatureName[] = _("Impish");
+static const u8 sLaxNatureName[] = _("Lax");
+static const u8 sTimidNatureName[] = _("Timid");
+static const u8 sHastyNatureName[] = _("Hasty");
+static const u8 sSeriousNatureName[] = _("Serious");
+static const u8 sJollyNatureName[] = _("Jolly");
+static const u8 sNaiveNatureName[] = _("Naive");
+static const u8 sModestNatureName[] = _("Modest");
+static const u8 sMildNatureName[] = _("Mild");
+static const u8 sQuietNatureName[] = _("Quiet");
+static const u8 sBashfulNatureName[] = _("Bashful");
+static const u8 sRashNatureName[] = _("Rash");
+static const u8 sCalmNatureName[] = _("Calm");
+static const u8 sGentleNatureName[] = _("Gentle");
+static const u8 sSassyNatureName[] = _("Sassy");
+static const u8 sCarefulNatureName[] = _("Careful");
+static const u8 sQuirkyNatureName[] = _("Quirkly");
 
 const u8 *const gNatureNamePointers[25] =
 {
@@ -23203,7 +23220,7 @@ const u8 *const gNatureNamePointers[25] =
     [23] = sCarefulNatureName,
     [24] = sQuirkyNatureName,
 };
-# 307 "src/pokemon_summary_screen.c" 2
+# 308 "src/pokemon_summary_screen.c" 2
 
 static const struct BgTemplate sBgTemplates[] =
 {
@@ -23611,6 +23628,8 @@ static void (*const sTextPrinterTasks[])(u8 taskId) =
 };
 
 static const u8 sMemoNatureTextColor[] = _("{COLOR LIGHT_RED}{SHADOW GREEN}");
+static const u8 sMemoHiddenNatureTextColor[] = _(" ({COLOR BLUE}{SHADOW DARK_GREY}");
+static const u8 sText_EndParentheses[] = _("{COLOR WHITE}{SHADOW DARK_GREY})");
 static const u8 sMemoMiscTextColor[] = _("{COLOR WHITE}{SHADOW DARK_GREY}");
 static const u8 sStatsLeftColumnLayout[] = _("{DYNAMIC 0}/{DYNAMIC 1}\n{DYNAMIC 2}\n{DYNAMIC 3}");
 static const u8 sStatsLeftColumnLayoutIVEV[] = _("{DYNAMIC 0}\n{DYNAMIC 1}\n{DYNAMIC 2}");
@@ -24386,7 +24405,8 @@ static bool8 ExtractMonDataToSummaryStruct(struct Pokemon *mon)
     case 2:
         if (sMonSummaryScreen->monList.mons == gPlayerParty || sMonSummaryScreen->mode == PSS_MODE_BOX || sMonSummaryScreen->unk40EF == 1)
         {
-            sum->nature = GetNature(mon);
+            sum->nature = GetNature(mon, 0);
+   sum->hiddenNature = GetMonData(mon, 89);
             sum->currentHP = GetMonData(mon, 57);
             sum->maxHP = GetMonData(mon, 58);
             sum->atk = GetMonData(mon, 59);
@@ -24397,7 +24417,8 @@ static bool8 ExtractMonDataToSummaryStruct(struct Pokemon *mon)
         }
         else
         {
-            sum->nature = GetNature(mon);
+            sum->nature = GetNature(mon, 0);
+            sum->hiddenNature = GetMonData(mon, 89);
             sum->currentHP = GetMonData(mon, 57);
             sum->maxHP = GetMonData(mon, 58);
             sum->atk = GetMonData(mon, 84);
@@ -26081,6 +26102,13 @@ static void BufferMonTrainerMemo(void)
     DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, sMemoMiscTextColor);
     BufferNatureString();
 
+ if (sum->hiddenNature != 26)
+    {
+        DynamicPlaceholderTextUtil_SetPlaceholderPtr(5, sMemoHiddenNatureTextColor);
+        DynamicPlaceholderTextUtil_SetPlaceholderPtr(6, gNatureNamePointers[sum->hiddenNature]);
+        DynamicPlaceholderTextUtil_SetPlaceholderPtr(7, sText_EndParentheses);
+    }
+
     if (InBattleFactory() == 1 || InSlateportBattleTent() == 1 || IsInGamePartnerMon() == 1)
     {
         DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, gText_XNature);
@@ -26346,6 +26374,24 @@ static void PrintRibbonCount(void)
     PrintTextOnWindow(AddWindowFromTemplateList(sPageSkillsTemplate, 1), text, x, 1, 0, 0);
 }
 
+static void BufferStat(u8 *dst, s8 natureMod, u32 stat, u32 strId, u32 n)
+{
+    static const u8 sTextNatureDown[] = _("{COLOR}{08}");
+    static const u8 sTextNatureUp[] = _("{COLOR}{05}");
+    static const u8 sTextNatureNeutral[] = _("{COLOR}{01}");
+    u8 *txtPtr;
+
+    if (natureMod == 0)
+        txtPtr = StringCopy(dst, sTextNatureNeutral);
+    else if (natureMod > 0)
+        txtPtr = StringCopy(dst, sTextNatureUp);
+    else
+        txtPtr = StringCopy(dst, sTextNatureDown);
+
+ ConvertIntToDecimalStringN(txtPtr, stat, STR_CONV_MODE_RIGHT_ALIGN, n);
+    DynamicPlaceholderTextUtil_SetPlaceholderPtr(strId, dst);
+}
+
 static void BufferIvOrEvStats(u8 mode)
 {
     u16 hp, hp2, atk, def, spA, spD, spe;
@@ -26392,43 +26438,30 @@ static void BufferIvOrEvStats(u8 mode)
     {
     case 0:
     case 1:
-        ConvertIntToDecimalStringN(gStringVar1, hp, STR_CONV_MODE_RIGHT_ALIGN, 7);
-        ConvertIntToDecimalStringN(gStringVar2, atk, STR_CONV_MODE_RIGHT_ALIGN, 7);
-        ConvertIntToDecimalStringN(gStringVar3, def, STR_CONV_MODE_RIGHT_ALIGN, 7);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gStringVar1);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, gStringVar2);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, gStringVar3);
+        BufferStat(gStringVar1, 0, hp, 0, 7);
+        BufferStat(gStringVar2, 0, atk, 1, 7);
+        BufferStat(gStringVar3, 0, def, 2, 7);
         DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sStatsLeftColumnLayoutIVEV);
         PrintLeftColumnStats();
 
-        ConvertIntToDecimalStringN(gStringVar1, spA, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        ConvertIntToDecimalStringN(gStringVar2, spD, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        ConvertIntToDecimalStringN(gStringVar3, spe, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gStringVar1);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, gStringVar2);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, gStringVar3);
+        BufferStat(gStringVar1, 0, spA, 0, 3);
+        BufferStat(gStringVar2, 0, spD, 1, 3);
+        BufferStat(gStringVar3, 0, spe, 2, 3);
         DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sStatsRightColumnLayout);
         PrintRightColumnStats();
         break;
     case 2:
     default:
-        ConvertIntToDecimalStringN(currHPString, hp, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        ConvertIntToDecimalStringN(gStringVar1, hp2, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        ConvertIntToDecimalStringN(gStringVar2, atk, STR_CONV_MODE_RIGHT_ALIGN, 7);
-        ConvertIntToDecimalStringN(gStringVar3, def, STR_CONV_MODE_RIGHT_ALIGN, 7);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, currHPString);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, gStringVar1);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, gStringVar2);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(3, gStringVar3);
+        BufferStat(currHPString, 0, hp, 0, 3);
+        BufferStat(gStringVar1, 0, hp2, 1, 3);
+        BufferStat(gStringVar2, natureMod[1 - 1], atk, 2, 7);
+        BufferStat(gStringVar3, natureMod[2 - 1], def, 3, 7);
         DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sStatsLeftColumnLayout);
         PrintLeftColumnStats();
 
-        ConvertIntToDecimalStringN(gStringVar1, spA, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        ConvertIntToDecimalStringN(gStringVar2, spD, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        ConvertIntToDecimalStringN(gStringVar3, spe, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gStringVar1);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, gStringVar2);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, gStringVar3);
+        BufferStat(gStringVar1, natureMod[4 - 1], spA, 0, 3);
+        BufferStat(gStringVar2, natureMod[5 - 1], spD, 1, 3);
+        BufferStat(gStringVar3, natureMod[3 - 1], spe, 2, 3);
         DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sStatsRightColumnLayout);
         PrintRightColumnStats();
         break;
@@ -26439,21 +26472,18 @@ static void BufferIvOrEvStats(u8 mode)
 
 static void BufferLeftColumnStats(void)
 {
-    u8 *currentHPString = Alloc(8);
-    u8 *maxHPString = Alloc(8);
-    u8 *attackString = Alloc(8);
-    u8 *defenseString = Alloc(8);
-
-    ConvertIntToDecimalStringN(currentHPString, sMonSummaryScreen->summary.currentHP, STR_CONV_MODE_RIGHT_ALIGN, 3);
-    ConvertIntToDecimalStringN(maxHPString, sMonSummaryScreen->summary.maxHP, STR_CONV_MODE_RIGHT_ALIGN, 3);
-    ConvertIntToDecimalStringN(attackString, sMonSummaryScreen->summary.atk, STR_CONV_MODE_RIGHT_ALIGN, 7);
-    ConvertIntToDecimalStringN(defenseString, sMonSummaryScreen->summary.def, STR_CONV_MODE_RIGHT_ALIGN, 7);
+    u8 *currentHPString = Alloc(20);
+    u8 *maxHPString = Alloc(20);
+    u8 *attackString = Alloc(20);
+    u8 *defenseString = Alloc(20);
+    const s8 *natureMod = gNatureStatTable[
+      (sMonSummaryScreen->summary.hiddenNature == 26) ? sMonSummaryScreen->summary.nature : sMonSummaryScreen->summary.hiddenNature];
 
     DynamicPlaceholderTextUtil_Reset();
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, currentHPString);
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, maxHPString);
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, attackString);
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(3, defenseString);
+ BufferStat(currentHPString, 0, sMonSummaryScreen->summary.currentHP, 0, 3);
+    BufferStat(maxHPString, 0, sMonSummaryScreen->summary.maxHP, 1, 3);
+    BufferStat(attackString, natureMod[1 - 1], sMonSummaryScreen->summary.atk, 2, 7);
+    BufferStat(defenseString, natureMod[2 - 1], sMonSummaryScreen->summary.def, 3, 7);
     DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sStatsLeftColumnLayout);
 
     Free(currentHPString);
@@ -26469,14 +26499,13 @@ static void PrintLeftColumnStats(void)
 
 static void BufferRightColumnStats(void)
 {
-    ConvertIntToDecimalStringN(gStringVar1, sMonSummaryScreen->summary.spatk, STR_CONV_MODE_RIGHT_ALIGN, 3);
-    ConvertIntToDecimalStringN(gStringVar2, sMonSummaryScreen->summary.spdef, STR_CONV_MODE_RIGHT_ALIGN, 3);
-    ConvertIntToDecimalStringN(gStringVar3, sMonSummaryScreen->summary.speed, STR_CONV_MODE_RIGHT_ALIGN, 3);
+ const s8 *natureMod = gNatureStatTable[
+      (sMonSummaryScreen->summary.hiddenNature == 26) ? sMonSummaryScreen->summary.nature : sMonSummaryScreen->summary.hiddenNature];
 
     DynamicPlaceholderTextUtil_Reset();
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gStringVar1);
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, gStringVar2);
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, gStringVar3);
+ BufferStat(gStringVar1, natureMod[4 - 1], sMonSummaryScreen->summary.spatk, 0, 3);
+    BufferStat(gStringVar2, natureMod[5 - 1], sMonSummaryScreen->summary.spdef, 1, 3);
+    BufferStat(gStringVar3, natureMod[3 - 1], sMonSummaryScreen->summary.speed, 2, 3);
     DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sStatsRightColumnLayout);
 }
 

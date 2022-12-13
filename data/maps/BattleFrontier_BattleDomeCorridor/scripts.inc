@@ -45,108 +45,108 @@ BattleFrontier_BattleDomeCorridor_EventScript_WarpToPreBattleRoom:: @ 824B18F
 	end
 
 BattleFrontier_BattleDomeCorridor_Movement_PlayerWalkToDoorLv50: @ 824B1A1
-	walk_up
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
+	walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
 	walk_in_place_fastest_up
 	step_end
 
 BattleFrontier_BattleDomeCorridor_Movement_PlayerEnterDoorLv50: @ 824B1AE
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
 	set_invisible
 	step_end
 
 BattleFrontier_BattleDomeCorridor_Movement_AttendantWalkToDoorLv50: @ 824B1B2
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
 	step_end
 
 BattleFrontier_BattleDomeCorridor_Movement_AttendantEnterDoorLv50: @ 824B1BE
-	walk_up
+	walk_fast_up
 	set_invisible
 	step_end
 
 BattleFrontier_BattleDomeCorridor_Movement_PlayerWalkToDoorLvOpen: @ 824B1C1
-	walk_up
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
+	walk_fast_up
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
 	walk_in_place_fastest_up
 	step_end
 
 BattleFrontier_BattleDomeCorridor_Movement_PlayerEnterDoorLvOpen: @ 824B1D2
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
 	set_invisible
 	step_end
 
 BattleFrontier_BattleDomeCorridor_Movement_AttendantWalkToDoorLvOpen: @ 824B1D6
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_up
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_up
 	step_end
 
 BattleFrontier_BattleDomeCorridor_Movement_AttendantEnterDoorLvOpen: @ 824B1E6
-	walk_up
+	walk_fast_up
 	set_invisible
 	step_end
 
 @ Unused
 BattleFrontier_BattleDomeCorridor_Movement_WalkToBattleRoomMidRight: @ 824B1E9
-	walk_up
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
 	set_invisible
 	step_end

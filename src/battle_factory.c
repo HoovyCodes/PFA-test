@@ -97,7 +97,7 @@ static const u16 sMoves_SlowAndSteady[] =
 
 static const u16 sMoves_DependsOnTheBattlesFlow[] =
 {
-    MOVE_SANDSTORM, MOVE_RAIN_DANCE, MOVE_SUNNY_DAY, MOVE_HAIL, MOVE_WEATHER_BALL,
+    MOVE_SANDSTORM, MOVE_RAIN_DANCE, MOVE_SUNNY_DAY, MOVE_HAIL, MOVE_WEATHER_BALL, MOVE_GRASSY_TERRAIN, MOVE_ELECTRIC_TERRAIN, MOVE_PSYCHIC_TERRAIN, MOVE_MISTY_TERRAIN,
     MOVE_NONE
 };
 
@@ -161,20 +161,20 @@ static const u8 sFixedIVTable[][2] =
 static const u16 sInitialRentalMonRanges[][2] =
 {
     // Level 50
-    {FRONTIER_MON_ALTARIA_1,  FRONTIER_MON_SILVALLY},   //ZU-ZUBL
-    {FRONTIER_MON_ALTARIA_1,  FRONTIER_MON_TAUROS_2}, 	//ZU-PUBL
-    {FRONTIER_MON_ABOMASNOW_1,  FRONTIER_MON_VILEPLUME_1}, // PU-NUBL
-    {FRONTIER_MON_ABOMASNOW_1,  FRONTIER_MON_ZOROARK_2},  // PU-RUBL
-    {FRONTIER_MON_ABOMASNOW_MEGA_1,  FRONTIER_MON_WEAVILE_2},  // NU-UUBL
-    {FRONTIER_MON_AMPHAROS_MEGA_1,  FRONTIER_MON_WEAVILE_2},  // RU-UUBL
+    {FRONTIER_MON_ALTARIA_1,  FRONTIER_MON_REGICE},   //ZU-ZUBL
+    {FRONTIER_MON_ALTARIA_1,  FRONTIER_MON_REGIROCK}, 	//ZU-PUBL
+    {FRONTIER_MON_ABOMASNOW_1,  FRONTIER_MON_MESPRIT}, // PU-NUBL
+    {FRONTIER_MON_ABOMASNOW_1,  FRONTIER_MON_TORNADUS},  // PU-RUBL
+    {FRONTIER_MON_ABOMASNOW_MEGA_1,  FRONTIER_MON_XURKITREE},  // NU-UUBL
+    {FRONTIER_MON_AMPHAROS_MEGA_1,  FRONTIER_MON_XURKITREE},  // RU-UUBL
     {FRONTIER_MON_AMPHAROS_MEGA_1,  NUM_FRONTIER_MONS - 1},  // RU-OU
     {FRONTIER_MON_AERODACTYL_MEGA_1,  NUM_FRONTIER_MONS - 1}, // UU-OU
 
 	// Open level
-	{FRONTIER_MON_ABOMASNOW_1,  FRONTIER_MON_ZOROARK_2},  // PU-RUBL
-    {FRONTIER_MON_ABOMASNOW_MEGA_1,  FRONTIER_MON_WEAVILE_2},  // NU-UUBL
-	{FRONTIER_MON_ABOMASNOW_MEGA_1,  FRONTIER_MON_WEAVILE_2},  // NU-UUBL
-    {FRONTIER_MON_AMPHAROS_MEGA_1,  FRONTIER_MON_WEAVILE_2},  // RU-UUBL
+	{FRONTIER_MON_ABOMASNOW_1,  FRONTIER_MON_TORNADUS},  // PU-RUBL
+    {FRONTIER_MON_ABOMASNOW_MEGA_1,  FRONTIER_MON_TORNADUS},  // NU-RUBL
+	{FRONTIER_MON_ABOMASNOW_MEGA_1,  FRONTIER_MON_XURKITREE},  // NU-UUBL
+    {FRONTIER_MON_AMPHAROS_MEGA_1,  FRONTIER_MON_XURKITREE},  // RU-UUBL
     {FRONTIER_MON_AMPHAROS_MEGA_1,  NUM_FRONTIER_MONS - 1},  // RU-OU
 	{FRONTIER_MON_AMPHAROS_MEGA_1,  NUM_FRONTIER_MONS - 1},  // RU-OU
     {FRONTIER_MON_AERODACTYL_MEGA_1,  NUM_FRONTIER_MONS - 1}, // UU-OU
@@ -379,7 +379,7 @@ static void SetRentalsToOpponentParty(void)
         gSaveBlock2Ptr->frontier.rentalMons[i + 3].monId = gFrontierTempParty[i];
         gSaveBlock2Ptr->frontier.rentalMons[i + 3].ivs = GetBoxMonData(&gEnemyParty[i].box, MON_DATA_ATK_IV, NULL);
         gSaveBlock2Ptr->frontier.rentalMons[i + 3].personality = GetMonData(&gEnemyParty[i], MON_DATA_PERSONALITY, NULL);
-        gSaveBlock2Ptr->frontier.rentalMons[i + 3].abilityNum = GetBoxMonData(&gEnemyParty[i].box, MON_DATA_ABILITY_NUM, NULL);
+		SetMonData(&gEnemyParty[i], MON_DATA_ABILITY_NUM, &gFacilityTrainerMons[gFrontierTempParty[i]].abilityNum);
         SetMonData(&gEnemyParty[i], MON_DATA_HELD_ITEM, &gBattleFrontierHeldItems[gFacilityTrainerMons[gFrontierTempParty[i]].itemTableId]);
     }
 }
@@ -445,7 +445,7 @@ static void SetPlayerAndOpponentParties(void)
                 SetMonMoveAvoidReturn(&gPlayerParty[i], gFacilityTrainerMons[monId].moves[k], k);
             SetMonData(&gPlayerParty[i], MON_DATA_FRIENDSHIP, &friendship);
             SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &gBattleFrontierHeldItems[gFacilityTrainerMons[monId].itemTableId]);
-            SetMonData(&gPlayerParty[i], MON_DATA_ABILITY_NUM, &gSaveBlock2Ptr->frontier.rentalMons[i].abilityNum);
+            SetMonData(&gPlayerParty[i], MON_DATA_ABILITY_NUM, &gFacilityTrainerMons[monId].abilityNum);
         }
     }
 
@@ -484,7 +484,7 @@ static void SetPlayerAndOpponentParties(void)
             for (k = 0; k < MAX_MON_MOVES; k++)
                 SetMonMoveAvoidReturn(&gEnemyParty[i], gFacilityTrainerMons[monId].moves[k], k);
             SetMonData(&gEnemyParty[i], MON_DATA_HELD_ITEM, &gBattleFrontierHeldItems[gFacilityTrainerMons[monId].itemTableId]);
-            SetMonData(&gEnemyParty[i], MON_DATA_ABILITY_NUM, &gSaveBlock2Ptr->frontier.rentalMons[i + 3].abilityNum);
+            SetMonData(&gEnemyParty[i], MON_DATA_ABILITY_NUM, &gFacilityTrainerMons[monId].abilityNum);
         }
         break;
     }
@@ -850,13 +850,15 @@ u32 GetAiScriptsInBattleFactory(void)
         int challengeNum = gSaveBlock2Ptr->frontier.factoryWinStreaks[battleMode][lvlMode] / 7;
 
         if (gTrainerBattleOpponent_A == TRAINER_FRONTIER_BRAIN)
-            return AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY;
-        else if (challengeNum < 2)
-            return 0;
-        else if (challengeNum < 4)
-            return AI_SCRIPT_CHECK_BAD_MOVE;
+            return AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_HP_AWARE;
+        else if (challengeNum < 1)
+            return AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_HP_AWARE;
+        else if (challengeNum < 3)
+            return AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_HP_AWARE;
+		else if (challengeNum < 5)
+            return AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_HP_AWARE;
         else
-            return AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY;
+            return AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY | AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_HP_AWARE | AI_SCRIPT_PREFER_BATON_PASS;
     }
 }
 

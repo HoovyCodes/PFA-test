@@ -535,5 +535,18 @@ gSpecials:: @ 81DBA64
 	def_special RemoveRecordsWindow
 	def_special CloseDeptStoreElevatorWindow
 	def_special TrySetBattleTowerLinkType
+	def_special SetEv
+	def_special ClearEv
+	def_special SetIV
+	def_special SetNature
+	def_special ClearParty
 	def_special ScriptSetSeenPokedexInfo
 	def_special ScriptSetCaughtPokedexInfo
+	def_special CatchingContestValue
+	def_special CountSymbols
+	def_special doubleVar
+	def_special getintro
+	def_special swapAbility
+	def_special swapAbility2
+	def_special GetMysteryGifts
+	def_special SetFrontierBattlePoints

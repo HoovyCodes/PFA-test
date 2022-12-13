@@ -3460,8 +3460,6 @@ static void Task_LoadInfoScreen(u8 taskId)
         break;
     case 4:
         PrintMonInfo(sPokedexListItem->dexNum, sPokedexView->dexMode == DEX_MODE_HOENN ? FALSE : TRUE, sPokedexListItem->owned, 0);
-        if (!sPokedexListItem->owned)
-            LoadPalette(gPlttBufferUnfaded + 1, 0x31, 0x1E);
         CopyWindowToVram(WIN_INFO, 3);
         CopyBgTilemapBufferToVram(1);
         CopyBgTilemapBufferToVram(2);
@@ -3726,10 +3724,7 @@ static void Task_SwitchScreensFromAreaScreen(u8 taskId)
             gTasks[taskId].func = Task_LoadInfoScreen;
             break;
         case 2:
-            if (!sPokedexListItem->owned)
-                PlaySE(SE_FAILURE);
-            else
-                gTasks[taskId].func = Task_LoadStatsScreen;
+            gTasks[taskId].func = Task_LoadStatsScreen;    
             break;
         }
     }
@@ -3878,18 +3873,11 @@ static void Task_HandleCryScreenInput(u8 taskId)
         if ((JOY_NEW(DPAD_RIGHT))
          || ((JOY_NEW(R_BUTTON)) && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR))
         {
-            if (!sPokedexListItem->owned)
-            {
-                PlaySE(SE_FAILURE);
-            }
-            else
-            {
                 BeginNormalPaletteFade(0xFFFFFFEB, 0, 0, 0x10, RGB_BLACK);
                 m4aMPlayContinue(&gMPlayInfo_BGM);
                 sPokedexView->screenSwitchState = 3;
                 gTasks[taskId].func = Task_SwitchScreensFromCryScreen;
                 PlaySE(SE_DEX_PAGE);
-            }
             return;
         }
     }
@@ -4414,42 +4402,20 @@ static void PrintMonInfo(u32 num, u32 value, u32 owned, u32 newEntry)
     else
         name = sText_TenDashes2;
     PrintInfoScreenTextWhite(name, 157, 17); //HGSS_Ui
-    if (owned)
-    {
         CopyMonCategoryText(num, str2);
         category = str2;
-    }
-    else
-    {
-        category = gText_5MarksPokemon;
-    }
+
     PrintInfoScreenText(category, 123, 31); //HGSS_Ui
     PrintInfoScreenText(gText_HTHeight, 155, 64); //HGSS_Ui
     PrintInfoScreenText(gText_WTWeight, 155, 77); //HGSS_Ui
-    if (owned)
-    {
         PrintMonHeight(gPokedexEntries[num].height, 180, 64); //HGSS_Ui
         PrintMonWeight(gPokedexEntries[num].weight, 180, 77); //HGSS_Ui
-    }
-    else
-    {
-        PrintInfoScreenText(gText_UnkHeight, 180, 64); //HGSS_Ui
-        PrintInfoScreenText(gText_UnkWeight, 180, 77); //HGSS_Ui
-    }
-    if (owned)
-    {
         description = gPokedexEntries[num].description;
-    }
-    else
-        description = gExpandedPlaceholder_PokedexDescription;
+ 
     PrintInfoScreenText(description, GetStringCenterAlignXOffset(1, description, 0xF0), 93); //HGSS_Ui
-
-    //Type Icon(s) //HGSS_Ui
-    if (owned && !newEntry)
-    {
         description = gPokedexEntries[num].description;
         PrintCurrentSpeciesTypeInfo(); //HGSS_Ui
-    }
+
 }
 
 static void PrintMonHeight(u16 height, u8 left, u8 top)
@@ -5032,8 +4998,7 @@ static int DoPokedexSearch(u8 dexMode, u8 order, u8 abcGroup, u8 bodyColor, u8 t
         {
             for (i = 0, resultsCount = 0; i < sPokedexView->pokemonListCount; i++)
             {
-                if (sPokedexView->pokedexList[i].owned)
-                {
+
                     species = NationalPokedexNumToSpecies(sPokedexView->pokedexList[i].dexNum);
 
                     types[0] = gBaseStats[species].type1;
@@ -5043,15 +5008,14 @@ static int DoPokedexSearch(u8 dexMode, u8 order, u8 abcGroup, u8 bodyColor, u8 t
                         sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
                         resultsCount++;
                     }
-                }
+                
             }
         }
         else
         {
             for (i = 0, resultsCount = 0; i < sPokedexView->pokemonListCount; i++)
             {
-                if (sPokedexView->pokedexList[i].owned)
-                {
+ 
                     species = NationalPokedexNumToSpecies(sPokedexView->pokedexList[i].dexNum);
 
                     types[0] = gBaseStats[species].type1;
@@ -5061,7 +5025,7 @@ static int DoPokedexSearch(u8 dexMode, u8 order, u8 abcGroup, u8 bodyColor, u8 t
                         sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];
                         resultsCount++;
                     }
-                }
+                
             }
         }
         sPokedexView->pokemonListCount = resultsCount;
@@ -6201,16 +6165,12 @@ static void Task_HandleStatsScreenInput(u8 taskId)
 
     if ((JOY_NEW(DPAD_RIGHT) || (JOY_NEW(R_BUTTON) && gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_LR)))
     {
-        if (!sPokedexListItem->owned)
-            PlaySE(SE_FAILURE);
-        else
-        {
+
             sPokedexView->selectedScreen = AREA_SCREEN;
             BeginNormalPaletteFade(0xFFFFFFEB, 0, 0, 0x10, RGB_BLACK);
             sPokedexView->screenSwitchState = 2;
             gTasks[taskId].func = Task_SwitchScreensFromStatsScreen;
             PlaySE(SE_PIN);
-        }
     }
 
 }

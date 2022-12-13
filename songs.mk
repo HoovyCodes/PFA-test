@@ -41,6 +41,24 @@ $(MID_SUBDIR)/mus_b_pike.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_vs_trainer.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G119 -V080 -P1
+	
+$(MID_SUBDIR)/mus_vs_trainer_hgss.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V060 -P1
+
+$(MID_SUBDIR)/mus_vs_trainer_dppt.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G192 -V060 -P1
+	
+$(MID_SUBDIR)/mus_vs_trainer_bw.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V060 -P1
+
+$(MID_SUBDIR)/mus_vs_trainer_colo.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G194 -V060 -P1
+
+$(MID_SUBDIR)/mus_vs_trainer_brain_dppt.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G195 -V060 -P1
+	
+$(MID_SUBDIR)/mus_vs_leader_dppt.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G196 -V060 -P1
 
 $(MID_SUBDIR)/mus_vs_wild.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G117 -V080 -P1
@@ -750,6 +768,8 @@ $(MID_SUBDIR)/ph_nurse_held.s: %.s: %.mid
 $(MID_SUBDIR)/ph_nurse_solo.s: %.s: %.mid
 	$(MID) $< $@ -E -G130 -P4
 
+
+
 $(MID_SUBDIR)/ph_price_blend.s: %.s: %.mid
 	$(MID) $< $@ -E -G130 -P4
 
@@ -1262,3 +1282,4 @@ $(MID_SUBDIR)/se_m_leer.s: %.s: %.mid
 
 $(MID_SUBDIR)/se_dex_search.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G127 -v100 -P5
+

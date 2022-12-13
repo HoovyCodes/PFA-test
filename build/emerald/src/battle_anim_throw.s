@@ -3463,6 +3463,7 @@ SpriteCB_Ball_Capture_Step:
 	mov	r1, #0x0
 	strb	r1, [r0]
 	mov	r0, #0x1
+	mov	r1, #0x1
 	bl	UpdateOamPriorityInAllHealthboxes
 	bl	m4aMPlayAllStop
 	ldr	r0, .L320+0x4
@@ -4014,6 +4015,7 @@ SpriteCB_Ball_Release_Wait:
 	ldr	r0, .L372+0x18
 	strb	r6, [r0]
 	mov	r0, #0x1
+	mov	r1, #0x0
 	bl	UpdateOamPriorityInAllHealthboxes
 .L369:
 	pop	{r4, r5, r6, r7}
@@ -4125,6 +4127,7 @@ SpriteCB_Ball_Block_Step:
 	mov	r0, #0x0
 	strb	r0, [r1]
 	mov	r0, #0x1
+	mov	r1, #0x0
 	bl	UpdateOamPriorityInAllHealthboxes
 .L383:
 	pop	{r4}
@@ -6653,9 +6656,9 @@ Task_ShinyStars:
 	ldr	r0, [r0, #0x8]
 	ldrb	r0, [r0, #0xa]
 	cmp	r0, #0
-	beq	.LCB7098
+	beq	.LCB7101
 	b	.L629	@long jump
-.LCB7098:
+.LCB7101:
 	ldrh	r0, [r4, #0x1c]
 	add	r1, r0, #0x1
 	strh	r1, [r4, #0x1c]
@@ -6664,9 +6667,9 @@ Task_ShinyStars:
 	lsl	r1, r1, #0xa
 	and	r1, r1, r0
 	cmp	r1, #0
-	beq	.LCB7110
+	beq	.LCB7113
 	b	.L629	@long jump
-.LCB7110:
+.LCB7113:
 	ldrb	r0, [r4, #0x8]
 	mov	r8, r0
 	mov	r1, #0x0

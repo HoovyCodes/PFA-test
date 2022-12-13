@@ -124,6 +124,8 @@ SetDefaultOptions:
 	ldrb	r1, [r2, #0x14]
 	mov	r0, #0x7
 	and	r0, r0, r1
+	mov	r1, #0x10
+	orr	r0, r0, r1
 	strb	r0, [r2, #0x14]
 	ldr	r2, [r3]
 	ldrb	r0, [r2, #0x15]
@@ -272,13 +274,12 @@ ClearFrontierRecord:
 WarpToTruck:
 	push	{lr}
 	add	sp, sp, #-0x4
-	mov	r2, #0x1
-	neg	r2, r2
-	mov	r0, #0x42
+	mov	r0, #0x0
 	str	r0, [sp]
 	mov	r0, #0x1a
-	mov	r1, #0x4
-	mov	r3, #0x13
+	mov	r1, #0x32
+	mov	r2, #0x0
+	mov	r3, #0x0
 	bl	SetWarpDestination
 	bl	WarpIntoMap
 	add	sp, sp, #0x4
@@ -325,7 +326,7 @@ ResetMenuAndMonGlobals:
 	.type	 NewGameInitData,function
 	.thumb_func
 NewGameInitData:
-	push	{r4, r5, lr}
+	push	{r4, r5, r6, lr}
 	ldr	r0, .L38
 	ldrh	r0, [r0]
 	cmp	r0, #0
@@ -362,12 +363,12 @@ NewGameInitData:
 	bl	ResetGabbyAndTy
 	bl	ClearSecretBases
 	bl	ClearBerryTrees
-	ldr	r4, .L38+0xc
-	ldr	r0, [r4]
+	ldr	r6, .L38+0xc
+	ldr	r0, [r6]
 	mov	r1, #0x92
 	lsl	r1, r1, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L38+0x10
+	mov	r1, #0x0
 	bl	SetMoney
 	mov	r0, #0x0
 	bl	SetCoins
@@ -377,17 +378,25 @@ NewGameInitData:
 	bl	ClearPlayerLinkBattleRecords
 	bl	InitSeedotSizeRecord
 	bl	InitLotadSizeRecord
-	ldr	r0, .L38+0x14
+	ldr	r0, .L38+0x10
 	strb	r5, [r0]
 	bl	ZeroPlayerPartyMons
 	bl	ResetPokemonStorageSystem
 	bl	ClearRoamerData
 	bl	ClearRoamerLocationData
-	ldr	r0, [r4]
+	bl	ClearBag
+	ldr	r4, .L38+0x14
+	add	r0, r4, #0
+	mov	r1, #0x1
+	bl	AddBagItem
+	mov	r0, #0xde
+	lsl	r0, r0, #0x1
+	mov	r1, #0x1
+	bl	AddBagItem
+	ldr	r0, [r6]
 	ldr	r1, .L38+0x18
 	add	r0, r0, r1
-	strh	r5, [r0]
-	bl	ClearBag
+	strh	r4, [r0]
 	bl	NewGameInitPCItems
 	bl	ClearPokeblocks
 	bl	ClearDecorationInventories
@@ -409,7 +418,7 @@ NewGameInitData:
 	bl	WipeTrainerNameRecords
 	bl	ResetTrainerHillResults
 	bl	ResetContestLinkResults
-	pop	{r4, r5}
+	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
 .L39:
@@ -419,8 +428,8 @@ NewGameInitData:
 	.word	gDifferentSaveFile
 	.word	gSaveBlock2Ptr
 	.word	gSaveBlock1Ptr
-	.word	0xbb8
 	.word	gPlayerPartyCount
+	.word	0x1d3
 	.word	0x496
 	.word	EventScript_ResetAllMapFlags
 .Lfe12:

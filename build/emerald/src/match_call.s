@@ -4833,8 +4833,8 @@ GetFrontierStreakInfo:
 	.word	.L338
 	.word	.L369
 	.word	.L393
-	.word	.L350
 	.word	.L381
+	.word	.L350
 	.word	.L400
 .L338:
 	mov	r3, #0x0

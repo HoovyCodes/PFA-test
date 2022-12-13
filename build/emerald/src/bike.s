@@ -95,33 +95,64 @@ sAcroBikeTricksList:
 	.type	 MovePlayerOnBike,function
 	.thumb_func
 MovePlayerOnBike:
-	push	{r4, lr}
+	push	{r4, r5, lr}
 	lsl	r0, r0, #0x18
 	lsr	r3, r0, #0x18
 	lsl	r1, r1, #0x10
-	lsr	r4, r1, #0x10
+	lsr	r5, r1, #0x10
 	lsl	r2, r2, #0x10
-	lsr	r2, r2, #0x10
-	ldr	r0, .L5
+	lsr	r4, r2, #0x10
+	ldr	r0, .L8
 	ldrb	r1, [r0]
 	mov	r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
 	beq	.L3	@cond_branch
 	add	r0, r3, #0
-	add	r1, r4, #0
+	add	r1, r5, #0
+	add	r2, r4, #0
 	bl	MovePlayerOnMachBike
 	b	.L4
-.L6:
+.L9:
 	.align	2, 0
-.L5:
+.L8:
 	.word	gPlayerAvatar
 .L3:
 	add	r0, r3, #0
-	add	r1, r4, #0
+	add	r1, r5, #0
+	add	r2, r4, #0
 	bl	MovePlayerOnAcroBike
 .L4:
-	pop	{r4}
+	mov	r0, #0x80
+	lsl	r0, r0, #0x1
+	and	r0, r0, r4
+	cmp	r0, #0
+	beq	.L5	@cond_branch
+	ldr	r2, .L10
+	ldrb	r1, [r2]
+	mov	r0, #0x2
+	and	r0, r0, r1
+	cmp	r0, #0
+	beq	.L6	@cond_branch
+	add	r0, r1, #0x2
+	strb	r0, [r2]
+	mov	r0, #0x4
+	bl	SetPlayerAvatarTransitionFlags
+	b	.L7
+.L11:
+	.align	2, 0
+.L10:
+	.word	gPlayerAvatar
+.L6:
+	sub	r0, r1, #0x2
+	strb	r0, [r2]
+	mov	r0, #0x2
+	bl	SetPlayerAvatarTransitionFlags
+.L7:
+	mov	r0, #0xb
+	bl	PlaySE
+.L5:
+	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
 .Lfe1:
@@ -134,7 +165,7 @@ MovePlayerOnMachBike:
 	add	sp, sp, #-0x4
 	mov	r1, sp
 	strb	r0, [r1]
-	ldr	r4, .L8
+	ldr	r4, .L13
 	mov	r0, sp
 	bl	GetMachBikeTransition
 	lsl	r0, r0, #0x18
@@ -149,9 +180,9 @@ MovePlayerOnMachBike:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L9:
+.L14:
 	.align	2, 0
-.L8:
+.L13:
 	.word	sMachBikeTransitions
 .Lfe2:
 	.size	 MovePlayerOnMachBike,.Lfe2-MovePlayerOnMachBike
@@ -167,47 +198,47 @@ GetMachBikeTransition:
 	add	r3, r0, #0
 	ldrb	r1, [r4]
 	cmp	r1, #0
-	bne	.L11	@cond_branch
+	bne	.L16	@cond_branch
 	strb	r0, [r4]
-	ldr	r2, .L20
+	ldr	r2, .L25
 	ldrb	r0, [r2, #0xb]
 	cmp	r0, #0
-	bne	.L17	@cond_branch
+	bne	.L22	@cond_branch
 	strb	r1, [r2, #0x2]
 	mov	r0, #0x0
-	b	.L16
-.L21:
+	b	.L21
+.L26:
 	.align	2, 0
-.L20:
+.L25:
 	.word	gPlayerAvatar
-.L11:
-	ldr	r2, .L22
+.L16:
+	ldr	r2, .L27
 	cmp	r1, r3
-	beq	.L13	@cond_branch
+	beq	.L18	@cond_branch
 	ldrb	r0, [r2, #0x2]
 	cmp	r0, #0x2
-	beq	.L13	@cond_branch
+	beq	.L18	@cond_branch
 	ldrb	r0, [r2, #0xb]
 	cmp	r0, #0
-	beq	.L14	@cond_branch
+	beq	.L19	@cond_branch
 	strb	r3, [r4]
-.L17:
+.L22:
 	mov	r0, #0x2
 	strb	r0, [r2, #0x2]
 	mov	r0, #0x3
-	b	.L16
-.L23:
+	b	.L21
+.L28:
 	.align	2, 0
-.L22:
+.L27:
 	.word	gPlayerAvatar
-.L14:
-	mov	r0, #0x1
-	b	.L19
-.L13:
-	mov	r0, #0x2
 .L19:
+	mov	r0, #0x1
+	b	.L24
+.L18:
+	mov	r0, #0x2
+.L24:
 	strb	r0, [r2, #0x2]
-.L16:
+.L21:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
@@ -233,34 +264,34 @@ MachBikeTransition_TurnDirection:
 	push	{r4, r5, lr}
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
-	ldr	r0, .L28
+	ldr	r0, .L33
 	ldrb	r1, [r0, #0x5]
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L28+0x4
+	ldr	r1, .L33+0x4
 	add	r4, r0, r1
 	ldrb	r1, [r4, #0x1e]
 	add	r0, r5, #0
 	bl	CanBikeFaceDirOnMetatile
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L26	@cond_branch
+	beq	.L31	@cond_branch
 	add	r0, r5, #0
 	bl	PlayerTurnInPlace
 	bl	Bike_SetBikeStill
-	b	.L27
-.L29:
+	b	.L32
+.L34:
 	.align	2, 0
-.L28:
+.L33:
 	.word	gPlayerAvatar
 	.word	gObjectEvents
-.L26:
+.L31:
 	ldrb	r0, [r4, #0x18]
 	lsl	r0, r0, #0x1c
 	lsr	r0, r0, #0x1c
 	bl	MachBikeTransition_FaceDirection
-.L27:
+.L32:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
@@ -274,37 +305,37 @@ MachBikeTransition_TrySpeedUp:
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	add	r7, r5, #0
-	ldr	r6, .L43
+	ldr	r6, .L48
 	ldrb	r1, [r6, #0x5]
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L43+0x4
+	ldr	r1, .L48+0x4
 	add	r4, r0, r1
 	ldrb	r1, [r4, #0x1e]
 	add	r0, r5, #0
 	bl	CanBikeFaceDirOnMetatile
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L31	@cond_branch
+	bne	.L36	@cond_branch
 	ldrb	r0, [r6, #0xb]
 	cmp	r0, #0
-	beq	.L32	@cond_branch
+	beq	.L37	@cond_branch
 	ldrb	r0, [r4, #0x18]
 	lsr	r0, r0, #0x4
 	bl	MachBikeTransition_TrySlowDown
-	b	.L34
-.L44:
+	b	.L39
+.L49:
 	.align	2, 0
-.L43:
+.L48:
 	.word	gPlayerAvatar
 	.word	gObjectEvents
-.L32:
+.L37:
 	ldrb	r0, [r4, #0x18]
 	lsr	r0, r0, #0x4
 	bl	MachBikeTransition_FaceDirection
-	b	.L34
-.L31:
+	b	.L39
+.L36:
 	add	r0, r5, #0
 	bl	GetBikeCollision
 	lsl	r0, r0, #0x18
@@ -314,35 +345,35 @@ MachBikeTransition_TrySpeedUp:
 	add	r0, r0, r1
 	lsr	r0, r0, #0x18
 	cmp	r0, #0xa
-	bhi	.L35	@cond_branch
+	bhi	.L40	@cond_branch
 	cmp	r4, #0x6
-	bne	.L36	@cond_branch
+	bne	.L41	@cond_branch
 	add	r0, r5, #0
 	bl	PlayerJumpLedge
-	b	.L34
-.L36:
+	b	.L39
+.L41:
 	bl	Bike_SetBikeStill
 	cmp	r4, #0x4
-	bne	.L38	@cond_branch
+	bne	.L43	@cond_branch
 	add	r0, r5, #0
 	bl	IsPlayerCollidingWithFarawayIslandMew
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L38	@cond_branch
+	beq	.L43	@cond_branch
 	add	r0, r5, #0
 	bl	PlayerOnBikeCollideWithFarawayIslandMew
-	b	.L34
-.L38:
+	b	.L39
+.L43:
 	sub	r0, r4, #0x5
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x3
-	bls	.L34	@cond_branch
+	bls	.L39	@cond_branch
 	add	r0, r7, #0
 	bl	PlayerOnBikeCollide
-	b	.L34
-.L35:
-	ldr	r1, .L45
+	b	.L39
+.L40:
+	ldr	r1, .L50
 	ldrb	r0, [r6, #0xa]
 	lsl	r0, r0, #0x2
 	add	r0, r0, r1
@@ -356,16 +387,16 @@ MachBikeTransition_TrySpeedUp:
 	add	r0, r2, r0
 	strb	r0, [r6, #0xb]
 	cmp	r1, #0x1
-	bhi	.L34	@cond_branch
+	bhi	.L39	@cond_branch
 	add	r0, r2, #0x1
 	strb	r0, [r6, #0xa]
-.L34:
+.L39:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L46:
+.L51:
 	.align	2, 0
-.L45:
+.L50:
 	.word	sMachBikeSpeedCallbacks
 .Lfe6:
 	.size	 MachBikeTransition_TrySpeedUp,.Lfe6-MachBikeTransition_TrySpeedUp
@@ -377,14 +408,14 @@ MachBikeTransition_TrySlowDown:
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	add	r7, r5, #0
-	ldr	r6, .L56
+	ldr	r6, .L61
 	ldrb	r0, [r6, #0xb]
 	cmp	r0, #0
-	beq	.L48	@cond_branch
+	beq	.L53	@cond_branch
 	sub	r0, r0, #0x1
 	strb	r0, [r6, #0xb]
 	strb	r0, [r6, #0xa]
-.L48:
+.L53:
 	add	r0, r5, #0
 	bl	GetBikeCollision
 	lsl	r0, r0, #0x18
@@ -394,52 +425,52 @@ MachBikeTransition_TrySlowDown:
 	add	r0, r0, r1
 	lsr	r0, r0, #0x18
 	cmp	r0, #0xa
-	bhi	.L49	@cond_branch
+	bhi	.L54	@cond_branch
 	cmp	r4, #0x6
-	bne	.L50	@cond_branch
+	bne	.L55	@cond_branch
 	add	r0, r5, #0
 	bl	PlayerJumpLedge
-	b	.L55
-.L57:
+	b	.L60
+.L62:
 	.align	2, 0
-.L56:
+.L61:
 	.word	gPlayerAvatar
-.L50:
+.L55:
 	bl	Bike_SetBikeStill
 	cmp	r4, #0x4
-	bne	.L52	@cond_branch
+	bne	.L57	@cond_branch
 	add	r0, r5, #0
 	bl	IsPlayerCollidingWithFarawayIslandMew
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L52	@cond_branch
+	beq	.L57	@cond_branch
 	add	r0, r5, #0
 	bl	PlayerOnBikeCollideWithFarawayIslandMew
-	b	.L55
-.L52:
+	b	.L60
+.L57:
 	sub	r0, r4, #0x5
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x3
-	bls	.L55	@cond_branch
+	bls	.L60	@cond_branch
 	add	r0, r7, #0
 	bl	PlayerOnBikeCollide
-	b	.L55
-.L49:
-	ldr	r0, .L58
+	b	.L60
+.L54:
+	ldr	r0, .L63
 	ldrb	r1, [r6, #0xa]
 	lsl	r1, r1, #0x2
 	add	r1, r1, r0
 	ldr	r1, [r1]
 	add	r0, r7, #0
 	bl	_call_via_r1
-.L55:
+.L60:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L59:
+.L64:
 	.align	2, 0
-.L58:
+.L63:
 	.word	sMachBikeSpeedCallbacks
 .Lfe7:
 	.size	 MachBikeTransition_TrySlowDown,.Lfe7-MachBikeTransition_TrySlowDown
@@ -455,7 +486,7 @@ MovePlayerOnAcroBike:
 	lsr	r1, r1, #0x10
 	lsl	r2, r2, #0x10
 	lsr	r2, r2, #0x10
-	ldr	r4, .L61
+	ldr	r4, .L66
 	mov	r0, sp
 	bl	CheckMovementInputAcroBike
 	lsl	r0, r0, #0x18
@@ -470,9 +501,9 @@ MovePlayerOnAcroBike:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L62:
+.L67:
 	.align	2, 0
-.L61:
+.L66:
 	.word	sAcroBikeTransitions
 .Lfe8:
 	.size	 MovePlayerOnAcroBike,.Lfe8-MovePlayerOnAcroBike
@@ -485,8 +516,8 @@ CheckMovementInputAcroBike:
 	lsr	r1, r1, #0x10
 	lsl	r2, r2, #0x10
 	lsr	r2, r2, #0x10
-	ldr	r4, .L64
-	ldr	r3, .L64+0x4
+	ldr	r4, .L69
+	ldr	r3, .L69+0x4
 	ldrb	r3, [r3, #0x8]
 	lsl	r3, r3, #0x2
 	add	r3, r3, r4
@@ -497,9 +528,9 @@ CheckMovementInputAcroBike:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-.L65:
+.L70:
 	.align	2, 0
-.L64:
+.L69:
 	.word	sAcroBikeInputHandlers
 	.word	gPlayerAvatar
 .Lfe9:
@@ -517,58 +548,58 @@ AcroBikeHandleInputNormal:
 	bl	GetPlayerMovementDirection
 	lsl	r0, r0, #0x18
 	lsr	r3, r0, #0x18
-	ldr	r2, .L75
+	ldr	r2, .L80
 	mov	r0, #0x0
 	strb	r0, [r2, #0xa]
 	ldrb	r1, [r4]
 	cmp	r1, #0
-	bne	.L67	@cond_branch
+	bne	.L72	@cond_branch
 	mov	r0, #0x2
 	and	r0, r0, r6
 	cmp	r0, #0
-	beq	.L68	@cond_branch
+	beq	.L73	@cond_branch
 	strb	r3, [r4]
 	strb	r1, [r2, #0x2]
 	mov	r0, #0x2
 	strb	r0, [r2, #0x8]
 	mov	r0, #0x3
-	b	.L72
-.L76:
+	b	.L77
+.L81:
 	.align	2, 0
-.L75:
+.L80:
 	.word	gPlayerAvatar
-.L68:
+.L73:
 	strb	r3, [r4]
 	strb	r1, [r2, #0x2]
 	mov	r0, #0x0
-	b	.L72
-.L67:
+	b	.L77
+.L72:
 	cmp	r1, r3
-	bne	.L73	@cond_branch
+	bne	.L78	@cond_branch
 	mov	r0, #0x2
 	and	r0, r0, r5
 	cmp	r0, #0
-	beq	.L70	@cond_branch
+	beq	.L75	@cond_branch
 	ldrb	r0, [r2, #0xb]
 	cmp	r0, #0
-	bne	.L70	@cond_branch
+	bne	.L75	@cond_branch
 	add	r0, r0, #0x1
 	strb	r0, [r2, #0xb]
 	mov	r0, #0x4
 	strb	r0, [r2, #0x8]
 	mov	r0, #0xb
-	b	.L72
-.L70:
+	b	.L77
+.L75:
 	ldrb	r0, [r4]
-	ldr	r2, .L77
+	ldr	r2, .L82
 	cmp	r0, r3
-	beq	.L71	@cond_branch
-.L73:
-	ldr	r0, .L77
+	beq	.L76	@cond_branch
+.L78:
+	ldr	r0, .L82
 	ldrb	r1, [r0, #0x2]
 	add	r2, r0, #0
 	cmp	r1, #0x2
-	beq	.L71	@cond_branch
+	beq	.L76	@cond_branch
 	mov	r1, #0x0
 	mov	r0, #0x1
 	strb	r0, [r2, #0x8]
@@ -581,16 +612,16 @@ AcroBikeHandleInputNormal:
 	bl	CheckMovementInputAcroBike
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	b	.L74
-.L78:
+	b	.L79
+.L83:
 	.align	2, 0
-.L77:
+.L82:
 	.word	gPlayerAvatar
-.L71:
+.L76:
 	mov	r0, #0x2
 	strb	r0, [r2, #0x2]
-.L74:
-.L72:
+.L79:
+.L77:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
@@ -602,7 +633,7 @@ AcroBikeHandleInputNormal:
 AcroBikeHandleInputTurning:
 	push	{r4, r5, r6, lr}
 	add	r5, r0, #0
-	ldr	r4, .L85
+	ldr	r4, .L90
 	ldrb	r0, [r4, #0x9]
 	strb	r0, [r5]
 	ldrb	r0, [r4, #0xa]
@@ -611,19 +642,19 @@ AcroBikeHandleInputTurning:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x6
-	bls	.L80	@cond_branch
+	bls	.L85	@cond_branch
 	mov	r0, #0x1
 	strb	r0, [r4, #0x2]
 	mov	r0, #0x0
 	strb	r0, [r4, #0x8]
 	bl	Bike_SetBikeStill
 	mov	r0, #0x1
-	b	.L84
-.L86:
+	b	.L89
+.L91:
 	.align	2, 0
-.L85:
+.L90:
 	.word	gPlayerAvatar
-.L80:
+.L85:
 	bl	GetPlayerMovementDirection
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
@@ -632,7 +663,7 @@ AcroBikeHandleInputTurning:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r1, r0
-	bne	.L81	@cond_branch
+	bne	.L86	@cond_branch
 	bl	Bike_SetBikeStill
 	mov	r0, #0x1
 	strb	r0, [r4, #0xb]
@@ -642,22 +673,22 @@ AcroBikeHandleInputTurning:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r1, r0
-	bne	.L82	@cond_branch
+	bne	.L87	@cond_branch
 	mov	r0, #0x6
 	strb	r0, [r4, #0x8]
 	mov	r0, #0x9
-	b	.L84
-.L82:
+	b	.L89
+.L87:
 	mov	r0, #0x2
 	strb	r0, [r4, #0x2]
 	mov	r0, #0x5
 	strb	r0, [r4, #0x8]
 	mov	r0, #0x8
-	b	.L84
-.L81:
+	b	.L89
+.L86:
 	strb	r6, [r5]
 	mov	r0, #0x0
-.L84:
+.L89:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
@@ -674,12 +705,12 @@ AcroBikeHandleInputWheelieStanding:
 	bl	GetPlayerMovementDirection
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-	ldr	r5, .L96
+	ldr	r5, .L101
 	ldrb	r1, [r5, #0x5]
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L96+0x4
+	ldr	r1, .L101+0x4
 	add	r1, r0, r1
 	mov	r0, #0x0
 	strb	r0, [r5, #0x2]
@@ -688,65 +719,65 @@ AcroBikeHandleInputWheelieStanding:
 	lsl	r4, r4, #0x10
 	lsr	r4, r4, #0x10
 	cmp	r4, #0
-	bne	.L88	@cond_branch
+	bne	.L93	@cond_branch
 	strb	r4, [r5, #0xa]
 	ldrb	r0, [r1, #0x1e]
 	bl	MetatileBehavior_IsBumpySlope
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L89	@cond_branch
+	bne	.L94	@cond_branch
 	strb	r6, [r7]
 	strb	r0, [r5, #0x8]
 	bl	Bike_SetBikeStill
 	mov	r0, #0x4
-	b	.L94
-.L97:
+	b	.L99
+.L102:
 	.align	2, 0
-.L96:
+.L101:
 	.word	gPlayerAvatar
 	.word	gObjectEvents
-.L88:
+.L93:
 	ldrb	r0, [r5, #0xa]
 	add	r0, r0, #0x1
 	strb	r0, [r5, #0xa]
-.L89:
-	ldr	r1, .L98
+.L94:
+	ldr	r1, .L103
 	ldrb	r0, [r1, #0xa]
 	cmp	r0, #0x27
-	bls	.L91	@cond_branch
+	bls	.L96	@cond_branch
 	strb	r6, [r7]
 	mov	r0, #0x3
 	strb	r0, [r1, #0x8]
 	bl	Bike_SetBikeStill
 	mov	r0, #0x6
-	b	.L94
-.L99:
+	b	.L99
+.L104:
 	.align	2, 0
-.L98:
+.L103:
 	.word	gPlayerAvatar
-.L91:
+.L96:
 	ldrb	r0, [r7]
 	cmp	r0, r6
-	bne	.L92	@cond_branch
+	bne	.L97	@cond_branch
 	mov	r0, #0x2
 	strb	r0, [r1, #0x2]
 	mov	r0, #0x4
 	strb	r0, [r1, #0x8]
 	bl	Bike_SetBikeStill
 	mov	r0, #0xa
-	b	.L94
-.L92:
+	b	.L99
+.L97:
 	cmp	r0, #0
-	beq	.L93	@cond_branch
+	beq	.L98	@cond_branch
 	mov	r0, #0x1
 	strb	r0, [r1, #0x2]
-	b	.L95
-.L93:
+	b	.L100
+.L98:
 	strb	r6, [r7]
-.L95:
+.L100:
 	mov	r0, #0x5
-.L94:
+.L99:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
@@ -771,25 +802,25 @@ AcroBikeHandleInputBunnyHop:
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	add	r2, r5, #0
-	ldr	r4, .L108
+	ldr	r4, .L113
 	ldrb	r1, [r4, #0x5]
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L108+0x4
+	ldr	r1, .L113+0x4
 	add	r7, r0, r1
 	mov	r0, #0x2
 	mov	r1, r8
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L101	@cond_branch
+	bne	.L106	@cond_branch
 	bl	Bike_SetBikeStill
 	ldrb	r0, [r7, #0x1e]
 	bl	MetatileBehavior_IsBumpySlope
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L102	@cond_branch
+	beq	.L107	@cond_branch
 	mov	r0, #0x2
 	strb	r0, [r4, #0x8]
 	add	r0, r6, #0
@@ -798,50 +829,50 @@ AcroBikeHandleInputBunnyHop:
 	bl	CheckMovementInputAcroBike
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	b	.L106
-.L109:
+	b	.L111
+.L114:
 	.align	2, 0
-.L108:
+.L113:
 	.word	gPlayerAvatar
 	.word	gObjectEvents
-.L102:
+.L107:
 	strb	r5, [r6]
 	strb	r0, [r4, #0x2]
 	strb	r0, [r4, #0x8]
 	mov	r0, #0x4
-	b	.L106
-.L101:
+	b	.L111
+.L106:
 	ldrb	r0, [r6]
 	cmp	r0, #0
-	bne	.L104	@cond_branch
+	bne	.L109	@cond_branch
 	strb	r5, [r6]
-	b	.L107
-.L104:
+	b	.L112
+.L109:
 	cmp	r0, r2
-	beq	.L105	@cond_branch
+	beq	.L110	@cond_branch
 	ldrb	r0, [r4, #0x2]
 	cmp	r0, #0x2
-	beq	.L105	@cond_branch
+	beq	.L110	@cond_branch
 	mov	r0, #0x1
-.L107:
+.L112:
 	strb	r0, [r4, #0x2]
 	mov	r0, #0x6
-	b	.L106
-.L105:
-	ldr	r1, .L110
+	b	.L111
+.L110:
+	ldr	r1, .L115
 	mov	r0, #0x2
 	strb	r0, [r1, #0x2]
 	mov	r0, #0x7
-.L106:
+.L111:
 	pop	{r3, r4}
 	mov	r8, r3
 	mov	r9, r4
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.L111:
+.L116:
 	.align	2, 0
-.L110:
+.L115:
 	.word	gPlayerAvatar
 .Lfe13:
 	.size	 AcroBikeHandleInputBunnyHop,.Lfe13-AcroBikeHandleInputBunnyHop
@@ -865,12 +896,12 @@ AcroBikeHandleInputWheelieMoving:
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	add	r2, r5, #0
-	ldr	r4, .L121
+	ldr	r4, .L126
 	ldrb	r1, [r4, #0x5]
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L121+0x4
+	ldr	r1, .L126+0x4
 	add	r7, r0, r1
 	mov	r0, #0x2
 	mov	r9, r0
@@ -878,46 +909,46 @@ AcroBikeHandleInputWheelieMoving:
 	mov	r1, r8
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L113	@cond_branch
+	bne	.L118	@cond_branch
 	bl	Bike_SetBikeStill
 	ldrb	r0, [r7, #0x1e]
 	bl	MetatileBehavior_IsBumpySlope
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
 	cmp	r1, #0
-	bne	.L114	@cond_branch
+	bne	.L119	@cond_branch
 	strb	r1, [r4, #0x8]
 	ldrb	r0, [r6]
 	cmp	r0, #0
-	bne	.L115	@cond_branch
+	bne	.L120	@cond_branch
 	strb	r5, [r6]
-	b	.L120
-.L122:
+	b	.L125
+.L127:
 	.align	2, 0
-.L121:
+.L126:
 	.word	gPlayerAvatar
 	.word	gObjectEvents
-.L115:
+.L120:
 	cmp	r0, r5
-	beq	.L116	@cond_branch
+	beq	.L121	@cond_branch
 	ldrb	r0, [r4, #0x2]
 	cmp	r0, #0x2
-	beq	.L116	@cond_branch
-.L120:
+	beq	.L121	@cond_branch
+.L125:
 	strb	r1, [r4, #0x2]
 	mov	r0, #0x4
-	b	.L119
-.L116:
-	ldr	r1, .L123
+	b	.L124
+.L121:
+	ldr	r1, .L128
 	mov	r0, #0x2
 	strb	r0, [r1, #0x2]
 	mov	r0, #0xc
-	b	.L119
-.L124:
+	b	.L124
+.L129:
 	.align	2, 0
-.L123:
+.L128:
 	.word	gPlayerAvatar
-.L114:
+.L119:
 	mov	r0, r9
 	strb	r0, [r4, #0x8]
 	add	r0, r6, #0
@@ -926,34 +957,34 @@ AcroBikeHandleInputWheelieMoving:
 	bl	CheckMovementInputAcroBike
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	b	.L119
-.L113:
+	b	.L124
+.L118:
 	ldrb	r0, [r6]
 	cmp	r0, #0
-	bne	.L117	@cond_branch
+	bne	.L122	@cond_branch
 	strb	r5, [r6]
 	mov	r1, r9
 	strb	r1, [r4, #0x8]
 	strb	r0, [r4, #0x2]
 	bl	Bike_SetBikeStill
 	mov	r0, #0x5
-	b	.L119
-.L117:
+	b	.L124
+.L122:
 	cmp	r2, r0
-	beq	.L118	@cond_branch
+	beq	.L123	@cond_branch
 	ldrb	r0, [r4, #0x2]
 	cmp	r0, #0x2
-	beq	.L118	@cond_branch
+	beq	.L123	@cond_branch
 	mov	r0, #0x0
 	strb	r0, [r4, #0x2]
 	mov	r0, #0x5
-	b	.L119
-.L118:
-	ldr	r1, .L125
+	b	.L124
+.L123:
+	ldr	r1, .L130
 	mov	r0, #0x2
 	strb	r0, [r1, #0x2]
 	mov	r0, #0xa
-.L119:
+.L124:
 	pop	{r3, r4, r5}
 	mov	r8, r3
 	mov	r9, r4
@@ -961,9 +992,9 @@ AcroBikeHandleInputWheelieMoving:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.L126:
+.L131:
 	.align	2, 0
-.L125:
+.L130:
 	.word	gPlayerAvatar
 .Lfe14:
 	.size	 AcroBikeHandleInputWheelieMoving,.Lfe14-AcroBikeHandleInputWheelieMoving
@@ -981,12 +1012,12 @@ AcroBikeHandleInputSidewaysJump:
 	lsr	r4, r4, #0x10
 	lsl	r5, r5, #0x10
 	lsr	r5, r5, #0x10
-	ldr	r6, .L128
+	ldr	r6, .L133
 	ldrb	r1, [r6, #0x5]
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L128+0x4
+	ldr	r1, .L133+0x4
 	add	r0, r0, r1
 	ldrb	r2, [r0, #0x1]
 	mov	r1, #0x3
@@ -1010,9 +1041,9 @@ AcroBikeHandleInputSidewaysJump:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.L129:
+.L134:
 	.align	2, 0
-.L128:
+.L133:
 	.word	gPlayerAvatar
 	.word	gObjectEvents
 .Lfe15:
@@ -1026,7 +1057,7 @@ AcroBikeHandleInputTurnJump:
 	lsr	r1, r1, #0x10
 	lsl	r2, r2, #0x10
 	lsr	r2, r2, #0x10
-	ldr	r4, .L131
+	ldr	r4, .L136
 	mov	r3, #0x0
 	strb	r3, [r4, #0x8]
 	bl	CheckMovementInputAcroBike
@@ -1035,9 +1066,9 @@ AcroBikeHandleInputTurnJump:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-.L132:
+.L137:
 	.align	2, 0
-.L131:
+.L136:
 	.word	gPlayerAvatar
 .Lfe16:
 	.size	 AcroBikeHandleInputTurnJump,.Lfe16-AcroBikeHandleInputTurnJump
@@ -1060,30 +1091,30 @@ AcroBikeTransition_TurnDirection:
 	push	{r4, r5, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r0, .L136
+	ldr	r0, .L141
 	ldrb	r1, [r0, #0x5]
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L136+0x4
+	ldr	r1, .L141+0x4
 	add	r5, r0, r1
 	ldrb	r1, [r5, #0x1e]
 	add	r0, r4, #0
 	bl	CanBikeFaceDirOnMetatile
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L135	@cond_branch
+	bne	.L140	@cond_branch
 	ldrb	r0, [r5, #0x18]
 	lsr	r4, r0, #0x4
-.L135:
+.L140:
 	add	r0, r4, #0
 	bl	PlayerFaceDirection
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L137:
+.L142:
 	.align	2, 0
-.L136:
+.L141:
 	.word	gPlayerAvatar
 	.word	gObjectEvents
 .Lfe18:
@@ -1096,29 +1127,29 @@ AcroBikeTransition_Moving:
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	add	r6, r5, #0
-	ldr	r0, .L147
+	ldr	r0, .L152
 	ldrb	r1, [r0, #0x5]
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L147+0x4
+	ldr	r1, .L152+0x4
 	add	r4, r0, r1
 	ldrb	r1, [r4, #0x1e]
 	add	r0, r5, #0
 	bl	CanBikeFaceDirOnMetatile
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L139	@cond_branch
+	bne	.L144	@cond_branch
 	ldrb	r0, [r4, #0x18]
 	lsr	r0, r0, #0x4
 	bl	AcroBikeTransition_FaceDirection
-	b	.L138
-.L148:
+	b	.L143
+.L153:
 	.align	2, 0
-.L147:
+.L152:
 	.word	gPlayerAvatar
 	.word	gObjectEvents
-.L139:
+.L144:
 	add	r0, r5, #0
 	bl	GetBikeCollision
 	lsl	r0, r0, #0x18
@@ -1128,36 +1159,36 @@ AcroBikeTransition_Moving:
 	add	r0, r0, r1
 	lsr	r0, r0, #0x18
 	cmp	r0, #0xa
-	bhi	.L140	@cond_branch
+	bhi	.L145	@cond_branch
 	cmp	r4, #0x6
-	bne	.L141	@cond_branch
+	bne	.L146	@cond_branch
 	add	r0, r5, #0
 	bl	PlayerJumpLedge
-	b	.L138
-.L141:
+	b	.L143
+.L146:
 	cmp	r4, #0x4
-	bne	.L143	@cond_branch
+	bne	.L148	@cond_branch
 	add	r0, r5, #0
 	bl	IsPlayerCollidingWithFarawayIslandMew
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L143	@cond_branch
+	beq	.L148	@cond_branch
 	add	r0, r5, #0
 	bl	PlayerOnBikeCollideWithFarawayIslandMew
-	b	.L138
-.L143:
+	b	.L143
+.L148:
 	sub	r0, r4, #0x5
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x3
-	bls	.L138	@cond_branch
+	bls	.L143	@cond_branch
 	add	r0, r6, #0
 	bl	PlayerOnBikeCollide
-	b	.L138
-.L140:
+	b	.L143
+.L145:
 	add	r0, r6, #0
 	bl	PlayerRideWaterCurrent
-.L138:
+.L143:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
@@ -1170,30 +1201,30 @@ AcroBikeTransition_NormalToWheelie:
 	push	{r4, r5, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r0, .L151
+	ldr	r0, .L156
 	ldrb	r1, [r0, #0x5]
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L151+0x4
+	ldr	r1, .L156+0x4
 	add	r5, r0, r1
 	ldrb	r1, [r5, #0x1e]
 	add	r0, r4, #0
 	bl	CanBikeFaceDirOnMetatile
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L150	@cond_branch
+	bne	.L155	@cond_branch
 	ldrb	r0, [r5, #0x18]
 	lsr	r4, r0, #0x4
-.L150:
+.L155:
 	add	r0, r4, #0
 	bl	PlayerStartWheelie
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L152:
+.L157:
 	.align	2, 0
-.L151:
+.L156:
 	.word	gPlayerAvatar
 	.word	gObjectEvents
 .Lfe20:
@@ -1205,30 +1236,30 @@ AcroBikeTransition_WheelieToNormal:
 	push	{r4, r5, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r0, .L155
+	ldr	r0, .L160
 	ldrb	r1, [r0, #0x5]
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L155+0x4
+	ldr	r1, .L160+0x4
 	add	r5, r0, r1
 	ldrb	r1, [r5, #0x1e]
 	add	r0, r4, #0
 	bl	CanBikeFaceDirOnMetatile
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L154	@cond_branch
+	bne	.L159	@cond_branch
 	ldrb	r0, [r5, #0x18]
 	lsr	r4, r0, #0x4
-.L154:
+.L159:
 	add	r0, r4, #0
 	bl	PlayerEndWheelie
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L156:
+.L161:
 	.align	2, 0
-.L155:
+.L160:
 	.word	gPlayerAvatar
 	.word	gObjectEvents
 .Lfe21:
@@ -1240,30 +1271,30 @@ AcroBikeTransition_WheelieIdle:
 	push	{r4, r5, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r0, .L159
+	ldr	r0, .L164
 	ldrb	r1, [r0, #0x5]
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L159+0x4
+	ldr	r1, .L164+0x4
 	add	r5, r0, r1
 	ldrb	r1, [r5, #0x1e]
 	add	r0, r4, #0
 	bl	CanBikeFaceDirOnMetatile
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L158	@cond_branch
+	bne	.L163	@cond_branch
 	ldrb	r0, [r5, #0x18]
 	lsr	r4, r0, #0x4
-.L158:
+.L163:
 	add	r0, r4, #0
 	bl	PlayerIdleWheelie
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L160:
+.L165:
 	.align	2, 0
-.L159:
+.L164:
 	.word	gPlayerAvatar
 	.word	gObjectEvents
 .Lfe22:
@@ -1275,30 +1306,30 @@ AcroBikeTransition_WheelieHoppingStanding:
 	push	{r4, r5, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r0, .L163
+	ldr	r0, .L168
 	ldrb	r1, [r0, #0x5]
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L163+0x4
+	ldr	r1, .L168+0x4
 	add	r5, r0, r1
 	ldrb	r1, [r5, #0x1e]
 	add	r0, r4, #0
 	bl	CanBikeFaceDirOnMetatile
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L162	@cond_branch
+	bne	.L167	@cond_branch
 	ldrb	r0, [r5, #0x18]
 	lsr	r4, r0, #0x4
-.L162:
+.L167:
 	add	r0, r4, #0
 	bl	PlayerStandingHoppingWheelie
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L164:
+.L169:
 	.align	2, 0
-.L163:
+.L168:
 	.word	gPlayerAvatar
 	.word	gObjectEvents
 .Lfe23:
@@ -1310,57 +1341,57 @@ AcroBikeTransition_WheelieHoppingMoving:
 	push	{r4, r5, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r0, .L176
+	ldr	r0, .L181
 	ldrb	r1, [r0, #0x5]
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L176+0x4
+	ldr	r1, .L181+0x4
 	add	r5, r0, r1
 	ldrb	r1, [r5, #0x1e]
 	add	r0, r4, #0
 	bl	CanBikeFaceDirOnMetatile
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L166	@cond_branch
+	bne	.L171	@cond_branch
 	ldrb	r0, [r5, #0x18]
 	lsr	r0, r0, #0x4
 	bl	AcroBikeTransition_WheelieHoppingStanding
-	b	.L165
-.L177:
+	b	.L170
+.L182:
 	.align	2, 0
-.L176:
+.L181:
 	.word	gPlayerAvatar
 	.word	gObjectEvents
-.L166:
+.L171:
 	add	r0, r4, #0
 	bl	GetBikeCollision
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
 	cmp	r1, #0
-	beq	.L169	@cond_branch
+	beq	.L174	@cond_branch
 	cmp	r1, #0x9
-	beq	.L169	@cond_branch
+	beq	.L174	@cond_branch
 	cmp	r1, #0x6
-	bne	.L171	@cond_branch
+	bne	.L176	@cond_branch
 	add	r0, r4, #0
 	bl	PlayerLedgeHoppingWheelie
-	b	.L165
-.L171:
+	b	.L170
+.L176:
 	sub	r0, r1, #0x5
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x3
-	bls	.L165	@cond_branch
+	bls	.L170	@cond_branch
 	cmp	r1, #0xb
-	bhi	.L169	@cond_branch
+	bhi	.L174	@cond_branch
 	add	r0, r4, #0
 	bl	AcroBikeTransition_WheelieHoppingStanding
-	b	.L165
-.L169:
+	b	.L170
+.L174:
 	add	r0, r4, #0
 	bl	PlayerMovingHoppingWheelie
-.L165:
+.L170:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
@@ -1379,28 +1410,28 @@ AcroBikeTransition_SideJump:
 	lsr	r0, r0, #0x18
 	add	r1, r0, #0
 	cmp	r0, #0
-	beq	.L179	@cond_branch
+	beq	.L184	@cond_branch
 	cmp	r0, #0x7
-	beq	.L178	@cond_branch
+	beq	.L183	@cond_branch
 	cmp	r0, #0x9
-	bls	.L183	@cond_branch
+	bls	.L188	@cond_branch
 	add	r0, r1, #0
 	add	r1, r5, #0
 	bl	WillPlayerCollideWithCollision
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L179	@cond_branch
-.L183:
+	bne	.L184	@cond_branch
+.L188:
 	add	r0, r5, #0
 	bl	AcroBikeTransition_TurnDirection
-	b	.L178
-.L179:
-	ldr	r0, .L184
+	b	.L183
+.L184:
+	ldr	r0, .L189
 	ldrb	r0, [r0, #0x5]
 	lsl	r4, r0, #0x3
 	add	r4, r4, r0
 	lsl	r4, r4, #0x2
-	ldr	r0, .L184+0x4
+	ldr	r0, .L189+0x4
 	add	r4, r4, r0
 	mov	r0, #0x22
 	bl	PlaySE
@@ -1414,13 +1445,13 @@ AcroBikeTransition_SideJump:
 	lsr	r0, r0, #0x18
 	mov	r1, #0x2
 	bl	PlayerSetAnimId
-.L178:
+.L183:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L185:
+.L190:
 	.align	2, 0
-.L184:
+.L189:
 	.word	gPlayerAvatar
 	.word	gObjectEvents
 .Lfe25:
@@ -1445,29 +1476,29 @@ AcroBikeTransition_WheelieMoving:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	add	r6, r4, #0
-	ldr	r7, .L198
+	ldr	r7, .L203
 	ldrb	r1, [r7, #0x5]
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L198+0x4
+	ldr	r1, .L203+0x4
 	add	r5, r0, r1
 	ldrb	r1, [r5, #0x1e]
 	add	r0, r4, #0
 	bl	CanBikeFaceDirOnMetatile
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L188	@cond_branch
+	bne	.L193	@cond_branch
 	ldrb	r0, [r5, #0x18]
 	lsr	r0, r0, #0x4
 	bl	PlayerIdleWheelie
-	b	.L187
-.L199:
+	b	.L192
+.L204:
 	.align	2, 0
-.L198:
+.L203:
 	.word	gPlayerAvatar
 	.word	gObjectEvents
-.L188:
+.L193:
 	add	r0, r4, #0
 	bl	GetBikeCollision
 	lsl	r0, r0, #0x18
@@ -1477,36 +1508,36 @@ AcroBikeTransition_WheelieMoving:
 	add	r0, r0, r2
 	lsr	r0, r0, #0x18
 	cmp	r0, #0xa
-	bhi	.L189	@cond_branch
+	bhi	.L194	@cond_branch
 	cmp	r1, #0x6
-	bne	.L190	@cond_branch
+	bne	.L195	@cond_branch
 	add	r0, r4, #0
 	bl	PlayerLedgeHoppingWheelie
-	b	.L187
-.L190:
+	b	.L192
+.L195:
 	cmp	r1, #0x9
-	beq	.L197	@cond_branch
+	beq	.L202	@cond_branch
 	cmp	r1, #0x4
-	bhi	.L187	@cond_branch
+	bhi	.L192	@cond_branch
 	ldrb	r0, [r5, #0x1e]
 	bl	MetatileBehavior_IsBumpySlope
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L195	@cond_branch
-.L197:
+	beq	.L200	@cond_branch
+.L202:
 	add	r0, r4, #0
 	bl	PlayerIdleWheelie
-	b	.L187
-.L195:
+	b	.L192
+.L200:
 	add	r0, r4, #0
 	bl	PlayerWheelieInPlace
-	b	.L187
-.L189:
+	b	.L192
+.L194:
 	add	r0, r6, #0
 	bl	PlayerWheelieMove
 	mov	r0, #0x2
 	strb	r0, [r7, #0x2]
-.L187:
+.L192:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
@@ -1520,29 +1551,29 @@ AcroBikeTransition_WheelieRisingMoving:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	add	r6, r4, #0
-	ldr	r7, .L211
+	ldr	r7, .L216
 	ldrb	r1, [r7, #0x5]
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L211+0x4
+	ldr	r1, .L216+0x4
 	add	r5, r0, r1
 	ldrb	r1, [r5, #0x1e]
 	add	r0, r4, #0
 	bl	CanBikeFaceDirOnMetatile
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L201	@cond_branch
+	bne	.L206	@cond_branch
 	ldrb	r0, [r5, #0x18]
 	lsr	r0, r0, #0x4
 	bl	PlayerStartWheelie
-	b	.L200
-.L212:
+	b	.L205
+.L217:
 	.align	2, 0
-.L211:
+.L216:
 	.word	gPlayerAvatar
 	.word	gObjectEvents
-.L201:
+.L206:
 	add	r0, r4, #0
 	bl	GetBikeCollision
 	lsl	r0, r0, #0x18
@@ -1552,36 +1583,36 @@ AcroBikeTransition_WheelieRisingMoving:
 	add	r0, r0, r2
 	lsr	r0, r0, #0x18
 	cmp	r0, #0xa
-	bhi	.L202	@cond_branch
+	bhi	.L207	@cond_branch
 	cmp	r1, #0x6
-	bne	.L203	@cond_branch
+	bne	.L208	@cond_branch
 	add	r0, r4, #0
 	bl	PlayerLedgeHoppingWheelie
-	b	.L200
-.L203:
+	b	.L205
+.L208:
 	cmp	r1, #0x9
-	beq	.L210	@cond_branch
+	beq	.L215	@cond_branch
 	cmp	r1, #0x4
-	bhi	.L200	@cond_branch
+	bhi	.L205	@cond_branch
 	ldrb	r0, [r5, #0x1e]
 	bl	MetatileBehavior_IsBumpySlope
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L208	@cond_branch
-.L210:
+	beq	.L213	@cond_branch
+.L215:
 	add	r0, r4, #0
 	bl	PlayerIdleWheelie
-	b	.L200
-.L208:
+	b	.L205
+.L213:
 	add	r0, r4, #0
 	bl	PlayerWheelieInPlace
-	b	.L200
-.L202:
+	b	.L205
+.L207:
 	add	r0, r6, #0
 	bl	PlayerPopWheelieWhileMoving
 	mov	r0, #0x2
 	strb	r0, [r7, #0x2]
-.L200:
+.L205:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
@@ -1595,29 +1626,29 @@ AcroBikeTransition_WheelieLoweringMoving:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	add	r6, r4, #0
-	ldr	r0, .L219
+	ldr	r0, .L224
 	ldrb	r1, [r0, #0x5]
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L219+0x4
+	ldr	r1, .L224+0x4
 	add	r5, r0, r1
 	ldrb	r1, [r5, #0x1e]
 	add	r0, r4, #0
 	bl	CanBikeFaceDirOnMetatile
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L214	@cond_branch
+	bne	.L219	@cond_branch
 	ldrb	r0, [r5, #0x18]
 	lsr	r0, r0, #0x4
 	bl	PlayerEndWheelie
-	b	.L213
-.L220:
+	b	.L218
+.L225:
 	.align	2, 0
-.L219:
+.L224:
 	.word	gPlayerAvatar
 	.word	gObjectEvents
-.L214:
+.L219:
 	add	r0, r4, #0
 	bl	GetBikeCollision
 	lsl	r0, r0, #0x18
@@ -1627,25 +1658,25 @@ AcroBikeTransition_WheelieLoweringMoving:
 	add	r0, r0, r2
 	lsr	r0, r0, #0x18
 	cmp	r0, #0xa
-	bhi	.L215	@cond_branch
+	bhi	.L220	@cond_branch
 	cmp	r1, #0x6
-	bne	.L216	@cond_branch
+	bne	.L221	@cond_branch
 	add	r0, r4, #0
 	bl	PlayerJumpLedge
-	b	.L213
-.L216:
+	b	.L218
+.L221:
 	sub	r0, r1, #0x5
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x3
-	bls	.L213	@cond_branch
+	bls	.L218	@cond_branch
 	add	r0, r4, #0
 	bl	PlayerEndWheelie
-	b	.L213
-.L215:
+	b	.L218
+.L220:
 	add	r0, r6, #0
 	bl	PlayerEndWheelieWhileMoving
-.L213:
+.L218:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
@@ -1661,21 +1692,21 @@ Bike_TryAcroBikeHistoryUpdate:
 	lsr	r3, r0, #0x10
 	lsl	r1, r1, #0x10
 	lsr	r2, r1, #0x10
-	ldr	r0, .L223
+	ldr	r0, .L228
 	ldrb	r1, [r0]
 	mov	r0, #0x4
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L222	@cond_branch
+	beq	.L227	@cond_branch
 	add	r0, r3, #0
 	add	r1, r2, #0
 	bl	AcroBike_TryHistoryUpdate
-.L222:
+.L227:
 	pop	{r0}
 	bx	r0
-.L224:
+.L229:
 	.align	2, 0
-.L223:
+.L228:
 	.word	gPlayerAvatar
 .Lfe30:
 	.size	 Bike_TryAcroBikeHistoryUpdate,.Lfe30-Bike_TryAcroBikeHistoryUpdate
@@ -1690,53 +1721,53 @@ AcroBike_TryHistoryUpdate:
 	bl	Bike_DPadToDirection
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
-	ldr	r4, .L232
+	ldr	r4, .L237
 	ldr	r0, [r4, #0xc]
 	mov	r1, #0xf
 	and	r0, r0, r1
 	cmp	r2, r0
-	bne	.L226	@cond_branch
+	bne	.L231	@cond_branch
 	ldrb	r0, [r4, #0x14]
 	cmp	r0, #0xfe
-	bhi	.L228	@cond_branch
+	bhi	.L233	@cond_branch
 	add	r0, r0, #0x1
 	strb	r0, [r4, #0x14]
-	b	.L228
-.L233:
+	b	.L233
+.L238:
 	.align	2, 0
-.L232:
+.L237:
 	.word	gPlayerAvatar
-.L226:
+.L231:
 	add	r0, r2, #0
 	bl	Bike_UpdateDirTimerHistory
 	mov	r0, #0x0
 	strb	r0, [r4, #0xb]
-.L228:
+.L233:
 	mov	r0, #0xf
 	add	r2, r5, #0
 	and	r2, r2, r0
-	ldr	r4, .L234
+	ldr	r4, .L239
 	ldr	r0, [r4, #0x10]
 	mov	r1, #0xf
 	and	r0, r0, r1
 	cmp	r2, r0
-	bne	.L229	@cond_branch
+	bne	.L234	@cond_branch
 	ldrb	r0, [r4, #0x1c]
 	cmp	r0, #0xfe
-	bhi	.L231	@cond_branch
+	bhi	.L236	@cond_branch
 	add	r0, r0, #0x1
 	strb	r0, [r4, #0x1c]
-	b	.L231
-.L235:
+	b	.L236
+.L240:
 	.align	2, 0
-.L234:
+.L239:
 	.word	gPlayerAvatar
-.L229:
+.L234:
 	add	r0, r2, #0
 	bl	Bike_UpdateABStartSelectHistory
 	mov	r0, #0x0
 	strb	r0, [r4, #0xb]
-.L231:
+.L236:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
@@ -1752,54 +1783,54 @@ HasPlayerInputTakenLongerThanList:
 	mov	r2, #0x0
 	ldrb	r0, [r3]
 	cmp	r0, #0
-	beq	.L238	@cond_branch
-	ldr	r5, .L251
-.L240:
+	beq	.L243	@cond_branch
+	ldr	r5, .L256
+.L245:
 	add	r0, r2, r5
 	add	r1, r3, r2
 	ldrb	r0, [r0]
 	ldrb	r1, [r1]
 	cmp	r0, r1
-	bhi	.L250	@cond_branch
+	bhi	.L255	@cond_branch
 	add	r0, r2, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	add	r0, r3, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L240	@cond_branch
-.L238:
+	bne	.L245	@cond_branch
+.L243:
 	mov	r2, #0x0
 	ldrb	r0, [r4]
 	cmp	r0, #0
-	beq	.L244	@cond_branch
-	ldr	r3, .L251+0x4
-.L246:
+	beq	.L249	@cond_branch
+	ldr	r3, .L256+0x4
+.L251:
 	add	r0, r2, r3
 	add	r1, r4, r2
 	ldrb	r0, [r0]
 	ldrb	r1, [r1]
 	cmp	r0, r1
-	bls	.L245	@cond_branch
-.L250:
+	bls	.L250	@cond_branch
+.L255:
 	mov	r0, #0x0
-	b	.L249
-.L252:
+	b	.L254
+.L257:
 	.align	2, 0
-.L251:
+.L256:
 	.word	gPlayerAvatar+0x14
 	.word	gPlayerAvatar+0x1c
-.L245:
+.L250:
 	add	r0, r2, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	add	r0, r4, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L246	@cond_branch
-.L244:
-	mov	r0, #0x1
+	bne	.L251	@cond_branch
 .L249:
+	mov	r0, #0x1
+.L254:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
@@ -1812,10 +1843,10 @@ AcroBike_GetJumpDirection:
 	push	{r4, r5, r6, lr}
 	mov	r6, #0x0
 	mov	r5, #0x0
-.L257:
-	ldr	r0, .L261
+.L262:
+	ldr	r0, .L266
 	add	r4, r5, r0
-	ldr	r0, .L261+0x4
+	ldr	r0, .L266+0x4
 	ldr	r1, [r0, #0xc]
 	ldr	r2, [r0, #0x10]
 	ldr	r0, [r4, #0x8]
@@ -1824,30 +1855,30 @@ AcroBike_GetJumpDirection:
 	and	r2, r2, r0
 	ldr	r0, [r4]
 	cmp	r1, r0
-	bne	.L256	@cond_branch
+	bne	.L261	@cond_branch
 	ldr	r0, [r4, #0x4]
 	cmp	r2, r0
-	bne	.L256	@cond_branch
+	bne	.L261	@cond_branch
 	ldr	r0, [r4, #0x10]
 	ldr	r1, [r4, #0x14]
 	bl	HasPlayerInputTakenLongerThanList
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L256	@cond_branch
+	beq	.L261	@cond_branch
 	ldrb	r0, [r4, #0x18]
-	b	.L260
-.L262:
+	b	.L265
+.L267:
 	.align	2, 0
-.L261:
+.L266:
 	.word	sAcroBikeTricksList
 	.word	gPlayerAvatar
-.L256:
+.L261:
 	add	r5, r5, #0x1c
 	add	r6, r6, #0x1
 	cmp	r6, #0x3
-	bls	.L257	@cond_branch
+	bls	.L262	@cond_branch
 	mov	r0, #0x0
-.L260:
+.L265:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
@@ -1859,7 +1890,7 @@ AcroBike_GetJumpDirection:
 Bike_UpdateDirTimerHistory:
 	push	{r4, lr}
 	lsl	r0, r0, #0x18
-	ldr	r3, .L269
+	ldr	r3, .L274
 	ldr	r2, [r3, #0xc]
 	lsl	r2, r2, #0x4
 	mov	r1, #0xf0
@@ -1871,7 +1902,7 @@ Bike_UpdateDirTimerHistory:
 	mov	r1, #0x7
 	add	r4, r3, #0
 	add	r3, r3, #0x14
-.L267:
+.L272:
 	add	r2, r1, r3
 	sub	r1, r1, #0x1
 	add	r0, r1, r3
@@ -1880,15 +1911,15 @@ Bike_UpdateDirTimerHistory:
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
 	cmp	r1, #0
-	bne	.L267	@cond_branch
+	bne	.L272	@cond_branch
 	mov	r0, #0x1
 	strb	r0, [r4, #0x14]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L270:
+.L275:
 	.align	2, 0
-.L269:
+.L274:
 	.word	gPlayerAvatar
 .Lfe34:
 	.size	 Bike_UpdateDirTimerHistory,.Lfe34-Bike_UpdateDirTimerHistory
@@ -1898,7 +1929,7 @@ Bike_UpdateDirTimerHistory:
 Bike_UpdateABStartSelectHistory:
 	push	{r4, lr}
 	lsl	r0, r0, #0x18
-	ldr	r3, .L277
+	ldr	r3, .L282
 	ldr	r2, [r3, #0x10]
 	lsl	r2, r2, #0x4
 	mov	r1, #0xf0
@@ -1910,7 +1941,7 @@ Bike_UpdateABStartSelectHistory:
 	mov	r1, #0x7
 	add	r4, r3, #0
 	add	r3, r3, #0x1c
-.L275:
+.L280:
 	add	r2, r1, r3
 	sub	r1, r1, #0x1
 	add	r0, r1, r3
@@ -1919,15 +1950,15 @@ Bike_UpdateABStartSelectHistory:
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
 	cmp	r1, #0
-	bne	.L275	@cond_branch
+	bne	.L280	@cond_branch
 	mov	r0, #0x1
 	strb	r0, [r4, #0x1c]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L278:
+.L283:
 	.align	2, 0
-.L277:
+.L282:
 	.word	gPlayerAvatar
 .Lfe35:
 	.size	 Bike_UpdateABStartSelectHistory,.Lfe35-Bike_UpdateABStartSelectHistory
@@ -1942,33 +1973,33 @@ Bike_DPadToDirection:
 	mov	r0, #0x40
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L280	@cond_branch
+	beq	.L285	@cond_branch
 	mov	r0, #0x2
-	b	.L284
-.L280:
+	b	.L289
+.L285:
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L281	@cond_branch
+	beq	.L286	@cond_branch
 	mov	r0, #0x1
-	b	.L284
-.L281:
+	b	.L289
+.L286:
 	mov	r0, #0x20
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L282	@cond_branch
+	beq	.L287	@cond_branch
 	mov	r0, #0x3
-	b	.L284
-.L282:
+	b	.L289
+.L287:
 	mov	r0, #0x10
 	and	r2, r2, r0
 	cmp	r2, #0
-	bne	.L283	@cond_branch
+	bne	.L288	@cond_branch
 	mov	r0, #0x0
-	b	.L284
-.L283:
+	b	.L289
+.L288:
 	mov	r0, #0x4
-.L284:
+.L289:
 	pop	{r1}
 	bx	r1
 .Lfe36:
@@ -1982,12 +2013,12 @@ GetBikeCollision:
 	add	r6, r0, #0
 	lsl	r6, r6, #0x18
 	lsr	r6, r6, #0x18
-	ldr	r0, .L286
+	ldr	r0, .L291
 	ldrb	r0, [r0, #0x5]
 	lsl	r4, r0, #0x3
 	add	r4, r4, r0
 	lsl	r4, r4, #0x2
-	ldr	r0, .L286+0x4
+	ldr	r0, .L291+0x4
 	add	r4, r4, r0
 	ldrh	r1, [r4, #0x10]
 	add	r0, sp, #0x4
@@ -2023,9 +2054,9 @@ GetBikeCollision:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.L287:
+.L292:
 	.align	2, 0
-.L286:
+.L291:
 	.word	gPlayerAvatar
 	.word	gObjectEvents
 .Lfe37:
@@ -2051,21 +2082,21 @@ GetBikeCollisionAt:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x4
-	bhi	.L291	@cond_branch
+	bhi	.L296	@cond_branch
 	cmp	r4, #0
-	bne	.L293	@cond_branch
+	bne	.L298	@cond_branch
 	add	r0, r5, #0
 	bl	IsRunningDisallowedByMetatile
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L290	@cond_branch
+	beq	.L295	@cond_branch
 	mov	r4, #0x2
-.L290:
+.L295:
 	cmp	r4, #0
-	beq	.L291	@cond_branch
-.L293:
+	beq	.L296	@cond_branch
+.L298:
 	bl	Bike_TryAdvanceCyclingRoadCollisions
-.L291:
+.L296:
 	add	r0, r4, #0
 	add	sp, sp, #0x4
 	pop	{r4, r5}
@@ -2084,21 +2115,21 @@ RS_IsRunningDisallowed:
 	bl	IsRunningDisallowedByMetatile
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L296	@cond_branch
-	ldr	r0, .L299
+	bne	.L301	@cond_branch
+	ldr	r0, .L304
 	ldrb	r0, [r0, #0x17]
 	cmp	r0, #0x8
-	bne	.L295	@cond_branch
-.L296:
+	bne	.L300	@cond_branch
+.L301:
 	mov	r0, #0x1
-	b	.L298
-.L300:
+	b	.L303
+.L305:
 	.align	2, 0
-.L299:
+.L304:
 	.word	gMapHeader
-.L295:
+.L300:
 	mov	r0, #0x0
-.L298:
+.L303:
 	pop	{r1}
 	bx	r1
 .Lfe39:
@@ -2114,23 +2145,23 @@ IsRunningDisallowedByMetatile:
 	bl	MetatileBehavior_IsRunningDisallowed
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L305	@cond_branch
+	bne	.L310	@cond_branch
 	add	r0, r4, #0
 	bl	MetatileBehavior_IsFortreeBridge
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L303	@cond_branch
+	beq	.L308	@cond_branch
 	bl	PlayerGetZCoord
 	mov	r1, #0x1
 	and	r1, r1, r0
 	cmp	r1, #0
-	bne	.L303	@cond_branch
-.L305:
+	bne	.L308	@cond_branch
+.L310:
 	mov	r0, #0x1
-	b	.L304
-.L303:
+	b	.L309
+.L308:
 	mov	r0, #0x0
-.L304:
+.L309:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
@@ -2141,22 +2172,22 @@ IsRunningDisallowedByMetatile:
 	.thumb_func
 Bike_TryAdvanceCyclingRoadCollisions:
 	push	{lr}
-	ldr	r0, .L308
+	ldr	r0, .L313
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L307	@cond_branch
-	ldr	r1, .L308+0x4
+	beq	.L312	@cond_branch
+	ldr	r1, .L313+0x4
 	ldrb	r0, [r1]
 	cmp	r0, #0x63
-	bhi	.L307	@cond_branch
+	bhi	.L312	@cond_branch
 	add	r0, r0, #0x1
 	strb	r0, [r1]
-.L307:
+.L312:
 	pop	{r0}
 	bx	r0
-.L309:
+.L314:
 	.align	2, 0
-.L308:
+.L313:
 	.word	gBikeCyclingChallenge
 	.word	gBikeCollisions
 .Lfe41:
@@ -2175,33 +2206,33 @@ CanBikeFaceDirOnMetatile:
 	add	r0, r0, r1
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bhi	.L311	@cond_branch
+	bhi	.L316	@cond_branch
 	add	r0, r4, #0
 	bl	MetatileBehavior_IsIsolatedVerticalRail
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L316	@cond_branch
+	bne	.L321	@cond_branch
 	add	r0, r4, #0
 	bl	MetatileBehavior_IsVerticalRail
-	b	.L318
-.L311:
+	b	.L323
+.L316:
 	add	r0, r5, #0
 	bl	MetatileBehavior_IsIsolatedHorizontalRail
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L316	@cond_branch
+	bne	.L321	@cond_branch
 	add	r0, r5, #0
 	bl	MetatileBehavior_IsHorizontalRail
-.L318:
+.L323:
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L314	@cond_branch
-.L316:
+	beq	.L319	@cond_branch
+.L321:
 	mov	r0, #0x0
-	b	.L317
-.L314:
+	b	.L322
+.L319:
 	mov	r0, #0x1
-.L317:
+.L322:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
@@ -2221,23 +2252,23 @@ WillPlayerCollideWithCollision:
 	add	r1, r1, r3
 	lsr	r1, r1, #0x18
 	cmp	r1, #0x1
-	bhi	.L320	@cond_branch
+	bhi	.L325	@cond_branch
 	cmp	r0, #0xa
-	beq	.L325	@cond_branch
+	beq	.L330	@cond_branch
 	cmp	r0, #0xc
-	bne	.L323	@cond_branch
-	b	.L325
-.L320:
-	cmp	r2, #0xb
-	beq	.L325	@cond_branch
-	cmp	r2, #0xd
-	bne	.L323	@cond_branch
+	bne	.L328	@cond_branch
+	b	.L330
 .L325:
+	cmp	r2, #0xb
+	beq	.L330	@cond_branch
+	cmp	r2, #0xd
+	bne	.L328	@cond_branch
+.L330:
 	mov	r0, #0x0
-	b	.L326
-.L323:
+	b	.L331
+.L328:
 	mov	r0, #0x1
-.L326:
+.L331:
 	pop	{r1}
 	bx	r1
 .Lfe43:
@@ -2249,12 +2280,12 @@ WillPlayerCollideWithCollision:
 IsBikingDisallowedByPlayer:
 	push	{r4, lr}
 	add	sp, sp, #-0x4
-	ldr	r0, .L331
+	ldr	r0, .L336
 	ldrb	r1, [r0]
 	mov	r0, #0x18
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L328	@cond_branch
+	bne	.L333	@cond_branch
 	mov	r4, sp
 	add	r4, r4, #0x2
 	mov	r0, sp
@@ -2271,16 +2302,16 @@ IsBikingDisallowedByPlayer:
 	bl	IsRunningDisallowedByMetatile
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L328	@cond_branch
+	bne	.L333	@cond_branch
 	mov	r0, #0x0
-	b	.L330
-.L332:
+	b	.L335
+.L337:
 	.align	2, 0
-.L331:
+.L336:
 	.word	gPlayerAvatar
-.L328:
+.L333:
 	mov	r0, #0x1
-.L330:
+.L335:
 	add	sp, sp, #0x4
 	pop	{r4}
 	pop	{r1}
@@ -2297,9 +2328,9 @@ player_should_look_direction_be_enforced_upon_movement:
 	bl	TestPlayerAvatarFlags
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L334	@cond_branch
-	ldr	r2, .L337
-	ldr	r0, .L337+0x4
+	beq	.L339	@cond_branch
+	ldr	r2, .L342
+	ldr	r0, .L342+0x4
 	ldrb	r1, [r0, #0x5]
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
@@ -2309,17 +2340,17 @@ player_should_look_direction_be_enforced_upon_movement:
 	bl	MetatileBehavior_IsBumpySlope
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L334	@cond_branch
+	beq	.L339	@cond_branch
 	mov	r0, #0x0
-	b	.L336
-.L338:
+	b	.L341
+.L343:
 	.align	2, 0
-.L337:
+.L342:
 	.word	gObjectEvents
 	.word	gPlayerAvatar
-.L334:
+.L339:
 	mov	r0, #0x1
-.L336:
+.L341:
 	pop	{r1}
 	bx	r1
 .Lfe45:
@@ -2332,40 +2363,40 @@ GetOnOffBike:
 	push	{r4, lr}
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
-	ldr	r1, .L342
+	ldr	r1, .L347
 	mov	r0, #0x0
 	strb	r0, [r1]
-	ldr	r0, .L342+0x4
+	ldr	r0, .L347+0x4
 	ldrb	r1, [r0]
 	mov	r0, #0x6
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L340	@cond_branch
+	beq	.L345	@cond_branch
 	mov	r0, #0x1
 	bl	SetPlayerAvatarTransitionFlags
 	bl	Overworld_ClearSavedMusic
 	bl	Overworld_PlaySpecialMapMusic
-	b	.L341
-.L343:
+	b	.L346
+.L348:
 	.align	2, 0
-.L342:
+.L347:
 	.word	gUnusedBikeCameraAheadPanback
 	.word	gPlayerAvatar
-.L340:
+.L345:
 	add	r0, r2, #0
 	bl	SetPlayerAvatarTransitionFlags
-	ldr	r4, .L344
+	ldr	r4, .L349
 	add	r0, r4, #0
 	bl	Overworld_SetSavedMusic
 	add	r0, r4, #0
 	bl	Overworld_ChangeMusicTo
-.L341:
+.L346:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L345:
+.L350:
 	.align	2, 0
-.L344:
+.L349:
 	.word	0x193
 .Lfe46:
 	.size	 GetOnOffBike,.Lfe46-GetOnOffBike
@@ -2375,7 +2406,7 @@ GetOnOffBike:
 	.thumb_func
 BikeClearState:
 	push	{lr}
-	ldr	r2, .L357
+	ldr	r2, .L362
 	mov	r3, #0x0
 	strb	r3, [r2, #0x8]
 	strb	r3, [r2, #0x9]
@@ -2385,30 +2416,30 @@ BikeClearState:
 	str	r1, [r2, #0x10]
 	mov	r1, #0x0
 	add	r2, r2, #0x14
-.L350:
+.L355:
 	add	r0, r1, r2
 	strb	r3, [r0]
 	add	r0, r1, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
 	cmp	r1, #0x7
-	bls	.L350	@cond_branch
+	bls	.L355	@cond_branch
 	mov	r1, #0x0
-	ldr	r3, .L357+0x4
+	ldr	r3, .L362+0x4
 	mov	r2, #0x0
-.L355:
+.L360:
 	add	r0, r1, r3
 	strb	r2, [r0]
 	add	r0, r1, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
 	cmp	r1, #0x7
-	bls	.L355	@cond_branch
+	bls	.L360	@cond_branch
 	pop	{r0}
 	bx	r0
-.L358:
+.L363:
 	.align	2, 0
-.L357:
+.L362:
 	.word	gPlayerAvatar
 	.word	gPlayerAvatar+0x1c
 .Lfe47:
@@ -2420,15 +2451,15 @@ BikeClearState:
 Bike_UpdateBikeCounterSpeed:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r2, .L360
+	ldr	r2, .L365
 	strb	r0, [r2, #0xa]
 	lsr	r1, r0, #0x1
 	add	r0, r0, r1
 	strb	r0, [r2, #0xb]
 	bx	lr
-.L361:
+.L366:
 	.align	2, 0
-.L360:
+.L365:
 	.word	gPlayerAvatar
 .Lfe48:
 	.size	 Bike_UpdateBikeCounterSpeed,.Lfe48-Bike_UpdateBikeCounterSpeed
@@ -2436,14 +2467,14 @@ Bike_UpdateBikeCounterSpeed:
 	.type	 Bike_SetBikeStill,function
 	.thumb_func
 Bike_SetBikeStill:
-	ldr	r1, .L363
+	ldr	r1, .L368
 	mov	r0, #0x0
 	strb	r0, [r1, #0xa]
 	strb	r0, [r1, #0xb]
 	bx	lr
-.L364:
+.L369:
 	.align	2, 0
-.L363:
+.L368:
 	.word	gPlayerAvatar
 .Lfe49:
 	.size	 Bike_SetBikeStill,.Lfe49-Bike_SetBikeStill
@@ -2454,44 +2485,44 @@ Bike_SetBikeStill:
 GetPlayerSpeed:
 	push	{lr}
 	add	sp, sp, #-0x8
-	ldr	r1, .L373
+	ldr	r1, .L378
 	mov	r0, sp
 	mov	r2, #0x6
 	bl	memcpy
-	ldr	r2, .L373+0x4
+	ldr	r2, .L378+0x4
 	ldrb	r1, [r2]
 	mov	r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L366	@cond_branch
+	beq	.L371	@cond_branch
 	ldrb	r0, [r2, #0xa]
 	lsl	r0, r0, #0x1
 	add	r0, r0, sp
 	mov	r1, #0x0
 	ldrsh	r0, [r0, r1]
-	b	.L372
-.L374:
+	b	.L377
+.L379:
 	.align	2, 0
-.L373:
+.L378:
 	.word	sMachBikeSpeeds
 	.word	gPlayerAvatar
-.L366:
+.L371:
 	mov	r0, #0x4
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L368	@cond_branch
+	beq	.L373	@cond_branch
 	mov	r0, #0x3
-	b	.L372
-.L368:
+	b	.L377
+.L373:
 	mov	r0, #0x88
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L370	@cond_branch
+	bne	.L375	@cond_branch
 	mov	r0, #0x1
-	b	.L372
-.L370:
+	b	.L377
+.L375:
 	mov	r0, #0x2
-.L372:
+.L377:
 	add	sp, sp, #0x8
 	pop	{r1}
 	bx	r1
@@ -2504,12 +2535,12 @@ GetPlayerSpeed:
 Bike_HandleBumpySlopeJump:
 	push	{r4, r5, lr}
 	add	sp, sp, #-0x4
-	ldr	r5, .L378
+	ldr	r5, .L383
 	ldrb	r1, [r5]
 	mov	r0, #0x4
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L376	@cond_branch
+	beq	.L381	@cond_branch
 	mov	r4, sp
 	add	r4, r4, #0x2
 	mov	r0, sp
@@ -2526,21 +2557,21 @@ Bike_HandleBumpySlopeJump:
 	bl	MetatileBehavior_IsBumpySlope
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L376	@cond_branch
+	beq	.L381	@cond_branch
 	mov	r0, #0x2
 	strb	r0, [r5, #0x8]
 	bl	GetPlayerMovementDirection
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	bl	PlayerUseAcroBikeOnBumpySlope
-.L376:
+.L381:
 	add	sp, sp, #0x4
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L379:
+.L384:
 	.align	2, 0
-.L378:
+.L383:
 	.word	gPlayerAvatar
 .Lfe51:
 	.size	 Bike_HandleBumpySlopeJump,.Lfe51-Bike_HandleBumpySlopeJump
@@ -2556,12 +2587,12 @@ IsRunningDisallowed:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L381	@cond_branch
+	beq	.L386	@cond_branch
 	mov	r0, #0x0
-	b	.L383
-.L381:
+	b	.L388
+.L386:
 	mov	r0, #0x1
-.L383:
+.L388:
 	pop	{r1}
 	bx	r1
 .Lfe52:

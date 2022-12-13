@@ -91,7 +91,7 @@ BattleFrontier_BattleArenaBattleRoom_EventScript_AnnounceTrainers:: @ 825752E
 	applymovement LOCALID_PLAYER, BattleFrontier_BattleArenaBattleRoom_Movement_PlayerStepForward
 	applymovement LOCALID_OPPONENT, BattleFrontier_BattleArenaBattleRoom_Movement_OpponentStepForward
 	waitmovement 0
-	palace_getopponentintro
+	special getintro
 	msgbox gStringVar4, MSGBOX_DEFAULT
 	waitmessage
 	call BattleFrontier_BattleArenaBattleRoom_EventScript_DoArenaBattle
@@ -131,8 +131,6 @@ BattleFrontier_BattleArenaBattleRoom_EventScript_DefeatedOpponent:: @ 8257630
 	special LoadPlayerParty
 	special SavePlayerParty
 	frontier_setpartyorder FRONTIER_PARTY_SIZE
-	playfanfare MUS_HEAL
-	waitfanfare
 	special HealPlayerParty
 BattleFrontier_BattleArenaBattleRoom_EventScript_AskReadyForOpponent:: @ 82576B0
 	frontier_getbrainstatus
@@ -390,6 +388,9 @@ BattleFrontier_BattleArenaBattleRoom_EventScript_DoArenaBattle:: @ 8257B6C
 	closemessage
 	setvar VAR_TEMP_2, 0
 	frontier_set FRONTIER_DATA_RECORD_DISABLED, FALSE
+	frontier_get FRONTIER_DATA_BATTLE_NUM
+	compare VAR_RESULT, 6
+	call_if_eq BattleFrontier_BattleArenaBattleRoom_EventScript_ChangeMusic
 	special HealPlayerParty
 	setvar VAR_0x8004, SPECIAL_BATTLE_ARENA
 	setvar VAR_0x8005, 0
@@ -399,7 +400,9 @@ BattleFrontier_BattleArenaBattleRoom_EventScript_DoArenaBattle:: @ 8257B6C
 	special HealPlayerParty
 	frontier_resetsketch
 	return
-
+BattleFrontier_BattleArenaBattleRoom_EventScript_ChangeMusic::
+	setvar VAR_TEMP_8, 12
+	return
 BattleFrontier_BattleArenaBattleRoom_EventScript_DeclarePlayerWinner:: @ 8257BA9
 	applymovement LOCALID_ANNOUNCER, BattleFrontier_BattleArenaBattleRoom_Movement_JumpInPlaceDown
 	applymovement LOCALID_BLACK_BELT_1, BattleFrontier_BattleArenaBattleRoom_Movement_JumpInPlaceDown
@@ -415,17 +418,17 @@ BattleFrontier_BattleArenaBattleRoom_EventScript_DeclarePlayerWinner:: @ 8257BA9
 	return
 
 BattleFrontier_BattleArenaBattleRoom_Movement_PlayerEnter: @ 8257BE2
-	walk_right
-	walk_right
+	walk_fast_right
+	walk_fast_right
 BattleFrontier_BattleArenaBattleRoom_Movement_PlayerStepForwardLong: @ 8257BE4
-	walk_right
+	walk_fast_right
 BattleFrontier_BattleArenaBattleRoom_Movement_PlayerStepForward: @ 8257BE5
-	walk_right
+	walk_fast_right
 	step_end
 
 BattleFrontier_BattleArenaBattleRoom_Movement_PlayerWalkBackToLine: @ 8257BE7
-	walk_left
-	walk_left
+	walk_fast_left
+	walk_fast_left
 	walk_in_place_fastest_right
 	step_end
 
@@ -438,12 +441,12 @@ BattleFrontier_BattleArenaBattleRoom_Movement_WalkInPlaceRight: @ 8257BED
 	step_end
 
 BattleFrontier_BattleArenaBattleRoom_Movement_OpponentEnter: @ 8257BEF
-	walk_left
-	walk_left
+	walk_fast_left
+	walk_fast_left
 BattleFrontier_BattleArenaBattleRoom_Movement_OpponentStepForwardLong: @ 8257BF1
-	walk_left
+	walk_fast_left
 BattleFrontier_BattleArenaBattleRoom_Movement_OpponentStepForward: @ 8257BF2
-	walk_left
+	walk_fast_left
 	step_end
 
 BattleFrontier_BattleArenaBattleRoom_Movement_GretaEnter: @ 8257BF4
@@ -455,13 +458,13 @@ BattleFrontier_BattleArenaBattleRoom_Movement_GretaEnter: @ 8257BF4
 	step_end
 
 BattleFrontier_BattleArenaBattleRoom_Movement_OpponentExit: @ 8257BFA
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
 	step_end
 
 BattleFrontier_BattleArenaBattleRoom_Movement_JumpInPlaceDown: @ 8257C02
@@ -513,26 +516,26 @@ BattleFrontier_BattleArenaBattleRoom_Movement_GretaWalkBackToCenter: @ 8257C3A
 	step_end
 
 BattleFrontier_BattleArenaBattleRoom_Text_PlayerStepForward: @ 8257C3D
-	.string "REFEREE: TRAINER {PLAYER}!\n"
+	.string "Referee: Trainer {PLAYER}!\n"
 	.string "Step forward, please!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_OpponentStepForward: @ 8257C68
-	.string "REFEREE: TRAINER {STR_VAR_1}!\n"
+	.string "Referee: Trainer {STR_VAR_1}!\n"
 	.string "Step forward, please!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_SetKOTourneyBegin: @ 8257C93
-	.string "REFEREE: Set KO Tourney!\n"
+	.string "Referee: Set KO Tourney!\n"
 	.string "Begin!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_WinnerIsPlayer: @ 8257CB3
-	.string "REFEREE: The winner is {PLAYER}!$"
+	.string "Referee: The winner is {PLAYER}!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_WinnerIsOpponent: @ 8257CCE
-	.string "REFEREE: The winner is {STR_VAR_1}!$"
+	.string "Referee: The winner is {STR_VAR_1}!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_MonsWillBeRestored: @ 8257CE9
-	.string "Your POKéMON will be restored to\n"
-	.string "full health.$"
+	.string "Your Pokémon have been\n"
+	.string "restored to full health.$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_ReadyFor2ndOpponent: @ 8257D17
 	.string "Next up, your second opponent!\n"
@@ -572,24 +575,24 @@ BattleFrontier_BattleArenaBattleRoom_Text_SavingPleaseWait: @ 8257EDB
 
 BattleFrontier_BattleArenaBattleRoom_Text_RecordLastBattle: @ 8257F04
 	.string "Would you like to record your last\n"
-	.string "battle on your FRONTIER PASS?$"
+	.string "battle on your Frontier Pass?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_NowFaceTycoon: @ 8257F45
 	.string "My dear challenger!\p"
 	.string "Your skill level is truly astounding!\p"
 	.string "We now would like you to face our\n"
-	.string "leader, the ARENA TYCOON!$"
+	.string "leader, the Arena Tycoon!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_PreparedForTycoon: @ 8257FBB
-	.string "A battle with the ARENA TYCOON!\n"
+	.string "A battle with the Arena Tycoon!\n"
 	.string "Are you prepared?$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_MakeWayForGreta: @ 8257FED
-	.string "REFEREE: The ARENA TYCOON!\n"
-	.string "Make way for GRETA!$"
+	.string "Referee: The Arena Tycoon!\n"
+	.string "Make way for Greta!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_GretaYoureChallenger: @ 825801C
-	.string "GRETA: Hey!\n"
+	.string "Greta: Hey!\n"
 	.string "Howdy!\p"
 	.string "…Wait, are you the challenger?$"
 
@@ -610,14 +613,14 @@ BattleFrontier_BattleArenaBattleRoom_Text_IgniteMyPassionForBattle: @ 825810D
 	.string "for battle!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_GretaYoureToughAfterAll: @ 825813F
-	.string "GRETA: Ow, wait a second!\n"
+	.string "Greta: Ow, wait a second!\n"
 	.string "You are tough after all!\p"
 	.string "I like you!\n"
-	.string "Let's see your FRONTIER PASS.$"
+	.string "Let's see your Frontier Pass.$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_ReceivedGutsSymbol: @ 825819C
 	.string "The Guts Symbol was embossed on\n"
-	.string "the FRONTIER PASS!$"
+	.string "the Frontier Pass!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_GoingToBeFunNextTime: @ 82581CF
 	.string "Hmm…\p"
@@ -625,7 +628,7 @@ BattleFrontier_BattleArenaBattleRoom_Text_GoingToBeFunNextTime: @ 82581CF
 	.string "I'm looking forward to it!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_GretaLookingForwardToSeeingAgain: @ 8258213
-	.string "GRETA: Hey! Howdy!\n"
+	.string "Greta: Hey! Howdy!\n"
 	.string "You finally won your way up to me!\p"
 	.string "I was getting worried waiting for you!\n"
 	.string "I was really looking forward to seeing\l"
@@ -640,12 +643,12 @@ BattleFrontier_BattleArenaBattleRoom_Text_WontAllowHalfheartedEffort: @ 82582BB
 	.string "Be ready for a thrashing!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_LetsGetThisStarted: @ 82582F9
-	.string "Come on, REFEREE!\n"
+	.string "Come on, referee!\n"
 	.string "Let's get this started!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_GretaBlownAway: @ 8258323
-	.string "GRETA: Gaaah! Blown away!\n"
-	.string "Let's see your FRONTIER PASS!$"
+	.string "Greta: Gaaah! Blown away!\n"
+	.string "Let's see your Frontier Pass!$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_GutsSymbolTookGoldenShine: @ 825835B
 	.string "The Guts Symbol took on\n"

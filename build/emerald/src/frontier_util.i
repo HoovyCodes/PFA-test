@@ -1,6 +1,6 @@
-# 1 "src/frontier_util.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/frontier_util.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/frontier_util.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -3656,6 +3656,13 @@ void ClearIllusionMon(u32 battlerId);
 bool32 SetIllusionMon(struct Pokemon *mon, u32 battlerId);
 bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
 u8 GetBattleMoveSplit(u32 moveId);
+bool32 CanSleep(u8 battlerId);
+bool32 CanBePoisoned(u8 battlerId);
+bool32 CanBeBurned(u8 battlerId);
+bool32 CanBeParalyzed(u8 battlerId);
+bool32 CanBeFrozen(u8 battlerId);
+bool32 CanBeConfused(u8 battlerId);
+bool32 IsBattlerTerrainAffected(u8 battlerId, u32 terrainFlag);
 # 9 "include/battle.h" 2
 # 1 "include/battle_script_commands.h" 1
 # 9 "include/battle_script_commands.h"
@@ -4321,8 +4328,9 @@ struct BattleStruct
     u8 sameMoveTurns[4];
     u16 moveEffect2;
     u16 changedSpecies[6];
+ u8 abilityPopUpSpriteIds[4][2];
 };
-# 579 "include/battle.h"
+# 580 "include/battle.h"
 struct BattleScripting
 {
     s32 painSplitHp;
@@ -4358,6 +4366,7 @@ struct BattleScripting
     u16 moveEffect;
     u16 multihitMoveEffect;
     u8 illusionNickHack;
+    bool8 fixedPopup;
 };
 
 
@@ -4432,6 +4441,7 @@ struct BattleBarInfo
     s32 oldValue;
     s32 receivedValue;
     s32 currValue;
+ u8 oddFrame;
 };
 
 struct BattleSpriteData
@@ -6498,8 +6508,11 @@ extern const u8 gText_ChikoritaDoll80BP[];
 extern const u8 gText_TotodileDoll80BP[];
 
 extern const u8 gText_Dolls[];
-extern const u8 gText_Cushions[];
+extern const u8 gText_MatDesk[];
+extern const u8 gText_OrnaPost[];
+extern const u8 gText_ChairPlant[];
 extern const u8 gText_Contest[];
+extern const u8 gText_TMs[];
 extern const u8 gText_MegaC[];
 extern const u8 gText_MegaB[];
 extern const u8 gText_MegaA[];
@@ -6677,8 +6690,11 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Doll[];
-extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Cushion[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MatDesk[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_OrnaPost[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChairPlant[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Contest[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TM[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaC[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaB[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaA[];
@@ -9143,7 +9159,7 @@ void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
 
-bool8 CanLearnTutorMove(u16, u8);
+bool32 CanLearnTutorMove(u16, u8);
 # 39 "src/frontier_util.c" 2
 
 struct FrontierBrainMon
@@ -9211,15 +9227,15 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
             {
                 .species = 65,
                 .heldItem = 211,
-                .fixedIV = 24,
+                .fixedIV = 31,
                 .nature = 15,
                 .evs = {106, 0, 152, 152, 100, 0},
-                .moves = {9, 7, 8, 50},
+                .moves = {451, 7, 8, 50},
             },
             {
                 .species = 244,
                 .heldItem = 152,
-                .fixedIV = 24,
+                .fixedIV = 31,
                 .nature = 1,
                 .evs = {100, 152, 152, 0, 100, 6},
                 .moves = {126, 347, 216, 46},
@@ -9227,7 +9243,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
             {
                 .species = 143,
                 .heldItem = 215,
-                .fixedIV = 24,
+                .fixedIV = 31,
                 .nature = 3,
                 .evs = {152, 152, 0, 0, 106, 100},
                 .moves = {34, 187, 281, 247},
@@ -9245,11 +9261,11 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
             },
             {
                 .species = 381,
-                .heldItem = 211,
+                .heldItem = 423,
                 .fixedIV = 31,
                 .nature = 15,
                 .evs = {252, 0, 252, 6, 0, 0},
-                .moves = {94, 347, 105, 337},
+                .moves = {94, 347, 105, 406},
             },
             {
                 .species = 143,
@@ -9268,15 +9284,15 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
             {
                 .species = 260,
                 .heldItem = 225,
-                .fixedIV = 20,
+                .fixedIV = 31,
                 .nature = 2,
                 .evs = {152, 152, 106, 0, 100, 0},
-                .moves = {57, 89, 58, 68},
+                .moves = {127, 89, 8, 68},
             },
             {
                 .species = 373,
                 .heldItem = 152,
-                .fixedIV = 20,
+                .fixedIV = 31,
                 .nature = 3,
                 .evs = {152, 152, 106, 100, 0, 0},
                 .moves = {89, 280, 337, 332},
@@ -9284,7 +9300,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
             {
                 .species = 6,
                 .heldItem = 212,
-                .fixedIV = 20,
+                .fixedIV = 31,
                 .nature = 17,
                 .evs = {100, 152, 106, 152, 0, 0},
                 .moves = {315, 157, 332, 89},
@@ -9298,15 +9314,15 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
                 .fixedIV = 31,
                 .nature = 2,
                 .evs = {252, 252, 6, 0, 0, 0},
-                .moves = {57, 89, 58, 243},
+                .moves = {127, 89, 8, 243},
             },
             {
                 .species = 376,
-                .heldItem = 215,
+                .heldItem = 429,
                 .fixedIV = 31,
                 .nature = 2,
                 .evs = {252, 252, 6, 0, 0, 0},
-                .moves = {94, 309, 89, 182},
+                .moves = {428, 309, 89, 182},
             },
             {
                 .species = 380,
@@ -9325,7 +9341,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
             {
                 .species = 169,
                 .heldItem = 211,
-                .fixedIV = 16,
+                .fixedIV = 31,
                 .nature = 3,
                 .evs = {152, 0, 0, 152, 100, 106},
                 .moves = {109, 104, 92, 19},
@@ -9333,15 +9349,15 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
             {
                 .species = 289,
                 .heldItem = 227,
-                .fixedIV = 16,
+                .fixedIV = 31,
                 .nature = 0,
                 .evs = {152, 152, 0, 106, 100, 0},
-                .moves = {89, 207, 247, 280},
+                .moves = {89, 207, 421, 280},
             },
             {
                 .species = 131,
                 .heldItem = 215,
-                .fixedIV = 16,
+                .fixedIV = 31,
                 .nature = 17,
                 .evs = {0, 0, 252, 0, 106, 152},
                 .moves = {58, 32, 109, 182},
@@ -9363,7 +9379,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
                 .fixedIV = 31,
                 .nature = 0,
                 .evs = {6, 252, 0, 252, 0, 0},
-                .moves = {63, 89, 247, 281},
+                .moves = {63, 89, 421, 281},
             },
             {
                 .species = 245,
@@ -9382,7 +9398,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
             {
                 .species = 214,
                 .heldItem = 199,
-                .fixedIV = 20,
+                .fixedIV = 31,
                 .nature = 13,
                 .evs = {106, 152, 0, 152, 0, 100},
                 .moves = {224, 317, 203, 179},
@@ -9390,7 +9406,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
             {
                 .species = 197,
                 .heldItem = 229,
-                .fixedIV = 20,
+                .fixedIV = 31,
                 .nature = 20,
                 .evs = {152, 0, 100, 0, 152, 106},
                 .moves = {34, 109, 94, 185},
@@ -9398,10 +9414,10 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
             {
                 .species = 292,
                 .heldItem = 211,
-                .fixedIV = 20,
+                .fixedIV = 31,
                 .nature = 3,
                 .evs = {0, 252, 6, 252, 0, 0},
-                .moves = {247, 216, 109, 332},
+                .moves = {425, 216, 109, 332},
             },
         },
 
@@ -9416,7 +9432,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
             },
             {
                 .species = 94,
-                .heldItem = 229,
+                .heldItem = 416,
                 .fixedIV = 31,
                 .nature = 15,
                 .evs = {252, 0, 252, 0, 6, 0},
@@ -9496,7 +9512,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
             {
                 .species = 336,
                 .heldItem = 215,
-                .fixedIV = 16,
+                .fixedIV = 31,
                 .nature = 2,
                 .evs = {252, 0, 252, 0, 6, 0},
                 .moves = {207, 242, 305, 202},
@@ -9504,7 +9520,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
             {
                 .species = 213,
                 .heldItem = 145,
-                .fixedIV = 16,
+                .fixedIV = 31,
                 .nature = 5,
                 .evs = {252, 0, 0, 0, 106, 252},
                 .moves = {92, 201, 182, 156},
@@ -9512,7 +9528,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
             {
                 .species = 350,
                 .heldItem = 229,
-                .fixedIV = 16,
+                .fixedIV = 31,
                 .nature = 15,
                 .evs = {152, 0, 100, 0, 152, 106},
                 .moves = {58, 243, 57, 105},
@@ -9530,7 +9546,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
             },
             {
                 .species = 208,
-                .heldItem = 211,
+                .heldItem = 440,
                 .fixedIV = 31,
                 .nature = 2,
                 .evs = {252, 0, 0, 0, 6, 252},
@@ -9553,7 +9569,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
             {
                 .species = 377,
                 .heldItem = 215,
-                .fixedIV = 16,
+                .fixedIV = 31,
                 .nature = 3,
                 .evs = {152, 152, 0, 0, 106, 100},
                 .moves = {153, 276, 89, 246},
@@ -9561,7 +9577,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
             {
                 .species = 379,
                 .heldItem = 229,
-                .fixedIV = 16,
+                .fixedIV = 31,
                 .nature = 3,
                 .evs = {152, 152, 0, 0, 6, 200},
                 .moves = {89, 232, 92, 334},
@@ -9569,7 +9585,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
             {
                 .species = 378,
                 .heldItem = 145,
-                .fixedIV = 16,
+                .fixedIV = 31,
                 .nature = 15,
                 .evs = {106, 0, 152, 0, 100, 152},
                 .moves = {58, 133, 87, 156},
@@ -9583,7 +9599,7 @@ static const struct FrontierBrainMon sFrontierBrainsMons[][2][3] =
                 .fixedIV = 31,
                 .nature = 16,
                 .evs = {6, 0, 252, 252, 0, 0},
-                .moves = {59, 352, 332, 115},
+                .moves = {59, 352, 403, 115},
             },
             {
                 .species = 145,
@@ -9786,8 +9802,7 @@ static const u8 sFrontierBrainObjEventGfx[7][2] =
 
 const u16 gFrontierBannedSpecies[] =
 {
-    151, 150, 250, 249, 251,
-    382, 383, 384, 385, 386, 0xFFFF
+    493, 0xFFFF
 };
 
 static const u8 *const sRecordsWindowChallengeTexts[][2] =
@@ -11491,6 +11506,8 @@ void ScrollRankingHallRecordsWindow(void)
 void ClearRankingHallRecords(void)
 {
     s32 i, j, k;
+ u8 zero = 0;
+
 
     for (i = 0; i < 9; i++)
     {
@@ -11498,7 +11515,7 @@ void ClearRankingHallRecords(void)
         {
             for (k = 0; k < 3; k++)
             {
-                CopyTrainerId(gSaveBlock2Ptr->hallRecords1P[i][j][k].id, 0);
+                CopyTrainerId(gSaveBlock2Ptr->hallRecords1P[i][j][k].id, (&zero));
                 gSaveBlock2Ptr->hallRecords1P[i][j][k].name[0] = 0xFF;
                 gSaveBlock2Ptr->hallRecords1P[i][j][k].winStreak = 0;
             }
@@ -11509,8 +11526,8 @@ void ClearRankingHallRecords(void)
     {
         for (k = 0; k < 3; k++)
         {
-            CopyTrainerId(gSaveBlock2Ptr->hallRecords2P[j][k].id1, 0);
-            CopyTrainerId(gSaveBlock2Ptr->hallRecords2P[j][k].id2, 0);
+            CopyTrainerId(gSaveBlock2Ptr->hallRecords2P[j][k].id1, (&zero));
+            CopyTrainerId(gSaveBlock2Ptr->hallRecords2P[j][k].id2, (&zero));
             gSaveBlock2Ptr->hallRecords2P[j][k].name1[0] = 0xFF;
             gSaveBlock2Ptr->hallRecords2P[j][k].name2[0] = 0xFF;
             gSaveBlock2Ptr->hallRecords2P[j][k].winStreak = 0;

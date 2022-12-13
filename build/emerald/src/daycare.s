@@ -4,10 +4,10 @@
 	.section ewram_data,"aw"
 	.align	1, 0
 	.type	 sHatchedEggLevelUpMoves,object
-	.size	 sHatchedEggLevelUpMoves,100
+	.size	 sHatchedEggLevelUpMoves,510
 sHatchedEggLevelUpMoves:
 	.short	0x0
-	.space	98
+	.space	508
 	.align	1, 0
 	.type	 sHatchedEggFatherMoves,object
 	.size	 sHatchedEggFatherMoves,8
@@ -5586,7 +5586,7 @@ BuildEggMoveset:
 	add	r0, r6, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r6, r0, #0x10
-	cmp	r6, #0x31
+	cmp	r6, #0xfe
 	bls	.L283	@cond_branch
 	add	r0, r7, #0
 	mov	r1, #0xb

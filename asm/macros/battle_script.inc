@@ -1662,6 +1662,26 @@
 	various \battler, VARIOUS_JUMP_IF_NOT_BERRY
 	.4byte \ptr
 	.endm
+
+	.macro jumpifnotitem battler:req, ptr:req
+	various \battler, VARIOUS_JUMP_IF_NOT_ITEM
+	.4byte \ptr
+	.endm
+	
+	.macro checkflingtoxicorb battler:req, ptr:req
+	various \battler, VARIOUS_FLING_TOXIC_ORB
+	.4byte \ptr
+	.endm
+	
+	.macro checkflingflameorb battler:req, ptr:req
+	various \battler, VARIOUS_FLING_FLAME_ORB
+	.4byte \ptr
+	.endm
+	
+	.macro jumpifkingsrock battler:req, ptr:req
+	various \battler, VARIOUS_FLING_KINGS_ROCK
+	.4byte \ptr
+	.endm
 	
 	.macro jumpifroarfails ptr:req
 	various BS_ATTACKER, VARIOUS_JUMP_IF_ROAR_FAILS
@@ -1753,6 +1773,16 @@
 	
 	.macro jumpifabsent battler:req, ptr:req
 	various \battler, VARIOUS_JUMP_IF_ABSENT
+	.4byte \ptr
+	.endm
+	
+	.macro destroyabilitypopup
+	various BS_ABILITY_BATTLER, VARIOUS_DESTROY_ABILITY_POPUP
+	.endm
+	
+	.macro jumpifterrainaffected battler:req, terrainFlags:req, ptr:req
+	various \battler, VARIOUS_JUMP_IF_TERRAIN_AFFECTED
+	.4byte \terrainFlags
 	.4byte \ptr
 	.endm
 	

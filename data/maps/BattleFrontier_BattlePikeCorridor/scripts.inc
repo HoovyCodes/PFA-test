@@ -39,20 +39,20 @@ BattleFrontier_BattlePikeCorridor_EventScript_TurnPlayerNorth:: @ 825C801
 	end
 
 BattleFrontier_BattlePikeCorridor_Movement_PlayerEnterCorridor: @ 825C80B
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 BattleFrontier_BattlePikeCorridor_Movement_PlayerExitCorridor: @ 825C80E
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
 	set_invisible
 	step_end
 
 BattleFrontier_BattlePikeCorridor_Movement_AttendantEnterCorridor: @ 825C812
-	walk_up
-	walk_up
-	walk_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_left
 	face_down
 	step_end
 

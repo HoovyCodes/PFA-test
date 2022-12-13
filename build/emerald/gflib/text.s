@@ -10686,13 +10686,15 @@ TextPrinterWaitAutoMode:
 	add	r1, r0, #0
 	add	r1, r1, #0x14
 	ldrb	r0, [r1, #0x2]
-	cmp	r0, #0x31
+	cmp	r0, #0x1e
 	beq	.L277	@cond_branch
 	add	r0, r0, #0x1
 	strb	r0, [r1, #0x2]
 	mov	r0, #0x0
 	b	.L279
 .L277:
+	mov	r0, #0x0
+	strb	r0, [r1, #0x2]
 	mov	r0, #0x1
 .L279:
 	pop	{r1}
@@ -10916,9 +10918,9 @@ RenderText:
 	add	r4, r4, #0x14
 	ldrb	r0, [r6, #0x1c]
 	cmp	r0, #0x6
-	bls	.LCB3158
+	bls	.LCB3160
 	b	.L310	@long jump
-.LCB3158:
+.LCB3160:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L419
 	add	r0, r0, r1
@@ -10939,12 +10941,6 @@ RenderText:
 	.word	.L386
 	.word	.L388
 .L311:
-	ldr	r2, .L421
-	ldrh	r1, [r2, #0x2c]
-	mov	r0, #0x3
-	and	r0, r0, r1
-	cmp	r0, #0
-	beq	.L312	@cond_branch
 	ldrb	r1, [r4]
 	mov	r0, #0x10
 	and	r0, r0, r1
@@ -10961,21 +10957,14 @@ RenderText:
 	beq	.L313	@cond_branch
 	sub	r0, r1, #0x1
 	strb	r0, [r6, #0x1e]
-	ldr	r0, .L421+0x4
+	ldr	r0, .L421
 	ldrb	r1, [r0]
 	mov	r0, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.LCB3220
+	bne	.LCB3211
 	b	.L410	@long jump
-.LCB3220:
-	ldrh	r1, [r2, #0x2e]
-	mov	r0, #0x3
-	and	r0, r0, r1
-	cmp	r0, #0
-	bne	.LCB3231
-	b	.L410	@long jump
-.LCB3231:
+.LCB3211:
 	ldrb	r0, [r4]
 	mov	r1, #0x10
 	orr	r0, r0, r1
@@ -10986,7 +10975,6 @@ RenderText:
 .L422:
 	.align	2, 0
 .L421:
-	.word	gMain
 	.word	gTextFlags
 .L313:
 	ldr	r0, .L423
@@ -11020,9 +11008,9 @@ RenderText:
 	add	r0, r3, #0
 	sub	r0, r0, #0xf8
 	cmp	r0, #0x7
-	bls	.LCB3286
+	bls	.LCB3265
 	b	.L317	@long jump
-.LCB3286:
+.LCB3265:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L425
 	add	r0, r0, r1
@@ -11073,9 +11061,9 @@ RenderText:
 	str	r0, [r6]
 	sub	r0, r3, #0x1
 	cmp	r0, #0x17
-	bls	.LCB3340
+	bls	.LCB3319
 	b	.L317	@long jump
-.LCB3340:
+.LCB3319:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L429
 	add	r0, r0, r1
@@ -11238,9 +11226,9 @@ RenderText:
 	mov	r0, #0x4
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.LCB3538
+	bne	.LCB3517
 	b	.L410	@long jump
-.LCB3538:
+.LCB3517:
 	mov	r0, #0x0
 	strb	r0, [r4, #0x2]
 	b	.L410
@@ -11353,9 +11341,9 @@ RenderText:
 	ldrb	r0, [r6, #0x8]
 	sub	r4, r2, r0
 	cmp	r4, #0
-	bgt	.LCB3686
+	bgt	.LCB3665
 	b	.L418	@long jump
-.LCB3686:
+.LCB3665:
 	add	r0, r6, #0
 	add	r1, r4, #0
 	bl	ClearTextSpan
@@ -11555,9 +11543,9 @@ RenderText:
 	bl	TextPrinterWait
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bne	.LCB3937
+	bne	.LCB3916
 	b	.L410	@long jump
-.LCB3937:
+.LCB3916:
 	mov	r0, #0x0
 	strb	r0, [r6, #0x1c]
 	b	.L410
@@ -11566,9 +11554,9 @@ RenderText:
 	bl	TextPrinterWaitWithDownArrow
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bne	.LCB3949
+	bne	.LCB3928
 	b	.L410	@long jump
-.LCB3949:
+.LCB3928:
 	ldrb	r0, [r6, #0x4]
 	ldrb	r2, [r6, #0xd]
 	lsl	r2, r2, #0x1c
@@ -11588,9 +11576,9 @@ RenderText:
 	bl	TextPrinterWaitWithDownArrow
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bne	.LCB3978
+	bne	.LCB3957
 	b	.L410	@long jump
-.LCB3978:
+.LCB3957:
 	add	r0, r6, #0
 	bl	TextPrinterClearDownArrow
 	ldrb	r1, [r6, #0x5]
@@ -11664,9 +11652,9 @@ RenderText:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.LCB4085
+	beq	.LCB4064
 	b	.L410	@long jump
-.LCB4085:
+.LCB4064:
 .L400:
 	strb	r0, [r6, #0x1c]
 	b	.L410
@@ -11930,9 +11918,9 @@ GetStringWidth:
 	add	r0, r1, #0
 	sub	r0, r0, #0xf7
 	cmp	r0, #0x7
-	bls	.LCB4384
+	bls	.LCB4363
 	b	.L586	@long jump
-.LCB4384:
+.LCB4363:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L601
 	add	r0, r0, r1
@@ -12036,9 +12024,9 @@ GetStringWidth:
 	ldrb	r0, [r4]
 	sub	r0, r0, #0x1
 	cmp	r0, #0x15
-	bls	.LCB4519
+	bls	.LCB4498
 	b	.L526	@long jump
-.LCB4519:
+.LCB4498:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L609
 	add	r0, r0, r1
@@ -12086,9 +12074,9 @@ GetStringWidth:
 	bl	GetFontWidthFunc
 	mov	r8, r0
 	cmp	r0, #0
-	bne	.LCB4552
+	bne	.LCB4531
 	b	.L600	@long jump
-.LCB4552:
+.LCB4531:
 	ldr	r0, [sp, #0x4]
 	asr	r1, r0, #0x10
 	mov	r0, #0x1
@@ -12188,9 +12176,9 @@ GetStringWidth:
 .L597:
 	ldrb	r0, [r4]
 	cmp	r0, #0xff
-	beq	.LCB4689
+	beq	.LCB4668
 	b	.L525	@long jump
-.LCB4689:
+.LCB4668:
 	ldr	r0, [sp]
 	cmp	r5, r0
 	bls	.L595	@cond_branch
@@ -12386,9 +12374,9 @@ RenderTextFont9:
 .L614:
 	mov	r0, r8
 	cmp	r0, #0xff
-	beq	.LCB4884
+	beq	.LCB4863
 	b	.L612	@long jump
-.LCB4884:
+.LCB4863:
 	mov	r0, sp
 	mov	r1, sp
 	add	r1, r1, #0x1

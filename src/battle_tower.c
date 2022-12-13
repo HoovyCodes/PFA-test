@@ -37,7 +37,6 @@
 #include "constants/moves.h"
 #include "constants/easy_chat.h"
 #include "constants/tv.h"
-
 extern const u8 MossdeepCity_SpaceCenter_2F_EventScript_MaxieTrainer[];
 extern const u8 MossdeepCity_SpaceCenter_2F_EventScript_TabithaTrainer[];
 
@@ -72,8 +71,10 @@ static void SetNextBattleTentOpponent(void);
 static void CopyEReaderTrainerFarewellMessage(void);
 static void ClearBattleTowerRecord(struct EmeraldBattleTowerRecord *record);
 static void FillTrainerParty(u16 trainerId, u8 firstMonId, u8 monCount);
+static void FillTrainerPartyFAKE(u16 trainerId, u8 firstMonId, u8 monCount);
 static void FillTentTrainerParty_(u16 trainerId, u8 firstMonId, u8 monCount);
 static void FillFactoryFrontierTrainerParty(u16 trainerId, u8 firstMonId);
+static void FillFrontierTrainerPartyFake(u8 monCount);
 static void FillFactoryTentTrainerParty(u16 trainerId, u8 firstMonId);
 static u8 GetFrontierTrainerFixedIvs(u16 trainerId);
 static void FillPartnerParty(u16 trainerId);
@@ -1481,9 +1482,9 @@ void PutNewBattleTowerRecord(struct EmeraldBattleTowerRecord *newRecordEm)
             for (k = 0; k < PLAYER_NAME_LENGTH; k++)
             {
                 // BUG: Wrong variable used, 'j' instead of 'k'.
-                if (gSaveBlock2Ptr->frontier.towerRecords[i].name[j] != newRecord->name[j])
+                if (gSaveBlock2Ptr->frontier.towerRecords[i].name[k] != newRecord->name[k])
                     break;
-                if (newRecord->name[j] == EOS)
+                if (newRecord->name[k] == EOS)
                 {
                     k = PLAYER_NAME_LENGTH;
                     break;
@@ -1899,7 +1900,7 @@ static void FillTrainerParty(u16 trainerId, u8 firstMonId, u8 monCount)
 
         SetMonData(&gEnemyParty[i + firstMonId], MON_DATA_FRIENDSHIP, &friendship);
         SetMonData(&gEnemyParty[i + firstMonId], MON_DATA_HELD_ITEM, &gBattleFrontierHeldItems[gFacilityTrainerMons[monId].itemTableId]);
-
+		SetMonData(&gEnemyParty[i + firstMonId], MON_DATA_ABILITY_NUM, &gFacilityTrainerMons[monId].abilityNum);
         // The pokemon was successfully added to the trainer's party, so it's safe to move on to
         // the next party slot.
         i++;
@@ -1971,6 +1972,133 @@ static void FillFactoryTrainerParty(void)
         FillFactoryTentTrainerParty(gTrainerBattleOpponent_A, 0);
 }
 
+void FillFrontierTrainerPartyFake(u8 monsCount)
+{
+    ZeroEnemyPartyMons();
+    FillTrainerPartyFAKE(gTrainerBattleOpponent_A, 0, monsCount);
+}
+
+static void FillTrainerPartyFAKE(u16 trainerId, u8 firstMonId, u8 monCount)
+{
+    s32 i, j;
+    u16 chosenMonIndices[4];
+    u8 friendship = MAX_FRIENDSHIP;
+    u8 level = SetFacilityPtrsGetLevel();
+    u8 fixedIV = 0;
+    u8 bfMonCount;
+    const u16 *monSet = NULL;
+    u32 otID = 0;
+
+    if (trainerId < FRONTIER_TRAINERS_COUNT)
+    {
+        // Normal battle frontier trainer.
+        fixedIV = GetFrontierTrainerFixedIvs(trainerId);
+        monSet = gFacilityTrainers[gTrainerBattleOpponent_A].monSet;
+    }
+    else if (trainerId == TRAINER_EREADER)
+    {
+        for (i = firstMonId; i < firstMonId + 3; i++)
+            CreateBattleTowerMon(&gEnemyParty[i], &gSaveBlock2Ptr->frontier.ereaderTrainer.party[i - firstMonId]);
+        return;
+    }
+    else if (trainerId == TRAINER_FRONTIER_BRAIN)
+    {
+        CreateFrontierBrainPokemon();
+        return;
+    }
+    else if (trainerId < TRAINER_RECORD_MIXING_APPRENTICE)
+    {
+        // Record mixed player.
+        for (j = 0, i = firstMonId; i < firstMonId + monCount; j++, i++)
+        {
+            if (gSaveBlock2Ptr->frontier.towerRecords[trainerId - TRAINER_RECORD_MIXING_FRIEND].party[j].species != 0
+                && gSaveBlock2Ptr->frontier.towerRecords[trainerId - TRAINER_RECORD_MIXING_FRIEND].party[j].level <= level)
+            {
+                CreateBattleTowerMon2(&gEnemyParty[i], &gSaveBlock2Ptr->frontier.towerRecords[trainerId - TRAINER_RECORD_MIXING_FRIEND].party[j], FALSE);
+            }
+        }
+        return;
+    }
+    else
+    {
+        // Apprentice.
+        for (i = firstMonId; i < firstMonId + 3; i++)
+            CreateApprenticeMon(&gEnemyParty[i], &gSaveBlock2Ptr->apprentices[trainerId - TRAINER_RECORD_MIXING_APPRENTICE], i - firstMonId);
+        return;
+    }
+
+    // Regular battle frontier trainer.
+    // Attempt to fill the trainer's party with random Pokemon until 3 have been
+    // successfully chosen. The trainer's party may not have duplicate pokemon species
+    // or duplicate held items.
+    for (bfMonCount = 0; monSet[bfMonCount] != 0xFFFF; bfMonCount++)
+        ;
+    i = 0;
+    otID = Random32();
+    while (i != monCount)
+    {
+        u16 monId = monSet[Random() % bfMonCount];
+        if ((level == 50 || level == 20) && monId > FRONTIER_MONS_HIGH_TIER)
+            continue;
+
+        // Ensure this pokemon species isn't a duplicate.
+        for (j = 0; j < i + firstMonId; j++)
+        {
+            if (GetMonData(&gEnemyParty[j], MON_DATA_SPECIES, NULL) == gFacilityTrainerMons[monId].species)
+                break;
+        }
+        if (j != i + firstMonId)
+            continue;
+
+        // Ensure this Pokemon's held item isn't a duplicate.
+        for (j = 0; j < i + firstMonId; j++)
+        {
+            if (GetMonData(&gEnemyParty[j], MON_DATA_HELD_ITEM, NULL) != 0
+             && GetMonData(&gEnemyParty[j], MON_DATA_HELD_ITEM, NULL) == gBattleFrontierHeldItems[gFacilityTrainerMons[monId].itemTableId])
+                break;
+        }
+        if (j != i + firstMonId)
+            continue;
+
+        // Ensure this exact pokemon index isn't a duplicate. This check doesn't seem necessary
+        // because the species and held items were already checked directly above.
+        for (j = 0; j < i; j++)
+        {
+            if (chosenMonIndices[j] == monId)
+                break;
+        }
+        if (j != i)
+            continue;
+
+        chosenMonIndices[i] = monId;
+
+        // Place the chosen pokemon into the trainer's party.
+        CreateMonWithEVSpreadNatureOTID(&gEnemyParty[i + firstMonId],
+                                             gFacilityTrainerMons[monId].species,
+                                             100,
+                                             gFacilityTrainerMons[monId].nature,
+                                             fixedIV,
+                                             gFacilityTrainerMons[monId].evSpread,
+                                             otID);
+
+        friendship = MAX_FRIENDSHIP;
+        // Give the chosen pokemon its specified moves.
+        for (j = 0; j < MAX_MON_MOVES; j++)
+        {
+            SetMonMoveSlot(&gEnemyParty[i + firstMonId], gFacilityTrainerMons[monId].moves[j], j);
+            if (gFacilityTrainerMons[monId].moves[j] == MOVE_FRUSTRATION)
+                friendship = 0;  // Frustration is more powerful the lower the pokemon's friendship is.
+        }
+
+        SetMonData(&gEnemyParty[i + firstMonId], MON_DATA_FRIENDSHIP, &friendship);
+        SetMonData(&gEnemyParty[i + firstMonId], MON_DATA_HELD_ITEM, &gBattleFrontierHeldItems[gFacilityTrainerMons[monId].itemTableId]);
+		SetMonData(&gEnemyParty[i + firstMonId], MON_DATA_ABILITY_NUM, &gFacilityTrainerMons[monId].abilityNum);
+        // The pokemon was successfully added to the trainer's party, so it's safe to move on to
+        // the next party slot.
+        i++;
+    }
+}
+
 static void FillFactoryFrontierTrainerParty(u16 trainerId, u8 firstMonId)
 {
     u8 i, j;
@@ -2027,6 +2155,8 @@ static void FillFactoryFrontierTrainerParty(u16 trainerId, u8 firstMonId)
     }
 }
 
+
+
 static void FillFactoryTentTrainerParty(u16 trainerId, u8 firstMonId)
 {
     u8 i, j;
@@ -2059,23 +2189,220 @@ static void FillFactoryTentTrainerParty(u16 trainerId, u8 firstMonId)
     }
 }
 
+static const u8 sText_Greeting0[] = _("Let's both do our bests!$");
+static const u8 sText_Greeting1[] = _("All right;\nI'm ready!$");
+static const u8 sText_Greeting2[] = _("I'm no expert,\nso go easy on me.$");
+static const u8 sText_Greeting3[] = _("Don't waste my time.$");
+static const u8 sText_Greeting4[] = _("Do you have any legendaries?$");
+static const u8 sText_Greeting5[] = _("Don't hold back!$");
+static const u8 sText_Greeting6[] = _("Blink, and you'll\nmiss my victory.$");
+static const u8 sText_Greeting7[] = _("I'm a beginner.\nPlease be nice to me.$");
+static const u8 sText_Greeting8[] = _("I'll never lose.\nNot ever!$");
+static const u8 sText_Greeting9[] = _("You're challenging me?\nHow cute.$");
+static const u8 sText_Greeting10[] = _("Sure, I have time\nto school a kid.$");
+static const u8 sText_Greeting11[] = _("En garde!$");
+static const u8 sText_Greeting12[] = _("My dad buys me my Pokémon.$");
+static const u8 sText_Greeting13[] = _("Please!\nBreak my streak!!$");
+static const u8 sText_Greeting14[] = _("You're just another\nstepping stone on my journey.$");
+static const u8 sText_Greeting15[] = _("Can we be quick?\nI have something in the oven.$");
+static const u8 sText_Greeting16[] = _("So, they let just anyone in here now?$");
+static const u8 sText_Greeting17[] = _("I'm a natural.\nAre you?$");
+static const u8 sText_Greeting18[] = _("Remember, you can click\nRun to surrender.$");
+static const u8 sText_Greeting19[] = _("Please put up a decent fight.$");
+static const u8 sText_Greeting20[] = _("I'm going to sweep your team.$");
+static const u8 sText_Greeting21[] = _("No mercy!$");
+static const u8 sText_Greeting22[] = _("You're going to\nneed a body bag after this.$");
+static const u8 sText_Greeting23[] = _("I've never lost a battle before.$");
+static const u8 sText_Greeting24[] = _("Are you ready\nto get wrecked?$");
+static const u8 sText_Greeting25[] = _("I'm going to send your Pokémon\nto the Shadow Realm!$");
+static const u8 sText_Greeting26[] = _("What time is it?\nWhere am I?$");
+static const u8 sText_Greeting27[] = _("Is there anything\nmore fun than a battle?$");
+static const u8 sText_Greeting28[] = _("Strength comes from within.\nRemember that.$");
+static const u8 sText_Greeting29[] = _("You don't stand a\nghost of a chance.$");
+static const u8 sText_Greeting30[] = _("Let's fight\nan epic battle.$");
+
+static const u8 sText_Greeting31[] = _("Oh, hey...");
+static const u8 sText_Greeting32[] = _("Nice to meet you!");
+static const u8 sText_Greeting33[] = _("Let's have fun together!");
+static const u8 sText_Greeting34[] = _("Did you want to battle me?");
+static const u8 sText_Greeting35[] = _("Don't drag this out.");
+static const u8 sText_Greeting36[] = _("Hey, can you spare some change?");
+static const u8 sText_Greeting37[] = _("What? Battling? What's going on?");
+static const u8 sText_Greeting38[] = _("I'm ready to rock 'n roll!");
+static const u8 sText_Greeting39[] = _("No rest for the weary, eh?");
+static const u8 sText_Greeting40[] = _("You!\nI need to battle you.");
+static const u8 sText_Greeting41[] = _("The wheel of fate is turning.");
+static const u8 sText_Greeting42[] = _("I'm raring to go.");
+static const u8 sText_Greeting43[] = _("I live for battling!");
+static const u8 sText_Greeting44[] = _("Please, don't take this too seriously.");
+static const u8 sText_Greeting45[] = _("Are you the hunter or the hunted?");
+static const u8 sText_Greeting46[] = _("Fight the power!\nFree yourself of your chains.");
+static const u8 sText_Greeting47[] = _("Sure, I can fit in a battle.");
+static const u8 sText_Greeting48[] = _("Please don't hurt\nmy Pokémon too badly.");
+static const u8 sText_Greeting49[] = _("I'm hungry.");
+static const u8 sText_Greeting50[] = _("Good luck, Trainer.\nDo your best.");
+void getintro2(void) {
+	switch(Random()%51){
+	case 0:
+    StringCopy(gStringVar4, sText_Greeting0);
+    break;
+    case 1:
+    StringCopy(gStringVar4, sText_Greeting1);
+    break;
+    case 2:
+    StringCopy(gStringVar4, sText_Greeting2);
+    break;
+    case 3:
+    StringCopy(gStringVar4, sText_Greeting3);
+    break;
+    case 4:
+    StringCopy(gStringVar4, sText_Greeting4);
+    break;
+    case 5:
+    StringCopy(gStringVar4, sText_Greeting5);
+    break;
+    case 6:
+    StringCopy(gStringVar4, sText_Greeting6);
+    break;
+    case 7:
+    StringCopy(gStringVar4, sText_Greeting7);
+    break;
+    case 8:
+    StringCopy(gStringVar4, sText_Greeting8);
+    break;
+    case 9:
+    StringCopy(gStringVar4, sText_Greeting9);
+    break;
+    case 10:
+    StringCopy(gStringVar4, sText_Greeting10);
+    break;
+    case 11:
+    StringCopy(gStringVar4, sText_Greeting11);
+    break;
+    case 12:
+    StringCopy(gStringVar4, sText_Greeting12);
+    break;
+    case 13:
+    StringCopy(gStringVar4, sText_Greeting13);
+    break;
+    case 14:
+    StringCopy(gStringVar4, sText_Greeting14);
+    break;
+    case 15:
+    StringCopy(gStringVar4, sText_Greeting15);
+    break;
+    case 16:
+    StringCopy(gStringVar4, sText_Greeting16);
+    break;
+    case 17:
+    StringCopy(gStringVar4, sText_Greeting17);
+    break;
+    case 18:
+    StringCopy(gStringVar4, sText_Greeting18);
+    break;
+    case 19:
+    StringCopy(gStringVar4, sText_Greeting19);
+    break;
+    case 20:
+    StringCopy(gStringVar4, sText_Greeting20);
+    break;
+    case 21:
+    StringCopy(gStringVar4, sText_Greeting21);
+    break;
+    case 22:
+    StringCopy(gStringVar4, sText_Greeting22);
+    break;
+    case 23:
+    StringCopy(gStringVar4, sText_Greeting23);
+    break;
+    case 24:
+    StringCopy(gStringVar4, sText_Greeting24);
+    break;
+    case 25:
+    StringCopy(gStringVar4, sText_Greeting25);
+    break;
+    case 26:
+    StringCopy(gStringVar4, sText_Greeting26);
+    break;
+    case 27:
+    StringCopy(gStringVar4, sText_Greeting27);
+    break;
+    case 28:
+    StringCopy(gStringVar4, sText_Greeting28);
+    break;
+    case 29:
+    StringCopy(gStringVar4, sText_Greeting29);
+    break;
+    case 30:
+    StringCopy(gStringVar4, sText_Greeting30);
+    break;
+	case 31:
+    StringCopy(gStringVar4, sText_Greeting31);
+    break;
+    case 32:
+    StringCopy(gStringVar4, sText_Greeting32);
+    break;
+    case 33:
+    StringCopy(gStringVar4, sText_Greeting33);
+    break;
+    case 34:
+    StringCopy(gStringVar4, sText_Greeting34);
+    break;
+    case 35:
+    StringCopy(gStringVar4, sText_Greeting35);
+    break;
+    case 36:
+    StringCopy(gStringVar4, sText_Greeting36);
+    break;
+    case 37:
+    StringCopy(gStringVar4, sText_Greeting37);
+    break;
+    case 38:
+    StringCopy(gStringVar4, sText_Greeting38);
+    break;
+    case 39:
+    StringCopy(gStringVar4, sText_Greeting39);
+    break;
+    case 40:
+    StringCopy(gStringVar4, sText_Greeting40);
+    break;
+    case 41:
+    StringCopy(gStringVar4, sText_Greeting41);
+    break;
+    case 42:
+    StringCopy(gStringVar4, sText_Greeting42);
+    break;
+    case 43:
+    StringCopy(gStringVar4, sText_Greeting43);
+    break;
+    case 44:
+    StringCopy(gStringVar4, sText_Greeting44);
+    break;
+    case 45:
+    StringCopy(gStringVar4, sText_Greeting45);
+    break;
+    case 46:
+    StringCopy(gStringVar4, sText_Greeting46);
+    break;
+    case 47:
+    StringCopy(gStringVar4, sText_Greeting47);
+    break;
+    case 48:
+    StringCopy(gStringVar4, sText_Greeting48);
+    break;
+    case 49:
+    StringCopy(gStringVar4, sText_Greeting49);
+    break;
+    case 50:
+    StringCopy(gStringVar4, sText_Greeting50);
+    break;
+	}
+	
+}
 void FrontierSpeechToString(const u16 *words)
 {
-    ConvertEasyChatWordsToString(gStringVar4, words, 3, 2);
-    if (GetStringWidth(1, gStringVar4, -1) > 204u)
-    {
-        s32 i = 0;
-
-        ConvertEasyChatWordsToString(gStringVar4, words, 2, 3);
-        while (gStringVar4[i++] != CHAR_NEWLINE)
-            ;
-        while (gStringVar4[i] != CHAR_NEWLINE)
-            i++;
-
-        gStringVar4[i] = CHAR_PROMPT_SCROLL;
-    }
+   getintro2();
 }
-
 static void GetOpponentIntroSpeech(void)
 {
     u16 trainerId;
@@ -2089,7 +2416,7 @@ static void GetOpponentIntroSpeech(void)
     if (trainerId == TRAINER_EREADER)
         FrontierSpeechToString(gSaveBlock2Ptr->frontier.ereaderTrainer.greeting);
     else if (trainerId < FRONTIER_TRAINERS_COUNT)
-        FrontierSpeechToString(gFacilityTrainers[trainerId].speechBefore);
+        getintro2();
     else if (trainerId < TRAINER_RECORD_MIXING_APPRENTICE)
         FrontierSpeechToString(gSaveBlock2Ptr->frontier.towerRecords[trainerId - TRAINER_RECORD_MIXING_FRIEND].greeting);
     else
@@ -2123,6 +2450,7 @@ static void HandleSpecialTrainerBattleEnd(void)
         }
         break;
     case SPECIAL_BATTLE_SECRET_BASE:
+	case SPECIAL_BATTLE_FACTORY_FAKE:
         for (i = 0; i < PARTY_SIZE; i++)
         {
             u16 itemBefore = GetMonData(&gSaveBlock1Ptr->playerParty[i], MON_DATA_HELD_ITEM);
@@ -2247,6 +2575,14 @@ void DoSpecialTrainerBattle(void)
         CreateTask(Task_StartBattleAfterTransition, 1);
         PlayMapChosenOrBattleBGM(0);
         BattleTransition_StartOnField(GetSpecialBattleTransition(6));
+        break;
+	case SPECIAL_BATTLE_FACTORY_FAKE:
+		gTrainerBattleOpponent_A = 299;
+        gBattleTypeFlags = BATTLE_TYPE_TRAINER | BATTLE_TYPE_BATTLE_TOWER;
+        FillFrontierTrainerPartyFake(PARTY_SIZE);
+        CreateTask(Task_StartBattleAfterTransition, 1);
+        PlayMapChosenOrBattleBGM(0);
+        BattleTransition_StartOnField(GetSpecialBattleTransition(0));
         break;
     case SPECIAL_BATTLE_PIKE_SINGLE:
         gBattleTypeFlags = BATTLE_TYPE_TRAINER | BATTLE_TYPE_BATTLE_TOWER;
@@ -3144,7 +3480,7 @@ static void FillPartnerParty(u16 trainerId)
                       sStevenMons[i].species,
                       sStevenMons[i].level,
                       sStevenMons[i].fixedIV,
-                      TRUE, i, // BUG: personality was stored in the 'j' variable. As a result, Steven's pokemon do not have the intended natures.
+                      TRUE, j, // BUG: personality was stored in the 'j' variable. As a result, Steven's pokemon do not have the intended natures.
                       OT_ID_PRESET, STEVEN_OTID);
             for (j = 0; j < PARTY_SIZE; j++)
                 SetMonData(&gPlayerParty[MULTI_PARTY_SIZE + i], MON_DATA_HP_EV + j, &sStevenMons[i].evs[j]);
@@ -3251,6 +3587,7 @@ static void FillPartnerParty(u16 trainerId)
             }
             SetMonData(&gPlayerParty[MULTI_PARTY_SIZE + i], MON_DATA_FRIENDSHIP, &friendship);
             SetMonData(&gPlayerParty[MULTI_PARTY_SIZE + i], MON_DATA_HELD_ITEM, &gBattleFrontierHeldItems[gFacilityTrainerMons[monId].itemTableId]);
+			SetMonData(&gPlayerParty[MULTI_PARTY_SIZE + i], MON_DATA_ABILITY_NUM, &gFacilityTrainerMons[monId].abilityNum);
             for (j = 0; j < PLAYER_NAME_LENGTH + 1; j++)
                 trainerName[j] = gFacilityTrainers[trainerId].trainerName[j];
             SetMonData(&gPlayerParty[MULTI_PARTY_SIZE + i], MON_DATA_OT_NAME, &trainerName);
@@ -3508,24 +3845,7 @@ s32 GetHighestLevelInPlayerParty(void)
 // Duplicated in Battle Dome as GetDomeTrainerMonIvs
 static u8 GetFrontierTrainerFixedIvs(u16 trainerId)
 {
-    u8 fixedIv;
-
-    if (trainerId <= FRONTIER_TRAINER_JILL)         // 0 - 99
-        fixedIv = 3;
-    else if (trainerId <= FRONTIER_TRAINER_CHLOE)   // 100 - 119
-        fixedIv = 6;
-    else if (trainerId <= FRONTIER_TRAINER_SOFIA)   // 120 - 139
-        fixedIv = 9;
-    else if (trainerId <= FRONTIER_TRAINER_JAZLYN)  // 140 - 159
-        fixedIv = 12;
-    else if (trainerId <= FRONTIER_TRAINER_ALISON)  // 160 - 179
-        fixedIv = 15;
-    else if (trainerId <= FRONTIER_TRAINER_LAMAR)   // 180 - 199
-        fixedIv = 18;
-    else if (trainerId <= FRONTIER_TRAINER_TESS)    // 200 - 219
-        fixedIv = 21;
-    else                                            // 220+ (- 299)
-        fixedIv = 31;
+    u8 fixedIv =31; 
 
     return fixedIv;
 }

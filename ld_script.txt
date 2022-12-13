@@ -1225,6 +1225,12 @@ SECTIONS {
         sound/songs/midi/ph_nurse_blend.o(.rodata);
         sound/songs/midi/ph_nurse_held.o(.rodata);
         sound/songs/midi/ph_nurse_solo.o(.rodata);
+		sound/songs/midi/mus_vs_trainer_hgss.o(.rodata);
+		sound/songs/midi/mus_vs_trainer_dppt.o(.rodata);
+		sound/songs/midi/mus_vs_trainer_bw.o(.rodata);
+sound/songs/midi/mus_vs_trainer_colo.o(.rodata);
+sound/songs/midi/mus_vs_trainer_brain_dppt.o(.rodata);
+sound/songs/midi/mus_vs_leader_dppt.o(.rodata);
     } =0
 
     lib_rodata :

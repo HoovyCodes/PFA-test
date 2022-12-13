@@ -677,11 +677,11 @@ sSwordsDanceDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xad
 	.byte	0xff
 	.size	 sSwordsDanceDescription,45
@@ -1944,12 +1944,12 @@ sTailWhipDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xad
 	.byte	0xff
 	.size	 sTailWhipDescription,42
@@ -2143,12 +2143,12 @@ sLeerDescription:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xad
 	.byte	0xff
 	.size	 sLeerDescription,48
@@ -2239,11 +2239,11 @@ sGrowlDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xad
 	.byte	0xff
 	.size	 sGrowlDescription,42
@@ -2544,12 +2544,12 @@ sAcidDescription:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xad
 	.byte	0xff
 	.size	 sAcidDescription,47
@@ -3049,10 +3049,10 @@ sBubbleBeamDescription:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xad
 	.byte	0xff
 	.size	 sBubbleBeamDescription,48
@@ -3103,11 +3103,11 @@ sAuroraBeamDescription:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xad
 	.byte	0xff
 	.size	 sAuroraBeamDescription,52
@@ -3726,12 +3726,12 @@ sGrowthDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xdf
 	.byte	0xad
 	.byte	0xff
 	.size	 sGrowthDescription,47
@@ -4095,10 +4095,10 @@ sStringShotDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xad
 	.byte	0xff
 	.size	 sStringShotDescription,47
@@ -4768,12 +4768,12 @@ sPsychicDescription:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
+	.byte	0xd9
+	.byte	0xda
 	.byte	0xad
 	.byte	0xff
 	.size	 sPsychicDescription,50
@@ -4866,11 +4866,11 @@ sMeditateDescription:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xad
 	.byte	0xff
 	.size	 sMeditateDescription,49
@@ -4911,10 +4911,10 @@ sAgilityDescription:
 	.byte	0xe8
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xad
 	.byte	0xff
 	.size	 sAgilityDescription,41
@@ -4994,11 +4994,11 @@ sRageDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xfe
 	.byte	0xd9
 	.byte	0xea
@@ -5225,12 +5225,12 @@ sScreechDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xad
 	.byte	0xff
 	.size	 sScreechDescription,53
@@ -5370,12 +5370,12 @@ sHardenDescription:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xad
 	.byte	0xff
 	.size	 sHardenDescription,47
@@ -5574,12 +5574,12 @@ sWithdrawDescription:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xad
 	.byte	0xff
 	.size	 sWithdrawDescription,57
@@ -5627,12 +5627,12 @@ sDefenseCurlDescription:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xad
 	.byte	0xff
 	.size	 sDefenseCurlDescription,50
@@ -5677,12 +5677,12 @@ sBarrierDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xad
 	.byte	0xff
 	.size	 sBarrierDescription,47
@@ -5725,12 +5725,12 @@ sLightScreenDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xdf
 	.byte	0x0
 	.byte	0xd8
 	.byte	0xd5
@@ -5989,12 +5989,12 @@ sMetronomeDescription:
 	.byte	0xed
 	.byte	0xfe
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -6711,10 +6711,10 @@ sConstrictDescription:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xad
 	.byte	0xff
 	.size	 sConstrictDescription,45
@@ -6764,12 +6764,12 @@ sAmnesiaDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
+	.byte	0xd9
+	.byte	0xda
 	.byte	0xad
 	.byte	0xff
 	.size	 sAmnesiaDescription,52
@@ -7396,10 +7396,10 @@ sBubbleDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xad
 	.byte	0xff
 	.size	 sBubbleDescription,52
@@ -7711,12 +7711,12 @@ sAcidArmorDescription:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xad
 	.byte	0xff
 	.size	 sAcidArmorDescription,52
@@ -8129,11 +8129,11 @@ sSharpenDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xad
 	.byte	0xff
 	.size	 sSharpenDescription,45
@@ -8938,14 +8938,19 @@ sCurseDescription:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xc1
-	.byte	0xc2
-	.byte	0xc9
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xcd
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xae
+	.byte	0xe8
+	.byte	0xed
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xad
 	.byte	0xff
-	.size	 sCurseDescription,46
+	.size	 sCurseDescription,51
 	.type	 sFlailDescription,object
 sFlailDescription:
 	.byte	0xc3
@@ -9153,10 +9158,10 @@ sCottonSporeDescription:
 	.byte	0xdb
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xad
 	.byte	0xff
 	.size	 sCottonSporeDescription,49
@@ -9476,10 +9481,10 @@ sScaryFaceDescription:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xad
 	.byte	0xff
 	.size	 sScaryFaceDescription,53
@@ -9604,11 +9609,11 @@ sBellyDrumDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0x0
 	.byte	0xeb
 	.byte	0xdc
@@ -10013,12 +10018,12 @@ sPerishSongDescription:
 	.byte	0xed
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xdc
 	.byte	0xd9
@@ -10101,10 +10106,10 @@ sIcyWindDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xad
 	.byte	0xff
 	.size	 sIcyWindDescription,47
@@ -10476,11 +10481,12 @@ sEndureDescription:
 	.byte	0xe8
 	.byte	0x0
 	.byte	0xa2
+	.byte	0x0
 	.byte	0xc2
 	.byte	0xca
 	.byte	0xad
 	.byte	0xff
-	.size	 sEndureDescription,53
+	.size	 sEndureDescription,54
 	.type	 sCharmDescription,object
 sCharmDescription:
 	.byte	0xbd
@@ -10523,11 +10529,11 @@ sCharmDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xad
 	.byte	0xff
 	.size	 sCharmDescription,47
@@ -10681,11 +10687,11 @@ sSwaggerDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xad
 	.byte	0xff
 	.size	 sSwaggerDescription,50
@@ -11241,12 +11247,12 @@ sFrustrationDescription:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xce
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xdd
 	.byte	0xe7
@@ -11936,12 +11942,12 @@ sIronTailDescription:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xad
 	.byte	0xff
 	.size	 sIronTailDescription,50
@@ -11988,11 +11994,11 @@ sMetalClawDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xad
 	.byte	0xff
 	.size	 sMetalClawDescription,48
@@ -12374,10 +12380,10 @@ sRainDanceDescription:
 	.byte	0xda
 	.byte	0x0
 	.byte	0xd1
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xae
 	.byte	0xfe
 	.byte	0xe8
@@ -12428,9 +12434,9 @@ sSunnyDayDescription:
 	.byte	0xda
 	.byte	0x0
 	.byte	0xc0
-	.byte	0xc3
-	.byte	0xcc
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xd9
 	.byte	0xae
 	.byte	0xfe
 	.byte	0xe8
@@ -12498,12 +12504,12 @@ sCrunchDescription:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xad
 	.byte	0xff
 	.size	 sCrunchDescription,46
@@ -12746,12 +12752,12 @@ sShadowBallDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
+	.byte	0xd9
+	.byte	0xda
 	.byte	0xad
 	.byte	0xff
 	.size	 sShadowBallDescription,53
@@ -12846,12 +12852,12 @@ sRockSmashDescription:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xad
 	.byte	0xff
 	.size	 sRockSmashDescription,47
@@ -12932,12 +12938,12 @@ sBeatUpDescription:
 	.byte	0xed
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xe8
 	.byte	0xe3
@@ -13406,12 +13412,12 @@ sFlatterDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xdf
 	.byte	0xad
 	.byte	0xff
 	.size	 sFlatterDescription,42
@@ -13525,11 +13531,11 @@ sFacadeDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0x0
 	.byte	0xeb
 	.byte	0xdc
@@ -14423,12 +14429,12 @@ sBrickBreakDescription:
 	.byte	0xe7
 	.byte	0xfe
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xbd
-	.byte	0xce
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xd7
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xd5
 	.byte	0xe2
@@ -15115,12 +15121,12 @@ sCamouflageDescription:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xb4
 	.byte	0xe7
 	.byte	0x0
@@ -15196,12 +15202,12 @@ sTailGlowDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xdf
 	.byte	0xad
 	.byte	0xff
 	.size	 sTailGlowDescription,45
@@ -15249,12 +15255,12 @@ sLusterPurgeDescription:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
+	.byte	0xd9
+	.byte	0xda
 	.byte	0xad
 	.byte	0xff
 	.size	 sLusterPurgeDescription,50
@@ -15302,12 +15308,12 @@ sMistBallDescription:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xdf
 	.byte	0xad
 	.byte	0xff
 	.size	 sMistBallDescription,50
@@ -15359,11 +15365,11 @@ sFeatherDanceDescription:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xad
 	.byte	0xff
 	.size	 sFeatherDanceDescription,53
@@ -15383,12 +15389,12 @@ sTeeterDanceDescription:
 	.byte	0xe0
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xe3
 	.byte	0xe2
@@ -15828,12 +15834,12 @@ sCrushClawDescription:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xad
 	.byte	0xff
 	.size	 sCrushClawDescription,54
@@ -15991,11 +15997,11 @@ sMeteorMashDescription:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xad
 	.byte	0xff
 	.size	 sMeteorMashDescription,45
@@ -16201,12 +16207,12 @@ sFakeTearsDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
+	.byte	0xd9
+	.byte	0xda
 	.byte	0xad
 	.byte	0xff
 	.size	 sFakeTearsDescription,50
@@ -16315,12 +16321,12 @@ sOverheatDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xdf
 	.byte	0xad
 	.byte	0xff
 	.size	 sOverheatDescription,56
@@ -16427,10 +16433,10 @@ sRockTombDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xad
 	.byte	0xff
 	.size	 sRockTombDescription,53
@@ -16528,12 +16534,12 @@ sMetalSoundDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
+	.byte	0xd9
+	.byte	0xda
 	.byte	0xad
 	.byte	0xff
 	.size	 sMetalSoundDescription,54
@@ -16621,23 +16627,23 @@ sTickleDescription:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0x0
 	.byte	0xd5
 	.byte	0xe2
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xad
 	.byte	0xff
 	.size	 sTickleDescription,49
@@ -16651,24 +16657,24 @@ sCosmicPowerDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xd5
 	.byte	0xe2
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
+	.byte	0xd9
+	.byte	0xda
 	.byte	0xfe
 	.byte	0xeb
 	.byte	0xdd
@@ -17311,12 +17317,12 @@ sIronDefenseDescription:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xad
 	.byte	0xff
 	.size	 sIronDefenseDescription,53
@@ -17403,11 +17409,11 @@ sHowlDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xad
 	.byte	0xff
 	.size	 sHowlDescription,45
@@ -17540,23 +17546,23 @@ sBulkUpDescription:
 	.byte	0xdc
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0x0
 	.byte	0xd5
 	.byte	0xe2
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xad
 	.byte	0xff
 	.size	 sBulkUpDescription,52
@@ -17650,10 +17656,10 @@ sMudShotDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xad
 	.byte	0xff
 	.size	 sMudShotDescription,40
@@ -17933,24 +17939,24 @@ sCalmMindDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xdf
 	.byte	0x0
 	.byte	0xd5
 	.byte	0xe2
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
+	.byte	0xd9
+	.byte	0xda
 	.byte	0xfe
 	.byte	0xd6
 	.byte	0xed
@@ -18059,21 +18065,21 @@ sDragonDanceDescription:
 	.byte	0xe7
 	.byte	0xfe
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0x0
 	.byte	0xd5
 	.byte	0xe2
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xad
 	.byte	0xff
 	.size	 sDragonDanceDescription,44
@@ -18329,12 +18335,12 @@ sPsychoBoostDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xdf
 	.byte	0xad
 	.byte	0xff
 	.size	 sPsychoBoostDescription,56
@@ -18443,16 +18449,21 @@ sMIRACLE_EYEDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xc1
-	.byte	0xc2
-	.byte	0xc9
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xcd
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xae
+	.byte	0xe8
+	.byte	0xed
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0x0
 	.byte	0xd5
 	.byte	0xe2
 	.byte	0xd8
-	.byte	0x0
+	.byte	0xfe
 	.byte	0xd9
 	.byte	0xea
 	.byte	0xd5
@@ -18460,7 +18471,7 @@ sMIRACLE_EYEDescription:
 	.byte	0xdd
 	.byte	0xea
 	.byte	0xd9
-	.byte	0xfe
+	.byte	0x0
 	.byte	0xda
 	.byte	0xe3
 	.byte	0xd9
@@ -18481,7 +18492,7 @@ sMIRACLE_EYEDescription:
 	.byte	0xe8
 	.byte	0xad
 	.byte	0xff
-	.size	 sMIRACLE_EYEDescription,45
+	.size	 sMIRACLE_EYEDescription,50
 	.type	 sWAKE_UP_SLAPDescription,object
 sWAKE_UP_SLAPDescription:
 	.byte	0xca
@@ -22098,12 +22109,12 @@ sTRICK_ROOMDescription:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xdb
 	.byte	0xd9
@@ -23002,8 +23013,8 @@ sAQUA_JETDescription:
 	.byte	0xad
 	.byte	0xff
 	.size	 sAQUA_JETDescription,53
-	.type	 sATTACK_ORDERDescription,object
-sATTACK_ORDERDescription:
+	.type	 sAttack_ORDERDescription,object
+sAttack_ORDERDescription:
 	.byte	0xcf
 	.byte	0xe2
 	.byte	0xd8
@@ -23056,7 +23067,7 @@ sATTACK_ORDERDescription:
 	.byte	0xe3
 	.byte	0xad
 	.byte	0xff
-	.size	 sATTACK_ORDERDescription,52
+	.size	 sAttack_ORDERDescription,52
 	.type	 sDEFEND_ORDERDescription,object
 sDEFEND_ORDERDescription:
 	.byte	0xcc
@@ -28215,12 +28226,12 @@ sROTOTILLERDescription:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xad
 	.byte	0xff
 	.size	 sROTOTILLERDescription,50
@@ -28992,12 +29003,12 @@ sFLOWER_SHIELDDescription:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xad
 	.byte	0xff
 	.size	 sFLOWER_SHIELDDescription,42
@@ -29942,12 +29953,12 @@ sAROMATIC_MISTDescription:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xad
 	.byte	0xff
 	.size	 sAROMATIC_MISTDescription,41
@@ -31420,10 +31431,10 @@ sICE_HAMMERDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xad
 	.byte	0xff
 	.size	 sICE_HAMMERDescription,52
@@ -31718,12 +31729,12 @@ sSPOTLIGHTDescription:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xad
 	.byte	0xff
 	.size	 sSPOTLIGHTDescription,46
@@ -35821,7 +35832,7 @@ sAURA_WHEELDescription:
 	.byte	0xdc
 	.byte	0xd9
 	.byte	0xfe
-	.byte	0xce
+	.byte	0xe8
 	.byte	0xed
 	.byte	0xe4
 	.byte	0xd9
@@ -38325,7 +38336,7 @@ gMoveDescriptionPointers:
 	.word	sCHARGE_BEAMDescription
 	.word	sWOOD_HAMMERDescription
 	.word	sAQUA_JETDescription
-	.word	sATTACK_ORDERDescription
+	.word	sAttack_ORDERDescription
 	.word	sDEFEND_ORDERDescription
 	.word	sHEAL_ORDERDescription
 	.word	sHEAD_SMASHDescription
@@ -38621,240 +38632,241 @@ gMoveDescriptionPointers:
 	.type	 sHardyNatureName,object
 sHardyNatureName:
 	.byte	0xc2
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbe
-	.byte	0xd3
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd8
+	.byte	0xed
 	.byte	0xff
 	.size	 sHardyNatureName,6
 	.type	 sLonelyNatureName,object
 sLonelyNatureName:
 	.byte	0xc6
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xed
 	.byte	0xff
 	.size	 sLonelyNatureName,7
 	.type	 sBraveNatureName,object
 sBraveNatureName:
 	.byte	0xbc
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
 	.byte	0xff
 	.size	 sBraveNatureName,6
 	.type	 sAdamantNatureName,object
 sAdamantNatureName:
 	.byte	0xbb
-	.byte	0xbe
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xce
+	.byte	0xd8
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe8
 	.byte	0xff
 	.size	 sAdamantNatureName,8
 	.type	 sNaughtyNatureName,object
 sNaughtyNatureName:
 	.byte	0xc8
-	.byte	0xbb
-	.byte	0xcf
-	.byte	0xc1
-	.byte	0xc2
-	.byte	0xce
-	.byte	0xd3
+	.byte	0xd5
+	.byte	0xe9
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe8
+	.byte	0xed
 	.byte	0xff
 	.size	 sNaughtyNatureName,8
 	.type	 sBoldNatureName,object
 sBoldNatureName:
 	.byte	0xbc
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xbe
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd8
 	.byte	0xff
 	.size	 sBoldNatureName,5
 	.type	 sDocileNatureName,object
 sDocileNatureName:
 	.byte	0xbe
-	.byte	0xc9
-	.byte	0xbd
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xd7
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xff
 	.size	 sDocileNatureName,7
 	.type	 sRelaxedNatureName,object
 sRelaxedNatureName:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xd2
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xec
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xff
 	.size	 sRelaxedNatureName,8
 	.type	 sImpishNatureName,object
 sImpishNatureName:
 	.byte	0xc3
-	.byte	0xc7
-	.byte	0xca
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xc2
+	.byte	0xe1
+	.byte	0xe4
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xdc
 	.byte	0xff
 	.size	 sImpishNatureName,7
 	.type	 sLaxNatureName,object
 sLaxNatureName:
 	.byte	0xc6
-	.byte	0xbb
-	.byte	0xd2
+	.byte	0xd5
+	.byte	0xec
 	.byte	0xff
 	.size	 sLaxNatureName,4
 	.type	 sTimidNatureName,object
 sTimidNatureName:
 	.byte	0xce
-	.byte	0xc3
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xbe
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xd8
 	.byte	0xff
 	.size	 sTimidNatureName,6
 	.type	 sHastyNatureName,object
 sHastyNatureName:
 	.byte	0xc2
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xd3
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xed
 	.byte	0xff
 	.size	 sHastyNatureName,6
 	.type	 sSeriousNatureName,object
 sSeriousNatureName:
 	.byte	0xcd
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xcd
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe7
 	.byte	0xff
 	.size	 sSeriousNatureName,8
 	.type	 sJollyNatureName,object
 sJollyNatureName:
 	.byte	0xc4
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xed
 	.byte	0xff
 	.size	 sJollyNatureName,6
 	.type	 sNaiveNatureName,object
 sNaiveNatureName:
 	.byte	0xc8
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xd9
 	.byte	0xff
 	.size	 sNaiveNatureName,6
 	.type	 sModestNatureName,object
 sModestNatureName:
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0xff
 	.size	 sModestNatureName,7
 	.type	 sMildNatureName,object
 sMildNatureName:
 	.byte	0xc7
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xbe
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xd8
 	.byte	0xff
 	.size	 sMildNatureName,5
 	.type	 sQuietNatureName,object
 sQuietNatureName:
 	.byte	0xcb
-	.byte	0xcf
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xce
+	.byte	0xe9
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe8
 	.byte	0xff
 	.size	 sQuietNatureName,6
 	.type	 sBashfulNatureName,object
 sBashfulNatureName:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xc2
-	.byte	0xc0
-	.byte	0xcf
-	.byte	0xc6
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xda
+	.byte	0xe9
+	.byte	0xe0
 	.byte	0xff
 	.size	 sBashfulNatureName,8
 	.type	 sRashNatureName,object
 sRashNatureName:
 	.byte	0xcc
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xc2
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xdc
 	.byte	0xff
 	.size	 sRashNatureName,5
 	.type	 sCalmNatureName,object
 sCalmNatureName:
 	.byte	0xbd
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe1
 	.byte	0xff
 	.size	 sCalmNatureName,5
 	.type	 sGentleNatureName,object
 sGentleNatureName:
 	.byte	0xc1
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xff
 	.size	 sGentleNatureName,7
 	.type	 sSassyNatureName,object
 sSassyNatureName:
 	.byte	0xcd
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xcd
-	.byte	0xd3
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe7
+	.byte	0xed
 	.byte	0xff
 	.size	 sSassyNatureName,6
 	.type	 sCarefulNatureName,object
 sCarefulNatureName:
 	.byte	0xbd
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xcf
-	.byte	0xc6
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xe9
+	.byte	0xe0
 	.byte	0xff
 	.size	 sCarefulNatureName,8
 	.type	 sQuirkyNatureName,object
 sQuirkyNatureName:
 	.byte	0xcb
-	.byte	0xcf
-	.byte	0xc3
-	.byte	0xcc
-	.byte	0xc5
-	.byte	0xd3
+	.byte	0xe9
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xdf
+	.byte	0xe0
+	.byte	0xed
 	.byte	0xff
-	.size	 sQuirkyNatureName,7
+	.size	 sQuirkyNatureName,8
 	.globl	gNatureNamePointers
 	.align	2, 0
 	.type	 gNatureNamePointers,object
@@ -39559,6 +39571,29 @@ sMemoNatureTextColor:
 	.byte	0x6
 	.byte	0xff
 	.size	 sMemoNatureTextColor,7
+	.type	 sMemoHiddenNatureTextColor,object
+sMemoHiddenNatureTextColor:
+	.byte	0x0
+	.byte	0x5c
+	.byte	0xfc
+	.byte	0x1
+	.byte	0x8
+	.byte	0xfc
+	.byte	0x3
+	.byte	0x2
+	.byte	0xff
+	.size	 sMemoHiddenNatureTextColor,9
+	.type	 sText_EndParentheses,object
+sText_EndParentheses:
+	.byte	0xfc
+	.byte	0x1
+	.byte	0x1
+	.byte	0xfc
+	.byte	0x3
+	.byte	0x2
+	.byte	0x5d
+	.byte	0xff
+	.size	 sText_EndParentheses,8
 	.type	 sMemoMiscTextColor,object
 sMemoMiscTextColor:
 	.byte	0xfc
@@ -41656,9 +41691,16 @@ ExtractMonDataToSummaryStruct:
 	bne	.L206	@cond_branch
 .L207:
 	add	r0, r5, #0
+	mov	r1, #0x0
 	bl	GetNature
 	add	r1, r6, #0
 	add	r1, r1, #0x33
+	strb	r0, [r1]
+	add	r0, r5, #0
+	mov	r1, #0x59
+	bl	GetMonData
+	add	r1, r6, #0
+	add	r1, r1, #0x47
 	strb	r0, [r1]
 	add	r0, r5, #0
 	mov	r1, #0x39
@@ -41695,9 +41737,16 @@ ExtractMonDataToSummaryStruct:
 	.word	0x40ef
 .L206:
 	add	r0, r5, #0
+	mov	r1, #0x0
 	bl	GetNature
 	add	r1, r7, #0
 	add	r1, r1, #0xa3
+	strb	r0, [r1]
+	add	r0, r5, #0
+	mov	r1, #0x59
+	bl	GetMonData
+	add	r1, r7, #0
+	add	r1, r1, #0xb7
 	strb	r0, [r1]
 	add	r0, r5, #0
 	mov	r1, #0x39
@@ -42042,18 +42091,18 @@ Task_HandleInput:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.LCB2093
+	bne	.LCB2109
 	b	.L245	@long jump
-.LCB2093:
+.LCB2109:
 	ldr	r0, .L272
 	ldrb	r1, [r0, #0x7]
 	mov	r2, #0x80
 	add	r0, r2, #0
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.LCB2102
+	beq	.LCB2118
 	b	.L245	@long jump
-.LCB2102:
+.LCB2118:
 	ldr	r5, .L272+0x4
 	ldrh	r1, [r5, #0x2e]
 	mov	r0, #0x40
@@ -42362,9 +42411,9 @@ Task_ChangeSummaryMon:
 	mov	r1, #0x0
 	ldrsh	r0, [r5, r1]
 	cmp	r0, #0xc
-	bls	.LCB2552
+	bls	.LCB2568
 	b	.L321	@long jump
-.LCB2552:
+.LCB2568:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L325+0x4
 	add	r0, r0, r1
@@ -42448,9 +42497,9 @@ Task_ChangeSummaryMon:
 	bl	ExtractMonDataToSummaryStruct
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.LCB2647
+	bne	.LCB2663
 	b	.L303	@long jump
-.LCB2647:
+.LCB2663:
 	b	.L304
 .L334:
 	.align	2, 0
@@ -43609,9 +43658,9 @@ ChangeSelectedMove:
 	asr	r1, r0, #0x18
 	mov	r9, r0
 	cmp	r1, #0x4
-	bne	.LCB4121
+	bne	.LCB4137
 	b	.L486	@long jump
-.LCB4121:
+.LCB4137:
 	ldr	r0, .L487
 	ldr	r0, [r0]
 	lsl	r1, r1, #0x1
@@ -44456,18 +44505,18 @@ Task_HandleReplaceMoveInput:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.LCB5119
+	bne	.LCB5135
 	b	.L533	@long jump
-.LCB5119:
+.LCB5135:
 	ldr	r0, .L550+0x4
 	ldrb	r1, [r0, #0x7]
 	mov	r2, #0x80
 	add	r0, r2, #0
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.LCB5129
+	beq	.LCB5145
 	b	.L533	@long jump
-.LCB5129:
+.LCB5145:
 	ldr	r6, .L550+0x8
 	ldrh	r1, [r6, #0x2e]
 	mov	r0, #0x40
@@ -44700,9 +44749,9 @@ Task_HandleInputCantForgetHMsMoves:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.LCB5432
+	bne	.LCB5448
 	b	.L563	@long jump
-.LCB5432:
+.LCB5448:
 	ldr	r6, .L582+0x8
 	ldrh	r1, [r6, #0x2e]
 	mov	r0, #0x40
@@ -44774,9 +44823,9 @@ Task_HandleInputCantForgetHMsMoves:
 	add	r0, r0, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0x2
-	bne	.LCB5536
+	bne	.LCB5552
 	b	.L563	@long jump
-.LCB5536:
+.LCB5552:
 	mov	r0, #0x13
 	bl	ClearWindowTilemap
 	ldr	r2, .L586+0x8
@@ -47768,133 +47817,154 @@ PrintMonAbilityDescription:
 	.thumb_func
 BufferMonTrainerMemo:
 	push	{r4, r5, r6, lr}
-	ldr	r0, .L983
-	ldr	r0, [r0]
-	add	r4, r0, #0
-	add	r4, r4, #0x70
+	ldr	r0, .L984
+	ldr	r4, [r0]
+	add	r5, r4, #0
+	add	r5, r5, #0x70
 	bl	DynamicPlaceholderTextUtil_Reset
-	ldr	r1, .L983+0x4
+	ldr	r1, .L984+0x4
 	mov	r0, #0x0
 	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	ldr	r1, .L983+0x8
+	ldr	r1, .L984+0x8
 	mov	r0, #0x1
 	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
 	bl	BufferNatureString
+	add	r4, r4, #0xb7
+	ldrb	r0, [r4]
+	cmp	r0, #0x1a
+	beq	.L965	@cond_branch
+	ldr	r1, .L984+0xc
+	mov	r0, #0x5
+	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
+	ldr	r1, .L984+0x10
+	ldrb	r0, [r4]
+	lsl	r0, r0, #0x2
+	add	r0, r0, r1
+	ldr	r1, [r0]
+	mov	r0, #0x6
+	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
+	ldr	r1, .L984+0x14
+	mov	r0, #0x7
+	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
+.L965:
 	bl	InBattleFactory
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L966	@cond_branch
+	beq	.L967	@cond_branch
 	bl	InSlateportBattleTent
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L966	@cond_branch
+	beq	.L967	@cond_branch
 	bl	IsInGamePartnerMon
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.L965	@cond_branch
-.L966:
-	ldr	r0, .L983+0xc
-	ldr	r1, .L983+0x10
+	bne	.L966	@cond_branch
+.L967:
+	ldr	r0, .L984+0x18
+	ldr	r1, .L984+0x1c
 	bl	DynamicPlaceholderTextUtil_ExpandPlaceholders
-	b	.L967
-.L984:
+	b	.L968
+.L985:
 	.align	2, 0
-.L983:
+.L984:
 	.word	sMonSummaryScreen
 	.word	sMemoNatureTextColor
 	.word	sMemoMiscTextColor
+	.word	sMemoHiddenNatureTextColor
+	.word	gNatureNamePointers
+	.word	sText_EndParentheses
 	.word	gStringVar4
 	.word	gText_XNature
-.L965:
+.L966:
 	mov	r0, #0x20
 	bl	Alloc
 	add	r6, r0, #0
 	mov	r0, #0x20
 	bl	Alloc
-	add	r5, r0, #0
+	add	r4, r0, #0
 	add	r0, r6, #0
 	bl	GetMetLevelString
-	ldrb	r0, [r4, #0x9]
+	ldrb	r0, [r5, #0x9]
 	cmp	r0, #0xd4
-	bhi	.L968	@cond_branch
+	bhi	.L969	@cond_branch
 	add	r1, r0, #0
-	add	r0, r5, #0
+	add	r0, r4, #0
 	bl	GetMapNameHandleAquaHideout
 	mov	r0, #0x4
-	add	r1, r5, #0
+	add	r1, r4, #0
 	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-.L968:
+.L969:
 	bl	DoesMonOTMatchOwner
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.L969	@cond_branch
-	ldrb	r0, [r4, #0xa]
-	cmp	r0, #0
 	bne	.L970	@cond_branch
-	ldrb	r0, [r4, #0x9]
-	ldr	r1, .L985
+	ldrb	r0, [r5, #0xa]
+	cmp	r0, #0
+	bne	.L971	@cond_branch
+	ldrb	r0, [r5, #0x9]
+	ldr	r1, .L986
 	cmp	r0, #0xd4
-	bls	.L976	@cond_branch
-	ldr	r1, .L985+0x4
-	b	.L976
-.L986:
+	bls	.L977	@cond_branch
+	ldr	r1, .L986+0x4
+	b	.L977
+.L987:
 	.align	2, 0
-.L985:
+.L986:
 	.word	gText_XNatureHatchedAtYZ
 	.word	gText_XNatureHatchedSomewhereAt
-.L970:
-	ldrb	r0, [r4, #0x9]
-	ldr	r1, .L987
+.L971:
+	ldrb	r0, [r5, #0x9]
+	ldr	r1, .L988
 	cmp	r0, #0xd4
-	bls	.L976	@cond_branch
-	ldr	r1, .L987+0x4
-	b	.L976
-.L988:
+	bls	.L977	@cond_branch
+	ldr	r1, .L988+0x4
+	b	.L977
+.L989:
 	.align	2, 0
-.L987:
+.L988:
 	.word	gText_XNatureMetAtYZ
 	.word	gText_XNatureMetSomewhereAt
-.L969:
-	ldrb	r0, [r4, #0x9]
+.L970:
+	ldrb	r0, [r5, #0x9]
 	cmp	r0, #0xff
-	bne	.L977	@cond_branch
-	ldr	r1, .L989
-	b	.L976
-.L990:
+	bne	.L978	@cond_branch
+	ldr	r1, .L990
+	b	.L977
+.L991:
 	.align	2, 0
-.L989:
+.L990:
 	.word	gText_XNatureFatefulEncounter
-.L977:
+.L978:
 	cmp	r0, #0xfe
-	beq	.L979	@cond_branch
+	beq	.L980	@cond_branch
 	bl	DidMonComeFromGBAGames
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L979	@cond_branch
-	ldrb	r0, [r4, #0x9]
-	ldr	r1, .L991
+	beq	.L980	@cond_branch
+	ldrb	r0, [r5, #0x9]
+	ldr	r1, .L992
 	cmp	r0, #0xd4
-	bls	.L976	@cond_branch
-.L979:
-	ldr	r1, .L991+0x4
-.L976:
-	ldr	r0, .L991+0x8
+	bls	.L977	@cond_branch
+.L980:
+	ldr	r1, .L992+0x4
+.L977:
+	ldr	r0, .L992+0x8
 	bl	DynamicPlaceholderTextUtil_ExpandPlaceholders
 	add	r0, r6, #0
 	bl	Free
-	add	r0, r5, #0
+	add	r0, r4, #0
 	bl	Free
-.L967:
+.L968:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L992:
+.L993:
 	.align	2, 0
-.L991:
+.L992:
 	.word	gText_XNatureProbablyMetAt
 	.word	gText_XNatureObtainedInTrade
 	.word	gStringVar4
@@ -47906,12 +47976,12 @@ BufferMonTrainerMemo:
 PrintMonTrainerMemo:
 	push	{lr}
 	add	sp, sp, #-0x8
-	ldr	r0, .L994
+	ldr	r0, .L995
 	mov	r1, #0x3
 	bl	AddWindowFromTemplateList
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r1, .L994+0x4
+	ldr	r1, .L995+0x4
 	mov	r2, #0x0
 	str	r2, [sp]
 	str	r2, [sp, #0x4]
@@ -47920,9 +47990,9 @@ PrintMonTrainerMemo:
 	add	sp, sp, #0x8
 	pop	{r0}
 	bx	r0
-.L995:
+.L996:
 	.align	2, 0
-.L994:
+.L995:
 	.word	sPageInfoTemplate
 	.word	gStringVar4
 .Lfe81:
@@ -47932,9 +48002,9 @@ PrintMonTrainerMemo:
 	.thumb_func
 BufferNatureString:
 	push	{lr}
-	ldr	r0, .L997
+	ldr	r0, .L998
 	ldr	r0, [r0]
-	ldr	r1, .L997+0x4
+	ldr	r1, .L998+0x4
 	add	r0, r0, #0xa3
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x2
@@ -47942,14 +48012,14 @@ BufferNatureString:
 	ldr	r1, [r0]
 	mov	r0, #0x2
 	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	ldr	r1, .L997+0x8
+	ldr	r1, .L998+0x8
 	mov	r0, #0x5
 	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
 	pop	{r0}
 	bx	r0
-.L998:
+.L999:
 	.align	2, 0
-.L997:
+.L998:
 	.word	sMonSummaryScreen
 	.word	gNatureNamePointers
 	.word	gText_EmptyString5
@@ -47961,14 +48031,14 @@ BufferNatureString:
 GetMetLevelString:
 	push	{r4, lr}
 	add	r4, r0, #0
-	ldr	r0, .L1001
+	ldr	r0, .L1002
 	ldr	r0, [r0]
 	add	r0, r0, #0x7a
 	ldrb	r1, [r0]
 	cmp	r1, #0
-	bne	.L1000	@cond_branch
+	bne	.L1001	@cond_branch
 	mov	r1, #0x5
-.L1000:
+.L1001:
 	add	r0, r4, #0
 	mov	r2, #0x0
 	mov	r3, #0x3
@@ -47979,9 +48049,9 @@ GetMetLevelString:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1002:
+.L1003:
 	.align	2, 0
-.L1001:
+.L1002:
 	.word	sMonSummaryScreen
 .Lfe83:
 	.size	 GetMetLevelString,.Lfe83-GetMetLevelString
@@ -47990,20 +48060,20 @@ GetMetLevelString:
 	.thumb_func
 DoesMonOTMatchOwner:
 	push	{r4, r5, r6, lr}
-	ldr	r0, .L1010
+	ldr	r0, .L1011
 	ldr	r0, [r0]
 	add	r6, r0, #0
 	add	r6, r6, #0x70
 	ldr	r1, [r0]
-	ldr	r0, .L1010+0x4
+	ldr	r0, .L1011+0x4
 	cmp	r1, r0
-	bne	.L1004	@cond_branch
+	bne	.L1005	@cond_branch
 	bl	GetMultiplayerId
 	mov	r1, #0x1
 	eor	r0, r0, r1
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r2, .L1010+0x8
+	ldr	r2, .L1011+0x8
 	lsl	r1, r0, #0x3
 	sub	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -48012,57 +48082,57 @@ DoesMonOTMatchOwner:
 	ldrh	r4, [r0]
 	add	r0, r1, r2
 	ldrb	r5, [r0, #0x13]
-	ldr	r0, .L1010+0xc
+	ldr	r0, .L1011+0xc
 	add	r2, r2, #0x8
 	add	r1, r1, r2
 	bl	StringCopy
-	b	.L1005
-.L1011:
+	b	.L1006
+.L1012:
 	.align	2, 0
-.L1010:
+.L1011:
 	.word	sMonSummaryScreen
 	.word	gEnemyParty
 	.word	gLinkPlayers
 	.word	gStringVar1
-.L1004:
+.L1005:
 	bl	GetPlayerIDAsU32
 	add	r4, r0, #0
-	ldr	r0, .L1012
+	ldr	r0, .L1013
 	and	r4, r4, r0
-	ldr	r0, .L1012+0x4
+	ldr	r0, .L1013+0x4
 	ldr	r1, [r0]
 	ldrb	r5, [r1, #0x8]
-	ldr	r0, .L1012+0x8
+	ldr	r0, .L1013+0x8
 	bl	StringCopy
-.L1005:
+.L1006:
 	add	r0, r6, #0
 	add	r0, r0, #0x32
 	ldrb	r0, [r0]
 	cmp	r5, r0
-	bne	.L1007	@cond_branch
+	bne	.L1008	@cond_branch
 	ldr	r0, [r6, #0x48]
-	ldr	r1, .L1012
+	ldr	r1, .L1013
 	and	r0, r0, r1
 	cmp	r4, r0
-	bne	.L1007	@cond_branch
-	ldr	r0, .L1012+0x8
+	bne	.L1008	@cond_branch
+	ldr	r0, .L1013+0x8
 	add	r1, r6, #0
 	add	r1, r1, #0x36
 	bl	StringCompareWithoutExtCtrlCodes
 	cmp	r0, #0
-	beq	.L1006	@cond_branch
-.L1007:
+	beq	.L1007	@cond_branch
+.L1008:
 	mov	r0, #0x0
-	b	.L1009
-.L1013:
+	b	.L1010
+.L1014:
 	.align	2, 0
-.L1012:
+.L1013:
 	.word	0xffff
 	.word	gSaveBlock2Ptr
 	.word	gStringVar1
-.L1006:
+.L1007:
 	mov	r0, #0x1
-.L1009:
+.L1010:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
@@ -48073,7 +48143,7 @@ DoesMonOTMatchOwner:
 	.thumb_func
 DidMonComeFromGBAGames:
 	push	{lr}
-	ldr	r0, .L1017
+	ldr	r0, .L1018
 	ldr	r0, [r0]
 	add	r0, r0, #0x70
 	ldrb	r0, [r0, #0xb]
@@ -48081,16 +48151,16 @@ DidMonComeFromGBAGames:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x4
-	bls	.L1015	@cond_branch
+	bls	.L1016	@cond_branch
 	mov	r0, #0x0
-	b	.L1016
-.L1018:
+	b	.L1017
+.L1019:
 	.align	2, 0
-.L1017:
+.L1018:
 	.word	sMonSummaryScreen
-.L1015:
-	mov	r0, #0x1
 .L1016:
+	mov	r0, #0x1
+.L1017:
 	pop	{r1}
 	bx	r1
 .Lfe85:
@@ -48101,7 +48171,7 @@ DidMonComeFromGBAGames:
 	.thumb_func
 DidMonComeFromRSE:
 	push	{lr}
-	ldr	r0, .L1022
+	ldr	r0, .L1023
 	ldr	r0, [r0]
 	add	r0, r0, #0x70
 	ldrb	r0, [r0, #0xb]
@@ -48109,16 +48179,16 @@ DidMonComeFromRSE:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x2
-	bls	.L1020	@cond_branch
+	bls	.L1021	@cond_branch
 	mov	r0, #0x0
-	b	.L1021
-.L1023:
+	b	.L1022
+.L1024:
 	.align	2, 0
-.L1022:
+.L1023:
 	.word	sMonSummaryScreen
-.L1020:
-	mov	r0, #0x1
 .L1021:
+	mov	r0, #0x1
+.L1022:
 	pop	{r1}
 	bx	r1
 .Lfe86:
@@ -48128,46 +48198,46 @@ DidMonComeFromRSE:
 	.thumb_func
 IsInGamePartnerMon:
 	push	{lr}
-	ldr	r0, .L1029
+	ldr	r0, .L1030
 	ldr	r0, [r0]
 	mov	r1, #0x80
 	lsl	r1, r1, #0xf
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1025	@cond_branch
-	ldr	r0, .L1029+0x4
-	ldr	r1, .L1029+0x8
+	beq	.L1026	@cond_branch
+	ldr	r0, .L1030+0x4
+	ldr	r1, .L1030+0x8
 	add	r0, r0, r1
 	ldrb	r1, [r0]
 	mov	r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1025	@cond_branch
-	ldr	r0, .L1029+0xc
+	beq	.L1026	@cond_branch
+	ldr	r0, .L1030+0xc
 	ldr	r0, [r0]
-	ldr	r1, .L1029+0x10
+	ldr	r1, .L1030+0x10
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x1
-	beq	.L1027	@cond_branch
+	beq	.L1028	@cond_branch
 	cmp	r0, #0x4
-	beq	.L1027	@cond_branch
+	beq	.L1028	@cond_branch
 	cmp	r0, #0x5
-	bne	.L1025	@cond_branch
-.L1027:
+	bne	.L1026	@cond_branch
+.L1028:
 	mov	r0, #0x1
-	b	.L1028
-.L1030:
+	b	.L1029
+.L1031:
 	.align	2, 0
-.L1029:
+.L1030:
 	.word	gBattleTypeFlags
 	.word	gMain
 	.word	0x439
 	.word	sMonSummaryScreen
 	.word	0x40be
-.L1025:
+.L1026:
 	mov	r0, #0x0
-.L1028:
+.L1029:
 	pop	{r1}
 	bx	r1
 .Lfe87:
@@ -48181,13 +48251,13 @@ PrintEggOTName:
 	mov	r5, r8
 	push	{r5, r6}
 	add	sp, sp, #-0x8
-	ldr	r0, .L1032
+	ldr	r0, .L1033
 	mov	r1, #0x0
 	bl	AddWindowFromTemplateList
 	add	r4, r0, #0
 	lsl	r4, r4, #0x18
 	lsr	r4, r4, #0x18
-	ldr	r0, .L1032+0x4
+	ldr	r0, .L1033+0x4
 	mov	r8, r0
 	mov	r0, #0x1
 	mov	r1, r8
@@ -48204,7 +48274,7 @@ PrintEggOTName:
 	mov	r2, #0x0
 	mov	r3, #0x1
 	bl	PrintTextOnWindow
-	ldr	r1, .L1032+0x8
+	ldr	r1, .L1033+0x8
 	lsl	r5, r5, #0x18
 	lsr	r5, r5, #0x18
 	mov	r0, r9
@@ -48221,9 +48291,9 @@ PrintEggOTName:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1033:
+.L1034:
 	.align	2, 0
-.L1032:
+.L1033:
 	.word	sPageInfoTemplate
 	.word	gText_OTSlash
 	.word	gText_FiveMarks
@@ -48235,11 +48305,11 @@ PrintEggOTName:
 PrintEggOTID:
 	push	{r4, r5, lr}
 	add	sp, sp, #-0x8
-	ldr	r5, .L1035
-	ldr	r1, .L1035+0x4
+	ldr	r5, .L1036
+	ldr	r1, .L1036+0x4
 	add	r0, r5, #0
 	bl	StringCopy
-	ldr	r1, .L1035+0x8
+	ldr	r1, .L1036+0x8
 	add	r0, r5, #0
 	bl	StringAppend
 	mov	r0, #0x1
@@ -48247,7 +48317,7 @@ PrintEggOTID:
 	mov	r2, #0x38
 	bl	GetStringRightAlignXOffset
 	add	r4, r0, #0
-	ldr	r0, .L1035+0xc
+	ldr	r0, .L1036+0xc
 	mov	r1, #0x1
 	bl	AddWindowFromTemplateList
 	lsl	r0, r0, #0x18
@@ -48266,9 +48336,9 @@ PrintEggOTID:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1036:
+.L1037:
 	.align	2, 0
-.L1035:
+.L1036:
 	.word	gStringVar1
 	.word	gText_IDNumber2
 	.word	gText_FiveMarks
@@ -48281,47 +48351,47 @@ PrintEggOTID:
 PrintEggState:
 	push	{r4, lr}
 	add	sp, sp, #-0x8
-	ldr	r0, .L1046
+	ldr	r0, .L1047
 	ldr	r0, [r0]
 	add	r1, r0, #0
 	add	r1, r1, #0x70
 	add	r0, r0, #0xa5
 	ldrb	r0, [r0]
 	cmp	r0, #0x1
-	bne	.L1038	@cond_branch
-	ldr	r4, .L1046+0x4
-	b	.L1039
-.L1047:
+	bne	.L1039	@cond_branch
+	ldr	r4, .L1047+0x4
+	b	.L1040
+.L1048:
 	.align	2, 0
-.L1046:
+.L1047:
 	.word	sMonSummaryScreen
 	.word	gText_EggWillTakeALongTime
-.L1038:
+.L1039:
 	ldrh	r0, [r1, #0x30]
 	cmp	r0, #0x5
-	bhi	.L1040	@cond_branch
-	ldr	r4, .L1048
-	b	.L1039
-.L1049:
-	.align	2, 0
-.L1048:
-	.word	gText_EggAboutToHatch
-.L1040:
-	cmp	r0, #0xa
-	bhi	.L1042	@cond_branch
-	ldr	r4, .L1050
-	b	.L1039
-.L1051:
-	.align	2, 0
+	bhi	.L1041	@cond_branch
+	ldr	r4, .L1049
+	b	.L1040
 .L1050:
+	.align	2, 0
+.L1049:
+	.word	gText_EggAboutToHatch
+.L1041:
+	cmp	r0, #0xa
+	bhi	.L1043	@cond_branch
+	ldr	r4, .L1051
+	b	.L1040
+.L1052:
+	.align	2, 0
+.L1051:
 	.word	gText_EggWillHatchSoon
-.L1042:
-	ldr	r4, .L1052
+.L1043:
+	ldr	r4, .L1053
 	cmp	r0, #0x28
-	bhi	.L1039	@cond_branch
-	ldr	r4, .L1052+0x4
-.L1039:
-	ldr	r0, .L1052+0x8
+	bhi	.L1040	@cond_branch
+	ldr	r4, .L1053+0x4
+.L1040:
+	ldr	r0, .L1053+0x8
 	mov	r1, #0x2
 	bl	AddWindowFromTemplateList
 	lsl	r0, r0, #0x18
@@ -48337,9 +48407,9 @@ PrintEggState:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1053:
+.L1054:
 	.align	2, 0
-.L1052:
+.L1053:
 	.word	gText_EggWillTakeALongTime
 	.word	gText_EggWillTakeSomeTime
 	.word	sPageInfoTemplate
@@ -48351,62 +48421,62 @@ PrintEggState:
 PrintEggMemo:
 	push	{r4, lr}
 	add	sp, sp, #-0x8
-	ldr	r0, .L1066
+	ldr	r0, .L1067
 	ldr	r0, [r0]
 	add	r4, r0, #0
 	add	r4, r4, #0x70
 	add	r0, r0, #0xa5
 	ldrb	r0, [r0]
 	cmp	r0, #0x1
-	beq	.L1055	@cond_branch
+	beq	.L1056	@cond_branch
 	ldrb	r0, [r4, #0x9]
 	cmp	r0, #0xff
-	bne	.L1056	@cond_branch
-	ldr	r4, .L1066+0x4
-	b	.L1065
-.L1067:
+	bne	.L1057	@cond_branch
+	ldr	r4, .L1067+0x4
+	b	.L1066
+.L1068:
 	.align	2, 0
-.L1066:
+.L1067:
 	.word	sMonSummaryScreen
 	.word	gText_PeculiarEggNicePlace
-.L1056:
+.L1057:
 	bl	DidMonComeFromGBAGames
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1059	@cond_branch
+	beq	.L1060	@cond_branch
 	bl	DoesMonOTMatchOwner
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L1058	@cond_branch
-.L1059:
-	ldr	r4, .L1068
-	b	.L1065
-.L1069:
+	bne	.L1059	@cond_branch
+.L1060:
+	ldr	r4, .L1069
+	b	.L1066
+.L1070:
 	.align	2, 0
-.L1068:
+.L1069:
 	.word	gText_PeculiarEggTrade
-.L1058:
+.L1059:
 	ldrb	r0, [r4, #0x9]
 	cmp	r0, #0xfd
-	bne	.L1061	@cond_branch
+	bne	.L1062	@cond_branch
 	bl	DidMonComeFromRSE
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r4, .L1070
+	ldr	r4, .L1071
 	cmp	r0, #0x1
-	bne	.L1065	@cond_branch
-	ldr	r4, .L1070+0x4
-	b	.L1065
-.L1071:
+	bne	.L1066	@cond_branch
+	ldr	r4, .L1071+0x4
+	b	.L1066
+.L1072:
 	.align	2, 0
-.L1070:
+.L1071:
 	.word	gText_EggFromTraveler
 	.word	gText_EggFromHotSprings
-.L1061:
-.L1055:
-	ldr	r4, .L1072
-.L1065:
-	ldr	r0, .L1072+0x4
+.L1062:
+.L1056:
+	ldr	r4, .L1073
+.L1066:
+	ldr	r0, .L1073+0x4
 	mov	r1, #0x3
 	bl	AddWindowFromTemplateList
 	lsl	r0, r0, #0x18
@@ -48422,9 +48492,9 @@ PrintEggMemo:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1073:
+.L1074:
 	.align	2, 0
-.L1072:
+.L1073:
 	.word	gText_OddEggFoundByCouple
 	.word	sPageInfoTemplate
 .Lfe91:
@@ -48455,28 +48525,27 @@ Task_PrintSkillsPage:
 	lsl	r0, r2, #0x2
 	add	r0, r0, r2
 	lsl	r0, r0, #0x3
-	ldr	r1, .L1087
+	ldr	r1, .L1088
 	add	r4, r0, r1
 	ldrh	r0, [r4]
 	sub	r0, r0, #0x1
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x7
-	bhi	.L1076	@cond_branch
+	bhi	.L1077	@cond_branch
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1087+0x4
+	ldr	r1, .L1088+0x4
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
+.L1089:
+	.align	2, 0
 .L1088:
-	.align	2, 0
-.L1087:
 	.word	gTasks+0x8
-	.word	.L1085
+	.word	.L1086
 	.align	2, 0
 	.align	2, 0
-.L1085:
-	.word	.L1077
+.L1086:
 	.word	.L1078
 	.word	.L1079
 	.word	.L1080
@@ -48484,36 +48553,37 @@ Task_PrintSkillsPage:
 	.word	.L1082
 	.word	.L1083
 	.word	.L1084
-.L1077:
-	bl	PrintHeldItemName
-	b	.L1076
+	.word	.L1085
 .L1078:
-	bl	PrintRibbonCount
-	b	.L1076
+	bl	PrintHeldItemName
+	b	.L1077
 .L1079:
-	bl	BufferLeftColumnStats
-	b	.L1076
+	bl	PrintRibbonCount
+	b	.L1077
 .L1080:
-	bl	PrintLeftColumnStats
-	b	.L1076
+	bl	BufferLeftColumnStats
+	b	.L1077
 .L1081:
-	bl	BufferRightColumnStats
-	b	.L1076
+	bl	PrintLeftColumnStats
+	b	.L1077
 .L1082:
-	bl	PrintRightColumnStats
-	b	.L1076
+	bl	BufferRightColumnStats
+	b	.L1077
 .L1083:
-	bl	PrintExpPointsNextLevel
-	b	.L1076
+	bl	PrintRightColumnStats
+	b	.L1077
 .L1084:
+	bl	PrintExpPointsNextLevel
+	b	.L1077
+.L1085:
 	add	r0, r2, #0
 	bl	DestroyTask
-	b	.L1075
-.L1076:
+	b	.L1076
+.L1077:
 	ldrh	r0, [r4]
 	add	r0, r0, #0x1
 	strh	r0, [r4]
-.L1075:
+.L1076:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
@@ -48525,66 +48595,66 @@ Task_PrintSkillsPage:
 PrintHeldItemName:
 	push	{r4, r5, lr}
 	add	sp, sp, #-0x8
-	ldr	r4, .L1095
+	ldr	r4, .L1096
 	ldr	r0, [r4]
 	add	r0, r0, #0x9e
 	ldrh	r0, [r0]
 	cmp	r0, #0xcd
-	bne	.L1090	@cond_branch
+	bne	.L1091	@cond_branch
 	bl	IsMultiBattle
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.L1090	@cond_branch
+	bne	.L1091	@cond_branch
 	ldr	r0, [r4]
-	ldr	r1, .L1095+0x4
+	ldr	r1, .L1096+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x1
-	beq	.L1091	@cond_branch
+	beq	.L1092	@cond_branch
 	cmp	r0, #0x4
-	beq	.L1091	@cond_branch
+	beq	.L1092	@cond_branch
 	cmp	r0, #0x5
-	bne	.L1090	@cond_branch
-.L1091:
+	bne	.L1091	@cond_branch
+.L1092:
 	mov	r0, #0xcd
 	bl	ItemId_GetName
 	add	r5, r0, #0
-	b	.L1092
-.L1096:
+	b	.L1093
+.L1097:
 	.align	2, 0
-.L1095:
+.L1096:
 	.word	sMonSummaryScreen
 	.word	0x40be
-.L1090:
-	ldr	r0, .L1097
+.L1091:
+	ldr	r0, .L1098
 	ldr	r0, [r0]
 	add	r1, r0, #0
 	add	r1, r1, #0x9e
 	ldrh	r0, [r1]
 	cmp	r0, #0
-	bne	.L1093	@cond_branch
-	ldr	r5, .L1097+0x4
-	b	.L1092
-.L1098:
+	bne	.L1094	@cond_branch
+	ldr	r5, .L1098+0x4
+	b	.L1093
+.L1099:
 	.align	2, 0
-.L1097:
+.L1098:
 	.word	sMonSummaryScreen
 	.word	gText_None
-.L1093:
+.L1094:
 	ldrh	r0, [r1]
-	ldr	r4, .L1099
+	ldr	r4, .L1100
 	add	r1, r4, #0
 	bl	CopyItemName
 	add	r5, r4, #0
-.L1092:
+.L1093:
 	mov	r0, #0x1
 	add	r1, r5, #0
 	mov	r2, #0x48
 	bl	GetStringCenterAlignXOffset
 	add	r4, r0, #0
 	add	r4, r4, #0x6
-	ldr	r0, .L1099+0x4
+	ldr	r0, .L1100+0x4
 	mov	r1, #0x0
 	bl	AddWindowFromTemplateList
 	lsl	r0, r0, #0x18
@@ -48602,9 +48672,9 @@ PrintHeldItemName:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1100:
+.L1101:
 	.align	2, 0
-.L1099:
+.L1100:
 	.word	gStringVar1
 	.word	sPageSkillsTemplate
 .Lfe94:
@@ -48615,39 +48685,39 @@ PrintHeldItemName:
 PrintRibbonCount:
 	push	{r4, r5, lr}
 	add	sp, sp, #-0x8
-	ldr	r0, .L1104
+	ldr	r0, .L1105
 	ldr	r0, [r0]
 	add	r1, r0, #0
 	add	r1, r1, #0x76
 	ldrb	r0, [r1]
 	cmp	r0, #0
-	bne	.L1102	@cond_branch
-	ldr	r5, .L1104+0x4
-	b	.L1103
-.L1105:
+	bne	.L1103	@cond_branch
+	ldr	r5, .L1105+0x4
+	b	.L1104
+.L1106:
 	.align	2, 0
-.L1104:
+.L1105:
 	.word	sMonSummaryScreen
 	.word	gText_None
-.L1102:
-	ldr	r0, .L1106
+.L1103:
+	ldr	r0, .L1107
 	ldrb	r1, [r1]
 	mov	r2, #0x1
 	mov	r3, #0x2
 	bl	ConvertIntToDecimalStringN
-	ldr	r4, .L1106+0x4
-	ldr	r1, .L1106+0x8
+	ldr	r4, .L1107+0x4
+	ldr	r1, .L1107+0x8
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	add	r5, r4, #0
-.L1103:
+.L1104:
 	mov	r0, #0x1
 	add	r1, r5, #0
 	mov	r2, #0x46
 	bl	GetStringCenterAlignXOffset
 	add	r4, r0, #0
 	add	r4, r4, #0x6
-	ldr	r0, .L1106+0xc
+	ldr	r0, .L1107+0xc
 	mov	r1, #0x1
 	bl	AddWindowFromTemplateList
 	lsl	r0, r0, #0x18
@@ -48665,15 +48735,89 @@ PrintRibbonCount:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1107:
+.L1108:
 	.align	2, 0
-.L1106:
+.L1107:
 	.word	gStringVar1
 	.word	gStringVar4
 	.word	gText_RibbonsVar1
 	.word	sPageSkillsTemplate
 .Lfe95:
 	.size	 PrintRibbonCount,.Lfe95-PrintRibbonCount
+	.section .rodata
+	.type	 sTextNatureDown.288,object
+sTextNatureDown.288:
+	.byte	0xfc
+	.byte	0x1
+	.byte	0x8
+	.byte	0xff
+	.type	 sTextNatureUp.289,object
+sTextNatureUp.289:
+	.byte	0xfc
+	.byte	0x1
+	.byte	0x5
+	.byte	0xff
+	.type	 sTextNatureNeutral.290,object
+sTextNatureNeutral.290:
+	.byte	0xfc
+	.byte	0x1
+	.byte	0x1
+	.byte	0xff
+.text
+	.align	2, 0
+	.type	 BufferStat,function
+	.thumb_func
+BufferStat:
+	push	{r4, r5, r6, lr}
+	add	r4, r0, #0
+	add	r5, r2, #0
+	add	r6, r3, #0
+	lsl	r1, r1, #0x18
+	asr	r1, r1, #0x18
+	cmp	r1, #0
+	bne	.L1110	@cond_branch
+	ldr	r1, .L1114
+	bl	StringCopy
+	b	.L1111
+.L1115:
+	.align	2, 0
+.L1114:
+	.word	sTextNatureNeutral.290
+.L1110:
+	cmp	r1, #0
+	ble	.L1112	@cond_branch
+	ldr	r1, .L1116
+	add	r0, r4, #0
+	bl	StringCopy
+	b	.L1111
+.L1117:
+	.align	2, 0
+.L1116:
+	.word	sTextNatureUp.289
+.L1112:
+	ldr	r1, .L1118
+	add	r0, r4, #0
+	bl	StringCopy
+.L1111:
+	ldr	r3, [sp, #0x10]
+	lsl	r3, r3, #0x18
+	lsr	r3, r3, #0x18
+	add	r1, r5, #0
+	mov	r2, #0x1
+	bl	ConvertIntToDecimalStringN
+	lsl	r0, r6, #0x18
+	lsr	r0, r0, #0x18
+	add	r1, r4, #0
+	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
+	pop	{r4, r5, r6}
+	pop	{r0}
+	bx	r0
+.L1119:
+	.align	2, 0
+.L1118:
+	.word	sTextNatureDown.288
+.Lfe96:
+	.size	 BufferStat,.Lfe96-BufferStat
 	.align	2, 0
 	.type	 BufferIvOrEvStats,function
 	.thumb_func
@@ -48683,216 +48827,215 @@ BufferIvOrEvStats:
 	mov	r6, r9
 	mov	r5, r8
 	push	{r5, r6, r7}
-	add	sp, sp, #-0x10
+	add	sp, sp, #-0x18
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	mov	r0, #0x14
 	bl	Alloc
-	str	r0, [sp, #0xc]
-	ldr	r4, .L1123
-	ldr	r0, [r4]
+	str	r0, [sp, #0x10]
+	ldr	r4, .L1135
+	ldr	r2, [r4]
+	add	r0, r2, #0
+	add	r0, r0, #0xa3
+	ldrb	r1, [r0]
+	lsl	r0, r1, #0x2
+	add	r0, r0, r1
+	ldr	r1, .L1135+0x4
+	add	r0, r0, r1
+	str	r0, [sp, #0x14]
 	cmp	r5, #0x1
-	beq	.L1111	@cond_branch
+	beq	.L1123	@cond_branch
 	cmp	r5, #0x1
-	bgt	.L1113	@cond_branch
+	bgt	.L1125	@cond_branch
 	cmp	r5, #0
-	bne	.L1113	@cond_branch
+	bne	.L1125	@cond_branch
+	add	r0, r2, #0
 	add	r0, r0, #0xc
 	mov	r1, #0x27
 	bl	GetMonData
 	lsl	r0, r0, #0x10
-	lsr	r0, r0, #0x10
-	mov	r9, r0
+	lsr	r6, r0, #0x10
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	mov	r1, #0x28
 	bl	GetMonData
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
-	mov	r8, r0
+	str	r0, [sp, #0x4]
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	mov	r1, #0x29
 	bl	GetMonData
 	lsl	r0, r0, #0x10
-	lsr	r7, r0, #0x10
+	lsr	r0, r0, #0x10
+	mov	sl, r0
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	mov	r1, #0x2b
 	bl	GetMonData
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
-	str	r0, [sp, #0x4]
+	str	r0, [sp, #0x8]
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	mov	r1, #0x2c
 	bl	GetMonData
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
-	str	r0, [sp, #0x8]
+	str	r0, [sp, #0xc]
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	mov	r1, #0x2a
-	bl	GetMonData
-	lsl	r0, r0, #0x10
-	lsr	r0, r0, #0x10
-	b	.L1122
-.L1124:
+	b	.L1134
+.L1136:
 	.align	2, 0
-.L1123:
+.L1135:
 	.word	sMonSummaryScreen
-.L1111:
+	.word	gNatureStatTable
+.L1123:
+	add	r0, r2, #0
 	add	r0, r0, #0xc
 	mov	r1, #0x1a
 	bl	GetMonData
 	lsl	r0, r0, #0x10
-	lsr	r0, r0, #0x10
-	mov	r9, r0
+	lsr	r6, r0, #0x10
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	mov	r1, #0x1b
 	bl	GetMonData
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
-	mov	r8, r0
+	str	r0, [sp, #0x4]
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	mov	r1, #0x1c
 	bl	GetMonData
 	lsl	r0, r0, #0x10
-	lsr	r7, r0, #0x10
+	lsr	r0, r0, #0x10
+	mov	sl, r0
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	mov	r1, #0x1e
 	bl	GetMonData
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
-	str	r0, [sp, #0x4]
+	str	r0, [sp, #0x8]
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	mov	r1, #0x1f
 	bl	GetMonData
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
-	str	r0, [sp, #0x8]
+	str	r0, [sp, #0xc]
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	mov	r1, #0x1d
+.L1134:
 	bl	GetMonData
 	lsl	r0, r0, #0x10
-	lsr	r0, r0, #0x10
-	b	.L1122
-.L1113:
-	ldr	r0, .L1125
-	ldr	r2, [r0]
-	add	r0, r2, #0
+	lsr	r7, r0, #0x10
+	b	.L1121
+.L1125:
+	ldr	r0, .L1137
+	ldr	r1, [r0]
+	add	r0, r1, #0
 	add	r0, r0, #0x90
-	ldrh	r0, [r0]
-	mov	r9, r0
-	add	r0, r2, #0
-	add	r0, r0, #0x92
-	ldrh	r0, [r0]
-	str	r0, [sp]
-	add	r0, r2, #0
-	add	r0, r0, #0x94
-	ldrh	r0, [r0]
-	mov	r8, r0
-	add	r0, r2, #0
-	add	r0, r0, #0x96
-	ldrh	r7, [r0]
+	ldrh	r6, [r0]
 	add	r0, r0, #0x2
 	ldrh	r0, [r0]
+	mov	r9, r0
+	add	r0, r1, #0
+	add	r0, r0, #0x94
+	ldrh	r0, [r0]
 	str	r0, [sp, #0x4]
-	add	r0, r2, #0
-	add	r0, r0, #0x9a
+	add	r0, r1, #0
+	add	r0, r0, #0x96
+	ldrh	r0, [r0]
+	mov	sl, r0
+	add	r0, r1, #0
+	add	r0, r0, #0x98
 	ldrh	r0, [r0]
 	str	r0, [sp, #0x8]
-	add	r0, r2, #0
-	add	r0, r0, #0x9c
+	add	r0, r1, #0
+	add	r0, r0, #0x9a
 	ldrh	r0, [r0]
-.L1122:
-	mov	sl, r0
-	ldr	r4, .L1125
+	str	r0, [sp, #0xc]
+	add	r0, r1, #0
+	add	r0, r0, #0x9c
+	ldrh	r7, [r0]
+.L1121:
+	ldr	r4, .L1137
 	ldr	r0, [r4]
-	ldr	r1, .L1125+0x4
+	ldr	r1, .L1137+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	mov	r1, #0x0
 	bl	FillWindowPixelBuffer
 	ldr	r0, [r4]
-	ldr	r1, .L1125+0x8
+	ldr	r1, .L1137+0x8
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	mov	r1, #0x0
 	bl	FillWindowPixelBuffer
 	cmp	r5, #0
-	blt	.L1120	@cond_branch
+	blt	.L1132	@cond_branch
 	cmp	r5, #0x1
-	bgt	.L1120	@cond_branch
-	ldr	r6, .L1125+0xc
+	bgt	.L1132	@cond_branch
+	ldr	r0, .L1137+0xc
+	mov	r9, r0
+	mov	r4, #0x7
+	str	r4, [sp]
+	mov	r1, #0x0
+	add	r2, r6, #0
+	mov	r3, #0x0
+	bl	BufferStat
+	ldr	r1, .L1137+0x10
+	mov	r8, r1
+	str	r4, [sp]
+	mov	r0, r8
+	mov	r1, #0x0
+	ldr	r2, [sp, #0x4]
+	mov	r3, #0x1
+	bl	BufferStat
+	ldr	r6, .L1137+0x14
+	str	r4, [sp]
 	add	r0, r6, #0
-	mov	r1, r9
-	mov	r2, #0x1
-	mov	r3, #0x7
-	bl	ConvertIntToDecimalStringN
-	ldr	r5, .L1125+0x10
+	mov	r1, #0x0
+	mov	r2, sl
+	mov	r3, #0x2
+	bl	BufferStat
+	ldr	r5, .L1137+0x18
+	ldr	r1, .L1137+0x1c
 	add	r0, r5, #0
-	mov	r1, r8
-	mov	r2, #0x1
-	mov	r3, #0x7
-	bl	ConvertIntToDecimalStringN
-	ldr	r4, .L1125+0x14
-	add	r0, r4, #0
-	add	r1, r7, #0
-	mov	r2, #0x1
-	mov	r3, #0x7
-	bl	ConvertIntToDecimalStringN
-	mov	r0, #0x0
-	add	r1, r6, #0
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	mov	r0, #0x1
-	add	r1, r5, #0
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	mov	r0, #0x2
-	add	r1, r4, #0
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	ldr	r0, .L1125+0x18
-	mov	r8, r0
-	ldr	r1, .L1125+0x1c
 	bl	DynamicPlaceholderTextUtil_ExpandPlaceholders
 	bl	PrintLeftColumnStats
-	add	r0, r6, #0
-	ldr	r1, [sp, #0x4]
-	mov	r2, #0x1
-	mov	r3, #0x3
-	bl	ConvertIntToDecimalStringN
-	add	r0, r5, #0
-	ldr	r1, [sp, #0x8]
-	mov	r2, #0x1
-	mov	r3, #0x3
-	bl	ConvertIntToDecimalStringN
-	add	r0, r4, #0
-	mov	r1, sl
-	mov	r2, #0x1
-	mov	r3, #0x3
-	bl	ConvertIntToDecimalStringN
-	mov	r0, #0x0
-	add	r1, r6, #0
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	mov	r0, #0x1
-	add	r1, r5, #0
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	mov	r0, #0x2
-	add	r1, r4, #0
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	ldr	r1, .L1125+0x20
+	mov	r4, #0x3
+	str	r4, [sp]
+	mov	r0, r9
+	mov	r1, #0x0
+	ldr	r2, [sp, #0x8]
+	mov	r3, #0x0
+	bl	BufferStat
+	str	r4, [sp]
 	mov	r0, r8
+	mov	r1, #0x0
+	ldr	r2, [sp, #0xc]
+	mov	r3, #0x1
+	bl	BufferStat
+	str	r4, [sp]
+	add	r0, r6, #0
+	mov	r1, #0x0
+	add	r2, r7, #0
+	mov	r3, #0x2
+	bl	BufferStat
+	ldr	r1, .L1137+0x20
+	add	r0, r5, #0
 	bl	DynamicPlaceholderTextUtil_ExpandPlaceholders
 	bl	PrintRightColumnStats
-	b	.L1116
-.L1126:
+	b	.L1128
+.L1138:
 	.align	2, 0
-.L1125:
+.L1137:
 	.word	sMonSummaryScreen
 	.word	0x40cd
 	.word	0x40ce
@@ -48902,80 +49045,78 @@ BufferIvOrEvStats:
 	.word	gStringVar4
 	.word	sStatsLeftColumnLayoutIVEV
 	.word	sStatsRightColumnLayout
-.L1120:
-	ldr	r0, [sp, #0xc]
-	mov	r1, r9
-	mov	r2, #0x1
-	mov	r3, #0x3
-	bl	ConvertIntToDecimalStringN
-	ldr	r6, .L1127
+.L1132:
+	mov	r5, #0x3
+	str	r5, [sp]
+	ldr	r0, [sp, #0x10]
+	mov	r1, #0x0
+	add	r2, r6, #0
+	mov	r3, #0x0
+	bl	BufferStat
+	ldr	r0, .L1139
+	mov	r8, r0
+	str	r5, [sp]
+	mov	r1, #0x0
+	mov	r2, r9
+	mov	r3, #0x1
+	bl	BufferStat
+	ldr	r1, .L1139+0x4
+	mov	r9, r1
+	ldr	r0, [sp, #0x14]
+	mov	r1, #0x0
+	ldrsb	r1, [r0, r1]
+	mov	r4, #0x7
+	str	r4, [sp]
+	mov	r0, r9
+	ldr	r2, [sp, #0x4]
+	mov	r3, #0x2
+	bl	BufferStat
+	ldr	r6, .L1139+0x8
+	ldr	r0, [sp, #0x14]
+	mov	r1, #0x1
+	ldrsb	r1, [r0, r1]
+	str	r4, [sp]
 	add	r0, r6, #0
-	ldr	r1, [sp]
-	mov	r2, #0x1
+	mov	r2, sl
 	mov	r3, #0x3
-	bl	ConvertIntToDecimalStringN
-	ldr	r5, .L1127+0x4
-	add	r0, r5, #0
-	mov	r1, r8
-	mov	r2, #0x1
-	mov	r3, #0x7
-	bl	ConvertIntToDecimalStringN
-	ldr	r4, .L1127+0x8
+	bl	BufferStat
+	ldr	r4, .L1139+0xc
+	ldr	r1, .L1139+0x10
 	add	r0, r4, #0
-	add	r1, r7, #0
-	mov	r2, #0x1
-	mov	r3, #0x7
-	bl	ConvertIntToDecimalStringN
-	mov	r0, #0x0
-	ldr	r1, [sp, #0xc]
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	mov	r0, #0x1
-	add	r1, r6, #0
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	mov	r0, #0x2
-	add	r1, r5, #0
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	mov	r0, #0x3
-	add	r1, r4, #0
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	ldr	r1, .L1127+0xc
-	mov	r8, r1
-	ldr	r1, .L1127+0x10
-	mov	r0, r8
 	bl	DynamicPlaceholderTextUtil_ExpandPlaceholders
 	bl	PrintLeftColumnStats
-	add	r0, r6, #0
-	ldr	r1, [sp, #0x4]
-	mov	r2, #0x1
-	mov	r3, #0x3
-	bl	ConvertIntToDecimalStringN
-	add	r0, r5, #0
-	ldr	r1, [sp, #0x8]
-	mov	r2, #0x1
-	mov	r3, #0x3
-	bl	ConvertIntToDecimalStringN
-	add	r0, r4, #0
-	mov	r1, sl
-	mov	r2, #0x1
-	mov	r3, #0x3
-	bl	ConvertIntToDecimalStringN
-	mov	r0, #0x0
-	add	r1, r6, #0
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	mov	r0, #0x1
-	add	r1, r5, #0
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	mov	r0, #0x2
-	add	r1, r4, #0
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	ldr	r1, .L1127+0x14
+	ldr	r0, [sp, #0x14]
+	mov	r1, #0x3
+	ldrsb	r1, [r0, r1]
+	str	r5, [sp]
 	mov	r0, r8
+	ldr	r2, [sp, #0x8]
+	mov	r3, #0x0
+	bl	BufferStat
+	ldr	r0, [sp, #0x14]
+	mov	r1, #0x4
+	ldrsb	r1, [r0, r1]
+	str	r5, [sp]
+	mov	r0, r9
+	ldr	r2, [sp, #0xc]
+	mov	r3, #0x1
+	bl	BufferStat
+	ldr	r0, [sp, #0x14]
+	mov	r1, #0x2
+	ldrsb	r1, [r0, r1]
+	str	r5, [sp]
+	add	r0, r6, #0
+	add	r2, r7, #0
+	mov	r3, #0x2
+	bl	BufferStat
+	ldr	r1, .L1139+0x14
+	add	r0, r4, #0
 	bl	DynamicPlaceholderTextUtil_ExpandPlaceholders
 	bl	PrintRightColumnStats
-.L1116:
-	ldr	r0, [sp, #0xc]
+.L1128:
+	ldr	r0, [sp, #0x10]
 	bl	Free
-	add	sp, sp, #0x10
+	add	sp, sp, #0x18
 	pop	{r3, r4, r5}
 	mov	r8, r3
 	mov	r9, r4
@@ -48983,116 +49124,144 @@ BufferIvOrEvStats:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1128:
+.L1140:
 	.align	2, 0
-.L1127:
+.L1139:
 	.word	gStringVar1
 	.word	gStringVar2
 	.word	gStringVar3
 	.word	gStringVar4
 	.word	sStatsLeftColumnLayout
 	.word	sStatsRightColumnLayout
-.Lfe96:
-	.size	 BufferIvOrEvStats,.Lfe96-BufferIvOrEvStats
+.Lfe97:
+	.size	 BufferIvOrEvStats,.Lfe97-BufferIvOrEvStats
 	.align	2, 0
 	.type	 BufferLeftColumnStats,function
 	.thumb_func
 BufferLeftColumnStats:
-	push	{r4, r5, r6, lr}
+	push	{r4, r5, r6, r7, lr}
+	mov	r7, sl
 	mov	r6, r9
 	mov	r5, r8
-	push	{r5, r6}
-	mov	r0, #0x8
+	push	{r5, r6, r7}
+	add	sp, sp, #-0x4
+	mov	r0, #0x14
+	bl	Alloc
+	mov	sl, r0
+	mov	r0, #0x14
 	bl	Alloc
 	mov	r9, r0
-	mov	r0, #0x8
+	mov	r0, #0x14
 	bl	Alloc
 	mov	r8, r0
-	mov	r0, #0x8
+	mov	r0, #0x14
 	bl	Alloc
-	add	r6, r0, #0
-	mov	r0, #0x8
-	bl	Alloc
-	add	r5, r0, #0
-	ldr	r4, .L1130
+	add	r7, r0, #0
+	ldr	r0, .L1144
+	ldr	r2, [r0]
+	add	r1, r2, #0
+	add	r1, r1, #0xb7
+	ldrb	r0, [r1]
+	cmp	r0, #0x1a
+	bne	.L1142	@cond_branch
+	add	r0, r2, #0
+	add	r0, r0, #0xa3
+	ldrb	r1, [r0]
+	lsl	r0, r1, #0x2
+	add	r0, r0, r1
+	ldr	r1, .L1144+0x4
+	add	r6, r0, r1
+	b	.L1143
+.L1145:
+	.align	2, 0
+.L1144:
+	.word	sMonSummaryScreen
+	.word	gNatureStatTable
+.L1142:
+	ldrb	r0, [r1]
+	lsl	r1, r0, #0x2
+	add	r1, r1, r0
+	ldr	r0, .L1146
+	add	r6, r1, r0
+.L1143:
+	bl	DynamicPlaceholderTextUtil_Reset
+	ldr	r4, .L1146+0x4
 	ldr	r0, [r4]
 	add	r0, r0, #0x90
-	ldrh	r1, [r0]
-	mov	r0, r9
-	mov	r2, #0x1
-	mov	r3, #0x3
-	bl	ConvertIntToDecimalStringN
+	ldrh	r2, [r0]
+	mov	r5, #0x3
+	str	r5, [sp]
+	mov	r0, sl
+	mov	r1, #0x0
+	mov	r3, #0x0
+	bl	BufferStat
 	ldr	r0, [r4]
 	add	r0, r0, #0x92
-	ldrh	r1, [r0]
-	mov	r0, r8
-	mov	r2, #0x1
-	mov	r3, #0x3
-	bl	ConvertIntToDecimalStringN
+	ldrh	r2, [r0]
+	str	r5, [sp]
+	mov	r0, r9
+	mov	r1, #0x0
+	mov	r3, #0x1
+	bl	BufferStat
+	mov	r1, #0x0
+	ldrsb	r1, [r6, r1]
 	ldr	r0, [r4]
 	add	r0, r0, #0x94
-	ldrh	r1, [r0]
-	add	r0, r6, #0
-	mov	r2, #0x1
-	mov	r3, #0x7
-	bl	ConvertIntToDecimalStringN
+	ldrh	r2, [r0]
+	mov	r5, #0x7
+	str	r5, [sp]
+	mov	r0, r8
+	mov	r3, #0x2
+	bl	BufferStat
+	mov	r1, #0x1
+	ldrsb	r1, [r6, r1]
 	ldr	r0, [r4]
 	add	r0, r0, #0x96
-	ldrh	r1, [r0]
-	add	r0, r5, #0
-	mov	r2, #0x1
-	mov	r3, #0x7
-	bl	ConvertIntToDecimalStringN
-	bl	DynamicPlaceholderTextUtil_Reset
-	mov	r0, #0x0
-	mov	r1, r9
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	mov	r0, #0x1
-	mov	r1, r8
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	mov	r0, #0x2
-	add	r1, r6, #0
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	mov	r0, #0x3
-	add	r1, r5, #0
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	ldr	r0, .L1130+0x4
-	ldr	r1, .L1130+0x8
+	ldrh	r2, [r0]
+	str	r5, [sp]
+	add	r0, r7, #0
+	mov	r3, #0x3
+	bl	BufferStat
+	ldr	r0, .L1146+0x8
+	ldr	r1, .L1146+0xc
 	bl	DynamicPlaceholderTextUtil_ExpandPlaceholders
+	mov	r0, sl
+	bl	Free
 	mov	r0, r9
 	bl	Free
 	mov	r0, r8
 	bl	Free
-	add	r0, r6, #0
+	add	r0, r7, #0
 	bl	Free
-	add	r0, r5, #0
-	bl	Free
-	pop	{r3, r4}
+	add	sp, sp, #0x4
+	pop	{r3, r4, r5}
 	mov	r8, r3
 	mov	r9, r4
-	pop	{r4, r5, r6}
+	mov	sl, r5
+	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1131:
+.L1147:
 	.align	2, 0
-.L1130:
+.L1146:
+	.word	gNatureStatTable
 	.word	sMonSummaryScreen
 	.word	gStringVar4
 	.word	sStatsLeftColumnLayout
-.Lfe97:
-	.size	 BufferLeftColumnStats,.Lfe97-BufferLeftColumnStats
+.Lfe98:
+	.size	 BufferLeftColumnStats,.Lfe98-BufferLeftColumnStats
 	.align	2, 0
 	.type	 PrintLeftColumnStats,function
 	.thumb_func
 PrintLeftColumnStats:
 	push	{lr}
 	add	sp, sp, #-0x8
-	ldr	r0, .L1133
+	ldr	r0, .L1149
 	mov	r1, #0x2
 	bl	AddWindowFromTemplateList
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r1, .L1133+0x4
+	ldr	r1, .L1149+0x4
 	mov	r2, #0x0
 	str	r2, [sp]
 	str	r2, [sp, #0x4]
@@ -49102,87 +49271,107 @@ PrintLeftColumnStats:
 	add	sp, sp, #0x8
 	pop	{r0}
 	bx	r0
-.L1134:
+.L1150:
 	.align	2, 0
-.L1133:
+.L1149:
 	.word	sPageSkillsTemplate
 	.word	gStringVar4
-.Lfe98:
-	.size	 PrintLeftColumnStats,.Lfe98-PrintLeftColumnStats
+.Lfe99:
+	.size	 PrintLeftColumnStats,.Lfe99-PrintLeftColumnStats
 	.align	2, 0
 	.type	 BufferRightColumnStats,function
 	.thumb_func
 BufferRightColumnStats:
 	push	{r4, r5, r6, lr}
-	mov	r6, r8
-	push	{r6}
-	ldr	r0, .L1136
-	mov	r8, r0
-	ldr	r4, .L1136+0x4
-	ldr	r0, [r4]
-	add	r0, r0, #0x98
-	ldrh	r1, [r0]
-	mov	r0, r8
-	mov	r2, #0x1
-	mov	r3, #0x3
-	bl	ConvertIntToDecimalStringN
-	ldr	r6, .L1136+0x8
-	ldr	r0, [r4]
-	add	r0, r0, #0x9a
-	ldrh	r1, [r0]
-	add	r0, r6, #0
-	mov	r2, #0x1
-	mov	r3, #0x3
-	bl	ConvertIntToDecimalStringN
-	ldr	r5, .L1136+0xc
-	ldr	r0, [r4]
-	add	r0, r0, #0x9c
-	ldrh	r1, [r0]
-	add	r0, r5, #0
-	mov	r2, #0x1
-	mov	r3, #0x3
-	bl	ConvertIntToDecimalStringN
+	add	sp, sp, #-0x4
+	ldr	r0, .L1154
+	ldr	r2, [r0]
+	add	r1, r2, #0
+	add	r1, r1, #0xb7
+	ldrb	r0, [r1]
+	cmp	r0, #0x1a
+	bne	.L1152	@cond_branch
+	add	r0, r2, #0
+	add	r0, r0, #0xa3
+	ldrb	r1, [r0]
+	lsl	r0, r1, #0x2
+	add	r0, r0, r1
+	ldr	r1, .L1154+0x4
+	add	r6, r0, r1
+	b	.L1153
+.L1155:
+	.align	2, 0
+.L1154:
+	.word	sMonSummaryScreen
+	.word	gNatureStatTable
+.L1152:
+	ldrb	r0, [r1]
+	lsl	r1, r0, #0x2
+	add	r1, r1, r0
+	ldr	r0, .L1156
+	add	r6, r1, r0
+.L1153:
 	bl	DynamicPlaceholderTextUtil_Reset
-	mov	r0, #0x0
-	mov	r1, r8
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	mov	r0, #0x1
-	add	r1, r6, #0
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	mov	r0, #0x2
-	add	r1, r5, #0
-	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	ldr	r0, .L1136+0x10
-	ldr	r1, .L1136+0x14
+	ldr	r0, .L1156+0x4
+	mov	r1, #0x3
+	ldrsb	r1, [r6, r1]
+	ldr	r5, .L1156+0x8
+	ldr	r2, [r5]
+	add	r2, r2, #0x98
+	ldrh	r2, [r2]
+	mov	r4, #0x3
+	str	r4, [sp]
+	mov	r3, #0x0
+	bl	BufferStat
+	ldr	r0, .L1156+0xc
+	mov	r1, #0x4
+	ldrsb	r1, [r6, r1]
+	ldr	r2, [r5]
+	add	r2, r2, #0x9a
+	ldrh	r2, [r2]
+	str	r4, [sp]
+	mov	r3, #0x1
+	bl	BufferStat
+	ldr	r0, .L1156+0x10
+	mov	r1, #0x2
+	ldrsb	r1, [r6, r1]
+	ldr	r2, [r5]
+	add	r2, r2, #0x9c
+	ldrh	r2, [r2]
+	str	r4, [sp]
+	mov	r3, #0x2
+	bl	BufferStat
+	ldr	r0, .L1156+0x14
+	ldr	r1, .L1156+0x18
 	bl	DynamicPlaceholderTextUtil_ExpandPlaceholders
-	pop	{r3}
-	mov	r8, r3
+	add	sp, sp, #0x4
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1137:
+.L1157:
 	.align	2, 0
-.L1136:
+.L1156:
+	.word	gNatureStatTable
 	.word	gStringVar1
 	.word	sMonSummaryScreen
 	.word	gStringVar2
 	.word	gStringVar3
 	.word	gStringVar4
 	.word	sStatsRightColumnLayout
-.Lfe99:
-	.size	 BufferRightColumnStats,.Lfe99-BufferRightColumnStats
+.Lfe100:
+	.size	 BufferRightColumnStats,.Lfe100-BufferRightColumnStats
 	.align	2, 0
 	.type	 PrintRightColumnStats,function
 	.thumb_func
 PrintRightColumnStats:
 	push	{lr}
 	add	sp, sp, #-0x8
-	ldr	r0, .L1139
+	ldr	r0, .L1159
 	mov	r1, #0x3
 	bl	AddWindowFromTemplateList
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r1, .L1139+0x4
+	ldr	r1, .L1159+0x4
 	mov	r2, #0x0
 	str	r2, [sp]
 	str	r2, [sp, #0x4]
@@ -49192,29 +49381,29 @@ PrintRightColumnStats:
 	add	sp, sp, #0x8
 	pop	{r0}
 	bx	r0
-.L1140:
+.L1160:
 	.align	2, 0
-.L1139:
+.L1159:
 	.word	sPageSkillsTemplate
 	.word	gStringVar4
-.Lfe100:
-	.size	 PrintRightColumnStats,.Lfe100-PrintRightColumnStats
+.Lfe101:
+	.size	 PrintRightColumnStats,.Lfe101-PrintRightColumnStats
 	.align	2, 0
 	.type	 PrintExpPointsNextLevel,function
 	.thumb_func
 PrintExpPointsNextLevel:
 	push	{r4, r5, r6, lr}
 	add	sp, sp, #-0x8
-	ldr	r0, .L1144
+	ldr	r0, .L1164
 	ldr	r0, [r0]
 	add	r5, r0, #0
 	add	r5, r5, #0x70
-	ldr	r0, .L1144+0x4
+	ldr	r0, .L1164+0x4
 	mov	r1, #0x4
 	bl	AddWindowFromTemplateList
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-	ldr	r4, .L1144+0x8
+	ldr	r4, .L1164+0x8
 	ldr	r1, [r5, #0x10]
 	add	r0, r4, #0
 	mov	r2, #0x1
@@ -49236,12 +49425,12 @@ PrintExpPointsNextLevel:
 	bl	PrintTextOnWindow
 	ldrb	r0, [r5, #0x5]
 	cmp	r0, #0x63
-	bhi	.L1142	@cond_branch
-	ldr	r4, .L1144+0xc
+	bhi	.L1162	@cond_branch
+	ldr	r4, .L1164+0xc
 	add	r1, r0, #0
 	add	r1, r1, #0x1
 	lsl	r1, r1, #0x2
-	ldr	r3, .L1144+0x10
+	ldr	r3, .L1164+0x10
 	ldrh	r2, [r5]
 	lsl	r0, r2, #0x3
 	add	r0, r0, r2
@@ -49256,19 +49445,19 @@ PrintExpPointsNextLevel:
 	ldr	r1, [r1]
 	ldr	r0, [r5, #0x10]
 	sub	r1, r1, r0
-	b	.L1143
-.L1145:
+	b	.L1163
+.L1165:
 	.align	2, 0
-.L1144:
+.L1164:
 	.word	sMonSummaryScreen
 	.word	sPageSkillsTemplate
 	.word	gStringVar1
 	.word	gExperienceTables
 	.word	gBaseStats
-.L1142:
+.L1162:
 	mov	r1, #0x0
-.L1143:
-	ldr	r4, .L1146
+.L1163:
+	ldr	r4, .L1166
 	add	r0, r4, #0
 	mov	r2, #0x1
 	mov	r3, #0x6
@@ -49291,12 +49480,12 @@ PrintExpPointsNextLevel:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1147:
+.L1167:
 	.align	2, 0
-.L1146:
+.L1166:
 	.word	gStringVar1
-.Lfe101:
-	.size	 PrintExpPointsNextLevel,.Lfe101-PrintExpPointsNextLevel
+.Lfe102:
+	.size	 PrintExpPointsNextLevel,.Lfe102-PrintExpPointsNextLevel
 	.align	2, 0
 	.type	 PrintBattleMoves,function
 	.thumb_func
@@ -49310,47 +49499,47 @@ PrintBattleMoves:
 	bl	PrintMoveNameAndPP
 	mov	r0, #0x3
 	bl	PrintMoveNameAndPP
-	ldr	r4, .L1153
+	ldr	r4, .L1173
 	ldr	r0, [r4]
-	ldr	r1, .L1153+0x4
+	ldr	r1, .L1173+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x3
-	bne	.L1149	@cond_branch
+	bne	.L1169	@cond_branch
 	bl	PrintNewMoveDetailsOrCancelText
 	ldr	r1, [r4]
-	ldr	r0, .L1153+0x8
+	ldr	r0, .L1173+0x8
 	add	r2, r1, r0
 	ldrb	r0, [r2]
 	cmp	r0, #0x4
-	bne	.L1150	@cond_branch
-	ldr	r0, .L1153+0xc
+	bne	.L1170	@cond_branch
+	ldr	r0, .L1173+0xc
 	add	r1, r1, r0
 	ldrh	r0, [r1]
 	cmp	r0, #0
-	beq	.L1149	@cond_branch
+	beq	.L1169	@cond_branch
 	bl	PrintMoveDetails
-	b	.L1149
-.L1154:
+	b	.L1169
+.L1174:
 	.align	2, 0
-.L1153:
+.L1173:
 	.word	sMonSummaryScreen
 	.word	0x40bc
 	.word	0x40c6
 	.word	0x40c4
-.L1150:
+.L1170:
 	ldrb	r0, [r2]
 	lsl	r0, r0, #0x1
 	add	r1, r1, #0x84
 	add	r1, r1, r0
 	ldrh	r0, [r1]
 	bl	PrintMoveDetails
-.L1149:
+.L1169:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.Lfe102:
-	.size	 PrintBattleMoves,.Lfe102-PrintBattleMoves
+.Lfe103:
+	.size	 PrintBattleMoves,.Lfe103-PrintBattleMoves
 	.align	2, 0
 	.type	 Task_PrintBattleMoves,function
 	.thumb_func
@@ -49361,139 +49550,139 @@ Task_PrintBattleMoves:
 	lsl	r0, r2, #0x2
 	add	r0, r0, r2
 	lsl	r0, r0, #0x3
-	ldr	r1, .L1173
+	ldr	r1, .L1193
 	add	r4, r0, r1
 	ldrh	r0, [r4]
 	sub	r0, r0, #0x1
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x7
-	bhi	.L1156	@cond_branch
+	bhi	.L1176	@cond_branch
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1173+0x4
+	ldr	r1, .L1193+0x4
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L1174:
+.L1194:
 	.align	2, 0
-.L1173:
+.L1193:
 	.word	gTasks+0x8
-	.word	.L1171
+	.word	.L1191
 	.align	2, 0
 	.align	2, 0
-.L1171:
-	.word	.L1157
-	.word	.L1158
-	.word	.L1159
-	.word	.L1160
-	.word	.L1161
-	.word	.L1163
-	.word	.L1167
-	.word	.L1170
-.L1157:
+.L1191:
+	.word	.L1177
+	.word	.L1178
+	.word	.L1179
+	.word	.L1180
+	.word	.L1181
+	.word	.L1183
+	.word	.L1187
+	.word	.L1190
+.L1177:
 	mov	r0, #0x0
 	bl	PrintMoveNameAndPP
-	b	.L1156
-.L1158:
+	b	.L1176
+.L1178:
 	mov	r0, #0x1
 	bl	PrintMoveNameAndPP
-	b	.L1156
-.L1159:
+	b	.L1176
+.L1179:
 	mov	r0, #0x2
 	bl	PrintMoveNameAndPP
-	b	.L1156
-.L1160:
+	b	.L1176
+.L1180:
 	mov	r0, #0x3
 	bl	PrintMoveNameAndPP
-	b	.L1156
-.L1161:
-	ldr	r0, .L1175
+	b	.L1176
+.L1181:
+	ldr	r0, .L1195
 	ldr	r0, [r0]
-	ldr	r1, .L1175+0x4
+	ldr	r1, .L1195+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x3
-	bne	.L1156	@cond_branch
+	bne	.L1176	@cond_branch
 	bl	PrintNewMoveDetailsOrCancelText
-	b	.L1156
-.L1176:
+	b	.L1176
+.L1196:
 	.align	2, 0
-.L1175:
+.L1195:
 	.word	sMonSummaryScreen
 	.word	0x40bc
-.L1163:
-	ldr	r0, .L1177
+.L1183:
+	ldr	r0, .L1197
 	ldr	r1, [r0]
-	ldr	r2, .L1177+0x4
+	ldr	r2, .L1197+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0x3
-	bne	.L1156	@cond_branch
-	ldr	r0, .L1177+0x8
+	bne	.L1176	@cond_branch
+	ldr	r0, .L1197+0x8
 	add	r2, r1, r0
 	ldrb	r0, [r2]
 	cmp	r0, #0x4
-	bne	.L1165	@cond_branch
-	ldr	r2, .L1177+0xc
+	bne	.L1185	@cond_branch
+	ldr	r2, .L1197+0xc
 	add	r0, r1, r2
 	ldrh	r0, [r0]
 	strh	r0, [r4, #0x2]
-	b	.L1156
-.L1178:
+	b	.L1176
+.L1198:
 	.align	2, 0
-.L1177:
+.L1197:
 	.word	sMonSummaryScreen
 	.word	0x40bc
 	.word	0x40c6
 	.word	0x40c4
-.L1165:
+.L1185:
 	ldrb	r0, [r2]
 	lsl	r0, r0, #0x1
 	add	r1, r1, #0x84
 	add	r1, r1, r0
 	ldrh	r0, [r1]
 	strh	r0, [r4, #0x2]
-	b	.L1156
-.L1167:
-	ldr	r0, .L1179
+	b	.L1176
+.L1187:
+	ldr	r0, .L1199
 	ldr	r1, [r0]
-	ldr	r2, .L1179+0x4
+	ldr	r2, .L1199+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0x3
-	bne	.L1156	@cond_branch
+	bne	.L1176	@cond_branch
 	add	r2, r2, #0x8
 	add	r0, r1, r2
 	ldr	r0, [r0]
-	ldr	r1, .L1179+0x8
+	ldr	r1, .L1199+0x8
 	and	r0, r0, r1
 	mov	r1, #0x80
 	lsl	r1, r1, #0xb
 	cmp	r0, r1
-	beq	.L1156	@cond_branch
+	beq	.L1176	@cond_branch
 	ldrh	r0, [r4, #0x2]
 	bl	PrintMoveDetails
-	b	.L1156
-.L1180:
+	b	.L1176
+.L1200:
 	.align	2, 0
-.L1179:
+.L1199:
 	.word	sMonSummaryScreen
 	.word	0x40bc
 	.word	0xffffff
-.L1170:
+.L1190:
 	add	r0, r2, #0
 	bl	DestroyTask
-	b	.L1155
-.L1156:
+	b	.L1175
+.L1176:
 	ldrh	r0, [r4]
 	add	r0, r0, #0x1
 	strh	r0, [r4]
-.L1155:
+.L1175:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.Lfe103:
-	.size	 Task_PrintBattleMoves,.Lfe103-Task_PrintBattleMoves
+.Lfe104:
+	.size	 Task_PrintBattleMoves,.Lfe104-Task_PrintBattleMoves
 	.align	2, 0
 	.type	 PrintMoveNameAndPP,function
 	.thumb_func
@@ -49506,10 +49695,10 @@ PrintMoveNameAndPP:
 	add	sp, sp, #-0xc
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	ldr	r0, .L1184
+	ldr	r0, .L1204
 	ldr	r0, [r0]
 	mov	sl, r0
-	ldr	r4, .L1184+0x4
+	ldr	r4, .L1204+0x4
 	add	r0, r4, #0
 	mov	r1, #0x0
 	bl	AddWindowFromTemplateList
@@ -49528,7 +49717,7 @@ PrintMoveNameAndPP:
 	add	r0, r0, r1
 	ldrh	r5, [r0]
 	cmp	r5, #0
-	beq	.L1182	@cond_branch
+	beq	.L1202	@cond_branch
 	mov	r0, sl
 	add	r0, r0, #0xa4
 	ldrb	r1, [r0]
@@ -49541,7 +49730,7 @@ PrintMoveNameAndPP:
 	mov	r0, #0xd
 	mov	r1, r5
 	mul	r1, r1, r0
-	ldr	r0, .L1184+0x8
+	ldr	r0, .L1204+0x8
 	add	r1, r1, r0
 	lsl	r0, r7, #0x4
 	mov	r9, r0
@@ -49556,7 +49745,7 @@ PrintMoveNameAndPP:
 	mov	r0, r8
 	mov	r2, #0x0
 	bl	PrintTextOnWindow
-	ldr	r0, .L1184+0xc
+	ldr	r0, .L1204+0xc
 	mov	r8, r0
 	mov	r5, sl
 	add	r5, r5, #0x8c
@@ -49565,7 +49754,7 @@ PrintMoveNameAndPP:
 	mov	r2, #0x1
 	mov	r3, #0x2
 	bl	ConvertIntToDecimalStringN
-	ldr	r4, .L1184+0x10
+	ldr	r4, .L1204+0x10
 	add	r0, r4, #0
 	add	r1, r6, #0
 	mov	r2, #0x1
@@ -49578,8 +49767,8 @@ PrintMoveNameAndPP:
 	mov	r0, #0x1
 	add	r1, r4, #0
 	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	ldr	r4, .L1184+0x14
-	ldr	r1, .L1184+0x18
+	ldr	r4, .L1204+0x14
+	ldr	r1, .L1204+0x18
 	add	r0, r4, #0
 	bl	DynamicPlaceholderTextUtil_ExpandPlaceholders
 	add	r7, r4, #0
@@ -49595,10 +49784,10 @@ PrintMoveNameAndPP:
 	mov	r2, #0x2c
 	bl	GetStringRightAlignXOffset
 	mov	r4, r9
-	b	.L1183
-.L1185:
+	b	.L1203
+.L1205:
 	.align	2, 0
-.L1184:
+.L1204:
 	.word	sMonSummaryScreen
 	.word	sPageMovesTemplate
 	.word	gMoveNames
@@ -49606,8 +49795,8 @@ PrintMoveNameAndPP:
 	.word	gStringVar2
 	.word	gStringVar4
 	.word	sMovesPPLayout
-.L1182:
-	ldr	r1, .L1186
+.L1202:
+	ldr	r1, .L1206
 	lsl	r4, r7, #0x4
 	add	r3, r4, #0x1
 	lsl	r3, r3, #0x18
@@ -49618,13 +49807,13 @@ PrintMoveNameAndPP:
 	mov	r0, r8
 	mov	r2, #0x0
 	bl	PrintTextOnWindow
-	ldr	r7, .L1186+0x4
+	ldr	r7, .L1206+0x4
 	mov	r5, #0xc
 	mov	r0, #0x1
 	add	r1, r7, #0
 	mov	r2, #0x2c
 	bl	GetStringCenterAlignXOffset
-.L1183:
+.L1203:
 	lsl	r2, r0, #0x18
 	lsr	r2, r2, #0x18
 	add	r3, r4, #0x1
@@ -49646,13 +49835,13 @@ PrintMoveNameAndPP:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1187:
+.L1207:
 	.align	2, 0
-.L1186:
+.L1206:
 	.word	gText_OneDash
 	.word	gText_TwoDashes
-.Lfe104:
-	.size	 PrintMoveNameAndPP,.Lfe104-PrintMoveNameAndPP
+.Lfe105:
+	.size	 PrintMoveNameAndPP,.Lfe105-PrintMoveNameAndPP
 	.align	2, 0
 	.type	 PrintMovePowerAndAccuracy,function
 	.thumb_func
@@ -49662,7 +49851,7 @@ PrintMovePowerAndAccuracy:
 	lsl	r0, r0, #0x10
 	lsr	r5, r0, #0x10
 	cmp	r5, #0
-	beq	.L1189	@cond_branch
+	beq	.L1209	@cond_branch
 	mov	r0, #0x13
 	str	r0, [sp]
 	mov	r0, #0x20
@@ -49672,7 +49861,7 @@ PrintMovePowerAndAccuracy:
 	mov	r2, #0x35
 	mov	r3, #0x0
 	bl	FillWindowPixelRect
-	ldr	r2, .L1194
+	ldr	r2, .L1214
 	lsl	r1, r5, #0x2
 	add	r0, r1, r5
 	lsl	r0, r0, #0x2
@@ -49680,23 +49869,23 @@ PrintMovePowerAndAccuracy:
 	ldrb	r0, [r2, #0x2]
 	add	r6, r1, #0
 	cmp	r0, #0x1
-	bhi	.L1190	@cond_branch
-	ldr	r1, .L1194+0x4
-	b	.L1191
-.L1195:
+	bhi	.L1210	@cond_branch
+	ldr	r1, .L1214+0x4
+	b	.L1211
+.L1215:
 	.align	2, 0
-.L1194:
+.L1214:
 	.word	gBattleMoves
 	.word	gText_ThreeDashes
-.L1190:
-	ldr	r4, .L1196
+.L1210:
+	ldr	r4, .L1216
 	ldrb	r1, [r2, #0x2]
 	add	r0, r4, #0
 	mov	r2, #0x1
 	mov	r3, #0x3
 	bl	ConvertIntToDecimalStringN
 	add	r1, r4, #0
-.L1191:
+.L1211:
 	mov	r0, #0x0
 	str	r0, [sp]
 	str	r0, [sp, #0x4]
@@ -49704,30 +49893,30 @@ PrintMovePowerAndAccuracy:
 	mov	r2, #0x35
 	mov	r3, #0x1
 	bl	PrintTextOnWindow
-	ldr	r1, .L1196+0x4
+	ldr	r1, .L1216+0x4
 	add	r0, r6, r5
 	lsl	r0, r0, #0x2
 	add	r1, r0, r1
 	ldrb	r0, [r1, #0x4]
 	cmp	r0, #0
-	bne	.L1192	@cond_branch
-	ldr	r1, .L1196+0x8
-	b	.L1193
-.L1197:
+	bne	.L1212	@cond_branch
+	ldr	r1, .L1216+0x8
+	b	.L1213
+.L1217:
 	.align	2, 0
-.L1196:
+.L1216:
 	.word	gStringVar1
 	.word	gBattleMoves
 	.word	gText_ThreeDashes
-.L1192:
-	ldr	r4, .L1198
+.L1212:
+	ldr	r4, .L1218
 	ldrb	r1, [r1, #0x4]
 	add	r0, r4, #0
 	mov	r2, #0x1
 	mov	r3, #0x3
 	bl	ConvertIntToDecimalStringN
 	add	r1, r4, #0
-.L1193:
+.L1213:
 	mov	r0, #0x0
 	str	r0, [sp]
 	str	r0, [sp, #0x4]
@@ -49735,17 +49924,17 @@ PrintMovePowerAndAccuracy:
 	mov	r2, #0x35
 	mov	r3, #0x11
 	bl	PrintTextOnWindow
-.L1189:
+.L1209:
 	add	sp, sp, #0x8
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1199:
+.L1219:
 	.align	2, 0
-.L1198:
+.L1218:
 	.word	gStringVar1
-.Lfe105:
-	.size	 PrintMovePowerAndAccuracy,.Lfe105-PrintMovePowerAndAccuracy
+.Lfe106:
+	.size	 PrintMovePowerAndAccuracy,.Lfe106-PrintMovePowerAndAccuracy
 	.align	2, 0
 	.type	 PrintContestMoves,function
 	.thumb_func
@@ -49759,31 +49948,31 @@ PrintContestMoves:
 	bl	PrintMoveNameAndPP
 	mov	r0, #0x3
 	bl	PrintMoveNameAndPP
-	ldr	r4, .L1202
+	ldr	r4, .L1222
 	ldr	r0, [r4]
-	ldr	r1, .L1202+0x4
+	ldr	r1, .L1222+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x3
-	bne	.L1201	@cond_branch
+	bne	.L1221	@cond_branch
 	bl	PrintNewMoveDetailsOrCancelText
 	ldr	r0, [r4]
-	ldr	r1, .L1202+0x8
+	ldr	r1, .L1222+0x8
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	bl	PrintContestMoveDescription
-.L1201:
+.L1221:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1203:
+.L1223:
 	.align	2, 0
-.L1202:
+.L1222:
 	.word	sMonSummaryScreen
 	.word	0x40bc
 	.word	0x40c6
-.Lfe106:
-	.size	 PrintContestMoves,.Lfe106-PrintContestMoves
+.Lfe107:
+	.size	 PrintContestMoves,.Lfe107-PrintContestMoves
 	.align	2, 0
 	.type	 Task_PrintContestMoves,function
 	.thumb_func
@@ -49794,108 +49983,108 @@ Task_PrintContestMoves:
 	lsl	r0, r2, #0x2
 	add	r0, r0, r2
 	lsl	r0, r0, #0x3
-	ldr	r1, .L1218
+	ldr	r1, .L1238
 	add	r4, r0, r1
 	ldrh	r0, [r4]
 	sub	r0, r0, #0x1
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x6
-	bhi	.L1205	@cond_branch
+	bhi	.L1225	@cond_branch
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1218+0x4
+	ldr	r1, .L1238+0x4
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L1219:
+.L1239:
 	.align	2, 0
-.L1218:
+.L1238:
 	.word	gTasks+0x8
-	.word	.L1216
+	.word	.L1236
 	.align	2, 0
 	.align	2, 0
-.L1216:
-	.word	.L1206
-	.word	.L1207
-	.word	.L1208
-	.word	.L1209
-	.word	.L1210
-	.word	.L1212
-	.word	.L1215
-.L1206:
+.L1236:
+	.word	.L1226
+	.word	.L1227
+	.word	.L1228
+	.word	.L1229
+	.word	.L1230
+	.word	.L1232
+	.word	.L1235
+.L1226:
 	mov	r0, #0x0
 	bl	PrintMoveNameAndPP
-	b	.L1205
-.L1207:
+	b	.L1225
+.L1227:
 	mov	r0, #0x1
 	bl	PrintMoveNameAndPP
-	b	.L1205
-.L1208:
+	b	.L1225
+.L1228:
 	mov	r0, #0x2
 	bl	PrintMoveNameAndPP
-	b	.L1205
-.L1209:
+	b	.L1225
+.L1229:
 	mov	r0, #0x3
 	bl	PrintMoveNameAndPP
-	b	.L1205
-.L1210:
-	ldr	r0, .L1220
+	b	.L1225
+.L1230:
+	ldr	r0, .L1240
 	ldr	r0, [r0]
-	ldr	r1, .L1220+0x4
+	ldr	r1, .L1240+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x3
-	bne	.L1205	@cond_branch
+	bne	.L1225	@cond_branch
 	bl	PrintNewMoveDetailsOrCancelText
-	b	.L1205
-.L1221:
+	b	.L1225
+.L1241:
 	.align	2, 0
-.L1220:
+.L1240:
 	.word	sMonSummaryScreen
 	.word	0x40bc
-.L1212:
-	ldr	r0, .L1222
+.L1232:
+	ldr	r0, .L1242
 	ldr	r2, [r0]
-	ldr	r1, .L1222+0x4
+	ldr	r1, .L1242+0x4
 	add	r0, r2, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x3
-	bne	.L1205	@cond_branch
+	bne	.L1225	@cond_branch
 	add	r1, r1, #0x8
 	add	r0, r2, r1
 	ldr	r0, [r0]
-	ldr	r1, .L1222+0x8
+	ldr	r1, .L1242+0x8
 	and	r0, r0, r1
 	mov	r1, #0x80
 	lsl	r1, r1, #0xb
 	cmp	r0, r1
-	beq	.L1205	@cond_branch
-	ldr	r1, .L1222+0xc
+	beq	.L1225	@cond_branch
+	ldr	r1, .L1242+0xc
 	add	r0, r2, r1
 	ldrb	r0, [r0]
 	bl	PrintContestMoveDescription
-	b	.L1205
-.L1223:
+	b	.L1225
+.L1243:
 	.align	2, 0
-.L1222:
+.L1242:
 	.word	sMonSummaryScreen
 	.word	0x40bc
 	.word	0xffffff
 	.word	0x40c6
-.L1215:
+.L1235:
 	add	r0, r2, #0
 	bl	DestroyTask
-	b	.L1204
-.L1205:
+	b	.L1224
+.L1225:
 	ldrh	r0, [r4]
 	add	r0, r0, #0x1
 	strh	r0, [r4]
-.L1204:
+.L1224:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.Lfe107:
-	.size	 Task_PrintContestMoves,.Lfe107-Task_PrintContestMoves
+.Lfe108:
+	.size	 Task_PrintContestMoves,.Lfe108-Task_PrintContestMoves
 	.align	2, 0
 	.type	 PrintContestMoveDescription,function
 	.thumb_func
@@ -49905,33 +50094,33 @@ PrintContestMoveDescription:
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
 	cmp	r1, #0x4
-	bne	.L1225	@cond_branch
-	ldr	r0, .L1229
+	bne	.L1245	@cond_branch
+	ldr	r0, .L1249
 	ldr	r0, [r0]
-	ldr	r1, .L1229+0x4
-	b	.L1228
-.L1230:
+	ldr	r1, .L1249+0x4
+	b	.L1248
+.L1250:
 	.align	2, 0
-.L1229:
+.L1249:
 	.word	sMonSummaryScreen
 	.word	0x40c4
-.L1225:
-	ldr	r0, .L1231
+.L1245:
+	ldr	r0, .L1251
 	ldr	r0, [r0]
 	lsl	r1, r1, #0x1
 	add	r0, r0, #0x84
-.L1228:
+.L1248:
 	add	r0, r0, r1
 	ldrh	r4, [r0]
 	cmp	r4, #0
-	beq	.L1227	@cond_branch
-	ldr	r0, .L1231+0x4
+	beq	.L1247	@cond_branch
+	ldr	r0, .L1251+0x4
 	mov	r1, #0x2
 	bl	AddWindowFromTemplateList
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r3, .L1231+0x8
-	ldr	r2, .L1231+0xc
+	ldr	r3, .L1251+0x8
+	ldr	r2, .L1251+0xc
 	lsl	r1, r4, #0x3
 	add	r1, r1, r2
 	ldrb	r1, [r1]
@@ -49944,20 +50133,20 @@ PrintContestMoveDescription:
 	mov	r2, #0x6
 	mov	r3, #0x1
 	bl	PrintTextOnWindow
-.L1227:
+.L1247:
 	add	sp, sp, #0x8
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1232:
+.L1252:
 	.align	2, 0
-.L1231:
+.L1251:
 	.word	sMonSummaryScreen
 	.word	sPageMovesTemplate
 	.word	gContestEffectDescriptionPointers
 	.word	gContestMoves
-.Lfe108:
-	.size	 PrintContestMoveDescription,.Lfe108-PrintContestMoveDescription
+.Lfe109:
+	.size	 PrintContestMoveDescription,.Lfe109-PrintContestMoveDescription
 	.align	2, 0
 	.type	 PrintMoveDetails,function
 	.thumb_func
@@ -49967,7 +50156,7 @@ PrintMoveDetails:
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
 	add	r6, r4, #0
-	ldr	r0, .L1239
+	ldr	r0, .L1259
 	mov	r1, #0x2
 	bl	AddWindowFromTemplateList
 	lsl	r0, r0, #0x18
@@ -49976,14 +50165,14 @@ PrintMoveDetails:
 	mov	r1, #0x0
 	bl	FillWindowPixelBuffer
 	cmp	r4, #0
-	beq	.L1234	@cond_branch
-	ldr	r0, .L1239+0x4
+	beq	.L1254	@cond_branch
+	ldr	r0, .L1259+0x4
 	ldr	r0, [r0]
-	ldr	r1, .L1239+0x8
+	ldr	r1, .L1259+0x8
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x2
-	bne	.L1235	@cond_branch
+	bne	.L1255	@cond_branch
 	add	r0, r4, #0
 	bl	GetBattleMoveSplit
 	lsl	r0, r0, #0x18
@@ -49991,7 +50180,7 @@ PrintMoveDetails:
 	bl	ShowSplitIcon
 	add	r0, r4, #0
 	bl	PrintMovePowerAndAccuracy
-	ldr	r1, .L1239+0xc
+	ldr	r1, .L1259+0xc
 	sub	r0, r4, #0x1
 	lsl	r0, r0, #0x2
 	add	r0, r0, r1
@@ -50003,17 +50192,17 @@ PrintMoveDetails:
 	mov	r2, #0x6
 	mov	r3, #0x1
 	bl	PrintTextOnWindow
-	b	.L1237
-.L1240:
+	b	.L1257
+.L1260:
 	.align	2, 0
-.L1239:
+.L1259:
 	.word	sPageMovesTemplate
 	.word	sMonSummaryScreen
 	.word	0x40c0
 	.word	gMoveDescriptionPointers
-.L1235:
-	ldr	r2, .L1241
-	ldr	r1, .L1241+0x4
+.L1255:
+	ldr	r2, .L1261
+	ldr	r1, .L1261+0x4
 	lsl	r0, r6, #0x3
 	add	r0, r0, r1
 	ldrb	r0, [r0]
@@ -50027,27 +50216,27 @@ PrintMoveDetails:
 	mov	r2, #0x6
 	mov	r3, #0x1
 	bl	PrintTextOnWindow
-.L1237:
+.L1257:
 	add	r0, r5, #0
 	bl	PutWindowTilemap
-	b	.L1238
-.L1242:
+	b	.L1258
+.L1262:
 	.align	2, 0
-.L1241:
+.L1261:
 	.word	gContestEffectDescriptionPointers
 	.word	gContestMoves
-.L1234:
+.L1254:
 	add	r0, r5, #0
 	bl	ClearWindowTilemap
-.L1238:
+.L1258:
 	mov	r0, #0x0
 	bl	ScheduleBgCopyTilemapToVram
 	add	sp, sp, #0x8
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.Lfe109:
-	.size	 PrintMoveDetails,.Lfe109-PrintMoveDetails
+.Lfe110:
+	.size	 PrintMoveDetails,.Lfe110-PrintMoveDetails
 	.align	2, 0
 	.type	 PrintNewMoveDetailsOrCancelText,function
 	.thumb_func
@@ -50056,7 +50245,7 @@ PrintNewMoveDetailsOrCancelText:
 	mov	r7, r8
 	push	{r7}
 	add	sp, sp, #-0x8
-	ldr	r4, .L1248
+	ldr	r4, .L1268
 	add	r0, r4, #0
 	mov	r1, #0x0
 	bl	AddWindowFromTemplateList
@@ -50069,14 +50258,14 @@ PrintNewMoveDetailsOrCancelText:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	mov	r8, r0
-	ldr	r0, .L1248+0x4
+	ldr	r0, .L1268+0x4
 	ldr	r1, [r0]
-	ldr	r2, .L1248+0x8
+	ldr	r2, .L1268+0x8
 	add	r0, r1, r2
 	ldrh	r2, [r0]
 	cmp	r2, #0
-	bne	.L1244	@cond_branch
-	ldr	r1, .L1248+0xc
+	bne	.L1264	@cond_branch
+	ldr	r1, .L1268+0xc
 	str	r2, [sp]
 	mov	r0, #0x1
 	str	r0, [sp, #0x4]
@@ -50084,25 +50273,25 @@ PrintNewMoveDetailsOrCancelText:
 	mov	r2, #0x0
 	mov	r3, #0x41
 	bl	PrintTextOnWindow
-	b	.L1245
-.L1249:
+	b	.L1265
+.L1269:
 	.align	2, 0
-.L1248:
+.L1268:
 	.word	sPageMovesTemplate
 	.word	sMonSummaryScreen
 	.word	0x40c4
 	.word	gText_Cancel
-.L1244:
+.L1264:
 	ldrh	r5, [r0]
-	ldr	r2, .L1250
+	ldr	r2, .L1270
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0x2
-	bne	.L1246	@cond_branch
+	bne	.L1266	@cond_branch
 	mov	r0, #0xd
 	mov	r1, r5
 	mul	r1, r1, r0
-	ldr	r0, .L1250+0x4
+	ldr	r0, .L1270+0x4
 	add	r1, r1, r0
 	mov	r0, #0x0
 	str	r0, [sp]
@@ -50112,17 +50301,17 @@ PrintNewMoveDetailsOrCancelText:
 	mov	r2, #0x0
 	mov	r3, #0x41
 	bl	PrintTextOnWindow
-	b	.L1247
-.L1251:
+	b	.L1267
+.L1271:
 	.align	2, 0
-.L1250:
+.L1270:
 	.word	0x40c0
 	.word	gMoveNames
-.L1246:
+.L1266:
 	mov	r0, #0xd
 	mov	r1, r5
 	mul	r1, r1, r0
-	ldr	r0, .L1252
+	ldr	r0, .L1272
 	add	r1, r1, r0
 	mov	r0, #0x0
 	str	r0, [sp]
@@ -50132,9 +50321,9 @@ PrintNewMoveDetailsOrCancelText:
 	mov	r2, #0x0
 	mov	r3, #0x41
 	bl	PrintTextOnWindow
-.L1247:
-	ldr	r4, .L1252+0x4
-	ldr	r1, .L1252+0x8
+.L1267:
+	ldr	r4, .L1272+0x4
+	ldr	r1, .L1272+0x8
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x2
@@ -50151,8 +50340,8 @@ PrintNewMoveDetailsOrCancelText:
 	mov	r0, #0x1
 	add	r1, r4, #0
 	bl	DynamicPlaceholderTextUtil_SetPlaceholderPtr
-	ldr	r4, .L1252+0xc
-	ldr	r1, .L1252+0x10
+	ldr	r4, .L1272+0xc
+	ldr	r1, .L1272+0x10
 	add	r0, r4, #0
 	bl	DynamicPlaceholderTextUtil_ExpandPlaceholders
 	mov	r0, #0x1
@@ -50170,30 +50359,30 @@ PrintNewMoveDetailsOrCancelText:
 	add	r1, r4, #0
 	mov	r3, #0x41
 	bl	PrintTextOnWindow
-.L1245:
+.L1265:
 	add	sp, sp, #0x8
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1253:
+.L1273:
 	.align	2, 0
-.L1252:
+.L1272:
 	.word	gMoveNames
 	.word	gStringVar1
 	.word	gBattleMoves
 	.word	gStringVar4
 	.word	sMovesPPLayout
-.Lfe110:
-	.size	 PrintNewMoveDetailsOrCancelText,.Lfe110-PrintNewMoveDetailsOrCancelText
+.Lfe111:
+	.size	 PrintNewMoveDetailsOrCancelText,.Lfe111-PrintNewMoveDetailsOrCancelText
 	.align	2, 0
 	.type	 AddAndFillMoveNamesWindow,function
 	.thumb_func
 AddAndFillMoveNamesWindow:
 	push	{r4, lr}
 	add	sp, sp, #-0x8
-	ldr	r0, .L1255
+	ldr	r0, .L1275
 	mov	r1, #0x0
 	bl	AddWindowFromTemplateList
 	add	r4, r0, #0
@@ -50215,12 +50404,12 @@ AddAndFillMoveNamesWindow:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1256:
+.L1276:
 	.align	2, 0
-.L1255:
+.L1275:
 	.word	sPageMovesTemplate
-.Lfe111:
-	.size	 AddAndFillMoveNamesWindow,.Lfe111-AddAndFillMoveNamesWindow
+.Lfe112:
+	.size	 AddAndFillMoveNamesWindow,.Lfe112-AddAndFillMoveNamesWindow
 	.align	2, 0
 	.type	 SwapMovesNamesPP,function
 	.thumb_func
@@ -50240,7 +50429,7 @@ SwapMovesNamesPP:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	mov	sl, r0
-	ldr	r5, .L1258
+	ldr	r5, .L1278
 	add	r0, r5, #0
 	mov	r1, #0x0
 	bl	AddWindowFromTemplateList
@@ -50305,19 +50494,19 @@ SwapMovesNamesPP:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1259:
+.L1279:
 	.align	2, 0
-.L1258:
+.L1278:
 	.word	sPageMovesTemplate
-.Lfe112:
-	.size	 SwapMovesNamesPP,.Lfe112-SwapMovesNamesPP
+.Lfe113:
+	.size	 SwapMovesNamesPP,.Lfe113-SwapMovesNamesPP
 	.align	2, 0
 	.type	 PrintHMMovesCantBeForgotten,function
 	.thumb_func
 PrintHMMovesCantBeForgotten:
 	push	{r4, lr}
 	add	sp, sp, #-0x8
-	ldr	r0, .L1261
+	ldr	r0, .L1281
 	mov	r1, #0x2
 	bl	AddWindowFromTemplateList
 	add	r4, r0, #0
@@ -50326,7 +50515,7 @@ PrintHMMovesCantBeForgotten:
 	add	r0, r4, #0
 	mov	r1, #0x0
 	bl	FillWindowPixelBuffer
-	ldr	r1, .L1261+0x4
+	ldr	r1, .L1281+0x4
 	mov	r0, #0x0
 	str	r0, [sp]
 	str	r0, [sp, #0x4]
@@ -50338,23 +50527,23 @@ PrintHMMovesCantBeForgotten:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1262:
+.L1282:
 	.align	2, 0
-.L1261:
+.L1281:
 	.word	sPageMovesTemplate
 	.word	gText_HMMovesCantBeForgotten2
-.Lfe113:
-	.size	 PrintHMMovesCantBeForgotten,.Lfe113-PrintHMMovesCantBeForgotten
+.Lfe114:
+	.size	 PrintHMMovesCantBeForgotten,.Lfe114-PrintHMMovesCantBeForgotten
 	.align	2, 0
 	.type	 ResetSpriteIds,function
 	.thumb_func
 ResetSpriteIds:
 	push	{r4, r5, lr}
 	mov	r2, #0x0
-	ldr	r5, .L1269
-	ldr	r4, .L1269+0x4
+	ldr	r5, .L1289
+	ldr	r4, .L1289+0x4
 	mov	r3, #0xff
-.L1267:
+.L1287:
 	ldr	r0, [r5]
 	add	r0, r0, r4
 	add	r0, r0, r2
@@ -50365,17 +50554,17 @@ ResetSpriteIds:
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	cmp	r2, #0x1b
-	bls	.L1267	@cond_branch
+	bls	.L1287	@cond_branch
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1270:
+.L1290:
 	.align	2, 0
-.L1269:
+.L1289:
 	.word	sMonSummaryScreen
 	.word	0x40d3
-.Lfe114:
-	.size	 ResetSpriteIds,.Lfe114-ResetSpriteIds
+.Lfe115:
+	.size	 ResetSpriteIds,.Lfe115-ResetSpriteIds
 	.align	2, 0
 	.type	 DestroySpriteInArray,function
 	.thumb_func
@@ -50383,39 +50572,39 @@ DestroySpriteInArray:
 	push	{r4, r5, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r5, .L1273
+	ldr	r5, .L1293
 	ldr	r0, [r5]
-	ldr	r1, .L1273+0x4
+	ldr	r1, .L1293+0x4
 	add	r0, r0, r1
 	add	r1, r0, r4
 	ldrb	r0, [r1]
 	cmp	r0, #0xff
-	beq	.L1272	@cond_branch
+	beq	.L1292	@cond_branch
 	add	r1, r0, #0
 	lsl	r0, r1, #0x4
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1273+0x8
+	ldr	r1, .L1293+0x8
 	add	r0, r0, r1
 	bl	DestroySprite
 	ldr	r0, [r5]
-	ldr	r1, .L1273+0x4
+	ldr	r1, .L1293+0x4
 	add	r0, r0, r1
 	add	r0, r0, r4
 	mov	r1, #0xff
 	strb	r1, [r0]
-.L1272:
+.L1292:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1274:
+.L1294:
 	.align	2, 0
-.L1273:
+.L1293:
 	.word	sMonSummaryScreen
 	.word	0x40d3
 	.word	gSprites
-.Lfe115:
-	.size	 DestroySpriteInArray,.Lfe115-DestroySpriteInArray
+.Lfe116:
+	.size	 DestroySpriteInArray,.Lfe116-DestroySpriteInArray
 	.align	2, 0
 	.type	 SetSpriteInvisibility,function
 	.thumb_func
@@ -50425,10 +50614,10 @@ SetSpriteInvisibility:
 	lsr	r0, r0, #0x18
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
-	ldr	r3, .L1276
-	ldr	r2, .L1276+0x4
+	ldr	r3, .L1296
+	ldr	r2, .L1296+0x4
 	ldr	r2, [r2]
-	ldr	r4, .L1276+0x8
+	ldr	r4, .L1296+0x8
 	add	r2, r2, r4
 	add	r2, r2, r0
 	ldrb	r0, [r2]
@@ -50449,115 +50638,115 @@ SetSpriteInvisibility:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1277:
+.L1297:
 	.align	2, 0
-.L1276:
+.L1296:
 	.word	gSprites
 	.word	sMonSummaryScreen
 	.word	0x40d3
-.Lfe116:
-	.size	 SetSpriteInvisibility,.Lfe116-SetSpriteInvisibility
+.Lfe117:
+	.size	 SetSpriteInvisibility,.Lfe117-SetSpriteInvisibility
 	.align	2, 0
 	.type	 HidePageSpecificSprites,function
 	.thumb_func
 HidePageSpecificSprites:
 	push	{r4, lr}
 	mov	r4, #0x3
-.L1282:
-	ldr	r0, .L1285
+.L1302:
+	ldr	r0, .L1305
 	ldr	r0, [r0]
-	ldr	r1, .L1285+0x4
+	ldr	r1, .L1305+0x4
 	add	r0, r0, r1
 	add	r0, r0, r4
 	ldrb	r0, [r0]
 	cmp	r0, #0xff
-	beq	.L1281	@cond_branch
+	beq	.L1301	@cond_branch
 	add	r0, r4, #0
 	mov	r1, #0x1
 	bl	SetSpriteInvisibility
-.L1281:
+.L1301:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x1b
-	bls	.L1282	@cond_branch
+	bls	.L1302	@cond_branch
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1286:
+.L1306:
 	.align	2, 0
-.L1285:
+.L1305:
 	.word	sMonSummaryScreen
 	.word	0x40d3
-.Lfe117:
-	.size	 HidePageSpecificSprites,.Lfe117-HidePageSpecificSprites
+.Lfe118:
+	.size	 HidePageSpecificSprites,.Lfe118-HidePageSpecificSprites
 	.align	2, 0
 	.type	 SetTypeIcons,function
 	.thumb_func
 SetTypeIcons:
 	push	{lr}
-	ldr	r0, .L1295
+	ldr	r0, .L1315
 	ldr	r0, [r0]
-	ldr	r1, .L1295+0x4
+	ldr	r1, .L1315+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x2
-	beq	.L1290	@cond_branch
+	beq	.L1310	@cond_branch
 	cmp	r0, #0x2
-	bgt	.L1294	@cond_branch
+	bgt	.L1314	@cond_branch
 	cmp	r0, #0
-	beq	.L1289	@cond_branch
-	b	.L1288
-.L1296:
+	beq	.L1309	@cond_branch
+	b	.L1308
+.L1316:
 	.align	2, 0
-.L1295:
+.L1315:
 	.word	sMonSummaryScreen
 	.word	0x40c0
-.L1294:
+.L1314:
 	cmp	r0, #0x3
-	beq	.L1291	@cond_branch
-	b	.L1288
-.L1289:
+	beq	.L1311	@cond_branch
+	b	.L1308
+.L1309:
 	bl	SetMonTypeIcons
-	b	.L1288
-.L1290:
+	b	.L1308
+.L1310:
 	bl	SetMoveTypeIcons
 	bl	SetNewMoveTypeIcon
-	b	.L1288
-.L1291:
+	b	.L1308
+.L1311:
 	bl	SetContestMoveTypeIcons
 	bl	SetNewMoveTypeIcon
-.L1288:
+.L1308:
 	pop	{r0}
 	bx	r0
-.Lfe118:
-	.size	 SetTypeIcons,.Lfe118-SetTypeIcons
+.Lfe119:
+	.size	 SetTypeIcons,.Lfe119-SetTypeIcons
 	.align	2, 0
 	.type	 CreateMoveTypeIcons,function
 	.thumb_func
 CreateMoveTypeIcons:
 	push	{r4, r5, lr}
 	mov	r4, #0x3
-	ldr	r5, .L1304
-.L1301:
+	ldr	r5, .L1324
+.L1321:
 	ldr	r0, [r5]
-	ldr	r1, .L1304+0x4
+	ldr	r1, .L1324+0x4
 	add	r0, r0, r1
 	add	r0, r0, r4
 	ldrb	r0, [r0]
 	cmp	r0, #0xff
-	bne	.L1302	@cond_branch
-	ldr	r0, .L1304+0x8
+	bne	.L1322	@cond_branch
+	ldr	r0, .L1324+0x8
 	mov	r1, #0x0
 	mov	r2, #0x0
 	mov	r3, #0x2
 	bl	CreateSprite
 	ldr	r1, [r5]
-	ldr	r2, .L1304+0x4
+	ldr	r2, .L1324+0x4
 	add	r1, r1, r2
 	add	r1, r1, r4
 	strb	r0, [r1]
-.L1302:
+.L1322:
 	add	r0, r4, #0
 	mov	r1, #0x1
 	bl	SetSpriteInvisibility
@@ -50565,18 +50754,18 @@ CreateMoveTypeIcons:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x7
-	bls	.L1301	@cond_branch
+	bls	.L1321	@cond_branch
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1305:
+.L1325:
 	.align	2, 0
-.L1304:
+.L1324:
 	.word	sMonSummaryScreen
 	.word	0x40d3
 	.word	sSpriteTemplate_MoveTypes
-.Lfe119:
-	.size	 CreateMoveTypeIcons,.Lfe119-CreateMoveTypeIcons
+.Lfe120:
+	.size	 CreateMoveTypeIcons,.Lfe120-CreateMoveTypeIcons
 	.align	2, 0
 	.globl	SetTypeSpritePosAndPal
 	.type	 SetTypeSpritePosAndPal,function
@@ -50599,22 +50788,22 @@ SetTypeSpritePosAndPal:
 	mov	r8, r0
 	lsl	r3, r3, #0x18
 	lsr	r3, r3, #0x18
-	ldr	r0, .L1307
+	ldr	r0, .L1327
 	ldr	r0, [r0]
-	ldr	r1, .L1307+0x4
+	ldr	r1, .L1327+0x4
 	add	r0, r0, r1
 	add	r0, r0, r3
 	ldrb	r0, [r0]
 	lsl	r4, r0, #0x4
 	add	r4, r4, r0
 	lsl	r4, r4, #0x2
-	ldr	r0, .L1307+0x8
+	ldr	r0, .L1327+0x8
 	add	r4, r4, r0
 	add	r0, r4, #0
 	add	r1, r5, #0
 	str	r3, [sp]
 	bl	StartSpriteAnim
-	ldr	r0, .L1307+0xc
+	ldr	r0, .L1327+0xc
 	add	r5, r5, r0
 	ldrb	r1, [r5]
 	lsl	r1, r1, #0x4
@@ -50639,27 +50828,27 @@ SetTypeSpritePosAndPal:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1308:
+.L1328:
 	.align	2, 0
-.L1307:
+.L1327:
 	.word	sMonSummaryScreen
 	.word	0x40d3
 	.word	gSprites
 	.word	sMoveTypeToOamPaletteNum
-.Lfe120:
-	.size	 SetTypeSpritePosAndPal,.Lfe120-SetTypeSpritePosAndPal
+.Lfe121:
+	.size	 SetTypeSpritePosAndPal,.Lfe121-SetTypeSpritePosAndPal
 	.align	2, 0
 	.type	 SetMonTypeIcons,function
 	.thumb_func
 SetMonTypeIcons:
 	push	{r4, r5, lr}
-	ldr	r0, .L1314
+	ldr	r0, .L1334
 	ldr	r0, [r0]
 	add	r5, r0, #0
 	add	r5, r5, #0x70
 	ldrb	r0, [r5, #0x4]
 	cmp	r0, #0
-	beq	.L1310	@cond_branch
+	beq	.L1330	@cond_branch
 	mov	r0, #0x9
 	mov	r1, #0x78
 	mov	r2, #0x30
@@ -50668,13 +50857,13 @@ SetMonTypeIcons:
 	mov	r0, #0x4
 	mov	r1, #0x1
 	bl	SetSpriteInvisibility
-	b	.L1311
-.L1315:
+	b	.L1331
+.L1335:
 	.align	2, 0
-.L1314:
+.L1334:
 	.word	sMonSummaryScreen
-.L1310:
-	ldr	r4, .L1316
+.L1330:
+	ldr	r4, .L1336
 	ldrh	r1, [r5]
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
@@ -50693,7 +50882,7 @@ SetMonTypeIcons:
 	ldrb	r0, [r1, #0x6]
 	ldrb	r2, [r1, #0x7]
 	cmp	r0, r2
-	beq	.L1312	@cond_branch
+	beq	.L1332	@cond_branch
 	ldrb	r0, [r1, #0x7]
 	mov	r1, #0xa0
 	mov	r2, #0x30
@@ -50702,40 +50891,40 @@ SetMonTypeIcons:
 	mov	r0, #0x4
 	mov	r1, #0x0
 	bl	SetSpriteInvisibility
-	b	.L1311
-.L1317:
+	b	.L1331
+.L1337:
 	.align	2, 0
-.L1316:
+.L1336:
 	.word	gBaseStats
-.L1312:
+.L1332:
 	mov	r0, #0x4
 	mov	r1, #0x1
 	bl	SetSpriteInvisibility
-.L1311:
+.L1331:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.Lfe121:
-	.size	 SetMonTypeIcons,.Lfe121-SetMonTypeIcons
+.Lfe122:
+	.size	 SetMonTypeIcons,.Lfe122-SetMonTypeIcons
 	.align	2, 0
 	.type	 SetMoveTypeIcons,function
 	.thumb_func
 SetMoveTypeIcons:
 	push	{r4, r5, r6, lr}
-	ldr	r0, .L1326
+	ldr	r0, .L1346
 	ldr	r0, [r0]
 	add	r5, r0, #0
 	add	r5, r5, #0x70
 	mov	r4, #0x0
-	ldr	r6, .L1326+0x4
-.L1322:
+	ldr	r6, .L1346+0x4
+.L1342:
 	lsl	r0, r4, #0x1
 	add	r1, r5, #0
 	add	r1, r1, #0x14
 	add	r1, r1, r0
 	ldrh	r0, [r1]
 	cmp	r0, #0
-	beq	.L1323	@cond_branch
+	beq	.L1343	@cond_branch
 	add	r1, r0, #0
 	lsl	r0, r1, #0x2
 	add	r0, r0, r1
@@ -50752,48 +50941,48 @@ SetMoveTypeIcons:
 	lsr	r3, r3, #0x18
 	mov	r1, #0x55
 	bl	SetTypeSpritePosAndPal
-	b	.L1321
-.L1327:
+	b	.L1341
+.L1347:
 	.align	2, 0
-.L1326:
+.L1346:
 	.word	sMonSummaryScreen
 	.word	gBattleMoves
-.L1323:
+.L1343:
 	add	r0, r4, #0x3
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	mov	r1, #0x1
 	bl	SetSpriteInvisibility
-.L1321:
+.L1341:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x3
-	bls	.L1322	@cond_branch
+	bls	.L1342	@cond_branch
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.Lfe122:
-	.size	 SetMoveTypeIcons,.Lfe122-SetMoveTypeIcons
+.Lfe123:
+	.size	 SetMoveTypeIcons,.Lfe123-SetMoveTypeIcons
 	.align	2, 0
 	.type	 SetContestMoveTypeIcons,function
 	.thumb_func
 SetContestMoveTypeIcons:
 	push	{r4, r5, lr}
-	ldr	r0, .L1336
+	ldr	r0, .L1356
 	ldr	r0, [r0]
 	add	r5, r0, #0
 	add	r5, r5, #0x70
 	mov	r4, #0x0
-.L1332:
+.L1352:
 	lsl	r0, r4, #0x1
 	add	r1, r5, #0
 	add	r1, r1, #0x14
 	add	r2, r1, r0
 	ldrh	r0, [r2]
 	cmp	r0, #0
-	beq	.L1333	@cond_branch
-	ldr	r1, .L1336+0x4
+	beq	.L1353	@cond_branch
+	ldr	r1, .L1356+0x4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
 	ldrb	r0, [r0, #0x1]
@@ -50813,57 +51002,57 @@ SetContestMoveTypeIcons:
 	lsr	r3, r3, #0x18
 	mov	r1, #0x55
 	bl	SetTypeSpritePosAndPal
-	b	.L1331
-.L1337:
+	b	.L1351
+.L1357:
 	.align	2, 0
-.L1336:
+.L1356:
 	.word	sMonSummaryScreen
 	.word	gContestMoves
-.L1333:
+.L1353:
 	add	r0, r4, #0x3
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	mov	r1, #0x1
 	bl	SetSpriteInvisibility
-.L1331:
+.L1351:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x3
-	bls	.L1332	@cond_branch
+	bls	.L1352	@cond_branch
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.Lfe123:
-	.size	 SetContestMoveTypeIcons,.Lfe123-SetContestMoveTypeIcons
+.Lfe124:
+	.size	 SetContestMoveTypeIcons,.Lfe124-SetContestMoveTypeIcons
 	.align	2, 0
 	.type	 SetNewMoveTypeIcon,function
 	.thumb_func
 SetNewMoveTypeIcon:
 	push	{lr}
-	ldr	r0, .L1343
+	ldr	r0, .L1363
 	ldr	r1, [r0]
-	ldr	r0, .L1343+0x4
+	ldr	r0, .L1363+0x4
 	add	r3, r1, r0
 	ldrh	r0, [r3]
 	cmp	r0, #0
-	bne	.L1339	@cond_branch
+	bne	.L1359	@cond_branch
 	mov	r0, #0x7
 	mov	r1, #0x1
 	bl	SetSpriteInvisibility
-	b	.L1340
-.L1344:
+	b	.L1360
+.L1364:
 	.align	2, 0
-.L1343:
+.L1363:
 	.word	sMonSummaryScreen
 	.word	0x40c4
-.L1339:
-	ldr	r2, .L1345
+.L1359:
+	ldr	r2, .L1365
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0x2
-	bne	.L1341	@cond_branch
-	ldr	r2, .L1345+0x4
+	bne	.L1361	@cond_branch
+	ldr	r2, .L1365+0x4
 	ldrh	r1, [r3]
 	lsl	r0, r1, #0x2
 	add	r0, r0, r1
@@ -50874,14 +51063,14 @@ SetNewMoveTypeIcon:
 	mov	r2, #0x60
 	mov	r3, #0x7
 	bl	SetTypeSpritePosAndPal
-	b	.L1340
-.L1346:
+	b	.L1360
+.L1366:
 	.align	2, 0
-.L1345:
+.L1365:
 	.word	0x40c0
 	.word	gBattleMoves
-.L1341:
-	ldr	r1, .L1347
+.L1361:
+	ldr	r1, .L1367
 	ldrh	r0, [r3]
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
@@ -50896,15 +51085,15 @@ SetNewMoveTypeIcon:
 	mov	r2, #0x60
 	mov	r3, #0x7
 	bl	SetTypeSpritePosAndPal
-.L1340:
+.L1360:
 	pop	{r0}
 	bx	r0
-.L1348:
+.L1368:
 	.align	2, 0
-.L1347:
+.L1367:
 	.word	gContestMoves
-.Lfe124:
-	.size	 SetNewMoveTypeIcon,.Lfe124-SetNewMoveTypeIcon
+.Lfe125:
+	.size	 SetNewMoveTypeIcon,.Lfe125-SetNewMoveTypeIcon
 	.align	2, 0
 	.type	 SwapMovesTypeSprites,function
 	.thumb_func
@@ -50914,17 +51103,17 @@ SwapMovesTypeSprites:
 	lsr	r0, r0, #0x18
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
-	ldr	r2, .L1350
+	ldr	r2, .L1370
 	ldr	r2, [r2]
 	add	r0, r0, #0x3
-	ldr	r3, .L1350+0x4
+	ldr	r3, .L1370+0x4
 	add	r2, r2, r3
 	add	r0, r2, r0
 	ldrb	r0, [r0]
 	lsl	r4, r0, #0x4
 	add	r4, r4, r0
 	lsl	r4, r4, #0x2
-	ldr	r5, .L1350+0x8
+	ldr	r5, .L1370+0x8
 	add	r4, r4, r5
 	add	r1, r1, #0x3
 	add	r2, r2, r1
@@ -50972,14 +51161,14 @@ SwapMovesTypeSprites:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1351:
+.L1371:
 	.align	2, 0
-.L1350:
+.L1370:
 	.word	sMonSummaryScreen
 	.word	0x40d3
 	.word	gSprites
-.Lfe125:
-	.size	 SwapMovesTypeSprites,.Lfe125-SwapMovesTypeSprites
+.Lfe126:
+	.size	 SwapMovesTypeSprites,.Lfe126-SwapMovesTypeSprites
 	.align	2, 0
 	.type	 LoadMonGfxAndSprite,function
 	.thumb_func
@@ -50987,144 +51176,144 @@ LoadMonGfxAndSprite:
 	push	{r4, r5, r6, lr}
 	add	r3, r0, #0
 	add	r6, r1, #0
-	ldr	r0, .L1374
+	ldr	r0, .L1394
 	ldr	r2, [r0]
 	add	r5, r2, #0
 	add	r5, r5, #0x70
 	mov	r1, #0x0
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0
-	beq	.L1355	@cond_branch
+	beq	.L1375	@cond_branch
 	cmp	r0, #0x1
-	bne	.LCB13132
-	b	.L1368	@long jump
-.LCB13132:
+	bne	.LCB13316
+	b	.L1388	@long jump
+.LCB13316:
 	add	r0, r3, #0
 	bl	CreateMonSprite
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	b	.L1370
-.L1375:
+	b	.L1390
+.L1395:
 	.align	2, 0
-.L1374:
+.L1394:
 	.word	sMonSummaryScreen
-.L1355:
-	ldr	r0, .L1376
-	ldr	r1, .L1376+0x4
+.L1375:
+	ldr	r0, .L1396
+	ldr	r1, .L1396+0x4
 	add	r0, r0, r1
 	ldrb	r1, [r0]
 	mov	r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1356	@cond_branch
-	ldr	r1, .L1376+0x8
+	beq	.L1376	@cond_branch
+	ldr	r1, .L1396+0x8
 	add	r0, r2, r1
 	ldrb	r1, [r0]
 	mov	r0, #0x3
 	bl	sub_80688F8
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1357	@cond_branch
+	beq	.L1377	@cond_branch
 	ldrh	r2, [r5, #0x2]
 	lsl	r0, r2, #0x3
-	ldr	r1, .L1376+0xc
+	ldr	r1, .L1396+0xc
 	add	r0, r0, r1
-	ldr	r1, .L1376+0x10
+	ldr	r1, .L1396+0x10
 	ldr	r1, [r1]
 	ldr	r1, [r1, #0x8]
-	b	.L1371
-.L1377:
+	b	.L1391
+.L1397:
 	.align	2, 0
-.L1376:
+.L1396:
 	.word	gMain
 	.word	0x439
 	.word	0x40be
 	.word	gMonFrontPicTable
 	.word	gMonSpritesGfxPtr
-.L1357:
+.L1377:
 	ldrh	r2, [r5, #0x2]
 	lsl	r0, r2, #0x3
-	ldr	r1, .L1378
+	ldr	r1, .L1398
 	add	r0, r0, r1
-	ldr	r1, .L1378+0x4
+	ldr	r1, .L1398+0x4
 	ldr	r1, [r1]
-	b	.L1372
-.L1379:
+	b	.L1392
+.L1399:
 	.align	2, 0
-.L1378:
+.L1398:
 	.word	gMonFrontPicTable
 	.word	gMonSpritesGfxPtr
-.L1356:
-	ldr	r0, .L1380
+.L1376:
+	ldr	r0, .L1400
 	ldr	r3, [r0]
 	add	r4, r0, #0
 	cmp	r3, #0
-	beq	.L1360	@cond_branch
+	beq	.L1380	@cond_branch
 	ldr	r1, [r2]
-	ldr	r0, .L1380+0x4
+	ldr	r0, .L1400+0x4
 	cmp	r1, r0
-	beq	.L1362	@cond_branch
-	ldr	r1, .L1380+0x8
+	beq	.L1382	@cond_branch
+	ldr	r1, .L1400+0x8
 	add	r0, r2, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x2
-	beq	.L1362	@cond_branch
+	beq	.L1382	@cond_branch
 	add	r1, r1, #0x33
 	add	r0, r2, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x1
-	bne	.L1361	@cond_branch
-.L1362:
+	bne	.L1381	@cond_branch
+.L1382:
 	ldrh	r2, [r5, #0x2]
 	lsl	r0, r2, #0x3
-	ldr	r1, .L1380+0xc
+	ldr	r1, .L1400+0xc
 	add	r0, r0, r1
 	ldr	r1, [r4]
-.L1372:
+.L1392:
 	ldr	r1, [r1, #0x8]
 	ldr	r3, [r5, #0xc]
 	bl	HandleLoadSpecialPokePic_2
-	b	.L1373
-.L1381:
+	b	.L1393
+.L1401:
 	.align	2, 0
-.L1380:
+.L1400:
 	.word	gMonSpritesGfxPtr
 	.word	gPlayerParty
 	.word	0x40bc
 	.word	gMonFrontPicTable
-.L1361:
+.L1381:
 	ldrh	r2, [r5, #0x2]
 	lsl	r0, r2, #0x3
-	ldr	r1, .L1382
+	ldr	r1, .L1402
 	add	r0, r0, r1
 	ldr	r1, [r3, #0x8]
-.L1371:
+.L1391:
 	ldr	r3, [r5, #0xc]
 	bl	HandleLoadSpecialPokePic_DontHandleDeoxys
-	b	.L1373
-.L1383:
+	b	.L1393
+.L1403:
 	.align	2, 0
-.L1382:
+.L1402:
 	.word	gMonFrontPicTable
-.L1360:
+.L1380:
 	ldr	r1, [r2]
-	ldr	r0, .L1384
+	ldr	r0, .L1404
 	cmp	r1, r0
-	beq	.L1366	@cond_branch
-	ldr	r1, .L1384+0x4
+	beq	.L1386	@cond_branch
+	ldr	r1, .L1404+0x4
 	add	r0, r2, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x2
-	beq	.L1366	@cond_branch
+	beq	.L1386	@cond_branch
 	add	r1, r1, #0x33
 	add	r0, r2, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x1
-	bne	.L1365	@cond_branch
-.L1366:
+	bne	.L1385	@cond_branch
+.L1386:
 	ldrh	r4, [r5, #0x2]
 	lsl	r4, r4, #0x3
-	ldr	r0, .L1384+0x8
+	ldr	r0, .L1404+0x8
 	add	r4, r4, r0
 	mov	r0, #0x0
 	mov	r1, #0x1
@@ -51134,17 +51323,17 @@ LoadMonGfxAndSprite:
 	ldr	r3, [r5, #0xc]
 	add	r0, r4, #0
 	bl	HandleLoadSpecialPokePic_2
-	b	.L1373
-.L1385:
+	b	.L1393
+.L1405:
 	.align	2, 0
-.L1384:
+.L1404:
 	.word	gPlayerParty
 	.word	0x40bc
 	.word	gMonFrontPicTable
-.L1365:
+.L1385:
 	ldrh	r4, [r5, #0x2]
 	lsl	r4, r4, #0x3
-	ldr	r0, .L1386
+	ldr	r0, .L1406
 	add	r4, r4, r0
 	mov	r0, #0x0
 	mov	r1, #0x1
@@ -51154,12 +51343,12 @@ LoadMonGfxAndSprite:
 	ldr	r3, [r5, #0xc]
 	add	r0, r4, #0
 	bl	HandleLoadSpecialPokePic_DontHandleDeoxys
-	b	.L1373
-.L1387:
+	b	.L1393
+.L1407:
 	.align	2, 0
-.L1386:
+.L1406:
 	.word	gMonFrontPicTable
-.L1368:
+.L1388:
 	ldrh	r0, [r5, #0x2]
 	ldr	r1, [r5, #0x48]
 	ldr	r2, [r5, #0xc]
@@ -51169,54 +51358,54 @@ LoadMonGfxAndSprite:
 	ldrh	r0, [r4, #0x4]
 	mov	r1, #0x1
 	bl	SetMultiuseSpriteTemplateToPokemon
-.L1373:
+.L1393:
 	ldrh	r0, [r6]
 	add	r0, r0, #0x1
 	strh	r0, [r6]
 	mov	r0, #0xff
-.L1370:
+.L1390:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.Lfe126:
-	.size	 LoadMonGfxAndSprite,.Lfe126-LoadMonGfxAndSprite
+.Lfe127:
+	.size	 LoadMonGfxAndSprite,.Lfe127-LoadMonGfxAndSprite
 	.align	2, 0
 	.type	 PlayMonCry,function
 	.thumb_func
 PlayMonCry:
 	push	{r4, lr}
-	ldr	r0, .L1392
+	ldr	r0, .L1412
 	ldr	r1, [r0]
 	add	r4, r1, #0
 	add	r4, r4, #0x70
 	ldrb	r0, [r4, #0x4]
 	cmp	r0, #0
-	bne	.L1389	@cond_branch
+	bne	.L1409	@cond_branch
 	add	r0, r1, #0
 	add	r0, r0, #0xc
 	bl	ShouldPlayNormalMonCry
 	cmp	r0, #0x1
-	bne	.L1390	@cond_branch
+	bne	.L1410	@cond_branch
 	ldrh	r0, [r4, #0x2]
 	mov	r1, #0x0
 	mov	r2, #0x0
 	bl	PlayCry3
-	b	.L1389
-.L1393:
+	b	.L1409
+.L1413:
 	.align	2, 0
-.L1392:
+.L1412:
 	.word	sMonSummaryScreen
-.L1390:
+.L1410:
 	ldrh	r0, [r4, #0x2]
 	mov	r1, #0x0
 	mov	r2, #0xb
 	bl	PlayCry3
-.L1389:
+.L1409:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.Lfe127:
-	.size	 PlayMonCry,.Lfe127-PlayMonCry
+.Lfe128:
+	.size	 PlayMonCry,.Lfe128-PlayMonCry
 	.align	2, 0
 	.type	 CreateMonSprite,function
 	.thumb_func
@@ -51224,10 +51413,10 @@ CreateMonSprite:
 	push	{r4, r5, r6, r7, lr}
 	mov	r7, r8
 	push	{r7}
-	ldr	r0, .L1397
+	ldr	r0, .L1417
 	ldr	r6, [r0]
 	add	r6, r6, #0x70
-	ldr	r0, .L1397+0x4
+	ldr	r0, .L1417+0x4
 	mov	r1, #0x28
 	mov	r2, #0x40
 	mov	r3, #0x5
@@ -51238,7 +51427,7 @@ CreateMonSprite:
 	lsl	r4, r0, #0x4
 	add	r4, r4, r8
 	lsl	r4, r4, #0x2
-	ldr	r5, .L1397+0x8
+	ldr	r5, .L1417+0x8
 	add	r7, r4, r5
 	add	r0, r7, #0
 	bl	FreeSpriteOamMatrix
@@ -51248,7 +51437,7 @@ CreateMonSprite:
 	strh	r1, [r7, #0x32]
 	add	r5, r5, #0x1c
 	add	r4, r4, r5
-	ldr	r0, .L1397+0xc
+	ldr	r0, .L1417+0xc
 	str	r0, [r4]
 	ldrb	r1, [r7, #0x5]
 	mov	r0, #0xd
@@ -51259,22 +51448,22 @@ CreateMonSprite:
 	bl	IsMonSpriteNotFlipped
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L1395	@cond_branch
+	bne	.L1415	@cond_branch
 	add	r0, r7, #0
 	add	r0, r0, #0x3f
 	ldrb	r1, [r0]
 	mov	r2, #0x1
 	orr	r1, r1, r2
 	strb	r1, [r0]
-	b	.L1396
-.L1398:
+	b	.L1416
+.L1418:
 	.align	2, 0
-.L1397:
+.L1417:
 	.word	sMonSummaryScreen
 	.word	gMultiuseSpriteTemplate
 	.word	gSprites
 	.word	SpriteCB_Pokemon
-.L1395:
+.L1415:
 	add	r2, r7, #0
 	add	r2, r2, #0x3f
 	ldrb	r1, [r2]
@@ -51282,35 +51471,35 @@ CreateMonSprite:
 	neg	r0, r0
 	and	r0, r0, r1
 	strb	r0, [r2]
-.L1396:
+.L1416:
 	mov	r0, r8
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.Lfe128:
-	.size	 CreateMonSprite,.Lfe128-CreateMonSprite
+.Lfe129:
+	.size	 CreateMonSprite,.Lfe129-CreateMonSprite
 	.align	2, 0
 	.type	 SpriteCB_Pokemon,function
 	.thumb_func
 SpriteCB_Pokemon:
 	push	{r4, r5, lr}
 	add	r4, r0, #0
-	ldr	r0, .L1401
+	ldr	r0, .L1421
 	ldr	r0, [r0]
 	add	r5, r0, #0
 	add	r5, r5, #0x70
-	ldr	r0, .L1401+0x4
+	ldr	r0, .L1421+0x4
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1400	@cond_branch
+	bne	.L1420	@cond_branch
 	mov	r1, #0x32
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x1
-	beq	.L1400	@cond_branch
+	beq	.L1420	@cond_branch
 	ldrh	r0, [r4, #0x2e]
 	bl	IsMonSpriteNotFlipped
 	lsl	r0, r0, #0x18
@@ -51321,63 +51510,63 @@ SpriteCB_Pokemon:
 	ldrb	r2, [r5, #0x4]
 	add	r0, r4, #0
 	bl	PokemonSummaryDoMonAnimation
-.L1400:
+.L1420:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1402:
+.L1422:
 	.align	2, 0
-.L1401:
+.L1421:
 	.word	sMonSummaryScreen
 	.word	gPaletteFade
-.Lfe129:
-	.size	 SpriteCB_Pokemon,.Lfe129-SpriteCB_Pokemon
+.Lfe130:
+	.size	 SpriteCB_Pokemon,.Lfe130-SpriteCB_Pokemon
 	.align	2, 0
 	.globl	SummaryScreen_SetUnknownTaskId
 	.type	 SummaryScreen_SetUnknownTaskId,function
 	.thumb_func
 SummaryScreen_SetUnknownTaskId:
-	ldr	r1, .L1404
+	ldr	r1, .L1424
 	strb	r0, [r1]
 	bx	lr
-.L1405:
+.L1425:
 	.align	2, 0
-.L1404:
+.L1424:
 	.word	sUnknownTaskId
-.Lfe130:
-	.size	 SummaryScreen_SetUnknownTaskId,.Lfe130-SummaryScreen_SetUnknownTaskId
+.Lfe131:
+	.size	 SummaryScreen_SetUnknownTaskId,.Lfe131-SummaryScreen_SetUnknownTaskId
 	.align	2, 0
 	.globl	SummaryScreen_DestroyUnknownTask
 	.type	 SummaryScreen_DestroyUnknownTask,function
 	.thumb_func
 SummaryScreen_DestroyUnknownTask:
 	push	{r4, lr}
-	ldr	r4, .L1408
+	ldr	r4, .L1428
 	ldrb	r0, [r4]
 	cmp	r0, #0xff
-	beq	.L1407	@cond_branch
+	beq	.L1427	@cond_branch
 	bl	DestroyTask
 	mov	r0, #0xff
 	strb	r0, [r4]
-.L1407:
+.L1427:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1409:
+.L1429:
 	.align	2, 0
-.L1408:
+.L1428:
 	.word	sUnknownTaskId
-.Lfe131:
-	.size	 SummaryScreen_DestroyUnknownTask,.Lfe131-SummaryScreen_DestroyUnknownTask
+.Lfe132:
+	.size	 SummaryScreen_DestroyUnknownTask,.Lfe132-SummaryScreen_DestroyUnknownTask
 	.align	2, 0
 	.type	 IsMonAnimationFinished,function
 	.thumb_func
 IsMonAnimationFinished:
 	push	{lr}
-	ldr	r2, .L1414
-	ldr	r0, .L1414+0x4
+	ldr	r2, .L1434
+	ldr	r0, .L1434+0x4
 	ldr	r0, [r0]
-	ldr	r1, .L1414+0x8
+	ldr	r1, .L1434+0x8
 	add	r0, r0, r1
 	ldrb	r1, [r0]
 	lsl	r0, r1, #0x4
@@ -51386,34 +51575,34 @@ IsMonAnimationFinished:
 	add	r2, r2, #0x1c
 	add	r0, r0, r2
 	ldr	r1, [r0]
-	ldr	r0, .L1414+0xc
+	ldr	r0, .L1434+0xc
 	cmp	r1, r0
-	beq	.L1411	@cond_branch
+	beq	.L1431	@cond_branch
 	mov	r0, #0x1
-	b	.L1413
-.L1415:
+	b	.L1433
+.L1435:
 	.align	2, 0
-.L1414:
+.L1434:
 	.word	gSprites
 	.word	sMonSummaryScreen
 	.word	0x40d3
 	.word	SpriteCallbackDummy
-.L1411:
+.L1431:
 	mov	r0, #0x0
-.L1413:
+.L1433:
 	pop	{r1}
 	bx	r1
-.Lfe132:
-	.size	 IsMonAnimationFinished,.Lfe132-IsMonAnimationFinished
+.Lfe133:
+	.size	 IsMonAnimationFinished,.Lfe133-IsMonAnimationFinished
 	.align	2, 0
 	.type	 StopPokemonAnimations,function
 	.thumb_func
 StopPokemonAnimations:
 	push	{r4, r5, r6, lr}
-	ldr	r6, .L1422
-	ldr	r5, .L1422+0x4
+	ldr	r6, .L1442
+	ldr	r5, .L1442+0x4
 	ldr	r0, [r5]
-	ldr	r4, .L1422+0x8
+	ldr	r4, .L1442+0x8
 	add	r0, r0, r4
 	ldrb	r1, [r0]
 	lsl	r0, r1, #0x4
@@ -51434,7 +51623,7 @@ StopPokemonAnimations:
 	add	r1, r6, #0
 	add	r1, r1, #0x1c
 	add	r0, r0, r1
-	ldr	r1, .L1422+0xc
+	ldr	r1, .L1442+0xc
 	str	r1, [r0]
 	bl	StopPokemonAnimationDelayTask
 	ldr	r0, [r5]
@@ -51452,9 +51641,9 @@ StopPokemonAnimations:
 	add	r0, r1, #0
 	orr	r3, r3, r0
 	mov	r2, #0x0
-	ldr	r5, .L1422+0x10
-	ldr	r4, .L1422+0x14
-.L1420:
+	ldr	r5, .L1442+0x10
+	ldr	r4, .L1442+0x14
+.L1440:
 	add	r0, r2, r3
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0xf
@@ -51466,37 +51655,37 @@ StopPokemonAnimations:
 	lsl	r0, r0, #0x10
 	lsr	r2, r0, #0x10
 	cmp	r2, #0xf
-	bls	.L1420	@cond_branch
+	bls	.L1440	@cond_branch
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1423:
+.L1443:
 	.align	2, 0
-.L1422:
+.L1442:
 	.word	gSprites
 	.word	sMonSummaryScreen
 	.word	0x40d3
 	.word	SpriteCallbackDummy
 	.word	gPlttBufferUnfaded
 	.word	gPlttBufferFaded
-.Lfe133:
-	.size	 StopPokemonAnimations,.Lfe133-StopPokemonAnimations
+.Lfe134:
+	.size	 StopPokemonAnimations,.Lfe134-StopPokemonAnimations
 	.align	2, 0
 	.type	 CreateMonMarkingsSprite,function
 	.thumb_func
 CreateMonMarkingsSprite:
 	push	{r4, r5, r6, lr}
 	add	r5, r0, #0
-	ldr	r1, .L1426
-	ldr	r2, .L1426+0x4
+	ldr	r1, .L1446
+	ldr	r2, .L1446+0x4
 	add	r0, r1, #0
 	bl	CreateMonMarkingsSpriteWithPal
 	add	r4, r0, #0
-	ldr	r6, .L1426+0x8
+	ldr	r6, .L1446+0x8
 	ldr	r0, [r6]
 	str	r4, [r0, #0x8]
 	cmp	r4, #0
-	beq	.L1425	@cond_branch
+	beq	.L1445	@cond_branch
 	add	r0, r5, #0
 	mov	r1, #0x8
 	bl	GetMonData
@@ -51519,42 +51708,42 @@ CreateMonMarkingsSprite:
 	mov	r1, #0x4
 	orr	r0, r0, r1
 	strb	r0, [r2, #0x5]
-.L1425:
+.L1445:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1427:
+.L1447:
 	.align	2, 0
-.L1426:
+.L1446:
 	.word	0x7533
 	.word	sSummaryMarkingsPalette
 	.word	sMonSummaryScreen
-.Lfe134:
-	.size	 CreateMonMarkingsSprite,.Lfe134-CreateMonMarkingsSprite
+.Lfe135:
+	.size	 CreateMonMarkingsSprite,.Lfe135-CreateMonMarkingsSprite
 	.align	2, 0
 	.type	 RemoveAndCreateMonMarkingsSprite,function
 	.thumb_func
 RemoveAndCreateMonMarkingsSprite:
 	push	{r4, lr}
 	add	r4, r0, #0
-	ldr	r0, .L1429
+	ldr	r0, .L1449
 	ldr	r0, [r0]
 	ldr	r0, [r0, #0x8]
 	bl	DestroySprite
-	ldr	r0, .L1429+0x4
+	ldr	r0, .L1449+0x4
 	bl	FreeSpriteTilesByTag
 	add	r0, r4, #0
 	bl	CreateMonMarkingsSprite
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1430:
+.L1450:
 	.align	2, 0
-.L1429:
+.L1449:
 	.word	sMonSummaryScreen
 	.word	0x7533
-.Lfe135:
-	.size	 RemoveAndCreateMonMarkingsSprite,.Lfe135-RemoveAndCreateMonMarkingsSprite
+.Lfe136:
+	.size	 RemoveAndCreateMonMarkingsSprite,.Lfe136-RemoveAndCreateMonMarkingsSprite
 	.align	2, 0
 	.type	 CreateCaughtBallSprite,function
 	.thumb_func
@@ -51573,18 +51762,18 @@ CreateCaughtBallSprite:
 	lsl	r0, r4, #0x1
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
-	ldr	r1, .L1432
+	ldr	r1, .L1452
 	add	r0, r0, r1
 	mov	r1, #0x10
 	mov	r2, #0x88
 	mov	r3, #0x0
 	bl	CreateSprite
-	ldr	r2, .L1432+0x4
+	ldr	r2, .L1452+0x4
 	ldr	r1, [r2]
-	ldr	r3, .L1432+0x8
+	ldr	r3, .L1452+0x8
 	add	r1, r1, r3
 	strb	r0, [r1]
-	ldr	r4, .L1432+0xc
+	ldr	r4, .L1452+0xc
 	ldr	r2, [r2]
 	add	r2, r2, r3
 	ldrb	r1, [r2]
@@ -51594,7 +51783,7 @@ CreateCaughtBallSprite:
 	add	r1, r4, #0
 	add	r1, r1, #0x1c
 	add	r0, r0, r1
-	ldr	r1, .L1432+0x10
+	ldr	r1, .L1452+0x10
 	str	r1, [r0]
 	ldrb	r1, [r2]
 	lsl	r0, r1, #0x4
@@ -51608,47 +51797,47 @@ CreateCaughtBallSprite:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1433:
+.L1453:
 	.align	2, 0
-.L1432:
+.L1452:
 	.word	gBallSpriteTemplates
 	.word	sMonSummaryScreen
 	.word	0x40d4
 	.word	gSprites
 	.word	SpriteCallbackDummy
-.Lfe136:
-	.size	 CreateCaughtBallSprite,.Lfe136-CreateCaughtBallSprite
+.Lfe137:
+	.size	 CreateCaughtBallSprite,.Lfe137-CreateCaughtBallSprite
 	.align	2, 0
 	.type	 CreateSetStatusSprite,function
 	.thumb_func
 CreateSetStatusSprite:
 	push	{r4, r5, lr}
-	ldr	r5, .L1438
+	ldr	r5, .L1458
 	ldr	r0, [r5]
-	ldr	r1, .L1438+0x4
+	ldr	r1, .L1458+0x4
 	add	r4, r0, r1
 	ldrb	r0, [r4]
 	cmp	r0, #0xff
-	bne	.L1435	@cond_branch
-	ldr	r0, .L1438+0x8
+	bne	.L1455	@cond_branch
+	ldr	r0, .L1458+0x8
 	mov	r1, #0x40
 	mov	r2, #0x98
 	mov	r3, #0x0
 	bl	CreateSprite
 	strb	r0, [r4]
-.L1435:
+.L1455:
 	ldr	r0, [r5]
 	add	r0, r0, #0xc
 	bl	GetMonAilment
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	cmp	r2, #0
-	beq	.L1436	@cond_branch
+	beq	.L1456	@cond_branch
 	ldrb	r1, [r4]
 	lsl	r0, r1, #0x4
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1438+0xc
+	ldr	r1, .L1458+0xc
 	add	r0, r0, r1
 	sub	r1, r2, #0x1
 	lsl	r1, r1, #0x18
@@ -51657,24 +51846,24 @@ CreateSetStatusSprite:
 	mov	r0, #0x2
 	mov	r1, #0x0
 	bl	SetSpriteInvisibility
-	b	.L1437
-.L1439:
+	b	.L1457
+.L1459:
 	.align	2, 0
-.L1438:
+.L1458:
 	.word	sMonSummaryScreen
 	.word	0x40d5
 	.word	sSpriteTemplate_StatusCondition
 	.word	gSprites
-.L1436:
+.L1456:
 	mov	r0, #0x2
 	mov	r1, #0x1
 	bl	SetSpriteInvisibility
-.L1437:
+.L1457:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.Lfe137:
-	.size	 CreateSetStatusSprite,.Lfe137-CreateSetStatusSprite
+.Lfe138:
+	.size	 CreateSetStatusSprite,.Lfe138-CreateSetStatusSprite
 	.align	2, 0
 	.type	 CreateMoveSelectorSprites,function
 	.thumb_func
@@ -51687,34 +51876,34 @@ CreateMoveSelectorSprites:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	mov	r8, r0
-	ldr	r0, .L1452
-	ldr	r1, .L1452+0x4
+	ldr	r0, .L1472
+	ldr	r1, .L1472+0x4
 	add	r1, r1, r8
 	ldr	r0, [r0]
 	add	r7, r0, r1
-	ldr	r1, .L1452+0x8
+	ldr	r1, .L1472+0x8
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x1
-	bls	.L1441	@cond_branch
+	bls	.L1461	@cond_branch
 	mov	r0, #0x0
 	mov	r9, r0
 	mov	r1, r8
 	cmp	r1, #0x8
-	bne	.L1442	@cond_branch
+	bne	.L1462	@cond_branch
 	mov	r0, #0x1
 	mov	r9, r0
-.L1442:
+.L1462:
 	mov	r5, #0x0
-	ldr	r6, .L1452+0xc
+	ldr	r6, .L1472+0xc
 	mov	sl, r5
-.L1446:
+.L1466:
 	lsl	r1, r5, #0x14
 	mov	r0, #0xb2
 	lsl	r0, r0, #0xf
 	add	r1, r1, r0
 	asr	r1, r1, #0x10
-	ldr	r0, .L1452+0x10
+	ldr	r0, .L1472+0x10
 	mov	r2, #0x28
 	mov	r3, r9
 	bl	CreateSprite
@@ -51722,7 +51911,7 @@ CreateMoveSelectorSprites:
 	strb	r0, [r1]
 	add	r4, r1, #0
 	cmp	r5, #0
-	bne	.L1447	@cond_branch
+	bne	.L1467	@cond_branch
 	ldrb	r1, [r7]
 	lsl	r0, r1, #0x4
 	add	r0, r0, r1
@@ -51730,18 +51919,18 @@ CreateMoveSelectorSprites:
 	add	r0, r0, r6
 	mov	r1, #0x4
 	bl	StartSpriteAnim
-	b	.L1448
-.L1453:
+	b	.L1468
+.L1473:
 	.align	2, 0
-.L1452:
+.L1472:
 	.word	sMonSummaryScreen
 	.word	0x40d3
 	.word	0x40c0
 	.word	gSprites
 	.word	sMoveSelectorSpriteTemplate
-.L1447:
+.L1467:
 	cmp	r5, #0x9
-	bne	.L1449	@cond_branch
+	bne	.L1469	@cond_branch
 	ldrb	r1, [r7, #0x9]
 	lsl	r0, r1, #0x4
 	add	r0, r0, r1
@@ -51749,8 +51938,8 @@ CreateMoveSelectorSprites:
 	add	r0, r0, r6
 	mov	r1, #0x5
 	bl	StartSpriteAnim
-	b	.L1448
-.L1449:
+	b	.L1468
+.L1469:
 	ldrb	r1, [r4]
 	lsl	r0, r1, #0x4
 	add	r0, r0, r1
@@ -51758,7 +51947,7 @@ CreateMoveSelectorSprites:
 	add	r0, r0, r6
 	mov	r1, #0x6
 	bl	StartSpriteAnim
-.L1448:
+.L1468:
 	ldrb	r1, [r4]
 	lsl	r0, r1, #0x4
 	add	r0, r0, r1
@@ -51766,7 +51955,7 @@ CreateMoveSelectorSprites:
 	add	r1, r6, #0
 	add	r1, r1, #0x1c
 	add	r0, r0, r1
-	ldr	r1, .L1454
+	ldr	r1, .L1474
 	str	r1, [r0]
 	ldrb	r1, [r4]
 	lsl	r0, r1, #0x4
@@ -51786,8 +51975,8 @@ CreateMoveSelectorSprites:
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	cmp	r5, #0x9
-	bls	.L1446	@cond_branch
-.L1441:
+	bls	.L1466	@cond_branch
+.L1461:
 	pop	{r3, r4, r5}
 	mov	r8, r3
 	mov	r9, r4
@@ -51795,12 +51984,12 @@ CreateMoveSelectorSprites:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1455:
+.L1475:
 	.align	2, 0
-.L1454:
+.L1474:
 	.word	SpriteCb_MoveSelector
-.Lfe138:
-	.size	 CreateMoveSelectorSprites,.Lfe138-CreateMoveSelectorSprites
+.Lfe139:
+	.size	 CreateMoveSelectorSprites,.Lfe139-CreateMoveSelectorSprites
 	.align	2, 0
 	.type	 SpriteCb_MoveSelector,function
 	.thumb_func
@@ -51813,69 +52002,69 @@ SpriteCb_MoveSelector:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x2
-	bhi	.L1457	@cond_branch
+	bhi	.L1477	@cond_branch
 	ldrh	r0, [r3, #0x30]
 	add	r0, r0, #0x1
 	mov	r1, #0x1f
 	and	r0, r0, r1
 	strh	r0, [r3, #0x30]
 	cmp	r0, #0x18
-	ble	.L1458	@cond_branch
+	ble	.L1478	@cond_branch
 	add	r2, r3, #0
 	add	r2, r2, #0x3e
 	ldrb	r0, [r2]
 	mov	r1, #0x4
 	orr	r0, r0, r1
-	b	.L1463
-.L1458:
+	b	.L1483
+.L1478:
 	add	r2, r3, #0
 	add	r2, r2, #0x3e
 	ldrb	r1, [r2]
 	mov	r0, #0x5
 	neg	r0, r0
-	b	.L1464
-.L1457:
+	b	.L1484
+.L1477:
 	mov	r0, #0x0
 	strh	r0, [r3, #0x30]
 	add	r2, r3, #0
 	add	r2, r2, #0x3e
 	ldrb	r1, [r2]
 	sub	r0, r0, #0x5
-.L1464:
+.L1484:
 	and	r0, r0, r1
-.L1463:
+.L1483:
 	strb	r0, [r2]
 	mov	r1, #0x2e
 	ldrsh	r0, [r3, r1]
 	cmp	r0, #0x8
-	bne	.L1461	@cond_branch
-	ldr	r0, .L1466
+	bne	.L1481	@cond_branch
+	ldr	r0, .L1486
 	ldr	r0, [r0]
-	ldr	r1, .L1466+0x4
-	b	.L1465
-.L1467:
+	ldr	r1, .L1486+0x4
+	b	.L1485
+.L1487:
 	.align	2, 0
-.L1466:
+.L1486:
 	.word	sMonSummaryScreen
 	.word	0x40c6
-.L1461:
-	ldr	r0, .L1468
+.L1481:
+	ldr	r0, .L1488
 	ldr	r0, [r0]
-	ldr	r1, .L1468+0x4
-.L1465:
+	ldr	r1, .L1488+0x4
+.L1485:
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x4
 	strh	r0, [r3, #0x26]
 	pop	{r0}
 	bx	r0
-.L1469:
+.L1489:
 	.align	2, 0
-.L1468:
+.L1488:
 	.word	sMonSummaryScreen
 	.word	0x40c7
-.Lfe139:
-	.size	 SpriteCb_MoveSelector,.Lfe139-SpriteCb_MoveSelector
+.Lfe140:
+	.size	 SpriteCb_MoveSelector,.Lfe140-SpriteCb_MoveSelector
 	.align	2, 0
 	.type	 DestroyMoveSelectorSprites,function
 	.thumb_func
@@ -51884,7 +52073,7 @@ DestroyMoveSelectorSprites:
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	mov	r4, #0x0
-.L1474:
+.L1494:
 	add	r0, r5, r4
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
@@ -51893,12 +52082,12 @@ DestroyMoveSelectorSprites:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x9
-	bls	.L1474	@cond_branch
+	bls	.L1494	@cond_branch
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.Lfe140:
-	.size	 DestroyMoveSelectorSprites,.Lfe140-DestroyMoveSelectorSprites
+.Lfe141:
+	.size	 DestroyMoveSelectorSprites,.Lfe141-DestroyMoveSelectorSprites
 	.align	2, 0
 	.type	 SetMainMoveSelectorColor,function
 	.thumb_func
@@ -51909,15 +52098,15 @@ SetMainMoveSelectorColor:
 	push	{r6, r7}
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-	ldr	r0, .L1487
+	ldr	r0, .L1507
 	ldr	r0, [r0]
-	ldr	r1, .L1487+0x4
+	ldr	r1, .L1507+0x4
 	add	r5, r0, r1
 	lsl	r0, r6, #0x1
 	add	r0, r0, r6
 	lsl	r0, r0, #0x18
 	mov	r4, #0x0
-	ldr	r7, .L1487+0x8
+	ldr	r7, .L1507+0x8
 	mov	r2, #0x80
 	lsl	r2, r2, #0x13
 	add	r2, r2, r0
@@ -51927,36 +52116,36 @@ SetMainMoveSelectorColor:
 	lsl	r1, r1, #0x13
 	add	r1, r1, r0
 	mov	r8, r1
-.L1480:
+.L1500:
 	cmp	r4, #0
-	bne	.L1481	@cond_branch
+	bne	.L1501	@cond_branch
 	ldrb	r1, [r5]
 	lsl	r0, r1, #0x4
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
 	add	r0, r0, r7
 	mov	r2, r9
-	b	.L1486
-.L1488:
+	b	.L1506
+.L1508:
 	.align	2, 0
-.L1487:
+.L1507:
 	.word	sMonSummaryScreen
 	.word	0x40db
 	.word	gSprites
-.L1481:
+.L1501:
 	cmp	r4, #0x9
-	bne	.L1483	@cond_branch
+	bne	.L1503	@cond_branch
 	ldrb	r1, [r5, #0x9]
 	lsl	r0, r1, #0x4
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
 	add	r0, r0, r7
 	mov	r2, r8
-.L1486:
+.L1506:
 	lsr	r1, r2, #0x18
 	bl	StartSpriteAnim
-	b	.L1479
-.L1483:
+	b	.L1499
+.L1503:
 	add	r0, r5, r4
 	ldrb	r1, [r0]
 	lsl	r0, r1, #0x4
@@ -51967,20 +52156,20 @@ SetMainMoveSelectorColor:
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
 	bl	StartSpriteAnim
-.L1479:
+.L1499:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x9
-	bls	.L1480	@cond_branch
+	bls	.L1500	@cond_branch
 	pop	{r3, r4}
 	mov	r8, r3
 	mov	r9, r4
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.Lfe141:
-	.size	 SetMainMoveSelectorColor,.Lfe141-SetMainMoveSelectorColor
+.Lfe142:
+	.size	 SetMainMoveSelectorColor,.Lfe142-SetMainMoveSelectorColor
 	.align	2, 0
 	.type	 KeepMoveSelectorVisible,function
 	.thumb_func
@@ -51988,17 +52177,17 @@ KeepMoveSelectorVisible:
 	push	{r4, r5, r6, r7, lr}
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r1, .L1495
-	ldr	r2, .L1495+0x4
+	ldr	r1, .L1515
+	ldr	r2, .L1515+0x4
 	add	r0, r0, r2
 	ldr	r1, [r1]
 	add	r5, r1, r0
 	mov	r3, #0x0
-	ldr	r4, .L1495+0x8
+	ldr	r4, .L1515+0x8
 	mov	r7, #0x5
 	neg	r7, r7
 	mov	r6, #0x0
-.L1493:
+.L1513:
 	add	r2, r5, r3
 	ldrb	r1, [r2]
 	lsl	r0, r1, #0x4
@@ -52020,18 +52209,18 @@ KeepMoveSelectorVisible:
 	lsl	r0, r0, #0x18
 	lsr	r3, r0, #0x18
 	cmp	r3, #0x9
-	bls	.L1493	@cond_branch
+	bls	.L1513	@cond_branch
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1496:
+.L1516:
 	.align	2, 0
-.L1495:
+.L1515:
 	.word	sMonSummaryScreen
 	.word	0x40d3
 	.word	gSprites
-.Lfe142:
-	.size	 KeepMoveSelectorVisible,.Lfe142-KeepMoveSelectorVisible
+.Lfe143:
+	.size	 KeepMoveSelectorVisible,.Lfe143-KeepMoveSelectorVisible
 .text
 	.align	2, 0
 

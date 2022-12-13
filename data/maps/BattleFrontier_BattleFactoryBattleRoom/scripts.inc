@@ -86,13 +86,16 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_EnterRoom:: @ 825AE67
 BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleOpponent:: @ 825AEA7
 	compare VAR_TEMP_F, FRONTIER_BRAIN_NOT_READY
 	goto_if_ne BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleNoland
-	palace_getopponentintro
+	special getintro
 	lockall
 	msgbox gStringVar4, MSGBOX_DEFAULT
 	waitmessage
 	closemessage
 	frontier_set FRONTIER_DATA_RECORD_DISABLED, FALSE
 	special HealPlayerParty
+	frontier_get FRONTIER_DATA_BATTLE_NUM
+	compare VAR_RESULT, 6
+	call_if_eq BattleFrontier_BattleFactoryBattleRoom_EventScript_ChangeMusic
 	setvar VAR_0x8004, SPECIAL_BATTLE_FACTORY
 	setvar VAR_0x8005, 0
 	special DoSpecialTrainerBattle
@@ -102,6 +105,9 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_BattleOpponent:: @ 825AEA7
 BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobbyLost:: @ 825AEF8
 	frontier_set FRONTIER_DATA_CHALLENGE_STATUS, CHALLENGE_STATUS_LOST
 	goto BattleFrontier_BattleFactoryBattleRoom_EventScript_WarpToLobby
+BattleFrontier_BattleFactoryBattleRoom_EventScript_ChangeMusic::
+	setvar VAR_TEMP_8, 12
+	return
 
 BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedOpponent:: @ 825AF0F
 	factory_get FACTORY_DATA_WIN_STREAK_SWAPS
@@ -215,31 +221,31 @@ BattleFrontier_BattleFactoryBattleRoom_EventScript_DefeatedNoland:: @ 825B105
 	end
 
 BattleFrontier_BattleFactoryBattleRoom_Movement_PlayerEnterRoom: @ 825B17B
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	face_right
 	step_end
 
 BattleFrontier_BattleFactoryBattleRoom_Movement_PlayerApproachNoland: @ 825B182
-	walk_right
+	walk_fast_right
 	step_end
 
 BattleFrontier_BattleFactoryBattleRoom_Movement_OpponentEnter: @ 825B184
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
 	face_left
 	step_end
 
 BattleFrontier_BattleFactoryBattleRoom_Movement_NolandMoveToBattle: @ 825B18B
-	walk_up
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	face_left
 	step_end
 
@@ -271,9 +277,9 @@ BattleFrontier_BattleFactoryBattleRoom_Text_GetAMoveOn: @ 825B1E2
 	.string "Get a move on!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_NolandImFactoryHead: @ 825B1FB
-	.string "Hey, my name's NOLAND!\n"
+	.string "Hey, my name's Noland!\n"
 	.string "I'm basically in charge of this place,\l"
-	.string "which is why I'm the FACTORY HEAD!\p"
+	.string "which is why I'm the Factory Head!\p"
 	.string "I had a look at your Battle Swap data.\p"
 	.string "You seem to have the right idea,\n"
 	.string "but you're still square in your head!\p"
@@ -285,19 +291,19 @@ BattleFrontier_BattleFactoryBattleRoom_Text_NolandImFactoryHead: @ 825B1FB
 	.string "your heart and your body, understand?\p"
 	.string "I'll take you on under the same\n"
 	.string "conditions as you.\p"
-	.string "I'll be using rental POKéMON, too!$"
+	.string "I'll be using rental Pokémon, too!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_ShakeOutKnowledgeBringItOn: @ 825B3F1
 	.string "Shake out every last bit of your\n"
 	.string "knowledge and bring it on!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_NolandLetsSeeFrontierPass: @ 825B42D
-	.string "NOLAND: Smart going!\n"
-	.string "Let's see your FRONTIER PASS.$"
+	.string "Noland: Smart going!\n"
+	.string "Let's see your Frontier Pass.$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_ReceivedKnowledgeSymbol: @ 825B460
 	.string "The Knowledge Symbol was embossed\n"
-	.string "on the FRONTIER PASS!$"
+	.string "on the Frontier Pass!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_NextTimeNoHoldsBarred: @ 825B498
 	.string "Heh…\n"
@@ -307,7 +313,7 @@ BattleFrontier_BattleFactoryBattleRoom_Text_NextTimeNoHoldsBarred: @ 825B498
 	.string "You keep up your studies!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_HarderLookThanLastTime: @ 825B517
-	.string "NOLAND: Hey, hey! How's it going?\n"
+	.string "Noland: Hey, hey! How's it going?\n"
 	.string "You keeping up with your studies?\p"
 	.string "…Oh?\p"
 	.string "You've taken on a harder look than\n"
@@ -320,10 +326,10 @@ BattleFrontier_BattleFactoryBattleRoom_Text_AllRightBringItOn: @ 825B5CF
 	.string "Bring it on!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_OutOfMyLeagueLetsSeePass: @ 825B5E7
-	.string "NOLAND: What the…\n"
+	.string "Noland: What the…\n"
 	.string "You're getting out of my league!\p"
 	.string "Sheesh!\n"
-	.string "Let's see that FRONTIER PASS!$"
+	.string "Let's see that Frontier Pass!$"
 
 BattleFrontier_BattleFactoryBattleRoom_Text_KnowledgeSymbolTookGoldenShine: @ 825B640
 	.string "The Knowledge Symbol took on\n"

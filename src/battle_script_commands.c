@@ -1321,7 +1321,7 @@ static void Cmd_attackcanceler(void)
     }
 
     gHitMarker |= HITMARKER_OBEYS;
-    if (NoTargetPresent(gCurrentMove))
+    if (NoTargetPresent(gCurrentMove) && (!IsTwoTurnsMove(gCurrentMove) || (gBattleMons[gBattlerAttacker].status2 & STATUS2_MULTIPLETURNS)))
     {
         gBattlescriptCurrInstr = BattleScript_ButItFailedAtkStringPpReduce;
         if (!IsTwoTurnsMove(gCurrentMove) || (gBattleMons[gBattlerAttacker].status2 & STATUS2_MULTIPLETURNS))
@@ -2312,7 +2312,7 @@ static void Cmd_waitmessage(void)
         else
         {
             u16 toWait = T2_READ_16(gBattlescriptCurrInstr + 1);
-            if (++gPauseCounterBattle >= toWait)
+            if (++gPauseCounterBattle >= toWait || (JOY_NEW(A_BUTTON | B_BUTTON)))
             {
                 gPauseCounterBattle = 0;
                 gBattlescriptCurrInstr += 3;
@@ -2388,9 +2388,8 @@ void SetMoveEffect(bool32 primary, u32 certain)
 {
     s32 i, byTwo, affectsUser = 0;
     bool32 statusChanged = FALSE;
-    bool32 noSunCanFreeze = TRUE;
-
-    switch (gBattleScripting.moveEffect) // Set move effects which happen later on
+    
+	switch (gBattleScripting.moveEffect) // Set move effects which happen later on
     {
     case MOVE_EFFECT_KNOCK_OFF:
         gBattleStruct->moveEffect2 = gBattleScripting.moveEffect;
@@ -2450,15 +2449,9 @@ void SetMoveEffect(bool32 primary, u32 certain)
             else
                 gActiveBattler = gBattlersCount;
 
-            if (gBattleMons[gEffectBattler].status1)
-                break;
             if (gActiveBattler != gBattlersCount)
                 break;
-            if (GetBattlerAbility(gEffectBattler) == ABILITY_VITAL_SPIRIT
-                || GetBattlerAbility(gEffectBattler) == ABILITY_INSOMNIA
-                || GetBattlerAbility(gEffectBattler) == ABILITY_COMATOSE
-                || IsAbilityOnSide(gEffectBattler, ABILITY_SWEET_VEIL)
-                || IsAbilityStatusProtected(gEffectBattler))
+            if (!CanSleep(gEffectBattler))
                 break;
 
             CancelMultiTurnMoves(gEffectBattler);
@@ -2497,11 +2490,7 @@ void SetMoveEffect(bool32 primary, u32 certain)
             }
             if (!CanPoisonType(gBattleScripting.battler, gEffectBattler))
                 break;
-            if (gBattleMons[gEffectBattler].status1)
-                break;
-            if (GetBattlerAbility(gEffectBattler) == ABILITY_IMMUNITY
-                || GetBattlerAbility(gEffectBattler) == ABILITY_COMATOSE
-                || IsAbilityStatusProtected(gEffectBattler))
+            if (!CanBePoisoned(gEffectBattler))
                 break;
 
             statusChanged = TRUE;
@@ -2536,29 +2525,13 @@ void SetMoveEffect(bool32 primary, u32 certain)
                 gBattleCommunication[MULTISTRING_CHOOSER] = 2;
                 RESET_RETURN
             }
-            if (IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_FIRE))
-                break;
-            if (GetBattlerAbility(gEffectBattler) == ABILITY_WATER_VEIL
-                || GetBattlerAbility(gEffectBattler) == ABILITY_COMATOSE
-                || IsAbilityStatusProtected(gEffectBattler))
-                break;
-            if (gBattleMons[gEffectBattler].status1)
+            if (!CanBeBurned(gEffectBattler))
                 break;
 
             statusChanged = TRUE;
             break;
         case STATUS1_FREEZE:
-            if (WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_SUN_ANY)
-                noSunCanFreeze = FALSE;
-            if (IS_BATTLER_OF_TYPE(gEffectBattler, TYPE_ICE))
-                break;
-            if (gBattleMons[gEffectBattler].status1)
-                break;
-            if (noSunCanFreeze == 0)
-                break;
-            if (GetBattlerAbility(gEffectBattler) == ABILITY_MAGMA_ARMOR
-                || GetBattlerAbility(gEffectBattler) == ABILITY_COMATOSE
-                || IsAbilityStatusProtected(gEffectBattler))
+            if (!CanBeFrozen(gEffectBattler))
                 break;
 
             CancelMultiTurnMoves(gEffectBattler);
@@ -2601,11 +2574,7 @@ void SetMoveEffect(bool32 primary, u32 certain)
             }
             if (!CanParalyzeType(gBattleScripting.battler, gEffectBattler))
                 break;
-            if (GetBattlerAbility(gEffectBattler) == ABILITY_LIMBER
-                || GetBattlerAbility(gEffectBattler) == ABILITY_COMATOSE
-                || IsAbilityStatusProtected(gEffectBattler))
-                break;
-            if (gBattleMons[gEffectBattler].status1)
+            if (!CanBeParalyzed(gEffectBattler))
                 break;
 
             statusChanged = TRUE;
@@ -2644,9 +2613,7 @@ void SetMoveEffect(bool32 primary, u32 certain)
                 break;
             if (CanPoisonType(gBattleScripting.battler, gEffectBattler))
             {
-                if (GetBattlerAbility(gEffectBattler) == ABILITY_IMMUNITY
-                    || GetBattlerAbility(gEffectBattler) == ABILITY_COMATOSE
-                    || IsAbilityStatusProtected(gEffectBattler))
+                if (!CanBePoisoned(gEffectBattler))
                     break;
 
                 // It's redundant, because at this point we know the status1 value is 0.
@@ -2718,8 +2685,7 @@ void SetMoveEffect(bool32 primary, u32 certain)
             switch (gBattleScripting.moveEffect)
             {
             case MOVE_EFFECT_CONFUSION:
-                if (GetBattlerAbility(gEffectBattler) == ABILITY_OWN_TEMPO
-                    || gBattleMons[gEffectBattler].status2 & STATUS2_CONFUSION)
+                if (!CanBeConfused(gEffectBattler))
                 {
                     gBattlescriptCurrInstr++;
                 }
@@ -4292,7 +4258,7 @@ static void Cmd_pause(void)
     if (gBattleControllerExecFlags == 0)
     {
         u16 value = T2_READ_16(gBattlescriptCurrInstr + 1);
-        if (++gPauseCounterBattle >= value)
+        if (++gPauseCounterBattle >= value || (JOY_NEW(A_BUTTON | B_BUTTON)))
         {
             gPauseCounterBattle = 0;
             gBattlescriptCurrInstr += 3;
@@ -4405,9 +4371,7 @@ static void Cmd_playanimation(void)
 
     gActiveBattler = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
     argumentPtr = T2_READ_PTR(gBattlescriptCurrInstr + 3);
-
-    if (gBattlescriptCurrInstr[2] == B_ANIM_STATS_CHANGE
-        || gBattlescriptCurrInstr[2] == B_ANIM_SNATCH_MOVE
+    if (gBattlescriptCurrInstr[2] == B_ANIM_SNATCH_MOVE
         || gBattlescriptCurrInstr[2] == B_ANIM_MEGA_EVOLUTION
         || gBattlescriptCurrInstr[2] == B_ANIM_ILLUSION_OFF
         || gBattlescriptCurrInstr[2] == B_ANIM_FORM_CHANGE
@@ -4451,9 +4415,7 @@ static void Cmd_playanimation2(void) // animation Id is stored in the first poin
     gActiveBattler = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
     animationIdPtr = T2_READ_PTR(gBattlescriptCurrInstr + 2);
     argumentPtr = T2_READ_PTR(gBattlescriptCurrInstr + 6);
-
-    if (*animationIdPtr == B_ANIM_STATS_CHANGE
-        || *animationIdPtr == B_ANIM_SNATCH_MOVE
+    if (*animationIdPtr == B_ANIM_SNATCH_MOVE
         || *animationIdPtr == B_ANIM_MEGA_EVOLUTION
         || *animationIdPtr == B_ANIM_ILLUSION_OFF
         || *animationIdPtr == B_ANIM_FORM_CHANGE
@@ -8302,9 +8264,20 @@ static void Cmd_various(void)
             gBattlescriptCurrInstr += 7;
         }
         return;
+	case VARIOUS_DESTROY_ABILITY_POPUP:
+        DestroyAbilityPopUp(gActiveBattler);
+        break;
+    case VARIOUS_JUMP_IF_TERRAIN_AFFECTED:
+		{
+			u32 flags = T1_READ_32(gBattlescriptCurrInstr + 3);
+			if (IsBattlerTerrainAffected(gActiveBattler, flags))
+				gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 7);
+			else
+				gBattlescriptCurrInstr += 11;
+			return;
+		}
     }
-
-    gBattlescriptCurrInstr += 3;
+	gBattlescriptCurrInstr += 3;
 }
 
 static void Cmd_setprotectlike(void)
@@ -8460,7 +8433,7 @@ static void Cmd_tryhealhalfhealth(void)
     if (gBattlescriptCurrInstr[5] == BS_ATTACKER)
         gBattlerTarget = gBattlerAttacker;
 
-    gBattleMoveDamage = gBattleMons[gBattlerTarget].maxHP / 2;
+    gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 2;
     if (gBattleMoveDamage == 0)
         gBattleMoveDamage = 1;
     gBattleMoveDamage *= -1;

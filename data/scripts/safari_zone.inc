@@ -112,6 +112,11 @@ Route121_SafariZoneEntrance_Text_WelcomeToSafariZone: @ 82A4D12
 Route121_SafariZoneEntrance_Text_WelcomeFirstTime: @ 82A4E46
 	.string "Welcome to the SAFARI ZONE!\n"
 	.string "Is it your first time here?$"
+	
+SafariZoneEntrance_Text_You_Win:
+	.string "You Won$"
+SafariZoneEntrance_Text_You_Lose:
+	.string "You Lost$"
 
 Route121_SafariZoneEntrance_Text_ComeInAndEnjoy: @ 82A4E7E
 	.string "Come in and enjoy the SAFARI ZONE!$"
@@ -293,3 +298,5 @@ SafariZone_Northeast_Text_Girl: @ 82A5A44
 	.string "I can't seem to catch anything!\p"
 	.string "I'll end up wasting the admission\n"
 	.string "price if I don't catch something!$"
+
+

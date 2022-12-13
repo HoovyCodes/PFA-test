@@ -5,7 +5,7 @@ SecretBase_Text_TreeCanBeClimbed: @ 8274746
 SecretBase_Text_TreeUseSecretPower: @ 8274779
 	.string "If some vines drop down, this tree can\n"
 	.string "be climbed.\p"
-	.string "Use the SECRET POWER?$"
+	.string "Explore inside?$"
 
 SecretBase_Text_VineDroppedDown: @ 82747C2
 	.string "A thick vine dropped down!$"
@@ -48,16 +48,9 @@ SecretBase_EventScript_CheckEntrance:: @ 82759F1
 
 SecretBase_EventScript_Cave:: @ 8275A50
 	lockall
-	compare VAR_RESULT, PARTY_SIZE
-	goto_if_eq SecretBase_EventScript_CaveNoSecretPower
-	bufferpartymonnick 0, VAR_RESULT
 	msgbox SecretBase_Text_IndentUseSecretPower, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq SecretBase_EventScript_CancelOnEntrance
-	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
-	closemessage
-	dofieldeffect FLDEFF_USE_SECRET_POWER_CAVE
-	waitstate
 	goto SecretBase_EventScript_CaveEnter
 	end
 
@@ -80,16 +73,9 @@ SecretBase_EventScript_CaveEnter:: @ 8275A9B
 
 SecretBase_EventScript_Tree:: @ 8275AA9
 	lockall
-	compare VAR_RESULT, PARTY_SIZE
-	goto_if_eq SecretBase_EventScript_TreeNoSecretPower
-	bufferpartymonnick 0, VAR_RESULT
 	msgbox SecretBase_Text_TreeUseSecretPower, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq SecretBase_EventScript_CancelOnEntrance
-	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
-	closemessage
-	dofieldeffect FLDEFF_USE_SECRET_POWER_TREE
-	waitstate
 	goto SecretBase_EventScript_TreeEnter
 	end
 
@@ -201,9 +187,6 @@ SecretBase_EventScript_EnterPlayersBase:: @ 8275BDB
 	end
 
 SecretBase_EventScript_AlreadyHasSecretBase:: @ 8275BE8
-	checkpartymove MOVE_SECRET_POWER
-	compare VAR_RESULT, PARTY_SIZE
-	goto_if_eq SecretBase_EventScript_NoSecretPower
 	setfieldeffectargument 0, VAR_RESULT
 	setorcopyvar VAR_0x8004, VAR_RESULT
 	lockall
@@ -221,23 +204,18 @@ SecretBase_EventScript_AlreadyHasSecretBase:: @ 8275BE8
 	msgbox SecretBase_Text_MovingCompletedUseSecretPower, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq SecretBase_EventScript_CancelOnEntrance
-	bufferpartymonnick 0, VAR_0x8004
-	buffermovename 1, MOVE_SECRET_POWER
-	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
-	closemessage
-	closemessage
 	compare VAR_0x8007, SECRET_BASE_RED_CAVE
-	goto_if_eq SecretBase_EventScript_CaveUseSecretPower
+	goto_if_eq SecretBase_EventScript_CaveEnter
 	compare VAR_0x8007, SECRET_BASE_BROWN_CAVE
-	goto_if_eq SecretBase_EventScript_CaveUseSecretPower
+	goto_if_eq SecretBase_EventScript_CaveEnter
 	compare VAR_0x8007, SECRET_BASE_BLUE_CAVE
-	goto_if_eq SecretBase_EventScript_CaveUseSecretPower
+	goto_if_eq SecretBase_EventScript_CaveEnter
 	compare VAR_0x8007, SECRET_BASE_YELLOW_CAVE
-	goto_if_eq SecretBase_EventScript_CaveUseSecretPower
+	goto_if_eq SecretBase_EventScript_CaveEnter
 	compare VAR_0x8007, SECRET_BASE_TREE
-	goto_if_eq SecretBase_EventScript_TreeUseSecretPower
+	goto_if_eq SecretBase_EventScript_TreeEnter
 	compare VAR_0x8007, SECRET_BASE_SHRUB
-	goto_if_eq SecretBase_EventScript_ShrubUseSecretPower
+	goto_if_eq SecretBase_EventScript_ShrubEnter
 	releaseall
 	end
 
@@ -749,12 +727,12 @@ SecretBase_EventScript_CushionInteract:: @ 82766A6
 
 SecretBase_Text_AllDecorationsWillBeReturned: @ 82766AA
 	.string "All decorations and furniture in your\n"
-	.string "SECRET BASE will be returned to your PC.\p"
+	.string "Secret Base will be returned to your PC.\p"
 	.string "Is that okay?$"
 
 SecretBase_Text_WantToRegisterSecretBase: @ 8276707
 	.string "Do you want to register\n"
-	.string "{STR_VAR_1}'s SECRET BASE?$"
+	.string "{STR_VAR_1}'s Secret Base?$"
 
 SecretBase_Text_AlreadyRegisteredDelete: @ 8276731
 	.string "This data is already registered.\n"
@@ -778,36 +756,37 @@ SecretBase_Text_WhatWouldYouLikeToDo: @ 827681A
 	.string "What would you like to do?$"
 
 SecretBase_Text_RegistryInfo: @ 8276835
-	.string "Once registered, a SECRET BASE will not\n"
-	.string "disappear unless the other TRAINER\l"
+	.string "Once registered, a Secret Base will not\n"
+	.string "disappear unless the other Trainer\l"
 	.string "moves it to a different location.\p"
-	.string "If a SECRET BASE is deleted from the\n"
+	.string "If a Secret Base is deleted from the\n"
 	.string "registered list, another one may take\l"
 	.string "its place.\p"
-	.string "Up to ten SECRET BASE locations\n"
+	.string "Up to ten Secret Base locations\n"
 	.string "may be registered.$"
 
 SecretBase_Text_BattleTowerShield: @ 827692B
 	.string "A shield of {STR_VAR_2} that marks winning\n"
-	.string "{STR_VAR_1} times in a row at the BATTLE TOWER.$"
+	.string "{STR_VAR_1} times in a row at the Battle Tower.$"
 
 SecretBase_Text_ToyTV: @ 8276974
 	.string "A realistic toy TV. It could be easily\n"
 	.string "mistaken for the real thing.$"
 
 SecretBase_Text_SeedotTV: @ 82769B8
-	.string "A toy TV shaped like a SEEDOT.\n"
+	.string "A toy TV shaped like a Seedot.\n"
 	.string "It looks ready to roll away on its own…$"
 
 SecretBase_Text_SkittyTV: @ 82769FF
-	.string "A toy TV shaped like a SKITTY.\n"
+	.string "A toy TV shaped like a Skitty.\n"
 	.string "It looks ready to stroll away…$"
 
 SecretBase_Text_WouldYouLikeToMoveBases: @ 8276A3D
-	.string "You may only make one SECRET BASE.\p"
-	.string "Would you like to move from the SECRET\n"
-	.string "BASE near {STR_VAR_1}?$"
+	.string "You may only make one Secret Base.\p"
+	.string "Would you like to move from\n"
+	.string "your old Secret Base?$"
 
 SecretBase_Text_MovingCompletedUseSecretPower: @ 8276A95
 	.string "Moving completed.\p"
-	.string "Would you like to use the SECRET POWER?$"
+	.string "Would you like to\n"
+	.string "make a new Secret Base here?$"

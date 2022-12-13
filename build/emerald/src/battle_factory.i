@@ -1,6 +1,6 @@
-# 1 "src/battle_factory.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/battle_factory.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/battle_factory.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -3144,6 +3144,13 @@ void ClearIllusionMon(u32 battlerId);
 bool32 SetIllusionMon(struct Pokemon *mon, u32 battlerId);
 bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
 u8 GetBattleMoveSplit(u32 moveId);
+bool32 CanSleep(u8 battlerId);
+bool32 CanBePoisoned(u8 battlerId);
+bool32 CanBeBurned(u8 battlerId);
+bool32 CanBeParalyzed(u8 battlerId);
+bool32 CanBeFrozen(u8 battlerId);
+bool32 CanBeConfused(u8 battlerId);
+bool32 IsBattlerTerrainAffected(u8 battlerId, u32 terrainFlag);
 # 9 "include/battle.h" 2
 # 1 "include/battle_script_commands.h" 1
 # 9 "include/battle_script_commands.h"
@@ -3809,8 +3816,9 @@ struct BattleStruct
     u8 sameMoveTurns[4];
     u16 moveEffect2;
     u16 changedSpecies[6];
+ u8 abilityPopUpSpriteIds[4][2];
 };
-# 579 "include/battle.h"
+# 580 "include/battle.h"
 struct BattleScripting
 {
     s32 painSplitHp;
@@ -3846,6 +3854,7 @@ struct BattleScripting
     u16 moveEffect;
     u16 multihitMoveEffect;
     u8 illusionNickHack;
+    bool8 fixedPopup;
 };
 
 
@@ -3920,6 +3929,7 @@ struct BattleBarInfo
     s32 oldValue;
     s32 receivedValue;
     s32 currValue;
+ u8 oddFrame;
 };
 
 struct BattleSpriteData
@@ -4662,7 +4672,7 @@ static const u16 sMoves_SlowAndSteady[] =
 
 static const u16 sMoves_DependsOnTheBattlesFlow[] =
 {
-    201, 240, 241, 258, 311,
+    201, 240, 241, 258, 311, 580, 604, 641, 581,
     0
 };
 
@@ -4726,24 +4736,24 @@ static const u8 sFixedIVTable[][2] =
 static const u16 sInitialRentalMonRanges[][2] =
 {
 
-    {0, 114},
-    {0, 214},
-    {129, 314},
-    {129, 421},
-    {215, 527},
-    {315, 527},
-    {315, 600 - 1},
-    {422, 600 - 1},
+    {0, 130},
+    {0, 220},
+    {131, 321},
+    {131, 441},
+    {221, 564},
+    {322, 564},
+    {322, 637 - 1},
+    {442, 637 - 1},
 
 
- {129, 421},
-    {215, 527},
- {215, 527},
-    {315, 527},
-    {315, 600 - 1},
- {315, 600 - 1},
-    {422, 600 - 1},
- {422, 600 - 1},
+ {131, 441},
+    {221, 441},
+ {221, 564},
+    {322, 564},
+    {322, 637 - 1},
+ {322, 637 - 1},
+    {442, 637 - 1},
+ {442, 637 - 1},
 };
 
 
@@ -4899,7 +4909,7 @@ static void GenerateOpponentMons(void)
         if (j != 6)
             continue;
 
-        if (lvlMode == 0 && monId > 599)
+        if (lvlMode == 0 && monId > 636)
             continue;
 
         for (k = firstMonId; k < firstMonId + i; k++)
@@ -4944,7 +4954,7 @@ static void SetRentalsToOpponentParty(void)
         gSaveBlock2Ptr->frontier.rentalMons[i + 3].monId = gFrontierTempParty[i];
         gSaveBlock2Ptr->frontier.rentalMons[i + 3].ivs = GetBoxMonData(&gEnemyParty[i].box, 40, ((void *)0));
         gSaveBlock2Ptr->frontier.rentalMons[i + 3].personality = GetMonData(&gEnemyParty[i], 0, ((void *)0));
-        gSaveBlock2Ptr->frontier.rentalMons[i + 3].abilityNum = GetBoxMonData(&gEnemyParty[i].box, 46, ((void *)0));
+  SetMonData(&gEnemyParty[i], 46, &gFacilityTrainerMons[gFrontierTempParty[i]].abilityNum);
         SetMonData(&gEnemyParty[i], 12, &gBattleFrontierHeldItems[gFacilityTrainerMons[gFrontierTempParty[i]].itemTableId]);
     }
 }
@@ -5010,7 +5020,7 @@ static void SetPlayerAndOpponentParties(void)
                 SetMonMoveAvoidReturn(&gPlayerParty[i], gFacilityTrainerMons[monId].moves[k], k);
             SetMonData(&gPlayerParty[i], 32, &friendship);
             SetMonData(&gPlayerParty[i], 12, &gBattleFrontierHeldItems[gFacilityTrainerMons[monId].itemTableId]);
-            SetMonData(&gPlayerParty[i], 46, &gSaveBlock2Ptr->frontier.rentalMons[i].abilityNum);
+            SetMonData(&gPlayerParty[i], 46, &gFacilityTrainerMons[monId].abilityNum);
         }
     }
 
@@ -5049,7 +5059,7 @@ static void SetPlayerAndOpponentParties(void)
             for (k = 0; k < 4; k++)
                 SetMonMoveAvoidReturn(&gEnemyParty[i], gFacilityTrainerMons[monId].moves[k], k);
             SetMonData(&gEnemyParty[i], 12, &gBattleFrontierHeldItems[gFacilityTrainerMons[monId].itemTableId]);
-            SetMonData(&gEnemyParty[i], 46, &gSaveBlock2Ptr->frontier.rentalMons[i + 3].abilityNum);
+            SetMonData(&gEnemyParty[i], 46, &gFacilityTrainerMons[monId].abilityNum);
         }
         break;
     }
@@ -5295,7 +5305,7 @@ void FillFactoryBrainParty(void)
 
         if (gFacilityTrainerMons[monId].species == 201)
             continue;
-        if (monLevel == 50 && monId > 599)
+        if (monLevel == 50 && monId > 636)
             continue;
 
         for (j = 0; j < 6; j++)
@@ -5415,13 +5425,15 @@ u32 GetAiScriptsInBattleFactory(void)
         int challengeNum = gSaveBlock2Ptr->frontier.factoryWinStreaks[battleMode][lvlMode] / 7;
 
         if (gTrainerBattleOpponent_A == 1022)
-            return (1 << 0) | (1 << 1) | (1 << 2);
-        else if (challengeNum < 2)
-            return 0;
-        else if (challengeNum < 4)
-            return (1 << 0);
+            return (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3) | (1 << 8);
+        else if (challengeNum < 1)
+            return (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3) | (1 << 8);
+        else if (challengeNum < 3)
+            return (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3) | (1 << 8);
+  else if (challengeNum < 5)
+            return (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3) | (1 << 8);
         else
-            return (1 << 0) | (1 << 1) | (1 << 2);
+            return (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3) | (1 << 8) | (1 << 6);
     }
 }
 

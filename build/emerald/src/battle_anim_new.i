@@ -1,6 +1,6 @@
-# 1 "src/battle_anim_new.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/battle_anim_new.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/battle_anim_new.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -3148,6 +3148,13 @@ void ClearIllusionMon(u32 battlerId);
 bool32 SetIllusionMon(struct Pokemon *mon, u32 battlerId);
 bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
 u8 GetBattleMoveSplit(u32 moveId);
+bool32 CanSleep(u8 battlerId);
+bool32 CanBePoisoned(u8 battlerId);
+bool32 CanBeBurned(u8 battlerId);
+bool32 CanBeParalyzed(u8 battlerId);
+bool32 CanBeFrozen(u8 battlerId);
+bool32 CanBeConfused(u8 battlerId);
+bool32 IsBattlerTerrainAffected(u8 battlerId, u32 terrainFlag);
 # 9 "include/battle.h" 2
 # 1 "include/battle_script_commands.h" 1
 # 9 "include/battle_script_commands.h"
@@ -3813,8 +3820,9 @@ struct BattleStruct
     u8 sameMoveTurns[4];
     u16 moveEffect2;
     u16 changedSpecies[6];
+ u8 abilityPopUpSpriteIds[4][2];
 };
-# 579 "include/battle.h"
+# 580 "include/battle.h"
 struct BattleScripting
 {
     s32 painSplitHp;
@@ -3850,6 +3858,7 @@ struct BattleScripting
     u16 moveEffect;
     u16 multihitMoveEffect;
     u8 illusionNickHack;
+    bool8 fixedPopup;
 };
 
 
@@ -3924,6 +3933,7 @@ struct BattleBarInfo
     s32 oldValue;
     s32 receivedValue;
     s32 currValue;
+ u8 oddFrame;
 };
 
 struct BattleSpriteData
@@ -14256,8 +14266,8 @@ extern const u8 BattleScript_SturdiedMsg[];
 extern const u8 BattleScript_GravityEnds[];
 extern const u8 BattleScript_MoveStatDrain[];
 extern const u8 BattleScript_MoveStatDrain_PPLoss[];
-extern const u8 BattleScript_TargetAbilityStatRaise[];
-extern const u8 BattleScript_AngryPointActivates[];
+extern const u8 BattleScript_TargetAbilityStatRaiseOnMoveEnd[];
+extern const u8 BattleScript_TargetsStatWasMaxedOut[];
 extern const u8 BattleScript_AttackerAbilityStatRaise[];
 extern const u8 BattleScript_AttackerAbilityStatRaiseEnd3[];
 extern const u8 BattleScript_PoisonHealActivates[];
@@ -14285,7 +14295,9 @@ extern const u8 BattleScript_ToxicSpikesFree[];
 extern const u8 BattleScript_StickyWebFree[];
 extern const u8 BattleScript_StealthRockFree[];
 extern const u8 BattleScript_MegaEvolution[];
+extern const u8 BattleScript_MegaEvolutionQ[];
 extern const u8 BattleScript_WishMegaEvolution[];
+extern const u8 BattleScript_WishMegaEvolutionQ[];
 extern const u8 BattleScript_MoveEffectRecoilWithStatus[];
 extern const u8 BattleScript_EffectWithChance[];
 extern const u8 BattleScript_MoveEffectClearSmog[];
@@ -14356,7 +14368,14 @@ extern const u8 BattleScript_EmergencyExitNoPopUp[];
 extern const u8 BattleScript_EmergencyExitWild[];
 extern const u8 BattleScript_EmergencyExitWildNoPopUp[];
 extern const u8 BattleScript_CheekPouchActivates[];
+extern const u8 BattleScript_TotemVar[];
+extern const u8 BattleScript_TotemFlaredToLife[];
 extern const u8 BattleScript_AnnounceAirLockCloudNine[];
+extern const u8 BattleScript_BattlerAbilityStatRaiseOnSwitchIn[];
+extern const u8 BattleScript_CottonDownActivates[];
+extern const u8 BattleScript_BallFetch[];
+extern const u8 BattleScript_SandSpitActivates[];
+extern const u8 BattleScript_PerishBodyActivates[];
 # 15 "src/battle_anim_new.c" 2
 # 1 "include/battle_controllers.h" 1
 
@@ -14628,6 +14647,8 @@ void SetControllerToLinkPartner(void);
 # 16 "src/battle_anim_new.c" 2
 # 1 "include/constants/moves.h" 1
 # 17 "src/battle_anim_new.c" 2
+# 1 "include/constants/hold_effects.h" 1
+# 18 "src/battle_anim_new.c" 2
 
 
 static void SpriteCB_SpriteToCentreOfSide(struct Sprite* sprite);
@@ -19234,7 +19255,7 @@ static void SpriteCB_LeftRightSliceStep0(struct Sprite *sprite)
         sprite->callback = SpriteCB_LeftRightSliceStep1;
     }
 }
-# 4631 "src/battle_anim_new.c"
+# 4632 "src/battle_anim_new.c"
 static void SpriteCB_PyroBallRockBounceStep(struct Sprite* sprite)
 {
     s8 initialVerticalVelocity;
@@ -19289,7 +19310,7 @@ static void SpriteCB_PyroBallRockBounce(struct Sprite* sprite)
     InitSpritePositionForPyroBall(sprite);
     sprite->callback = SpriteCB_PyroBallRockBounceStep;
 }
-# 4696 "src/battle_anim_new.c"
+# 4697 "src/battle_anim_new.c"
 static void SpriteCB_PyroBallLaunch(struct Sprite* sprite)
 {
     InitSpritePositionForPyroBall(sprite);
@@ -19420,7 +19441,7 @@ static void SpriteCB_SurroundingRing(struct Sprite *sprite)
     sprite->callback = StartAnimLinearTranslation;
     StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
 }
-# 4834 "src/battle_anim_new.c"
+# 4835 "src/battle_anim_new.c"
 static void SpriteCB_PhotonGeyserBeam(struct Sprite* sprite)
 {
     u8 target = LoadBattleAnimTarget(2);
@@ -19591,7 +19612,9 @@ void AnimTask_PurpleFlamesOnTarget(u8 taskId)
 
 void AnimTask_TechnoBlast(u8 taskId)
 {
-
-    gBattleAnimArgs[0] = ItemId_GetHoldEffectParam(gBattleMons[gBattleAnimAttacker].item);
+    if (ItemId_GetHoldEffect(gBattleMons[gBattleAnimAttacker].item) == 118)
+        gBattleAnimArgs[0] = ItemId_GetSecondaryId(gBattleMons[gBattleAnimAttacker].item);
+    else
+        gBattleAnimArgs[0] = 0;
     DestroyAnimVisualTask(taskId);
 }

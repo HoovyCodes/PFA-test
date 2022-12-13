@@ -15,13 +15,16 @@ static const u16 sFrontierExchangeCorner_Decor1[] =
 
 static const u16 sFrontierExchangeCorner_Decor2[] =
 { 
-    DECOR_LAPRAS_DOLL, 
-    DECOR_PIKA_CUSHION, 
-    DECOR_LAPRAS_DOLL, 
-    DECOR_LAPRAS_DOLL, 
-    DECOR_LAPRAS_DOLL, 
-    DECOR_LAPRAS_DOLL, 
-    DECOR_LAPRAS_DOLL,
+    ITEM_ORAN_BERRY,
+	ITEM_PASSHO_BERRY,
+	ITEM_STARF_BERRY,
+	ITEM_RAZZ_BERRY,
+    ITEM_BLUE_SCARF, 
+	ITEM_TM01,
+    ITEM_POKE_BALL, 
+    ITEM_GREAT_BALL, 
+    ITEM_ULTRA_BALL, 
+    ITEM_MASTER_BALL,
     0xFFFF 
 };
 
@@ -72,8 +75,11 @@ static const u8 *const sFrontierExchangeCorner_Decor1Descriptions[] =
 static const u8 *const sFrontierExchangeCorner_Decor2Descriptions[] = 
 {
     BattleFrontier_ExchangeServiceCorner_Text_Doll,
-    BattleFrontier_ExchangeServiceCorner_Text_Cushion,
+	BattleFrontier_ExchangeServiceCorner_Text_MatDesk,
+	BattleFrontier_ExchangeServiceCorner_Text_OrnaPost,
+	BattleFrontier_ExchangeServiceCorner_Text_ChairPlant,
     BattleFrontier_ExchangeServiceCorner_Text_Contest,
+	BattleFrontier_ExchangeServiceCorner_Text_TM,
     BattleFrontier_ExchangeServiceCorner_Text_MegaC,
     BattleFrontier_ExchangeServiceCorner_Text_MegaB,
 	BattleFrontier_ExchangeServiceCorner_Text_MegaA,

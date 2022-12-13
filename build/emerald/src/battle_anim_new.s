@@ -7332,32 +7332,49 @@ AnimTask_PurpleFlamesOnTarget:
 	.type	 AnimTask_TechnoBlast,function
 	.thumb_func
 AnimTask_TechnoBlast:
-	push	{r4, lr}
-	add	r4, r0, #0
-	lsl	r4, r4, #0x18
-	lsr	r4, r4, #0x18
-	ldr	r2, .L325
-	ldr	r0, .L325+0x4
-	ldrb	r1, [r0]
-	mov	r0, #0x5c
-	mul	r0, r0, r1
-	add	r0, r0, r2
+	push	{r4, r5, r6, r7, lr}
+	lsl	r0, r0, #0x18
+	lsr	r7, r0, #0x18
+	ldr	r6, .L328
+	ldr	r5, .L328+0x4
+	ldrb	r0, [r5]
+	mov	r4, #0x5c
+	mul	r0, r0, r4
+	add	r0, r0, r6
 	ldrh	r0, [r0, #0x30]
-	bl	ItemId_GetHoldEffectParam
-	ldr	r1, .L325+0x8
+	bl	ItemId_GetHoldEffect
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	strh	r0, [r1]
-	add	r0, r4, #0
-	bl	DestroyAnimVisualTask
-	pop	{r4}
-	pop	{r0}
-	bx	r0
-.L326:
+	cmp	r0, #0x76
+	bne	.L325	@cond_branch
+	ldrb	r0, [r5]
+	mul	r0, r0, r4
+	add	r0, r0, r6
+	ldrh	r0, [r0, #0x30]
+	bl	ItemId_GetSecondaryId
+	ldr	r1, .L328+0x8
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	b	.L327
+.L329:
 	.align	2, 0
-.L325:
+.L328:
 	.word	gBattleMons
 	.word	gBattleAnimAttacker
+	.word	gBattleAnimArgs
+.L325:
+	ldr	r1, .L330
+	mov	r0, #0x0
+.L327:
+	strh	r0, [r1]
+	add	r0, r7, #0
+	bl	DestroyAnimVisualTask
+	pop	{r4, r5, r6, r7}
+	pop	{r0}
+	bx	r0
+.L331:
+	.align	2, 0
+.L330:
 	.word	gBattleAnimArgs
 .Lfe51:
 	.size	 AnimTask_TechnoBlast,.Lfe51-AnimTask_TechnoBlast

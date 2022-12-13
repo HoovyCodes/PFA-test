@@ -1,6 +1,6 @@
-# 1 "src/battle_interface.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/battle_interface.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/battle_interface.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -3153,6 +3153,13 @@ void ClearIllusionMon(u32 battlerId);
 bool32 SetIllusionMon(struct Pokemon *mon, u32 battlerId);
 bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
 u8 GetBattleMoveSplit(u32 moveId);
+bool32 CanSleep(u8 battlerId);
+bool32 CanBePoisoned(u8 battlerId);
+bool32 CanBeBurned(u8 battlerId);
+bool32 CanBeParalyzed(u8 battlerId);
+bool32 CanBeFrozen(u8 battlerId);
+bool32 CanBeConfused(u8 battlerId);
+bool32 IsBattlerTerrainAffected(u8 battlerId, u32 terrainFlag);
 # 9 "include/battle.h" 2
 # 1 "include/battle_script_commands.h" 1
 # 9 "include/battle_script_commands.h"
@@ -3818,8 +3825,9 @@ struct BattleStruct
     u8 sameMoveTurns[4];
     u16 moveEffect2;
     u16 changedSpecies[6];
+ u8 abilityPopUpSpriteIds[4][2];
 };
-# 579 "include/battle.h"
+# 580 "include/battle.h"
 struct BattleScripting
 {
     s32 painSplitHp;
@@ -3855,6 +3863,7 @@ struct BattleScripting
     u16 moveEffect;
     u16 multihitMoveEffect;
     u8 illusionNickHack;
+    bool8 fixedPopup;
 };
 
 
@@ -3929,6 +3938,7 @@ struct BattleBarInfo
     s32 oldValue;
     s32 receivedValue;
     s32 currValue;
+ u8 oddFrame;
 };
 
 struct BattleSpriteData
@@ -4394,7 +4404,7 @@ void SetHealthboxSpriteInvisible(u8 healthboxSpriteId);
 void SetHealthboxSpriteVisible(u8 healthboxSpriteId);
 void DestoryHealthboxSprite(u8 healthboxSpriteId);
 void DummyBattleInterfaceFunc(u8 healthboxSpriteId, bool8 isDoubleBattleBankOnly);
-void UpdateOamPriorityInAllHealthboxes(u8 priority);
+void UpdateOamPriorityInAllHealthboxes(u8 priority, bool32 hideHpBoxes);
 void InitBattlerHealthboxCoords(u8 battler);
 void UpdateHpTextInHealthbox(u8 healthboxSpriteId, s16 value, u8 maxOrCurrent);
 void SwapHpBarsWithHpText(void);
@@ -4412,6 +4422,7 @@ s32 MoveBattleBar(u8 battler, u8 healthboxSpriteId, u8 whichBar, u8 arg3);
 u8 GetScaledHPFraction(s16 hp, s16 maxhp, u8 scale);
 u8 GetHPBarLevel(s16 hp, s16 maxhp);
 void CreateAbilityPopUp(u8 battlerId, u32 ability, bool32 isDoubleBattle);
+void DestroyAbilityPopUp(u8 battlerId);
 # 7 "src/battle_interface.c" 2
 # 1 "include/graphics.h" 1
 
@@ -15700,38 +15711,6 @@ static void TryToggleHealboxVisibility(u8 priority, u8 healthboxLeftSpriteId, u8
     u8 spriteIds[4] = {healthboxLeftSpriteId, healthboxRightSpriteId, healthbarSpriteId, indicatorSpriteId};
     int i;
 
-    switch (gBattleResources->bufferA[gBattleAnimAttacker][0])
-    {
-    case CONTROLLER_MOVEANIMATION:
-        if (gBattleResources->bufferA[gBattleAnimAttacker][1] == 144)
-            return;
-        break;
-    case CONTROLLER_BALLTHROWANIM:
-        return;
-    case CONTROLLER_BATTLEANIMATION:
-
-        switch (gBattleResources->bufferA[gBattleAnimAttacker][1])
-        {
-        case 0x6:
-        case 0xE:
-        case 0xF:
-        case 0x11:
-        case 0x12:
-        case 0x13:
-        case 0x16:
-
-        case 0x17:
-        case 0x18:
-        case 0x19:
-        case 0x1A:
-        case 0x1B:
-            break;
-        }
-        return;
-    default:
-        return;
-    }
-
 
     for (i = 0; i < (sizeof(spriteIds)/sizeof(*(spriteIds))); i++)
     {
@@ -15750,7 +15729,7 @@ static void TryToggleHealboxVisibility(u8 priority, u8 healthboxLeftSpriteId, u8
     }
 }
 
-void UpdateOamPriorityInAllHealthboxes(u8 priority)
+void UpdateOamPriorityInAllHealthboxes(u8 priority, bool32 hideHPBoxes)
 {
     s32 i;
 
@@ -15768,8 +15747,8 @@ void UpdateOamPriorityInAllHealthboxes(u8 priority)
             gSprites[indicatorSpriteId].oam.priority = priority;
 
 
-        if (IsBattlerAlive(i))
-            TryToggleHealboxVisibility(priority, healthboxLeftSpriteId, healthboxRightSpriteId, healthbarSpriteId, indicatorSpriteId);
+
+
 
     }
 }
@@ -16047,7 +16026,7 @@ static void PrintSafariMonInfo(u8 healthboxSpriteId, struct Pokemon *mon)
     memcpy(text, sUnknown_0832C3C4, sizeof(sUnknown_0832C3C4));
     barFontGfx = &gMonSpritesGfxPtr->barFontGfx[0x520 + (GetBattlerPosition(gSprites[healthboxSpriteId].data[6]) * 384)];
     var = 5;
-    nature = GetNature(mon);
+    nature = GetNature(mon, 0);
     StringCopy(text + 6, gNatureNamePointers[nature]);
     RenderTextFont9(barFontGfx, 9, text);
 
@@ -16174,7 +16153,7 @@ void ChangeMegaTriggerSprite(u8 spriteId, u8 animId)
 {
     StartSpriteAnim(&gSprites[spriteId], animId);
 }
-# 1435 "src/battle_interface.c"
+# 1403 "src/battle_interface.c"
 void CreateMegaTriggerSprite(u8 battlerId, u8 palId)
 {
     LoadSpritePalette(&sSpritePalette_MegaTrigger);
@@ -16341,7 +16320,7 @@ static void SpriteCb_MegaIndicator(struct Sprite *sprite)
 {
 
 }
-# 1611 "src/battle_interface.c"
+# 1579 "src/battle_interface.c"
 u8 CreatePartyStatusSummarySprites(u8 battlerId, struct HpAndStatus *partyInfo, u8 arg2, bool8 isBattleStart)
 {
     bool8 isOpponent;
@@ -17119,39 +17098,79 @@ void UpdateHealthboxAttribute(u8 healthboxSpriteId, struct Pokemon *mon, u8 elem
 
 
 
+
+static const u8 sMoveBarTable[][2] =
+{
+    {1, 1},
+    {2, 1},
+    {2, 2},
+    {3, 2},
+    {3, 3},
+    {4, 3},
+    {4, 4},
+    {5, 5},
+    {6, 6},
+    {7, 7},
+    {1, 1},
+};
+
 s32 MoveBattleBar(u8 battlerId, u8 healthboxSpriteId, u8 whichBar, u8 unused)
 {
-    s32 currentBarValue;
+    s32 i, currentBarValue, previousVal = 0, toLoop;
+    bool32 instant;
+    u16 hpBarSpeed = 8;
 
     if (whichBar == HEALTH_BAR)
     {
-        currentBarValue = CalcNewBarValue(gBattleSpritesDataPtr->battleBars[battlerId].maxValue,
-                    gBattleSpritesDataPtr->battleBars[battlerId].oldValue,
-                    gBattleSpritesDataPtr->battleBars[battlerId].receivedValue,
-                    &gBattleSpritesDataPtr->battleBars[battlerId].currValue,
-                    48 / 8, 1);
+        instant = (hpBarSpeed >= 10);
+        toLoop = sMoveBarTable[hpBarSpeed][gBattleSpritesDataPtr->battleBars[battlerId].oddFrame];
     }
     else
     {
-        u16 expFraction = GetScaledExpFraction(gBattleSpritesDataPtr->battleBars[battlerId].oldValue,
-                    gBattleSpritesDataPtr->battleBars[battlerId].receivedValue,
-                    gBattleSpritesDataPtr->battleBars[battlerId].maxValue, 8);
-        if (expFraction == 0)
-            expFraction = 1;
-        expFraction = abs(gBattleSpritesDataPtr->battleBars[battlerId].receivedValue / expFraction);
-
-        currentBarValue = CalcNewBarValue(gBattleSpritesDataPtr->battleBars[battlerId].maxValue,
-                    gBattleSpritesDataPtr->battleBars[battlerId].oldValue,
-                    gBattleSpritesDataPtr->battleBars[battlerId].receivedValue,
-                    &gBattleSpritesDataPtr->battleBars[battlerId].currValue,
-                    64 / 8, expFraction);
+        instant = (hpBarSpeed >= 10);
+        toLoop = sMoveBarTable[hpBarSpeed][gBattleSpritesDataPtr->battleBars[battlerId].oddFrame];
     }
+    gBattleSpritesDataPtr->battleBars[battlerId].oddFrame ^= 1;
 
-    if (whichBar == EXP_BAR || (whichBar == HEALTH_BAR && !gBattleSpritesDataPtr->battlerData[battlerId].hpNumbersNoBars))
-        MoveBattleBarGraphically(battlerId, whichBar);
+    for (i = 0; i < toLoop; i++)
+    {
+        if (i != 0)
+            previousVal = currentBarValue;
+        if (whichBar == HEALTH_BAR)
+        {
+            currentBarValue = CalcNewBarValue(gBattleSpritesDataPtr->battleBars[battlerId].maxValue,
+                        gBattleSpritesDataPtr->battleBars[battlerId].oldValue,
+                        gBattleSpritesDataPtr->battleBars[battlerId].receivedValue,
+                        &gBattleSpritesDataPtr->battleBars[battlerId].currValue,
+                        48 / 8, 1);
+        }
+        else
+        {
+            u16 expFraction = GetScaledExpFraction(gBattleSpritesDataPtr->battleBars[battlerId].oldValue,
+                        gBattleSpritesDataPtr->battleBars[battlerId].receivedValue,
+                        gBattleSpritesDataPtr->battleBars[battlerId].maxValue, 8);
+            if (expFraction == 0)
+                expFraction = 1;
+            expFraction = abs(gBattleSpritesDataPtr->battleBars[battlerId].receivedValue / expFraction);
 
-    if (currentBarValue == -1)
-        gBattleSpritesDataPtr->battleBars[battlerId].currValue = 0;
+            currentBarValue = CalcNewBarValue(gBattleSpritesDataPtr->battleBars[battlerId].maxValue,
+                        gBattleSpritesDataPtr->battleBars[battlerId].oldValue,
+                        gBattleSpritesDataPtr->battleBars[battlerId].receivedValue,
+                        &gBattleSpritesDataPtr->battleBars[battlerId].currValue,
+                        64 / 8, expFraction);
+        }
+
+        if (whichBar == EXP_BAR || (whichBar == HEALTH_BAR && !gBattleSpritesDataPtr->battlerData[battlerId].hpNumbersNoBars))
+            MoveBattleBarGraphically(battlerId, whichBar);
+
+        if (currentBarValue == -1)
+        {
+            gBattleSpritesDataPtr->battleBars[battlerId].currValue = 0;
+            if ((i != 0 || instant) && whichBar == HEALTH_BAR)
+                UpdateHpTextInHealthbox(gHealthboxSpriteIds[battlerId], previousVal, HP_CURRENT);
+            break;
+        }
+    }
 
     return currentBarValue;
 }
@@ -17450,7 +17469,7 @@ static void SafariTextIntoHealthboxObject(void *dest, u8 *windowTileData, u32 wi
     CpuSet(windowTileData, dest, 0x04000000 | ((windowWidth * 32)/(32/8) & 0x1FFFFF));
     CpuSet(windowTileData + 256, dest + 256, 0x04000000 | ((windowWidth * 32)/(32/8) & 0x1FFFFF));
 }
-# 2734 "src/battle_interface.c"
+# 2742 "src/battle_interface.c"
 static const u8 sAbilityPopUpGfx[] = INCBIN_U8("graphics/battle_interface/ability_pop_up.4bpp");
 static const u16 sAbilityPopUpPalette[] = INCBIN_U16("graphics/battle_interface/ability_pop_up.gbapal");
 
@@ -17628,7 +17647,7 @@ static void PrintAbilityOnAbilityPopUp(u32 ability, u8 spriteId1, u8 spriteId2)
                         4,
                         7, 9, 1);
 }
-# 2922 "src/battle_interface.c"
+# 2930 "src/battle_interface.c"
 static const u16 sOverwrittenPixelsTable[][2] =
 {
  {( ((0 / 8) * 32 * 8) + ((0 / 8) * 32) + ((((0) - ((0 / 8) * 8))) * 4) + ((((0) - ((0 / 8) * 8)) / 2))), 5},
@@ -17823,6 +17842,13 @@ static void SpriteCb_AbilityPopUp(struct Sprite *sprite)
             sprite->data[2]--;
         }
     }
+}
+
+void DestroyAbilityPopUp(u8 battlerId)
+{
+    gSprites[gBattleStruct->abilityPopUpSpriteIds[battlerId][0]].data[2] = 0;
+    gSprites[gBattleStruct->abilityPopUpSpriteIds[battlerId][1]].data[2] = 0;
+    gBattleScripting.fixedPopup = 0;
 }
 
 static void Task_FreeAbilityPopUpGfx(u8 taskId)

@@ -1,6 +1,6 @@
-# 1 "src/data.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/data.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/data.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -3153,6 +3153,13 @@ void ClearIllusionMon(u32 battlerId);
 bool32 SetIllusionMon(struct Pokemon *mon, u32 battlerId);
 bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
 u8 GetBattleMoveSplit(u32 moveId);
+bool32 CanSleep(u8 battlerId);
+bool32 CanBePoisoned(u8 battlerId);
+bool32 CanBeBurned(u8 battlerId);
+bool32 CanBeParalyzed(u8 battlerId);
+bool32 CanBeFrozen(u8 battlerId);
+bool32 CanBeConfused(u8 battlerId);
+bool32 IsBattlerTerrainAffected(u8 battlerId, u32 terrainFlag);
 # 9 "include/battle.h" 2
 # 1 "include/battle_script_commands.h" 1
 # 9 "include/battle_script_commands.h"
@@ -3818,8 +3825,9 @@ struct BattleStruct
     u8 sameMoveTurns[4];
     u16 moveEffect2;
     u16 changedSpecies[6];
+ u8 abilityPopUpSpriteIds[4][2];
 };
-# 579 "include/battle.h"
+# 580 "include/battle.h"
 struct BattleScripting
 {
     s32 painSplitHp;
@@ -3855,6 +3863,7 @@ struct BattleScripting
     u16 moveEffect;
     u16 multihitMoveEffect;
     u8 illusionNickHack;
+    bool8 fixedPopup;
 };
 
 
@@ -3929,6 +3938,7 @@ struct BattleBarInfo
     s32 oldValue;
     s32 receivedValue;
     s32 currValue;
+ u8 oddFrame;
 };
 
 struct BattleSpriteData
@@ -23479,7 +23489,7 @@ const struct MonCoords gMonBackPicCoords[] =
     [809 + 125] =
     {
         .size = 0x77,
-        .y_offset = 5,
+        .y_offset = 6,
     },
     [809 + 126] =
     {
@@ -23887,7 +23897,7 @@ const struct MonCoords gMonBackPicCoords[] =
     [809 + 203] =
     {
         .size = 0x78,
-        .y_offset = 0,
+        .y_offset = 1,
     },
     [809 + 204] =
     {
@@ -44579,79 +44589,259 @@ static const struct TrainerMonItemCustomMoves sParty_GruntSeafloorCavern2[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntSeafloorCavern3[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntSeafloorCavern3[] = {
     {
-    .iv = 0,
-    .lvl = 36,
-    .species = 41,
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0, 0},
+    .species = 701,
+    .heldItem = 282,
+    .moves = {14, 560, 404, 398}
+    },
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0, 0},
+    .species = 697,
+    .heldItem = 218,
+    .moves = {89, 337, 457, 242}
+    },
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {255, 0, 0, 0, 0, 255},
+    .species = 699,
+    .heldItem = 229,
+    .moves = {87, 115, 59, 113}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 0, 0,255, 255},
+    .species = 706,
+    .heldItem = 269,
+    .moves = {406, 126, 411, 330}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 255, 0, 0, 0},
+    .species = 711,
+    .heldItem = 304,
+    .moves = {567, 402, 425, 566}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {255, 255, 0, 0,0, 0},
+    .species = 282,
+    .heldItem = 415,
+    .moves = {585, 94, 85, 247}
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Gabrielle1[] = {
+static const struct TrainerMonItemCustomMoves sParty_Gabrielle1[] = {
     {
-    .iv = 0,
-    .lvl = 26,
-    .species = 300,
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 0, 255, 255, 0},
+    .species = 809 + 53,
+    .heldItem = 282,
+    .moves = {85, 94, 411, 98}
     },
     {
-    .iv = 0,
-    .lvl = 26,
-    .species = 261,
+    .iv = 255,
+    .lvl = 100,
+ .evs = {255, 0, 0, 0, 0, 255},
+    .species = 134,
+    .heldItem = 229,
+    .moves = {56, 98, 204, 608}
     },
     {
-    .iv = 0,
-    .lvl = 26,
-    .species = 263,
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0,0},
+    .species = 128,
+    .heldItem = 218,
+    .moves = {428, 38, 428, 442}
     },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = 270,
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 0, 255, 255, 0},
+    .species = 715,
+    .heldItem = 238,
+    .moves = {406, 403, 162, 399}
     },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = 273,
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 255, 0, 0, 0},
+    .species = 740,
+    .heldItem = 197,
+    .moves = {612, 146, 628, 444}
     },
-    {
-    .iv = 0,
-    .lvl = 26,
-    .species = 276,
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0, 0},
+    .species = 724,
+    .heldItem = 0,
+    .moves = {625, 479, 348, 0}
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_GruntPetalburgWoods[] = {
+static const struct TrainerMonItemCustomMoves sParty_GruntPetalburgWoods[] = {
     {
-    .iv = 0,
-    .lvl = 9,
-    .species = 261,
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0, 0},
+    .species = 745,
+    .heldItem = 282,
+    .moves = {444, 663, 242, 446}
+    },
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 0, 0, 255, 255},
+    .species = 809 + 57,
+    .heldItem = 229,
+    .moves = {605, 59, 420, 219}
+    },
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0,0},
+    .species = 128,
+    .heldItem = 238,
+    .moves = {306, 413, 366, 18}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 255, 0, 255, 0},
+    .species = 462,
+    .heldItem = 186,
+    .moves = {85, 86, 430, 243}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {255, 0, 255, 0, 0, 0},
+    .species = 143,
+    .heldItem = 304,
+    .moves = {242, 484, 630, 34}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 0, 0, 255, 255},
+    .species = 730,
+    .heldItem = 338,
+    .moves = {627, 585, 453, 304}
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Marcel[] = {
+static const struct TrainerMonItemCustomMoves sParty_Marcel[] = {
     {
-    .iv = 100,
-    .lvl = 29,
-    .species = 310,
+    .iv = 255,
+    .lvl = 100,
+ .evs = {255,0, 255, 0, 0, 0},
+    .species = 227,
+    .heldItem = 293,
+    .moves = {446, 92, 355, 18}
     },
     {
-    .iv = 100,
-    .lvl = 29,
-    .species = 275,
-    }
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0, 0},
+    .species = 461,
+    .heldItem = 218,
+    .moves = {282, 556, 228, 420}
+    },
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 0, 255, 255,0},
+    .species = 474,
+    .heldItem = 282,
+    .moves = {97, 161, 85, 58}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 0, 0, 255, 255, 0},
+    .species = 230,
+    .heldItem = 267,
+    .moves = {57, 56, 406, 58}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {255, 0, 0, 0, 0, 255},
+    .species = 472,
+    .heldItem = 229,
+    .moves = {14, 355, 89, 263}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0,0},
+    .species = 257,
+    .heldItem = 408,
+    .moves = {14, 394, 444, 67}
+    },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Alberto[] = {
+static const struct TrainerMonItemCustomMoves sParty_Alberto[] = {
     {
-    .iv = 0,
-    .lvl = 30,
-    .species = 279,
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0 ,0, 0, 255, 255, 0},
+    .species = 635,
+    .heldItem = 273,
+    .moves = {406, 411, 406, 57}
     },
     {
-    .iv = 0,
-    .lvl = 30,
-    .species = 178,
-    }
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 255, 0, 0, 0},
+    .species = 373,
+    .heldItem = 282,
+    .moves = {126, 434, 242, 89}
+    },
+    {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0,0},
+    .species = 567,
+    .heldItem = 346,
+    .moves = {512, 337, 283, 444}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 255, 0, 0, 0},
+    .species = 306,
+    .heldItem = 400,
+    .moves = {89, 38, 457, 475}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {255, 0, 0, 0, 0, 255},
+    .species = 131,
+    .heldItem = 270,
+    .moves = {56, 59, 87, 47}
+    },
+ {
+    .iv = 255,
+    .lvl = 100,
+ .evs = {0, 255, 0, 255, 0,0},
+    .species = 612,
+    .heldItem = 268,
+    .moves = {349, 12, 200, 89}
+    },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Ed[] = {
@@ -57211,73 +57401,73 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayLinkPlaceholder[] = {
 # 440 "src/data.c" 2
 # 1 "src/data/text/trainer_class_names.h" 1
 const u8 gTrainerClassNames[][13] = {
-    [0x0] = _("{PKMN} TRAINER"),
-    [0x1] = _("{PKMN} TRAINER"),
-    [0x2] = _("HIKER"),
-    [0x3] = _("TEAM AQUA"),
-    [0x4] = _("{PKMN} BREEDER"),
-    [0x5] = _("COOLTRAINER"),
-    [0x6] = _("BIRD KEEPER"),
-    [0x7] = _("COLLECTOR"),
-    [0x8] = _("SWIMMER♂"),
-    [0x9] = _("TEAM MAGMA"),
-    [0xa] = _("EXPERT"),
-    [0xb] = _("AQUA ADMIN"),
-    [0xc] = _("BLACK BELT"),
-    [0xd] = _("AQUA LEADER"),
-    [0xe] = _("HEX MANIAC"),
-    [0xf] = _("AROMA LADY"),
-    [0x10] = _("RUIN MANIAC"),
-    [0x11] = _("INTERVIEWER"),
-    [0x12] = _("TUBER"),
-    [0x13] = _("TUBER"),
-    [0x14] = _("LADY"),
-    [0x15] = _("BEAUTY"),
-    [0x16] = _("RICH BOY"),
-    [0x17] = _("POKéMANIAC"),
-    [0x18] = _("GUITARIST"),
-    [0x19] = _("KINDLER"),
-    [0x1a] = _("CAMPER"),
-    [0x1b] = _("PICNICKER"),
-    [0x1c] = _("BUG MANIAC"),
-    [0x1d] = _("PSYCHIC"),
-    [0x1e] = _("GENTLEMAN"),
-    [0x1f] = _("ELITE FOUR"),
-    [0x20] = _("LEADER"),
-    [0x21] = _("SCHOOL KID"),
-    [0x22] = _("SR. AND JR."),
-    [0x23] = _("WINSTRATE"),
-    [0x24] = _("POKéFAN"),
-    [0x25] = _("YOUNGSTER"),
-    [0x26] = _("CHAMPION"),
-    [0x27] = _("FISHERMAN"),
-    [0x28] = _("TRIATHLETE"),
-    [0x29] = _("DRAGON TAMER"),
-    [0x2a] = _("NINJA BOY"),
-    [0x2b] = _("BATTLE GIRL"),
-    [0x2c] = _("PARASOL LADY"),
-    [0x2d] = _("SWIMMER♀"),
-    [0x2e] = _("TWINS"),
-    [0x2f] = _("SAILOR"),
-    [0x30] = _("COOLTRAINER"),
-    [0x31] = _("MAGMA ADMIN"),
-    [0x32] = _("{PKMN} TRAINER"),
-    [0x33] = _("BUG CATCHER"),
-    [0x34] = _("{PKMN} RANGER"),
-    [0x35] = _("MAGMA LEADER"),
-    [0x36] = _("LASS"),
-    [0x37] = _("YOUNG COUPLE"),
-    [0x38] = _("OLD COUPLE"),
-    [0x39] = _("SIS AND BRO"),
-    [0x3a] = _("SALON MAIDEN"),
-    [0x3b] = _("DOME ACE"),
-    [0x3c] = _("PALACE MAVEN"),
-    [0x3d] = _("ARENA TYCOON"),
-    [0x3e] = _("FACTORY HEAD"),
-    [0x3f] = _("PIKE QUEEN"),
-    [0x40] = _("PYRAMID KING"),
-    [0x41] = _("{PKMN} TRAINER"),
- [0x42] = _("COPY OF"),
+    [0x0] = _("{PKMN} Trainer"),
+    [0x1] = _("{PKMN} Trainer"),
+    [0x2] = _("Hiker"),
+    [0x3] = _("Team Aqua"),
+    [0x4] = _("{PKMN} Breeder"),
+    [0x5] = _("CoolTrainer"),
+    [0x6] = _("Bird Keeper"),
+    [0x7] = _("Collector"),
+    [0x8] = _("Swimmer♂"),
+    [0x9] = _("Team Magma"),
+    [0xa] = _("Expert"),
+    [0xb] = _("Aqua Admin"),
+    [0xc] = _("Black Belt"),
+    [0xd] = _("Aqua Leader"),
+    [0xe] = _("Hex Maniac"),
+    [0xf] = _("Aroma Lady"),
+    [0x10] = _("Ruin Maniac"),
+    [0x11] = _("Interviewer"),
+    [0x12] = _("Tuber"),
+    [0x13] = _("Tuber"),
+    [0x14] = _("Lady"),
+    [0x15] = _("Beauty"),
+    [0x16] = _("Rich Boy"),
+    [0x17] = _("Pokémaniac"),
+    [0x18] = _("Guitarist"),
+    [0x19] = _("Kindler"),
+    [0x1a] = _("Camper"),
+    [0x1b] = _("Picnicker"),
+    [0x1c] = _("Bug Maniac"),
+    [0x1d] = _("Psychic"),
+    [0x1e] = _("Gentleman"),
+    [0x1f] = _("Elite Four"),
+    [0x20] = _("Leader"),
+    [0x21] = _("School Kid"),
+    [0x22] = _("Sr. and Jr."),
+    [0x23] = _("Winstrate"),
+    [0x24] = _("Pokéfan"),
+    [0x25] = _("Youngster"),
+    [0x26] = _("Champion"),
+    [0x27] = _("Fisherman"),
+    [0x28] = _("Triathelete"),
+    [0x29] = _("Dragon Tamer"),
+    [0x2a] = _("Ninja Boy"),
+    [0x2b] = _("Battle Girl"),
+    [0x2c] = _("Parasol Lady"),
+    [0x2d] = _("Swimmer♀"),
+    [0x2e] = _("Twins"),
+    [0x2f] = _("Sailor"),
+    [0x30] = _("CoolTrainer"),
+    [0x31] = _("Magma Admin"),
+    [0x32] = _("{PKMN} Trainer"),
+    [0x33] = _("Bug Catcher"),
+    [0x34] = _("{PKMN} Ranger"),
+    [0x35] = _("Magma Leader"),
+    [0x36] = _("Lass"),
+    [0x37] = _("Young Couple"),
+    [0x38] = _("Old Couple"),
+    [0x39] = _("Sis and Bro"),
+    [0x3a] = _("Salon Maiden"),
+    [0x3b] = _("Dome Ace"),
+    [0x3c] = _("Palace Maven"),
+    [0x3d] = _("Arena Tycoon"),
+    [0x3e] = _("Factory Head"),
+    [0x3f] = _("Pike Queen"),
+    [0x40] = _("Pyramid King"),
+    [0x41] = _("{PKMN} Trainer"),
+ [0x42] = _("Copy of"),
 };
 # 441 "src/data.c" 2
 # 1 "src/data/trainers.h" 1
@@ -57300,12 +57490,12 @@ const struct Trainer gTrainers[] = {
     {
         .partyFlags = (1 << 1) | (1 << 0),
         .trainerClass = 0x42,
-        .encounterMusic_gender = 11,
+        .encounterMusic_gender = 10,
         .trainerPic = 89,
-        .trainerName = _("RED"),
+        .trainerName = _("Red"),
         .items = {},
         .doubleBattle = 0,
-        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3),
+        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3) | (1 << 8) | (1 << 6),
         .partySize = (size_t)(sizeof(sParty_Sawyer1) / sizeof((sParty_Sawyer1)[0])),
         .party = {.ItemCustomMoves = sParty_Sawyer1},
     },
@@ -57314,12 +57504,12 @@ const struct Trainer gTrainers[] = {
     {
   .partyFlags = (1 << 1) | (1 << 0),
         .trainerClass = 0x42,
-        .encounterMusic_gender = 6,
+        .encounterMusic_gender = 10,
         .trainerPic = 89,
-        .trainerName = _("BLUE"),
+        .trainerName = _("Blue"),
         .items = {},
         .doubleBattle = 0,
-        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3),
+        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3) | (1 << 8),
         .partySize = (size_t)(sizeof(sParty_GruntAquaHideout1) / sizeof((sParty_GruntAquaHideout1)[0])),
         .party = {.ItemCustomMoves = sParty_GruntAquaHideout1},
     },
@@ -57328,12 +57518,12 @@ const struct Trainer gTrainers[] = {
     {
   .partyFlags = (1 << 1) | (1 << 0),
         .trainerClass = 0x42,
-        .encounterMusic_gender = 6,
+        .encounterMusic_gender = 10,
         .trainerPic = 89,
-        .trainerName = _("LANCE"),
+        .trainerName = _("Lance"),
         .items = {},
         .doubleBattle = 0,
-        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3),
+        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3) | (1 << 8),
         .partySize = (size_t)(sizeof(sParty_GruntAquaHideout2) / sizeof((sParty_GruntAquaHideout2)[0])),
         .party = {.ItemCustomMoves = sParty_GruntAquaHideout2},
     },
@@ -57342,12 +57532,12 @@ const struct Trainer gTrainers[] = {
     {
   .partyFlags = (1 << 1) | (1 << 0),
         .trainerClass = 0x42,
-        .encounterMusic_gender = 6,
+        .encounterMusic_gender = 10,
         .trainerPic = 89,
-        .trainerName = _("STEVEN"),
+        .trainerName = _("Steven"),
         .items = {},
         .doubleBattle = 0,
-        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3),
+        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3) | (1 << 8),
         .partySize = (size_t)(sizeof(sParty_GruntAquaHideout3) / sizeof((sParty_GruntAquaHideout3)[0])),
         .party = {.ItemCustomMoves = sParty_GruntAquaHideout3},
     },
@@ -57356,12 +57546,12 @@ const struct Trainer gTrainers[] = {
     {
   .partyFlags = (1 << 1) | (1 << 0),
         .trainerClass = 0x42,
-        .encounterMusic_gender = 6,
+        .encounterMusic_gender = 10,
         .trainerPic = 89,
-        .trainerName = _("WALLACE"),
+        .trainerName = _("Wallace"),
         .items = {},
         .doubleBattle = 0,
-        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3),
+        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3) | (1 << 8),
         .partySize = (size_t)(sizeof(sParty_GruntAquaHideout4) / sizeof((sParty_GruntAquaHideout4)[0])),
         .party = {.ItemCustomMoves = sParty_GruntAquaHideout4},
     },
@@ -57370,12 +57560,12 @@ const struct Trainer gTrainers[] = {
     {
   .partyFlags = (1 << 1) | (1 << 0),
         .trainerClass = 0x42,
-        .encounterMusic_gender = 6,
+        .encounterMusic_gender = 10,
         .trainerPic = 90,
-        .trainerName = _("CYNTHIA"),
+        .trainerName = _("Cynthia"),
         .items = {},
         .doubleBattle = 0,
-        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3),
+        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3) | (1 << 8),
         .partySize = (size_t)(sizeof(sParty_GruntSeafloorCavern1) / sizeof((sParty_GruntSeafloorCavern1)[0])),
         .party = {.ItemCustomMoves = sParty_GruntSeafloorCavern1},
     },
@@ -57384,84 +57574,84 @@ const struct Trainer gTrainers[] = {
     {
   .partyFlags = (1 << 1) | (1 << 0),
         .trainerClass = 0x42,
-        .encounterMusic_gender = 6,
+        .encounterMusic_gender = 10,
         .trainerPic = 89,
-        .trainerName = _("ALDER"),
+        .trainerName = _("Alder"),
         .items = {},
         .doubleBattle = 0,
-        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3),
+        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3) | (1 << 8),
         .partySize = (size_t)(sizeof(sParty_GruntSeafloorCavern2) / sizeof((sParty_GruntSeafloorCavern2)[0])),
         .party = {.ItemCustomMoves = sParty_GruntSeafloorCavern2},
     },
 
     [8] =
     {
-        .partyFlags = 0,
-        .trainerClass = 0x3,
-        .encounterMusic_gender = 6,
-        .trainerPic = 1,
-        .trainerName = _("GRUNT"),
+        .partyFlags = (1 << 1) | (1 << 0),
+        .trainerClass = 0x42,
+        .encounterMusic_gender = 10,
+        .trainerPic = 90,
+        .trainerName = _("Diantha"),
         .items = {},
         .doubleBattle = 0,
-        .aiFlags = (1 << 0),
+        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3) | (1 << 8),
         .partySize = (size_t)(sizeof(sParty_GruntSeafloorCavern3) / sizeof((sParty_GruntSeafloorCavern3)[0])),
-        .party = {.NoItemDefaultMoves = sParty_GruntSeafloorCavern3},
+        .party = {.ItemCustomMoves = sParty_GruntSeafloorCavern3},
     },
 
     [9] =
     {
-        .partyFlags = 0,
-        .trainerClass = 0x4,
-        .encounterMusic_gender = (1 << 7) | 1,
-        .trainerPic = 2,
-        .trainerName = _("GABRIELLE"),
+        .partyFlags = (1 << 1) | (1 << 0),
+        .trainerClass = 0x42,
+        .encounterMusic_gender = 10,
+        .trainerPic = 89,
+        .trainerName = _("Hau"),
         .items = {},
         .doubleBattle = 0,
-        .aiFlags = (1 << 0),
+        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3) | (1 << 8),
         .partySize = (size_t)(sizeof(sParty_Gabrielle1) / sizeof((sParty_Gabrielle1)[0])),
-        .party = {.NoItemDefaultMoves = sParty_Gabrielle1},
+        .party = {.ItemCustomMoves = sParty_Gabrielle1},
     },
 
     [10] =
     {
-        .partyFlags = 0,
-        .trainerClass = 0x3,
-        .encounterMusic_gender = 6,
-        .trainerPic = 1,
-        .trainerName = _("GRUNT"),
+        .partyFlags = (1 << 1) | (1 << 0),
+        .trainerClass = 0x42,
+        .encounterMusic_gender = 10,
+        .trainerPic = 89,
+        .trainerName = _("Kukui"),
         .items = {},
         .doubleBattle = 0,
-        .aiFlags = (1 << 0),
+        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3) | (1 << 8),
         .partySize = (size_t)(sizeof(sParty_GruntPetalburgWoods) / sizeof((sParty_GruntPetalburgWoods)[0])),
-        .party = {.NoItemDefaultMoves = sParty_GruntPetalburgWoods},
+        .party = {.ItemCustomMoves = sParty_GruntPetalburgWoods},
     },
 
     [11] =
     {
-        .partyFlags = 0,
-        .trainerClass = 0x5,
-        .encounterMusic_gender = 5,
-        .trainerPic = 3,
-        .trainerName = _("MARCEL"),
-        .items = {36, 0, 0, 0},
+        .partyFlags = (1 << 1) | (1 << 0),
+        .trainerClass = 0x42,
+        .encounterMusic_gender = 10,
+        .trainerPic = 90,
+        .trainerName = _("Iris"),
+        .items = {},
         .doubleBattle = 0,
-        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2),
-        .partySize = (size_t)(sizeof(sParty_Marcel) / sizeof((sParty_Marcel)[0])),
-        .party = {.NoItemDefaultMoves = sParty_Marcel},
+        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3) | (1 << 8),
+        .partySize = (size_t)(sizeof(sParty_Alberto) / sizeof((sParty_Alberto)[0])),
+        .party = {.ItemCustomMoves = sParty_Alberto},
     },
 
     [12] =
     {
-        .partyFlags = 0,
-        .trainerClass = 0x6,
+  .partyFlags = (1 << 1) | (1 << 0),
+        .trainerClass = 0x26,
         .encounterMusic_gender = 5,
-        .trainerPic = 4,
-        .trainerName = _("ALBERTO"),
+        .trainerPic = 90,
+        .trainerName = _("MKOL103"),
         .items = {},
         .doubleBattle = 0,
-        .aiFlags = (1 << 0),
-        .partySize = (size_t)(sizeof(sParty_Alberto) / sizeof((sParty_Alberto)[0])),
-        .party = {.NoItemDefaultMoves = sParty_Alberto},
+        .aiFlags = (1 << 0) | (1 << 1) | (1 << 2) | (1 << 3) | (1 << 8),
+        .partySize = (size_t)(sizeof(sParty_Marcel) / sizeof((sParty_Marcel)[0])),
+        .party = {.ItemCustomMoves = sParty_Marcel},
     },
 
     [13] =
@@ -68558,7 +68748,7 @@ const struct Trainer gTrainers[] = {
         .trainerClass = 0x3a,
         .encounterMusic_gender = (1 << 7) | 0,
         .trainerPic = 82,
-        .trainerName = _("ANABEL"),
+        .trainerName = _("Anabel"),
         .items = {},
         .doubleBattle = 0,
         .aiFlags = (1 << 0) | (1 << 1) | (1 << 2),
@@ -68572,7 +68762,7 @@ const struct Trainer gTrainers[] = {
         .trainerClass = 0x3b,
         .encounterMusic_gender = 0,
         .trainerPic = 83,
-        .trainerName = _("TUCKER"),
+        .trainerName = _("Tucker"),
         .items = {},
         .doubleBattle = 0,
         .aiFlags = (1 << 0) | (1 << 1) | (1 << 2),
@@ -68586,7 +68776,7 @@ const struct Trainer gTrainers[] = {
         .trainerClass = 0x3c,
         .encounterMusic_gender = 0,
         .trainerPic = 84,
-        .trainerName = _("SPENSER"),
+        .trainerName = _("Spenser"),
         .items = {},
         .doubleBattle = 0,
         .aiFlags = (1 << 0) | (1 << 1) | (1 << 2),
@@ -68600,7 +68790,7 @@ const struct Trainer gTrainers[] = {
         .trainerClass = 0x3d,
         .encounterMusic_gender = (1 << 7) | 0,
         .trainerPic = 85,
-        .trainerName = _("GRETA"),
+        .trainerName = _("Greta"),
         .items = {},
         .doubleBattle = 0,
         .aiFlags = (1 << 0) | (1 << 1) | (1 << 2),
@@ -68614,7 +68804,7 @@ const struct Trainer gTrainers[] = {
         .trainerClass = 0x3e,
         .encounterMusic_gender = 0,
         .trainerPic = 86,
-        .trainerName = _("NOLAND"),
+        .trainerName = _("Noland"),
         .items = {},
         .doubleBattle = 0,
         .aiFlags = (1 << 0) | (1 << 1) | (1 << 2),
@@ -68628,7 +68818,7 @@ const struct Trainer gTrainers[] = {
         .trainerClass = 0x3f,
         .encounterMusic_gender = (1 << 7) | 0,
         .trainerPic = 87,
-        .trainerName = _("LUCY"),
+        .trainerName = _("Lucy"),
         .items = {},
         .doubleBattle = 0,
         .aiFlags = (1 << 0) | (1 << 1) | (1 << 2),
@@ -68642,7 +68832,7 @@ const struct Trainer gTrainers[] = {
         .trainerClass = 0x40,
         .encounterMusic_gender = 0,
         .trainerPic = 88,
-        .trainerName = _("BRANDON"),
+        .trainerName = _("Brandon"),
         .items = {},
         .doubleBattle = 0,
         .aiFlags = (1 << 0) | (1 << 1) | (1 << 2),
@@ -69729,7 +69919,7 @@ const u8 gSpeciesNames[][10 + 1] = {
     [471] = _("Glaceon"),
     [472] = _("Gliscor"),
     [473] = _("Mamoswine"),
-    [474] = _("Porygon-z"),
+    [474] = _("Porygon-Z"),
     [475] = _("Gallade"),
     [476] = _("Probopass"),
     [477] = _("Dusknoir"),
@@ -70522,7 +70712,7 @@ const u8 gMoveNames[747][12 + 1] =
     [133] = _("Amnesia"),
     [134] = _("Kinesis"),
     [135] = _("Soft-Boiled"),
-    [136] = _("Hi Jump Kick"),
+    [136] = _("HighJumpKick"),
     [137] = _("Glare"),
     [138] = _("Dream Eater"),
     [139] = _("Poison Gas"),
@@ -70571,7 +70761,7 @@ const u8 gMoveNames[747][12 + 1] =
     [182] = _("Protect"),
     [183] = _("Mach Punch"),
     [184] = _("Scary Face"),
-    [185] = _("Faint Attack"),
+    [185] = _("Feint Attack"),
     [186] = _("Sweet Kiss"),
     [187] = _("Belly Drum"),
     [188] = _("Sludge Bomb"),
@@ -70651,7 +70841,7 @@ const u8 gMoveNames[747][12 + 1] =
     [262] = _("Memento"),
     [263] = _("Facade"),
     [264] = _("Focus Punch"),
-    [265] = _("SmellingSalt"),
+    [265] = _("SmellngSalts"),
     [266] = _("Follow Me"),
     [267] = _("Nature Power"),
     [268] = _("Charge"),
@@ -70960,7 +71150,7 @@ const u8 gMoveNames[747][12 + 1] =
     [571] = _("ForestsCurse"),
     [572] = _("Petal Storm"),
     [573] = _("Freeze-Dry"),
-    [574] = _("Disarming Vo"),
+    [574] = _("DisrmngVoice"),
     [575] = _("Parting Shot"),
     [576] = _("Topsy-Turvy"),
     [577] = _("DrainingKiss"),
@@ -70974,13 +71164,13 @@ const u8 gMoveNames[747][12 + 1] =
     [585] = _("Moonblast"),
     [586] = _("Boomburst"),
     [587] = _("Fairy Lock"),
-    [588] = _("Kings Shield"),
+    [588] = _("Kng's Shield"),
     [589] = _("Play Nice"),
     [590] = _("Confide"),
     [591] = _("DiamondStorm"),
-    [592] = _("Steam Erupt"),
-    [593] = _("Hyperspace H"),
-    [594] = _("Water Shuri"),
+    [592] = _("SteamErption"),
+    [593] = _("HyprspceHole"),
+    [594] = _("WatrShuriken"),
     [595] = _("MysticalFire"),
     [596] = _("Spiky Shield"),
     [597] = _("AromaticMist"),
@@ -70990,8 +71180,8 @@ const u8 gMoveNames[747][12 + 1] =
     [601] = _("Geomancy"),
     [602] = _("MagneticFlux"),
     [603] = _("Happy Hour"),
-    [604] = _("Electric Ter"),
-    [605] = _("Dazzling Gle"),
+    [604] = _("ElctrcTrrain"),
+    [605] = _("Dzzlng Gleam"),
     [606] = _("Celebrate"),
     [607] = _("Hold Hands"),
     [608] = _("BabyDollEyes"),
@@ -71000,23 +71190,23 @@ const u8 gMoveNames[747][12 + 1] =
     [611] = _("Infestation"),
     [612] = _("PowerUpPunch"),
     [613] = _("OblivionWing"),
-    [614] = _("Thousand Ar"),
-    [615] = _("Thousand Wav"),
-    [616] = _("Lands Wrath"),
+    [614] = _("ThousndArrws"),
+    [615] = _("ThousndWaves"),
+    [616] = _("Land's Wrath"),
     [617] = _("LightOfRuin"),
     [618] = _("Origin Pulse"),
-    [619] = _("Precipice Bl"),
+    [619] = _("Prcpce Blade"),
     [620] = _("DragonAscent"),
-    [621] = _("Hyperspace F"),
+    [621] = _("Hyprspc Fury"),
     [622] = _("Shore Up"),
-    [623] = _("First Impres"),
-    [624] = _("Baneful Bunk"),
-    [625] = _("Spirit Shack"),
-    [626] = _("Darkest Lari"),
-    [627] = _("Sparkling Ar"),
+    [623] = _("FrstImpressn"),
+    [624] = _("BanefulBunkr"),
+    [625] = _("SpiritShckle"),
+    [626] = _("DarkstLariat"),
+    [627] = _("Sprklng Aria"),
     [628] = _("Ice Hammer"),
-    [629] = _("Floral Heali"),
-    [630] = _("High Horsepo"),
+    [629] = _("FlorlHealing"),
+    [630] = _("HghHrsepwr"),
     [631] = _("Strength Sap"),
     [632] = _("Solar Blade"),
     [633] = _("Leafage"),
@@ -71027,7 +71217,7 @@ const u8 gMoveNames[747][12 + 1] =
     [638] = _("Throat Chop"),
     [639] = _("Pollen Puff"),
     [640] = _("Anchor Shot"),
-    [641] = _("Psychic Terr"),
+    [641] = _("PsychcTrrain"),
     [642] = _("Lunge"),
     [643] = _("Fire Lash"),
     [644] = _("Power Trip"),
@@ -71035,29 +71225,29 @@ const u8 gMoveNames[747][12 + 1] =
     [646] = _("Speed Swap"),
     [647] = _("Smart Strike"),
     [648] = _("Purify"),
-    [649] = _("Revelation D"),
+    [649] = _("RvlationDnce"),
     [650] = _("CoreEnforcer"),
     [651] = _("Trop Kick"),
     [652] = _("Instruct"),
     [653] = _("Beak Blast"),
-    [654] = _("Clanging Sca"),
+    [654] = _("ClngngScales"),
     [655] = _("DragonHammer"),
     [656] = _("Brutal Swing"),
     [657] = _("Aurora Veil"),
     [658] = _("Shell Trap"),
     [659] = _("Fleur Cannon"),
     [660] = _("PsychicFangs"),
-    [661] = _("Stomping Tan"),
+    [661] = _("StmpngTantrm"),
     [662] = _("Shadow Bone"),
     [663] = _("Accelerock"),
     [664] = _("Liquidation"),
-    [665] = _("Prismatic La"),
+    [665] = _("PrsmaticLasr"),
     [666] = _("Spectral Thi"),
     [667] = _("Sunsteel Str"),
     [668] = _("Moongeist Be"),
     [669] = _("Tearful Look"),
     [670] = _("Zing Zap"),
-    [671] = _("Nature's Mad"),
+    [671] = _("Natre'sMdnss"),
     [672] = _("Multi-Attack"),
     [673] = _("Mind Blown"),
     [674] = _("Plasma Fists"),
@@ -71088,18 +71278,18 @@ const u8 gMoveNames[747][12 + 1] =
     [698] = _("Teatime"),
     [699] = _("Octolock"),
     [700] = _("Bolt Beak"),
-    [701] = _("Fishy Rend"),
-    [702] = _("CourtChange"),
-    [703] = _("Clangy Soul"),
+    [701] = _("FishiousRend"),
+    [702] = _("Court Change"),
+    [703] = _("ClngrousSoul"),
     [704] = _("Body Press"),
     [705] = _("Decorate"),
-    [706] = _("Drum Beat"),
+    [706] = _("Drum Beating"),
     [707] = _("Snap Trap"),
     [708] = _("Pyro Ball"),
     [709] = _("Behemoth Bl"),
     [710] = _("Behemoth Ba"),
     [711] = _("Aura Wheel"),
-    [712] = _("Break Swipe"),
+    [712] = _("BreakngSwipe"),
     [713] = _("Branch Poke"),
     [714] = _("Overdrive"),
     [715] = _("Apple Acid"),
@@ -71108,8 +71298,8 @@ const u8 gMoveNames[747][12 + 1] =
     [718] = _("Weird Steam"),
     [719] = _("Life Dew"),
     [720] = _("Obstruct"),
-    [721] = _("False Yield"),
-    [722] = _("Meteor Ass."),
+    [721] = _("FalsSurrendr"),
+    [722] = _("MeteorAssalt"),
     [723] = _("Eternabeam"),
     [724] = _("Steel Beam"),
     [725] = _("Expand Force"),
@@ -71119,10 +71309,10 @@ const u8 gMoveNames[747][12 + 1] =
     [729] = _("ShellSideArm"),
     [730] = _("Misty Explos"),
     [731] = _("Grassy Glide"),
-    [732] = _("Rising Volts"),
+    [732] = _("RisingVltage"),
     [733] = _("TerrainPulse"),
     [734] = _("SkitterSmack"),
-    [735] = _("BurnJealousy"),
+    [735] = _("BrningJelosy"),
     [736] = _("Lash Out"),
     [737] = _("Poltergeist"),
     [738] = _("CorrosiveGas"),

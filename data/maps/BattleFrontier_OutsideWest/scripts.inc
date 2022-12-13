@@ -9,17 +9,15 @@
 
 BattleFrontier_OutsideWest_MapScripts:: @ 823D3E1
 	map_script MAP_SCRIPT_ON_TRANSITION, BattleFrontier_OutsideWest_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, BattleFrontier_OutsideWest_OnResume
 	.byte 0
 
 BattleFrontier_OutsideWest_OnTransition: @ 823D3E7
-	setvar VAR_BRAVO_TRAINER_BATTLE_TOWER_ON, 0
-	setflag FLAG_HIDE_BATTLE_TOWER_REPORTER
-	setflag FLAG_SYS_POKEDEX_GET
-	setflag FLAG_SYS_B_DASH
-	setflag FLAG_SYS_NATIONAL_DEX
-	setflag FLAG_SYS_TV_LATIAS_LATIOS
-	special EnableNationalPokedex
-	call FillPokedex
+	call BF_EventScript_SetWeather
+	end
+	
+BattleFrontier_OutsideWest_OnResume:
+	call BF_EventScript_SetWeather
 	end
 
 BattleFrontier_OutsideWest_EventScript_FerryAttendant:: @ 823D3F0
@@ -34,7 +32,7 @@ BattleFrontier_OutsideWest_EventScript_FerryAttendant:: @ 823D3F0
 	end
 
 BattleFrontier_OutsideWest_EventScript_ChooseFerryDestination:: @ 823D416
-	multichoicedefault 18, 6, MULTI_SSTIDAL_BATTLE_FRONTIER, 0, 0
+	multichoicedefault 18, 4, MULTI_SSTIDAL_BATTLE_FRONTIER, 0, 0
 	switch VAR_RESULT
 	case 0, BattleFrontier_OutsideWest_EventScript_FerryToContest
 	case 1, BattleFrontier_OutsideWest_EventScript_FerryToCorner
@@ -42,14 +40,14 @@ BattleFrontier_OutsideWest_EventScript_ChooseFerryDestination:: @ 823D416
 	case 3, BattleFrontier_OutsideWest_EventScript_CancelFerrySelect
 	case MULTI_B_PRESSED, BattleFrontier_OutsideWest_EventScript_CancelFerrySelect
 	end
-	
+
 Too_Young::
 	lock
 	faceplayer
 	msgbox BattleFrontier_OutsideWest_Text_TY, MSGBOX_DEFAULT
 	closemessage
 	end
-	
+
 BattleFrontier_OutsideWest_EventScript_FerryToContest:: @ 823D458
 	msgbox BattleFrontier_OutsideWest_Text_SlateportItIs, MSGBOX_YESNO
 	compare VAR_RESULT, NO
@@ -71,7 +69,7 @@ BattleFrontier_OutsideWest_EventScript_FerryToCorner::
 	waitstate
 	release
 	end
-	
+
 BattleFrontier_OutsideWest_EventScript_FerryToBase:: 
 	msgbox BattleFrontier_OutsideWest_Text_3rdItIs, MSGBOX_YESNO
 	compare VAR_RESULT, NO
@@ -337,36 +335,197 @@ BattleFrontier_OutsideWest_EventScript_Man4:: @ 823D6D7
 BattleFrontier_OutsideWest_EventScript_PokefanF:: @ 823D6EE
 	msgbox BattleFrontier_OutsideWest_Text_MonWithLongTailInFrontier, MSGBOX_NPC
 	end
-	
+
+BF_EventScript_SetWeather:
+	dotimebasedevents
+	goto_if_set FLAG_UNUSED_0x923, MWA
+	random 100
+	switch VAR_RESULT
+	case 0, setregular
+    case 1, setregular
+    case 2, setregular
+    case 3, setregular
+    case 4, setregular
+    case 5, setregular
+    case 6, setregular
+    case 7, setregular
+    case 8, setregular
+    case 9, setregular
+    case 10, setregular
+    case 11, setregular
+    case 12, setregular
+    case 13, setregular
+    case 14, setregular
+    case 15, setregular
+    case 16, setregular
+    case 17, setregular
+    case 18, setregular
+    case 19, setregular
+    case 20, setregular
+    case 21, setregular
+    case 22, setregular
+    case 23, setregular
+    case 24, setregular
+    case 25, setregular
+    case 26, setregular
+    case 27, setregular
+    case 28, setregular
+    case 29, setregular
+    case 30, setregular
+    case 31, setregular
+    case 32, setregular
+    case 33, setregular
+    case 34, setregular
+    case 35, setregular
+    case 36, setregular
+    case 37, setregular
+    case 38, setregular
+    case 39, setregular
+    case 40, setregular
+    case 41, setregular
+    case 42, setregular
+    case 43, setregular
+    case 44, setregular
+    case 45, setregular
+    case 46, setregular
+    case 47, setregular
+    case 48, setregular
+    case 49, setregular
+    case 50, setregular
+    case 51, setregular
+    case 52, setregular
+    case 53, setregular
+    case 54, setregular
+    case 55, setregular
+    case 56, setregular
+    case 57, setregular
+    case 58, setregular
+    case 59, setregular
+    case 60, setregular
+    case 61, setregular
+    case 62, setregular
+    case 63, setregular
+    case 64, setregular
+    case 65, setregular
+    case 66, setregular
+    case 67, setregular
+    case 68, setregular
+    case 69, setregular
+    case 70, setrain
+    case 71, setrain
+    case 72, setrain
+    case 73, setrain
+    case 74, setrain
+    case 75, setrain
+    case 76, setrain
+    case 77, setrain
+    case 78, setrain
+    case 79, setrain
+    case 80, setrain
+    case 81, setrain
+    case 82, setrain
+    case 83, setrain
+    case 84, setrain
+    case 85, setthunderstorm
+    case 86, setthunderstorm
+    case 87, setthunderstorm
+    case 88, setthunderstorm
+    case 89, setthunderstorm
+    case 90, setsnow
+    case 91, setsnow
+    case 92, setsnow
+    case 93, setsnow
+    case 94, setsnow
+    case 95, setsnow
+    case 96, setsnow
+    case 97, setsnow
+    case 98, setsnow
+    case 99, setsnow
+	end
+
+setsnow::
+	setvar VAR_UNUSED_0x40F7, 0
+	setflag FLAG_UNUSED_0x923
+	call MWA
+	end
+
+setrain::
+	setvar VAR_UNUSED_0x40F7, 1
+	setflag FLAG_UNUSED_0x923
+	call MWA
+	end
+
+setthunderstorm::
+	setvar VAR_UNUSED_0x40F7, 2
+	setflag FLAG_UNUSED_0x923
+	call MWA
+	end
+
+setregular::
+	setvar VAR_UNUSED_0x40F7, 3
+	setflag FLAG_UNUSED_0x923
+	call MWA
+	end
+
+MWA::
+	compare VAR_UNUSED_0x40F7, 0
+	goto_if_eq makesnow
+	compare VAR_UNUSED_0x40F7, 1
+	goto_if_eq makerain
+	compare VAR_UNUSED_0x40F7, 2
+	goto_if_eq makethunderstorm
+	goto makeregular
+	end
+
+makesnow:
+	setweather WEATHER_SNOW
+	doweather
+	end
+
+makerain:
+	setweather WEATHER_RAIN
+	doweather
+	end
+
+makethunderstorm:
+	setweather WEATHER_RAIN_THUNDERSTORM
+	doweather
+	end
+
+makeregular:
+	setweather WEATHER_SUNNY
+	doweather
+	end
+
 BattleFrontier_OutsideWest_Text_TY:
 	.string "Please get acquainted with the\n"
-	.string "Battle Frontier before returning.$\p"
+	.string "Battle Frontier before returning.$"
 
 BattleFrontier_OutsideWest_Text_CC:
 	.string "Oh, before you can go to the\n"
 	.string "Game Corner, you need a Coin Case.\p"
 	.string "Allow me to provide you with one.$"
-	
+
 BattleFrontier_OutsideWest_Text_BattleDomeSign: @ 823D6F7
-	.string "This is the BATTLE DOME!\n"
+	.string "This is the Battle Dome!\n"
 	.string "Your path to the invincible superstar!$"
 
 BattleFrontier_OutsideWest_Text_BattleFactorySign: @ 823D737
-	.string "This is the BATTLE FACTORY!\n"
-	.string "Seek out the toughest POKéMON!$"
+	.string "This is the Battle Factory!\n"
+	.string "Seek out the toughest Pokémon!$"
 
 BattleFrontier_OutsideWest_Text_BattlePikeSign: @ 823D772
-	.string "This is the BATTLE PIKE!\n"
+	.string "This is the Battle Pike!\n"
 	.string "Choose one of three paths!$"
 
 BattleFrontier_OutsideWest_Text_ThisIsBattleTower: @ 823D7A6
-	.string "This is the BATTLE TOWER.\p"
-	.string "TRAINERS bring their best-raised\n"
-	.string "POKéMON for elimination-style matches.$"
+	.string "This is the Battle Tower.\p"
+	.string "Trainers bring their best-raised\n"
+	.string "Pokémon for elimination-style matches.$"
 
 BattleFrontier_OutsideWest_Text_MayISeeYourTicket: @ 823D808
 	.string "Hello, are you here for the ferry?\n"
-	.string "May I see your TICKET?$"
+	.string "May I see your Ticket?$"
 
 BattleFrontier_OutsideWest_Text_MustHaveTicketToBoard: @ 823D842
 	.string "{PLAYER} doesn't have the TICKET…\p"
@@ -375,7 +534,7 @@ BattleFrontier_OutsideWest_Text_MustHaveTicketToBoard: @ 823D842
 	.string "the ferry.$"
 
 BattleFrontier_OutsideWest_Text_WhereWouldYouLikeToGo: @ 823D89D
-	.string "{PLAYER} flashed the TICKET.\p"
+	.string "{PLAYER} flashed the Ticket.\p"
 	.string "Perfect! That's all you need!\p"
 	.string "And where would you like to go?$"
 
@@ -384,7 +543,7 @@ BattleFrontier_OutsideWest_Text_SlateportItIs: @ 823D8F2
 
 BattleFrontier_OutsideWest_Text_LilycoveItIs: @ 823D90E
 	.string "Off to the Game Corner, then!$"
-	
+
 BattleFrontier_OutsideWest_Text_3rdItIs:
 	.string "Off to your hometown, then!$"
 
@@ -401,12 +560,12 @@ BattleFrontier_OutsideWest_Text_ThenWhereWouldYouLikeToGo: @ 823D97A
 BattleFrontier_OutsideWest_Text_BestOutOfAllMyFriends: @ 823D99C
 	.string "I'm the best out of all my friends.\n"
 	.string "But here…\l"
-	.string "I've been useless!$"
+	.string "I'm useless!$"
 
 BattleFrontier_OutsideWest_Text_CantFindBattleTower: @ 823D9DD
-	.string "I want to go to the BATTLE TOWER,\n"
+	.string "I want to go to the Battle Tower,\n"
 	.string "but I can't find it even though I have\l"
-	.string "a map of the BATTLE FRONTIER.\p"
+	.string "a map of the Battle Frontier.\p"
 	.string "This place is just too big!$"
 
 BattleFrontier_OutsideWest_Text_GotSeasickOnWayHere: @ 823DA60
@@ -418,32 +577,32 @@ BattleFrontier_OutsideWest_Text_GotSeasickOnWayHere: @ 823DA60
 BattleFrontier_OutsideWest_Text_OnlyToughTrainersBroughtHere: @ 823DABF
 	.string "It's not as if just anyone can come\n"
 	.string "here, you know?\p"
-	.string "Only those TRAINERS who've been\n"
+	.string "Only those Trainers who've been\n"
 	.string "recognized as tough are brought here.\p"
-	.string "That's why many TRAINERS don't even\n"
-	.string "know about the BATTLE FRONTIER.$"
+	.string "That's why many Trainers don't even\n"
+	.string "know about the Battle Frontier.$"
 
 BattleFrontier_OutsideWest_Text_SureWeCanChallengeWithNoMons: @ 823DB7D
 	.string "Hey, bro…\p"
 	.string "Are you sure we can make challenges\n"
-	.string "even if we don't have any POKéMON?$"
+	.string "even if we don't have any Pokémon?$"
 
 BattleFrontier_OutsideWest_Text_BigGuySaidIllLendYouMons: @ 823DBCE
 	.string "Uh…\n"
 	.string "I'm sure it'll be okay.\p"
 	.string "I think…\p"
 	.string "But remember that big scary guy?\n"
-	.string "He said, “I'll lend you POKéMON!”$"
+	.string "He said, “I'll lend you Pokémon!”$"
 
 BattleFrontier_OutsideWest_Text_WhosRaisingThoseRentalMons: @ 823DC36
-	.string "That's the BATTLE FACTORY.\n"
-	.string "You can rent strong POKéMON there.\p"
+	.string "That's the Battle Factory.\n"
+	.string "You can rent strong Pokémon there.\p"
 	.string "But it makes me wonder.\n"
-	.string "Who's raising those rental POKéMON?$"
+	.string "Who's raising those rental Pokémon?$"
 
 BattleFrontier_OutsideWest_Text_ScaredOfPikeBecauseSeviper: @ 823DCB0
-	.string "I'm scared of going into the BATTLE\n"
-	.string "PIKE because of SEVIPER…\p"
+	.string "I'm scared of going into the Battle\n"
+	.string "Pike because of Seviper…\p"
 	.string "B-but I came all the way here, so I will\n"
 	.string "try to conquer everything!\l"
 	.string "…Shudder…$"
@@ -455,13 +614,13 @@ BattleFrontier_OutsideWest_Text_LetsPlayRockPaperScissors: @ 823DD3B
 
 BattleFrontier_OutsideWest_Text_WonIllTakePikeChallenge: @ 823DD7A
 	.string "Yay! I won!\n"
-	.string "I will take the BATTLE PIKE challenge!$"
+	.string "I will take the Battle Pike challenge!$"
 
 BattleFrontier_OutsideWest_Text_LostIllPutOffPikeChallenge: @ 823DDAD
 	.string "Oh, no…\n"
 	.string "I lost.\p"
 	.string "I guess I'm not very lucky today.\n"
-	.string "I'll put off my BATTLE PIKE challenge\l"
+	.string "I'll put off my Battle Pike challenge\l"
 	.string "until tomorrow.$"
 
 BattleFrontier_OutsideWest_Text_ChooseFishingOverBattling: @ 823DE15
@@ -477,19 +636,19 @@ BattleFrontier_OutsideWest_Text_KeepBattlingUntilIGetSymbol: @ 823DEB4
 
 BattleFrontier_OutsideWest_Text_YoureOffToChallengeDome: @ 823DEFD
 	.string "Oh? You're off to challenge\n"
-	.string "the BATTLE DOME?\p"
+	.string "the Battle Dome?\p"
 	.string "I'll wish you the best of luck.\n"
 	.string "Let us both win our way up and meet\l"
 	.string "in challenges.$"
 
 BattleFrontier_OutsideWest_Text_DomeIsHereGrandpa: @ 823DF7D
 	.string "Grandpa, over here!\n"
-	.string "The BATTLE DOME is here!\l"
+	.string "The Battle Dome is here!\l"
 	.string "Go get 'em, Grandpa!$"
 
 BattleFrontier_OutsideWest_Text_WontLetGentlemenBeatMe: @ 823DFBF
-	.string "Ah, so this here is the BATTLE DOME?\n"
-	.string "I won't let GENTLEMEN beat me!\p"
+	.string "Ah, so this here is the Battle Dome?\n"
+	.string "I won't let Gentleman beat me!\p"
 	.string "But where is the entrance?$"
 
 BattleFrontier_OutsideWest_Text_NothingHereNotLongAgo: @ 823E01E
@@ -499,8 +658,8 @@ BattleFrontier_OutsideWest_Text_NothingHereNotLongAgo: @ 823E01E
 	.string "I'll bring my mother out to see this.$"
 
 BattleFrontier_OutsideWest_Text_FinallyArrivedAtFrontier: @ 823E09F
-	.string "I've finally arrived at the BATTLE\n"
-	.string "FRONTIER!\p"
+	.string "I've finally arrived at the Battle\n"
+	.string "Frontier!\p"
 	.string "I'm sure to grab attention with\n"
 	.string "my looks and ability!$"
 
@@ -513,7 +672,7 @@ BattleFrontier_OutsideWest_Text_SquareFilledWithToughPeople: @ 823E102
 BattleFrontier_OutsideWest_Text_MetOlderGirlAtPike: @ 823E154
 	.string "Crunch, munch…\p"
 	.string "A while back, I met this older girl\n"
-	.string "at the BATTLE PIKE.\p"
+	.string "at the Battle Pike.\p"
 	.string "She had these eyes that were scary\n"
 	.string "in a real ornery way.\p"
 	.string "Crunch, munch…\p"
@@ -533,41 +692,37 @@ BattleFrontier_OutsideWest_Text_DomeAceLookedBecauseOfMyCheering: @ 823E2E9
 	.string "Whaaaaaat?!\n"
 	.string "Pfft!\p"
 	.string "That only happened because\n"
-	.string "I happened to be sitting next to you!\p"
-	.string "The DOME ACE only looked our way\n"
+	.string "I happened Ace be sitting next to you!\p"
+	.string "The Dome Ace only looked our way\n"
 	.string "because my cheering was so loud!$"
 
 BattleFrontier_OutsideWest_Text_DomeAceIsMine: @ 823E37E
 	.string "Oh, shush!\n"
 	.string "Keep that racket down!\p"
 	.string "You fair-weather fans should stick\n"
-	.string "to cheering for some GYM LEADER!\p"
-	.string "The DOME ACE is mine!\n"
+	.string "to cheering for some Gym Leader!\p"
+	.string "The Dome Ace is mine!\n"
 	.string "The only idol for me!$"
 
 BattleFrontier_OutsideWest_Text_FansOverThereUsedToBeTrainers: @ 823E410
 	.string "Those people squabbling over there…\p"
 	.string "It's hard to believe, but they once\n"
-	.string "were TRAINERS, and good ones, too.\p"
+	.string "were Trainers, and good ones, too.\p"
 	.string "They used to be incredibly tough,\n"
 	.string "and they were famous, too.\p"
 	.string "But they were obliterated by this\n"
-	.string "certain TRAINER at a tournament.\p"
+	.string "certain Trainer at a tournament.\p"
 	.string "They were so thoroughly whipped,\n"
-	.string "they became smitten by the TRAINER.\p"
-	.string "Now they're just fans of the TRAINER.\n"
+	.string "they became smitten by the Trainer.\p"
+	.string "Now they're just fans of his.\n"
 	.string "They go cheer for their idol at the\l"
-	.string "BATTLE DOME every day now.$"
+	.string "Battle Dome every day now.$"
 
 BattleFrontier_OutsideWest_Text_MonWithLongTailInFrontier: @ 823E5A5
-	.string "I heard a rumor that someone saw\n"
-	.string "a POKéMON with an unusually long tail\l"
-	.string "somewhere in the BATTLE FRONTIER.\p"
-	.string "It must be adorable. I'm sure of it…\p"
-	.string "Oh, challenges can wait. I feel driven\n"
-	.string "to find the delightful creature!$"
+	.string "I heard a rumor that there\n"
+	.string "used to be wild Pokémon here!\p"
+	.string "The staff apparently\n"
+	.string "relocated them somewhere nice.$"
 Give_CC:
 	.string "Ah, first!\p"
-	.string "Let me give you this Coin Case.\p"
-	
-
+	.string "Let me give you this Coin Case.$"

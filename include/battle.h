@@ -541,6 +541,7 @@ struct BattleStruct
     u8 sameMoveTurns[MAX_BATTLERS_COUNT]; // For Metronome, number of times the same moves has been SUCCESFULLY used.
     u16 moveEffect2; // For Knock Off
     u16 changedSpecies[PARTY_SIZE]; // For Zygarde or future forms when multiple mons can change into the same pokemon.
+	u8 abilityPopUpSpriteIds[MAX_BATTLERS_COUNT][2];    // two per battler
 };
 
 #define GET_MOVE_TYPE(move, typeArg)                        \
@@ -611,6 +612,7 @@ struct BattleScripting
     u16 moveEffect;
     u16 multihitMoveEffect;
     u8 illusionNickHack; // To properly display nick in STRINGID_ENEMYABOUTTOSWITCHPKMN.
+    bool8 fixedPopup;   // force ability popup to stick until manually called back
 };
 
 // rom_80A5C6C
@@ -685,6 +687,7 @@ struct BattleBarInfo
     s32 oldValue;
     s32 receivedValue;
     s32 currValue;
+	u8 oddFrame; // For more speed control in moving hp bar down
 };
 
 struct BattleSpriteData

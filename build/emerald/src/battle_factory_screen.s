@@ -7882,7 +7882,7 @@ CreateFrontierFactorySelectableMons:
 	mov	r6, r9
 	mov	r5, r8
 	push	{r5, r6, r7}
-	add	sp, sp, #-0x24
+	add	sp, sp, #-0x20
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	str	r0, [sp, #0x10]
@@ -7914,18 +7914,18 @@ CreateFrontierFactorySelectableMons:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	str	r0, [sp, #0x18]
-	ldr	r1, .L312+0x10
+	ldr	r2, .L312+0x10
 	ldr	r0, .L312+0x14
-	str	r0, [r1]
+	str	r0, [r2]
 	ldrb	r1, [r4]
 	mov	r0, #0x3
 	and	r0, r0, r1
-	mov	r2, #0x32
-	str	r2, [sp, #0x14]
+	mov	r3, #0x32
+	str	r3, [sp, #0x14]
 	cmp	r0, #0
 	beq	.L297	@cond_branch
-	mov	r3, #0x64
-	str	r3, [sp, #0x14]
+	mov	r0, #0x64
+	str	r0, [sp, #0x14]
 .L297:
 	add	r0, r6, #0
 	add	r1, r5, #0
@@ -7934,11 +7934,9 @@ CreateFrontierFactorySelectableMons:
 	lsr	r0, r0, #0x18
 	str	r0, [sp, #0x1c]
 	ldr	r1, [r7]
-	ldrb	r0, [r1, #0xa]
-	mov	r9, r0
+	ldrb	r2, [r1, #0xa]
 	ldrb	r0, [r1, #0xb]
 	lsl	r0, r0, #0x8
-	mov	r2, r9
 	orr	r2, r2, r0
 	ldrb	r0, [r1, #0xc]
 	lsl	r0, r0, #0x10
@@ -7946,15 +7944,13 @@ CreateFrontierFactorySelectableMons:
 	ldrb	r0, [r1, #0xd]
 	lsl	r0, r0, #0x18
 	orr	r2, r2, r0
-	mov	r9, r2
-	mov	r3, #0x0
-	mov	r8, r3
+	mov	r8, r2
+	mov	r7, #0x0
 .L302:
 	ldr	r0, .L312+0x4
 	ldr	r1, [r0]
-	mov	r2, r8
-	lsl	r0, r2, #0x1
-	add	r0, r0, r8
+	lsl	r0, r7, #0x1
+	add	r0, r0, r7
 	lsl	r0, r0, #0x2
 	add	r1, r1, r0
 	mov	r3, #0xe7
@@ -7963,16 +7959,16 @@ CreateFrontierFactorySelectableMons:
 	ldrh	r5, [r1]
 	ldr	r0, .L312+0x18
 	ldr	r1, [r0]
-	ldr	r2, [sp, #0x10]
-	add	r2, r2, r8
+	ldr	r3, [sp, #0x10]
+	add	r2, r7, r3
 	mov	r3, #0x6c
 	mov	r0, r2
 	mul	r0, r0, r3
 	add	r1, r1, r0
 	strh	r5, [r1, #0xc]
-	mov	sl, r2
+	mov	r9, r2
 	ldr	r0, [sp, #0x1c]
-	cmp	r8, r0
+	cmp	r7, r0
 	bcs	.L303	@cond_branch
 	ldr	r0, [sp, #0x18]
 	add	r0, r0, #0x1
@@ -7997,15 +7993,15 @@ CreateFrontierFactorySelectableMons:
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
 	mov	r1, #0x6c
-	mov	r4, sl
+	mov	r4, r9
 	mul	r4, r4, r1
 	add	r4, r4, #0xc
 	ldr	r2, .L314
 	ldr	r0, [r2]
 	add	r0, r0, r4
 	add	r0, r0, #0x8
-	ldr	r1, .L314+0x4
-	ldr	r2, [r1]
+	ldr	r3, .L314+0x4
+	ldr	r2, [r3]
 	lsl	r5, r5, #0x4
 	add	r2, r5, r2
 	ldrh	r1, [r2]
@@ -8013,7 +8009,7 @@ CreateFrontierFactorySelectableMons:
 	str	r6, [sp]
 	ldrb	r2, [r2, #0xb]
 	str	r2, [sp, #0x4]
-	mov	r2, r9
+	mov	r2, r8
 	str	r2, [sp, #0x8]
 	ldr	r2, [sp, #0x14]
 	bl	CreateMonWithEVSpreadNatureOTID
@@ -8021,32 +8017,29 @@ CreateFrontierFactorySelectableMons:
 	add	r0, sp, #0xc
 	strb	r1, [r0]
 	mov	r6, #0x0
-	add	r7, r5, #0
-	mov	r3, #0x1
-	add	r8, r8, r3
-	ldr	r3, .L314
+	add	r7, r7, #0x1
+	mov	sl, r7
+	ldr	r7, .L314
 .L308:
-	ldr	r0, [r3]
+	ldr	r0, [r7]
 	add	r0, r0, r4
 	add	r0, r0, #0x8
-	ldr	r5, .L314+0x4
-	ldr	r1, [r5]
-	add	r1, r7, r1
+	ldr	r3, .L314+0x4
+	ldr	r1, [r3]
+	add	r1, r5, r1
 	lsl	r2, r6, #0x1
 	add	r1, r1, #0x2
 	add	r1, r1, r2
 	ldrh	r1, [r1]
 	add	r2, r6, #0
-	str	r3, [sp, #0x20]
 	bl	SetMonMoveAvoidReturn
 	add	r0, r6, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-	ldr	r3, [sp, #0x20]
 	cmp	r6, #0x3
 	bls	.L308	@cond_branch
 	mov	r0, #0x6c
-	mov	r4, sl
+	mov	r4, r9
 	mul	r4, r4, r0
 	add	r4, r4, #0xc
 	ldr	r1, .L314
@@ -8060,23 +8053,33 @@ CreateFrontierFactorySelectableMons:
 	ldr	r0, [r2]
 	add	r0, r0, r4
 	add	r0, r0, #0x8
-	ldr	r1, [r5]
-	add	r1, r7, r1
+	ldr	r3, .L314+0x4
+	ldr	r1, [r3]
+	add	r1, r5, r1
 	ldrb	r2, [r1, #0xa]
 	lsl	r2, r2, #0x1
 	ldr	r1, .L314+0x8
 	add	r2, r2, r1
 	mov	r1, #0xc
 	bl	SetMonData
-	mov	r3, r8
-	lsl	r0, r3, #0x18
-	lsr	r0, r0, #0x18
-	mov	r8, r0
-	cmp	r0, #0x5
-	bhi	.LCB2876
+	ldr	r1, .L314
+	ldr	r0, [r1]
+	add	r0, r0, r4
+	add	r0, r0, #0x8
+	ldr	r3, .L314+0x4
+	ldr	r2, [r3]
+	add	r2, r2, r5
+	add	r2, r2, #0xd
+	mov	r1, #0x2e
+	bl	SetMonData
+	mov	r1, sl
+	lsl	r0, r1, #0x18
+	lsr	r7, r0, #0x18
+	cmp	r7, #0x5
+	bhi	.LCB2884
 	b	.L302	@long jump
-.LCB2876:
-	add	sp, sp, #0x24
+.LCB2884:
+	add	sp, sp, #0x20
 	pop	{r3, r4, r5}
 	mov	r8, r3
 	mov	r9, r4
@@ -9798,13 +9801,13 @@ sub_819C2D4:
 	mov	r1, #0x8
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.LCB4855
+	bne	.LCB4863
 	b	.L463	@long jump
-.LCB4855:
+.LCB4863:
 	cmp	r0, #0x1
-	bne	.LCB4857
+	bne	.LCB4865
 	b	.L464	@long jump
-.LCB4857:
+.LCB4865:
 	mov	r0, #0x3
 	bl	HideBg
 	ldr	r4, .L470+0x4
@@ -11974,9 +11977,9 @@ sub_819D12C:
 	add	r0, r0, r9
 	lsr	r1, r0, #0x18
 	cmp	r0, #0
-	blt	.LCB7547
+	blt	.LCB7555
 	b	.L731	@long jump
-.LCB7547:
+.LCB7555:
 	cmp	r7, #0x1
 	bne	.L725	@cond_branch
 	ldr	r0, [sp]
@@ -12029,9 +12032,9 @@ sub_819D324:
 	cmp	r0, #0
 	beq	.L765	@cond_branch
 	cmp	r0, #0x1
-	bne	.LCB7604
+	bne	.LCB7612
 	b	.L789	@long jump
-.LCB7604:
+.LCB7612:
 	b	.L764
 .L818:
 	.align	2, 0
@@ -12348,9 +12351,9 @@ sub_819D588:
 	ldrsh	r0, [r0, r2]
 	mov	r8, r1
 	cmp	r0, #0x5
-	bls	.LCB8018
+	bls	.LCB8026
 	b	.L832	@long jump
-.LCB8018:
+.LCB8026:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L848+0x4
 	add	r0, r0, r1
@@ -12433,9 +12436,9 @@ sub_819D588:
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
 	cmp	r6, #0
-	beq	.LCB8111
+	beq	.LCB8119
 	b	.L832	@long jump
-.LCB8111:
+.LCB8119:
 	mov	r0, #0x5
 	mov	r1, #0x0
 	bl	FillWindowPixelBuffer
@@ -12597,9 +12600,9 @@ sub_819D770:
 	ldrb	r0, [r0]
 	add	r3, r1, #0
 	cmp	r0, #0x1
-	bne	.LCB8301
+	bne	.LCB8309
 	b	.L862	@long jump
-.LCB8301:
+.LCB8309:
 	ldr	r0, .L886+0x4
 	lsl	r2, r6, #0x2
 	add	r1, r2, r6
@@ -12610,9 +12613,9 @@ sub_819D770:
 	mov	r8, r0
 	add	r5, r2, #0
 	cmp	r1, #0x8
-	bls	.LCB8312
+	bls	.LCB8320
 	b	.L862	@long jump
-.LCB8312:
+.LCB8320:
 	lsl	r0, r1, #0x2
 	ldr	r1, .L886+0x8
 	add	r0, r0, r1
@@ -12750,15 +12753,15 @@ sub_819D770:
 	mov	r2, #0xe
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0x1
-	beq	.LCB8476
+	beq	.LCB8484
 	b	.L862	@long jump
-.LCB8476:
+.LCB8484:
 	mov	r1, #0x10
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x1
-	beq	.LCB8481
+	beq	.LCB8489
 	b	.L862	@long jump
-.LCB8481:
+.LCB8489:
 	ldr	r1, .L894
 	ldr	r0, .L894+0x4
 	add	r0, r0, #0x4a
@@ -12921,9 +12924,9 @@ sub_819D9EC:
 	add	r0, r0, #0x30
 	ldrb	r0, [r0]
 	cmp	r0, #0x1
-	bne	.LCB8685
+	bne	.LCB8693
 	b	.L906	@long jump
-.LCB8685:
+.LCB8693:
 	ldr	r0, .L926+0x4
 	lsl	r2, r6, #0x2
 	add	r1, r2, r6
@@ -12934,9 +12937,9 @@ sub_819D9EC:
 	add	r3, r0, #0
 	add	r7, r2, #0
 	cmp	r1, #0x4
-	bls	.LCB8696
+	bls	.LCB8704
 	b	.L906	@long jump
-.LCB8696:
+.LCB8704:
 	lsl	r0, r1, #0x2
 	ldr	r1, .L926+0x8
 	add	r0, r0, r1
@@ -13021,9 +13024,9 @@ sub_819D9EC:
 	bl	FuncIsActiveTask
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.LCB8797
+	beq	.LCB8805
 	b	.L906	@long jump
-.LCB8797:
+.LCB8805:
 	ldr	r2, .L934+0x4
 	ldr	r4, .L934+0x8
 	ldr	r0, [r4]
@@ -13225,9 +13228,9 @@ CB2_InitSwapScreen:
 	ldrb	r0, [r0]
 	add	r2, r1, #0
 	cmp	r0, #0xf
-	bls	.LCB9030
+	bls	.LCB9038
 	b	.L948	@long jump
-.LCB9030:
+.LCB9038:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L977+0x4
 	add	r0, r0, r1
@@ -14223,9 +14226,9 @@ Swap_InitAllSprites:
 	ldr	r0, .L1023+0x8
 	mov	r9, r0
 	cmp	r6, #0x1
-	bhi	.LCB10161
+	bhi	.LCB10169
 	b	.L1020	@long jump
-.LCB10161:
+.LCB10169:
 	ldr	r0, [r3]
 	ldrb	r0, [r0, #0xe]
 	lsl	r1, r0, #0x4

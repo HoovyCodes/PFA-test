@@ -8,7 +8,7 @@ BattleFrontier_Lounge4_ObjectEvents:
 	object_event 3, OBJ_EVENT_GFX_MAN_3, 0, 0, 5, 0, MOVEMENT_TYPE_FACE_RIGHT, 2, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_Lounge4_EventScript_Man, 0
 
 BattleFrontier_Lounge4_MapWarps:
-	warp_def 4, 9, 0, 6, MAP_BATTLE_FRONTIER_OUTSIDE_WEST
+	warp_def 4, 9, 0, 0, MAP_BATTLE_FRONTIER_OUTSIDE_WEST
 
 BattleFrontier_Lounge4_MapEvents::
 	map_events BattleFrontier_Lounge4_ObjectEvents, BattleFrontier_Lounge4_MapWarps, 0x0, 0x0

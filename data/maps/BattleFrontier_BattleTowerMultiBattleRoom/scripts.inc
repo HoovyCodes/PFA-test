@@ -76,13 +76,13 @@ BattleFrontier_BattleTowerMultiBattleRoom_EventScript_OpponentsEnter:: @ 8248FB4
 	waitmovement 0
 	compare VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_LINK_MULTIS
 	goto_if_eq BattleFrontier_BattleTowerMultiBattleRoom_EventScript_DoOpponentIntrosLink
-	tower_getopponentintro 0
+	special getintro
 	delay 15
 	applymovement LOCALID_OPPONENT_1, BattleFrontier_BattleTowerMultiBattleRoom_Movement_WalkInPlaceLeft
 	waitmovement 0
 	msgbox gStringVar4, MSGBOX_DEFAULT
 	waitmessage
-	tower_getopponentintro 1
+	special getintro
 	applymovement LOCALID_OPPONENT_2, BattleFrontier_BattleTowerMultiBattleRoom_Movement_WalkInPlaceLeft
 	waitmovement 0
 	msgbox gStringVar4, MSGBOX_DEFAULT
@@ -90,14 +90,14 @@ BattleFrontier_BattleTowerMultiBattleRoom_EventScript_OpponentsEnter:: @ 8248FB4
 	goto BattleFrontier_BattleTowerMultiBattleRoom_EventScript_DoTowerBattle
 
 BattleFrontier_BattleTowerMultiBattleRoom_EventScript_DoOpponentIntrosLink:: @ 8249026
-	tower_getopponentintro 0
+	special getintro
 	delay 15
 	applymovement LOCALID_OPPONENT_1, BattleFrontier_BattleTowerMultiBattleRoom_Movement_WalkInPlaceLeft
 	waitmovement 0
 	messageautoscroll gStringVar4
 	waitmessage
 	delay 48
-	tower_getopponentintro 1
+	special getintro
 	applymovement LOCALID_OPPONENT_2, BattleFrontier_BattleTowerMultiBattleRoom_Movement_WalkInPlaceLeft
 	waitmovement 0
 	messageautoscroll gStringVar4
@@ -144,8 +144,6 @@ BattleFrontier_BattleTowerMultiBattleRoom_EventScript_RestoreParty:: @ 8249121
 	frontier_setpartyorder FRONTIER_MULTI_PARTY_SIZE
 	compare VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_LINK_MULTIS
 	call_if_eq BattleFrontier_BattleTowerMultiBattleRoom_EventScript_249514
-	playfanfare MUS_HEAL
-	waitfanfare
 	special HealPlayerParty
 BattleFrontier_BattleTowerMultiBattleRoom_EventScript_AskReadyForOpponents:: @ 8249143
 	frontier_get FRONTIER_DATA_BATTLE_NUM
@@ -389,18 +387,18 @@ BattleFrontier_BattleTowerMultiBattleRoom_EventScript_249514:: @ 8249514
 	return
 
 BattleFrontier_BattleTowerMultiBattleRoom_Movement_PlayerEnterRoom: @ 8249518
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	face_right
 	step_end
 
 BattleFrontier_BattleTowerMultiBattleRoom_Movement_PartnerEnterRoom: @ 824951E
-	walk_left
-	walk_up
-	walk_up
-	walk_up
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	face_right
 	step_end
 
@@ -413,43 +411,43 @@ BattleFrontier_BattleTowerMultiBattleRoom_Movement_FaceBattle: @ 8249526
 	step_end
 
 BattleFrontier_BattleTowerMultiBattleRoom_Movement_Opponent1Enter: @ 8249528
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
 	face_left
 	step_end
 
 BattleFrontier_BattleTowerMultiBattleRoom_Movement_Opponent2Enter: @ 824952E
-	walk_right
-	walk_down
-	walk_down
-	walk_down
+	walk_fast_right
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
 	face_left
 	step_end
 
 BattleFrontier_BattleTowerMultiBattleRoom_Movement_Opponent2Exit: @ 8249534
-	walk_up
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	set_invisible
 	step_end
 
 BattleFrontier_BattleTowerMultiBattleRoom_Movement_Opponent1Exit: @ 8249539
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 BattleFrontier_BattleTowerMultiBattleRoom_Movement_AttendantApproachPlayer: @ 824953E
-	walk_right
-	walk_right
+	walk_fast_right
+	walk_fast_right
 	step_end
 
 BattleFrontier_BattleTowerMultiBattleRoom_Movement_AttendantReturnToPos: @ 8249541
-	walk_left
-	walk_left
+	walk_fast_left
+	walk_fast_left
 	walk_in_place_fastest_right
 	step_end
 
@@ -516,5 +514,5 @@ gText_LinkStandby3:: @ 824978D
 
 gText_YourPartnerHasRetired:: @ 824979B
 	.string "Your partner has retired.\p"
-	.string "Your BATTLE ROOM challenge\n"
+	.string "Your Battle Room challenge\n"
 	.string "will be canceled.$"

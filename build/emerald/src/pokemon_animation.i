@@ -1,6 +1,6 @@
-# 1 "src/pokemon_animation.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/pokemon_animation.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/pokemon_animation.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -3144,6 +3144,13 @@ void ClearIllusionMon(u32 battlerId);
 bool32 SetIllusionMon(struct Pokemon *mon, u32 battlerId);
 bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
 u8 GetBattleMoveSplit(u32 moveId);
+bool32 CanSleep(u8 battlerId);
+bool32 CanBePoisoned(u8 battlerId);
+bool32 CanBeBurned(u8 battlerId);
+bool32 CanBeParalyzed(u8 battlerId);
+bool32 CanBeFrozen(u8 battlerId);
+bool32 CanBeConfused(u8 battlerId);
+bool32 IsBattlerTerrainAffected(u8 battlerId, u32 terrainFlag);
 # 9 "include/battle.h" 2
 # 1 "include/battle_script_commands.h" 1
 # 9 "include/battle_script_commands.h"
@@ -3809,8 +3816,9 @@ struct BattleStruct
     u8 sameMoveTurns[4];
     u16 moveEffect2;
     u16 changedSpecies[6];
+ u8 abilityPopUpSpriteIds[4][2];
 };
-# 579 "include/battle.h"
+# 580 "include/battle.h"
 struct BattleScripting
 {
     s32 painSplitHp;
@@ -3846,6 +3854,7 @@ struct BattleScripting
     u16 moveEffect;
     u16 multihitMoveEffect;
     u8 illusionNickHack;
+    bool8 fixedPopup;
 };
 
 
@@ -3920,6 +3929,7 @@ struct BattleBarInfo
     s32 oldValue;
     s32 receivedValue;
     s32 currValue;
+ u8 oddFrame;
 };
 
 struct BattleSpriteData
@@ -4136,10 +4146,134 @@ void BlendPalette(u16 palOffset, u16 numEntries, u8 coeff, u16 blendColor);
 void DoBgAffineSet(struct BgAffineDstData *dest, u32 texX, u32 texY, s16 scrX, s16 scrY, s16 sx, s16 sy, u16 alpha);
 void CopySpriteTiles(u8 shape, u8 size, u8 *tiles, u16 *tilemap, u8 *output);
 # 9 "src/pokemon_animation.c" 2
-# 1 "include/constants/battle_anim.h" 1
+# 1 "include/data.h" 1
+
+
+
+# 1 "include/constants/moves.h" 1
+# 5 "include/data.h" 2
+
+
+
+struct MonCoords
+{
+
+
+    u8 size;
+    u8 y_offset;
+};
+
+struct TrainerMonNoItemDefaultMoves
+{
+    u16 iv;
+    u8 lvl;
+    u16 species;
+};
+
+struct TrainerMonItemDefaultMoves
+{
+    u16 iv;
+    u8 lvl;
+    u16 species;
+    u16 heldItem;
+};
+
+struct TrainerMonNoItemCustomMoves
+{
+    u16 iv;
+    u8 lvl;
+    u16 species;
+    u16 moves[4];
+};
+
+struct TrainerMonItemCustomMoves
+{
+    u16 iv;
+    u8 lvl;
+ u8 evs[6];
+    u16 species;
+    u16 heldItem;
+    u16 moves[4];
+};
+
+union TrainerMonPtr
+{
+    const struct TrainerMonNoItemDefaultMoves *NoItemDefaultMoves;
+    const struct TrainerMonNoItemCustomMoves *NoItemCustomMoves;
+    const struct TrainerMonItemDefaultMoves *ItemDefaultMoves;
+    const struct TrainerMonItemCustomMoves *ItemCustomMoves;
+};
+
+struct Trainer
+{
+             u8 partyFlags;
+             u8 trainerClass;
+             u8 encounterMusic_gender;
+             u8 trainerPic;
+             u8 trainerName[12];
+             u16 items[4];
+             bool8 doubleBattle;
+             u32 aiFlags;
+             u8 partySize;
+             union TrainerMonPtr party;
+};
+
+
+
+extern const u16 gUnknown_082FF1D8[];
+extern const u32 gUnknown_082FF1F8[];
+
+extern const struct SpriteFrameImage gUnknown_082FF3A8[];
+extern const struct SpriteFrameImage gUnknown_082FF3C8[];
+extern const struct SpriteFrameImage gUnknown_082FF3E8[];
+extern const struct SpriteFrameImage gUnknown_082FF408[];
+extern const struct SpriteFrameImage gTrainerBackPicTable_Brendan[];
+extern const struct SpriteFrameImage gTrainerBackPicTable_May[];
+extern const struct SpriteFrameImage gTrainerBackPicTable_Red[];
+extern const struct SpriteFrameImage gTrainerBackPicTable_Leaf[];
+extern const struct SpriteFrameImage gTrainerBackPicTable_RubySapphireBrendan[];
+extern const struct SpriteFrameImage gTrainerBackPicTable_RubySapphireMay[];
+extern const struct SpriteFrameImage gTrainerBackPicTable_Wally[];
+extern const struct SpriteFrameImage gTrainerBackPicTable_Steven[];
+
+extern const union AffineAnimCmd *const gUnknown_082FF618[];
+extern const union AffineAnimCmd *const gUnknown_082FF694[];
+extern const union AffineAnimCmd *const gUnknown_082FF6C0[];
+
+extern const union AnimCmd *const gUnknown_082FF70C[];
+extern const struct MonCoords gMonFrontPicCoords[];
+extern const struct MonCoords gMonBackPicCoords[];
+extern const struct CompressedSpriteSheet gMonBackPicTable[];
+extern const struct CompressedSpriteSheet gMonBackPicTableFemale[];
+extern const struct CompressedSpritePalette gMonPaletteTable[];
+extern const struct CompressedSpritePalette gMonPaletteTableFemale[];
+extern const struct CompressedSpritePalette gMonShinyPaletteTable[];
+extern const struct CompressedSpritePalette gMonShinyPaletteTableFemale[];
+extern const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[];
+extern const struct MonCoords gTrainerFrontPicCoords[];
+extern const struct CompressedSpriteSheet gTrainerFrontPicTable[];
+extern const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[];
+extern const union AnimCmd *const *const gTrainerBackAnimsPtrTable[];
+extern const struct MonCoords gTrainerBackPicCoords[];
+extern const struct CompressedSpriteSheet gTrainerBackPicTable[];
+extern const struct CompressedSpritePalette gTrainerBackPicPaletteTable[];
+
+extern const u8 gEnemyMonElevation[809 + 264 + 1];
+
+extern const union AnimCmd *const *const gMonFrontAnimsPtrTable[];
+extern const struct CompressedSpriteSheet gMonFrontPicTable[];
+extern const struct CompressedSpriteSheet gMonFrontPicTableFemale[];
+extern const bool8 SpeciesHasGenderDifference[809 + 264 + 1];
+
+extern const struct Trainer gTrainers[];
+extern const u8 gTrainerClassNames[][13];
+extern const u8 gSpeciesNames[][10 + 1];
+extern const u8 gMoveNames[747][12 + 1];
 # 10 "src/pokemon_animation.c" 2
-# 1 "include/constants/rgb.h" 1
+# 1 "include/constants/battle_anim.h" 1
 # 11 "src/pokemon_animation.c" 2
+# 1 "include/constants/rgb.h" 1
+# 12 "src/pokemon_animation.c" 2
 
 struct UnkAnimStruct
 {
@@ -4704,6 +4838,505 @@ static const u8 sSpeciesToBackAnimSet[809 + 264 + 1] =
     [385] = 0x11,
     [386] = 0x14,
     [358] = 0x11,
+[387] = 0x08,
+[388] = 0x08,
+[389] = 0x08,
+[390] = 0x08,
+[391] = 0x08,
+[392] = 0x08,
+[393] = 0x08,
+[394] = 0x08,
+[395] = 0x08,
+[396] = 0x08,
+[397] = 0x08,
+[398] = 0x08,
+[399] = 0x08,
+[400] = 0x08,
+[401] = 0x08,
+[402] = 0x08,
+[403] = 0x08,
+[404] = 0x08,
+[405] = 0x08,
+[406] = 0x08,
+[407] = 0x08,
+[408] = 0x08,
+[409] = 0x08,
+[410] = 0x08,
+[411] = 0x08,
+[412] = 0x08,
+[413] = 0x08,
+[414] = 0x08,
+[415] = 0x08,
+[416] = 0x08,
+[417] = 0x08,
+[418] = 0x08,
+[419] = 0x08,
+[420] = 0x08,
+[421] = 0x08,
+[422] = 0x08,
+[423] = 0x08,
+[424] = 0x08,
+[425] = 0x08,
+[426] = 0x08,
+[427] = 0x08,
+[428] = 0x08,
+[429] = 0x08,
+[430] = 0x08,
+[431] = 0x08,
+[432] = 0x08,
+[433] = 0x08,
+[434] = 0x08,
+[435] = 0x08,
+[436] = 0x08,
+[437] = 0x08,
+[438] = 0x08,
+[439] = 0x08,
+[440] = 0x08,
+[441] = 0x08,
+[442] = 0x08,
+[443] = 0x08,
+[444] = 0x08,
+[445] = 0x08,
+[446] = 0x08,
+[447] = 0x08,
+[448] = 0x08,
+[449] = 0x08,
+[450] = 0x08,
+[451] = 0x08,
+[452] = 0x08,
+[453] = 0x08,
+[454] = 0x08,
+[455] = 0x08,
+[456] = 0x08,
+[457] = 0x08,
+[458] = 0x08,
+[459] = 0x08,
+[460] = 0x08,
+[461] = 0x08,
+[462] = 0x08,
+[463] = 0x08,
+[464] = 0x08,
+[465] = 0x08,
+[466] = 0x08,
+[467] = 0x08,
+[468] = 0x08,
+[469] = 0x08,
+[470] = 0x08,
+[471] = 0x08,
+[472] = 0x08,
+[473] = 0x08,
+[474] = 0x08,
+[475] = 0x08,
+[476] = 0x08,
+[477] = 0x08,
+[478] = 0x08,
+[479] = 0x08,
+[480] = 0x08,
+[481] = 0x08,
+[482] = 0x08,
+[483] = 0x08,
+[484] = 0x08,
+[485] = 0x08,
+[486] = 0x08,
+[487] = 0x08,
+[488] = 0x08,
+[489] = 0x08,
+[490] = 0x08,
+[491] = 0x08,
+[492] = 0x08,
+[493] = 0x08,
+[494] = 0x08,
+[495] = 0x08,
+[496] = 0x08,
+[497] = 0x08,
+[498] = 0x08,
+[499] = 0x08,
+[500] = 0x08,
+[501] = 0x08,
+[502] = 0x08,
+[503] = 0x08,
+[504] = 0x08,
+[505] = 0x08,
+[506] = 0x08,
+[507] = 0x08,
+[508] = 0x08,
+[509] = 0x08,
+[510] = 0x08,
+[511] = 0x08,
+[512] = 0x08,
+[513] = 0x08,
+[514] = 0x08,
+[515] = 0x08,
+[516] = 0x08,
+[517] = 0x08,
+[518] = 0x08,
+[519] = 0x08,
+[520] = 0x08,
+[521] = 0x08,
+[522] = 0x08,
+[523] = 0x08,
+[524] = 0x08,
+[525] = 0x08,
+[526] = 0x08,
+[527] = 0x08,
+[528] = 0x08,
+[529] = 0x08,
+[530] = 0x08,
+[531] = 0x08,
+[532] = 0x08,
+[533] = 0x08,
+[534] = 0x08,
+[535] = 0x08,
+[536] = 0x08,
+[537] = 0x08,
+[538] = 0x08,
+[539] = 0x08,
+[540] = 0x08,
+[541] = 0x08,
+[542] = 0x08,
+[543] = 0x08,
+[544] = 0x08,
+[545] = 0x08,
+[546] = 0x08,
+[547] = 0x08,
+[548] = 0x08,
+[549] = 0x08,
+[550] = 0x08,
+[551] = 0x08,
+[552] = 0x08,
+[553] = 0x08,
+[554] = 0x08,
+[555] = 0x08,
+[556] = 0x08,
+[557] = 0x08,
+[558] = 0x08,
+[559] = 0x08,
+[560] = 0x08,
+[561] = 0x08,
+[562] = 0x08,
+[563] = 0x08,
+[564] = 0x08,
+[565] = 0x08,
+[566] = 0x08,
+[567] = 0x08,
+[568] = 0x08,
+[569] = 0x08,
+[570] = 0x08,
+[571] = 0x08,
+[572] = 0x08,
+[573] = 0x08,
+[574] = 0x08,
+[575] = 0x08,
+[576] = 0x08,
+[577] = 0x08,
+[578] = 0x08,
+[579] = 0x08,
+[580] = 0x08,
+[581] = 0x08,
+[582] = 0x08,
+[583] = 0x08,
+[584] = 0x08,
+[585] = 0x08,
+[586] = 0x08,
+[587] = 0x08,
+[588] = 0x08,
+[589] = 0x08,
+[590] = 0x08,
+[591] = 0x08,
+[592] = 0x08,
+[593] = 0x08,
+[594] = 0x08,
+[595] = 0x08,
+[596] = 0x08,
+[597] = 0x08,
+[598] = 0x08,
+[599] = 0x08,
+[600] = 0x08,
+[601] = 0x08,
+[602] = 0x08,
+[603] = 0x08,
+[604] = 0x08,
+[605] = 0x08,
+[606] = 0x08,
+[607] = 0x08,
+[608] = 0x08,
+[609] = 0x08,
+[610] = 0x08,
+[611] = 0x08,
+[612] = 0x08,
+[613] = 0x08,
+[614] = 0x08,
+[615] = 0x08,
+[616] = 0x08,
+[617] = 0x08,
+[618] = 0x08,
+[619] = 0x08,
+[620] = 0x08,
+[621] = 0x08,
+[622] = 0x08,
+[623] = 0x08,
+[624] = 0x08,
+[625] = 0x08,
+[626] = 0x08,
+[627] = 0x08,
+[628] = 0x08,
+[629] = 0x08,
+[630] = 0x08,
+[631] = 0x08,
+[632] = 0x08,
+[633] = 0x08,
+[634] = 0x08,
+[635] = 0x08,
+[636] = 0x08,
+[637] = 0x08,
+[638] = 0x08,
+[639] = 0x08,
+[640] = 0x08,
+[641] = 0x08,
+[642] = 0x08,
+[643] = 0x08,
+[644] = 0x08,
+[645] = 0x08,
+[646] = 0x08,
+[647] = 0x08,
+[648] = 0x08,
+[649] = 0x08,
+[650] = 0x08,
+[651] = 0x08,
+[652] = 0x08,
+[653] = 0x08,
+[654] = 0x08,
+[655] = 0x08,
+[656] = 0x08,
+[657] = 0x08,
+[658] = 0x08,
+[659] = 0x08,
+[660] = 0x08,
+[661] = 0x08,
+[662] = 0x08,
+[663] = 0x08,
+[664] = 0x08,
+[665] = 0x08,
+[666] = 0x08,
+[667] = 0x08,
+[668] = 0x08,
+[669] = 0x08,
+[670] = 0x08,
+[671] = 0x08,
+[672] = 0x08,
+[673] = 0x08,
+[674] = 0x08,
+[675] = 0x08,
+[676] = 0x08,
+[677] = 0x08,
+[678] = 0x08,
+[679] = 0x08,
+[680] = 0x08,
+[681] = 0x08,
+[682] = 0x08,
+[683] = 0x08,
+[684] = 0x08,
+[685] = 0x08,
+[686] = 0x08,
+[687] = 0x08,
+[688] = 0x08,
+[689] = 0x08,
+[690] = 0x08,
+[691] = 0x08,
+[692] = 0x08,
+[693] = 0x08,
+[694] = 0x08,
+[695] = 0x08,
+[696] = 0x08,
+[697] = 0x08,
+[698] = 0x08,
+[699] = 0x08,
+[700] = 0x08,
+[701] = 0x08,
+[702] = 0x08,
+[703] = 0x08,
+[704] = 0x08,
+[705] = 0x08,
+[706] = 0x08,
+[707] = 0x08,
+[708] = 0x08,
+[709] = 0x08,
+[710] = 0x08,
+[711] = 0x08,
+[712] = 0x08,
+[713] = 0x08,
+[714] = 0x08,
+[715] = 0x08,
+[716] = 0x08,
+[717] = 0x08,
+[718] = 0x08,
+[719] = 0x08,
+[720] = 0x08,
+[721] = 0x08,
+[722] = 0x08,
+[723] = 0x08,
+[724] = 0x08,
+[725] = 0x08,
+[726] = 0x08,
+[727] = 0x08,
+[728] = 0x08,
+[729] = 0x08,
+[730] = 0x08,
+[731] = 0x08,
+[732] = 0x08,
+[733] = 0x08,
+[734] = 0x08,
+[735] = 0x08,
+[736] = 0x08,
+[737] = 0x08,
+[738] = 0x08,
+[739] = 0x08,
+[740] = 0x08,
+[741] = 0x08,
+[742] = 0x08,
+[743] = 0x08,
+[744] = 0x08,
+[745] = 0x08,
+[746] = 0x08,
+[747] = 0x08,
+[748] = 0x08,
+[749] = 0x08,
+[750] = 0x08,
+[751] = 0x08,
+[752] = 0x08,
+[753] = 0x08,
+[754] = 0x08,
+[755] = 0x08,
+[756] = 0x08,
+[757] = 0x08,
+[758] = 0x08,
+[759] = 0x08,
+[760] = 0x08,
+[761] = 0x08,
+[762] = 0x08,
+[763] = 0x08,
+[764] = 0x08,
+[765] = 0x08,
+[766] = 0x08,
+[767] = 0x08,
+[768] = 0x08,
+[769] = 0x08,
+[770] = 0x08,
+[771] = 0x08,
+[772] = 0x08,
+[773] = 0x08,
+[774] = 0x08,
+[775] = 0x08,
+[776] = 0x08,
+[777] = 0x08,
+[778] = 0x08,
+[779] = 0x08,
+[780] = 0x08,
+[781] = 0x08,
+[782] = 0x08,
+[783] = 0x08,
+[784] = 0x08,
+[785] = 0x08,
+[786] = 0x08,
+[787] = 0x08,
+[788] = 0x08,
+[789] = 0x08,
+[790] = 0x08,
+[791] = 0x08,
+[792] = 0x08,
+[793] = 0x08,
+[794] = 0x08,
+[795] = 0x08,
+[796] = 0x08,
+[797] = 0x08,
+[798] = 0x08,
+[799] = 0x08,
+[800] = 0x08,
+[801] = 0x08,
+[802] = 0x08,
+[803] = 0x08,
+[804] = 0x08,
+[805] = 0x08,
+[806] = 0x08,
+[807] = 0x08,
+[808] = 0x08,
+[809] = 0x08,
+[809 + 51] = 0x08,
+[809 + 52] = 0x08,
+[809 + 53] = 0x08,
+[809 + 54] = 0x08,
+[809 + 55] = 0x08,
+[809 + 56] = 0x08,
+[809 + 57] = 0x08,
+[809 + 58] = 0x08,
+[809 + 59] = 0x08,
+[809 + 60] = 0x08,
+[809 + 61] = 0x08,
+[809 + 62] = 0x08,
+[809 + 63] = 0x08,
+[809 + 64] = 0x08,
+[809 + 65] = 0x08,
+[809 + 66] = 0x08,
+[809 + 67] = 0x08,
+[809 + 68] = 0x08,
+[809 + 147] = 0x08,
+[809 + 152] = 0x08,
+[809 + 153] = 0x08,
+[809 + 154] = 0x08,
+[809 + 155] = 0x08,
+[809 + 156] = 0x08,
+[809 + 157] = 0x08,
+[809 + 168] = 0x08,
+[809 + 169] = 0x08,
+[809 + 170] = 0x08,
+[809 + 171] = 0x08,
+[809 + 172] = 0x08,
+[809 + 173] = 0x08,
+[809 + 174] = 0x08,
+[809 + 175] = 0x08,
+[809 + 176] = 0x08,
+[809 + 177] = 0x08,
+[809 + 178] = 0x08,
+[809 + 179] = 0x08,
+[809 + 180] = 0x08,
+[809 + 181] = 0x08,
+[809 + 182] = 0x08,
+[809 + 183] = 0x08,
+[809 + 184] = 0x08,
+[809 + 185] = 0x08,
+[809 + 186] = 0x08,
+[809 + 196] = 0x08,
+[809 + 197] = 0x08,
+[809 + 198] = 0x08,
+[809 + 199] = 0x08,
+[809 + 200] = 0x08,
+[809 + 201] = 0x08,
+[809 + 202] = 0x08,
+[809 + 203] = 0x08,
+[809 + 204] = 0x08,
+[809 + 205] = 0x08,
+[809 + 206] = 0x08,
+[809 + 207] = 0x08,
+[809 + 208] = 0x08,
+[809 + 209] = 0x08,
+[809 + 210] = 0x08,
+[809 + 211] = 0x08,
+[809 + 212] = 0x08,
+[809 + 213] = 0x08,
+[809 + 214] = 0x08,
+[809 + 215] = 0x08,
+[809 + 216] = 0x08,
+[809 + 218] = 0x08,
+[809 + 219] = 0x08,
+[809 + 220] = 0x08,
+[809 + 221] = 0x08,
+[809 + 222] = 0x08,
+[809 + 223] = 0x08,
+[809 + 224] = 0x08,
+[809 + 225] = 0x08,
+[809 + 226] = 0x08,
+[809 + 227] = 0x08,
+[809 + 228] = 0x08,
 };
 
 static const u8 sUnknown_0860AA64[][2] =
@@ -4996,7 +5629,7 @@ u8 GetSpeciesBackAnimSet(u16 species)
     else
         return 0;
 }
-# 886 "src/pokemon_animation.c"
+# 1386 "src/pokemon_animation.c"
 static void Task_HandleMonAnimation(u8 taskId)
 {
     u32 i;
@@ -5050,12 +5683,12 @@ void LaunchAnimationTaskForBackSprite(struct Sprite *sprite, u8 backAnimSet)
     gTasks[taskId].data[2] = (u32)(sprite);
 
     battlerId = sprite->data[0];
-    nature = GetNature(&gPlayerParty[gBattlerPartyIndexes[battlerId]]);
+    nature = GetNature(&gPlayerParty[gBattlerPartyIndexes[battlerId]], 0);
 
     animId = 3 * backAnimSet + sBackAnimNatureModTable[nature];
     gTasks[taskId].data[3] = sBackAnimationIds[animId];
 }
-# 952 "src/pokemon_animation.c"
+# 1452 "src/pokemon_animation.c"
 void SetSpriteCB_MonAnimDummy(struct Sprite *sprite)
 {
     sprite->callback = MonAnimDummySpriteCallback;
@@ -5153,6 +5786,12 @@ static void sub_817F77C(struct Sprite *sprite)
         FreeOamMatrix(sprite->oam.matrixNum);
         sprite->oam.matrixNum |= (sprite->hFlip << 3);
         sprite->oam.affineMode = 0;
+    }
+    else
+    {
+
+
+        sprite->affineAnims = gUnknown_082FF694;
     }
 }
 

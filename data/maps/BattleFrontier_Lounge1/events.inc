@@ -8,7 +8,7 @@ BattleFrontier_Lounge1_ObjectEvents:
 	object_event 3, OBJ_EVENT_GFX_BOY_2, 0, 5, 4, 0, MOVEMENT_TYPE_WANDER_AROUND, 2, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_Lounge1_EventScript_Boy2, 0
 
 BattleFrontier_Lounge1_MapWarps:
-	warp_def 4, 9, 0, 5, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
+	warp_def 4, 9, 0, 0, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
 
 BattleFrontier_Lounge1_MapEvents::
 	map_events BattleFrontier_Lounge1_ObjectEvents, BattleFrontier_Lounge1_MapWarps, 0x0, 0x0

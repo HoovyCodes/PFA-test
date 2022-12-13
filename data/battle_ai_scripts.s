@@ -57,7 +57,9 @@ AI_CBM_PowderMoves:
 	if_equal HOLD_EFFECT_SAFETY_GOOGLES Score_Minus10
 
 AI_CBM_CheckIfNegatesType:
-	if_type_effectiveness AI_EFFECTIVENESS_x0, Score_Minus10
+	if_type_effectiveness AI_EFFECTIVENESS_x0, Score_Minus30
+	if_type_effectiveness AI_EFFECTIVENESS_x0_25, Score_Minus30
+	if_type_effectiveness AI_EFFECTIVENESS_x0_5, Score_Minus5
 	get_ability AI_USER
 	if_equal ABILITY_MOLD_BREAKER, AI_CheckBadMove_CheckEffect
 	if_equal ABILITY_TERAVOLT, AI_CheckBadMove_CheckEffect
@@ -371,7 +373,7 @@ AI_CBM_Synchronoise:
 	goto Score_Minus10
 	
 AI_CBM_Defog:
-	if_side_affecting AI_USER, SIDE_STATUS_SPIKES | SIDE_STATUS_STEALTH_ROCK | SIDE_STATUS_TOXIC_SPIKES | SIDE_STATUS_STICKY_WEB, AI_Ret
+	if_side_affecting AI_USER, SIDE_STATUS_SPIKES | SIDE_STATUS_STEALTH_ROCK | SIDE_STATUS_TOXIC_SPIKES | SIDE_STATUS_STICKY_WEB, Score_Plus10
 	goto AI_CBM_EvasionDown
 	
 AI_CBM_PsychicShift:
@@ -629,7 +631,8 @@ AI_CBM_AccDown: @ 82DC3D9
 	goto CheckIfAbilityBlocksStatChange
 
 AI_CBM_EvasionDown: @ 82DC3EE
-	if_stat_level_equal AI_TARGET, STAT_EVASION, MIN_STAT_STAGE, Score_Minus10
+	if_stat_level_equal AI_TARGET, STAT_EVASION, DEFAULT_STAT_STAGE, Score_Minus30
+	end
 
 CheckIfAbilityBlocksStatChange: @ 82DC3F6
 	get_ability AI_TARGET
@@ -719,7 +722,7 @@ AI_CBM_Confuse: @ 82DC51D
 	end
 
 AI_CBM_Reflect: @ 82DC53A
-	if_side_affecting AI_USER, SIDE_STATUS_REFLECT, Score_Minus8
+	if_side_affecting AI_USER, SIDE_STATUS_REFLECT, Score_Minus10
 	end
 
 AI_CBM_Paralyze: @ 82DC545
@@ -885,6 +888,7 @@ AI_CBM_HelpingHand: @ 82DC6E3
 AI_CBM_TrickAndKnockOff: @ 82DC6EB
 	get_ability AI_TARGET
 	if_equal ABILITY_STICKY_HOLD, Score_Minus10
+	goto Score_Plus5
 	end
 
 AI_CBM_Ingrain: @ 82DC6F4
@@ -1874,7 +1878,7 @@ AI_CV_Heal2:
 	if_random_less_than 70, AI_CV_Heal5
 
 AI_CV_Heal3:
-	score -3
+	score -30
 	goto AI_CV_Heal_End
 
 AI_CV_Heal4:

@@ -127,7 +127,7 @@ sLvlOpen_Mons1:
 	.short	0x5f
 	.short	0x22
 	.short	0x3a
-	.short	0x164
+	.short	0x1dd
 	.byte	0x5
 	.space	1
 	.short	0x105
@@ -152,11 +152,11 @@ sLvlOpen_Mons2:
 	.short	0x5f
 	.short	0x22
 	.short	0x3a
-	.short	0x65
+	.short	0x309
 	.byte	0x5
 	.space	1
-	.short	0x99
-	.short	0x78
+	.short	0x261
+	.short	0x254
 	.short	0x57
 	.short	0x5c
 	.size	 sLvlOpen_Mons2,36
@@ -177,7 +177,7 @@ sLvlOpen_Mons3:
 	.short	0x5f
 	.short	0x22
 	.short	0x3a
-	.short	0x11e
+	.short	0x2f4
 	.byte	0x5
 	.space	1
 	.short	0x93
@@ -1457,28 +1457,1382 @@ HealOneOrTwoMons:
 	.word	gSpecialVar_Result
 .Lfe15:
 	.size	 HealOneOrTwoMons,.Lfe15-HealOneOrTwoMons
+	.section .rodata
+	.type	 sText_Dia0,object
+sText_Dia0:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xad
+	.byte	0xfe
+	.byte	0x0
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xe4
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia0,35
+	.type	 sText_Dia1,object
+sText_Dia1:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia1,28
+	.type	 sText_Dia2,object
+sText_Dia2:
+	.byte	0xd1
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xac
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia2,23
+	.type	 sText_Dia3,object
+sText_Dia3:
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd9
+	.byte	0xec
+	.byte	0xd7
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia3,30
+	.type	 sText_Dia4,object
+sText_Dia4:
+	.byte	0xbe
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0xac
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia4,25
+	.type	 sText_Dia5,object
+sText_Dia5:
+	.byte	0xc3
+	.byte	0xe8
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xeb
+	.byte	0xda
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia5,30
+	.type	 sText_Dia6,object
+sText_Dia6:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xda
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe4
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia6,29
+	.type	 sText_Dia7,object
+sText_Dia7:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe5
+	.byte	0xe9
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xde
+	.byte	0xe3
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia7,31
+	.type	 sText_Dia8,object
+sText_Dia8:
+	.byte	0xc6
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xdf
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0x0
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia8,28
+	.type	 sText_Dia9,object
+sText_Dia9:
+	.byte	0xcc
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe9
+	.byte	0xe4
+	.byte	0x0
+	.byte	0xed
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xac
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia9,24
+	.type	 sText_Dia10,object
+sText_Dia10:
+	.byte	0xc9
+	.byte	0xdc
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xab
+	.byte	0x0
+	.byte	0xd1
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xac
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia10,21
+	.type	 sText_Dia11,object
+sText_Dia11:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xad
+	.byte	0xad
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia11,42
+	.type	 sText_Dia12,object
+sText_Dia12:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdf
+	.byte	0x0
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe9
+	.byte	0xe4
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia12,27
+	.type	 sText_Dia13,object
+sText_Dia13:
+	.byte	0xd1
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xd8
+	.byte	0x0
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xec
+	.byte	0xe8
+	.byte	0xac
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia13,24
+	.type	 sText_Dia14,object
+sText_Dia14:
+	.byte	0xcc
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe9
+	.byte	0xe4
+	.byte	0x0
+	.byte	0xed
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xac
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia14,24
+	.type	 sText_Dia15,object
+sText_Dia15:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xab
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia15,33
+	.type	 sText_Dia16,object
+sText_Dia16:
+	.byte	0xd1
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0x0
+	.byte	0xe9
+	.byte	0xe4
+	.byte	0xac
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia16,29
+	.type	 sText_Dia17,object
+sText_Dia17:
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xbc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xca
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xab
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia17,29
+	.type	 sText_Dia18,object
+sText_Dia18:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xab
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia18,29
+	.type	 sText_Dia19,object
+sText_Dia19:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xdf
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xda
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xc9
+	.byte	0xc5
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia19,29
+	.type	 sText_Dia20,object
+sText_Dia20:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe4
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xec
+	.byte	0xe8
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia20,29
+	.type	 sText_Dia21,object
+sText_Dia21:
+	.byte	0xc3
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe8
+	.byte	0xac
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia21,30
+	.type	 sText_Dia22,object
+sText_Dia22:
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xed
+	.byte	0x0
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xed
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xed
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xdc
+	.byte	0xac
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia22,29
+	.type	 sText_Dia23,object
+sText_Dia23:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe4
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia23,24
+	.type	 sText_Dia24,object
+sText_Dia24:
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xed
+	.byte	0x0
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe9
+	.byte	0xe4
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia24,35
+	.type	 sText_Dia25,object
+sText_Dia25:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xab
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia25,27
+	.type	 sText_Dia26,object
+sText_Dia26:
+	.byte	0xc1
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xad
+	.byte	0x0
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia26,28
+	.type	 sText_Dia27,object
+sText_Dia27:
+	.byte	0xc3
+	.byte	0xe8
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xda
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xad
+	.byte	0xad
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia27,35
+	.type	 sText_Dia28,object
+sText_Dia28:
+	.byte	0xbe
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xcd
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xae
+	.byte	0xe8
+	.byte	0xed
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xac
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia28,26
+	.type	 sText_Dia29,object
+sText_Dia29:
+	.byte	0xbf
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xed
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia29,31
+	.type	 sText_Dia30,object
+sText_Dia30:
+	.byte	0xbe
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xed
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdf
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xed
+	.byte	0xac
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia30,27
+	.type	 sText_Dia31,object
+sText_Dia31:
+	.byte	0xd1
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xb4
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xec
+	.byte	0xe8
+	.byte	0xac
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia31,18
+	.type	 sText_Dia32,object
+sText_Dia32:
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xde
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xda
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xab
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia32,23
+	.type	 sText_Dia33,object
+sText_Dia33:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xde
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xad
+	.byte	0xad
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia33,27
+	.type	 sText_Dia34,object
+sText_Dia34:
+	.byte	0xd3
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xeb
+	.byte	0xab
+	.byte	0x0
+	.byte	0xce
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe4
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xe4
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia34,35
+	.type	 sText_Dia35,object
+sText_Dia35:
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xd6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xed
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia35,33
+	.type	 sText_Dia36,object
+sText_Dia36:
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xb4
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xec
+	.byte	0xe8
+	.byte	0xac
+	.byte	0x0
+	.byte	0xc3
+	.byte	0x0
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0xad
+	.byte	0xad
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia36,37
+	.type	 sText_Dia37,object
+sText_Dia37:
+	.byte	0xd1
+	.byte	0xd5
+	.byte	0xd5
+	.byte	0xdc
+	.byte	0xab
+	.byte	0x0
+	.byte	0xc3
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xab
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia37,27
+	.type	 sText_Dia38,object
+sText_Dia38:
+	.byte	0xc7
+	.byte	0xed
+	.byte	0x0
+	.byte	0xca
+	.byte	0xe3
+	.byte	0xdf
+	.byte	0x1b
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd8
+	.byte	0xad
+	.byte	0xad
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia38,29
+	.type	 sText_Dia39,object
+sText_Dia39:
+	.byte	0xc7
+	.byte	0xed
+	.byte	0x0
+	.byte	0xca
+	.byte	0xe3
+	.byte	0xdf
+	.byte	0x1b
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xe4
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xad
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia39,35
+	.type	 sText_Dia40,object
+sText_Dia40:
+	.byte	0xc6
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xab
+	.byte	0x0
+	.byte	0xc6
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xab
+	.byte	0x0
+	.byte	0xc3
+	.byte	0xb4
+	.byte	0xe1
+	.byte	0x0
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0x0
+	.byte	0xd5
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xab
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia40,33
+	.type	 sText_Dia41,object
+sText_Dia41:
+	.byte	0xce
+	.byte	0xe3
+	.byte	0xec
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0x0
+	.byte	0xd5
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd6
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xb8
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe2
+	.byte	0xb4
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xac
+	.byte	0xff
+	.byte	0xff
+	.size	 sText_Dia41,38
+.text
 	.align	2, 0
 	.type	 BufferNPCMessage,function
 	.thumb_func
 BufferNPCMessage:
 	push	{lr}
-	ldr	r0, .L157
+	ldr	r0, .L202
 	ldr	r0, [r0]
-	ldr	r1, .L157+0x4
+	ldr	r1, .L202+0x4
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	cmp	r0, #0x4
 	bhi	.L153	@cond_branch
-	ldr	r1, .L157+0x8
-	ldr	r0, .L157+0xc
+	ldr	r1, .L202+0x8
+	ldr	r0, .L202+0xc
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldrb	r1, [r0, #0x2]
+	ldrb	r0, [r0, #0x2]
 	b	.L154
-.L158:
+.L203:
 	.align	2, 0
-.L157:
+.L202:
 	.word	gSaveBlock2Ptr
 	.word	0xcb2
 	.word	sNPCTable
@@ -1486,40 +2840,508 @@ BufferNPCMessage:
 .L153:
 	cmp	r0, #0xa
 	bhi	.L155	@cond_branch
-	ldr	r1, .L159
-	ldr	r0, .L159+0x4
+	ldr	r1, .L204
+	ldr	r0, .L204+0x4
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldrb	r1, [r0, #0x3]
+	ldrb	r0, [r0, #0x3]
 	b	.L154
-.L160:
+.L205:
 	.align	2, 0
-.L159:
+.L204:
 	.word	sNPCTable
 	.word	sNpcId
 .L155:
-	ldr	r1, .L161
-	ldr	r0, .L161+0x4
+	ldr	r1, .L206
+	ldr	r0, .L206+0x4
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldrb	r1, [r0, #0x4]
+	ldrb	r0, [r0, #0x4]
 .L154:
-	lsl	r0, r1, #0x1
-	add	r0, r0, r1
+	cmp	r0, #0x29
+	bls	.LCB1003
+	b	.L157	@long jump
+.LCB1003:
 	lsl	r0, r0, #0x2
-	ldr	r1, .L161+0x8
+	ldr	r1, .L206+0x8
 	add	r0, r0, r1
-	bl	FrontierSpeechToString
-	pop	{r0}
-	bx	r0
-.L162:
+	ldr	r0, [r0]
+	mov	pc, r0
+.L207:
 	.align	2, 0
-.L161:
+.L206:
 	.word	sNPCTable
 	.word	sNpcId
-	.word	sNPCSpeeches
+	.word	.L200
+	.align	2, 0
+	.align	2, 0
+.L200:
+	.word	.L158
+	.word	.L159
+	.word	.L160
+	.word	.L161
+	.word	.L162
+	.word	.L163
+	.word	.L164
+	.word	.L165
+	.word	.L166
+	.word	.L167
+	.word	.L168
+	.word	.L169
+	.word	.L170
+	.word	.L171
+	.word	.L172
+	.word	.L173
+	.word	.L174
+	.word	.L175
+	.word	.L176
+	.word	.L177
+	.word	.L178
+	.word	.L179
+	.word	.L180
+	.word	.L181
+	.word	.L182
+	.word	.L183
+	.word	.L184
+	.word	.L185
+	.word	.L186
+	.word	.L187
+	.word	.L188
+	.word	.L189
+	.word	.L190
+	.word	.L191
+	.word	.L192
+	.word	.L193
+	.word	.L194
+	.word	.L195
+	.word	.L196
+	.word	.L197
+	.word	.L198
+	.word	.L199
+.L158:
+	ldr	r0, .L208
+	ldr	r1, .L208+0x4
+	bl	StringCopy
+	b	.L157
+.L209:
+	.align	2, 0
+.L208:
+	.word	gStringVar4
+	.word	sText_Dia0
+.L159:
+	ldr	r0, .L210
+	ldr	r1, .L210+0x4
+	bl	StringCopy
+	b	.L157
+.L211:
+	.align	2, 0
+.L210:
+	.word	gStringVar4
+	.word	sText_Dia1
+.L160:
+	ldr	r0, .L212
+	ldr	r1, .L212+0x4
+	bl	StringCopy
+	b	.L157
+.L213:
+	.align	2, 0
+.L212:
+	.word	gStringVar4
+	.word	sText_Dia2
+.L161:
+	ldr	r0, .L214
+	ldr	r1, .L214+0x4
+	bl	StringCopy
+	b	.L157
+.L215:
+	.align	2, 0
+.L214:
+	.word	gStringVar4
+	.word	sText_Dia3
+.L162:
+	ldr	r0, .L216
+	ldr	r1, .L216+0x4
+	bl	StringCopy
+	b	.L157
+.L217:
+	.align	2, 0
+.L216:
+	.word	gStringVar4
+	.word	sText_Dia4
+.L163:
+	ldr	r0, .L218
+	ldr	r1, .L218+0x4
+	bl	StringCopy
+	b	.L157
+.L219:
+	.align	2, 0
+.L218:
+	.word	gStringVar4
+	.word	sText_Dia5
+.L164:
+	ldr	r0, .L220
+	ldr	r1, .L220+0x4
+	bl	StringCopy
+	b	.L157
+.L221:
+	.align	2, 0
+.L220:
+	.word	gStringVar4
+	.word	sText_Dia6
+.L165:
+	ldr	r0, .L222
+	ldr	r1, .L222+0x4
+	bl	StringCopy
+	b	.L157
+.L223:
+	.align	2, 0
+.L222:
+	.word	gStringVar4
+	.word	sText_Dia7
+.L166:
+	ldr	r0, .L224
+	ldr	r1, .L224+0x4
+	bl	StringCopy
+	b	.L157
+.L225:
+	.align	2, 0
+.L224:
+	.word	gStringVar4
+	.word	sText_Dia8
+.L167:
+	ldr	r0, .L226
+	ldr	r1, .L226+0x4
+	bl	StringCopy
+	b	.L157
+.L227:
+	.align	2, 0
+.L226:
+	.word	gStringVar4
+	.word	sText_Dia9
+.L168:
+	ldr	r0, .L228
+	ldr	r1, .L228+0x4
+	bl	StringCopy
+	b	.L157
+.L229:
+	.align	2, 0
+.L228:
+	.word	gStringVar4
+	.word	sText_Dia10
+.L169:
+	ldr	r0, .L230
+	ldr	r1, .L230+0x4
+	bl	StringCopy
+	b	.L157
+.L231:
+	.align	2, 0
+.L230:
+	.word	gStringVar4
+	.word	sText_Dia11
+.L170:
+	ldr	r0, .L232
+	ldr	r1, .L232+0x4
+	bl	StringCopy
+	b	.L157
+.L233:
+	.align	2, 0
+.L232:
+	.word	gStringVar4
+	.word	sText_Dia12
+.L171:
+	ldr	r0, .L234
+	ldr	r1, .L234+0x4
+	bl	StringCopy
+	b	.L157
+.L235:
+	.align	2, 0
+.L234:
+	.word	gStringVar4
+	.word	sText_Dia13
+.L172:
+	ldr	r0, .L236
+	ldr	r1, .L236+0x4
+	bl	StringCopy
+	b	.L157
+.L237:
+	.align	2, 0
+.L236:
+	.word	gStringVar4
+	.word	sText_Dia14
+.L173:
+	ldr	r0, .L238
+	ldr	r1, .L238+0x4
+	bl	StringCopy
+	b	.L157
+.L239:
+	.align	2, 0
+.L238:
+	.word	gStringVar4
+	.word	sText_Dia15
+.L174:
+	ldr	r0, .L240
+	ldr	r1, .L240+0x4
+	bl	StringCopy
+	b	.L157
+.L241:
+	.align	2, 0
+.L240:
+	.word	gStringVar4
+	.word	sText_Dia16
+.L175:
+	ldr	r0, .L242
+	ldr	r1, .L242+0x4
+	bl	StringCopy
+	b	.L157
+.L243:
+	.align	2, 0
+.L242:
+	.word	gStringVar4
+	.word	sText_Dia17
+.L176:
+	ldr	r0, .L244
+	ldr	r1, .L244+0x4
+	bl	StringCopy
+	b	.L157
+.L245:
+	.align	2, 0
+.L244:
+	.word	gStringVar4
+	.word	sText_Dia18
+.L177:
+	ldr	r0, .L246
+	ldr	r1, .L246+0x4
+	bl	StringCopy
+	b	.L157
+.L247:
+	.align	2, 0
+.L246:
+	.word	gStringVar4
+	.word	sText_Dia19
+.L178:
+	ldr	r0, .L248
+	ldr	r1, .L248+0x4
+	bl	StringCopy
+	b	.L157
+.L249:
+	.align	2, 0
+.L248:
+	.word	gStringVar4
+	.word	sText_Dia20
+.L179:
+	ldr	r0, .L250
+	ldr	r1, .L250+0x4
+	bl	StringCopy
+	b	.L157
+.L251:
+	.align	2, 0
+.L250:
+	.word	gStringVar4
+	.word	sText_Dia21
+.L180:
+	ldr	r0, .L252
+	ldr	r1, .L252+0x4
+	bl	StringCopy
+	b	.L157
+.L253:
+	.align	2, 0
+.L252:
+	.word	gStringVar4
+	.word	sText_Dia22
+.L181:
+	ldr	r0, .L254
+	ldr	r1, .L254+0x4
+	bl	StringCopy
+	b	.L157
+.L255:
+	.align	2, 0
+.L254:
+	.word	gStringVar4
+	.word	sText_Dia23
+.L182:
+	ldr	r0, .L256
+	ldr	r1, .L256+0x4
+	bl	StringCopy
+	b	.L157
+.L257:
+	.align	2, 0
+.L256:
+	.word	gStringVar4
+	.word	sText_Dia24
+.L183:
+	ldr	r0, .L258
+	ldr	r1, .L258+0x4
+	bl	StringCopy
+	b	.L157
+.L259:
+	.align	2, 0
+.L258:
+	.word	gStringVar4
+	.word	sText_Dia25
+.L184:
+	ldr	r0, .L260
+	ldr	r1, .L260+0x4
+	bl	StringCopy
+	b	.L157
+.L261:
+	.align	2, 0
+.L260:
+	.word	gStringVar4
+	.word	sText_Dia26
+.L185:
+	ldr	r0, .L262
+	ldr	r1, .L262+0x4
+	bl	StringCopy
+	b	.L157
+.L263:
+	.align	2, 0
+.L262:
+	.word	gStringVar4
+	.word	sText_Dia27
+.L186:
+	ldr	r0, .L264
+	ldr	r1, .L264+0x4
+	bl	StringCopy
+	b	.L157
+.L265:
+	.align	2, 0
+.L264:
+	.word	gStringVar4
+	.word	sText_Dia28
+.L187:
+	ldr	r0, .L266
+	ldr	r1, .L266+0x4
+	bl	StringCopy
+	b	.L157
+.L267:
+	.align	2, 0
+.L266:
+	.word	gStringVar4
+	.word	sText_Dia29
+.L188:
+	ldr	r0, .L268
+	ldr	r1, .L268+0x4
+	bl	StringCopy
+	b	.L157
+.L269:
+	.align	2, 0
+.L268:
+	.word	gStringVar4
+	.word	sText_Dia30
+.L189:
+	ldr	r0, .L270
+	ldr	r1, .L270+0x4
+	bl	StringCopy
+	b	.L157
+.L271:
+	.align	2, 0
+.L270:
+	.word	gStringVar4
+	.word	sText_Dia31
+.L190:
+	ldr	r0, .L272
+	ldr	r1, .L272+0x4
+	bl	StringCopy
+	b	.L157
+.L273:
+	.align	2, 0
+.L272:
+	.word	gStringVar4
+	.word	sText_Dia32
+.L191:
+	ldr	r0, .L274
+	ldr	r1, .L274+0x4
+	bl	StringCopy
+	b	.L157
+.L275:
+	.align	2, 0
+.L274:
+	.word	gStringVar4
+	.word	sText_Dia33
+.L192:
+	ldr	r0, .L276
+	ldr	r1, .L276+0x4
+	bl	StringCopy
+	b	.L157
+.L277:
+	.align	2, 0
+.L276:
+	.word	gStringVar4
+	.word	sText_Dia34
+.L193:
+	ldr	r0, .L278
+	ldr	r1, .L278+0x4
+	bl	StringCopy
+	b	.L157
+.L279:
+	.align	2, 0
+.L278:
+	.word	gStringVar4
+	.word	sText_Dia35
+.L194:
+	ldr	r0, .L280
+	ldr	r1, .L280+0x4
+	bl	StringCopy
+	b	.L157
+.L281:
+	.align	2, 0
+.L280:
+	.word	gStringVar4
+	.word	sText_Dia36
+.L195:
+	ldr	r0, .L282
+	ldr	r1, .L282+0x4
+	bl	StringCopy
+	b	.L157
+.L283:
+	.align	2, 0
+.L282:
+	.word	gStringVar4
+	.word	sText_Dia37
+.L196:
+	ldr	r0, .L284
+	ldr	r1, .L284+0x4
+	bl	StringCopy
+	b	.L157
+.L285:
+	.align	2, 0
+.L284:
+	.word	gStringVar4
+	.word	sText_Dia38
+.L197:
+	ldr	r0, .L286
+	ldr	r1, .L286+0x4
+	bl	StringCopy
+	b	.L157
+.L287:
+	.align	2, 0
+.L286:
+	.word	gStringVar4
+	.word	sText_Dia39
+.L198:
+	ldr	r0, .L288
+	ldr	r1, .L288+0x4
+	bl	StringCopy
+	b	.L157
+.L289:
+	.align	2, 0
+.L288:
+	.word	gStringVar4
+	.word	sText_Dia40
+.L199:
+	ldr	r0, .L290
+	ldr	r1, .L290+0x4
+	bl	StringCopy
+.L157:
+	pop	{r0}
+	bx	r0
+.L291:
+	.align	2, 0
+.L290:
+	.word	gStringVar4
+	.word	sText_Dia41
 .Lfe16:
 	.size	 BufferNPCMessage,.Lfe16-BufferNPCMessage
 	.align	2, 0
@@ -1527,14 +3349,14 @@ BufferNPCMessage:
 	.thumb_func
 StatusInflictionScreenFlash:
 	push	{lr}
-	ldr	r0, .L164
+	ldr	r0, .L293
 	mov	r1, #0x2
 	bl	CreateTask
 	pop	{r0}
 	bx	r0
-.L165:
+.L294:
 	.align	2, 0
-.L164:
+.L293:
 	.word	Task_DoStatusInflictionScreenFlash
 .Lfe17:
 	.size	 StatusInflictionScreenFlash,.Lfe17-StatusInflictionScreenFlash
@@ -1547,7 +3369,7 @@ HealMon:
 	add	r5, r0, #0
 	mov	r4, #0x0
 	mov	r1, #0x0
-.L170:
+.L299:
 	mov	r2, sp
 	add	r0, r2, r4
 	strb	r1, [r0]
@@ -1555,7 +3377,7 @@ HealMon:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x3
-	bls	.L170	@cond_branch
+	bls	.L299	@cond_branch
 	add	r0, r5, #0
 	mov	r1, #0x3a
 	bl	GetMonData
@@ -1575,7 +3397,7 @@ HealMon:
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
 	mov	r4, #0x0
-.L175:
+.L304:
 	add	r1, r4, #0
 	add	r1, r1, #0xd
 	add	r0, r5, #0
@@ -1596,7 +3418,7 @@ HealMon:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x3
-	bls	.L175	@cond_branch
+	bls	.L304	@cond_branch
 	mov	r0, sp
 	mov	r1, #0x0
 	strb	r1, [r0]
@@ -1624,44 +3446,44 @@ DoesAbilityPreventStatus:
 	lsr	r0, r0, #0x10
 	mov	r1, #0x0
 	cmp	r4, #0x20
-	beq	.L179	@cond_branch
+	beq	.L308	@cond_branch
 	cmp	r4, #0x20
-	bhi	.L192	@cond_branch
+	bhi	.L321	@cond_branch
 	cmp	r4, #0x7
-	beq	.L185	@cond_branch
+	beq	.L314	@cond_branch
 	cmp	r4, #0x10
-	beq	.L181	@cond_branch
-	b	.L178
-.L192:
+	beq	.L310	@cond_branch
+	b	.L307
+.L321:
 	cmp	r4, #0x40
-	beq	.L183	@cond_branch
+	beq	.L312	@cond_branch
 	cmp	r4, #0x80
-	beq	.L188	@cond_branch
-	b	.L178
-.L179:
+	beq	.L317	@cond_branch
+	b	.L307
+.L308:
 	cmp	r0, #0x28
-	bne	.L178	@cond_branch
-	b	.L193
-.L181:
+	bne	.L307	@cond_branch
+	b	.L322
+.L310:
 	cmp	r0, #0x29
-	bne	.L178	@cond_branch
-	b	.L193
-.L183:
+	bne	.L307	@cond_branch
+	b	.L322
+.L312:
 	cmp	r0, #0x7
-	bne	.L178	@cond_branch
-	b	.L193
-.L185:
+	bne	.L307	@cond_branch
+	b	.L322
+.L314:
 	cmp	r0, #0xf
-	beq	.L193	@cond_branch
+	beq	.L322	@cond_branch
 	cmp	r0, #0x48
-	bne	.L178	@cond_branch
-	b	.L193
-.L188:
+	bne	.L307	@cond_branch
+	b	.L322
+.L317:
 	cmp	r0, #0x11
-	bne	.L178	@cond_branch
-.L193:
+	bne	.L307	@cond_branch
+.L322:
 	mov	r1, #0x1
-.L178:
+.L307:
 	add	r0, r1, #0
 	pop	{r4}
 	pop	{r1}
@@ -1677,98 +3499,98 @@ DoesTypePreventStatus:
 	lsr	r2, r0, #0x10
 	mov	r3, #0x0
 	cmp	r1, #0x20
-	beq	.L199	@cond_branch
+	beq	.L328	@cond_branch
 	cmp	r1, #0x20
-	bhi	.L211	@cond_branch
+	bhi	.L340	@cond_branch
 	cmp	r1, #0x7
-	beq	.L195	@cond_branch
+	beq	.L324	@cond_branch
 	cmp	r1, #0x10
-	beq	.L205	@cond_branch
-	b	.L195
-.L211:
+	beq	.L334	@cond_branch
+	b	.L324
+.L340:
 	cmp	r1, #0x40
-	beq	.L202	@cond_branch
+	beq	.L331	@cond_branch
 	cmp	r1, #0x80
-	bne	.L195	@cond_branch
-	ldr	r1, .L212
+	bne	.L324	@cond_branch
+	ldr	r1, .L341
 	lsl	r0, r2, #0x3
 	add	r0, r0, r2
 	lsl	r0, r0, #0x2
 	add	r0, r0, r1
 	ldrb	r2, [r0, #0x6]
 	cmp	r2, #0x8
-	beq	.L207	@cond_branch
+	beq	.L336	@cond_branch
 	cmp	r2, #0x3
-	beq	.L207	@cond_branch
+	beq	.L336	@cond_branch
 	ldrb	r0, [r0, #0x7]
 	cmp	r0, #0x8
-	beq	.L207	@cond_branch
+	beq	.L336	@cond_branch
 	cmp	r0, #0x3
-	bne	.L195	@cond_branch
-	b	.L207
-.L213:
+	bne	.L324	@cond_branch
+	b	.L336
+.L342:
 	.align	2, 0
-.L212:
+.L341:
 	.word	gBaseStats
-.L199:
-	ldr	r0, .L214
+.L328:
+	ldr	r0, .L343
 	lsl	r1, r2, #0x3
 	add	r1, r1, r2
 	lsl	r1, r1, #0x2
 	add	r1, r1, r0
 	ldrb	r0, [r1, #0x6]
 	cmp	r0, #0xf
-	beq	.L207	@cond_branch
+	beq	.L336	@cond_branch
 	ldrb	r0, [r1, #0x7]
 	cmp	r0, #0xf
-	bne	.L195	@cond_branch
-	b	.L207
-.L215:
+	bne	.L324	@cond_branch
+	b	.L336
+.L344:
 	.align	2, 0
-.L214:
+.L343:
 	.word	gBaseStats
-.L202:
-	ldr	r1, .L216
+.L331:
+	ldr	r1, .L345
 	lsl	r0, r2, #0x3
 	add	r0, r0, r2
 	lsl	r0, r0, #0x2
 	add	r0, r0, r1
 	ldrb	r1, [r0, #0x6]
 	cmp	r1, #0x4
-	beq	.L207	@cond_branch
+	beq	.L336	@cond_branch
 	ldrb	r0, [r0, #0x7]
 	cmp	r0, #0x4
-	beq	.L207	@cond_branch
+	beq	.L336	@cond_branch
 	cmp	r1, #0xd
-	beq	.L207	@cond_branch
+	beq	.L336	@cond_branch
 	cmp	r0, #0xd
-	bne	.L195	@cond_branch
-	b	.L207
-.L217:
+	bne	.L324	@cond_branch
+	b	.L336
+.L346:
 	.align	2, 0
-.L216:
+.L345:
 	.word	gBaseStats
-.L205:
-	ldr	r0, .L218
+.L334:
+	ldr	r0, .L347
 	lsl	r1, r2, #0x3
 	add	r1, r1, r2
 	lsl	r1, r1, #0x2
 	add	r1, r1, r0
 	ldrb	r0, [r1, #0x6]
 	cmp	r0, #0xa
-	beq	.L207	@cond_branch
+	beq	.L336	@cond_branch
 	ldrb	r0, [r1, #0x7]
 	cmp	r0, #0xa
-	bne	.L195	@cond_branch
-.L207:
+	bne	.L324	@cond_branch
+.L336:
 	mov	r3, #0x1
-.L195:
+.L324:
 	add	r0, r3, #0
 	pop	{r1}
 	bx	r1
-.L219:
+.L348:
 	.align	2, 0
-.L218:
+.L347:
 	.word	gBaseStats
 .Lfe20:
 	.size	 DoesTypePreventStatus,.Lfe20-DoesTypePreventStatus
@@ -1783,7 +3605,7 @@ TryInflictRandomStatus:
 	push	{r5, r6, r7}
 	add	sp, sp, #-0x8
 	mov	r6, #0x0
-.L224:
+.L353:
 	mov	r1, sp
 	add	r0, r1, r6
 	strb	r6, [r0]
@@ -1791,10 +3613,10 @@ TryInflictRandomStatus:
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
 	cmp	r6, #0x2
-	bls	.L224	@cond_branch
+	bls	.L353	@cond_branch
 	mov	r4, #0x0
 	mov	r8, r4
-.L229:
+.L358:
 	bl	Random
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
@@ -1822,27 +3644,27 @@ TryInflictRandomStatus:
 	lsr	r0, r0, #0x18
 	mov	r8, r0
 	cmp	r0, #0x9
-	bls	.L229	@cond_branch
-	ldr	r0, .L282
+	bls	.L358	@cond_branch
+	ldr	r0, .L411
 	ldr	r0, [r0]
-	ldr	r4, .L282+0x4
+	ldr	r4, .L411+0x4
 	add	r0, r0, r4
 	ldrh	r0, [r0]
 	mov	r1, #0x1
 	mov	sl, r1
 	cmp	r0, #0x4
-	bls	.L232	@cond_branch
+	bls	.L361	@cond_branch
 	mov	r4, #0x3
 	mov	sl, r4
 	cmp	r0, #0x9
-	bhi	.L232	@cond_branch
+	bhi	.L361	@cond_branch
 	mov	r0, #0x2
 	mov	sl, r0
-.L232:
+.L361:
 	mov	r1, #0x0
 	str	r1, [sp, #0x4]
-	ldr	r7, .L282+0x8
-.L235:
+	ldr	r7, .L411+0x8
+.L364:
 	mov	r4, #0x0
 	mov	r9, r4
 	bl	Random
@@ -1854,54 +3676,54 @@ TryInflictRandomStatus:
 	lsr	r0, r0, #0x18
 	add	r1, r0, #0
 	cmp	r0, #0x22
-	bhi	.L238	@cond_branch
+	bhi	.L367	@cond_branch
 	mov	r0, #0x80
-	b	.L280
-.L283:
+	b	.L409
+.L412:
 	.align	2, 0
-.L282:
+.L411:
 	.word	gSaveBlock2Ptr
 	.word	0xcb2
 	.word	sStatusFlags
-.L238:
+.L367:
 	cmp	r0, #0x3b
-	bhi	.L240	@cond_branch
+	bhi	.L369	@cond_branch
 	mov	r0, #0x20
-	b	.L280
-.L240:
+	b	.L409
+.L369:
 	cmp	r0, #0x4f
-	bhi	.L242	@cond_branch
+	bhi	.L371	@cond_branch
 	mov	r0, #0x40
-	b	.L280
-.L242:
+	b	.L409
+.L371:
 	cmp	r1, #0x59
-	bhi	.L244	@cond_branch
+	bhi	.L373	@cond_branch
 	mov	r0, #0x7
-	b	.L280
-.L278:
+	b	.L409
+.L407:
 	mov	r0, #0x1
 	mov	r9, r0
-	b	.L248
-.L244:
+	b	.L377
+.L373:
 	mov	r0, #0x10
-.L280:
+.L409:
 	str	r0, [r7]
-	ldr	r0, .L284
+	ldr	r0, .L413
 	ldr	r0, [r0]
 	ldr	r1, [sp, #0x4]
 	cmp	r1, r0
-	beq	.L237	@cond_branch
+	beq	.L366	@cond_branch
 	str	r0, [sp, #0x4]
 	mov	r4, #0x0
 	mov	r8, r4
 	mov	r6, #0x0
-.L250:
+.L379:
 	mov	r1, sp
 	add	r0, r1, r6
 	ldrb	r1, [r0]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L284+0x4
+	ldr	r0, .L413+0x4
 	add	r5, r1, r0
 	add	r0, r5, #0
 	mov	r1, #0x37
@@ -1909,12 +3731,12 @@ TryInflictRandomStatus:
 	bl	GetAilmentFromStatus
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L251	@cond_branch
+	bne	.L380	@cond_branch
 	add	r0, r5, #0
 	mov	r1, #0x39
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L251	@cond_branch
+	beq	.L380	@cond_branch
 	mov	r0, r8
 	add	r0, r0, #0x1
 	lsl	r0, r0, #0x18
@@ -1930,89 +3752,89 @@ TryInflictRandomStatus:
 	bl	DoesTypePreventStatus
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L278	@cond_branch
-.L251:
+	beq	.L407	@cond_branch
+.L380:
 	cmp	r8, sl
-	beq	.L248	@cond_branch
+	beq	.L377	@cond_branch
 	add	r0, r6, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
 	cmp	r6, #0x2
-	bls	.L250	@cond_branch
-.L248:
+	bls	.L379	@cond_branch
+.L377:
 	mov	r4, r8
 	cmp	r4, #0
-	beq	.L279	@cond_branch
-.L237:
+	beq	.L408	@cond_branch
+.L366:
 	mov	r0, r9
 	cmp	r0, #0
-	beq	.L235	@cond_branch
-	ldr	r0, .L284
+	beq	.L364	@cond_branch
+	ldr	r0, .L413
 	ldr	r0, [r0]
 	cmp	r0, #0x20
-	beq	.L259	@cond_branch
+	beq	.L388	@cond_branch
 	cmp	r0, #0x20
-	bhi	.L266	@cond_branch
+	bhi	.L395	@cond_branch
 	cmp	r0, #0x7
-	beq	.L266	@cond_branch
+	beq	.L395	@cond_branch
 	cmp	r0, #0x10
-	beq	.L260	@cond_branch
-	b	.L266
-.L285:
+	beq	.L389	@cond_branch
+	b	.L395
+.L414:
 	.align	2, 0
-.L284:
+.L413:
 	.word	sStatusFlags
 	.word	gPlayerParty
-.L259:
-	ldr	r1, .L286
+.L388:
+	ldr	r1, .L415
 	mov	r0, #0x1
-	b	.L281
-.L287:
+	b	.L410
+.L416:
 	.align	2, 0
-.L286:
+.L415:
 	.word	sStatusMon
-.L260:
+.L389:
 	bl	Random
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
 	mov	r2, #0x1
 	and	r1, r1, r2
 	cmp	r1, #0
-	beq	.L261	@cond_branch
-	ldr	r0, .L288
+	beq	.L390	@cond_branch
+	ldr	r0, .L417
 	strb	r2, [r0]
-	b	.L258
-.L289:
+	b	.L387
+.L418:
 	.align	2, 0
-.L288:
+.L417:
 	.word	sStatusMon
-.L261:
-	ldr	r0, .L290
+.L390:
+	ldr	r0, .L419
 	strb	r1, [r0]
-	b	.L258
-.L291:
+	b	.L387
+.L420:
 	.align	2, 0
-.L290:
+.L419:
 	.word	sStatusMon
-.L279:
+.L408:
 	mov	r0, #0x0
-	b	.L277
-.L266:
-	ldr	r1, .L292
+	b	.L406
+.L395:
+	ldr	r1, .L421
 	mov	r0, #0x0
-.L281:
+.L410:
 	strb	r0, [r1]
-.L258:
+.L387:
 	mov	r1, #0x0
 	mov	r8, r1
 	mov	r6, #0x0
-.L272:
+.L401:
 	mov	r4, sp
 	add	r0, r4, r6
 	ldrb	r1, [r0]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L292+0x4
+	ldr	r0, .L421+0x4
 	add	r5, r1, r0
 	add	r0, r5, #0
 	mov	r1, #0x37
@@ -2020,12 +3842,12 @@ TryInflictRandomStatus:
 	bl	GetAilmentFromStatus
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L273	@cond_branch
+	bne	.L402	@cond_branch
 	add	r0, r5, #0
 	mov	r1, #0x39
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L273	@cond_branch
+	beq	.L402	@cond_branch
 	mov	r0, r8
 	add	r0, r0, #0x1
 	lsl	r0, r0, #0x18
@@ -2036,34 +3858,34 @@ TryInflictRandomStatus:
 	bl	GetMonData
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
-	ldr	r7, .L292+0x8
+	ldr	r7, .L421+0x8
 	ldr	r1, [r7]
 	add	r0, r5, #0
 	bl	DoesAbilityPreventStatus
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L273	@cond_branch
+	bne	.L402	@cond_branch
 	ldr	r1, [r7]
 	add	r0, r4, #0
 	bl	DoesTypePreventStatus
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L273	@cond_branch
+	bne	.L402	@cond_branch
 	add	r0, r5, #0
 	mov	r1, #0x37
 	add	r2, r7, #0
 	bl	SetMonData
-.L273:
+.L402:
 	cmp	r8, sl
-	beq	.L270	@cond_branch
+	beq	.L399	@cond_branch
 	add	r0, r6, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
 	cmp	r6, #0x2
-	bls	.L272	@cond_branch
-.L270:
+	bls	.L401	@cond_branch
+.L399:
 	mov	r0, #0x1
-.L277:
+.L406:
 	add	sp, sp, #0x8
 	pop	{r3, r4, r5}
 	mov	r8, r3
@@ -2072,9 +3894,9 @@ TryInflictRandomStatus:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.L293:
+.L422:
 	.align	2, 0
-.L292:
+.L421:
 	.word	sStatusMon
 	.word	gPlayerParty
 	.word	sStatusFlags
@@ -2085,38 +3907,38 @@ TryInflictRandomStatus:
 	.thumb_func
 AtLeastOneHealthyMon:
 	push	{r4, r5, r6, r7, lr}
-	ldr	r0, .L309
+	ldr	r0, .L438
 	ldr	r0, [r0]
-	ldr	r1, .L309+0x4
+	ldr	r1, .L438+0x4
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	mov	r7, #0x1
 	cmp	r0, #0x4
-	bls	.L296	@cond_branch
+	bls	.L425	@cond_branch
 	mov	r7, #0x3
 	cmp	r0, #0x9
-	bhi	.L296	@cond_branch
+	bhi	.L425	@cond_branch
 	mov	r7, #0x2
-.L296:
+.L425:
 	mov	r6, #0x0
 	mov	r5, #0x0
-	b	.L299
-.L310:
+	b	.L428
+.L439:
 	.align	2, 0
-.L309:
+.L438:
 	.word	gSaveBlock2Ptr
 	.word	0xcb2
-.L301:
+.L430:
 	add	r0, r5, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
-.L299:
+.L428:
 	cmp	r5, #0x2
-	bhi	.L300	@cond_branch
+	bhi	.L429	@cond_branch
 	mov	r0, #0x64
 	mov	r1, r5
 	mul	r1, r1, r0
-	ldr	r0, .L311
+	ldr	r0, .L440
 	add	r4, r1, r0
 	add	r0, r4, #0
 	mov	r1, #0x37
@@ -2124,30 +3946,30 @@ AtLeastOneHealthyMon:
 	bl	GetAilmentFromStatus
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L303	@cond_branch
+	bne	.L432	@cond_branch
 	add	r0, r4, #0
 	mov	r1, #0x39
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L303	@cond_branch
+	beq	.L432	@cond_branch
 	add	r0, r6, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-.L303:
+.L432:
 	cmp	r6, r7
-	bne	.L301	@cond_branch
-.L300:
+	bne	.L430	@cond_branch
+.L429:
 	cmp	r6, #0
-	beq	.L306	@cond_branch
+	beq	.L435	@cond_branch
 	mov	r0, #0x1
-	b	.L308
-.L312:
+	b	.L437
+.L441:
 	.align	2, 0
-.L311:
+.L440:
 	.word	gPlayerParty
-.L306:
+.L435:
 	mov	r0, #0x0
-.L308:
+.L437:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
@@ -2159,7 +3981,7 @@ AtLeastOneHealthyMon:
 GetNextRoomType:
 	push	{r4, r5, r6, lr}
 	add	sp, sp, #-0x8
-	ldr	r1, .L341
+	ldr	r1, .L470
 	ldr	r0, [r1]
 	mov	r4, #0xe1
 	lsl	r4, r4, #0x4
@@ -2169,40 +3991,40 @@ GetNextRoomType:
 	and	r3, r3, r2
 	add	r5, r1, #0
 	cmp	r3, #0x40
-	bne	.L314	@cond_branch
+	bne	.L443	@cond_branch
 	lsl	r0, r2, #0x19
 	lsr	r0, r0, #0x1c
-	b	.L340
-.L342:
+	b	.L469
+.L471:
 	.align	2, 0
-.L341:
+.L470:
 	.word	gSaveBlock2Ptr
-.L314:
-	ldr	r0, .L343
+.L443:
+	ldr	r0, .L472
 	lsl	r1, r2, #0x1d
 	ldrh	r0, [r0]
 	lsr	r1, r1, #0x1d
 	cmp	r0, r1
-	bne	.L315	@cond_branch
+	bne	.L444	@cond_branch
 	cmp	r3, #0x18
-	bne	.L316	@cond_branch
+	bne	.L445	@cond_branch
 	bl	TryInflictRandomStatus
-.L316:
+.L445:
 	ldr	r0, [r5]
 	add	r0, r0, r4
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x19
 	lsr	r0, r0, #0x1c
-	b	.L340
-.L344:
+	b	.L469
+.L473:
 	.align	2, 0
-.L343:
+.L472:
 	.word	gSpecialVar_0x8007
-.L315:
+.L444:
 	mov	r2, #0x0
-	ldr	r3, .L345
+	ldr	r3, .L474
 	mov	r1, #0x0
-.L320:
+.L449:
 	mov	r4, sp
 	add	r0, r4, r2
 	strb	r1, [r0]
@@ -2210,7 +4032,7 @@ GetNextRoomType:
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	cmp	r2, #0x7
-	bls	.L320	@cond_branch
+	bls	.L449	@cond_branch
 	mov	r4, #0x8
 	ldr	r0, [r5]
 	mov	r6, #0xe1
@@ -2224,54 +4046,54 @@ GetNextRoomType:
 	mov	r2, #0x0
 	add	r5, r3, #0
 	mov	r3, #0x1
-.L325:
+.L454:
 	add	r0, r2, r5
 	ldrb	r0, [r0]
 	cmp	r0, r1
-	bne	.L324	@cond_branch
+	bne	.L453	@cond_branch
 	mov	r6, sp
 	add	r0, r6, r2
 	strb	r3, [r0]
 	sub	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-.L324:
+.L453:
 	add	r0, r2, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	cmp	r2, #0x7
-	bls	.L325	@cond_branch
+	bls	.L454	@cond_branch
 	mov	r0, sp
 	ldrb	r0, [r0, #0x7]
 	cmp	r0, #0x1
-	beq	.L328	@cond_branch
+	beq	.L457	@cond_branch
 	bl	AtLeastTwoAliveMons
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L328	@cond_branch
+	bne	.L457	@cond_branch
 	mov	r1, sp
 	mov	r0, #0x1
 	strb	r0, [r1, #0x7]
 	sub	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-.L328:
+.L457:
 	mov	r0, sp
 	ldrb	r0, [r0, #0x3]
 	cmp	r0, #0x1
-	beq	.L329	@cond_branch
+	beq	.L458	@cond_branch
 	bl	AtLeastOneHealthyMon
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L329	@cond_branch
+	bne	.L458	@cond_branch
 	mov	r1, sp
 	mov	r0, #0x1
 	strb	r0, [r1, #0x3]
 	sub	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-.L329:
-	ldr	r0, .L345+0x4
+.L458:
+	ldr	r0, .L474+0x4
 	ldr	r0, [r0]
 	mov	r1, #0xe1
 	lsl	r1, r1, #0x4
@@ -2280,52 +4102,52 @@ GetNextRoomType:
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L330	@cond_branch
+	beq	.L459	@cond_branch
 	mov	r0, sp
 	ldrb	r0, [r0, #0x1]
 	cmp	r0, #0x1
-	beq	.L331	@cond_branch
+	beq	.L460	@cond_branch
 	mov	r1, sp
 	mov	r0, #0x1
 	strb	r0, [r1, #0x1]
 	sub	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-.L331:
+.L460:
 	mov	r0, sp
 	ldrb	r0, [r0, #0x4]
 	cmp	r0, #0x1
-	beq	.L330	@cond_branch
+	beq	.L459	@cond_branch
 	mov	r1, sp
 	mov	r0, #0x1
 	strb	r0, [r1, #0x4]
 	sub	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-.L330:
+.L459:
 	add	r0, r4, #0
 	bl	AllocZeroed
 	add	r5, r0, #0
 	mov	r3, #0x0
 	mov	r2, #0x0
-.L336:
+.L465:
 	mov	r6, sp
 	add	r0, r6, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L335	@cond_branch
+	bne	.L464	@cond_branch
 	add	r1, r3, #0
 	add	r0, r1, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r3, r0, #0x18
 	add	r1, r5, r1
 	strb	r2, [r1]
-.L335:
+.L464:
 	add	r0, r2, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	cmp	r2, #0x7
-	bls	.L336	@cond_branch
+	bls	.L465	@cond_branch
 	bl	Random
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
@@ -2336,18 +4158,18 @@ GetNextRoomType:
 	add	r0, r5, #0
 	bl	Free
 	cmp	r4, #0x3
-	bne	.L339	@cond_branch
+	bne	.L468	@cond_branch
 	bl	TryInflictRandomStatus
-.L339:
+.L468:
 	add	r0, r4, #0
-.L340:
+.L469:
 	add	sp, sp, #0x8
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.L346:
+.L475:
 	.align	2, 0
-.L345:
+.L474:
 	.word	sRoomTypeHints
 	.word	gSaveBlock2Ptr
 .Lfe23:
@@ -2357,14 +4179,14 @@ GetNextRoomType:
 	.thumb_func
 GetNPCRoomGraphicsId:
 	push	{r4, lr}
-	ldr	r4, .L348
+	ldr	r4, .L477
 	bl	Random
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	mov	r1, #0x19
 	bl	__umodsi3
 	strb	r0, [r4]
-	ldr	r1, .L348+0x4
+	ldr	r1, .L477+0x4
 	ldrb	r0, [r4]
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
@@ -2372,9 +4194,9 @@ GetNPCRoomGraphicsId:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-.L349:
+.L478:
 	.align	2, 0
-.L348:
+.L477:
 	.word	sNpcId
 	.word	sNPCTable
 .Lfe24:
@@ -2383,12 +4205,12 @@ GetNPCRoomGraphicsId:
 	.type	 GetInWildMonRoom,function
 	.thumb_func
 GetInWildMonRoom:
-	ldr	r0, .L351
+	ldr	r0, .L480
 	ldrb	r0, [r0]
 	bx	lr
-.L352:
+.L481:
 	.align	2, 0
-.L351:
+.L480:
 	.word	sInWildMonRoom
 .Lfe25:
 	.size	 GetInWildMonRoom,.Lfe25-GetInWildMonRoom
@@ -2409,18 +4231,18 @@ TryGenerateBattlePikeWildMon:
 	bl	GetBattlePikeWildMonHeaderId
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-	ldr	r7, .L369
+	ldr	r7, .L498
 	ldr	r0, [r7]
-	ldr	r4, .L369+0x4
+	ldr	r4, .L498+0x4
 	add	r0, r0, r4
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1e
-	ldr	r1, .L369+0x8
+	ldr	r1, .L498+0x8
 	lsr	r0, r0, #0x1c
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	str	r0, [sp, #0x4]
-	ldr	r0, .L369+0xc
+	ldr	r0, .L498+0xc
 	mov	r1, #0xb
 	mov	r2, #0x0
 	bl	GetMonData
@@ -2436,11 +4258,11 @@ TryGenerateBattlePikeWildMon:
 	mov	r0, #0x3
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L354	@cond_branch
+	beq	.L483	@cond_branch
 	bl	GetHighestLevelInPlayerParty
 	add	r7, r0, #0
 	cmp	r7, #0x3b
-	ble	.L368	@cond_branch
+	ble	.L497	@cond_branch
 	lsl	r0, r6, #0x2
 	ldr	r1, [sp, #0x4]
 	add	r0, r0, r1
@@ -2452,18 +4274,18 @@ TryGenerateBattlePikeWildMon:
 	ldrb	r0, [r0, #0x2]
 	sub	r7, r7, r0
 	cmp	r7, #0x3b
-	bgt	.L358	@cond_branch
-.L368:
+	bgt	.L487	@cond_branch
+.L497:
 	mov	r7, #0x3c
-	b	.L358
-.L370:
+	b	.L487
+.L499:
 	.align	2, 0
-.L369:
+.L498:
 	.word	gSaveBlock2Ptr
 	.word	0xca9
 	.word	sWildMons
 	.word	gEnemyParty
-.L354:
+.L483:
 	lsl	r0, r6, #0x2
 	ldr	r2, [sp, #0x4]
 	add	r0, r0, r2
@@ -2475,21 +4297,21 @@ TryGenerateBattlePikeWildMon:
 	ldrb	r1, [r0, #0x2]
 	mov	r0, #0x32
 	sub	r7, r0, r1
-.L358:
+.L487:
 	mov	r0, r8
 	cmp	r0, #0x1
-	bne	.L359	@cond_branch
+	bne	.L488	@cond_branch
 	lsl	r0, r7, #0x18
 	lsr	r0, r0, #0x18
 	bl	CanEncounterWildMon
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L359	@cond_branch
+	bne	.L488	@cond_branch
 	mov	r0, #0x0
-	b	.L367
-.L359:
-	ldr	r0, .L371
-	ldr	r1, .L371+0x4
+	b	.L496
+.L488:
+	ldr	r0, .L500
+	ldr	r1, .L500+0x4
 	mov	r8, r1
 	lsl	r6, r6, #0x2
 	mov	r9, r6
@@ -2511,7 +4333,7 @@ TryGenerateBattlePikeWildMon:
 	lsl	r1, r1, #0x1
 	mul	r2, r2, r1
 	lsl	r1, r7, #0x2
-	ldr	r3, .L371+0x8
+	ldr	r3, .L500+0x8
 	add	r1, r1, r3
 	add	r2, r2, r1
 	mov	r1, #0x19
@@ -2527,22 +4349,22 @@ TryGenerateBattlePikeWildMon:
 	ldrh	r0, [r0, #0x1a]
 	mov	r7, r9
 	cmp	r0, #0
-	beq	.L360	@cond_branch
+	beq	.L489	@cond_branch
 	bl	Random
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	mov	r1, #0x1
 	and	r0, r0, r1
-.L360:
+.L489:
 	str	r0, [sp]
-	ldr	r0, .L371
+	ldr	r0, .L500
 	mov	r1, #0x2e
 	mov	r2, sp
 	bl	SetMonData
 	mov	r4, #0x0
 	add	r0, r6, r5
 	lsl	r6, r0, #0x2
-.L365:
+.L494:
 	ldr	r2, [sp, #0x4]
 	add	r0, r7, r2
 	ldr	r0, [r0]
@@ -2553,15 +4375,15 @@ TryGenerateBattlePikeWildMon:
 	ldrh	r1, [r0]
 	lsl	r2, r4, #0x18
 	lsr	r2, r2, #0x18
-	ldr	r0, .L371
+	ldr	r0, .L500
 	bl	SetMonMoveSlot
 	add	r4, r4, #0x1
 	cmp	r4, #0x3
-	ble	.L365	@cond_branch
-	ldr	r0, .L371
+	ble	.L494	@cond_branch
+	ldr	r0, .L500
 	bl	CalculateMonStats
 	mov	r0, #0x1
-.L367:
+.L496:
 	add	sp, sp, #0x8
 	pop	{r3, r4, r5}
 	mov	r8, r3
@@ -2570,9 +4392,9 @@ TryGenerateBattlePikeWildMon:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.L372:
+.L501:
 	.align	2, 0
-.L371:
+.L500:
 	.word	gEnemyParty
 	.word	gBaseStats
 	.word	gExperienceTables
@@ -2584,14 +4406,14 @@ TryGenerateBattlePikeWildMon:
 	.thumb_func
 GetBattlePikeWildMonHeaderId:
 	push	{lr}
-	ldr	r0, .L380
+	ldr	r0, .L509
 	ldr	r1, [r0]
-	ldr	r2, .L380+0x4
+	ldr	r2, .L509+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1e
 	lsr	r0, r0, #0x1d
-	ldr	r2, .L380+0x8
+	ldr	r2, .L509+0x8
 	add	r1, r1, r2
 	add	r1, r1, r0
 	ldrh	r1, [r1]
@@ -2599,30 +4421,30 @@ GetBattlePikeWildMonHeaderId:
 	mov	r0, #0x8c
 	lsl	r0, r0, #0x1
 	cmp	r1, r0
-	bhi	.L374	@cond_branch
+	bhi	.L503	@cond_branch
 	mov	r1, #0x0
-	b	.L375
-.L381:
+	b	.L504
+.L510:
 	.align	2, 0
-.L380:
+.L509:
 	.word	gSaveBlock2Ptr
 	.word	0xca9
 	.word	0xe04
-.L374:
+.L503:
 	mov	r0, #0x8c
 	lsl	r0, r0, #0x2
 	cmp	r1, r0
-	bhi	.L376	@cond_branch
+	bhi	.L505	@cond_branch
 	mov	r1, #0x1
-	b	.L375
-.L376:
+	b	.L504
+.L505:
 	mov	r0, #0xd2
 	lsl	r0, r0, #0x2
 	mov	r1, #0x3
 	cmp	r2, r0
-	bhi	.L375	@cond_branch
+	bhi	.L504	@cond_branch
 	mov	r1, #0x2
-.L375:
+.L504:
 	add	r0, r1, #0
 	pop	{r1}
 	bx	r1
@@ -2635,13 +4457,13 @@ DoStatusInflictionScreenFlash:
 	push	{r4, r5, lr}
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r5, .L387
-	ldr	r2, .L387+0x4
+	ldr	r5, .L516
+	ldr	r2, .L516+0x4
 	lsl	r1, r0, #0x2
 	add	r1, r1, r0
 	lsl	r1, r1, #0x3
 	add	r4, r1, r2
-.L383:
+.L512:
 	mov	r1, #0x8
 	ldrsh	r0, [r4, r1]
 	lsl	r0, r0, #0x2
@@ -2651,13 +4473,13 @@ DoStatusInflictionScreenFlash:
 	bl	_call_via_r1
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L383	@cond_branch
+	bne	.L512	@cond_branch
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L388:
+.L517:
 	.align	2, 0
-.L387:
+.L516:
 	.word	sStatusInflictionScreenFlashFuncs
 	.word	gTasks
 .Lfe28:
@@ -2672,13 +4494,13 @@ StatusInflictionFadeOut:
 	mov	r2, #0x14
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0
-	beq	.L391	@cond_branch
+	beq	.L520	@cond_branch
 	sub	r0, r1, #0x1
 	strh	r0, [r4, #0x14]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bne	.L390	@cond_branch
-.L391:
+	bne	.L519	@cond_branch
+.L520:
 	ldrh	r0, [r4, #0xa]
 	strh	r0, [r4, #0x14]
 	ldrh	r0, [r4, #0x10]
@@ -2688,33 +4510,33 @@ StatusInflictionFadeOut:
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x10
-	ble	.L392	@cond_branch
+	ble	.L521	@cond_branch
 	mov	r0, #0x10
 	strh	r0, [r4, #0x16]
-.L392:
+.L521:
 	mov	r0, #0x1
 	neg	r0, r0
 	ldrb	r1, [r4, #0x16]
-	ldr	r2, .L394
+	ldr	r2, .L523
 	bl	BlendPalettes
-.L390:
+.L519:
 	mov	r2, #0x16
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0xf
-	ble	.L393	@cond_branch
+	ble	.L522	@cond_branch
 	ldrh	r0, [r4, #0x8]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x8]
 	ldrh	r0, [r4, #0xc]
 	strh	r0, [r4, #0x14]
-.L393:
+.L522:
 	mov	r0, #0x0
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-.L395:
+.L524:
 	.align	2, 0
-.L394:
+.L523:
 	.word	0x2d6b
 .Lfe29:
 	.size	 StatusInflictionFadeOut,.Lfe29-StatusInflictionFadeOut
@@ -2728,13 +4550,13 @@ StatusInflictionFadeIn:
 	mov	r2, #0x14
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0
-	beq	.L398	@cond_branch
+	beq	.L527	@cond_branch
 	sub	r0, r1, #0x1
 	strh	r0, [r4, #0x14]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bne	.L397	@cond_branch
-.L398:
+	bne	.L526	@cond_branch
+.L527:
 	ldrh	r0, [r4, #0xc]
 	strh	r0, [r4, #0x14]
 	ldrh	r0, [r4, #0x16]
@@ -2743,42 +4565,42 @@ StatusInflictionFadeIn:
 	strh	r0, [r4, #0x16]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bge	.L399	@cond_branch
+	bge	.L528	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r4, #0x16]
-.L399:
+.L528:
 	mov	r0, #0x1
 	neg	r0, r0
 	ldrb	r1, [r4, #0x16]
-	ldr	r2, .L403
+	ldr	r2, .L532
 	bl	BlendPalettes
-.L397:
+.L526:
 	mov	r0, #0x16
 	ldrsh	r1, [r4, r0]
 	cmp	r1, #0
-	bne	.L400	@cond_branch
+	bne	.L529	@cond_branch
 	ldrh	r0, [r4, #0xe]
 	sub	r0, r0, #0x1
 	strh	r0, [r4, #0xe]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bne	.L401	@cond_branch
-	ldr	r0, .L403+0x4
+	bne	.L530	@cond_branch
+	ldr	r0, .L532+0x4
 	bl	FindTaskIdByFunc
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	bl	DestroyTask
-	b	.L400
-.L404:
+	b	.L529
+.L533:
 	.align	2, 0
-.L403:
+.L532:
 	.word	0x2d6b
 	.word	DoStatusInflictionScreenFlash
-.L401:
+.L530:
 	ldrh	r0, [r4, #0xa]
 	strh	r0, [r4, #0x14]
 	strh	r1, [r4, #0x8]
-.L400:
+.L529:
 	mov	r0, #0x0
 	pop	{r4}
 	pop	{r1}
@@ -2809,13 +4631,13 @@ StartStatusInflictionScreenFlash:
 	lsr	r6, r6, #0x10
 	lsl	r3, r3, #0x10
 	lsr	r3, r3, #0x10
-	ldr	r0, .L406
+	ldr	r0, .L535
 	mov	r1, #0x3
 	str	r3, [sp]
 	bl	CreateTask
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r2, .L406+0x4
+	ldr	r2, .L535+0x4
 	lsl	r1, r0, #0x2
 	add	r1, r1, r0
 	lsl	r1, r1, #0x3
@@ -2834,9 +4656,9 @@ StartStatusInflictionScreenFlash:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L407:
+.L536:
 	.align	2, 0
-.L406:
+.L535:
 	.word	DoStatusInflictionScreenFlash
 	.word	gTasks
 .Lfe31:
@@ -2846,21 +4668,21 @@ StartStatusInflictionScreenFlash:
 	.thumb_func
 IsStatusInflictionScreenFlashTaskFinished:
 	push	{lr}
-	ldr	r0, .L412
+	ldr	r0, .L541
 	bl	FindTaskIdByFunc
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0xff
-	beq	.L409	@cond_branch
+	beq	.L538	@cond_branch
 	mov	r0, #0x0
-	b	.L411
-.L413:
+	b	.L540
+.L542:
 	.align	2, 0
-.L412:
+.L541:
 	.word	DoStatusInflictionScreenFlash
-.L409:
+.L538:
 	mov	r0, #0x1
-.L411:
+.L540:
 	pop	{r1}
 	bx	r1
 .Lfe32:
@@ -2874,7 +4696,7 @@ Task_DoStatusInflictionScreenFlash:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	add	r4, r0, #0
-	ldr	r1, .L418
+	ldr	r1, .L547
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
@@ -2883,7 +4705,7 @@ Task_DoStatusInflictionScreenFlash:
 	mov	r3, #0x8
 	ldrsh	r0, [r1, r3]
 	cmp	r0, #0
-	bne	.L415	@cond_branch
+	bne	.L544	@cond_branch
 	add	r0, r2, #0x1
 	strh	r0, [r1, #0x8]
 	mov	r0, #0x2
@@ -2893,20 +4715,20 @@ Task_DoStatusInflictionScreenFlash:
 	mov	r2, #0x3
 	mov	r3, #0x2
 	bl	StartStatusInflictionScreenFlash
-	b	.L416
-.L419:
+	b	.L545
+.L548:
 	.align	2, 0
-.L418:
+.L547:
 	.word	gTasks
-.L415:
+.L544:
 	bl	IsStatusInflictionScreenFlashTaskFinished
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L416	@cond_branch
+	beq	.L545	@cond_branch
 	bl	EnableBothScriptContexts
 	add	r0, r4, #0
 	bl	DestroyTask
-.L416:
+.L545:
 	add	sp, sp, #0x4
 	pop	{r4}
 	pop	{r0}
@@ -2927,12 +4749,12 @@ TryHealMons:
 	lsr	r0, r0, #0x18
 	str	r0, [sp, #0x4]
 	cmp	r0, #0
-	bne	.LCB2840
-	b	.L420	@long jump
-.LCB2840:
+	bne	.LCB3477
+	b	.L549	@long jump
+.LCB3477:
 	mov	r0, #0x0
 	mov	r8, r0
-.L425:
+.L554:
 	mov	r0, sp
 	add	r0, r0, r8
 	mov	r1, r8
@@ -2943,9 +4765,9 @@ TryHealMons:
 	lsr	r0, r0, #0x18
 	mov	r8, r0
 	cmp	r0, #0x2
-	bls	.L425	@cond_branch
+	bls	.L554	@cond_branch
 	mov	r5, #0x0
-.L430:
+.L559:
 	bl	Random
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
@@ -2973,10 +4795,10 @@ TryHealMons:
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	cmp	r5, #0x9
-	bls	.L430	@cond_branch
+	bls	.L559	@cond_branch
 	mov	r1, #0x0
 	mov	r8, r1
-.L435:
+.L564:
 	mov	r0, #0x0
 	mov	sl, r0
 	mov	r4, sp
@@ -2984,7 +4806,7 @@ TryHealMons:
 	ldrb	r1, [r4]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L450
+	ldr	r0, .L579
 	add	r7, r1, r0
 	add	r0, r7, #0
 	mov	r1, #0x39
@@ -2998,22 +4820,22 @@ TryHealMons:
 	lsr	r6, r0, #0x10
 	str	r4, [sp, #0x8]
 	cmp	r5, r6
-	bcc	.L449	@cond_branch
+	bcc	.L578	@cond_branch
 	add	r0, r7, #0
 	mov	r1, #0x37
 	bl	GetMonData
 	bl	GetAilmentFromStatus
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L438	@cond_branch
+	beq	.L567	@cond_branch
 	mov	r0, #0x1
 	mov	sl, r0
-	b	.L437
-.L451:
+	b	.L566
+.L580:
 	.align	2, 0
-.L450:
+.L579:
 	.word	gPlayerParty
-.L438:
+.L567:
 	add	r0, r7, #0
 	mov	r1, #0x15
 	bl	GetMonData
@@ -3021,14 +4843,14 @@ TryHealMons:
 	lsr	r0, r0, #0x18
 	mov	r9, r0
 	mov	r4, #0x0
-	b	.L440
-.L442:
+	b	.L569
+.L571:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-.L440:
+.L569:
 	cmp	r4, #0x3
-	bhi	.L437	@cond_branch
+	bhi	.L566	@cond_branch
 	add	r1, r4, #0
 	add	r1, r1, #0xd
 	add	r0, r7, #0
@@ -3047,19 +4869,19 @@ TryHealMons:
 	lsl	r0, r0, #0x10
 	lsr	r5, r0, #0x10
 	cmp	r5, r6
-	bcs	.L442	@cond_branch
-.L449:
+	bcs	.L571	@cond_branch
+.L578:
 	mov	r1, #0x1
 	mov	sl, r1
-.L437:
+.L566:
 	mov	r0, sl
 	cmp	r0, #0x1
-	bne	.L434	@cond_branch
+	bne	.L563	@cond_branch
 	ldr	r0, [sp, #0x8]
 	ldrb	r1, [r0]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L452
+	ldr	r1, .L581
 	add	r0, r0, r1
 	bl	HealMon
 	ldr	r0, [sp, #0x4]
@@ -3068,16 +4890,16 @@ TryHealMons:
 	lsr	r0, r0, #0x18
 	str	r0, [sp, #0x4]
 	cmp	r0, #0
-	beq	.L420	@cond_branch
-.L434:
+	beq	.L549	@cond_branch
+.L563:
 	mov	r0, r8
 	add	r0, r0, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	mov	r8, r0
 	cmp	r0, #0x2
-	bls	.L435	@cond_branch
-.L420:
+	bls	.L564	@cond_branch
+.L549:
 	add	sp, sp, #0xc
 	pop	{r3, r4, r5}
 	mov	r8, r3
@@ -3086,9 +4908,9 @@ TryHealMons:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L453:
+.L582:
 	.align	2, 0
-.L452:
+.L581:
 	.word	gPlayerParty
 .Lfe34:
 	.size	 TryHealMons,.Lfe34-TryHealMons
@@ -3097,7 +4919,7 @@ TryHealMons:
 	.thumb_func
 GetInBattlePike:
 	push	{r4, lr}
-	ldr	r4, .L455
+	ldr	r4, .L584
 	bl	InBattlePike
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
@@ -3105,9 +4927,9 @@ GetInBattlePike:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L456:
+.L585:
 	.align	2, 0
-.L455:
+.L584:
 	.word	gSpecialVar_Result
 .Lfe35:
 	.size	 GetInBattlePike,.Lfe35-GetInBattlePike
@@ -3118,30 +4940,30 @@ GetInBattlePike:
 InBattlePike:
 	push	{lr}
 	mov	r2, #0x0
-	ldr	r0, .L460
+	ldr	r0, .L589
 	ldrh	r1, [r0, #0x12]
-	ldr	r3, .L460+0x4
+	ldr	r3, .L589+0x4
 	add	r0, r1, r3
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x1
-	bls	.L459	@cond_branch
+	bls	.L588	@cond_branch
 	mov	r0, #0xb3
 	lsl	r0, r0, #0x1
 	cmp	r1, r0
-	beq	.L459	@cond_branch
+	beq	.L588	@cond_branch
 	add	r0, r0, #0x1
 	cmp	r1, r0
-	bne	.L458	@cond_branch
-.L459:
+	bne	.L587	@cond_branch
+.L588:
 	mov	r2, #0x1
-.L458:
+.L587:
 	add	r0, r2, #0
 	pop	{r1}
 	bx	r1
-.L461:
+.L590:
 	.align	2, 0
-.L460:
+.L589:
 	.word	gMapHeader
 	.word	-0x15f
 .Lfe36:
@@ -3153,18 +4975,18 @@ SetHintedRoom:
 	push	{r4, r5, r6, r7, lr}
 	mov	r7, r8
 	push	{r7}
-	ldr	r4, .L478
+	ldr	r4, .L607
 	mov	r0, #0x0
 	strh	r0, [r4]
 	mov	r0, #0x1
 	bl	GetPikeQueenFightType
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L463	@cond_branch
+	beq	.L592	@cond_branch
 	mov	r0, #0x1
 	strh	r0, [r4]
 	bl	Random
-	ldr	r5, .L478+0x4
+	ldr	r5, .L607+0x4
 	ldr	r4, [r5]
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
@@ -3188,15 +5010,15 @@ SetHintedRoom:
 	neg	r0, r0
 	and	r0, r0, r1
 	mov	r1, #0x40
-	b	.L477
-.L479:
+	b	.L606
+.L608:
 	.align	2, 0
-.L478:
+.L607:
 	.word	gSpecialVar_Result
 	.word	gSaveBlock2Ptr
-.L463:
+.L592:
 	bl	Random
-	ldr	r7, .L480
+	ldr	r7, .L609
 	ldr	r4, [r7]
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
@@ -3220,18 +5042,18 @@ SetHintedRoom:
 	and	r0, r0, r1
 	mov	r6, #0x8
 	cmp	r0, #0
-	beq	.L465	@cond_branch
+	beq	.L594	@cond_branch
 	mov	r6, #0x6
-.L465:
+.L594:
 	add	r0, r6, #0
 	bl	AllocZeroed
 	add	r5, r0, #0
 	mov	r2, #0x0
 	mov	r3, #0x0
 	cmp	r2, r6
-	bcs	.L468	@cond_branch
+	bcs	.L597	@cond_branch
 	add	r4, r7, #0
-.L470:
+.L599:
 	ldr	r0, [r4]
 	mov	r1, #0xe1
 	lsl	r1, r1, #0x4
@@ -3240,34 +5062,34 @@ SetHintedRoom:
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L471	@cond_branch
+	beq	.L600	@cond_branch
 	cmp	r2, #0x1
-	beq	.L469	@cond_branch
+	beq	.L598	@cond_branch
 	cmp	r2, #0x4
-	beq	.L469	@cond_branch
+	beq	.L598	@cond_branch
 	add	r1, r3, #0
 	add	r0, r1, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r3, r0, #0x18
 	add	r1, r5, r1
 	strb	r2, [r1]
-	b	.L469
-.L481:
+	b	.L598
+.L610:
 	.align	2, 0
-.L480:
+.L609:
 	.word	gSaveBlock2Ptr
-.L471:
+.L600:
 	add	r0, r5, r2
 	strb	r2, [r0]
-.L469:
+.L598:
 	add	r0, r2, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	cmp	r2, r6
-	bcc	.L470	@cond_branch
-.L468:
+	bcc	.L599	@cond_branch
+.L597:
 	bl	Random
-	ldr	r7, .L482
+	ldr	r7, .L611
 	ldr	r4, [r7]
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
@@ -3296,11 +5118,11 @@ SetHintedRoom:
 	mov	r0, #0x78
 	and	r0, r0, r1
 	cmp	r0, #0x18
-	bne	.L475	@cond_branch
+	bne	.L604	@cond_branch
 	bl	AtLeastOneHealthyMon
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L475	@cond_branch
+	bne	.L604	@cond_branch
 	ldr	r2, [r7]
 	add	r2, r2, r6
 	ldrb	r1, [r2]
@@ -3309,8 +5131,8 @@ SetHintedRoom:
 	mov	r1, #0x10
 	orr	r0, r0, r1
 	strb	r0, [r2]
-.L475:
-	ldr	r5, .L482
+.L604:
+	ldr	r5, .L611
 	ldr	r0, [r5]
 	mov	r4, #0xe1
 	lsl	r4, r4, #0x4
@@ -3319,11 +5141,11 @@ SetHintedRoom:
 	mov	r0, #0x78
 	and	r0, r0, r1
 	cmp	r0, #0x38
-	bne	.L464	@cond_branch
+	bne	.L593	@cond_branch
 	bl	AtLeastTwoAliveMons
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L464	@cond_branch
+	bne	.L593	@cond_branch
 	ldr	r2, [r5]
 	add	r2, r2, r4
 	ldrb	r1, [r2]
@@ -3331,18 +5153,18 @@ SetHintedRoom:
 	neg	r0, r0
 	and	r0, r0, r1
 	mov	r1, #0x10
-.L477:
+.L606:
 	orr	r0, r0, r1
 	strb	r0, [r2]
-.L464:
+.L593:
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L483:
+.L612:
 	.align	2, 0
-.L482:
+.L611:
 	.word	gSaveBlock2Ptr
 .Lfe37:
 	.size	 SetHintedRoom,.Lfe37-SetHintedRoom
@@ -3350,8 +5172,8 @@ SetHintedRoom:
 	.type	 GetHintedRoomIndex,function
 	.thumb_func
 GetHintedRoomIndex:
-	ldr	r1, .L485
-	ldr	r0, .L485+0x4
+	ldr	r1, .L614
+	ldr	r0, .L614+0x4
 	ldr	r0, [r0]
 	mov	r2, #0xe1
 	lsl	r2, r2, #0x4
@@ -3361,9 +5183,9 @@ GetHintedRoomIndex:
 	lsr	r0, r0, #0x1d
 	strh	r0, [r1]
 	bx	lr
-.L486:
+.L615:
 	.align	2, 0
-.L485:
+.L614:
 	.word	gSpecialVar_Result
 	.word	gSaveBlock2Ptr
 .Lfe38:
@@ -3372,9 +5194,9 @@ GetHintedRoomIndex:
 	.type	 GetRoomTypeHint,function
 	.thumb_func
 GetRoomTypeHint:
-	ldr	r2, .L488
-	ldr	r1, .L488+0x4
-	ldr	r0, .L488+0x8
+	ldr	r2, .L617
+	ldr	r1, .L617+0x4
+	ldr	r0, .L617+0x8
 	ldr	r0, [r0]
 	mov	r3, #0xe1
 	lsl	r3, r3, #0x4
@@ -3386,9 +5208,9 @@ GetRoomTypeHint:
 	ldrb	r0, [r0]
 	strh	r0, [r2]
 	bx	lr
-.L489:
+.L618:
 	.align	2, 0
-.L488:
+.L617:
 	.word	gSpecialVar_Result
 	.word	sRoomTypeHints
 	.word	gSaveBlock2Ptr
@@ -3402,17 +5224,17 @@ PrepareOneTrainer:
 	lsl	r0, r0, #0x18
 	mov	r7, #0x6
 	cmp	r0, #0
-	bne	.L491	@cond_branch
+	bne	.L620	@cond_branch
 	mov	r7, #0x1
-.L491:
-	ldr	r4, .L506
+.L620:
+	ldr	r4, .L635
 	ldr	r1, [r4]
-	ldr	r2, .L506+0x4
+	ldr	r2, .L635+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1e
 	lsr	r0, r0, #0x1d
-	ldr	r2, .L506+0x8
+	ldr	r2, .L635+0x8
 	add	r1, r1, r2
 	add	r1, r1, r0
 	ldrh	r0, [r1]
@@ -3421,7 +5243,7 @@ PrepareOneTrainer:
 	lsl	r0, r0, #0x10
 	lsr	r6, r0, #0x10
 	add	r5, r4, #0
-.L493:
+.L622:
 	lsl	r0, r6, #0x18
 	lsr	r0, r0, #0x18
 	add	r1, r7, #0
@@ -3430,69 +5252,69 @@ PrepareOneTrainer:
 	lsr	r4, r0, #0x10
 	mov	r3, #0x0
 	ldr	r1, [r5]
-	ldr	r2, .L506+0xc
+	ldr	r2, .L635+0xc
 	add	r0, r1, r2
 	ldrh	r0, [r0]
 	sub	r2, r0, #0x1
 	cmp	r3, r2
-	bge	.L495	@cond_branch
-	ldr	r0, .L506+0x10
+	bge	.L624	@cond_branch
+	ldr	r0, .L635+0x10
 	add	r1, r1, r0
-	b	.L505
-.L507:
+	b	.L634
+.L636:
 	.align	2, 0
-.L506:
+.L635:
 	.word	gSaveBlock2Ptr
 	.word	0xca9
 	.word	0xe04
 	.word	0xcb2
 	.word	0xcb4
-.L498:
+.L627:
 	add	r1, r1, #0x2
 	add	r3, r3, #0x1
 	cmp	r3, r2
-	bge	.L495	@cond_branch
-.L505:
+	bge	.L624	@cond_branch
+.L634:
 	ldrh	r0, [r1]
 	cmp	r0, r4
-	bne	.L498	@cond_branch
-.L495:
+	bne	.L627	@cond_branch
+.L624:
 	ldr	r0, [r5]
-	ldr	r1, .L508
+	ldr	r1, .L637
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	sub	r0, r0, #0x1
 	cmp	r3, r0
-	bne	.L493	@cond_branch
-	ldr	r5, .L508+0x4
+	bne	.L622	@cond_branch
+	ldr	r5, .L637+0x4
 	strh	r4, [r5]
-	ldr	r1, .L508+0x8
-	ldr	r0, .L508+0xc
+	ldr	r1, .L637+0x8
+	ldr	r0, .L637+0xc
 	str	r0, [r1]
 	ldrh	r0, [r5]
 	mov	r1, #0x0
 	bl	SetBattleFacilityTrainerGfxId
-	ldr	r0, .L508+0x10
+	ldr	r0, .L637+0x10
 	ldr	r1, [r0]
-	ldr	r0, .L508
+	ldr	r0, .L637
 	add	r2, r1, r0
 	ldrh	r0, [r2]
 	cmp	r0, #0xd
-	bhi	.L504	@cond_branch
+	bhi	.L633	@cond_branch
 	sub	r0, r0, #0x1
 	lsl	r0, r0, #0x1
-	ldr	r2, .L508+0x14
+	ldr	r2, .L637+0x14
 	add	r1, r1, r2
 	add	r1, r1, r0
 	ldrh	r0, [r5]
 	strh	r0, [r1]
-.L504:
+.L633:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L509:
+.L638:
 	.align	2, 0
-.L508:
+.L637:
 	.word	0xcb2
 	.word	gTrainerBattleOpponent_A
 	.word	gFacilityTrainers
@@ -3506,14 +5328,14 @@ PrepareOneTrainer:
 	.thumb_func
 PrepareTwoTrainers:
 	push	{r4, r5, r6, r7, lr}
-	ldr	r4, .L536
+	ldr	r4, .L665
 	ldr	r1, [r4]
-	ldr	r2, .L536+0x4
+	ldr	r2, .L665+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1e
 	lsr	r0, r0, #0x1d
-	ldr	r2, .L536+0x8
+	ldr	r2, .L665+0x8
 	add	r1, r1, r2
 	add	r1, r1, r0
 	ldrh	r0, [r1]
@@ -3521,12 +5343,12 @@ PrepareTwoTrainers:
 	bl	__udivsi3
 	lsl	r0, r0, #0x10
 	lsr	r5, r0, #0x10
-	ldr	r1, .L536+0xc
-	ldr	r0, .L536+0x10
+	ldr	r1, .L665+0xc
+	ldr	r0, .L665+0x10
 	str	r0, [r1]
 	lsl	r7, r5, #0x18
 	add	r6, r4, #0
-.L511:
+.L640:
 	lsl	r0, r5, #0x18
 	lsr	r0, r0, #0x18
 	mov	r1, #0x1
@@ -3535,18 +5357,18 @@ PrepareTwoTrainers:
 	lsr	r4, r0, #0x10
 	mov	r3, #0x0
 	ldr	r1, [r6]
-	ldr	r2, .L536+0x14
+	ldr	r2, .L665+0x14
 	add	r0, r1, r2
 	ldrh	r0, [r0]
 	sub	r2, r0, #0x1
 	cmp	r3, r2
-	bge	.L513	@cond_branch
-	ldr	r0, .L536+0x18
+	bge	.L642	@cond_branch
+	ldr	r0, .L665+0x18
 	add	r1, r1, r0
-	b	.L535
-.L537:
+	b	.L664
+.L666:
 	.align	2, 0
-.L536:
+.L665:
 	.word	gSaveBlock2Ptr
 	.word	0xca9
 	.word	0xe04
@@ -3554,45 +5376,45 @@ PrepareTwoTrainers:
 	.word	gBattleFrontierTrainers
 	.word	0xcb2
 	.word	0xcb4
-.L516:
+.L645:
 	add	r1, r1, #0x2
 	add	r3, r3, #0x1
 	cmp	r3, r2
-	bge	.L513	@cond_branch
-.L535:
+	bge	.L642	@cond_branch
+.L664:
 	ldrh	r0, [r1]
 	cmp	r0, r4
-	bne	.L516	@cond_branch
-.L513:
+	bne	.L645	@cond_branch
+.L642:
 	ldr	r0, [r6]
-	ldr	r1, .L538
+	ldr	r1, .L667
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	sub	r0, r0, #0x1
 	cmp	r3, r0
-	bne	.L511	@cond_branch
-	ldr	r5, .L538+0x4
+	bne	.L640	@cond_branch
+	ldr	r5, .L667+0x4
 	strh	r4, [r5]
 	ldrh	r0, [r5]
 	mov	r1, #0x0
 	bl	SetBattleFacilityTrainerGfxId
-	ldr	r3, .L538+0x8
+	ldr	r3, .L667+0x8
 	ldr	r1, [r3]
-	ldr	r0, .L538
+	ldr	r0, .L667
 	add	r2, r1, r0
 	ldrh	r0, [r2]
 	cmp	r0, #0xe
-	bhi	.L522	@cond_branch
+	bhi	.L651	@cond_branch
 	sub	r0, r0, #0x1
 	lsl	r0, r0, #0x1
-	ldr	r2, .L538+0xc
+	ldr	r2, .L667+0xc
 	add	r1, r1, r2
 	add	r1, r1, r0
 	ldrh	r0, [r5]
 	strh	r0, [r1]
-.L522:
+.L651:
 	add	r5, r3, #0
-.L523:
+.L652:
 	lsr	r0, r7, #0x18
 	mov	r1, #0x1
 	bl	GetRandomScaledFrontierTrainerId
@@ -3600,64 +5422,64 @@ PrepareTwoTrainers:
 	lsr	r4, r0, #0x10
 	mov	r3, #0x0
 	ldr	r1, [r5]
-	ldr	r2, .L538
+	ldr	r2, .L667
 	add	r0, r1, r2
 	ldrh	r0, [r0]
 	cmp	r3, r0
-	bge	.L525	@cond_branch
+	bge	.L654	@cond_branch
 	add	r2, r2, #0x2
 	add	r0, r1, r2
 	ldrh	r0, [r0]
 	cmp	r0, r4
-	beq	.L525	@cond_branch
-	ldr	r0, .L538+0x8
+	beq	.L654	@cond_branch
+	ldr	r0, .L667+0x8
 	ldr	r1, [r0]
 	sub	r2, r2, #0x2
 	add	r0, r1, r2
 	ldrh	r2, [r0]
-	ldr	r0, .L538+0xc
+	ldr	r0, .L667+0xc
 	add	r1, r1, r0
-.L528:
+.L657:
 	add	r1, r1, #0x2
 	add	r3, r3, #0x1
 	cmp	r3, r2
-	bge	.L525	@cond_branch
+	bge	.L654	@cond_branch
 	ldrh	r0, [r1]
 	cmp	r0, r4
-	bne	.L528	@cond_branch
-.L525:
+	bne	.L657	@cond_branch
+.L654:
 	ldr	r0, [r5]
-	ldr	r1, .L538
+	ldr	r1, .L667
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	cmp	r3, r0
-	bne	.L523	@cond_branch
-	ldr	r5, .L538+0x10
+	bne	.L652	@cond_branch
+	ldr	r5, .L667+0x10
 	strh	r4, [r5]
 	ldrh	r0, [r5]
 	mov	r1, #0x1
 	bl	SetBattleFacilityTrainerGfxId
-	ldr	r0, .L538+0x8
+	ldr	r0, .L667+0x8
 	ldr	r1, [r0]
-	ldr	r0, .L538
+	ldr	r0, .L667
 	add	r2, r1, r0
 	ldrh	r0, [r2]
 	cmp	r0, #0xd
-	bhi	.L534	@cond_branch
+	bhi	.L663	@cond_branch
 	sub	r0, r0, #0x2
 	lsl	r0, r0, #0x1
-	ldr	r2, .L538+0xc
+	ldr	r2, .L667+0xc
 	add	r1, r1, r2
 	add	r1, r1, r0
 	ldrh	r0, [r5]
 	strh	r0, [r1]
-.L534:
+.L663:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L539:
+.L668:
 	.align	2, 0
-.L538:
+.L667:
 	.word	0xcb2
 	.word	gTrainerBattleOpponent_A
 	.word	gSaveBlock2Ptr
@@ -3671,11 +5493,11 @@ PrepareTwoTrainers:
 ClearPikeTrainerIds:
 	push	{r4, r5, lr}
 	mov	r2, #0x0
-	ldr	r5, .L546
-	ldr	r4, .L546+0x4
-	ldr	r0, .L546+0x8
+	ldr	r5, .L675
+	ldr	r4, .L675+0x4
+	ldr	r0, .L675+0x8
 	add	r3, r0, #0
-.L544:
+.L673:
 	ldr	r1, [r5]
 	lsl	r0, r2, #0x1
 	add	r1, r1, r4
@@ -3687,13 +5509,13 @@ ClearPikeTrainerIds:
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	cmp	r2, #0xd
-	bls	.L544	@cond_branch
+	bls	.L673	@cond_branch
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L547:
+.L676:
 	.align	2, 0
-.L546:
+.L675:
 	.word	gSaveBlock2Ptr
 	.word	0xcb4
 	.word	0xffff
@@ -3704,51 +5526,51 @@ ClearPikeTrainerIds:
 	.thumb_func
 BufferTrainerIntro:
 	push	{lr}
-	ldr	r0, .L554
+	ldr	r0, .L683
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	bne	.L549	@cond_branch
-	ldr	r3, .L554+0x4
+	bne	.L678	@cond_branch
+	ldr	r3, .L683+0x4
 	ldrh	r1, [r3]
-	ldr	r0, .L554+0x8
+	ldr	r0, .L683+0x8
 	cmp	r1, r0
-	bhi	.L551	@cond_branch
-	ldr	r2, .L554+0xc
+	bhi	.L680	@cond_branch
+	ldr	r2, .L683+0xc
 	mov	r0, #0x34
 	mul	r1, r1, r0
 	ldr	r0, [r2]
 	add	r0, r0, r1
 	add	r0, r0, #0xc
 	bl	FrontierSpeechToString
-	b	.L551
-.L555:
+	b	.L680
+.L684:
 	.align	2, 0
-.L554:
+.L683:
 	.word	gSpecialVar_0x8005
 	.word	gTrainerBattleOpponent_A
 	.word	0x12b
 	.word	gFacilityTrainers
-.L549:
+.L678:
 	cmp	r0, #0x1
-	bne	.L551	@cond_branch
-	ldr	r3, .L556
+	bne	.L680	@cond_branch
+	ldr	r3, .L685
 	ldrh	r1, [r3]
-	ldr	r0, .L556+0x4
+	ldr	r0, .L685+0x4
 	cmp	r1, r0
-	bhi	.L551	@cond_branch
-	ldr	r2, .L556+0x8
+	bhi	.L680	@cond_branch
+	ldr	r2, .L685+0x8
 	mov	r0, #0x34
 	mul	r1, r1, r0
 	ldr	r0, [r2]
 	add	r0, r0, r1
 	add	r0, r0, #0xc
 	bl	FrontierSpeechToString
-.L551:
+.L680:
 	pop	{r0}
 	bx	r0
-.L557:
+.L686:
 	.align	2, 0
-.L556:
+.L685:
 	.word	gTrainerBattleOpponent_B
 	.word	0x12b
 	.word	gFacilityTrainers
@@ -3759,36 +5581,36 @@ BufferTrainerIntro:
 	.thumb_func
 AtLeastTwoAliveMons:
 	push	{r4, r5, r6, lr}
-	ldr	r5, .L568
+	ldr	r5, .L697
 	mov	r6, #0x0
 	mov	r4, #0x0
-.L562:
+.L691:
 	add	r0, r5, #0
 	mov	r1, #0x39
 	bl	GetMonData
 	cmp	r0, #0
-	bne	.L561	@cond_branch
+	bne	.L690	@cond_branch
 	add	r0, r6, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-.L561:
+.L690:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	add	r5, r5, #0x64
 	cmp	r4, #0x2
-	bls	.L562	@cond_branch
+	bls	.L691	@cond_branch
 	cmp	r6, #0x1
-	bhi	.L565	@cond_branch
+	bhi	.L694	@cond_branch
 	mov	r0, #0x1
-	b	.L567
-.L569:
+	b	.L696
+.L698:
 	.align	2, 0
-.L568:
+.L697:
 	.word	gPlayerParty
-.L565:
+.L694:
 	mov	r0, #0x0
-.L567:
+.L696:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
@@ -3801,14 +5623,14 @@ GetPikeQueenFightType:
 	push	{r4, r5, r6, lr}
 	lsl	r0, r0, #0x18
 	mov	r6, #0x0
-	ldr	r1, .L582
+	ldr	r1, .L711
 	ldr	r2, [r1]
-	ldr	r3, .L582+0x4
+	ldr	r3, .L711+0x4
 	add	r1, r2, r3
 	ldrb	r1, [r1]
 	lsl	r1, r1, #0x1e
 	lsr	r1, r1, #0x1d
-	ldr	r3, .L582+0x8
+	ldr	r3, .L711+0x8
 	add	r2, r2, r3
 	add	r2, r2, r1
 	lsr	r4, r0, #0x18
@@ -3821,10 +5643,10 @@ GetPikeQueenFightType:
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	cmp	r2, #0
-	blt	.L576	@cond_branch
+	blt	.L705	@cond_branch
 	cmp	r2, #0x1
-	bgt	.L576	@cond_branch
-	ldr	r1, .L582+0xc
+	bgt	.L705	@cond_branch
+	ldr	r1, .L711+0xc
 	add	r0, r2, #0
 	add	r0, r0, #0x14
 	add	r0, r0, r1
@@ -3832,20 +5654,20 @@ GetPikeQueenFightType:
 	ldrb	r1, [r1, #0x17]
 	sub	r0, r0, r1
 	cmp	r4, r0
-	bne	.L571	@cond_branch
+	bne	.L700	@cond_branch
 	add	r0, r2, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-	b	.L571
-.L583:
+	b	.L700
+.L712:
 	.align	2, 0
-.L582:
+.L711:
 	.word	gSaveBlock2Ptr
 	.word	0xca9
 	.word	0xe04
 	.word	sFrontierBrainStreakAppearances
-.L576:
-	ldr	r5, .L584
+.L705:
+	ldr	r5, .L713
 	mov	r0, #0x5
 	lsl	r3, r0, #0x2
 	add	r0, r3, r5
@@ -3855,22 +5677,22 @@ GetPikeQueenFightType:
 	ldrb	r2, [r0]
 	sub	r1, r1, r2
 	cmp	r4, r1
-	bne	.L577	@cond_branch
+	bne	.L706	@cond_branch
 	mov	r6, #0x3
-	b	.L571
-.L585:
+	b	.L700
+.L714:
 	.align	2, 0
-.L584:
+.L713:
 	.word	sFrontierBrainStreakAppearances
-.L577:
+.L706:
 	add	r0, r5, #0x1
 	add	r0, r3, r0
 	ldrb	r1, [r0]
 	sub	r0, r1, r2
 	cmp	r4, r0
-	beq	.L580	@cond_branch
+	beq	.L709	@cond_branch
 	cmp	r4, r1
-	bls	.L571	@cond_branch
+	bls	.L700	@cond_branch
 	sub	r0, r4, r1
 	add	r0, r0, r2
 	add	r1, r5, #0x2
@@ -3878,10 +5700,10 @@ GetPikeQueenFightType:
 	ldrb	r1, [r1]
 	bl	__modsi3
 	cmp	r0, #0
-	bne	.L571	@cond_branch
-.L580:
+	bne	.L700	@cond_branch
+.L709:
 	mov	r6, #0x4
-.L571:
+.L700:
 	add	r0, r6, #0
 	pop	{r4, r5, r6}
 	pop	{r1}
@@ -3893,7 +5715,7 @@ GetPikeQueenFightType:
 	.thumb_func
 GetCurrentRoomPikeQueenFightType:
 	push	{r4, lr}
-	ldr	r4, .L587
+	ldr	r4, .L716
 	mov	r0, #0x0
 	bl	GetPikeQueenFightType
 	lsl	r0, r0, #0x18
@@ -3902,9 +5724,9 @@ GetCurrentRoomPikeQueenFightType:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L588:
+.L717:
 	.align	2, 0
-.L587:
+.L716:
 	.word	gSpecialVar_Result
 .Lfe46:
 	.size	 GetCurrentRoomPikeQueenFightType,.Lfe46-GetCurrentRoomPikeQueenFightType
@@ -3913,9 +5735,9 @@ GetCurrentRoomPikeQueenFightType:
 	.thumb_func
 HealSomeMonsBeforePikeQueen:
 	push	{r4, lr}
-	ldr	r3, .L590
-	ldr	r2, .L590+0x4
-	ldr	r0, .L590+0x8
+	ldr	r3, .L719
+	ldr	r2, .L719+0x4
+	ldr	r0, .L719+0x8
 	ldr	r0, [r0]
 	mov	r1, #0xe1
 	lsl	r1, r1, #0x4
@@ -3931,14 +5753,14 @@ HealSomeMonsBeforePikeQueen:
 	ldrb	r4, [r0]
 	add	r0, r4, #0
 	bl	TryHealMons
-	ldr	r0, .L590+0xc
+	ldr	r0, .L719+0xc
 	strh	r4, [r0]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L591:
+.L720:
 	.align	2, 0
-.L590:
+.L719:
 	.word	sNumMonsToHealBeforePikeQueen
 	.word	gSpecialVar_0x8007
 	.word	gSaveBlock2Ptr
@@ -3949,9 +5771,9 @@ HealSomeMonsBeforePikeQueen:
 	.type	 SetHealingroomTypesDisabled,function
 	.thumb_func
 SetHealingroomTypesDisabled:
-	ldr	r0, .L593
+	ldr	r0, .L722
 	ldr	r2, [r0]
-	ldr	r0, .L593+0x4
+	ldr	r0, .L722+0x4
 	ldrb	r1, [r0]
 	mov	r0, #0xe1
 	lsl	r0, r0, #0x4
@@ -3963,9 +5785,9 @@ SetHealingroomTypesDisabled:
 	orr	r0, r0, r1
 	strb	r0, [r2]
 	bx	lr
-.L594:
+.L723:
 	.align	2, 0
-.L593:
+.L722:
 	.word	gSaveBlock2Ptr
 	.word	gSpecialVar_0x8005
 .Lfe48:
@@ -3979,18 +5801,18 @@ IsPartyFullHealed:
 	mov	r6, r9
 	mov	r5, r8
 	push	{r5, r6, r7}
-	ldr	r1, .L610
+	ldr	r1, .L739
 	mov	r0, #0x1
 	strh	r0, [r1]
 	mov	r0, #0x0
 	mov	sl, r0
-.L599:
+.L728:
 	mov	r0, #0x0
 	mov	r9, r0
 	mov	r0, #0x64
 	mov	r1, sl
 	mul	r1, r1, r0
-	ldr	r0, .L610+0x4
+	ldr	r0, .L739+0x4
 	add	r7, r1, r0
 	add	r0, r7, #0
 	mov	r1, #0x39
@@ -4003,14 +5825,14 @@ IsPartyFullHealed:
 	lsl	r0, r0, #0x10
 	lsr	r5, r0, #0x10
 	cmp	r4, r5
-	bcc	.L600	@cond_branch
+	bcc	.L729	@cond_branch
 	add	r0, r7, #0
 	mov	r1, #0x37
 	bl	GetMonData
 	bl	GetAilmentFromStatus
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L600	@cond_branch
+	bne	.L729	@cond_branch
 	add	r0, r7, #0
 	mov	r1, #0x15
 	bl	GetMonData
@@ -4018,19 +5840,19 @@ IsPartyFullHealed:
 	lsr	r0, r0, #0x18
 	mov	r8, r0
 	mov	r6, #0x0
-	b	.L601
-.L611:
+	b	.L730
+.L740:
 	.align	2, 0
-.L610:
+.L739:
 	.word	gSpecialVar_Result
 	.word	gPlayerParty
-.L603:
+.L732:
 	add	r0, r6, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-.L601:
+.L730:
 	cmp	r6, #0x3
-	bhi	.L607	@cond_branch
+	bhi	.L736	@cond_branch
 	add	r1, r6, #0
 	add	r1, r1, #0xd
 	add	r0, r7, #0
@@ -4049,31 +5871,31 @@ IsPartyFullHealed:
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
 	cmp	r4, r5
-	bcs	.L603	@cond_branch
-.L600:
+	bcs	.L732	@cond_branch
+.L729:
 	mov	r0, #0x1
 	mov	r9, r0
-.L607:
+.L736:
 	mov	r0, r9
 	cmp	r0, #0x1
-	bne	.L598	@cond_branch
-	ldr	r1, .L612
+	bne	.L727	@cond_branch
+	ldr	r1, .L741
 	mov	r0, #0x0
 	strh	r0, [r1]
-	b	.L597
-.L613:
+	b	.L726
+.L742:
 	.align	2, 0
-.L612:
+.L741:
 	.word	gSpecialVar_Result
-.L598:
+.L727:
 	mov	r0, sl
 	add	r0, r0, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	mov	sl, r0
 	cmp	r0, #0x2
-	bls	.L599	@cond_branch
-.L597:
+	bls	.L728	@cond_branch
+.L726:
 	pop	{r3, r4, r5}
 	mov	r8, r3
 	mov	r9, r4
@@ -4089,12 +5911,12 @@ IsPartyFullHealed:
 SaveMonHeldItems:
 	push	{r4, r5, r6, r7, lr}
 	mov	r5, #0x0
-	ldr	r7, .L620
-	ldr	r6, .L620+0x4
-.L618:
+	ldr	r7, .L749
+	ldr	r6, .L749+0x4
+.L747:
 	ldr	r0, [r6]
 	lsl	r4, r5, #0x1
-	ldr	r1, .L620+0x8
+	ldr	r1, .L749+0x8
 	add	r0, r0, r1
 	add	r0, r0, r4
 	ldrh	r1, [r0]
@@ -4108,7 +5930,7 @@ SaveMonHeldItems:
 	mov	r1, #0xc
 	bl	GetMonData
 	ldr	r1, [r6]
-	ldr	r2, .L620+0xc
+	ldr	r2, .L749+0xc
 	add	r1, r1, r2
 	add	r1, r1, r4
 	strh	r0, [r1]
@@ -4116,13 +5938,13 @@ SaveMonHeldItems:
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	cmp	r5, #0x2
-	bls	.L618	@cond_branch
+	bls	.L747	@cond_branch
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L621:
+.L750:
 	.align	2, 0
-.L620:
+.L749:
 	.word	gSaveBlock1Ptr
 	.word	gSaveBlock2Ptr
 	.word	0xcaa
@@ -4135,19 +5957,19 @@ SaveMonHeldItems:
 RestoreMonHeldItems:
 	push	{r4, lr}
 	mov	r4, #0x0
-.L626:
-	ldr	r0, .L628
+.L755:
+	ldr	r0, .L757
 	ldr	r2, [r0]
 	lsl	r3, r4, #0x1
-	ldr	r1, .L628+0x4
+	ldr	r1, .L757+0x4
 	add	r0, r2, r1
 	add	r0, r0, r3
 	ldrh	r1, [r0]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L628+0x8
+	ldr	r1, .L757+0x8
 	add	r0, r0, r1
-	ldr	r1, .L628+0xc
+	ldr	r1, .L757+0xc
 	add	r3, r3, r1
 	add	r2, r2, r3
 	mov	r1, #0xc
@@ -4156,13 +5978,13 @@ RestoreMonHeldItems:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x2
-	bls	.L626	@cond_branch
+	bls	.L755	@cond_branch
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L629:
+.L758:
 	.align	2, 0
-.L628:
+.L757:
 	.word	gSaveBlock2Ptr
 	.word	0xcaa
 	.word	gPlayerParty+-0x64
@@ -4174,19 +5996,19 @@ RestoreMonHeldItems:
 	.thumb_func
 InitPikeChallenge:
 	push	{r4, r5, r6, lr}
-	ldr	r3, .L632
+	ldr	r3, .L761
 	ldr	r1, [r3]
-	ldr	r2, .L632+0x4
+	ldr	r2, .L761+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1e
 	lsr	r5, r0, #0x1e
-	ldr	r0, .L632+0x8
+	ldr	r0, .L761+0x8
 	add	r1, r1, r0
 	mov	r4, #0x0
 	strb	r4, [r1]
 	ldr	r1, [r3]
-	ldr	r6, .L632+0xc
+	ldr	r6, .L761+0xc
 	add	r0, r1, r6
 	strh	r4, [r0]
 	add	r1, r1, r2
@@ -4196,33 +6018,33 @@ InitPikeChallenge:
 	and	r0, r0, r2
 	strb	r0, [r1]
 	ldr	r3, [r3]
-	ldr	r0, .L632+0x10
+	ldr	r0, .L761+0x10
 	add	r2, r3, r0
-	ldr	r1, .L632+0x14
+	ldr	r1, .L761+0x14
 	lsl	r0, r5, #0x2
 	add	r0, r0, r1
 	ldr	r1, [r2]
 	ldr	r0, [r0]
 	and	r1, r1, r0
 	cmp	r1, #0
-	bne	.L631	@cond_branch
+	bne	.L760	@cond_branch
 	lsl	r1, r5, #0x1
-	ldr	r2, .L632+0x18
+	ldr	r2, .L761+0x18
 	add	r0, r3, r2
 	add	r0, r0, r1
 	strh	r4, [r0]
-.L631:
-	ldr	r0, .L632+0x1c
+.L760:
+	ldr	r0, .L761+0x1c
 	strh	r4, [r0]
-	ldr	r1, .L632+0x20
+	ldr	r1, .L761+0x20
 	mov	r0, #0x0
 	strb	r0, [r1]
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L633:
+.L762:
 	.align	2, 0
-.L632:
+.L761:
 	.word	gSaveBlock2Ptr
 	.word	0xca9
 	.word	0xca8
@@ -4241,47 +6063,47 @@ CanEncounterWildMon:
 	push	{r4, r5, lr}
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
-	ldr	r4, .L640
+	ldr	r4, .L769
 	add	r0, r4, #0
 	mov	r1, #0x6
 	bl	GetMonData
 	cmp	r0, #0
-	bne	.L635	@cond_branch
+	bne	.L764	@cond_branch
 	add	r0, r4, #0
 	bl	GetMonAbility
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x33
-	beq	.L637	@cond_branch
+	beq	.L766	@cond_branch
 	cmp	r0, #0x16
-	bne	.L635	@cond_branch
-.L637:
+	bne	.L764	@cond_branch
+.L766:
 	add	r0, r4, #0
 	mov	r1, #0x38
 	bl	GetMonData
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x5
-	bls	.L635	@cond_branch
+	bls	.L764	@cond_branch
 	sub	r0, r0, #0x5
 	cmp	r5, r0
-	bgt	.L635	@cond_branch
+	bgt	.L764	@cond_branch
 	bl	Random
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	mov	r1, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L635	@cond_branch
+	bne	.L764	@cond_branch
 	mov	r0, #0x0
-	b	.L639
-.L641:
+	b	.L768
+.L770:
 	.align	2, 0
-.L640:
+.L769:
 	.word	gPlayerParty
-.L635:
+.L764:
 	mov	r0, #0x1
-.L639:
+.L768:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
@@ -4297,17 +6119,17 @@ SpeciesToPikeMonId:
 	mov	r0, #0xa8
 	lsl	r0, r0, #0x1
 	cmp	r2, r0
-	bne	.L643	@cond_branch
+	bne	.L772	@cond_branch
 	mov	r1, #0x0
-	b	.L644
-.L643:
+	b	.L773
+.L772:
 	mov	r0, #0xaf
 	lsl	r0, r0, #0x1
 	mov	r1, #0x2
 	cmp	r2, r0
-	bne	.L644	@cond_branch
+	bne	.L773	@cond_branch
 	mov	r1, #0x1
-.L644:
+.L773:
 	add	r0, r1, #0
 	pop	{r1}
 	bx	r1

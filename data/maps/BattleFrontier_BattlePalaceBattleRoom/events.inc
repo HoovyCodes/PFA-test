@@ -10,8 +10,8 @@ BattleFrontier_BattlePalaceBattleRoom_ObjectEvents:
 	object_event 5, OBJ_EVENT_GFX_AZURILL, 0, 13, 1, 3, MOVEMENT_TYPE_FACE_DOWN, 1, 1, TRAINER_TYPE_NONE, 0, 0x0, 0
 
 BattleFrontier_BattlePalaceBattleRoom_MapWarps:
-	warp_def 0, 9, 3, 2, MAP_BATTLE_FRONTIER_BATTLE_PALACE_CORRIDOR
-	warp_def 1, 9, 3, 2, MAP_BATTLE_FRONTIER_BATTLE_PALACE_CORRIDOR
+	warp_def 0, 9, 3, 0, MAP_BATTLE_FRONTIER_BATTLE_PALACE_CORRIDOR
+	warp_def 1, 9, 3, 0, MAP_BATTLE_FRONTIER_BATTLE_PALACE_CORRIDOR
 
 BattleFrontier_BattlePalaceBattleRoom_MapEvents::
 	map_events BattleFrontier_BattlePalaceBattleRoom_ObjectEvents, BattleFrontier_BattlePalaceBattleRoom_MapWarps, 0x0, 0x0

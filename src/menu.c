@@ -66,7 +66,7 @@ static const u8 sTextSpeedFrameDelays[] =
 { 
     [OPTIONS_TEXT_SPEED_SLOW] = 8, 
     [OPTIONS_TEXT_SPEED_MID]  = 4, 
-    [OPTIONS_TEXT_SPEED_FAST] = 1 
+    [OPTIONS_TEXT_SPEED_FAST] = 1,
 };
 
 static const struct WindowTemplate sStandardTextBox_WindowTemplates[] =
@@ -2144,10 +2144,7 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
             StringCopy(string, gSaveBlock2Ptr->playerName);
             break;
         case SAVE_MENU_CAUGHT:
-            if (IsNationalPokedexEnabled())
-                string = ConvertIntToDecimalStringN(string, GetNationalPokedexCount(FLAG_GET_CAUGHT), STR_CONV_MODE_LEFT_ALIGN, 3);
-            else
-                string = ConvertIntToDecimalStringN(string, GetHoennPokedexCount(FLAG_GET_CAUGHT), STR_CONV_MODE_LEFT_ALIGN, 3);
+            string = ConvertIntToDecimalStringN(string, gSaveBlock2Ptr->frontier.battlePoints, STR_CONV_MODE_LEFT_ALIGN, 3);
             *string = EOS;
             break;
         case SAVE_MENU_PLAY_TIME:
@@ -2159,13 +2156,13 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
             GetMapNameGeneric(string, gMapHeader.regionMapSectionId);
             break;
         case SAVE_MENU_BADGES:
-            for (curFlag = FLAG_BADGE01_GET, flagCount = 0, endOfString = string + 1; curFlag < FLAG_BADGE01_GET + NUM_BADGES; curFlag++)
+            for (curFlag = FLAG_SYS_TOWER_SILVER, flagCount = 0, endOfString = string + 1; curFlag < FLAG_SYS_TOWER_SILVER + NUM_SYMBOLS; curFlag++)
             {
                 if (FlagGet(curFlag))
                     flagCount++;
             }
-            *string = flagCount + CHAR_0;
-            *endOfString = EOS;
+			string = ConvertIntToDecimalStringN(string, flagCount, STR_CONV_MODE_LEFT_ALIGN, 3);
+            *string = EOS;
             break;
     }
 }

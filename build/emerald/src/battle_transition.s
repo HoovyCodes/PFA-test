@@ -20269,7 +20269,7 @@ sMugshotsTrainerPicIDsTable:
 	.byte	0x25
 	.byte	0x26
 	.byte	0x27
-	.byte	0x36
+	.byte	0x5a
 	.align	1, 0
 	.type	 sMugshotsOpponentRotationScales,object
 	.size	 sMugshotsOpponentRotationScales,20

@@ -139,75 +139,76 @@ gText_ExpandedPlaceholder_May:
 	.type	 gText_EggNickname,object
 gText_EggNickname:
 	.byte	0xbf
-	.byte	0xc1
-	.byte	0xc1
+	.byte	0xdb
+	.byte	0xdb
 	.byte	0xff
 	.size	 gText_EggNickname,4
 	.globl	gText_Pokemon
 	.type	 gText_Pokemon,object
 gText_Pokemon:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_Pokemon,8
 	.globl	gText_ProfBirchMatchCallName
 	.type	 gText_ProfBirchMatchCallName,object
 gText_ProfBirchMatchCallName:
 	.byte	0xca
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xc0
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xda
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xc3
-	.byte	0xcc
-	.byte	0xbd
-	.byte	0xc2
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xd7
+	.byte	0xdc
 	.byte	0xff
 	.size	 gText_ProfBirchMatchCallName,12
 	.globl	gText_MainMenuNewGame
 	.type	 gText_MainMenuNewGame,object
 gText_MainMenuNewGame:
 	.byte	0xc8
-	.byte	0xbf
-	.byte	0xd1
+	.byte	0xd9
+	.byte	0xeb
 	.byte	0x0
 	.byte	0xc1
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_MainMenuNewGame,9
 	.globl	gText_MainMenuContinue
 	.type	 gText_MainMenuContinue,object
 gText_MainMenuContinue:
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xcf
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe9
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_MainMenuContinue,9
 	.globl	gText_MainMenuOption
 	.type	 gText_MainMenuOption,object
 gText_MainMenuOption:
 	.byte	0xc9
-	.byte	0xca
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe4
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe7
 	.byte	0xff
-	.size	 gText_MainMenuOption,7
+	.size	 gText_MainMenuOption,8
 	.globl	gText_MainMenuMysteryGift
 	.type	 gText_MainMenuMysteryGift,object
 gText_MainMenuMysteryGift:
@@ -837,9 +838,9 @@ gText_Pokedex:
 	.type	 gText_Time,object
 gText_Time:
 	.byte	0xce
-	.byte	0xc3
-	.byte	0xc7
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Time,5
 	.globl	gText_Badges
@@ -1004,9 +1005,9 @@ gText_Next:
 	.byte	0xf8
 	.byte	0x0
 	.byte	0xc8
-	.byte	0xbf
-	.byte	0xd2
-	.byte	0xce
+	.byte	0xd9
+	.byte	0xec
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_Next,7
 	.globl	gText_NextBack
@@ -1094,428 +1095,430 @@ gText_AButtonExit:
 	.globl	gText_BirchBoy
 	.type	 gText_BirchBoy,object
 gText_BirchBoy:
-	.byte	0xbc
-	.byte	0xc9
-	.byte	0xd3
+	.byte	0xbd
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe0
 	.byte	0xff
-	.size	 gText_BirchBoy,4
+	.size	 gText_BirchBoy,5
 	.globl	gText_BirchGirl
 	.type	 gText_BirchGirl,object
 gText_BirchGirl:
-	.byte	0xc1
-	.byte	0xc3
-	.byte	0xcc
-	.byte	0xc6
+	.byte	0xbd
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_BirchGirl,5
 	.globl	gText_DefaultNameStu
 	.type	 gText_DefaultNameStu,object
 gText_DefaultNameStu:
 	.byte	0xcd
-	.byte	0xce
-	.byte	0xcf
+	.byte	0xe8
+	.byte	0xe9
 	.byte	0xff
 	.size	 gText_DefaultNameStu,4
 	.globl	gText_DefaultNameMilton
 	.type	 gText_DefaultNameMilton,object
 gText_DefaultNameMilton:
 	.byte	0xc7
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_DefaultNameMilton,7
 	.globl	gText_DefaultNameTom
 	.type	 gText_DefaultNameTom,object
 gText_DefaultNameTom:
 	.byte	0xce
-	.byte	0xc9
-	.byte	0xc7
+	.byte	0xdd
+	.byte	0xe1
 	.byte	0xff
 	.size	 gText_DefaultNameTom,4
 	.globl	gText_DefaultNameKenny
 	.type	 gText_DefaultNameKenny,object
 gText_DefaultNameKenny:
 	.byte	0xc5
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xc8
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_DefaultNameKenny,6
 	.globl	gText_DefaultNameReid
 	.type	 gText_DefaultNameReid,object
 gText_DefaultNameReid:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc3
-	.byte	0xbe
+	.byte	0xd9
+	.byte	0xdd
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_DefaultNameReid,5
 	.globl	gText_DefaultNameJude
 	.type	 gText_DefaultNameJude,object
 gText_DefaultNameJude:
 	.byte	0xc4
-	.byte	0xcf
-	.byte	0xbe
-	.byte	0xbf
+	.byte	0xe9
+	.byte	0xd8
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_DefaultNameJude,5
 	.globl	gText_DefaultNameJaxson
 	.type	 gText_DefaultNameJaxson,object
 gText_DefaultNameJaxson:
 	.byte	0xc4
-	.byte	0xbb
-	.byte	0xd2
-	.byte	0xcd
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xd5
+	.byte	0xec
+	.byte	0xe7
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_DefaultNameJaxson,7
 	.globl	gText_DefaultNameEaston
 	.type	 gText_DefaultNameEaston,object
 gText_DefaultNameEaston:
 	.byte	0xbf
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_DefaultNameEaston,7
 	.globl	gText_DefaultNameWalker
 	.type	 gText_DefaultNameWalker,object
 gText_DefaultNameWalker:
 	.byte	0xd1
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc5
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xdf
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_DefaultNameWalker,7
 	.globl	gText_DefaultNameTeru
 	.type	 gText_DefaultNameTeru,object
 gText_DefaultNameTeru:
 	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcf
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe9
 	.byte	0xff
 	.size	 gText_DefaultNameTeru,5
 	.globl	gText_DefaultNameJohnny
 	.type	 gText_DefaultNameJohnny,object
 gText_DefaultNameJohnny:
 	.byte	0xc4
-	.byte	0xc9
-	.byte	0xc2
-	.byte	0xc8
-	.byte	0xc8
-	.byte	0xd3
+	.byte	0xe3
+	.byte	0xdc
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_DefaultNameJohnny,7
 	.globl	gText_DefaultNameBrett
 	.type	 gText_DefaultNameBrett,object
 gText_DefaultNameBrett:
 	.byte	0xbc
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xce
-	.byte	0xce
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_DefaultNameBrett,6
 	.globl	gText_DefaultNameSeth
 	.type	 gText_DefaultNameSeth,object
 gText_DefaultNameSeth:
 	.byte	0xcd
-	.byte	0xbf
-	.byte	0xce
-	.byte	0xc2
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xdc
 	.byte	0xff
 	.size	 gText_DefaultNameSeth,5
 	.globl	gText_DefaultNameTerry
 	.type	 gText_DefaultNameTerry,object
 gText_DefaultNameTerry:
 	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_DefaultNameTerry,6
 	.globl	gText_DefaultNameCasey
 	.type	 gText_DefaultNameCasey,object
 gText_DefaultNameCasey:
 	.byte	0xbd
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xbf
-	.byte	0xd3
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_DefaultNameCasey,6
 	.globl	gText_DefaultNameDarren
 	.type	 gText_DefaultNameDarren,object
 gText_DefaultNameDarren:
 	.byte	0xbe
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_DefaultNameDarren,7
 	.globl	gText_DefaultNameLandon
 	.type	 gText_DefaultNameLandon,object
 gText_DefaultNameLandon:
 	.byte	0xc6
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_DefaultNameLandon,7
 	.globl	gText_DefaultNameCollin
 	.type	 gText_DefaultNameCollin,object
 gText_DefaultNameCollin:
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xc8
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_DefaultNameCollin,7
 	.globl	gText_DefaultNameStanley
 	.type	 gText_DefaultNameStanley,object
 gText_DefaultNameStanley:
 	.byte	0xcd
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xd3
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_DefaultNameStanley,8
 	.globl	gText_DefaultNameQuincy
 	.type	 gText_DefaultNameQuincy,object
 gText_DefaultNameQuincy:
 	.byte	0xcb
-	.byte	0xcf
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbd
-	.byte	0xd3
+	.byte	0xe9
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_DefaultNameQuincy,7
 	.globl	gText_DefaultNameKimmy
 	.type	 gText_DefaultNameKimmy,object
 gText_DefaultNameKimmy:
 	.byte	0xc5
-	.byte	0xc3
-	.byte	0xc7
-	.byte	0xc7
-	.byte	0xd3
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xe1
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_DefaultNameKimmy,6
 	.globl	gText_DefaultNameTiara
 	.type	 gText_DefaultNameTiara,object
 gText_DefaultNameTiara:
 	.byte	0xce
-	.byte	0xc3
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbb
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd5
 	.byte	0xff
 	.size	 gText_DefaultNameTiara,6
 	.globl	gText_DefaultNameBella
 	.type	 gText_DefaultNameBella,object
 gText_DefaultNameBella:
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xbb
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xd5
 	.byte	0xff
 	.size	 gText_DefaultNameBella,6
 	.globl	gText_DefaultNameJayla
 	.type	 gText_DefaultNameJayla,object
 gText_DefaultNameJayla:
 	.byte	0xc4
-	.byte	0xbb
-	.byte	0xd3
-	.byte	0xc6
-	.byte	0xbb
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xe0
+	.byte	0xd5
 	.byte	0xff
 	.size	 gText_DefaultNameJayla,6
 	.globl	gText_DefaultNameAllie
 	.type	 gText_DefaultNameAllie,object
 gText_DefaultNameAllie:
 	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xbf
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_DefaultNameAllie,6
 	.globl	gText_DefaultNameLianna
 	.type	 gText_DefaultNameLianna,object
 gText_DefaultNameLianna:
 	.byte	0xc6
-	.byte	0xc3
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xc8
-	.byte	0xbb
+	.byte	0xdd
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xd5
 	.byte	0xff
 	.size	 gText_DefaultNameLianna,7
 	.globl	gText_DefaultNameSara
 	.type	 gText_DefaultNameSara,object
 gText_DefaultNameSara:
 	.byte	0xcd
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbb
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd5
 	.byte	0xff
 	.size	 gText_DefaultNameSara,5
 	.globl	gText_DefaultNameMonica
 	.type	 gText_DefaultNameMonica,object
 gText_DefaultNameMonica:
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xc3
-	.byte	0xbd
-	.byte	0xbb
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xd5
 	.byte	0xff
 	.size	 gText_DefaultNameMonica,7
 	.globl	gText_DefaultNameCamila
 	.type	 gText_DefaultNameCamila,object
 gText_DefaultNameCamila:
 	.byte	0xbd
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xbb
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xd5
 	.byte	0xff
 	.size	 gText_DefaultNameCamila,7
 	.globl	gText_DefaultNameAubree
 	.type	 gText_DefaultNameAubree,object
 gText_DefaultNameAubree:
 	.byte	0xbb
-	.byte	0xcf
-	.byte	0xbc
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xe9
+	.byte	0xd6
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_DefaultNameAubree,7
 	.globl	gText_DefaultNameRuthie
 	.type	 gText_DefaultNameRuthie,object
 gText_DefaultNameRuthie:
 	.byte	0xcc
-	.byte	0xcf
-	.byte	0xce
-	.byte	0xc2
-	.byte	0xc3
-	.byte	0xbf
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_DefaultNameRuthie,7
 	.globl	gText_DefaultNameHazel
 	.type	 gText_DefaultNameHazel,object
 gText_DefaultNameHazel:
 	.byte	0xc2
-	.byte	0xbb
-	.byte	0xd4
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xd5
+	.byte	0xee
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_DefaultNameHazel,6
 	.globl	gText_DefaultNameNadine
 	.type	 gText_DefaultNameNadine,object
 gText_DefaultNameNadine:
 	.byte	0xc8
-	.byte	0xbb
-	.byte	0xbe
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_DefaultNameNadine,7
 	.globl	gText_DefaultNameTanja
 	.type	 gText_DefaultNameTanja,object
 gText_DefaultNameTanja:
 	.byte	0xce
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xc4
-	.byte	0xbb
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xde
+	.byte	0xd5
 	.byte	0xff
 	.size	 gText_DefaultNameTanja,6
 	.globl	gText_DefaultNameYasmin
 	.type	 gText_DefaultNameYasmin,object
 gText_DefaultNameYasmin:
 	.byte	0xd3
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xc8
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_DefaultNameYasmin,7
 	.globl	gText_DefaultNameNicola
 	.type	 gText_DefaultNameNicola,object
 gText_DefaultNameNicola:
 	.byte	0xc8
-	.byte	0xc3
-	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xbb
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd5
 	.byte	0xff
 	.size	 gText_DefaultNameNicola,7
 	.globl	gText_DefaultNameLillie
 	.type	 gText_DefaultNameLillie,object
 gText_DefaultNameLillie:
 	.byte	0xc6
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_DefaultNameLillie,7
 	.globl	gText_DefaultNameTerra
 	.type	 gText_DefaultNameTerra,object
 gText_DefaultNameTerra:
 	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xbb
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xd5
 	.byte	0xff
 	.size	 gText_DefaultNameTerra,6
 	.globl	gText_DefaultNameLucy
 	.type	 gText_DefaultNameLucy,object
 gText_DefaultNameLucy:
 	.byte	0xc6
-	.byte	0xcf
-	.byte	0xbd
-	.byte	0xd3
+	.byte	0xe9
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xed
 	.byte	0xff
-	.size	 gText_DefaultNameLucy,5
+	.size	 gText_DefaultNameLucy,6
 	.globl	gText_DefaultNameHalie
 	.type	 gText_DefaultNameHalie,object
 gText_DefaultNameHalie:
 	.byte	0xc2
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_DefaultNameHalie,6
 	.globl	gText_ThisIsAPokemon
@@ -1565,12 +1568,12 @@ gText_5MarksPokemon:
 	.byte	0xac
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_5MarksPokemon,14
 	.globl	gText_UnkHeight
@@ -1630,12 +1633,12 @@ gText_EmptyPkmnCategory:
 	.byte	0x0
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_EmptyPkmnCategory,31
 	.globl	gText_EmptyHeight
@@ -1724,12 +1727,12 @@ gText_SizeComparedTo:
 	.type	 gText_PokedexRegistration,object
 gText_PokedexRegistration:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xd2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xec
 	.byte	0x0
 	.byte	0xe6
 	.byte	0xd9
@@ -1836,12 +1839,12 @@ gText_NoMatchingPkmnWereFound:
 	.byte	0xdb
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xeb
 	.byte	0xd9
@@ -1871,12 +1874,12 @@ gText_SearchForPkmnBasedOnParameters:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xd6
 	.byte	0xd5
@@ -1920,12 +1923,12 @@ gText_SwitchPokedexListings:
 	.byte	0xdc
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xd2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xec
 	.byte	0x0
 	.byte	0xe0
 	.byte	0xdd
@@ -1956,12 +1959,12 @@ gText_ReturnToPokedex:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xd2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xec
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_ReturnToPokedex,23
@@ -1980,12 +1983,12 @@ gText_SelectPokedexMode:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xd2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xec
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xe3
@@ -2009,12 +2012,12 @@ gText_SelectPokedexListingMode:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xd2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xec
 	.byte	0x0
 	.byte	0xe0
 	.byte	0xdd
@@ -2081,12 +2084,12 @@ gText_ListByFirstLetter:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xe3
 	.byte	0xe2
@@ -2127,12 +2130,12 @@ gText_ListByBodyColor:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xe3
 	.byte	0xe2
@@ -2165,12 +2168,12 @@ gText_ListByType:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xe3
 	.byte	0xe2
@@ -2210,50 +2213,50 @@ gText_ExecuteSearchSwitch:
 	.type	 gText_DexHoennTitle,object
 gText_DexHoennTitle:
 	.byte	0xc2
-	.byte	0xc9
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xc8
+	.byte	0xe3
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xd2
+	.byte	0xd9
+	.byte	0xec
 	.byte	0xff
 	.size	 gText_DexHoennTitle,10
 	.globl	gText_DexNatTitle
 	.type	 gText_DexNatTitle,object
 gText_DexNatTitle:
 	.byte	0xc8
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xbb
-	.byte	0xc6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xe0
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xd2
+	.byte	0xd9
+	.byte	0xec
 	.byte	0xff
 	.size	 gText_DexNatTitle,13
 	.globl	gText_DexSortNumericalTitle
 	.type	 gText_DexSortNumericalTitle,object
 gText_DexSortNumericalTitle:
 	.byte	0xc8
-	.byte	0xcf
-	.byte	0xc7
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbd
-	.byte	0xbb
-	.byte	0xc6
+	.byte	0xe9
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe0
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xbe
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_DexSortNumericalTitle,15
 	.globl	gText_DexSortAtoZTitle
@@ -2261,86 +2264,86 @@ gText_DexSortNumericalTitle:
 gText_DexSortAtoZTitle:
 	.byte	0xbb
 	.byte	0x0
-	.byte	0xce
-	.byte	0xc9
+	.byte	0xe8
+	.byte	0xe3
 	.byte	0x0
 	.byte	0xd4
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xbe
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_DexSortAtoZTitle,12
 	.globl	gText_DexSortHeaviestTitle
 	.type	 gText_DexSortHeaviestTitle,object
 gText_DexSortHeaviestTitle:
 	.byte	0xc2
-	.byte	0xbf
-	.byte	0xbb
-	.byte	0xd0
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xbe
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_DexSortHeaviestTitle,14
 	.globl	gText_DexSortLightestTitle
 	.type	 gText_DexSortLightestTitle,object
 gText_DexSortLightestTitle:
 	.byte	0xc6
-	.byte	0xc3
-	.byte	0xc1
-	.byte	0xc2
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xbe
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_DexSortLightestTitle,14
 	.globl	gText_DexSortTallestTitle
 	.type	 gText_DexSortTallestTitle,object
 gText_DexSortTallestTitle:
 	.byte	0xce
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xbe
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_DexSortTallestTitle,13
 	.globl	gText_DexSortSmallestTitle
 	.type	 gText_DexSortSmallestTitle,object
 gText_DexSortSmallestTitle:
 	.byte	0xcd
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xbe
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_DexSortSmallestTitle,14
 	.globl	gText_DexSearchAlphaABC
@@ -2418,107 +2421,107 @@ gText_DexSearchAlphaYZ:
 	.type	 gText_DexSearchColorRed,object
 gText_DexSearchColorRed:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_DexSearchColorRed,4
 	.globl	gText_DexSearchColorBlue
 	.type	 gText_DexSearchColorBlue,object
 gText_DexSearchColorBlue:
 	.byte	0xbc
-	.byte	0xc6
-	.byte	0xcf
-	.byte	0xbf
+	.byte	0xe0
+	.byte	0xe9
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_DexSearchColorBlue,5
 	.globl	gText_DexSearchColorYellow
 	.type	 gText_DexSearchColorYellow,object
 gText_DexSearchColorYellow:
 	.byte	0xd3
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xc9
-	.byte	0xd1
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xeb
 	.byte	0xff
 	.size	 gText_DexSearchColorYellow,7
 	.globl	gText_DexSearchColorGreen
 	.type	 gText_DexSearchColorGreen,object
 gText_DexSearchColorGreen:
 	.byte	0xc1
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_DexSearchColorGreen,6
 	.globl	gText_DexSearchColorBlack
 	.type	 gText_DexSearchColorBlack,object
 gText_DexSearchColorBlack:
 	.byte	0xbc
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xff
 	.size	 gText_DexSearchColorBlack,6
 	.globl	gText_DexSearchColorBrown
 	.type	 gText_DexSearchColorBrown,object
 gText_DexSearchColorBrown:
 	.byte	0xbc
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xd1
-	.byte	0xc8
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_DexSearchColorBrown,6
 	.globl	gText_DexSearchColorPurple
 	.type	 gText_DexSearchColorPurple,object
 gText_DexSearchColorPurple:
 	.byte	0xca
-	.byte	0xcf
-	.byte	0xcc
-	.byte	0xca
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe4
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_DexSearchColorPurple,7
 	.globl	gText_DexSearchColorGray
 	.type	 gText_DexSearchColorGray,object
 gText_DexSearchColorGray:
 	.byte	0xc1
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xd3
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_DexSearchColorGray,5
 	.globl	gText_DexSearchColorWhite
 	.type	 gText_DexSearchColorWhite,object
 gText_DexSearchColorWhite:
 	.byte	0xd1
-	.byte	0xc2
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xbf
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_DexSearchColorWhite,6
 	.globl	gText_DexSearchColorPink
 	.type	 gText_DexSearchColorPink,object
 gText_DexSearchColorPink:
 	.byte	0xca
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdf
 	.byte	0xff
 	.size	 gText_DexSearchColorPink,5
 	.globl	gText_DexHoennDescription
 	.type	 gText_DexHoennDescription,object
 gText_DexHoennDescription:
 	.byte	0xc2
-	.byte	0xc9
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xc8
+	.byte	0xe3
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xe6
 	.byte	0xd9
@@ -2530,12 +2533,12 @@ gText_DexHoennDescription:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xd2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xec
 	.byte	0xff
 	.size	 gText_DexHoennDescription,23
 	.globl	gText_DexNatDescription
@@ -2559,24 +2562,24 @@ gText_DexNatDescription:
 	.byte	0xe2
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xd2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xec
 	.byte	0xff
 	.size	 gText_DexNatDescription,25
 	.globl	gText_DexSortNumericalDescription
 	.type	 gText_DexSortNumericalDescription,object
 gText_DexSortNumericalDescription:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xd5
 	.byte	0xe6
@@ -2639,12 +2642,12 @@ gText_DexSortAtoZDescription:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xd5
 	.byte	0xe6
@@ -2684,12 +2687,12 @@ gText_DexSortHeaviestDescription:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xd5
 	.byte	0xe6
@@ -2748,12 +2751,12 @@ gText_DexSortLightestDescription:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xd5
 	.byte	0xe6
@@ -2812,12 +2815,12 @@ gText_DexSortTallestDescription:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xd5
 	.byte	0xe6
@@ -2875,12 +2878,12 @@ gText_DexSortSmallestDescription:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xd5
 	.byte	0xe6
@@ -2937,18 +2940,18 @@ gText_DexEmptyString:
 	.type	 gText_DexSearchDontSpecify,object
 gText_DexSearchDontSpecify:
 	.byte	0xbe
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xb4
-	.byte	0xce
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbd
-	.byte	0xc3
-	.byte	0xc0
-	.byte	0xd3
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xdd
+	.byte	0xda
+	.byte	0xed
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_DexSearchDontSpecify,15
@@ -2956,9 +2959,9 @@ gText_DexSearchDontSpecify:
 	.type	 gText_DexSearchTypeNone,object
 gText_DexSearchTypeNone:
 	.byte	0xc8
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_DexSearchTypeNone,5
 	.globl	gText_SelectorArrow
@@ -3109,37 +3112,37 @@ gText_HOFDexRating:
 	.type	 gText_HOFDexSaving,object
 gText_HOFDexSaving:
 	.byte	0xcd
-	.byte	0xbb
-	.byte	0xd0
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
 	.byte	0xb0
 	.byte	0xfe
 	.byte	0xbe
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xb4
-	.byte	0xce
+	.byte	0xe8
 	.byte	0x0
-	.byte	0xce
-	.byte	0xcf
-	.byte	0xcc
-	.byte	0xc8
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe2
 	.byte	0x0
-	.byte	0xc9
-	.byte	0xc0
-	.byte	0xc0
+	.byte	0xe3
+	.byte	0xda
+	.byte	0xda
 	.byte	0x0
-	.byte	0xce
-	.byte	0xc2
-	.byte	0xbf
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
 	.byte	0x0
-	.byte	0xca
-	.byte	0xc9
-	.byte	0xd1
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe4
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_HOFDexSaving,34
@@ -3279,9 +3282,9 @@ gText_IdNumberSlash:
 	.type	 gText_Name,object
 gText_Name:
 	.byte	0xc8
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Name,5
 	.globl	gText_IDNumber
@@ -3425,105 +3428,105 @@ gText_FlyToWhere:
 	.type	 gMenuText_Use,object
 gMenuText_Use:
 	.byte	0xcf
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xff
 	.size	 gMenuText_Use,4
 	.globl	gMenuText_Toss
 	.type	 gMenuText_Toss,object
 gMenuText_Toss:
 	.byte	0xce
-	.byte	0xc9
-	.byte	0xcd
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xe7
 	.byte	0xff
 	.size	 gMenuText_Toss,5
 	.globl	gMenuText_Register
 	.type	 gMenuText_Register,object
 gMenuText_Register:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc1
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xd9
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gMenuText_Register,9
 	.globl	gMenuText_Give
 	.type	 gMenuText_Give,object
 gMenuText_Give:
 	.byte	0xc1
-	.byte	0xc3
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xd9
 	.byte	0xff
 	.size	 gMenuText_Give,5
 	.globl	gMenuText_CheckTag
 	.type	 gMenuText_CheckTag,object
 gMenuText_CheckTag:
 	.byte	0xbd
-	.byte	0xc2
-	.byte	0xbf
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0x0
 	.byte	0xce
-	.byte	0xbb
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xdb
 	.byte	0xff
 	.size	 gMenuText_CheckTag,10
 	.globl	gMenuText_Confirm
 	.type	 gMenuText_Confirm,object
 gMenuText_Confirm:
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xc0
-	.byte	0xc3
-	.byte	0xcc
-	.byte	0xc7
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xda
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xe1
 	.byte	0xff
 	.size	 gMenuText_Confirm,8
 	.globl	gMenuText_Walk
 	.type	 gMenuText_Walk,object
 gMenuText_Walk:
 	.byte	0xd1
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc5
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xdf
 	.byte	0xff
 	.size	 gMenuText_Walk,5
 	.globl	gText_Cancel
 	.type	 gText_Cancel,object
 gText_Cancel:
 	.byte	0xbd
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbd
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_Cancel,7
 	.globl	gText_Cancel2
 	.type	 gText_Cancel2,object
 gText_Cancel2:
 	.byte	0xbd
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbd
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_Cancel2,7
 	.globl	gMenuText_Show
 	.type	 gMenuText_Show,object
 gMenuText_Show:
 	.byte	0xcd
-	.byte	0xc2
-	.byte	0xc9
-	.byte	0xd1
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xeb
 	.byte	0xff
 	.size	 gMenuText_Show,5
 	.globl	gText_EmptyString2
@@ -3546,69 +3549,69 @@ gText_Cancel7:
 	.type	 gText_Item,object
 gText_Item:
 	.byte	0xc3
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xc7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe1
 	.byte	0xff
 	.size	 gText_Item,5
 	.globl	gText_Mail
 	.type	 gText_Mail,object
 gText_Mail:
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_Mail,5
 	.globl	gText_Take
 	.type	 gText_Take,object
 gText_Take:
 	.byte	0xce
-	.byte	0xbb
-	.byte	0xc5
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Take,5
 	.globl	gText_Store
 	.type	 gText_Store,object
 gText_Store:
 	.byte	0xcd
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xbf
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Store,6
 	.globl	gMenuText_Check
 	.type	 gMenuText_Check,object
 gMenuText_Check:
 	.byte	0xbd
-	.byte	0xc2
-	.byte	0xbf
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xff
 	.size	 gMenuText_Check,6
 	.globl	gText_None
 	.type	 gText_None,object
 gText_None:
 	.byte	0xc8
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_None,5
 	.globl	gMenuText_Deselect
 	.type	 gMenuText_Deselect,object
 gMenuText_Deselect:
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xbd
-	.byte	0xce
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe8
 	.byte	0xff
 	.size	 gMenuText_Deselect,9
 	.globl	gText_ThreeMarks
@@ -3786,9 +3789,9 @@ gText_WhatWouldYouLike:
 	.type	 gMenuText_Give2,object
 gMenuText_Give2:
 	.byte	0xc1
-	.byte	0xc3
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xd9
 	.byte	0xff
 	.size	 gMenuText_Give2,5
 	.globl	gText_xVar1
@@ -3817,24 +3820,24 @@ gText_Coins:
 	.byte	0x2
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_Coins,9
 	.globl	gText_CloseBag
 	.type	 gText_CloseBag,object
 gText_CloseBag:
 	.byte	0xbd
-	.byte	0xc6
-	.byte	0xc9
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xdb
 	.byte	0xff
 	.size	 gText_CloseBag,10
 	.globl	gText_Var1IsSelected
@@ -3904,12 +3907,12 @@ gText_NoPokemon:
 	.byte	0xe3
 	.byte	0xfe
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_NoPokemon,21
@@ -4268,8 +4271,8 @@ gText_ConfirmTossItems:
 	.type	 gText_DadsAdvice,object
 gText_DadsAdvice:
 	.byte	0xbe
-	.byte	0xbb
-	.byte	0xbe
+	.byte	0xd5
+	.byte	0xd8
 	.byte	0xb4
 	.byte	0xe7
 	.byte	0x0
@@ -4356,10 +4359,10 @@ gText_CantDismountBike:
 	.byte	0xe9
 	.byte	0xe6
 	.byte	0x0
-	.byte	0xbc
-	.byte	0xc3
-	.byte	0xc5
-	.byte	0xbf
+	.byte	0xd6
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xdc
 	.byte	0xd9
@@ -4538,10 +4541,10 @@ gText_CoinCase:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe7
 	.byte	0xf0
 	.byte	0xfe
 	.byte	0xfd
@@ -4626,12 +4629,12 @@ gText_TMHMContainedVar1:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xac
 	.byte	0xff
 	.size	 gText_TMHMContainedVar1,40
@@ -4738,12 +4741,12 @@ gText_UsedVar2WildLured:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xeb
 	.byte	0xdd
@@ -4788,12 +4791,12 @@ gText_UsedVar2WildRepelled:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xeb
 	.byte	0xdd
@@ -4823,9 +4826,9 @@ gText_BoxFull:
 	.byte	0xdc
 	.byte	0xd9
 	.byte	0x0
-	.byte	0xbc
-	.byte	0xc9
-	.byte	0xd2
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xec
 	.byte	0x0
 	.byte	0xdd
 	.byte	0xe7
@@ -4897,12 +4900,12 @@ gText_ThePokemonList:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xc6
 	.byte	0xc3
@@ -4982,25 +4985,25 @@ gText_ReturnToVar1:
 	.type	 gText_ItemsPocket,object
 gText_ItemsPocket:
 	.byte	0xc3
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xc7
-	.byte	0xcd
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_ItemsPocket,6
 	.globl	gText_PokeBallsPocket
 	.type	 gText_PokeBallsPocket,object
 gText_PokeBallsPocket:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xcd
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_PokeBallsPocket,11
 	.globl	gText_TMHMPocket
@@ -5021,26 +5024,26 @@ gText_TMHMPocket:
 	.type	 gText_BerriesPocket,object
 gText_BerriesPocket:
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_BerriesPocket,8
 	.globl	gText_KeyItemsPocket
 	.type	 gText_KeyItemsPocket,object
 gText_KeyItemsPocket:
 	.byte	0xc5
-	.byte	0xbf
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xed
 	.byte	0x0
 	.byte	0xc3
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xc7
-	.byte	0xcd
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_KeyItemsPocket,10
 	.globl	gPocketNamesStringsTable
@@ -5192,22 +5195,22 @@ gText_NumberVar1Var2:
 	.type	 gText_BerryTag,object
 gText_BerryTag:
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xed
 	.byte	0x0
 	.byte	0xce
-	.byte	0xbb
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xdb
 	.byte	0xff
 	.size	 gText_BerryTag,10
 	.globl	gText_RedPokeblock
 	.type	 gText_RedPokeblock,object
 gText_RedPokeblock:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0x0
 	.byte	0x55
 	.byte	0x56
@@ -5220,9 +5223,9 @@ gText_RedPokeblock:
 	.type	 gText_BluePokeblock,object
 gText_BluePokeblock:
 	.byte	0xbc
-	.byte	0xc6
-	.byte	0xcf
-	.byte	0xbf
+	.byte	0xe0
+	.byte	0xe9
+	.byte	0xd9
 	.byte	0x0
 	.byte	0x55
 	.byte	0x56
@@ -5235,9 +5238,9 @@ gText_BluePokeblock:
 	.type	 gText_PinkPokeblock,object
 gText_PinkPokeblock:
 	.byte	0xca
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdf
 	.byte	0x0
 	.byte	0x55
 	.byte	0x56
@@ -5250,10 +5253,10 @@ gText_PinkPokeblock:
 	.type	 gText_GreenPokeblock,object
 gText_GreenPokeblock:
 	.byte	0xc1
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe2
 	.byte	0x0
 	.byte	0x55
 	.byte	0x56
@@ -5266,11 +5269,11 @@ gText_GreenPokeblock:
 	.type	 gText_YellowPokeblock,object
 gText_YellowPokeblock:
 	.byte	0xd3
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xc9
-	.byte	0xd1
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xeb
 	.byte	0x0
 	.byte	0x55
 	.byte	0x56
@@ -5283,11 +5286,11 @@ gText_YellowPokeblock:
 	.type	 gText_PurplePokeblock,object
 gText_PurplePokeblock:
 	.byte	0xca
-	.byte	0xcf
-	.byte	0xcc
-	.byte	0xca
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe4
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0x55
 	.byte	0x56
@@ -5300,11 +5303,11 @@ gText_PurplePokeblock:
 	.type	 gText_IndigoPokeblock,object
 gText_IndigoPokeblock:
 	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xc3
-	.byte	0xc1
-	.byte	0xc9
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xdb
+	.byte	0xe3
 	.byte	0x0
 	.byte	0x55
 	.byte	0x56
@@ -5317,10 +5320,10 @@ gText_IndigoPokeblock:
 	.type	 gText_BrownPokeblock,object
 gText_BrownPokeblock:
 	.byte	0xbc
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xd1
-	.byte	0xc8
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xe2
 	.byte	0x0
 	.byte	0x55
 	.byte	0x56
@@ -5333,13 +5336,13 @@ gText_BrownPokeblock:
 	.type	 gText_LiteBluePokeblock,object
 gText_LiteBluePokeblock:
 	.byte	0xc6
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xd9
 	.byte	0xbc
-	.byte	0xc6
-	.byte	0xcf
-	.byte	0xbf
+	.byte	0xe0
+	.byte	0xe9
+	.byte	0xd9
 	.byte	0x0
 	.byte	0x55
 	.byte	0x56
@@ -5352,10 +5355,10 @@ gText_LiteBluePokeblock:
 	.type	 gText_OlivePokeblock,object
 gText_OlivePokeblock:
 	.byte	0xc9
-	.byte	0xc6
-	.byte	0xc3
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xe0
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xd9
 	.byte	0x0
 	.byte	0x55
 	.byte	0x56
@@ -5368,9 +5371,9 @@ gText_OlivePokeblock:
 	.type	 gText_GrayPokeblock,object
 gText_GrayPokeblock:
 	.byte	0xc1
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xd3
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xed
 	.byte	0x0
 	.byte	0x55
 	.byte	0x56
@@ -5383,10 +5386,10 @@ gText_GrayPokeblock:
 	.type	 gText_BlackPokeblock,object
 gText_BlackPokeblock:
 	.byte	0xbc
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0x0
 	.byte	0x55
 	.byte	0x56
@@ -5399,10 +5402,10 @@ gText_BlackPokeblock:
 	.type	 gText_WhitePokeblock,object
 gText_WhitePokeblock:
 	.byte	0xd1
-	.byte	0xc2
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xbf
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xd9
 	.byte	0x0
 	.byte	0x55
 	.byte	0x56
@@ -5415,9 +5418,9 @@ gText_WhitePokeblock:
 	.type	 gText_GoldPokeblock,object
 gText_GoldPokeblock:
 	.byte	0xc1
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xbe
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd8
 	.byte	0x0
 	.byte	0x55
 	.byte	0x56
@@ -5430,48 +5433,48 @@ gText_GoldPokeblock:
 	.type	 gText_Spicy,object
 gText_Spicy:
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xc3
-	.byte	0xbd
-	.byte	0xd3
+	.byte	0xe4
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_Spicy,6
 	.globl	gText_Dry
 	.type	 gText_Dry,object
 gText_Dry:
 	.byte	0xbe
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_Dry,4
 	.globl	gText_Sweet
 	.type	 gText_Sweet,object
 gText_Sweet:
 	.byte	0xcd
-	.byte	0xd1
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xce
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_Sweet,6
 	.globl	gText_Bitter
 	.type	 gText_Bitter,object
 gText_Bitter:
 	.byte	0xbc
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_Bitter,7
 	.globl	gText_Sour
 	.type	 gText_Sour,object
 gText_Sour:
 	.byte	0xcd
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xcc
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_Sour,5
 	.globl	gText_Tasty
@@ -5502,9 +5505,9 @@ gText_StowCase:
 	.byte	0xeb
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_StowCase,11
@@ -5656,37 +5659,37 @@ gText_Var1DisdainfullyAteVar2:
 	.type	 gText_ShopBuy,object
 gText_ShopBuy:
 	.byte	0xbc
-	.byte	0xcf
-	.byte	0xd3
+	.byte	0xe9
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_ShopBuy,4
 	.globl	gText_ShopSell
 	.type	 gText_ShopSell,object
 gText_ShopSell:
 	.byte	0xcd
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xc6
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_ShopSell,5
 	.globl	gText_ShopQuit
 	.type	 gText_ShopQuit,object
 gText_ShopQuit:
 	.byte	0xcb
-	.byte	0xcf
-	.byte	0xc3
-	.byte	0xce
+	.byte	0xe9
+	.byte	0xdd
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_ShopQuit,5
 	.globl	gText_InBagVar1
 	.type	 gText_InBagVar1,object
 gText_InBagVar1:
 	.byte	0xc3
-	.byte	0xc8
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xdb
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xfd
@@ -6472,55 +6475,54 @@ gText_TurnedOverVar1ForVar2:
 	.globl	gText_PokedollarVar1
 	.type	 gText_PokedollarVar1,object
 gText_PokedollarVar1:
-	.byte	0xb7
 	.byte	0xfd
 	.byte	0x2
 	.byte	0xff
-	.size	 gText_PokedollarVar1,4
+	.size	 gText_PokedollarVar1,3
 	.globl	gText_Shift
 	.type	 gText_Shift,object
 gText_Shift:
 	.byte	0xcd
-	.byte	0xc2
-	.byte	0xc3
-	.byte	0xc0
-	.byte	0xce
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xda
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_Shift,6
 	.globl	gText_SendOut
 	.type	 gText_SendOut,object
 gText_SendOut:
 	.byte	0xcd
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbe
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd8
 	.byte	0x0
 	.byte	0xc9
-	.byte	0xcf
-	.byte	0xce
+	.byte	0xe9
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_SendOut,9
 	.globl	gText_Switch2
 	.type	 gText_Switch2,object
 gText_Switch2:
 	.byte	0xcd
-	.byte	0xd1
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xbd
-	.byte	0xc2
+	.byte	0xeb
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xd7
+	.byte	0xdc
 	.byte	0xff
 	.size	 gText_Switch2,7
 	.globl	gText_Summary5
 	.type	 gText_Summary5,object
 gText_Summary5:
 	.byte	0xcd
-	.byte	0xcf
-	.byte	0xc7
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xe9
+	.byte	0xe1
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_Summary5,8
 	.globl	gText_Moves
@@ -6537,23 +6539,23 @@ gText_Moves:
 	.type	 gText_Enter,object
 gText_Enter:
 	.byte	0xbf
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_Enter,6
 	.globl	gText_NoEntry
 	.type	 gText_NoEntry,object
 gText_NoEntry:
 	.byte	0xc8
-	.byte	0xc9
+	.byte	0xe3
 	.byte	0x0
 	.byte	0xbf
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_NoEntry,9
 	.globl	gText_Take2
@@ -8683,12 +8685,12 @@ gText_TeachWhichPokemon2:
 	.byte	0xdc
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xac
 	.byte	0xff
 	.size	 gText_TeachWhichPokemon2,21
@@ -8705,12 +8707,12 @@ gText_ChoosePokemon:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_ChoosePokemon,18
@@ -8749,12 +8751,12 @@ gText_TeachWhichPokemon:
 	.byte	0xdc
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xac
 	.byte	0xff
 	.size	 gText_TeachWhichPokemon,21
@@ -8775,12 +8777,12 @@ gText_UseOnWhichPokemon:
 	.byte	0xdc
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xac
 	.byte	0xff
 	.size	 gText_UseOnWhichPokemon,22
@@ -8802,12 +8804,12 @@ gText_GiveToWhichPokemon:
 	.byte	0xdc
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xac
 	.byte	0xff
 	.size	 gText_GiveToWhichPokemon,23
@@ -9028,12 +9030,12 @@ gText_NoPokemonForBattle:
 	.byte	0xe3
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xda
 	.byte	0xe3
@@ -9061,12 +9063,12 @@ gText_ChoosePokemon2:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_ChoosePokemon2,18
@@ -9096,12 +9098,12 @@ gText_PokemonAreNeeded:
 	.byte	0x2
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xd5
 	.byte	0xe6
@@ -9120,12 +9122,12 @@ gText_PokemonAreNeeded:
 	.type	 gText_PokemonCantBeSame,object
 gText_PokemonCantBeSame:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xd7
 	.byte	0xd5
@@ -9231,9 +9233,9 @@ gText_DoWhatWithMail:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe0
 	.byte	0xac
 	.byte	0xff
 	.size	 gText_DoWhatWithMail,23
@@ -9248,22 +9250,22 @@ gText_ChoosePokemonCancel:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xe3
 	.byte	0xe6
 	.byte	0x0
-	.byte	0xbd
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbd
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_ChoosePokemonCancel,26
@@ -9278,12 +9280,12 @@ gText_ChoosePokemonConfirm:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xd5
 	.byte	0xe2
@@ -9402,71 +9404,71 @@ gText_NoUse:
 	.type	 gText_Able,object
 gText_Able:
 	.byte	0xbb
-	.byte	0xbc
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd6
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Able,5
 	.globl	gText_First_PM
 	.type	 gText_First_PM,object
 gText_First_PM:
 	.byte	0xc0
-	.byte	0xc3
-	.byte	0xcc
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_First_PM,6
 	.globl	gText_Second_PM
 	.type	 gText_Second_PM,object
 gText_Second_PM:
 	.byte	0xcd
-	.byte	0xbf
-	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xbe
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_Second_PM,7
 	.globl	gText_Third_PM
 	.type	 gText_Third_PM,object
 gText_Third_PM:
 	.byte	0xce
-	.byte	0xc2
-	.byte	0xc3
-	.byte	0xcc
-	.byte	0xbe
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_Third_PM,6
 	.globl	gText_Able2
 	.type	 gText_Able2,object
 gText_Able2:
 	.byte	0xbb
-	.byte	0xbc
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd6
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Able2,5
 	.globl	gText_NotAble
 	.type	 gText_NotAble,object
 gText_NotAble:
 	.byte	0xc8
-	.byte	0xc9
-	.byte	0xce
+	.byte	0xe3
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xbc
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd6
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_NotAble,9
 	.globl	gText_Able3
 	.type	 gText_Able3,object
 gText_Able3:
 	.byte	0xbb
-	.byte	0xbc
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd6
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xab
 	.byte	0xff
 	.size	 gText_Able3,6
@@ -9474,13 +9476,13 @@ gText_Able3:
 	.type	 gText_NotAble2,object
 gText_NotAble2:
 	.byte	0xc8
-	.byte	0xc9
-	.byte	0xce
+	.byte	0xe3
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xbc
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd6
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xab
 	.byte	0xff
 	.size	 gText_NotAble2,10
@@ -9488,47 +9490,47 @@ gText_NotAble2:
 	.type	 gText_Learned,object
 gText_Learned:
 	.byte	0xc6
-	.byte	0xbf
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_Learned,8
 	.globl	gText_Have
 	.type	 gText_Have,object
 gText_Have:
 	.byte	0xc2
-	.byte	0xbb
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Have,5
 	.globl	gText_DontHave
 	.type	 gText_DontHave,object
 gText_DontHave:
 	.byte	0xbe
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xb4
-	.byte	0xce
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xc2
-	.byte	0xbb
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_DontHave,11
 	.globl	gText_Fourth
 	.type	 gText_Fourth,object
 gText_Fourth:
 	.byte	0xc0
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xcc
-	.byte	0xce
-	.byte	0xc2
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xdc
 	.byte	0xff
 	.size	 gText_Fourth,7
 	.globl	gText_PkmnCantParticipate
@@ -9540,12 +9542,12 @@ gText_PkmnCantParticipate:
 	.byte	0xe8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xd7
 	.byte	0xd5
@@ -9635,18 +9637,18 @@ gText_ReturnToWaitingRoom:
 	.byte	0xdc
 	.byte	0xd9
 	.byte	0x0
-	.byte	0xd1
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc1
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
 	.byte	0x0
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xc9
-	.byte	0xc7
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe1
 	.byte	0xac
 	.byte	0xff
 	.size	 gText_ReturnToWaitingRoom,28
@@ -9946,22 +9948,22 @@ gText_OtherTrainersPkmnCantBeTraded:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xce
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xb4
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xfe
 	.byte	0xd7
 	.byte	0xd5
@@ -10026,12 +10028,12 @@ gText_OtherTrainerCantAcceptPkmn:
 	.byte	0xe8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xe2
 	.byte	0xe3
@@ -10111,12 +10113,12 @@ gText_NotPkmnOtherTrainerWants:
 	.byte	0xda
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xfe
 	.byte	0xe8
 	.byte	0xdc
@@ -10190,57 +10192,57 @@ gText_Register:
 	.type	 gText_Attack3,object
 gText_Attack3:
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xff
 	.size	 gText_Attack3,7
 	.globl	gText_Defense3
 	.type	 gText_Defense3,object
 gText_Defense3:
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Defense3,8
 	.globl	gText_SpAtk4
 	.type	 gText_SpAtk4,object
 gText_SpAtk4:
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xdf
 	.byte	0xff
 	.size	 gText_SpAtk4,8
 	.globl	gText_SpDef4
 	.type	 gText_SpDef4,object
 gText_SpDef4:
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
+	.byte	0xd9
+	.byte	0xda
 	.byte	0xff
 	.size	 gText_SpDef4,8
 	.globl	gText_Speed2
 	.type	 gText_Speed2,object
 gText_Speed2:
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_Speed2,6
 	.globl	gText_HP4
@@ -10267,28 +10269,28 @@ gText_OTSlash:
 	.type	 gText_RentalPkmn,object
 gText_RentalPkmn:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xc6
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe0
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_RentalPkmn,15
 	.globl	gText_TypeSlash
 	.type	 gText_TypeSlash,object
 gText_TypeSlash:
 	.byte	0xce
-	.byte	0xd3
-	.byte	0xca
-	.byte	0xbf
+	.byte	0xed
+	.byte	0xe4
+	.byte	0xd9
 	.byte	0xba
 	.byte	0xff
 	.size	 gText_TypeSlash,6
@@ -10296,78 +10298,78 @@ gText_TypeSlash:
 	.type	 gText_Power,object
 gText_Power:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xd1
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_Power,6
 	.globl	gText_Accuracy2
 	.type	 gText_Accuracy2,object
 gText_Accuracy2:
 	.byte	0xbb
-	.byte	0xbd
-	.byte	0xbd
-	.byte	0xcf
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xd3
+	.byte	0xd7
+	.byte	0xd7
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_Accuracy2,9
 	.globl	gText_Appeal
 	.type	 gText_Appeal,object
 gText_Appeal:
 	.byte	0xbb
-	.byte	0xca
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbb
-	.byte	0xc6
+	.byte	0xe4
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_Appeal,7
 	.globl	gText_Jam
 	.type	 gText_Jam,object
 gText_Jam:
 	.byte	0xc4
-	.byte	0xbb
-	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe1
 	.byte	0xff
 	.size	 gText_Jam,4
 	.globl	gText_Status
 	.type	 gText_Status,object
 gText_Status:
 	.byte	0xcd
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xcf
-	.byte	0xcd
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_Status,7
 	.globl	gText_ExpPoints
 	.type	 gText_ExpPoints,object
 gText_ExpPoints:
 	.byte	0xbf
-	.byte	0xd2
-	.byte	0xca
+	.byte	0xec
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_ExpPoints,12
 	.globl	gText_NextLv
 	.type	 gText_NextLv,object
 gText_NextLv:
 	.byte	0xc8
-	.byte	0xbf
-	.byte	0xd2
-	.byte	0xce
+	.byte	0xd9
+	.byte	0xec
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xc6
 	.byte	0xd0
@@ -10378,12 +10380,12 @@ gText_NextLv:
 	.type	 gText_RibbonsVar1,object
 gText_RibbonsVar1:
 	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbc
-	.byte	0xbc
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xcd
+	.byte	0xdd
+	.byte	0xd6
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe7
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xfd
@@ -10421,80 +10423,80 @@ gText_Switch:
 	.type	 gText_PkmnInfo,object
 gText_PkmnInfo:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc0
-	.byte	0xc9
+	.byte	0xe2
+	.byte	0xda
+	.byte	0xe3
 	.byte	0xff
 	.size	 gText_PkmnInfo,13
 	.globl	gText_PkmnSkills
 	.type	 gText_PkmnSkills,object
 gText_PkmnSkills:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xc5
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xcd
+	.byte	0xdf
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_PkmnSkills,15
 	.globl	gText_BattleMoves
 	.type	 gText_BattleMoves,object
 gText_BattleMoves:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xd0
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_BattleMoves,13
 	.globl	gText_ContestMoves
 	.type	 gText_ContestMoves,object
 gText_ContestMoves:
 	.byte	0xbd
-	.byte	0xa1
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xd0
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_ContestMoves,14
 	.globl	gText_Info
 	.type	 gText_Info,object
 gText_Info:
 	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc0
-	.byte	0xc9
+	.byte	0xe2
+	.byte	0xda
+	.byte	0xe3
 	.byte	0xff
 	.size	 gText_Info,5
 	.globl	gText_EggWillTakeALongTime
@@ -10753,6 +10755,10 @@ gText_XNatureMetAtYZ:
 	.byte	0x1
 	.byte	0xf7
 	.byte	0x5
+	.byte	0xf7
+	.byte	0x6
+	.byte	0xf7
+	.byte	0x7
 	.byte	0x0
 	.byte	0xe2
 	.byte	0xd5
@@ -10787,7 +10793,7 @@ gText_XNatureMetAtYZ:
 	.byte	0x1
 	.byte	0xad
 	.byte	0xff
-	.size	 gText_XNatureMetAtYZ,42
+	.size	 gText_XNatureMetAtYZ,46
 	.globl	gText_XNatureHatchedAtYZ
 	.type	 gText_XNatureHatchedAtYZ,object
 gText_XNatureHatchedAtYZ:
@@ -10799,6 +10805,10 @@ gText_XNatureHatchedAtYZ:
 	.byte	0x1
 	.byte	0xf7
 	.byte	0x5
+	.byte	0xf7
+	.byte	0x6
+	.byte	0xf7
+	.byte	0x7
 	.byte	0x0
 	.byte	0xe2
 	.byte	0xd5
@@ -10837,7 +10847,7 @@ gText_XNatureHatchedAtYZ:
 	.byte	0x1
 	.byte	0xad
 	.byte	0xff
-	.size	 gText_XNatureHatchedAtYZ,46
+	.size	 gText_XNatureHatchedAtYZ,50
 	.globl	gText_XNatureObtainedInTrade
 	.type	 gText_XNatureObtainedInTrade,object
 gText_XNatureObtainedInTrade:
@@ -10849,6 +10859,10 @@ gText_XNatureObtainedInTrade:
 	.byte	0x1
 	.byte	0xf7
 	.byte	0x5
+	.byte	0xf7
+	.byte	0x6
+	.byte	0xf7
+	.byte	0x7
 	.byte	0x0
 	.byte	0xe2
 	.byte	0xd5
@@ -10879,7 +10893,7 @@ gText_XNatureObtainedInTrade:
 	.byte	0xd9
 	.byte	0xad
 	.byte	0xff
-	.size	 gText_XNatureObtainedInTrade,38
+	.size	 gText_XNatureObtainedInTrade,42
 	.globl	gText_XNatureFatefulEncounter
 	.type	 gText_XNatureFatefulEncounter,object
 gText_XNatureFatefulEncounter:
@@ -10891,6 +10905,10 @@ gText_XNatureFatefulEncounter:
 	.byte	0x1
 	.byte	0xf7
 	.byte	0x5
+	.byte	0xf7
+	.byte	0x6
+	.byte	0xf7
+	.byte	0x7
 	.byte	0x0
 	.byte	0xe2
 	.byte	0xd5
@@ -10945,7 +10963,7 @@ gText_XNatureFatefulEncounter:
 	.byte	0x1
 	.byte	0xad
 	.byte	0xff
-	.size	 gText_XNatureFatefulEncounter,62
+	.size	 gText_XNatureFatefulEncounter,66
 	.globl	gText_XNatureProbablyMetAt
 	.type	 gText_XNatureProbablyMetAt,object
 gText_XNatureProbablyMetAt:
@@ -10957,6 +10975,10 @@ gText_XNatureProbablyMetAt:
 	.byte	0x1
 	.byte	0xf7
 	.byte	0x5
+	.byte	0xf7
+	.byte	0x6
+	.byte	0xf7
+	.byte	0x7
 	.byte	0x0
 	.byte	0xe2
 	.byte	0xd5
@@ -11000,7 +11022,7 @@ gText_XNatureProbablyMetAt:
 	.byte	0x1
 	.byte	0xad
 	.byte	0xff
-	.size	 gText_XNatureProbablyMetAt,51
+	.size	 gText_XNatureProbablyMetAt,55
 	.globl	gText_XNature
 	.type	 gText_XNature,object
 gText_XNature:
@@ -11012,6 +11034,10 @@ gText_XNature:
 	.byte	0x1
 	.byte	0xf7
 	.byte	0x5
+	.byte	0xf7
+	.byte	0x6
+	.byte	0xf7
+	.byte	0x7
 	.byte	0x0
 	.byte	0xe2
 	.byte	0xd5
@@ -11020,7 +11046,7 @@ gText_XNature:
 	.byte	0xe6
 	.byte	0xd9
 	.byte	0xff
-	.size	 gText_XNature,16
+	.size	 gText_XNature,20
 	.globl	gText_XNatureMetSomewhereAt
 	.type	 gText_XNatureMetSomewhereAt,object
 gText_XNatureMetSomewhereAt:
@@ -11032,6 +11058,10 @@ gText_XNatureMetSomewhereAt:
 	.byte	0x1
 	.byte	0xf7
 	.byte	0x5
+	.byte	0xf7
+	.byte	0x6
+	.byte	0xf7
+	.byte	0x7
 	.byte	0x0
 	.byte	0xe2
 	.byte	0xd5
@@ -11068,7 +11098,7 @@ gText_XNatureMetSomewhereAt:
 	.byte	0x1
 	.byte	0xad
 	.byte	0xff
-	.size	 gText_XNatureMetSomewhereAt,44
+	.size	 gText_XNatureMetSomewhereAt,48
 	.globl	gText_XNatureHatchedSomewhereAt
 	.type	 gText_XNatureHatchedSomewhereAt,object
 gText_XNatureHatchedSomewhereAt:
@@ -11080,6 +11110,10 @@ gText_XNatureHatchedSomewhereAt:
 	.byte	0x1
 	.byte	0xf7
 	.byte	0x5
+	.byte	0xf7
+	.byte	0x6
+	.byte	0xf7
+	.byte	0x7
 	.byte	0x0
 	.byte	0xe2
 	.byte	0xd5
@@ -11120,7 +11154,7 @@ gText_XNatureHatchedSomewhereAt:
 	.byte	0x1
 	.byte	0xad
 	.byte	0xff
-	.size	 gText_XNatureHatchedSomewhereAt,48
+	.size	 gText_XNatureHatchedSomewhereAt,52
 	.globl	gText_OddEggFoundByCouple
 	.type	 gText_OddEggFoundByCouple,object
 gText_OddEggFoundByCouple:
@@ -11380,9 +11414,9 @@ gText_ApostropheSBase:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_ApostropheSBase,8
 	.globl	gText_OkayToDeleteFromRegistry
@@ -11422,13 +11456,13 @@ gText_OkayToDeleteFromRegistry:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc1
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xac
 	.byte	0xff
 	.size	 gText_OkayToDeleteFromRegistry,43
@@ -11487,13 +11521,13 @@ gText_NoRegistry:
 	.byte	0xe3
 	.byte	0x0
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc1
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xad
 	.byte	0xfc
 	.byte	0x9
@@ -11503,15 +11537,15 @@ gText_NoRegistry:
 	.type	 gText_DelRegist,object
 gText_DelRegist:
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xe0
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc1
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xd9
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_DelRegist,12
@@ -11531,35 +11565,35 @@ gText_Var3Var1SlashVar2:
 	.type	 gText_Decorate,object
 gText_Decorate:
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xbd
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Decorate,9
 	.globl	gText_PutAway
 	.type	 gText_PutAway,object
 gText_PutAway:
 	.byte	0xca
-	.byte	0xcf
-	.byte	0xce
+	.byte	0xe9
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xd1
-	.byte	0xbb
-	.byte	0xd3
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_PutAway,9
 	.globl	gText_Toss2
 	.type	 gText_Toss2,object
 gText_Toss2:
 	.byte	0xce
-	.byte	0xc9
-	.byte	0xcd
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_Toss2,5
 	.globl	gText_Color161Shadow161
@@ -11731,102 +11765,102 @@ gText_NoDecorations:
 	.type	 gText_Desk,object
 gText_Desk:
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xc5
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xdf
 	.byte	0xff
 	.size	 gText_Desk,5
 	.globl	gText_Chair
 	.type	 gText_Chair,object
 gText_Chair:
 	.byte	0xbd
-	.byte	0xc2
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xcc
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_Chair,6
 	.globl	gText_Plant
 	.type	 gText_Plant,object
 gText_Plant:
 	.byte	0xca
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xce
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_Plant,6
 	.globl	gText_Ornament
 	.type	 gText_Ornament,object
 gText_Ornament:
 	.byte	0xc9
-	.byte	0xcc
-	.byte	0xc8
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xce
+	.byte	0xe6
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_Ornament,9
 	.globl	gText_Mat
 	.type	 gText_Mat,object
 gText_Mat:
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xce
+	.byte	0xd5
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_Mat,4
 	.globl	gText_Poster
 	.type	 gText_Poster,object
 gText_Poster:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_Poster,7
 	.globl	gText_Doll
 	.type	 gText_Doll,object
 gText_Doll:
 	.byte	0xbe
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xc6
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_Doll,5
 	.globl	gText_Cushion
 	.type	 gText_Cushion,object
 gText_Cushion:
 	.byte	0xbd
-	.byte	0xcf
-	.byte	0xcd
-	.byte	0xc2
-	.byte	0xc3
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_Cushion,8
 	.globl	gText_Gold
 	.type	 gText_Gold,object
 gText_Gold:
 	.byte	0xc1
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xbe
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_Gold,5
 	.globl	gText_Silver
 	.type	 gText_Silver,object
 gText_Silver:
 	.byte	0xcd
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xd0
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_Silver,7
 	.globl	gText_PlaceItHere
@@ -12125,9 +12159,9 @@ gText_MustBePlacedOnDesk:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xc5
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xdf
 	.byte	0xb8
 	.byte	0x0
 	.byte	0xd9
@@ -12575,106 +12609,106 @@ gText_Roberto:
 	.type	 gText_TurnOff,object
 gText_TurnOff:
 	.byte	0xce
-	.byte	0xcf
-	.byte	0xcc
-	.byte	0xc8
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xc9
-	.byte	0xc0
-	.byte	0xc0
+	.byte	0xda
+	.byte	0xda
 	.byte	0xff
 	.size	 gText_TurnOff,9
 	.globl	gText_Decoration
 	.type	 gText_Decoration,object
 gText_Decoration:
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xbd
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_Decoration,11
 	.globl	gText_ItemStorage
 	.type	 gText_ItemStorage,object
 gText_ItemStorage:
 	.byte	0xc3
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xc7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe1
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc1
-	.byte	0xbf
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_ItemStorage,13
 	.globl	gText_Mailbox
 	.type	 gText_Mailbox,object
 gText_Mailbox:
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xbc
-	.byte	0xc9
-	.byte	0xd2
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xec
 	.byte	0xff
 	.size	 gText_Mailbox,8
 	.globl	gText_DepositItem
 	.type	 gText_DepositItem,object
 gText_DepositItem:
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xca
-	.byte	0xc9
-	.byte	0xcd
-	.byte	0xc3
-	.byte	0xce
+	.byte	0xd9
+	.byte	0xe4
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xc3
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xc7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe1
 	.byte	0xff
 	.size	 gText_DepositItem,13
 	.globl	gText_WithdrawItem
 	.type	 gText_WithdrawItem,object
 gText_WithdrawItem:
 	.byte	0xd1
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xc2
-	.byte	0xbe
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xd1
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xeb
 	.byte	0x0
 	.byte	0xc3
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xc7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe1
 	.byte	0xff
 	.size	 gText_WithdrawItem,14
 	.globl	gText_TossItem
 	.type	 gText_TossItem,object
 gText_TossItem:
 	.byte	0xce
-	.byte	0xc9
-	.byte	0xcd
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xe7
 	.byte	0x0
 	.byte	0xc3
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xc7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe1
 	.byte	0xff
 	.size	 gText_TossItem,10
 	.globl	gText_StoreItemsInPC
@@ -12895,34 +12929,34 @@ gText_WithdrawXItems:
 	.type	 gText_Read,object
 gText_Read:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbb
-	.byte	0xbe
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_Read,5
 	.globl	gText_MoveToBag
 	.type	 gText_MoveToBag,object
 gText_MoveToBag:
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xea
+	.byte	0xd9
 	.byte	0x0
-	.byte	0xce
-	.byte	0xc9
+	.byte	0xe8
+	.byte	0xe3
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xdb
 	.byte	0xff
 	.size	 gText_MoveToBag,12
 	.globl	gText_Give2
 	.type	 gText_Give2,object
 gText_Give2:
 	.byte	0xc1
-	.byte	0xc3
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Give2,5
 	.globl	gText_NoMailHere
@@ -13051,8 +13085,8 @@ gText_BagIsFull:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xdb
 	.byte	0x0
 	.byte	0xdd
 	.byte	0xe7
@@ -13134,16 +13168,16 @@ gText_MailToBagMessageErased:
 	.type	 gText_Dad,object
 gText_Dad:
 	.byte	0xbe
-	.byte	0xbb
-	.byte	0xbe
+	.byte	0xd5
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_Dad,4
 	.globl	gText_Mom
 	.type	 gText_Mom,object
 gText_Mom:
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc7
+	.byte	0xe3
+	.byte	0xe1
 	.byte	0xff
 	.size	 gText_Mom,4
 	.globl	gText_Wallace
@@ -13285,19 +13319,19 @@ gText_Dewford:
 	.type	 gText_Enter2,object
 gText_Enter2:
 	.byte	0xbf
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_Enter2,6
 	.globl	gText_Info2
 	.type	 gText_Info2,object
 gText_Info2:
 	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc0
-	.byte	0xc9
+	.byte	0xe2
+	.byte	0xda
+	.byte	0xe3
 	.byte	0xff
 	.size	 gText_Info2,5
 	.globl	gText_WhatsAContest
@@ -13313,12 +13347,12 @@ gText_WhatsAContest:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0xac
 	.byte	0xff
 	.size	 gText_WhatsAContest,18
@@ -13335,13 +13369,13 @@ gText_TypesOfContests:
 	.byte	0xda
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_TypesOfContests,18
 	.globl	gText_Ranks
@@ -13370,132 +13404,133 @@ gText_Judging:
 	.type	 gText_CoolnessContest,object
 gText_CoolnessContest:
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe7
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_CoolnessContest,17
 	.globl	gText_BeautyContest
 	.type	 gText_BeautyContest,object
 gText_BeautyContest:
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xbb
-	.byte	0xcf
-	.byte	0xce
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xed
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_BeautyContest,15
 	.globl	gText_CutenessContest
 	.type	 gText_CutenessContest,object
 gText_CutenessContest:
 	.byte	0xbd
-	.byte	0xcf
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xcd
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe7
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_CutenessContest,17
 	.globl	gText_SmartnessContest
 	.type	 gText_SmartnessContest,object
 gText_SmartnessContest:
 	.byte	0xcd
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xce
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xcd
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe7
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_SmartnessContest,18
 	.globl	gText_ToughnessContest
 	.type	 gText_ToughnessContest,object
 gText_ToughnessContest:
 	.byte	0xce
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xc1
-	.byte	0xc2
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xdb
+	.byte	0xdc
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe7
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0x0
 	.byte	0xff
-	.size	 gText_ToughnessContest,18
+	.size	 gText_ToughnessContest,19
 	.globl	gText_Decoration2
 	.type	 gText_Decoration2,object
 gText_Decoration2:
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xbd
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_Decoration2,11
 	.globl	gText_PackUp
 	.type	 gText_PackUp,object
 gText_PackUp:
 	.byte	0xca
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0x0
 	.byte	0xcf
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xff
 	.size	 gText_PackUp,8
 	.globl	gText_Count
@@ -13512,29 +13547,29 @@ gText_Count:
 	.type	 gText_Registry,object
 gText_Registry:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc1
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_Registry,9
 	.globl	gText_Information
 	.type	 gText_Information,object
 gText_Information:
 	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc0
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe2
+	.byte	0xda
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_Information,12
 	.globl	gText_Mach
@@ -13648,15 +13683,15 @@ gText_NotYet:
 	.type	 gText_Yes,object
 gText_Yes:
 	.byte	0xd3
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_Yes,4
 	.globl	gText_No
 	.type	 gText_No,object
 gText_No:
 	.byte	0xc8
-	.byte	0xc9
+	.byte	0xe3
 	.byte	0xff
 	.size	 gText_No,3
 	.globl	gText_Info4
@@ -13672,53 +13707,53 @@ gText_Info4:
 	.type	 gText_SingleBattle,object
 gText_SingleBattle:
 	.byte	0xcd
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc1
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_SingleBattle,14
 	.globl	gText_DoubleBattle
 	.type	 gText_DoubleBattle,object
 gText_DoubleBattle:
 	.byte	0xbe
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xbc
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xd6
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_DoubleBattle,14
 	.globl	gText_MultiBattle
 	.type	 gText_MultiBattle,object
 gText_MultiBattle:
 	.byte	0xc7
-	.byte	0xcf
-	.byte	0xc6
-	.byte	0xce
-	.byte	0xc3
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xe8
+	.byte	0xdd
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_MultiBattle,13
 	.globl	gText_MrBriney
@@ -13740,23 +13775,23 @@ gText_MrBriney:
 	.type	 gText_Challenge,object
 gText_Challenge:
 	.byte	0xbd
-	.byte	0xc2
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xc1
-	.byte	0xbf
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Challenge,10
 	.globl	gText_Info3
 	.type	 gText_Info3,object
 gText_Info3:
 	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc0
-	.byte	0xc9
+	.byte	0xe2
+	.byte	0xda
+	.byte	0xe3
 	.byte	0xff
 	.size	 gText_Info3,5
 	.globl	gText_Lv50
@@ -13774,15 +13809,15 @@ gText_Lv50:
 	.type	 gText_OpenLevel,object
 gText_OpenLevel:
 	.byte	0xc9
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xc6
-	.byte	0xbf
-	.byte	0xd0
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_OpenLevel,11
 	.globl	gText_FreshWaterAndPrice
@@ -14199,33 +14234,35 @@ gText_MudkipDollAndPrice:
 	.globl	gText_50CoinsAndPrice
 	.type	 gText_50CoinsAndPrice,object
 gText_50CoinsAndPrice:
+	.byte	0xa3
 	.byte	0xa6
-	.byte	0xa1
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0x0
 	.byte	0x0
 	.byte	0x0
 	.byte	0xa2
+	.byte	0x0
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_50CoinsAndPrice,14
+	.size	 gText_50CoinsAndPrice,16
 	.globl	gText_500CoinsAndPrice
 	.type	 gText_500CoinsAndPrice,object
 gText_500CoinsAndPrice:
+	.byte	0xa3
 	.byte	0xa6
-	.byte	0xa1
 	.byte	0xa1
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe7
 	.byte	0x0
 	.byte	0xa2
 	.byte	0xa1
@@ -14329,20 +14366,20 @@ gText_GreenShard:
 	.type	 gText_BattleFrontier,object
 gText_BattleFrontier:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xc0
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_BattleFrontier,16
 	.globl	gText_Right
@@ -14373,8 +14410,8 @@ gText_1BPAndPrice:
 	.byte	0xfc
 	.byte	0x13
 	.byte	0x5e
+	.byte	0xa3
 	.byte	0xa6
-	.byte	0xa1
 	.byte	0x0
 	.byte	0xbd
 	.byte	0xe3
@@ -14393,8 +14430,8 @@ gText_10BPAndPrice:
 	.byte	0xfc
 	.byte	0x13
 	.byte	0x5e
+	.byte	0xa3
 	.byte	0xa6
-	.byte	0xa1
 	.byte	0xa1
 	.byte	0x0
 	.byte	0xbd
@@ -14408,179 +14445,179 @@ gText_10BPAndPrice:
 	.type	 gText_Cool,object
 gText_Cool:
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc9
-	.byte	0xc6
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_Cool,5
 	.globl	gText_Beauty
 	.type	 gText_Beauty,object
 gText_Beauty:
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xbb
-	.byte	0xcf
-	.byte	0xce
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_Beauty,7
 	.globl	gText_Cute
 	.type	 gText_Cute,object
 gText_Cute:
 	.byte	0xbd
-	.byte	0xcf
-	.byte	0xce
-	.byte	0xbf
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Cute,5
 	.globl	gText_Smart
 	.type	 gText_Smart,object
 gText_Smart:
 	.byte	0xcd
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xce
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_Smart,6
 	.globl	gText_Tough
 	.type	 gText_Tough,object
 gText_Tough:
 	.byte	0xce
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xc1
-	.byte	0xc2
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xdb
+	.byte	0xdc
 	.byte	0xff
 	.size	 gText_Tough,6
 	.globl	gText_Normal
 	.type	 gText_Normal,object
 gText_Normal:
 	.byte	0xc8
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc6
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_Normal,7
 	.globl	gText_Super
 	.type	 gText_Super,object
 gText_Super:
 	.byte	0xcd
-	.byte	0xcf
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe9
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_Super,6
 	.globl	gText_Hyper
 	.type	 gText_Hyper,object
 gText_Hyper:
 	.byte	0xc2
-	.byte	0xd3
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xed
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_Hyper,6
 	.globl	gText_Master
 	.type	 gText_Master,object
 gText_Master:
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_Master,7
 	.globl	gText_Cool2
 	.type	 gText_Cool2,object
 gText_Cool2:
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc9
-	.byte	0xc6
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_Cool2,5
 	.globl	gText_Beauty2
 	.type	 gText_Beauty2,object
 gText_Beauty2:
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xbb
-	.byte	0xcf
-	.byte	0xce
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_Beauty2,7
 	.globl	gText_Cute2
 	.type	 gText_Cute2,object
 gText_Cute2:
 	.byte	0xbd
-	.byte	0xcf
-	.byte	0xce
-	.byte	0xbf
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Cute2,5
 	.globl	gText_Smart2
 	.type	 gText_Smart2,object
 gText_Smart2:
 	.byte	0xcd
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xce
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_Smart2,6
 	.globl	gText_Tough2
 	.type	 gText_Tough2,object
 gText_Tough2:
 	.byte	0xce
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xc1
-	.byte	0xc2
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xdb
+	.byte	0xdc
 	.byte	0xff
 	.size	 gText_Tough2,6
 	.globl	gText_Items
 	.type	 gText_Items,object
 gText_Items:
 	.byte	0xc3
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xc7
-	.byte	0xcd
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_Items,6
 	.globl	gText_Key_Items
 	.type	 gText_Key_Items,object
 gText_Key_Items:
 	.byte	0xc5
-	.byte	0xbf
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xed
 	.byte	0x0
 	.byte	0xc3
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xc7
-	.byte	0xcd
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_Key_Items,10
 	.globl	gText_Poke_Balls
 	.type	 gText_Poke_Balls,object
 gText_Poke_Balls:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xcd
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_Poke_Balls,11
 	.globl	gText_TMs_Hms
@@ -14601,26 +14638,26 @@ gText_TMs_Hms:
 	.type	 gText_Berries2,object
 gText_Berries2:
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_Berries2,8
 	.globl	gText_SomeonesPC
 	.type	 gText_SomeonesPC,object
 gText_SomeonesPC:
 	.byte	0xcd
-	.byte	0xc9
-	.byte	0xc7
-	.byte	0xbf
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd9
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
 	.byte	0xb4
-	.byte	0xcd
+	.byte	0xe7
 	.byte	0x0
 	.byte	0xca
 	.byte	0xbd
@@ -14630,14 +14667,14 @@ gText_SomeonesPC:
 	.type	 gText_LanettesPC,object
 gText_LanettesPC:
 	.byte	0xc6
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd9
 	.byte	0xb4
-	.byte	0xcd
+	.byte	0xe7
 	.byte	0x0
 	.byte	0xca
 	.byte	0xbd
@@ -14676,216 +14713,217 @@ gText_HallOfFame:
 	.type	 gText_LogOff,object
 gText_LogOff:
 	.byte	0xc6
-	.byte	0xc9
-	.byte	0xc1
+	.byte	0xe3
+	.byte	0xdb
+	.byte	0xdb
 	.byte	0x0
 	.byte	0xc9
-	.byte	0xc0
-	.byte	0xc0
+	.byte	0xda
+	.byte	0xda
 	.byte	0xff
-	.size	 gText_LogOff,8
+	.size	 gText_LogOff,9
 	.globl	gText_Opponent
 	.type	 gText_Opponent,object
 gText_Opponent:
 	.byte	0xc9
-	.byte	0xca
-	.byte	0xca
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xce
+	.byte	0xe4
+	.byte	0xe4
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_Opponent,9
 	.globl	gText_Tourney_Tree
 	.type	 gText_Tourney_Tree,object
 gText_Tourney_Tree:
 	.byte	0xce
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xcc
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xed
 	.byte	0x0
 	.byte	0xce
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Tourney_Tree,13
 	.globl	gText_ReadyToStart
 	.type	 gText_ReadyToStart,object
 gText_ReadyToStart:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbb
-	.byte	0xbe
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xed
 	.byte	0x0
-	.byte	0xce
-	.byte	0xc9
+	.byte	0xe8
+	.byte	0xe3
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xce
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_ReadyToStart,15
 	.globl	gText_NormalRank
 	.type	 gText_NormalRank,object
 gText_NormalRank:
 	.byte	0xc8
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc6
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe0
 	.byte	0x0
 	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xc5
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdf
 	.byte	0xff
 	.size	 gText_NormalRank,12
 	.globl	gText_SuperRank
 	.type	 gText_SuperRank,object
 gText_SuperRank:
 	.byte	0xcd
-	.byte	0xcf
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe9
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xc5
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdf
 	.byte	0xff
 	.size	 gText_SuperRank,11
 	.globl	gText_HyperRank
 	.type	 gText_HyperRank,object
 gText_HyperRank:
 	.byte	0xc2
-	.byte	0xd3
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xed
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xc5
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdf
 	.byte	0xff
 	.size	 gText_HyperRank,11
 	.globl	gText_MasterRank
 	.type	 gText_MasterRank,object
 gText_MasterRank:
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xc5
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdf
 	.byte	0xff
 	.size	 gText_MasterRank,12
 	.globl	gText_Single2
 	.type	 gText_Single2,object
 gText_Single2:
 	.byte	0xcd
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc1
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Single2,7
 	.globl	gText_Double2
 	.type	 gText_Double2,object
 gText_Double2:
 	.byte	0xbe
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xbc
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xd6
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Double2,7
 	.globl	gText_Multi
 	.type	 gText_Multi,object
 gText_Multi:
 	.byte	0xc7
-	.byte	0xcf
-	.byte	0xc6
-	.byte	0xce
-	.byte	0xc3
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xe8
+	.byte	0xdd
 	.byte	0xff
 	.size	 gText_Multi,6
 	.globl	gText_MultiLink
 	.type	 gText_MultiLink,object
 gText_MultiLink:
 	.byte	0xc7
-	.byte	0xcf
-	.byte	0xc6
-	.byte	0xce
-	.byte	0xc3
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xe8
+	.byte	0xdd
 	.byte	0xae
 	.byte	0xc6
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdf
 	.byte	0xff
 	.size	 gText_MultiLink,11
 	.globl	gText_BattleBag
 	.type	 gText_BattleBag,object
 gText_BattleBag:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xdb
 	.byte	0xff
 	.size	 gText_BattleBag,11
 	.globl	gText_HeldItem
 	.type	 gText_HeldItem,object
 gText_HeldItem:
 	.byte	0xc2
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xbe
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xd8
 	.byte	0x0
 	.byte	0xc3
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xc7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe1
 	.byte	0xff
 	.size	 gText_HeldItem,10
 	.globl	gText_LinkContest
 	.type	 gText_LinkContest,object
 gText_LinkContest:
 	.byte	0xc6
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdf
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_LinkContest,13
 	.globl	gText_AboutE_Mode
@@ -14948,44 +14986,44 @@ gText_G_Mode:
 	.type	 gText_MenuOptionPokedex,object
 gText_MenuOptionPokedex:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xd2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xec
 	.byte	0xff
 	.size	 gText_MenuOptionPokedex,8
 	.globl	gText_MenuOptionPokemon
 	.type	 gText_MenuOptionPokemon,object
 gText_MenuOptionPokemon:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_MenuOptionPokemon,8
 	.globl	gText_MenuOptionBag
 	.type	 gText_MenuOptionBag,object
 gText_MenuOptionBag:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xdb
 	.byte	0xff
 	.size	 gText_MenuOptionBag,4
 	.globl	gText_MenuOptionPokenav
 	.type	 gText_MenuOptionPokenav,object
 gText_MenuOptionPokenav:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
 	.byte	0xc8
-	.byte	0xbb
-	.byte	0xd0
+	.byte	0xd5
+	.byte	0xea
 	.byte	0xff
 	.size	 gText_MenuOptionPokenav,8
 	.globl	gText_Blank
@@ -14997,29 +15035,30 @@ gText_Blank:
 	.type	 gText_MenuOptionSave,object
 gText_MenuOptionSave:
 	.byte	0xcd
-	.byte	0xbb
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_MenuOptionSave,5
 	.globl	gText_MenuOptionOption
 	.type	 gText_MenuOptionOption,object
 gText_MenuOptionOption:
 	.byte	0xc9
-	.byte	0xca
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe4
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe7
 	.byte	0xff
-	.size	 gText_MenuOptionOption,7
+	.size	 gText_MenuOptionOption,8
 	.globl	gText_MenuOptionExit
 	.type	 gText_MenuOptionExit,object
 gText_MenuOptionExit:
 	.byte	0xbf
-	.byte	0xd2
-	.byte	0xc3
-	.byte	0xce
+	.byte	0xec
+	.byte	0xdd
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_MenuOptionExit,5
 	.globl	gText_5BP
@@ -15184,7 +15223,7 @@ gText_RootFossil:
 	.type	 gText_No4,object
 gText_No4:
 	.byte	0xc8
-	.byte	0xc9
+	.byte	0xe3
 	.byte	0xff
 	.size	 gText_No4,3
 	.globl	gText_IllBattleNow
@@ -15253,21 +15292,21 @@ gText_IWontTell:
 	.type	 gText_NormalTagMatch,object
 gText_NormalTagMatch:
 	.byte	0xc8
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc6
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe0
 	.byte	0x0
 	.byte	0xce
-	.byte	0xbb
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xdb
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xbd
-	.byte	0xc2
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd7
+	.byte	0xdc
 	.byte	0xff
 	.size	 gText_NormalTagMatch,17
 	.globl	gText_VarietyTagMatch
@@ -15483,15 +15522,15 @@ gText_JoinGroup:
 	.type	 gText_TwoStyles,object
 gText_TwoStyles:
 	.byte	0xce
-	.byte	0xd1
-	.byte	0xc9
+	.byte	0xeb
+	.byte	0xe3
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xce
-	.byte	0xd3
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xe8
+	.byte	0xed
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_TwoStyles,11
 	.globl	gText_Lv50_3
@@ -15509,15 +15548,15 @@ gText_Lv50_3:
 	.type	 gText_OpenLevel2,object
 gText_OpenLevel2:
 	.byte	0xc9
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xc6
-	.byte	0xbf
-	.byte	0xd0
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_OpenLevel2,11
 	.globl	gText_MonTypeAndNo
@@ -15527,14 +15566,14 @@ gText_MonTypeAndNo:
 	.byte	0x54
 	.byte	0x0
 	.byte	0xce
-	.byte	0xd3
-	.byte	0xca
-	.byte	0xbf
+	.byte	0xed
+	.byte	0xe4
+	.byte	0xd9
 	.byte	0x0
 	.byte	0x2d
 	.byte	0x0
 	.byte	0xc8
-	.byte	0xc9
+	.byte	0xe3
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_MonTypeAndNo,14
@@ -15542,79 +15581,79 @@ gText_MonTypeAndNo:
 	.type	 gText_HoldItems,object
 gText_HoldItems:
 	.byte	0xc2
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xbe
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd8
 	.byte	0x0
 	.byte	0xc3
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xc7
-	.byte	0xcd
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_HoldItems,11
 	.globl	gText_Symbols2
 	.type	 gText_Symbols2,object
 gText_Symbols2:
 	.byte	0xcd
-	.byte	0xd3
-	.byte	0xc7
-	.byte	0xbc
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xcd
+	.byte	0xed
+	.byte	0xe1
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_Symbols2,8
 	.globl	gText_Record3
 	.type	 gText_Record3,object
 gText_Record3:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbd
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xbe
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_Record3,7
 	.globl	gText_BattlePts
 	.type	 gText_BattlePts,object
 gText_BattlePts:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xce
-	.byte	0xcd
+	.byte	0xe8
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_BattlePts,11
 	.globl	gText_TowerInfo
 	.type	 gText_TowerInfo,object
 gText_TowerInfo:
 	.byte	0xce
-	.byte	0xc9
-	.byte	0xd1
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc0
-	.byte	0xc9
+	.byte	0xe2
+	.byte	0xda
+	.byte	0xe3
 	.byte	0xff
 	.size	 gText_TowerInfo,11
 	.globl	gText_BattleMon
 	.type	 gText_BattleMon,object
 gText_BattleMon:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0x53
 	.byte	0x54
@@ -15624,138 +15663,138 @@ gText_BattleMon:
 	.type	 gText_BattleSalon,object
 gText_BattleSalon:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_BattleSalon,13
 	.globl	gText_MultiLink2
 	.type	 gText_MultiLink2,object
 gText_MultiLink2:
 	.byte	0xc7
-	.byte	0xcf
-	.byte	0xc6
-	.byte	0xce
-	.byte	0xc3
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xe8
+	.byte	0xdd
 	.byte	0xae
 	.byte	0xc6
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdf
 	.byte	0xff
 	.size	 gText_MultiLink2,11
 	.globl	gText_BattleRules
 	.type	 gText_BattleRules,object
 gText_BattleRules:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xcc
-	.byte	0xcf
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_BattleRules,13
 	.globl	gText_JudgeMind
 	.type	 gText_JudgeMind,object
 gText_JudgeMind:
 	.byte	0xc4
-	.byte	0xcf
-	.byte	0xbe
-	.byte	0xc1
-	.byte	0xbf
+	.byte	0xe9
+	.byte	0xd8
+	.byte	0xdb
+	.byte	0xd9
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbe
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_JudgeMind,12
 	.globl	gText_JudgeSkill
 	.type	 gText_JudgeSkill,object
 gText_JudgeSkill:
 	.byte	0xc4
-	.byte	0xcf
-	.byte	0xbe
-	.byte	0xc1
-	.byte	0xbf
+	.byte	0xe9
+	.byte	0xd8
+	.byte	0xdb
+	.byte	0xd9
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xc5
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xc6
+	.byte	0xdf
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_JudgeSkill,13
 	.globl	gText_JudgeBody
 	.type	 gText_JudgeBody,object
 gText_JudgeBody:
 	.byte	0xc4
-	.byte	0xcf
-	.byte	0xbe
-	.byte	0xc1
-	.byte	0xbf
+	.byte	0xe9
+	.byte	0xd8
+	.byte	0xdb
+	.byte	0xd9
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xc9
-	.byte	0xbe
-	.byte	0xd3
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_JudgeBody,12
 	.globl	gText_Matchup
 	.type	 gText_Matchup,object
 gText_Matchup:
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xbd
-	.byte	0xc2
-	.byte	0xcf
-	.byte	0xca
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xe9
+	.byte	0xe4
 	.byte	0xff
 	.size	 gText_Matchup,8
 	.globl	gText_TourneyTree
 	.type	 gText_TourneyTree,object
 gText_TourneyTree:
 	.byte	0xce
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xcc
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xd3
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xed
 	.byte	0x0
 	.byte	0xce
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_TourneyTree,13
 	.globl	gText_DoubleKO
 	.type	 gText_DoubleKO,object
 gText_DoubleKO:
 	.byte	0xbe
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xbc
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xd6
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xc5
 	.byte	0xc9
@@ -15765,382 +15804,382 @@ gText_DoubleKO:
 	.type	 gText_BasicRules,object
 gText_BasicRules:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xc3
-	.byte	0xbd
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xd7
 	.byte	0x0
 	.byte	0xcc
-	.byte	0xcf
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_BasicRules,12
 	.globl	gText_SwapPartners
 	.type	 gText_SwapPartners,object
 gText_SwapPartners:
 	.byte	0xcd
-	.byte	0xd1
-	.byte	0xbb
-	.byte	0xca
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe4
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xca
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xce
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_SwapPartners,14
 	.globl	gText_SwapNumber
 	.type	 gText_SwapNumber,object
 gText_SwapNumber:
 	.byte	0xcd
-	.byte	0xd1
-	.byte	0xbb
-	.byte	0xca
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe4
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xc8
-	.byte	0xcf
-	.byte	0xc7
-	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe9
+	.byte	0xe1
+	.byte	0xd6
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_SwapNumber,13
 	.globl	gText_SwapNotes
 	.type	 gText_SwapNotes,object
 gText_SwapNotes:
 	.byte	0xcd
-	.byte	0xd1
-	.byte	0xbb
-	.byte	0xca
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe4
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xc8
-	.byte	0xc9
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_SwapNotes,12
 	.globl	gText_OpenLevel3
 	.type	 gText_OpenLevel3,object
 gText_OpenLevel3:
 	.byte	0xc9
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xc6
-	.byte	0xbf
-	.byte	0xd0
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_OpenLevel3,11
 	.globl	gText_BattleBasics
 	.type	 gText_BattleBasics,object
 gText_BattleBasics:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xc3
-	.byte	0xbd
-	.byte	0xcd
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_BattleBasics,14
 	.globl	gText_PokemonNature
 	.type	 gText_PokemonNature,object
 gText_PokemonNature:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xc8
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xcf
-	.byte	0xcc
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_PokemonNature,15
 	.globl	gText_PokemonMoves
 	.type	 gText_PokemonMoves,object
 gText_PokemonMoves:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xd0
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_PokemonMoves,14
 	.globl	gText_Underpowered
 	.type	 gText_Underpowered,object
 gText_Underpowered:
 	.byte	0xcf
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xd1
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_Underpowered,13
 	.globl	gText_WhenInDanger
 	.type	 gText_WhenInDanger,object
 gText_WhenInDanger:
 	.byte	0xd1
-	.byte	0xc2
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xc3
-	.byte	0xc8
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xc1
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_WhenInDanger,15
 	.globl	gText_PyramidPokemon
 	.type	 gText_PyramidPokemon,object
 gText_PyramidPokemon:
 	.byte	0xca
-	.byte	0xd3
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xbe
+	.byte	0xed
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xd8
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_PyramidPokemon,17
 	.globl	gText_PyramidTrainers
 	.type	 gText_PyramidTrainers,object
 gText_PyramidTrainers:
 	.byte	0xca
-	.byte	0xd3
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xbe
+	.byte	0xed
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xd8
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xce
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcd
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_PyramidTrainers,18
 	.globl	gText_PyramidMaze
 	.type	 gText_PyramidMaze,object
 gText_PyramidMaze:
 	.byte	0xca
-	.byte	0xd3
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xbe
+	.byte	0xed
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xd8
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xd4
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xee
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_PyramidMaze,14
 	.globl	gText_BattleBag2
 	.type	 gText_BattleBag2,object
 gText_BattleBag2:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xdb
 	.byte	0xff
 	.size	 gText_BattleBag2,11
 	.globl	gText_PokenavAndBag
 	.type	 gText_PokenavAndBag,object
 gText_PokenavAndBag:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
 	.byte	0xc8
-	.byte	0xbb
-	.byte	0xd0
+	.byte	0xd5
+	.byte	0xea
 	.byte	0x0
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbe
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd8
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xdb
 	.byte	0xff
 	.size	 gText_PokenavAndBag,16
 	.globl	gText_HeldItems
 	.type	 gText_HeldItems,object
 gText_HeldItems:
 	.byte	0xc2
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xbe
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xd8
 	.byte	0x0
 	.byte	0xc3
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xc7
-	.byte	0xcd
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_HeldItems,11
 	.globl	gText_PokemonOrder
 	.type	 gText_PokemonOrder,object
 gText_PokemonOrder:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xc9
-	.byte	0xcc
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe6
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_PokemonOrder,14
 	.globl	gText_BattlePokemon
 	.type	 gText_BattlePokemon,object
 gText_BattlePokemon:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_BattlePokemon,15
 	.globl	gText_BattleTrainers
 	.type	 gText_BattleTrainers,object
 gText_BattleTrainers:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xce
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcd
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_BattleTrainers,16
 	.globl	gText_GoOn
 	.type	 gText_GoOn,object
 gText_GoOn:
 	.byte	0xc1
-	.byte	0xc9
+	.byte	0xe3
 	.byte	0x0
 	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_GoOn,6
 	.globl	gText_Record2
 	.type	 gText_Record2,object
 gText_Record2:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbd
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xbe
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_Record2,7
 	.globl	gText_Rest
 	.type	 gText_Rest,object
 gText_Rest:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_Rest,5
 	.globl	gText_Retire
 	.type	 gText_Retire,object
 gText_Retire:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xcc
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Retire,7
 	.globl	gText_99TimesPlus
@@ -16757,38 +16796,38 @@ gText_PPUp3000:
 	.type	 gText_RankingHall,object
 gText_RankingHall:
 	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xc5
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdf
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
 	.byte	0x0
 	.byte	0xc2
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc6
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_RankingHall,13
 	.globl	gText_ExchangeService
 	.type	 gText_ExchangeService,object
 gText_ExchangeService:
 	.byte	0xbf
-	.byte	0xd2
-	.byte	0xbd
-	.byte	0xc2
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xc1
-	.byte	0xbf
+	.byte	0xec
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xd0
-	.byte	0xc3
-	.byte	0xbd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_ExchangeService,17
 	.globl	gText_LilycoveCity
@@ -16898,9 +16937,9 @@ gText_DontRemember:
 	.type	 gText_Exit,object
 gText_Exit:
 	.byte	0xbf
-	.byte	0xd2
-	.byte	0xc3
-	.byte	0xce
+	.byte	0xec
+	.byte	0xdd
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_Exit,5
 	.globl	gText_ExitFromBox
@@ -16921,8 +16960,8 @@ gText_ExitFromBox:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xc9
-	.byte	0xd2
+	.byte	0xe3
+	.byte	0xec
 	.byte	0xac
 	.byte	0xff
 	.size	 gText_ExitFromBox,19
@@ -17041,8 +17080,8 @@ gText_JumpToWhichBox:
 	.byte	0xdc
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xc9
-	.byte	0xd2
+	.byte	0xe3
+	.byte	0xec
 	.byte	0xac
 	.byte	0xff
 	.size	 gText_JumpToWhichBox,19
@@ -17067,8 +17106,8 @@ gText_DepositInWhichBox:
 	.byte	0xdc
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xc9
-	.byte	0xd2
+	.byte	0xe3
+	.byte	0xec
 	.byte	0xac
 	.byte	0xff
 	.size	 gText_DepositInWhichBox,22
@@ -17132,12 +17171,12 @@ gText_ReleaseThisPokemon:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xac
 	.byte	0xff
 	.size	 gText_ReleaseThisPokemon,22
@@ -17193,12 +17232,12 @@ gText_MarkYourPkmn:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_MarkYourPkmn,19
@@ -17223,12 +17262,12 @@ gText_ThatsYourLastPkmn:
 	.byte	0xe8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xab
 	.byte	0xff
 	.size	 gText_ThatsYourLastPkmn,26
@@ -17276,12 +17315,12 @@ gText_YoureHoldingAPkmn:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xab
 	.byte	0xff
 	.size	 gText_YoureHoldingAPkmn,26
@@ -17339,8 +17378,8 @@ gText_YouCantReleaseAnEgg:
 	.byte	0xe2
 	.byte	0x0
 	.byte	0xbf
-	.byte	0xc1
-	.byte	0xc1
+	.byte	0xdb
+	.byte	0xdb
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_YouCantReleaseAnEgg,26
@@ -17357,8 +17396,8 @@ gText_ContinueBoxOperations:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xc9
-	.byte	0xd2
+	.byte	0xe3
+	.byte	0xec
 	.byte	0x0
 	.byte	0xe3
 	.byte	0xe4
@@ -17457,9 +17496,9 @@ gText_PleaseRemoveTheMail:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe0
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_PleaseRemoveTheMail,24
@@ -17467,9 +17506,9 @@ gText_PleaseRemoveTheMail:
 	.type	 gText_GiveToAPkmn,object
 gText_GiveToAPkmn:
 	.byte	0xc1
-	.byte	0xc3
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xe8
 	.byte	0xe3
@@ -17477,12 +17516,12 @@ gText_GiveToAPkmn:
 	.byte	0xd5
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xac
 	.byte	0xff
 	.size	 gText_GiveToAPkmn,19
@@ -17509,8 +17548,8 @@ gText_PlacedItemInBag:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xdb
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_PlacedItemInBag,24
@@ -17522,8 +17561,8 @@ gText_BagIsFull2:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xdb
 	.byte	0x0
 	.byte	0xdd
 	.byte	0xe7
@@ -17560,8 +17599,8 @@ gText_PutItemInBag:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xdb
 	.byte	0xac
 	.byte	0xff
 	.size	 gText_PutItemInBag,26
@@ -17608,9 +17647,9 @@ gText_ChangedToNewItem:
 	.type	 gText_MailCantBeStored,object
 gText_MailCantBeStored:
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe0
 	.byte	0x0
 	.byte	0xd7
 	.byte	0xd5
@@ -17634,186 +17673,186 @@ gText_MailCantBeStored:
 	.type	 gPCText_Cancel,object
 gPCText_Cancel:
 	.byte	0xbd
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbd
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xff
 	.size	 gPCText_Cancel,7
 	.globl	gPCText_Store
 	.type	 gPCText_Store,object
 gPCText_Store:
 	.byte	0xcd
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xbf
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd9
 	.byte	0xff
 	.size	 gPCText_Store,6
 	.globl	gPCText_Withdraw
 	.type	 gPCText_Withdraw,object
 gPCText_Withdraw:
 	.byte	0xd1
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xc2
-	.byte	0xbe
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xd1
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xeb
 	.byte	0xff
 	.size	 gPCText_Withdraw,9
 	.globl	gPCText_Shift
 	.type	 gPCText_Shift,object
 gPCText_Shift:
 	.byte	0xcd
-	.byte	0xc2
-	.byte	0xc3
-	.byte	0xc0
-	.byte	0xce
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xda
+	.byte	0xe8
 	.byte	0xff
 	.size	 gPCText_Shift,6
 	.globl	gPCText_Move
 	.type	 gPCText_Move,object
 gPCText_Move:
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xea
+	.byte	0xd9
 	.byte	0xff
 	.size	 gPCText_Move,5
 	.globl	gPCText_Place
 	.type	 gPCText_Place,object
 gPCText_Place:
 	.byte	0xca
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xbf
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xd9
 	.byte	0xff
 	.size	 gPCText_Place,6
 	.globl	gPCText_Summary
 	.type	 gPCText_Summary,object
 gPCText_Summary:
 	.byte	0xcd
-	.byte	0xcf
-	.byte	0xc7
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xe9
+	.byte	0xe1
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xff
 	.size	 gPCText_Summary,8
 	.globl	gPCText_Release
 	.type	 gPCText_Release,object
 gPCText_Release:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xff
 	.size	 gPCText_Release,8
 	.globl	gPCText_Mark
 	.type	 gPCText_Mark,object
 gPCText_Mark:
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xc5
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdf
 	.byte	0xff
 	.size	 gPCText_Mark,5
 	.globl	gPCText_Name
 	.type	 gPCText_Name,object
 gPCText_Name:
 	.byte	0xc8
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xd9
 	.byte	0xff
 	.size	 gPCText_Name,5
 	.globl	gPCText_Jump
 	.type	 gPCText_Jump,object
 gPCText_Jump:
 	.byte	0xc4
-	.byte	0xcf
-	.byte	0xc7
-	.byte	0xca
+	.byte	0xe9
+	.byte	0xe1
+	.byte	0xe4
 	.byte	0xff
 	.size	 gPCText_Jump,5
 	.globl	gPCText_Wallpaper
 	.type	 gPCText_Wallpaper,object
 gPCText_Wallpaper:
 	.byte	0xd1
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xca
-	.byte	0xbb
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xe4
+	.byte	0xd5
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gPCText_Wallpaper,10
 	.globl	gPCText_Take
 	.type	 gPCText_Take,object
 gPCText_Take:
 	.byte	0xce
-	.byte	0xbb
-	.byte	0xc5
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xdf
+	.byte	0xd9
 	.byte	0xff
 	.size	 gPCText_Take,5
 	.globl	gPCText_Give
 	.type	 gPCText_Give,object
 gPCText_Give:
 	.byte	0xc1
-	.byte	0xc3
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xd9
 	.byte	0xff
 	.size	 gPCText_Give,5
 	.globl	gPCText_Switch
 	.type	 gPCText_Switch,object
 gPCText_Switch:
 	.byte	0xcd
-	.byte	0xd1
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xbd
-	.byte	0xc2
+	.byte	0xeb
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xd7
+	.byte	0xdc
 	.byte	0xff
 	.size	 gPCText_Switch,7
 	.globl	gPCText_Bag
 	.type	 gPCText_Bag,object
 gPCText_Bag:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xdb
 	.byte	0xff
 	.size	 gPCText_Bag,4
 	.globl	gPCText_Info
 	.type	 gPCText_Info,object
 gPCText_Info:
 	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc0
-	.byte	0xc9
+	.byte	0xe2
+	.byte	0xda
+	.byte	0xe3
 	.byte	0xff
 	.size	 gPCText_Info,5
 	.globl	gPCText_Scenery1
 	.type	 gPCText_Scenery1,object
 gPCText_Scenery1:
 	.byte	0xcd
-	.byte	0xbd
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xed
 	.byte	0x0
 	.byte	0xa2
 	.byte	0xff
@@ -17822,12 +17861,12 @@ gPCText_Scenery1:
 	.type	 gPCText_Scenery2,object
 gPCText_Scenery2:
 	.byte	0xcd
-	.byte	0xbd
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xed
 	.byte	0x0
 	.byte	0xa3
 	.byte	0xff
@@ -17836,12 +17875,12 @@ gPCText_Scenery2:
 	.type	 gPCText_Scenery3,object
 gPCText_Scenery3:
 	.byte	0xcd
-	.byte	0xbd
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xed
 	.byte	0x0
 	.byte	0xa4
 	.byte	0xff
@@ -17850,200 +17889,196 @@ gPCText_Scenery3:
 	.type	 gPCText_Etcetera,object
 gPCText_Etcetera:
 	.byte	0xbf
-	.byte	0xce
-	.byte	0xbd
-	.byte	0xbf
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xbb
+	.byte	0xe8
+	.byte	0xd7
+	.byte	0xad
 	.byte	0xff
-	.size	 gPCText_Etcetera,9
+	.size	 gPCText_Etcetera,5
 	.globl	gPCText_Friends
 	.type	 gPCText_Friends,object
 gPCText_Friends:
 	.byte	0xc0
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xcd
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xe7
 	.byte	0xff
 	.size	 gPCText_Friends,8
 	.globl	gPCText_Forest
 	.type	 gPCText_Forest,object
 gPCText_Forest:
 	.byte	0xc0
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0xff
 	.size	 gPCText_Forest,7
 	.globl	gPCText_City
 	.type	 gPCText_City,object
 gPCText_City:
 	.byte	0xbd
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xd3
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xed
 	.byte	0xff
 	.size	 gPCText_City,5
 	.globl	gPCText_Desert
 	.type	 gPCText_Desert,object
 gPCText_Desert:
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xce
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe8
 	.byte	0xff
 	.size	 gPCText_Desert,7
 	.globl	gPCText_Savanna
 	.type	 gPCText_Savanna,object
 gPCText_Savanna:
 	.byte	0xcd
-	.byte	0xbb
-	.byte	0xd0
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xc8
-	.byte	0xbb
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xd5
 	.byte	0xff
 	.size	 gPCText_Savanna,8
 	.globl	gPCText_Crag
 	.type	 gPCText_Crag,object
 gPCText_Crag:
 	.byte	0xbd
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc1
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdb
 	.byte	0xff
 	.size	 gPCText_Crag,5
 	.globl	gPCText_Volcano
 	.type	 gPCText_Volcano,object
 gPCText_Volcano:
 	.byte	0xd0
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xbd
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xc9
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xe3
 	.byte	0xff
 	.size	 gPCText_Volcano,8
 	.globl	gPCText_Snow
 	.type	 gPCText_Snow,object
 gPCText_Snow:
 	.byte	0xcd
-	.byte	0xc8
-	.byte	0xc9
-	.byte	0xd1
+	.byte	0xe2
+	.byte	0xe3
+	.byte	0xeb
 	.byte	0xff
 	.size	 gPCText_Snow,5
 	.globl	gPCText_Cave
 	.type	 gPCText_Cave,object
 gPCText_Cave:
 	.byte	0xbd
-	.byte	0xbb
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
 	.byte	0xff
 	.size	 gPCText_Cave,5
 	.globl	gPCText_Beach
 	.type	 gPCText_Beach,object
 gPCText_Beach:
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc2
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdc
 	.byte	0xff
 	.size	 gPCText_Beach,6
 	.globl	gPCText_Seafloor
 	.type	 gPCText_Seafloor,object
 gPCText_Seafloor:
 	.byte	0xcd
-	.byte	0xbf
-	.byte	0xbb
-	.byte	0xc0
-	.byte	0xc6
-	.byte	0xc9
-	.byte	0xc9
-	.byte	0xcc
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xda
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe6
 	.byte	0xff
 	.size	 gPCText_Seafloor,9
 	.globl	gPCText_River
 	.type	 gPCText_River,object
 gPCText_River:
 	.byte	0xcc
-	.byte	0xc3
-	.byte	0xd0
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xdd
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gPCText_River,6
 	.globl	gPCText_Sky
 	.type	 gPCText_Sky,object
 gPCText_Sky:
 	.byte	0xcd
-	.byte	0xc5
-	.byte	0xd3
+	.byte	0xdf
+	.byte	0xed
 	.byte	0xff
 	.size	 gPCText_Sky,4
 	.globl	gPCText_PolkaDot
 	.type	 gPCText_PolkaDot,object
 gPCText_PolkaDot:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xc5
-	.byte	0xbb
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xdf
+	.byte	0xd5
 	.byte	0xae
 	.byte	0xbe
-	.byte	0xc9
-	.byte	0xce
+	.byte	0xe3
+	.byte	0xe8
 	.byte	0xff
 	.size	 gPCText_PolkaDot,10
 	.globl	gPCText_Pokecenter
 	.type	 gPCText_Pokecenter,object
 gPCText_Pokecenter:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
 	.byte	0xbd
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gPCText_Pokecenter,11
 	.globl	gPCText_Machine
 	.type	 gPCText_Machine,object
 gPCText_Machine:
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc2
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
 	.byte	0xff
 	.size	 gPCText_Machine,8
 	.globl	gPCText_Simple
 	.type	 gPCText_Simple,object
 gPCText_Simple:
 	.byte	0xcd
-	.byte	0xc3
-	.byte	0xc7
-	.byte	0xca
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xe4
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xff
 	.size	 gPCText_Simple,7
 	.globl	gText_WhatWouldYouLikeToDo
@@ -18081,84 +18116,84 @@ gText_WhatWouldYouLikeToDo:
 	.type	 gText_WithdrawPokemon,object
 gText_WithdrawPokemon:
 	.byte	0xd1
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xc2
-	.byte	0xbe
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xd1
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xeb
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_WithdrawPokemon,17
 	.globl	gText_DepositPokemon
 	.type	 gText_DepositPokemon,object
 gText_DepositPokemon:
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xca
-	.byte	0xc9
-	.byte	0xcd
-	.byte	0xc3
-	.byte	0xce
+	.byte	0xd9
+	.byte	0xe4
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_DepositPokemon,16
 	.globl	gText_MovePokemon
 	.type	 gText_MovePokemon,object
 gText_MovePokemon:
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xea
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_MovePokemon,13
 	.globl	gText_MoveItems
 	.type	 gText_MoveItems,object
 gText_MoveItems:
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xea
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xc3
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xc7
-	.byte	0xcd
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe1
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_MoveItems,11
 	.globl	gText_SeeYa
 	.type	 gText_SeeYa,object
 gText_SeeYa:
 	.byte	0xcd
-	.byte	0xbf
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xd3
-	.byte	0xbb
+	.byte	0xd5
 	.byte	0xab
 	.byte	0xff
 	.size	 gText_SeeYa,8
@@ -18171,12 +18206,12 @@ gText_WithdrawMonDescription:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xe7
 	.byte	0xe8
@@ -18189,10 +18224,10 @@ gText_WithdrawMonDescription:
 	.byte	0xe2
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xc9
-	.byte	0xd2
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xec
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0x0
 	.byte	0xe8
 	.byte	0xe3
@@ -18220,12 +18255,12 @@ gText_DepositMonDescription:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xdd
 	.byte	0xe2
@@ -18245,10 +18280,10 @@ gText_DepositMonDescription:
 	.byte	0xe2
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xc9
-	.byte	0xd2
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xec
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_DepositMonDescription,38
@@ -18269,21 +18304,21 @@ gText_MoveMonDescription:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xdd
 	.byte	0xe2
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xc9
-	.byte	0xd2
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xec
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0x0
 	.byte	0xd5
 	.byte	0xe2
@@ -18332,12 +18367,12 @@ gText_MoveItemsDescription:
 	.byte	0xed
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xfe
 	.byte	0xdd
 	.byte	0xe2
@@ -18419,12 +18454,12 @@ gText_JustOnePkmn:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xeb
 	.byte	0xdd
@@ -18465,8 +18500,8 @@ gText_PartyFull:
 	.type	 gText_Box,object
 gText_Box:
 	.byte	0xbc
-	.byte	0xc9
-	.byte	0xd2
+	.byte	0xe3
+	.byte	0xec
 	.byte	0xff
 	.size	 gText_Box,4
 	.globl	gText_CheckMapOfHoenn
@@ -18494,10 +18529,10 @@ gText_CheckMapOfHoenn:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xc2
-	.byte	0xc9
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xc8
+	.byte	0xe3
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xe6
 	.byte	0xd9
@@ -18518,12 +18553,12 @@ gText_CheckPokemonInDetail:
 	.byte	0xdf
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xdd
 	.byte	0xe2
@@ -18559,12 +18594,12 @@ gText_CallRegisteredTrainer:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xce
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_CallRegisteredTrainer,27
@@ -18587,12 +18622,12 @@ gText_CheckObtainedRibbons:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbc
-	.byte	0xbc
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xcd
+	.byte	0xe9
+	.byte	0xd6
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe7
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_CheckObtainedRibbons,24
@@ -18613,12 +18648,12 @@ gText_PutAwayPokenav:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
 	.byte	0xc8
-	.byte	0xbb
-	.byte	0xd0
+	.byte	0xd5
+	.byte	0xea
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_PutAwayPokenav,22
@@ -18639,11 +18674,11 @@ gText_NoRibbonWinners:
 	.byte	0xe3
 	.byte	0x0
 	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbc
-	.byte	0xbc
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xdd
+	.byte	0xd6
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xeb
 	.byte	0xdd
@@ -18662,13 +18697,13 @@ gText_NoTrainersRegistered:
 	.byte	0xe3
 	.byte	0x0
 	.byte	0xce
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcd
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe7
 	.byte	0x0
 	.byte	0xd5
 	.byte	0xe6
@@ -18703,12 +18738,12 @@ gText_CheckPartyPokemonInDetail:
 	.byte	0xed
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xdd
 	.byte	0xe2
@@ -18736,12 +18771,12 @@ gText_CheckAllPokemonInDetail:
 	.byte	0xe0
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xdd
 	.byte	0xe2
@@ -18773,12 +18808,12 @@ gText_ReturnToPokenavMenu:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
 	.byte	0xc8
-	.byte	0xbb
-	.byte	0xd0
+	.byte	0xd5
+	.byte	0xea
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xd9
@@ -18801,12 +18836,12 @@ gText_FindCoolPokemon:
 	.byte	0xe0
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_FindCoolPokemon,19
@@ -18829,12 +18864,12 @@ gText_FindBeautifulPokemon:
 	.byte	0xe0
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_FindBeautifulPokemon,24
@@ -18852,12 +18887,12 @@ gText_FindCutePokemon:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_FindCutePokemon,19
@@ -18876,12 +18911,12 @@ gText_FindSmartPokemon:
 	.byte	0xe8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_FindSmartPokemon,20
@@ -18900,12 +18935,12 @@ gText_FindToughPokemon:
 	.byte	0xdc
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_FindToughPokemon,20
@@ -18927,14 +18962,14 @@ gText_ReturnToConditionMenu:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xe1
 	.byte	0xd9
@@ -19044,13 +19079,13 @@ gText_CantCallOpponentHere:
 	.type	 gText_PokenavMatchCall_Strategy,object
 gText_PokenavMatchCall_Strategy:
 	.byte	0xcd
-	.byte	0xce
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xc1
-	.byte	0xd3
+	.byte	0xe8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xdb
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_PokenavMatchCall_Strategy,9
 	.globl	gText_PokenavMatchCall_TrainerPokemon
@@ -19333,11 +19368,11 @@ gText_PokenavRibbons_RibbonCheckButtons:
 	.type	 gText_NatureSlash,object
 gText_NatureSlash:
 	.byte	0xc8
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xcf
-	.byte	0xcc
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd9
 	.byte	0xba
 	.byte	0xff
 	.size	 gText_NatureSlash,8
@@ -19350,12 +19385,12 @@ gText_TrainerCloseBy:
 	.byte	0xe8
 	.byte	0x0
 	.byte	0xce
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xdd
 	.byte	0xe7
@@ -19383,12 +19418,12 @@ gText_TrainerCloseBy:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xce
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xdd
 	.byte	0xe2
@@ -19406,13 +19441,13 @@ gText_TrainerCloseBy:
 	.type	 gText_InParty,object
 gText_InParty:
 	.byte	0xc3
-	.byte	0xc8
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xca
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xce
-	.byte	0xd3
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xe8
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_InParty,9
 	.globl	gText_Number2
@@ -19548,12 +19583,12 @@ gText_NumberF700:
 	.type	 gText_RibbonsF700,object
 gText_RibbonsF700:
 	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbc
-	.byte	0xbc
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xcd
+	.byte	0xdd
+	.byte	0xd6
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe7
 	.byte	0x0
 	.byte	0xf7
 	.byte	0x0
@@ -21762,38 +21797,38 @@ gText_LyricsCantBeDeleted:
 	.type	 gText_PokemonLeague,object
 gText_PokemonLeague:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xc6
-	.byte	0xbf
-	.byte	0xbb
-	.byte	0xc1
-	.byte	0xcf
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xe9
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_PokemonLeague,15
 	.globl	gText_PokemonCenter
 	.type	 gText_PokemonCenter,object
 gText_PokemonCenter:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_PokemonCenter,15
 	.globl	gText_GetsAPokeBlockQuestion
@@ -22422,38 +22457,38 @@ gText_SaveCompletePressA:
 	.type	 gText_Ferry,object
 gText_Ferry:
 	.byte	0xc0
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_Ferry,6
 	.globl	gText_SecretBase
 	.type	 gText_SecretBase,object
 gText_SecretBase:
 	.byte	0xcd
-	.byte	0xbf
-	.byte	0xbd
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xce
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_SecretBase,12
 	.globl	gText_Hideout
 	.type	 gText_Hideout,object
 gText_Hideout:
 	.byte	0xc2
-	.byte	0xc3
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xce
+	.byte	0xdd
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_Hideout,8
 	.globl	gText_ResetRTCConfirmCancel
@@ -22784,23 +22819,23 @@ gText_InGameClockUsable:
 	.type	 gText_Slots,object
 gText_Slots:
 	.byte	0xcd
-	.byte	0xc6
-	.byte	0xc9
-	.byte	0xce
-	.byte	0xcd
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xe8
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_Slots,6
 	.globl	gText_Roulette
 	.type	 gText_Roulette,object
 gText_Roulette:
 	.byte	0xcc
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Roulette,9
 	.globl	gText_Good
@@ -22924,22 +22959,22 @@ gText_Sour2:
 	.type	 gText_Single,object
 gText_Single:
 	.byte	0xcd
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc1
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Single,7
 	.globl	gText_Double
 	.type	 gText_Double,object
 gText_Double:
 	.byte	0xbe
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xbc
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xd6
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Double,7
 	.globl	gText_Jackpot
@@ -23357,38 +23392,112 @@ gText_TotodileDoll80BP:
 	.globl	gText_Dolls
 	.type	 gText_Dolls,object
 gText_Dolls:
-	.byte	0xbe
-	.byte	0xe3
-	.byte	0xe0
-	.byte	0xe0
-	.byte	0xe7
-	.byte	0xfc
-	.byte	0x13
-	.byte	0x58
-	.byte	0xa6
-	.byte	0xbc
-	.byte	0xca
-	.byte	0xff
-	.size	 gText_Dolls,12
-	.globl	gText_Cushions
-	.type	 gText_Cushions,object
-gText_Cushions:
-	.byte	0xbd
+	.byte	0xcd
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe8
 	.byte	0xe9
 	.byte	0xe7
-	.byte	0xdc
+	.byte	0x0
+	.byte	0xbc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
 	.byte	0xdd
-	.byte	0xe3
-	.byte	0xe2
+	.byte	0xd9
 	.byte	0xe7
 	.byte	0xfc
 	.byte	0x13
-	.byte	0x58
-	.byte	0xa6
+	.byte	0x64
+	.byte	0xa3
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_Cushions,15
+	.size	 gText_Dolls,21
+	.globl	gText_MatDesk
+	.type	 gText_MatDesk,object
+gText_MatDesk:
+	.byte	0xcc
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0x0
+	.byte	0xbc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xfc
+	.byte	0x13
+	.byte	0x64
+	.byte	0xa3
+	.byte	0xbc
+	.byte	0xca
+	.byte	0xff
+	.size	 gText_MatDesk,25
+	.globl	gText_OrnaPost
+	.type	 gText_OrnaPost,object
+gText_OrnaPost:
+	.byte	0xcd
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0x0
+	.byte	0xcc
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0x0
+	.byte	0xbc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xfc
+	.byte	0x13
+	.byte	0x64
+	.byte	0xa3
+	.byte	0xbc
+	.byte	0xca
+	.byte	0xff
+	.size	 gText_OrnaPost,27
+	.globl	gText_ChairPlant
+	.type	 gText_ChairPlant,object
+gText_ChairPlant:
+	.byte	0x55
+	.byte	0x56
+	.byte	0x57
+	.byte	0x58
+	.byte	0x59
+	.byte	0x0
+	.byte	0xbc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xfc
+	.byte	0x13
+	.byte	0x64
+	.byte	0xa3
+	.byte	0xbc
+	.byte	0xca
+	.byte	0xff
+	.size	 gText_ChairPlant,20
 	.globl	gText_Contest
 	.type	 gText_Contest,object
 gText_Contest:
@@ -23409,12 +23518,42 @@ gText_Contest:
 	.byte	0xe7
 	.byte	0xfc
 	.byte	0x13
-	.byte	0x58
+	.byte	0x64
 	.byte	0xa4
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
 	.size	 gText_Contest,22
+	.globl	gText_TMs
+	.type	 gText_TMs,object
+gText_TMs:
+	.byte	0xce
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xe2
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0x0
+	.byte	0xc7
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xfc
+	.byte	0x13
+	.byte	0x64
+	.byte	0xa2
+	.byte	0xa1
+	.byte	0xbc
+	.byte	0xca
+	.byte	0xff
+	.size	 gText_TMs,26
 	.globl	gText_MegaC
 	.type	 gText_MegaC,object
 gText_MegaC:
@@ -23440,8 +23579,8 @@ gText_MegaC:
 	.byte	0x5d
 	.byte	0xfc
 	.byte	0x13
-	.byte	0x58
-	.byte	0xa7
+	.byte	0x64
+	.byte	0xa4
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
@@ -23471,8 +23610,8 @@ gText_MegaB:
 	.byte	0x5d
 	.byte	0xfc
 	.byte	0x13
-	.byte	0x58
-	.byte	0xaa
+	.byte	0x64
+	.byte	0xa8
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
@@ -23502,9 +23641,9 @@ gText_MegaA:
 	.byte	0x5d
 	.byte	0xfc
 	.byte	0x13
-	.byte	0x58
+	.byte	0x64
 	.byte	0xa2
-	.byte	0xa3
+	.byte	0xa2
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
@@ -23534,7 +23673,7 @@ gText_MegaS:
 	.byte	0x5d
 	.byte	0xfc
 	.byte	0x13
-	.byte	0x58
+	.byte	0x64
 	.byte	0xa2
 	.byte	0xa6
 	.byte	0xbc
@@ -23751,14 +23890,10 @@ gText_QuickClawBP:
 	.globl	gText_LifeOrbBP
 	.type	 gText_LifeOrbBP,object
 gText_LifeOrbBP:
-	.byte	0xc6
-	.byte	0xdd
-	.byte	0xda
-	.byte	0xd9
-	.byte	0x0
 	.byte	0xc9
 	.byte	0xe6
 	.byte	0xd6
+	.byte	0xe7
 	.byte	0xfc
 	.byte	0x13
 	.byte	0x5e
@@ -23766,7 +23901,7 @@ gText_LifeOrbBP:
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_LifeOrbBP,15
+	.size	 gText_LifeOrbBP,11
 	.globl	gText_ChoiceBandBP
 	.type	 gText_ChoiceBandBP,object
 gText_ChoiceBandBP:
@@ -23987,12 +24122,11 @@ gText_Softboiled16BP:
 	.byte	0xfc
 	.byte	0x13
 	.byte	0x4e
-	.byte	0xa2
-	.byte	0xa7
+	.byte	0xa5
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_Softboiled16BP,18
+	.size	 gText_Softboiled16BP,17
 	.globl	gText_SeismicToss24BP
 	.type	 gText_SeismicToss24BP,object
 gText_SeismicToss24BP:
@@ -24011,12 +24145,11 @@ gText_SeismicToss24BP:
 	.byte	0xfc
 	.byte	0x13
 	.byte	0x4e
-	.byte	0xa3
 	.byte	0xa5
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_SeismicToss24BP,20
+	.size	 gText_SeismicToss24BP,19
 	.globl	gText_DreamEater24BP
 	.type	 gText_DreamEater24BP,object
 gText_DreamEater24BP:
@@ -24034,12 +24167,11 @@ gText_DreamEater24BP:
 	.byte	0xfc
 	.byte	0x13
 	.byte	0x4e
-	.byte	0xa3
 	.byte	0xa5
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_DreamEater24BP,19
+	.size	 gText_DreamEater24BP,18
 	.globl	gText_MegaPunch24BP
 	.type	 gText_MegaPunch24BP,object
 gText_MegaPunch24BP:
@@ -24056,12 +24188,11 @@ gText_MegaPunch24BP:
 	.byte	0xfc
 	.byte	0x13
 	.byte	0x4e
-	.byte	0xa3
 	.byte	0xa5
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_MegaPunch24BP,18
+	.size	 gText_MegaPunch24BP,17
 	.globl	gText_MegaKick48BP
 	.type	 gText_MegaKick48BP,object
 gText_MegaKick48BP:
@@ -24078,11 +24209,10 @@ gText_MegaKick48BP:
 	.byte	0x13
 	.byte	0x4e
 	.byte	0xa5
-	.byte	0xa9
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_MegaKick48BP,17
+	.size	 gText_MegaKick48BP,16
 	.globl	gText_BodySlam48BP
 	.type	 gText_BodySlam48BP,object
 gText_BodySlam48BP:
@@ -24099,11 +24229,10 @@ gText_BodySlam48BP:
 	.byte	0x13
 	.byte	0x4e
 	.byte	0xa5
-	.byte	0xa9
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_BodySlam48BP,17
+	.size	 gText_BodySlam48BP,16
 	.globl	gText_RockSlide48BP
 	.type	 gText_RockSlide48BP,object
 gText_RockSlide48BP:
@@ -24121,11 +24250,10 @@ gText_RockSlide48BP:
 	.byte	0x13
 	.byte	0x4e
 	.byte	0xa5
-	.byte	0xa9
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_RockSlide48BP,18
+	.size	 gText_RockSlide48BP,17
 	.globl	gText_Counter48BP
 	.type	 gText_Counter48BP,object
 gText_Counter48BP:
@@ -24140,11 +24268,10 @@ gText_Counter48BP:
 	.byte	0x13
 	.byte	0x4e
 	.byte	0xa5
-	.byte	0xa9
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_Counter48BP,15
+	.size	 gText_Counter48BP,14
 	.globl	gText_ThunderWave48BP
 	.type	 gText_ThunderWave48BP,object
 gText_ThunderWave48BP:
@@ -24164,11 +24291,10 @@ gText_ThunderWave48BP:
 	.byte	0x13
 	.byte	0x4e
 	.byte	0xa5
-	.byte	0xa9
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_ThunderWave48BP,20
+	.size	 gText_ThunderWave48BP,19
 	.globl	gText_SwordsDance48BP
 	.type	 gText_SwordsDance48BP,object
 gText_SwordsDance48BP:
@@ -24188,11 +24314,10 @@ gText_SwordsDance48BP:
 	.byte	0x13
 	.byte	0x4e
 	.byte	0xa5
-	.byte	0xa9
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_SwordsDance48BP,20
+	.size	 gText_SwordsDance48BP,19
 	.globl	gText_DefenseCurl16BP
 	.type	 gText_DefenseCurl16BP,object
 gText_DefenseCurl16BP:
@@ -24211,12 +24336,11 @@ gText_DefenseCurl16BP:
 	.byte	0xfc
 	.byte	0x13
 	.byte	0x4e
-	.byte	0xa2
-	.byte	0xa7
+	.byte	0xa5
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_DefenseCurl16BP,20
+	.size	 gText_DefenseCurl16BP,19
 	.globl	gText_Snore24BP
 	.type	 gText_Snore24BP,object
 gText_Snore24BP:
@@ -24228,12 +24352,11 @@ gText_Snore24BP:
 	.byte	0xfc
 	.byte	0x13
 	.byte	0x4e
-	.byte	0xa3
 	.byte	0xa5
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_Snore24BP,13
+	.size	 gText_Snore24BP,12
 	.globl	gText_MudSlap24BP
 	.type	 gText_MudSlap24BP,object
 gText_MudSlap24BP:
@@ -24248,12 +24371,11 @@ gText_MudSlap24BP:
 	.byte	0xfc
 	.byte	0x13
 	.byte	0x4e
-	.byte	0xa3
 	.byte	0xa5
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_MudSlap24BP,16
+	.size	 gText_MudSlap24BP,15
 	.globl	gText_Swift24BP
 	.type	 gText_Swift24BP,object
 gText_Swift24BP:
@@ -24265,12 +24387,11 @@ gText_Swift24BP:
 	.byte	0xfc
 	.byte	0x13
 	.byte	0x4e
-	.byte	0xa3
 	.byte	0xa5
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_Swift24BP,13
+	.size	 gText_Swift24BP,12
 	.globl	gText_IcyWind24BP
 	.type	 gText_IcyWind24BP,object
 gText_IcyWind24BP:
@@ -24285,12 +24406,11 @@ gText_IcyWind24BP:
 	.byte	0xfc
 	.byte	0x13
 	.byte	0x4e
-	.byte	0xa3
 	.byte	0xa5
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_IcyWind24BP,16
+	.size	 gText_IcyWind24BP,15
 	.globl	gText_Endure48BP
 	.type	 gText_Endure48BP,object
 gText_Endure48BP:
@@ -24304,11 +24424,10 @@ gText_Endure48BP:
 	.byte	0x13
 	.byte	0x4e
 	.byte	0xa5
-	.byte	0xa9
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_Endure48BP,14
+	.size	 gText_Endure48BP,13
 	.globl	gText_PsychUp48BP
 	.type	 gText_PsychUp48BP,object
 gText_PsychUp48BP:
@@ -24324,11 +24443,10 @@ gText_PsychUp48BP:
 	.byte	0x13
 	.byte	0x4e
 	.byte	0xa5
-	.byte	0xa9
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_PsychUp48BP,16
+	.size	 gText_PsychUp48BP,15
 	.globl	gText_IcePunch48BP
 	.type	 gText_IcePunch48BP,object
 gText_IcePunch48BP:
@@ -24345,11 +24463,10 @@ gText_IcePunch48BP:
 	.byte	0x13
 	.byte	0x4e
 	.byte	0xa5
-	.byte	0xa9
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_IcePunch48BP,17
+	.size	 gText_IcePunch48BP,16
 	.globl	gText_ThunderPunch48BP
 	.type	 gText_ThunderPunch48BP,object
 gText_ThunderPunch48BP:
@@ -24369,11 +24486,10 @@ gText_ThunderPunch48BP:
 	.byte	0x13
 	.byte	0x4e
 	.byte	0xa5
-	.byte	0xa9
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_ThunderPunch48BP,20
+	.size	 gText_ThunderPunch48BP,19
 	.globl	gText_FirePunch48BP
 	.type	 gText_FirePunch48BP,object
 gText_FirePunch48BP:
@@ -24391,11 +24507,10 @@ gText_FirePunch48BP:
 	.byte	0x13
 	.byte	0x4e
 	.byte	0xa5
-	.byte	0xa9
 	.byte	0xbc
 	.byte	0xca
 	.byte	0xff
-	.size	 gText_FirePunch48BP,18
+	.size	 gText_FirePunch48BP,17
 	.globl	gText_PkmnFainted3
 	.type	 gText_PkmnFainted3,object
 gText_PkmnFainted3:
@@ -24418,19 +24533,19 @@ gText_PkmnFainted3:
 	.type	 gText_Marco,object
 gText_Marco:
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbd
-	.byte	0xc9
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd7
+	.byte	0xe3
 	.byte	0xff
 	.size	 gText_Marco,6
 	.globl	gText_TrainerCardName
 	.type	 gText_TrainerCardName,object
 gText_TrainerCardName:
 	.byte	0xc8
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xd9
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xff
@@ -24448,13 +24563,15 @@ gText_TrainerCardIDNo:
 	.globl	gText_TrainerCardMoney
 	.type	 gText_TrainerCardMoney,object
 gText_TrainerCardMoney:
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xd3
+	.byte	0xca
+	.byte	0xe3
+	.byte	0xdf
+	.byte	0x1b
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
-	.size	 gText_TrainerCardMoney,6
+	.size	 gText_TrainerCardMoney,8
 	.globl	gText_PokeDollar
 	.type	 gText_PokeDollar,object
 gText_PokeDollar:
@@ -24464,13 +24581,13 @@ gText_PokeDollar:
 	.globl	gText_TrainerCardPokedex
 	.type	 gText_TrainerCardPokedex,object
 gText_TrainerCardPokedex:
-	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
-	.byte	0x1b
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xd2
+	.byte	0xcd
+	.byte	0xed
+	.byte	0xe1
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_TrainerCardPokedex,8
 	.globl	gText_EmptyString6
@@ -24500,9 +24617,9 @@ gText_Points:
 	.type	 gText_TrainerCardTime,object
 gText_TrainerCardTime:
 	.byte	0xce
-	.byte	0xc3
-	.byte	0xc7
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_TrainerCardTime,5
 	.globl	gJPText_BattlePoints
@@ -24526,17 +24643,17 @@ gText_Var1sTrainerCard:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xce
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbe
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_Var1sTrainerCard,18
 	.globl	gText_HallOfFameDebut
@@ -24647,19 +24764,19 @@ gText_WinsLosses:
 	.type	 gText_PokemonTrades,object
 gText_PokemonTrades:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xce
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_PokemonTrades,15
 	.globl	gText_UnionTradesAndBattles
@@ -24693,16 +24810,16 @@ gText_UnionTradesAndBattles:
 	.type	 gText_BerryCrush,object
 gText_BerryCrush:
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xed
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xcc
-	.byte	0xcf
-	.byte	0xcd
-	.byte	0xc2
+	.byte	0xe6
+	.byte	0xe9
+	.byte	0xe7
+	.byte	0xdc
 	.byte	0xff
 	.size	 gText_BerryCrush,12
 	.globl	gText_WaitingTrainerFinishReading
@@ -24841,22 +24958,22 @@ gText_WonContestsWFriends:
 	.type	 gText_BattlePtsWon,object
 gText_BattlePtsWon:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xe7
 	.byte	0x0
 	.byte	0xd1
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_BattlePtsWon,18
 	.globl	gText_NumBP
@@ -24878,17 +24995,17 @@ gText_NumBP:
 	.type	 gText_BattleTower,object
 gText_BattleTower:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xce
-	.byte	0xc9
-	.byte	0xd1
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_BattleTower,13
 	.globl	gText_WinsStraight
@@ -24935,122 +25052,122 @@ gText_WinsStraight:
 	.type	 gText_BattleTower2,object
 gText_BattleTower2:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xce
-	.byte	0xc9
-	.byte	0xd1
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_BattleTower2,13
 	.globl	gText_BattleDome
 	.type	 gText_BattleDome,object
 gText_BattleDome:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xc9
-	.byte	0xc7
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_BattleDome,12
 	.globl	gText_BattlePalace
 	.type	 gText_BattlePalace,object
 gText_BattlePalace:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_BattlePalace,14
 	.globl	gText_BattleFactory
 	.type	 gText_BattleFactory,object
 gText_BattleFactory:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xc0
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_BattleFactory,15
 	.globl	gText_BattleArena
 	.type	 gText_BattleArena,object
 gText_BattleArena:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbb
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd5
 	.byte	0xff
 	.size	 gText_BattleArena,13
 	.globl	gText_BattlePike
 	.type	 gText_BattlePike,object
 gText_BattlePike:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc3
-	.byte	0xc5
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_BattlePike,12
 	.globl	gText_BattlePyramid
 	.type	 gText_BattlePyramid,object
 gText_BattlePyramid:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xd3
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xbe
+	.byte	0xed
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_BattlePyramid,15
 	.globl	gText_FacilitySingle
@@ -25061,11 +25178,11 @@ gText_FacilitySingle:
 	.byte	0x2
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc1
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_FacilitySingle,10
 	.globl	gText_FacilityDouble
@@ -25076,11 +25193,11 @@ gText_FacilityDouble:
 	.byte	0x2
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xbc
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xd6
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_FacilityDouble,10
 	.globl	gText_FacilityMulti
@@ -25091,10 +25208,10 @@ gText_FacilityMulti:
 	.byte	0x2
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xcf
-	.byte	0xc6
-	.byte	0xce
-	.byte	0xc3
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xe8
+	.byte	0xdd
 	.byte	0xff
 	.size	 gText_FacilityMulti,9
 	.globl	gText_FacilityLink
@@ -25105,9 +25222,9 @@ gText_FacilityLink:
 	.byte	0x2
 	.byte	0x0
 	.byte	0xc6
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdf
 	.byte	0xff
 	.size	 gText_FacilityLink,8
 	.globl	gText_Facility
@@ -25367,10 +25484,10 @@ gText_DynColor2:
 	.type	 gText_Upper,object
 gText_Upper:
 	.byte	0xcf
-	.byte	0xca
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe4
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_Upper,6
 	.globl	gText_Lower
@@ -25387,45 +25504,45 @@ gText_Lower:
 	.type	 gText_Others,object
 gText_Others:
 	.byte	0xc9
-	.byte	0xce
-	.byte	0xc2
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcd
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_Others,7
 	.globl	gText_Symbols
 	.type	 gText_Symbols,object
 gText_Symbols:
 	.byte	0xcd
-	.byte	0xd3
-	.byte	0xc7
-	.byte	0xbc
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xcd
+	.byte	0xed
+	.byte	0xe1
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_Symbols,8
 	.globl	gText_Register2
 	.type	 gText_Register2,object
 gText_Register2:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc1
-	.byte	0xc3
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xd9
+	.byte	0xdb
+	.byte	0xdd
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_Register2,9
 	.globl	gText_Exit2
 	.type	 gText_Exit2,object
 gText_Exit2:
 	.byte	0xbf
-	.byte	0xd2
-	.byte	0xc3
-	.byte	0xce
+	.byte	0xec
+	.byte	0xdd
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_Exit2,5
 	.globl	gText_QuitChatting
@@ -25798,37 +25915,37 @@ gText_AlreadySavedFile_Chat:
 	.type	 gText_SavingDontTurnOff_Chat,object
 gText_SavingDontTurnOff_Chat:
 	.byte	0xcd
-	.byte	0xbb
-	.byte	0xd0
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
 	.byte	0xb0
 	.byte	0xfe
 	.byte	0xbe
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xb4
-	.byte	0xce
+	.byte	0xe8
 	.byte	0x0
-	.byte	0xce
-	.byte	0xcf
-	.byte	0xcc
-	.byte	0xc8
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe2
 	.byte	0x0
-	.byte	0xc9
-	.byte	0xc0
-	.byte	0xc0
+	.byte	0xe3
+	.byte	0xda
+	.byte	0xda
 	.byte	0x0
-	.byte	0xce
-	.byte	0xc2
-	.byte	0xbf
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
 	.byte	0x0
-	.byte	0xca
-	.byte	0xc9
-	.byte	0xd1
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe4
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_SavingDontTurnOff_Chat,34
@@ -27078,10 +27195,10 @@ gText_Var1Berry:
 	.byte	0x2
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_Var1Berry,9
 	.globl	gText_TimeColon
@@ -27480,24 +27597,24 @@ gText_CheckFrontierMap:
 	.byte	0xdf
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xc0
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xca
+	.byte	0xd5
+	.byte	0xe4
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_CheckFrontierMap,27
@@ -27511,17 +27628,17 @@ gText_CheckTrainerCard:
 	.byte	0xdf
 	.byte	0x0
 	.byte	0xce
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbe
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xd8
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_CheckTrainerCard,20
@@ -27568,18 +27685,18 @@ gText_PutAwayFrontierPass:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xc0
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xca
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xcd
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe7
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_PutAwayFrontierPass,28
@@ -27913,122 +28030,122 @@ gText_ThereIsNoBattleRecord:
 	.type	 gText_BattleTower3,object
 gText_BattleTower3:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xce
-	.byte	0xc9
-	.byte	0xd1
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_BattleTower3,13
 	.globl	gText_BattleDome2
 	.type	 gText_BattleDome2,object
 gText_BattleDome2:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xc9
-	.byte	0xc7
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xe1
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_BattleDome2,12
 	.globl	gText_BattlePalace2
 	.type	 gText_BattlePalace2,object
 gText_BattlePalace2:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_BattlePalace2,14
 	.globl	gText_BattleArena2
 	.type	 gText_BattleArena2,object
 gText_BattleArena2:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbb
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd5
 	.byte	0xff
 	.size	 gText_BattleArena2,13
 	.globl	gText_BattleFactory2
 	.type	 gText_BattleFactory2,object
 gText_BattleFactory2:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xc0
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_BattleFactory2,15
 	.globl	gText_BattlePike2
 	.type	 gText_BattlePike2,object
 gText_BattlePike2:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc3
-	.byte	0xc5
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_BattlePike2,12
 	.globl	gText_BattlePyramid2
 	.type	 gText_BattlePyramid2,object
 gText_BattlePyramid2:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xd3
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xc3
-	.byte	0xbe
+	.byte	0xed
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xdd
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_BattlePyramid2,15
 	.globl	gText_BattleTowerDesc
@@ -28178,12 +28295,12 @@ gText_BattlePalaceDesc:
 	.byte	0xe6
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xd6
 	.byte	0xd5
@@ -28253,12 +28370,12 @@ gText_BattleArenaDesc:
 	.byte	0xe4
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xab
 	.byte	0xfe
 	.byte	0xd3
@@ -28321,12 +28438,12 @@ gText_BattleFactoryDesc:
 	.byte	0xe0
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xab
 	.byte	0xfe
 	.byte	0xd3
@@ -28499,45 +28616,41 @@ gText_BattlePyramidDesc:
 	.type	 gText_ContinueMenuPlayer,object
 gText_ContinueMenuPlayer:
 	.byte	0xca
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xd3
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_ContinueMenuPlayer,7
 	.globl	gText_ContinueMenuTime
 	.type	 gText_ContinueMenuTime,object
 gText_ContinueMenuTime:
 	.byte	0xce
-	.byte	0xc3
-	.byte	0xc7
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_ContinueMenuTime,5
 	.globl	gText_ContinueMenuPokedex
 	.type	 gText_ContinueMenuPokedex,object
 gText_ContinueMenuPokedex:
+	.byte	0xbc
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
-	.byte	0x1b
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xd2
 	.byte	0xff
-	.size	 gText_ContinueMenuPokedex,8
+	.size	 gText_ContinueMenuPokedex,3
 	.globl	gText_ContinueMenuBadges
 	.type	 gText_ContinueMenuBadges,object
 gText_ContinueMenuBadges:
-	.byte	0xbc
-	.byte	0xbb
-	.byte	0xbe
-	.byte	0xc1
-	.byte	0xbf
 	.byte	0xcd
+	.byte	0xed
+	.byte	0xe1
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xe7
 	.byte	0xff
-	.size	 gText_ContinueMenuBadges,7
+	.size	 gText_ContinueMenuBadges,8
 	.globl	gText_Powder
 	.type	 gText_Powder,object
 gText_Powder:
@@ -30401,9 +30514,9 @@ gText_Lv502:
 	.type	 gText_OpenLv,object
 gText_OpenLv:
 	.byte	0xc9
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xc6
 	.byte	0xd0
@@ -30652,15 +30765,15 @@ gText_RecordsLv50:
 	.type	 gText_RecordsOpenLevel,object
 gText_RecordsOpenLevel:
 	.byte	0xc9
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xc6
-	.byte	0xbf
-	.byte	0xd0
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xd9
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_RecordsOpenLevel,11
 	.globl	gText_FrontierFacilityWinStreak
@@ -30792,37 +30905,37 @@ gText_123Dot:
 	.type	 gText_SavingDontTurnOff2,object
 gText_SavingDontTurnOff2:
 	.byte	0xcd
-	.byte	0xbb
-	.byte	0xd0
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
 	.byte	0xb0
 	.byte	0xfe
 	.byte	0xbe
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xb4
-	.byte	0xce
+	.byte	0xe8
 	.byte	0x0
-	.byte	0xce
-	.byte	0xcf
-	.byte	0xcc
-	.byte	0xc8
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xe2
 	.byte	0x0
-	.byte	0xc9
-	.byte	0xc0
-	.byte	0xc0
+	.byte	0xe3
+	.byte	0xda
+	.byte	0xda
 	.byte	0x0
-	.byte	0xce
-	.byte	0xc2
-	.byte	0xbf
+	.byte	0xe8
+	.byte	0xdc
+	.byte	0xd9
 	.byte	0x0
-	.byte	0xca
-	.byte	0xc9
-	.byte	0xd1
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe4
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_SavingDontTurnOff2,34
@@ -30904,11 +31017,11 @@ gText_234Players:
 	.type	 gText_YesNo,object
 gText_YesNo:
 	.byte	0xd3
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xfe
 	.byte	0xc8
-	.byte	0xc9
+	.byte	0xe3
 	.byte	0xff
 	.size	 gText_YesNo,7
 	.globl	gText_SelectorArrow3
@@ -31184,107 +31297,108 @@ gText_ABtnTitleScreen:
 	.type	 gText_Option,object
 gText_Option:
 	.byte	0xc9
-	.byte	0xca
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe4
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe7
 	.byte	0xff
-	.size	 gText_Option,7
+	.size	 gText_Option,8
 	.globl	gText_TextSpeed
 	.type	 gText_TextSpeed,object
 gText_TextSpeed:
 	.byte	0xce
-	.byte	0xbf
-	.byte	0xd2
-	.byte	0xce
+	.byte	0xd9
+	.byte	0xec
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_TextSpeed,11
 	.globl	gText_BattleScene
 	.type	 gText_BattleScene,object
 gText_BattleScene:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xbd
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbf
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_BattleScene,13
 	.globl	gText_BattleStyle
 	.type	 gText_BattleStyle,object
 gText_BattleStyle:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xce
-	.byte	0xd3
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xe8
+	.byte	0xed
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_BattleStyle,13
 	.globl	gText_Sound
 	.type	 gText_Sound,object
 gText_Sound:
 	.byte	0xcd
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xc8
-	.byte	0xbe
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe2
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_Sound,6
 	.globl	gText_Frame
 	.type	 gText_Frame,object
 gText_Frame:
 	.byte	0xc0
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xbf
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Frame,6
 	.globl	gText_OptionMenuCancel
 	.type	 gText_OptionMenuCancel,object
 gText_OptionMenuCancel:
 	.byte	0xbd
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbd
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_OptionMenuCancel,7
 	.globl	gText_ButtonMode
 	.type	 gText_ButtonMode,object
 gText_ButtonMode:
 	.byte	0xbc
-	.byte	0xcf
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe9
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xbe
-	.byte	0xbf
+	.byte	0xe3
+	.byte	0xd8
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_ButtonMode,12
 	.globl	gText_TextSpeedSlow
@@ -31297,9 +31411,9 @@ gText_TextSpeedSlow:
 	.byte	0x3
 	.byte	0x7
 	.byte	0xcd
-	.byte	0xc6
-	.byte	0xc9
-	.byte	0xd1
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xeb
 	.byte	0xff
 	.size	 gText_TextSpeedSlow,11
 	.globl	gText_TextSpeedMid
@@ -31312,8 +31426,8 @@ gText_TextSpeedMid:
 	.byte	0x3
 	.byte	0x7
 	.byte	0xc7
-	.byte	0xc3
-	.byte	0xbe
+	.byte	0xdd
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_TextSpeedMid,10
 	.globl	gText_TextSpeedFast
@@ -31326,9 +31440,9 @@ gText_TextSpeedFast:
 	.byte	0x3
 	.byte	0x7
 	.byte	0xc0
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_TextSpeedFast,11
 	.globl	gText_BattleSceneOn
@@ -31341,7 +31455,7 @@ gText_BattleSceneOn:
 	.byte	0x3
 	.byte	0x7
 	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_BattleSceneOn,9
 	.globl	gText_BattleSceneOff
@@ -31354,8 +31468,8 @@ gText_BattleSceneOff:
 	.byte	0x3
 	.byte	0x7
 	.byte	0xc9
-	.byte	0xc0
-	.byte	0xc0
+	.byte	0xda
+	.byte	0xda
 	.byte	0xff
 	.size	 gText_BattleSceneOff,10
 	.globl	gText_BattleStyleShift
@@ -31398,9 +31512,9 @@ gText_SoundMono:
 	.byte	0x3
 	.byte	0x7
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xc9
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe3
 	.byte	0xff
 	.size	 gText_SoundMono,11
 	.globl	gText_SoundStereo
@@ -31413,11 +31527,11 @@ gText_SoundStereo:
 	.byte	0x3
 	.byte	0x7
 	.byte	0xcd
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc9
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd9
+	.byte	0xe3
 	.byte	0xff
 	.size	 gText_SoundStereo,13
 	.globl	gText_FrameType
@@ -31430,9 +31544,9 @@ gText_FrameType:
 	.byte	0x3
 	.byte	0x7
 	.byte	0xce
-	.byte	0xd3
-	.byte	0xca
-	.byte	0xbf
+	.byte	0xed
+	.byte	0xe4
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_FrameType,11
 	.globl	gText_FrameTypeNumber
@@ -31456,11 +31570,11 @@ gText_ButtonTypeNormal:
 	.byte	0x3
 	.byte	0x7
 	.byte	0xc8
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc6
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_ButtonTypeNormal,13
 	.globl	gText_ButtonTypeLR
@@ -31507,50 +31621,50 @@ gText_NumPlayerLink:
 	.type	 gText_BronzeCard,object
 gText_BronzeCard:
 	.byte	0xbc
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xd4
-	.byte	0xbf
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xee
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_BronzeCard,7
 	.globl	gText_CopperCard
 	.type	 gText_CopperCard,object
 gText_CopperCard:
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xca
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe3
+	.byte	0xe4
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_CopperCard,7
 	.globl	gText_SilverCard
 	.type	 gText_SilverCard,object
 gText_SilverCard:
 	.byte	0xcd
-	.byte	0xc3
-	.byte	0xc6
-	.byte	0xd0
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xdd
+	.byte	0xe0
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_SilverCard,7
 	.globl	gText_GoldCard
 	.type	 gText_GoldCard,object
 gText_GoldCard:
 	.byte	0xc1
-	.byte	0xc9
-	.byte	0xc6
-	.byte	0xbe
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_GoldCard,5
 	.globl	gText_Day
 	.type	 gText_Day,object
 gText_Day:
 	.byte	0xbe
-	.byte	0xbb
-	.byte	0xd3
+	.byte	0xd5
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_Day,4
 	.globl	gText_Colon3
@@ -31563,12 +31677,12 @@ gText_Colon3:
 	.type	 gText_Confirm2,object
 gText_Confirm2:
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xc0
-	.byte	0xc3
-	.byte	0xcc
-	.byte	0xc7
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xda
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xe1
 	.byte	0xff
 	.size	 gText_Confirm2,8
 	.globl	gText_Days
@@ -31638,44 +31752,44 @@ gText_UpdatedTime:
 	.type	 gText_MenuPokedex,object
 gText_MenuPokedex:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xd2
+	.byte	0xd8
+	.byte	0xd9
+	.byte	0xec
 	.byte	0xff
 	.size	 gText_MenuPokedex,8
 	.globl	gText_MenuPokemon
 	.type	 gText_MenuPokemon,object
 gText_MenuPokemon:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_MenuPokemon,8
 	.globl	gText_MenuBag
 	.type	 gText_MenuBag,object
 gText_MenuBag:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc1
+	.byte	0xd5
+	.byte	0xdb
 	.byte	0xff
 	.size	 gText_MenuBag,4
 	.globl	gText_MenuPokenav
 	.type	 gText_MenuPokenav,object
 gText_MenuPokenav:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
 	.byte	0xc8
-	.byte	0xbb
-	.byte	0xd0
+	.byte	0xd5
+	.byte	0xea
 	.byte	0xff
 	.size	 gText_MenuPokenav,8
 	.globl	gText_MenuPlayer
@@ -31689,66 +31803,67 @@ gText_MenuPlayer:
 	.type	 gText_MenuSave,object
 gText_MenuSave:
 	.byte	0xcd
-	.byte	0xbb
-	.byte	0xd0
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xea
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_MenuSave,5
 	.globl	gText_MenuOption
 	.type	 gText_MenuOption,object
 gText_MenuOption:
 	.byte	0xc9
-	.byte	0xca
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe4
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe7
 	.byte	0xff
-	.size	 gText_MenuOption,7
+	.size	 gText_MenuOption,8
 	.globl	gText_MenuExit
 	.type	 gText_MenuExit,object
 gText_MenuExit:
 	.byte	0xbf
-	.byte	0xd2
-	.byte	0xc3
-	.byte	0xce
+	.byte	0xec
+	.byte	0xdd
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_MenuExit,5
 	.globl	gText_MenuRetire
 	.type	 gText_MenuRetire,object
 gText_MenuRetire:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xcc
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_MenuRetire,7
 	.globl	gText_MenuRest
 	.type	 gText_MenuRest,object
 gText_MenuRest:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_MenuRest,5
 	.globl	gText_SafariBallStock
 	.type	 gText_SafariBallStock,object
 gText_SafariBallStock:
 	.byte	0xcd
-	.byte	0xbb
-	.byte	0xc0
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xc3
+	.byte	0xd5
+	.byte	0xda
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xdd
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xcd
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xe7
 	.byte	0xfe
 	.byte	0xcd
 	.byte	0xe8
@@ -32797,8 +32912,8 @@ gText_ThreeQuestionMarks:
 	.type	 gText_MaxHP,object
 gText_MaxHP:
 	.byte	0xc7
-	.byte	0xbb
-	.byte	0xd2
+	.byte	0xd5
+	.byte	0xec
 	.byte	0xad
 	.byte	0x0
 	.byte	0xc2
@@ -32809,57 +32924,57 @@ gText_MaxHP:
 	.type	 gText_Attack,object
 gText_Attack:
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0xff
 	.size	 gText_Attack,7
 	.globl	gText_Defense
 	.type	 gText_Defense,object
 gText_Defense:
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Defense,8
 	.globl	gText_Speed
 	.type	 gText_Speed,object
 gText_Speed:
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_Speed,6
 	.globl	gText_SpAtk
 	.type	 gText_SpAtk,object
 gText_SpAtk:
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xdf
 	.byte	0xff
 	.size	 gText_SpAtk,8
 	.globl	gText_SpDef
 	.type	 gText_SpDef,object
 gText_SpDef:
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
+	.byte	0xd9
+	.byte	0xda
 	.byte	0xff
 	.size	 gText_SpDef,8
 	.globl	gText_Plus
@@ -32961,14 +33076,14 @@ gText_RecordMixingComplete:
 	.type	 gText_YourName,object
 gText_YourName:
 	.byte	0xd3
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xcc
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xc8
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xd9
 	.byte	0xac
 	.byte	0xff
 	.size	 gText_YourName,11
@@ -32976,13 +33091,13 @@ gText_YourName:
 	.type	 gText_BoxName,object
 gText_BoxName:
 	.byte	0xbc
-	.byte	0xc9
-	.byte	0xd2
+	.byte	0xe3
+	.byte	0xec
 	.byte	0x0
 	.byte	0xc8
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xd9
 	.byte	0xac
 	.byte	0xff
 	.size	 gText_BoxName,10
@@ -33297,19 +33412,19 @@ gText_FavorLady_Pointy:
 	.type	 gText_RentalPkmn2,object
 gText_RentalPkmn2:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xc6
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xe0
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_RentalPkmn2,15
 	.globl	gText_SelectFirstPkmn
@@ -33333,12 +33448,12 @@ gText_SelectFirstPkmn:
 	.byte	0xe8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_SelectFirstPkmn,26
@@ -33364,12 +33479,12 @@ gText_SelectSecondPkmn:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_SelectSecondPkmn,27
@@ -33394,12 +33509,12 @@ gText_SelectThirdPkmn:
 	.byte	0xd8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_SelectThirdPkmn,26
@@ -33407,45 +33522,45 @@ gText_SelectThirdPkmn:
 	.type	 gText_Rent,object
 gText_Rent:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xce
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_Rent,5
 	.globl	gText_Summary
 	.type	 gText_Summary,object
 gText_Summary:
 	.byte	0xcd
-	.byte	0xcf
-	.byte	0xc7
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xe9
+	.byte	0xe1
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_Summary,8
 	.globl	gText_Others2
 	.type	 gText_Others2,object
 gText_Others2:
-	.byte	0xc9
-	.byte	0xce
-	.byte	0xc2
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcd
+	.byte	0xbd
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_Others2,7
 	.globl	gText_Deselect
 	.type	 gText_Deselect,object
 gText_Deselect:
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xbd
-	.byte	0xce
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_Deselect,9
 	.globl	gText_TheseThreePkmnOkay
@@ -33468,12 +33583,12 @@ gText_TheseThreePkmnOkay:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xc9
 	.byte	0xc5
@@ -33484,15 +33599,15 @@ gText_TheseThreePkmnOkay:
 	.type	 gText_Yes2,object
 gText_Yes2:
 	.byte	0xd3
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_Yes2,4
 	.globl	gText_No2
 	.type	 gText_No2,object
 gText_No2:
-	.byte	0xc8
-	.byte	0xc9
+	.byte	0xe2
+	.byte	0xe3
 	.byte	0xff
 	.size	 gText_No2,3
 	.globl	gText_CantSelectSamePkmn
@@ -33525,17 +33640,17 @@ gText_CantSelectSamePkmn:
 	.type	 gText_PkmnSwap,object
 gText_PkmnSwap:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xd1
-	.byte	0xbb
-	.byte	0xca
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe4
 	.byte	0xff
 	.size	 gText_PkmnSwap,13
 	.globl	gText_SelectPkmnToSwap
@@ -33549,12 +33664,12 @@ gText_SelectPkmnToSwap:
 	.byte	0xe8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xe8
 	.byte	0xe3
@@ -33577,12 +33692,12 @@ gText_SelectPkmnToAccept:
 	.byte	0xe8
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0x0
 	.byte	0xe8
 	.byte	0xe3
@@ -33600,34 +33715,34 @@ gText_SelectPkmnToAccept:
 	.type	 gText_Swap,object
 gText_Swap:
 	.byte	0xcd
-	.byte	0xd1
-	.byte	0xbb
-	.byte	0xca
+	.byte	0xeb
+	.byte	0xd5
+	.byte	0xe4
 	.byte	0xff
 	.size	 gText_Swap,5
 	.globl	gText_Summary2
 	.type	 gText_Summary2,object
 gText_Summary2:
 	.byte	0xcd
-	.byte	0xcf
-	.byte	0xc7
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xe9
+	.byte	0xe1
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_Summary2,8
 	.globl	gText_Rechoose
 	.type	 gText_Rechoose,object
 gText_Rechoose:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbd
-	.byte	0xc2
-	.byte	0xc9
-	.byte	0xc9
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xd7
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe3
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Rechoose,9
 	.globl	gText_QuitSwapping
@@ -33653,15 +33768,15 @@ gText_QuitSwapping:
 	.type	 gText_Yes3,object
 gText_Yes3:
 	.byte	0xd3
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_Yes3,4
 	.globl	gText_No3
 	.type	 gText_No3,object
 gText_No3:
 	.byte	0xc8
-	.byte	0xc9
+	.byte	0xe3
 	.byte	0xff
 	.size	 gText_No3,3
 	.globl	gText_PkmnForSwap
@@ -33727,12 +33842,12 @@ gText_AcceptThisPkmn:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xac
 	.byte	0xff
 	.size	 gText_AcceptThisPkmn,21
@@ -33785,43 +33900,39 @@ gText_DecimalPoint:
 	.type	 gText_SavingPlayer,object
 gText_SavingPlayer:
 	.byte	0xca
-	.byte	0xc6
-	.byte	0xbb
-	.byte	0xd3
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe0
+	.byte	0xd5
+	.byte	0xed
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_SavingPlayer,7
 	.globl	gText_SavingBadges
 	.type	 gText_SavingBadges,object
 gText_SavingBadges:
-	.byte	0xbc
-	.byte	0xbb
-	.byte	0xbe
-	.byte	0xc1
-	.byte	0xbf
 	.byte	0xcd
+	.byte	0xed
+	.byte	0xe1
+	.byte	0xd6
+	.byte	0xe3
+	.byte	0xe0
+	.byte	0xe7
 	.byte	0xff
-	.size	 gText_SavingBadges,7
+	.size	 gText_SavingBadges,8
 	.globl	gText_SavingPokedex
 	.type	 gText_SavingPokedex,object
 gText_SavingPokedex:
+	.byte	0xbc
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
-	.byte	0x1b
-	.byte	0xbe
-	.byte	0xbf
-	.byte	0xd2
 	.byte	0xff
-	.size	 gText_SavingPokedex,8
+	.size	 gText_SavingPokedex,3
 	.globl	gText_SavingTime
 	.type	 gText_SavingTime,object
 gText_SavingTime:
 	.byte	0xce
-	.byte	0xc3
-	.byte	0xc7
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_SavingTime,5
 	.globl	gText_WirelessCommStatus
@@ -36447,19 +36558,19 @@ gText_PlayersBattleResults:
 	.byte	0xe7
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xcf
-	.byte	0xc6
-	.byte	0xce
-	.byte	0xcd
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe9
+	.byte	0xe0
+	.byte	0xe8
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_PlayersBattleResults,20
 	.globl	gText_TotalRecordWLD
@@ -36586,10 +36697,10 @@ gText_YouveGot9999Coins:
 	.byte	0xaa
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe7
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_YouveGot9999Coins,24
@@ -36615,10 +36726,10 @@ gText_YouveRunOutOfCoins:
 	.byte	0xda
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe7
 	.byte	0xad
 	.byte	0xfe
 	.byte	0xc1
@@ -36658,10 +36769,10 @@ gText_YouDontHaveThreeCoins:
 	.byte	0xd9
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xe7
 	.byte	0xad
 	.byte	0xff
 	.size	 gText_YouDontHaveThreeCoins,28
@@ -36669,14 +36780,14 @@ gText_YouDontHaveThreeCoins:
 	.type	 gText_ReelTimeHelp,object
 gText_ReelTimeHelp:
 	.byte	0xcc
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0x0
 	.byte	0xce
-	.byte	0xc3
-	.byte	0xc7
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xe1
+	.byte	0xd9
 	.byte	0xfe
 	.byte	0xc2
 	.byte	0xd9
@@ -37000,9 +37111,9 @@ gText_NewLine2:
 	.type	 gText_Exit4,object
 gText_Exit4:
 	.byte	0xbf
-	.byte	0xd2
-	.byte	0xc3
-	.byte	0xce
+	.byte	0xec
+	.byte	0xdd
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_Exit4,5
 	.globl	gText_Lv
@@ -37506,35 +37617,35 @@ gText_MoveRelearnerWhichMoveToForget:
 	.type	 gText_MoveRelearnerBattleMoves,object
 gText_MoveRelearnerBattleMoves:
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc6
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe0
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xd0
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_MoveRelearnerBattleMoves,13
 	.globl	gText_MoveRelearnerContestMovesTitle
 	.type	 gText_MoveRelearnerContestMovesTitle,object
 gText_MoveRelearnerContestMovesTitle:
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0x0
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xd0
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xe3
+	.byte	0xea
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_MoveRelearnerContestMovesTitle,14
 	.globl	gText_MoveRelearnerType
@@ -37559,10 +37670,10 @@ gText_MoveRelearnerPP:
 	.type	 gText_MoveRelearnerPower,object
 gText_MoveRelearnerPower:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xd1
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe3
+	.byte	0xeb
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xba
 	.byte	0xff
 	.size	 gText_MoveRelearnerPower,7
@@ -37570,13 +37681,13 @@ gText_MoveRelearnerPower:
 	.type	 gText_MoveRelearnerAccuracy,object
 gText_MoveRelearnerAccuracy:
 	.byte	0xbb
-	.byte	0xbd
-	.byte	0xbd
-	.byte	0xcf
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xd3
+	.byte	0xd7
+	.byte	0xd7
+	.byte	0xe9
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xed
 	.byte	0xba
 	.byte	0xff
 	.size	 gText_MoveRelearnerAccuracy,10
@@ -37584,72 +37695,72 @@ gText_MoveRelearnerAccuracy:
 	.type	 gText_MoveRelearnerAppeal,object
 gText_MoveRelearnerAppeal:
 	.byte	0xbb
-	.byte	0xca
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbb
-	.byte	0xc6
+	.byte	0xe4
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd5
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_MoveRelearnerAppeal,7
 	.globl	gText_MoveRelearnerJam
 	.type	 gText_MoveRelearnerJam,object
 gText_MoveRelearnerJam:
 	.byte	0xc4
-	.byte	0xbb
-	.byte	0xc7
+	.byte	0xd5
+	.byte	0xe1
 	.byte	0xff
 	.size	 gText_MoveRelearnerJam,4
 	.globl	gText_Kira
 	.type	 gText_Kira,object
 gText_Kira:
 	.byte	0xc5
-	.byte	0xc3
-	.byte	0xcc
-	.byte	0xbb
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xd5
 	.byte	0xff
 	.size	 gText_Kira,5
 	.globl	gText_Amy
 	.type	 gText_Amy,object
 gText_Amy:
 	.byte	0xbb
-	.byte	0xc7
-	.byte	0xd3
+	.byte	0xe1
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_Amy,4
 	.globl	gText_John
 	.type	 gText_John,object
 gText_John:
 	.byte	0xc4
-	.byte	0xc9
-	.byte	0xc2
-	.byte	0xc8
+	.byte	0xe3
+	.byte	0xdc
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_John,5
 	.globl	gText_Roy
 	.type	 gText_Roy,object
 gText_Roy:
 	.byte	0xcc
-	.byte	0xc9
-	.byte	0xd3
+	.byte	0xe3
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_Roy,4
 	.globl	gText_Gabby
 	.type	 gText_Gabby,object
 gText_Gabby:
 	.byte	0xc1
-	.byte	0xbb
-	.byte	0xbc
-	.byte	0xbc
-	.byte	0xd3
+	.byte	0xd5
+	.byte	0xd6
+	.byte	0xd6
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_Gabby,6
 	.globl	gText_Anna
 	.type	 gText_Anna,object
 gText_Anna:
 	.byte	0xbb
-	.byte	0xc8
-	.byte	0xc8
-	.byte	0xbb
+	.byte	0xe2
+	.byte	0xe2
+	.byte	0xd5
 	.byte	0xff
 	.size	 gText_Anna,5
 	.globl	gText_ClearAllSaveData
@@ -37749,23 +37860,23 @@ gText_IsThisTheCorrectTime:
 	.type	 gText_Confirm3,object
 gText_Confirm3:
 	.byte	0xbd
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xc0
-	.byte	0xc3
-	.byte	0xcc
-	.byte	0xc7
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xda
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xe1
 	.byte	0xff
 	.size	 gText_Confirm3,8
 	.globl	gText_Cancel4
 	.type	 gText_Cancel4,object
 gText_Cancel4:
 	.byte	0xbd
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0xbd
-	.byte	0xbf
-	.byte	0xc6
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xd9
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_Cancel4,7
 	.globl	gText_MrStoneMatchCallDesc
@@ -38437,50 +38548,50 @@ gText_Answer:
 	.type	 gText_PokeBalls,object
 gText_PokeBalls:
 	.byte	0xca
-	.byte	0xc9
-	.byte	0xc5
+	.byte	0xe3
+	.byte	0xdf
 	.byte	0x1b
 	.byte	0x0
 	.byte	0xbc
-	.byte	0xbb
-	.byte	0xc6
-	.byte	0xc6
-	.byte	0xcd
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xe0
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_PokeBalls,11
 	.globl	gText_Berry
 	.type	 gText_Berry,object
 gText_Berry:
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xd3
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xff
 	.size	 gText_Berry,6
 	.globl	gText_Berries
 	.type	 gText_Berries,object
 gText_Berries:
 	.byte	0xbc
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_Berries,8
 	.globl	gText_Nickname
 	.type	 gText_Nickname,object
 gText_Nickname:
 	.byte	0xc8
-	.byte	0xc3
-	.byte	0xbd
-	.byte	0xc5
-	.byte	0xc8
-	.byte	0xbb
-	.byte	0xc7
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xd7
+	.byte	0xdf
+	.byte	0xe2
+	.byte	0xd5
+	.byte	0xe1
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Nickname,9
 	.globl	gText_CHALL
@@ -38549,11 +38660,11 @@ gText_Stats_EV_HP:
 	.type	 gText_Stats_EV_Attack,object
 gText_Stats_EV_Attack:
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xce
-	.byte	0xbb
-	.byte	0xbd
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xd5
+	.byte	0xd7
+	.byte	0xdf
 	.byte	0x0
 	.byte	0xf9
 	.byte	0x4
@@ -38564,12 +38675,12 @@ gText_Stats_EV_Attack:
 	.type	 gText_Stats_EV_Defense,object
 gText_Stats_EV_Defense:
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xbf
+	.byte	0xd9
+	.byte	0xda
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xf9
 	.byte	0x4
@@ -38580,10 +38691,10 @@ gText_Stats_EV_Defense:
 	.type	 gText_Stats_EV_Speed,object
 gText_Stats_EV_Speed:
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0x0
 	.byte	0xf9
 	.byte	0x4
@@ -38594,12 +38705,12 @@ gText_Stats_EV_Speed:
 	.type	 gText_Stats_EV_SpAtk,object
 gText_Stats_EV_SpAtk:
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xdf
 	.byte	0x0
 	.byte	0xf9
 	.byte	0x4
@@ -38610,12 +38721,12 @@ gText_Stats_EV_SpAtk:
 	.type	 gText_Stats_EV_SpDef,object
 gText_Stats_EV_SpDef:
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
+	.byte	0xd9
+	.byte	0xda
 	.byte	0x0
 	.byte	0xf9
 	.byte	0x4
@@ -38633,8 +38744,8 @@ gText_Stats_HP:
 	.type	 gText_Stats_Attack,object
 gText_Stats_Attack:
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xdf
 	.byte	0x0
 	.byte	0xff
 	.size	 gText_Stats_Attack,5
@@ -38642,8 +38753,8 @@ gText_Stats_Attack:
 	.type	 gText_Stats_Defense,object
 gText_Stats_Defense:
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
+	.byte	0xd9
+	.byte	0xda
 	.byte	0x0
 	.byte	0xff
 	.size	 gText_Stats_Defense,5
@@ -38651,8 +38762,8 @@ gText_Stats_Defense:
 	.type	 gText_Stats_Speed,object
 gText_Stats_Speed:
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
+	.byte	0xe4
+	.byte	0xd9
 	.byte	0x0
 	.byte	0xff
 	.size	 gText_Stats_Speed,5
@@ -38660,7 +38771,7 @@ gText_Stats_Speed:
 	.type	 gText_Stats_SpAtk,object
 gText_Stats_SpAtk:
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0xbb
 	.byte	0x0
@@ -38670,7 +38781,7 @@ gText_Stats_SpAtk:
 	.type	 gText_Stats_SpDef,object
 gText_Stats_SpDef:
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0xbe
 	.byte	0x0
@@ -38693,8 +38804,8 @@ gText_Stats_EVAttack:
 	.byte	0xd0
 	.byte	0x0
 	.byte	0xbb
-	.byte	0xce
-	.byte	0xc5
+	.byte	0xe8
+	.byte	0xdf
 	.byte	0xff
 	.size	 gText_Stats_EVAttack,7
 	.globl	gText_Stats_EVDefense
@@ -38704,8 +38815,8 @@ gText_Stats_EVDefense:
 	.byte	0xd0
 	.byte	0x0
 	.byte	0xbe
-	.byte	0xbf
-	.byte	0xc0
+	.byte	0xd9
+	.byte	0xda
 	.byte	0xff
 	.size	 gText_Stats_EVDefense,7
 	.globl	gText_Stats_EVSpeed
@@ -38715,8 +38826,8 @@ gText_Stats_EVSpeed:
 	.byte	0xd0
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
-	.byte	0xbf
+	.byte	0xe4
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Stats_EVSpeed,7
 	.globl	gText_Stats_EVSpAtk
@@ -38726,7 +38837,7 @@ gText_Stats_EVSpAtk:
 	.byte	0xd0
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0xbb
 	.byte	0xff
@@ -38738,7 +38849,7 @@ gText_Stats_EVSpDef:
 	.byte	0xd0
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xca
+	.byte	0xe4
 	.byte	0xad
 	.byte	0xbe
 	.byte	0xff
@@ -38759,8 +38870,8 @@ gText_Stats_MoveSelectedMax:
 	.type	 gText_Stats_MoveLevel,object
 gText_Stats_MoveLevel:
 	.byte	0xc6
-	.byte	0xd0
-	.byte	0xc6
+	.byte	0xea
+	.byte	0xe0
 	.byte	0xff
 	.size	 gText_Stats_MoveLevel,4
 	.globl	gText_Stats_Gender_0
@@ -38839,15 +38950,15 @@ gText_Stats_Gender_100:
 	.type	 gText_Stats_Catch,object
 gText_Stats_Catch:
 	.byte	0xbd
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xbd
-	.byte	0xc2
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd7
+	.byte	0xdc
 	.byte	0x0
 	.byte	0xcc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xbf
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd9
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xff
@@ -38856,15 +38967,15 @@ gText_Stats_Catch:
 	.type	 gText_Stats_Exp,object
 gText_Stats_Exp:
 	.byte	0xbf
-	.byte	0xd2
-	.byte	0xca
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbd
-	.byte	0xbf
+	.byte	0xec
+	.byte	0xe4
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd7
+	.byte	0xd9
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xff
@@ -38873,15 +38984,15 @@ gText_Stats_Exp:
 	.type	 gText_Stats_EggCycles,object
 gText_Stats_EggCycles:
 	.byte	0xbf
-	.byte	0xc1
-	.byte	0xc1
+	.byte	0xdb
+	.byte	0xdb
 	.byte	0x0
 	.byte	0xbd
-	.byte	0xd3
-	.byte	0xbd
-	.byte	0xc6
-	.byte	0xbf
-	.byte	0xcd
+	.byte	0xed
+	.byte	0xd7
+	.byte	0xe0
+	.byte	0xd9
+	.byte	0xe7
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xff
@@ -38890,9 +39001,9 @@ gText_Stats_EggCycles:
 	.type	 gText_Stats_Growthrate,object
 gText_Stats_Growthrate:
 	.byte	0xc1
-	.byte	0xcc
-	.byte	0xc9
-	.byte	0xd1
+	.byte	0xe6
+	.byte	0xe3
+	.byte	0xeb
 	.byte	0xf0
 	.byte	0x0
 	.byte	0xff
@@ -38901,15 +39012,15 @@ gText_Stats_Growthrate:
 	.type	 gText_Stats_Friendship,object
 gText_Stats_Friendship:
 	.byte	0xc0
-	.byte	0xcc
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xc8
-	.byte	0xbe
-	.byte	0xcd
-	.byte	0xc2
-	.byte	0xc3
-	.byte	0xca
+	.byte	0xe6
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe2
+	.byte	0xd8
+	.byte	0xe7
+	.byte	0xdc
+	.byte	0xdd
+	.byte	0xe4
 	.byte	0xf0
 	.byte	0xff
 	.size	 gText_Stats_Friendship,12
@@ -38917,74 +39028,74 @@ gText_Stats_Friendship:
 	.type	 gText_Stats_MEDIUM_FAST,object
 gText_Stats_MEDIUM_FAST:
 	.byte	0xc7
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xad
 	.byte	0x0
 	.byte	0xc0
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_Stats_MEDIUM_FAST,10
 	.globl	gText_Stats_ERRATIC
 	.type	 gText_Stats_ERRATIC,object
 gText_Stats_ERRATIC:
 	.byte	0xbf
-	.byte	0xcc
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xbd
+	.byte	0xe6
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xd7
 	.byte	0xff
 	.size	 gText_Stats_ERRATIC,8
 	.globl	gText_Stats_FLUCTUATING
 	.type	 gText_Stats_FLUCTUATING,object
 gText_Stats_FLUCTUATING:
 	.byte	0xc0
-	.byte	0xc6
-	.byte	0xcf
-	.byte	0xbd
-	.byte	0xce
-	.byte	0xcf
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc1
+	.byte	0xe0
+	.byte	0xe9
+	.byte	0xd7
+	.byte	0xe8
+	.byte	0xe9
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
 	.byte	0xff
 	.size	 gText_Stats_FLUCTUATING,12
 	.globl	gText_Stats_MEDIUM_SLOW
 	.type	 gText_Stats_MEDIUM_SLOW,object
 gText_Stats_MEDIUM_SLOW:
 	.byte	0xc7
-	.byte	0xbf
-	.byte	0xbe
+	.byte	0xd9
+	.byte	0xd8
 	.byte	0xad
 	.byte	0x0
 	.byte	0xcd
-	.byte	0xc6
-	.byte	0xc9
-	.byte	0xd1
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xeb
 	.byte	0xff
 	.size	 gText_Stats_MEDIUM_SLOW,10
 	.globl	gText_Stats_FAST
 	.type	 gText_Stats_FAST,object
 gText_Stats_FAST:
 	.byte	0xc0
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xce
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe8
 	.byte	0xff
 	.size	 gText_Stats_FAST,5
 	.globl	gText_Stats_SLOW
 	.type	 gText_Stats_SLOW,object
 gText_Stats_SLOW:
 	.byte	0xcd
-	.byte	0xc6
-	.byte	0xc9
-	.byte	0xd1
+	.byte	0xe0
+	.byte	0xe3
+	.byte	0xeb
 	.byte	0xff
 	.size	 gText_Stats_SLOW,5
 	.globl	gText_Stats_ContestHeart
@@ -39003,8 +39114,8 @@ gText_Stats_Minus:
 	.type	 gText_Stats_eggGroup_g1,object
 gText_Stats_eggGroup_g1:
 	.byte	0xbf
-	.byte	0xc1
-	.byte	0xc1
+	.byte	0xdb
+	.byte	0xdb
 	.byte	0x0
 	.byte	0xc1
 	.byte	0xa2
@@ -39015,8 +39126,8 @@ gText_Stats_eggGroup_g1:
 	.type	 gText_Stats_eggGroup_g2,object
 gText_Stats_eggGroup_g2:
 	.byte	0xbf
-	.byte	0xc1
-	.byte	0xc1
+	.byte	0xdb
+	.byte	0xdb
 	.byte	0x0
 	.byte	0xc1
 	.byte	0xa3
@@ -39027,22 +39138,22 @@ gText_Stats_eggGroup_g2:
 	.type	 gText_Stats_eggGroup_MONSTER,object
 gText_Stats_eggGroup_MONSTER:
 	.byte	0xc7
-	.byte	0xc9
-	.byte	0xc8
-	.byte	0xcd
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xe3
+	.byte	0xe2
+	.byte	0xe7
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0xff
 	.size	 gText_Stats_eggGroup_MONSTER,8
 	.globl	gText_Stats_eggGroup_WATER_1
 	.type	 gText_Stats_eggGroup_WATER_1,object
 gText_Stats_eggGroup_WATER_1:
 	.byte	0xd1
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xa2
 	.byte	0xff
@@ -39051,73 +39162,74 @@ gText_Stats_eggGroup_WATER_1:
 	.type	 gText_Stats_eggGroup_BUG,object
 gText_Stats_eggGroup_BUG:
 	.byte	0xbc
-	.byte	0xcf
-	.byte	0xc1
+	.byte	0xe9
+	.byte	0xdb
 	.byte	0xff
 	.size	 gText_Stats_eggGroup_BUG,4
 	.globl	gText_Stats_eggGroup_FLYING
 	.type	 gText_Stats_eggGroup_FLYING,object
 gText_Stats_eggGroup_FLYING:
 	.byte	0xc0
-	.byte	0xc6
-	.byte	0xd3
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xc1
+	.byte	0xe0
+	.byte	0xed
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xdb
 	.byte	0xff
 	.size	 gText_Stats_eggGroup_FLYING,7
 	.globl	gText_Stats_eggGroup_FIELD
 	.type	 gText_Stats_eggGroup_FIELD,object
 gText_Stats_eggGroup_FIELD:
 	.byte	0xc0
-	.byte	0xc3
-	.byte	0xbf
-	.byte	0xc6
-	.byte	0xbe
+	.byte	0xdd
+	.byte	0xd9
+	.byte	0xe0
+	.byte	0xd8
 	.byte	0xff
 	.size	 gText_Stats_eggGroup_FIELD,6
 	.globl	gText_Stats_eggGroup_FAIRY
 	.type	 gText_Stats_eggGroup_FAIRY,object
 gText_Stats_eggGroup_FAIRY:
 	.byte	0xc0
-	.byte	0xbb
-	.byte	0xc3
-	.byte	0xcc
+	.byte	0xd5
+	.byte	0xdd
+	.byte	0xe6
+	.byte	0xed
 	.byte	0xff
-	.size	 gText_Stats_eggGroup_FAIRY,5
+	.size	 gText_Stats_eggGroup_FAIRY,6
 	.globl	gText_Stats_eggGroup_GRASS
 	.type	 gText_Stats_eggGroup_GRASS,object
 gText_Stats_eggGroup_GRASS:
 	.byte	0xc1
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xcd
-	.byte	0xcd
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe7
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_Stats_eggGroup_GRASS,6
 	.globl	gText_Stats_eggGroup_HUMAN_LIKE
 	.type	 gText_Stats_eggGroup_HUMAN_LIKE,object
 gText_Stats_eggGroup_HUMAN_LIKE:
 	.byte	0xc2
-	.byte	0xcf
-	.byte	0xc7
-	.byte	0xbb
-	.byte	0xc8
-	.byte	0x0
+	.byte	0xe9
+	.byte	0xe1
+	.byte	0xd5
+	.byte	0xe2
+	.byte	0xae
 	.byte	0xc6
-	.byte	0xc3
-	.byte	0xc5
-	.byte	0xbf
+	.byte	0xdd
+	.byte	0xdf
+	.byte	0xd9
 	.byte	0xff
 	.size	 gText_Stats_eggGroup_HUMAN_LIKE,11
 	.globl	gText_Stats_eggGroup_WATER_3
 	.type	 gText_Stats_eggGroup_WATER_3,object
 gText_Stats_eggGroup_WATER_3:
 	.byte	0xd1
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xa4
 	.byte	0xff
@@ -39126,36 +39238,37 @@ gText_Stats_eggGroup_WATER_3:
 	.type	 gText_Stats_eggGroup_MINERAL,object
 gText_Stats_eggGroup_MINERAL:
 	.byte	0xc7
-	.byte	0xc3
-	.byte	0xc8
-	.byte	0xbf
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc6
+	.byte	0xdd
+	.byte	0xe2
+	.byte	0xd9
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xe0
+	.byte	0xd8
 	.byte	0xff
-	.size	 gText_Stats_eggGroup_MINERAL,8
+	.size	 gText_Stats_eggGroup_MINERAL,9
 	.globl	gText_Stats_eggGroup_AMORPHOUS
 	.type	 gText_Stats_eggGroup_AMORPHOUS,object
 gText_Stats_eggGroup_AMORPHOUS:
 	.byte	0xbb
-	.byte	0xc7
-	.byte	0xc9
-	.byte	0xcc
-	.byte	0xca
-	.byte	0xc2
-	.byte	0xc9
-	.byte	0xcf
-	.byte	0xcd
+	.byte	0xe1
+	.byte	0xe3
+	.byte	0xe6
+	.byte	0xe4
+	.byte	0xdc
+	.byte	0xe3
+	.byte	0xe9
+	.byte	0xe7
 	.byte	0xff
 	.size	 gText_Stats_eggGroup_AMORPHOUS,10
 	.globl	gText_Stats_eggGroup_WATER_2
 	.type	 gText_Stats_eggGroup_WATER_2,object
 gText_Stats_eggGroup_WATER_2:
 	.byte	0xd1
-	.byte	0xbb
-	.byte	0xce
-	.byte	0xbf
-	.byte	0xcc
+	.byte	0xd5
+	.byte	0xe8
+	.byte	0xd9
+	.byte	0xe6
 	.byte	0x0
 	.byte	0xa3
 	.byte	0xff
@@ -39164,21 +39277,21 @@ gText_Stats_eggGroup_WATER_2:
 	.type	 gText_Stats_eggGroup_DITTO,object
 gText_Stats_eggGroup_DITTO:
 	.byte	0xbe
-	.byte	0xc3
-	.byte	0xce
-	.byte	0xce
-	.byte	0xc9
+	.byte	0xdd
+	.byte	0xe8
+	.byte	0xe8
+	.byte	0xe3
 	.byte	0xff
 	.size	 gText_Stats_eggGroup_DITTO,6
 	.globl	gText_Stats_eggGroup_DRAGON
 	.type	 gText_Stats_eggGroup_DRAGON,object
 gText_Stats_eggGroup_DRAGON:
 	.byte	0xbe
-	.byte	0xcc
-	.byte	0xbb
-	.byte	0xc1
-	.byte	0xc9
-	.byte	0xc8
+	.byte	0xe6
+	.byte	0xd5
+	.byte	0xdb
+	.byte	0xe3
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_Stats_eggGroup_DRAGON,7
 	.globl	gText_Stats_eggGroup_UNDISCOVERED
@@ -39193,17 +39306,17 @@ gText_Stats_eggGroup_UNDISCOVERED:
 	.type	 gText_Dex_SEEN,object
 gText_Dex_SEEN:
 	.byte	0xcd
-	.byte	0xbf
-	.byte	0xbf
-	.byte	0xc8
+	.byte	0xd9
+	.byte	0xd9
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_Dex_SEEN,5
 	.globl	gText_Dex_OWN
 	.type	 gText_Dex_OWN,object
 gText_Dex_OWN:
 	.byte	0xc9
-	.byte	0xd1
-	.byte	0xc8
+	.byte	0xeb
+	.byte	0xe2
 	.byte	0xff
 	.size	 gText_Dex_OWN,4
 .text

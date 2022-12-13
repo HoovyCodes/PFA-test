@@ -42,11 +42,11 @@ Route104_MapWarps:
 	warp_def 17, 50, 0, 0, MAP_ROUTE104_MR_BRINEYS_HOUSE
 	warp_def 5, 18, 0, 0, MAP_ROUTE104_PRETTY_PETAL_FLOWER_SHOP
 	warp_def 10, 30, 3, 0, MAP_PETALBURG_WOODS
-	warp_def 11, 30, 3, 1, MAP_PETALBURG_WOODS
-	warp_def 10, 38, 3, 2, MAP_PETALBURG_WOODS
-	warp_def 11, 38, 3, 3, MAP_PETALBURG_WOODS
-	warp_def 32, 42, 3, 4, MAP_PETALBURG_WOODS
-	warp_def 33, 42, 3, 5, MAP_PETALBURG_WOODS
+	warp_def 11, 30, 3, 0, MAP_PETALBURG_WOODS
+	warp_def 10, 38, 3, 0, MAP_PETALBURG_WOODS
+	warp_def 11, 38, 3, 0, MAP_PETALBURG_WOODS
+	warp_def 32, 42, 3, 0, MAP_PETALBURG_WOODS
+	warp_def 33, 42, 3, 0, MAP_PETALBURG_WOODS
 
 Route104_MapCoordEvents:
 	coord_event 17, 51, 3, VAR_ROUTE104_STATE, 1, Route104_EventScript_RivalTrigger

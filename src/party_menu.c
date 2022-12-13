@@ -254,7 +254,7 @@ static bool16 IsMonAllowedInPokemonJump(struct Pokemon*);
 static bool16 IsMonAllowedInDodrioBerryPicking(struct Pokemon*);
 static void Task_CancelParticipationYesNo(u8);
 static void Task_HandleCancelParticipationYesNoInput(u8);
-// static bool8 CanLearnTutorMove(u16, u8);
+bool32 CanLearnTutorMove(u16, u8);
 static u16 GetTutorMove(u8);
 static bool8 ShouldUseChooseMonText(void);
 static void SetPartyMonFieldSelectionActions(struct Pokemon*, u8);
@@ -382,7 +382,6 @@ static void ShiftMoveSlot(struct Pokemon*, u8, u8);
 static void BlitBitmapToPartyWindow_LeftColumn(u8, u8, u8, u8, u8, u8);
 static void BlitBitmapToPartyWindow_RightColumn(u8, u8, u8, u8, u8, u8);
 static void CursorCb_Summary(u8);
-static void CursorCb_Nickname(u8);
 static void CursorCb_Switch(u8);
 static void CursorCb_Cancel1(u8);
 static void CursorCb_Item(u8);
@@ -1990,13 +1989,41 @@ static u16 GetTutorMove(u8 tutor)
     return gTutorMoves[tutor];
 }
 
-bool8 CanLearnTutorMove(u16 species, u8 tutor)
+bool32 CanLearnTutorMove(u16 species, u8 tutor) // note the change to bool32
+
 {
-    if (sTutorLearnsets[species] & (1 << tutor))
-        return TRUE;
-    else
-        return FALSE;
-}
+
+    if (tutor < 32)
+
+    {
+
+        u32 mask = 1 << tutor;
+
+        return sTutorLearnsets[species][0] & mask;
+
+    }
+
+    else if (tutor < 64)
+
+    {
+
+        u32 mask = 1 << (tutor - 32);
+
+        return sTutorLearnsets[species][1] & mask;
+
+    }
+
+    else // thanks to BluRose for suggesting this
+
+    {
+
+        u32 mask = 1 << (tutor - 64);
+
+        return sTutorLearnsets[species][2] & mask;
+
+    }
+
+} 
 
 static void InitPartyMenuWindows(u8 layout)
 {
@@ -2537,7 +2564,6 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
 
     sPartyMenuInternal->numActions = 0;
     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_SUMMARY);
-	AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_NICKNAME);
 
     // Add field moves to action list
     for (i = 0; i < MAX_MON_MOVES; i++)
@@ -4804,8 +4830,6 @@ static void Task_LearnedMove(u8 taskId)
     if (move[1] == 0)
     {
         AdjustFriendship(mon, FRIENDSHIP_EVENT_LEARN_TMHM);
-        if (item < ITEM_HM01_CUT)
-            RemoveBagItem(item, 1);
     }
     GetMonNickname(mon, gStringVar1);
     StringCopy(gStringVar2, gMoveNames[move[0]]);
@@ -4872,15 +4896,6 @@ static void Task_ShowSummaryScreenToForgetMove(u8 taskId)
         sPartyMenuInternal->exitCallback = CB2_ShowSummaryScreenToForgetMove;
         Task_ClosePartyMenu(taskId);
     }
-}
-
-void ChangePokemonNickname(void);
-static void CursorCb_Nickname(u8 taskId)
-{
-    PlaySE(SE_SELECT);
-    gSpecialVar_0x8004 = gPartyMenu.slotId;
-    sPartyMenuInternal->exitCallback = ChangePokemonNickname;
-    Task_ClosePartyMenu(taskId);
 }
 
 static void CB2_ShowSummaryScreenToForgetMove(void)

@@ -650,45 +650,45 @@ CB2_InitLearnMove:
 	bl	ResetTasks
 	bl	ClearScheduledBgCopiesToVram
 	ldr	r6, .L11
-	mov	r0, #0x8c
-	lsl	r0, r0, #0x1
+	ldr	r0, .L11+0x4
 	bl	AllocZeroed
 	str	r0, [r6]
-	ldr	r1, .L11+0x4
+	ldr	r1, .L11+0x8
 	ldrh	r1, [r1]
-	add	r0, r0, #0x44
+	mov	r2, #0x84
+	lsl	r2, r2, #0x2
+	add	r0, r0, r2
 	mov	r5, #0x0
 	strb	r1, [r0]
-	ldr	r0, .L11+0x8
+	ldr	r0, .L11+0xc
 	bl	SetVBlankCallback
 	bl	InitMoveRelearnerBackgroundLayers
 	mov	r0, #0x0
 	bl	InitMoveRelearnerWindows
-	ldr	r4, .L11+0xc
+	ldr	r4, .L11+0x10
 	mov	r0, #0x0
 	strh	r5, [r4]
 	strh	r5, [r4, #0x2]
 	strb	r0, [r4, #0x4]
 	bl	CreateLearnableMovesList
-	ldr	r0, .L11+0x10
-	bl	LoadSpriteSheet
 	ldr	r0, .L11+0x14
+	bl	LoadSpriteSheet
+	ldr	r0, .L11+0x18
 	bl	LoadSpritePalette
 	bl	CreateUISprites
-	ldr	r0, .L11+0x18
+	ldr	r0, .L11+0x1c
 	ldrh	r1, [r4]
 	ldrh	r2, [r4, #0x2]
 	bl	ListMenuInit
 	ldr	r1, [r6]
-	mov	r2, #0x89
-	lsl	r2, r2, #0x1
+	ldr	r2, .L11+0x20
 	add	r1, r1, r2
 	strb	r0, [r1]
 	mov	r0, #0x0
 	mov	r1, #0x0
 	mov	r2, #0x2
 	bl	FillPalette
-	ldr	r0, .L11+0x1c
+	ldr	r0, .L11+0x24
 	bl	SetMainCallback2
 	pop	{r4, r5, r6}
 	pop	{r0}
@@ -697,12 +697,14 @@ CB2_InitLearnMove:
 	.align	2, 0
 .L11:
 	.word	sMoveRelearnerStruct
+	.word	0xa14
 	.word	gSpecialVar_0x8004
 	.word	VBlankCB_MoveRelearner
 	.word	sMoveRelearnerMenuSate
 	.word	sMoveRelearnerSpriteSheet
 	.word	sMoveRelearnerPalette
 	.word	gMultiuseListMenuTemplate
+	.word	0xa0e
 	.word	CB2_MoveRelearnerMain
 .Lfe4:
 	.size	 CB2_InitLearnMove,.Lfe4-CB2_InitLearnMove
@@ -716,48 +718,49 @@ CB2_InitLearnMoveReturnFromSelectMove:
 	bl	ResetTasks
 	bl	ClearScheduledBgCopiesToVram
 	ldr	r5, .L14
-	mov	r0, #0x8c
-	lsl	r0, r0, #0x1
+	ldr	r0, .L14+0x4
 	bl	AllocZeroed
 	str	r0, [r5]
 	mov	r1, #0x1c
 	strb	r1, [r0]
 	ldr	r0, [r5]
-	ldr	r1, .L14+0x4
-	ldrh	r1, [r1]
-	add	r0, r0, #0x44
-	strb	r1, [r0]
-	ldr	r0, [r5]
 	ldr	r1, .L14+0x8
 	ldrh	r1, [r1]
-	add	r0, r0, #0x45
+	mov	r2, #0x84
+	lsl	r2, r2, #0x2
+	add	r0, r0, r2
 	strb	r1, [r0]
-	ldr	r0, .L14+0xc
+	ldr	r0, [r5]
+	ldr	r1, .L14+0xc
+	ldrh	r1, [r1]
+	add	r2, r2, #0x1
+	add	r0, r0, r2
+	strb	r1, [r0]
+	ldr	r0, .L14+0x10
 	bl	SetVBlankCallback
 	bl	InitMoveRelearnerBackgroundLayers
-	ldr	r4, .L14+0x10
+	ldr	r4, .L14+0x14
 	ldrb	r0, [r4, #0x4]
 	bl	InitMoveRelearnerWindows
 	bl	CreateLearnableMovesList
-	ldr	r0, .L14+0x14
-	bl	LoadSpriteSheet
 	ldr	r0, .L14+0x18
+	bl	LoadSpriteSheet
+	ldr	r0, .L14+0x1c
 	bl	LoadSpritePalette
 	bl	CreateUISprites
-	ldr	r0, .L14+0x1c
+	ldr	r0, .L14+0x20
 	ldrh	r1, [r4]
 	ldrh	r2, [r4, #0x2]
 	bl	ListMenuInit
 	ldr	r1, [r5]
-	mov	r2, #0x89
-	lsl	r2, r2, #0x1
+	ldr	r2, .L14+0x24
 	add	r1, r1, r2
 	strb	r0, [r1]
 	mov	r0, #0x0
 	mov	r1, #0x0
 	mov	r2, #0x2
 	bl	FillPalette
-	ldr	r0, .L14+0x20
+	ldr	r0, .L14+0x28
 	bl	SetMainCallback2
 	pop	{r4, r5}
 	pop	{r0}
@@ -766,6 +769,7 @@ CB2_InitLearnMoveReturnFromSelectMove:
 	.align	2, 0
 .L14:
 	.word	sMoveRelearnerStruct
+	.word	0xa14
 	.word	gSpecialVar_0x8004
 	.word	gSpecialVar_0x8005
 	.word	VBlankCB_MoveRelearner
@@ -773,6 +777,7 @@ CB2_InitLearnMoveReturnFromSelectMove:
 	.word	sMoveRelearnerSpriteSheet
 	.word	sMoveRelearnerPalette
 	.word	gMultiuseListMenuTemplate
+	.word	0xa0e
 	.word	CB2_MoveRelearnerMain
 .Lfe5:
 	.size	 CB2_InitLearnMoveReturnFromSelectMove,.Lfe5-CB2_InitLearnMoveReturnFromSelectMove
@@ -848,17 +853,18 @@ FormatAndPrintText:
 	.thumb_func
 DoMoveRelearnerMain:
 	push	{r4, r5, r6, r7, lr}
-	mov	r7, r8
-	push	{r7}
+	mov	r7, r9
+	mov	r6, r8
+	push	{r6, r7}
 	add	sp, sp, #-0x4
 	ldr	r1, .L111
 	ldr	r0, [r1]
 	ldrb	r0, [r0]
 	add	r7, r1, #0
 	cmp	r0, #0x21
-	bls	.LCB330
+	bls	.LCB338
 	b	.L24	@long jump
-.LCB330:
+.LCB338:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L111+0x4
 	add	r0, r0, r1
@@ -925,9 +931,9 @@ DoMoveRelearnerMain:
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.LCB373
+	beq	.LCB381
 	b	.L24	@long jump
-.LCB373:
+.LCB381:
 	ldr	r1, [r7]
 	mov	r0, #0x4
 	b	.L108
@@ -971,9 +977,9 @@ DoMoveRelearnerMain:
 	bl	MoveRelearnerRunTextPrinters
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	beq	.LCB432
+	beq	.LCB440
 	b	.L24	@long jump
-.LCB432:
+.LCB440:
 	bl	MoveRelearnerCreateYesNoMenu
 	ldr	r0, .L117
 	ldr	r1, [r0]
@@ -992,7 +998,9 @@ DoMoveRelearnerMain:
 	bne	.L36	@cond_branch
 	ldr	r5, .L119
 	ldr	r0, [r5]
-	add	r0, r0, #0x44
+	mov	r1, #0x84
+	lsl	r1, r1, #0x2
+	add	r0, r0, r1
 	ldrb	r1, [r0]
 	mov	r0, #0x64
 	mov	r4, r1
@@ -1035,9 +1043,9 @@ DoMoveRelearnerMain:
 	cmp	r1, r0
 	beq	.L41	@cond_branch
 	cmp	r1, #0x1
-	beq	.LCB516
+	beq	.LCB527
 	b	.L24	@long jump
-.LCB516:
+.LCB527:
 .L41:
 	ldr	r0, .L121
 	ldrb	r0, [r0, #0x4]
@@ -1054,9 +1062,9 @@ DoMoveRelearnerMain:
 	.word	sMoveRelearnerStruct
 .L42:
 	cmp	r0, #0x1
-	beq	.LCB540
+	beq	.LCB551
 	b	.L24	@long jump
-.LCB540:
+.LCB551:
 	ldr	r0, .L123
 	ldr	r1, [r0]
 	mov	r0, #0x5
@@ -1069,9 +1077,9 @@ DoMoveRelearnerMain:
 	bl	MoveRelearnerRunTextPrinters
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	beq	.LCB560
+	beq	.LCB571
 	b	.L24	@long jump
-.LCB560:
+.LCB571:
 	bl	MoveRelearnerCreateYesNoMenu
 	ldr	r0, .L125
 	ldr	r1, [r0]
@@ -1101,9 +1109,9 @@ DoMoveRelearnerMain:
 	cmp	r1, r0
 	beq	.L51	@cond_branch
 	cmp	r1, #0x1
-	beq	.LCB604
+	beq	.LCB615
 	b	.L24	@long jump
-.LCB604:
+.LCB615:
 .L51:
 	ldr	r0, .L129
 	ldrb	r0, [r0, #0x4]
@@ -1120,9 +1128,9 @@ DoMoveRelearnerMain:
 	.word	sMoveRelearnerStruct
 .L52:
 	cmp	r0, #0x1
-	beq	.LCB628
+	beq	.LCB639
 	b	.L24	@long jump
-.LCB628:
+.LCB639:
 	ldr	r0, .L131
 	ldr	r1, [r0]
 	mov	r0, #0x5
@@ -1148,9 +1156,9 @@ DoMoveRelearnerMain:
 	bl	MoveRelearnerRunTextPrinters
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	beq	.LCB665
+	beq	.LCB676
 	b	.L24	@long jump
-.LCB665:
+.LCB676:
 	bl	MoveRelearnerCreateYesNoMenu
 	ldr	r0, .L135
 	ldr	r1, [r0]
@@ -1183,9 +1191,9 @@ DoMoveRelearnerMain:
 	cmp	r1, r0
 	beq	.L62	@cond_branch
 	cmp	r1, #0x1
-	beq	.LCB713
+	beq	.LCB724
 	b	.L24	@long jump
-.LCB713:
+.LCB724:
 .L62:
 	ldr	r0, .L139
 	ldr	r1, [r0]
@@ -1222,9 +1230,9 @@ DoMoveRelearnerMain:
 	bl	MoveRelearnerRunTextPrinters
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	beq	.LCB763
+	beq	.LCB774
 	b	.L24	@long jump
-.LCB763:
+.LCB774:
 	bl	MoveRelearnerCreateYesNoMenu
 	ldr	r0, .L143
 	ldr	r1, [r0]
@@ -1255,9 +1263,9 @@ DoMoveRelearnerMain:
 	cmp	r1, r0
 	beq	.L70	@cond_branch
 	cmp	r1, #0x1
-	beq	.LCB808
+	beq	.LCB819
 	b	.L24	@long jump
-.LCB808:
+.LCB819:
 .L70:
 	ldr	r0, .L147
 	ldrb	r0, [r0, #0x4]
@@ -1293,9 +1301,9 @@ DoMoveRelearnerMain:
 	bl	MoveRelearnerRunTextPrinters
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	beq	.LCB861
+	beq	.LCB872
 	b	.L24	@long jump
-.LCB861:
+.LCB872:
 	mov	r0, #0x3
 	mov	r1, #0x11
 	bl	FillWindowPixelBuffer
@@ -1314,9 +1322,9 @@ DoMoveRelearnerMain:
 	.word	sMoveRelearnerStruct
 .L76:
 	cmp	r0, #0x1
-	beq	.LCB887
+	beq	.LCB898
 	b	.L24	@long jump
-.LCB887:
+.LCB898:
 	ldr	r0, .L153
 	ldr	r1, [r0]
 	mov	r0, #0x5
@@ -1330,9 +1338,9 @@ DoMoveRelearnerMain:
 	lsl	r0, r0, #0x10
 	lsr	r2, r0, #0x10
 	cmp	r2, #0
-	beq	.LCB906
+	beq	.LCB917
 	b	.L24	@long jump
-.LCB906:
+.LCB917:
 	ldr	r0, .L155
 	ldr	r1, [r0]
 	mov	r0, #0x14
@@ -1354,16 +1362,18 @@ DoMoveRelearnerMain:
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.LCB935
+	beq	.LCB946
 	b	.L24	@long jump
-.LCB935:
+.LCB946:
 	bl	GetCurrentSelectedMove
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	ldr	r4, .L157+0x4
 	ldr	r1, .L157+0x8
 	ldr	r1, [r1]
-	add	r1, r1, #0x44
+	mov	r2, #0x84
+	lsl	r2, r2, #0x2
+	add	r1, r1, r2
 	ldrb	r1, [r1]
 	ldr	r2, .L157+0xc
 	ldrb	r2, [r2]
@@ -1388,9 +1398,9 @@ DoMoveRelearnerMain:
 	bl	MoveRelearnerRunTextPrinters
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	beq	.LCB977
+	beq	.LCB991
 	b	.L24	@long jump
-.LCB977:
+.LCB991:
 	b	.L110
 .L85:
 	mov	r0, #0x1
@@ -1425,9 +1435,9 @@ DoMoveRelearnerMain:
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.LCB1024
+	beq	.LCB1038
 	b	.L24	@long jump
-.LCB1024:
+.LCB1038:
 	bl	FreeMoveRelearnerResources
 	ldr	r0, .L161+0x4
 	bl	SetMainCallback2
@@ -1479,12 +1489,12 @@ DoMoveRelearnerMain:
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.LCB1094
+	beq	.LCB1108
 	b	.L24	@long jump
-.LCB1094:
+.LCB1108:
 	ldr	r1, [r7]
-	add	r2, r1, #0
-	add	r2, r2, #0x45
+	ldr	r0, .L165+0x4
+	add	r2, r1, r0
 	ldrb	r0, [r2]
 	cmp	r0, #0x4
 	bne	.L95	@cond_branch
@@ -1494,9 +1504,11 @@ DoMoveRelearnerMain:
 	.align	2, 0
 .L165:
 	.word	gPaletteFade
+	.word	0x211
 .L95:
-	add	r0, r1, #0
-	add	r0, r0, #0x44
+	mov	r6, #0x84
+	lsl	r6, r6, #0x2
+	add	r0, r1, r6
 	ldrb	r0, [r0]
 	mov	r4, #0x64
 	mul	r0, r0, r4
@@ -1509,24 +1521,25 @@ DoMoveRelearnerMain:
 	lsr	r0, r0, #0x10
 	ldr	r2, .L167+0x4
 	mov	r1, #0xd
-	mov	r8, r1
-	mov	r1, r8
+	mov	r9, r1
+	mov	r1, r9
 	mul	r1, r1, r0
-	ldr	r6, .L167+0x8
-	add	r1, r1, r6
+	ldr	r0, .L167+0x8
+	mov	r8, r0
+	add	r1, r1, r8
 	add	r0, r2, #0
 	bl	StringCopy
 	ldr	r1, [r7]
-	add	r0, r1, #0
-	add	r0, r0, #0x44
+	add	r0, r1, r6
 	ldrb	r0, [r0]
 	mul	r0, r0, r4
 	add	r0, r0, r5
-	add	r1, r1, #0x45
+	ldr	r2, .L167+0xc
+	add	r1, r1, r2
 	ldrb	r1, [r1]
 	bl	RemoveMonPPBonus
 	ldr	r0, [r7]
-	add	r0, r0, #0x44
+	add	r0, r0, r6
 	ldrb	r0, [r0]
 	mul	r4, r4, r0
 	add	r4, r4, r5
@@ -1535,23 +1548,24 @@ DoMoveRelearnerMain:
 	lsl	r1, r1, #0x10
 	lsr	r1, r1, #0x10
 	ldr	r0, [r7]
-	add	r0, r0, #0x45
+	ldr	r2, .L167+0xc
+	add	r0, r0, r2
 	ldrb	r2, [r0]
 	add	r0, r4, #0
 	bl	SetMonMoveSlot
-	ldr	r4, .L167+0xc
+	ldr	r4, .L167+0x10
 	bl	GetCurrentSelectedMove
-	mov	r1, r8
+	mov	r1, r9
 	mul	r1, r1, r0
-	add	r1, r1, r6
+	add	r1, r1, r8
 	add	r0, r4, #0
 	bl	StringCopy
-	ldr	r0, .L167+0x10
+	ldr	r0, .L167+0x14
 	bl	FormatAndPrintText
 	ldr	r1, [r7]
 	mov	r0, #0x1e
 	strb	r0, [r1]
-	ldr	r1, .L167+0x14
+	ldr	r1, .L167+0x18
 	mov	r0, #0x1
 	strh	r0, [r1]
 	b	.L24
@@ -1561,6 +1575,7 @@ DoMoveRelearnerMain:
 	.word	gPlayerParty
 	.word	gStringVar3
 	.word	gMoveNames
+	.word	0x211
 	.word	gStringVar2
 	.word	gText_MoveRelearnerAndPoof
 	.word	gSpecialVar_0x8004
@@ -1630,8 +1645,9 @@ DoMoveRelearnerMain:
 	strb	r0, [r1]
 .L24:
 	add	sp, sp, #0x4
-	pop	{r3}
+	pop	{r3, r4}
 	mov	r8, r3
+	mov	r9, r4
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
@@ -1650,11 +1666,10 @@ FreeMoveRelearnerResources:
 	bl	RemoveScrollArrows
 	ldr	r4, .L178
 	ldr	r0, [r4]
-	mov	r1, #0x89
-	lsl	r1, r1, #0x1
+	ldr	r1, .L178+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
-	ldr	r1, .L178+0x4
+	ldr	r1, .L178+0x8
 	add	r2, r1, #0x2
 	bl	DestroyListMenuTask
 	bl	FreeAllWindowBuffers
@@ -1671,6 +1686,7 @@ FreeMoveRelearnerResources:
 	.align	2, 0
 .L178:
 	.word	sMoveRelearnerStruct
+	.word	0xa0e
 	.word	sMoveRelearnerMenuSate
 .Lfe10:
 	.size	 FreeMoveRelearnerResources,.Lfe10-FreeMoveRelearnerResources
@@ -1743,8 +1759,7 @@ HandleInput:
 	lsr	r7, r0, #0x18
 	ldr	r6, .L198
 	ldr	r0, [r6]
-	mov	r4, #0x89
-	lsl	r4, r4, #0x1
+	ldr	r4, .L198+0x4
 	add	r0, r0, r4
 	ldrb	r0, [r0]
 	bl	ListMenu_ProcessInput
@@ -1752,7 +1767,7 @@ HandleInput:
 	ldr	r0, [r6]
 	add	r0, r0, r4
 	ldrb	r0, [r0]
-	ldr	r4, .L198+0x4
+	ldr	r4, .L198+0x8
 	add	r2, r4, #0x2
 	add	r1, r4, #0
 	bl	ListMenuGetScrollAndRow
@@ -1763,7 +1778,7 @@ HandleInput:
 	add	r0, r0, #0x1
 	cmp	r5, r0
 	bne	.L196	@cond_branch
-	ldr	r0, .L198+0x8
+	ldr	r0, .L198+0xc
 	ldrh	r1, [r0, #0x2e]
 	mov	r0, #0x30
 	and	r0, r0, r1
@@ -1790,6 +1805,7 @@ HandleInput:
 	.align	2, 0
 .L198:
 	.word	sMoveRelearnerStruct
+	.word	0xa0e
 	.word	sMoveRelearnerMenuSate
 	.word	gMain
 .L193:
@@ -1868,7 +1884,9 @@ GetCurrentSelectedMove:
 	ldrh	r1, [r1]
 	add	r0, r0, r1
 	lsl	r0, r0, #0x3
-	add	r2, r2, #0x4c
+	mov	r1, #0x86
+	lsl	r1, r1, #0x2
+	add	r2, r2, r1
 	add	r2, r2, r0
 	ldr	r0, [r2]
 	bx	lr
@@ -1924,17 +1942,17 @@ CreateUISprites:
 	push	{r4, r5, r6, r7, lr}
 	ldr	r2, .L231
 	ldr	r0, [r2]
-	mov	r1, #0x8a
-	lsl	r1, r1, #0x1
+	mov	r1, #0xa1
+	lsl	r1, r1, #0x4
 	add	r0, r0, r1
 	mov	r1, #0xff
 	strb	r1, [r0]
 	ldr	r0, [r2]
-	ldr	r2, .L231+0x4
-	add	r1, r0, r2
-	mov	r0, #0x1
-	neg	r0, r0
-	strb	r0, [r1]
+	ldr	r1, .L231+0x4
+	add	r0, r0, r1
+	mov	r1, #0x1
+	neg	r1, r1
+	strb	r1, [r0]
 	bl	AddScrollArrows
 	mov	r4, #0x0
 	ldr	r5, .L231+0x8
@@ -2039,7 +2057,7 @@ CreateUISprites:
 	.align	2, 0
 .L231:
 	.word	sMoveRelearnerStruct
-	.word	0x113
+	.word	0xa0f
 	.word	sConstestMoveHeartSprite
 	.word	gSprites
 .Lfe15:
@@ -2051,50 +2069,48 @@ AddScrollArrows:
 	push	{r4, r5, r6, lr}
 	ldr	r4, .L236
 	ldr	r1, [r4]
-	mov	r2, #0x8a
-	lsl	r2, r2, #0x1
+	mov	r2, #0xa1
+	lsl	r2, r2, #0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0xff
 	bne	.L234	@cond_branch
 	ldr	r0, .L236+0x4
-	mov	r3, #0x8b
-	lsl	r3, r3, #0x1
+	ldr	r3, .L236+0x8
 	add	r1, r1, r3
 	bl	AddScrollIndicatorArrowPair
 	ldr	r1, [r4]
-	mov	r5, #0x8a
-	lsl	r5, r5, #0x1
+	mov	r5, #0xa1
+	lsl	r5, r5, #0x4
 	add	r1, r1, r5
 	strb	r0, [r1]
 .L234:
 	ldr	r0, [r4]
-	ldr	r6, .L236+0x8
+	ldr	r6, .L236+0xc
 	add	r0, r0, r6
 	ldrb	r0, [r0]
 	cmp	r0, #0xff
 	bne	.L235	@cond_branch
-	ldr	r0, .L236+0xc
+	ldr	r0, .L236+0x10
 	add	r2, r0, #0
-	ldr	r1, .L236+0x10
+	ldr	r1, .L236+0x14
 	ldmia	r1!, {r3, r5, r6}
 	stmia	r2!, {r3, r5, r6}
 	ldr	r1, [r1]
 	str	r1, [r2]
-	ldr	r2, [r4]
-	mov	r3, #0x88
-	lsl	r3, r3, #0x1
-	add	r1, r2, r3
-	ldrb	r1, [r1]
-	ldr	r5, .L236+0x14
-	add	r2, r2, r5
+	ldr	r1, [r4]
+	ldr	r3, .L236+0x18
+	add	r2, r1, r3
 	ldrb	r2, [r2]
-	sub	r1, r1, r2
-	strh	r1, [r0, #0x8]
-	ldr	r1, .L236+0x18
+	ldr	r5, .L236+0x1c
+	add	r1, r1, r5
+	ldrb	r1, [r1]
+	sub	r2, r2, r1
+	strh	r2, [r0, #0x8]
+	ldr	r1, .L236+0x20
 	bl	AddScrollIndicatorArrowPair
 	ldr	r1, [r4]
-	ldr	r6, .L236+0x8
+	ldr	r6, .L236+0xc
 	add	r1, r1, r6
 	strb	r0, [r1]
 .L235:
@@ -2106,10 +2122,12 @@ AddScrollArrows:
 .L236:
 	.word	sMoveRelearnerStruct
 	.word	sDisplayModeArrowsTemplate
-	.word	0x113
+	.word	0xa12
+	.word	0xa0f
 	.word	gTempScrollArrowTemplate
 	.word	sMoveListScrollArrowsTemplate
-	.word	0x111
+	.word	0xa0c
+	.word	0xa0d
 	.word	sMoveRelearnerMenuSate
 .Lfe16:
 	.size	 AddScrollArrows,.Lfe16-AddScrollArrows
@@ -2120,16 +2138,16 @@ RemoveScrollArrows:
 	push	{r4, lr}
 	ldr	r4, .L241
 	ldr	r0, [r4]
-	mov	r2, #0x8a
-	lsl	r2, r2, #0x1
+	mov	r2, #0xa1
+	lsl	r2, r2, #0x4
 	add	r1, r0, r2
 	ldrb	r0, [r1]
 	cmp	r0, #0xff
 	beq	.L239	@cond_branch
 	bl	RemoveScrollIndicatorArrowPair
 	ldr	r0, [r4]
-	mov	r1, #0x8a
-	lsl	r1, r1, #0x1
+	mov	r1, #0xa1
+	lsl	r1, r1, #0x4
 	add	r0, r0, r1
 	mov	r1, #0xff
 	strb	r1, [r0]
@@ -2142,10 +2160,10 @@ RemoveScrollArrows:
 	beq	.L240	@cond_branch
 	bl	RemoveScrollIndicatorArrowPair
 	ldr	r0, [r4]
-	ldr	r2, .L241+0x4
-	add	r1, r0, r2
-	mov	r0, #0xff
-	strb	r0, [r1]
+	ldr	r1, .L241+0x4
+	add	r0, r0, r1
+	mov	r1, #0xff
+	strb	r1, [r0]
 .L240:
 	pop	{r4}
 	pop	{r0}
@@ -2154,7 +2172,7 @@ RemoveScrollArrows:
 	.align	2, 0
 .L241:
 	.word	sMoveRelearnerStruct
-	.word	0x113
+	.word	0xa0f
 .Lfe17:
 	.size	 RemoveScrollArrows,.Lfe17-RemoveScrollArrows
 	.align	2, 0
@@ -2168,8 +2186,9 @@ CreateLearnableMovesList:
 	add	sp, sp, #-0xc
 	ldr	r4, .L249
 	ldr	r1, [r4]
-	add	r0, r1, #0
-	add	r0, r0, #0x44
+	mov	r2, #0x84
+	lsl	r2, r2, #0x2
+	add	r0, r1, r2
 	ldrb	r2, [r0]
 	mov	r0, #0x64
 	mul	r0, r0, r2
@@ -2178,52 +2197,54 @@ CreateLearnableMovesList:
 	add	r1, r1, #0x12
 	bl	GetMoveRelearnerMoves
 	ldr	r1, [r4]
-	mov	r6, #0x88
-	lsl	r6, r6, #0x1
-	add	r1, r1, r6
+	ldr	r7, .L249+0x8
+	add	r1, r1, r7
 	strb	r0, [r1]
-	mov	r5, #0x0
+	mov	r6, #0x0
 	ldr	r0, [r4]
-	add	r0, r0, r6
+	add	r0, r0, r7
 	ldrb	r0, [r0]
-	cmp	r5, r0
+	cmp	r6, r0
 	bge	.L245	@cond_branch
-	mov	r8, r4
-	mov	r0, #0xd
-	mov	ip, r0
-	ldr	r2, .L249+0x8
-	mov	r9, r2
+	mov	r9, r4
+	ldr	r0, .L249+0xc
+	mov	r8, r0
+	mov	r1, #0x85
+	lsl	r1, r1, #0x2
+	mov	ip, r1
 .L247:
-	mov	r7, r8
-	ldr	r4, [r7]
-	lsl	r3, r5, #0x3
+	mov	r2, r9
+	ldr	r4, [r2]
+	lsl	r5, r6, #0x3
+	mov	r0, ip
+	add	r3, r4, r0
+	add	r3, r3, r5
+	lsl	r0, r6, #0x1
 	add	r2, r4, #0
-	add	r2, r2, #0x48
-	add	r2, r2, r3
-	lsl	r0, r5, #0x1
-	add	r1, r4, #0
-	add	r1, r1, #0x12
-	add	r1, r1, r0
-	ldrh	r0, [r1]
-	mov	r7, ip
-	mul	r7, r7, r0
-	add	r0, r7, #0
-	add	r0, r0, r9
-	str	r0, [r2]
-	add	r0, r4, #0
-	add	r0, r0, #0x4c
-	add	r0, r0, r3
-	ldrh	r1, [r1]
+	add	r2, r2, #0x12
+	add	r2, r2, r0
+	ldrh	r1, [r2]
+	mov	r0, #0xd
+	mul	r0, r0, r1
+	add	r0, r0, r8
+	str	r0, [r3]
+	mov	r1, #0x86
+	lsl	r1, r1, #0x2
+	add	r0, r4, r1
+	add	r0, r0, r5
+	ldrh	r1, [r2]
 	str	r1, [r0]
-	add	r5, r5, #0x1
-	add	r0, r4, r6
-	ldrb	r0, [r0]
-	cmp	r5, r0
+	add	r6, r6, #0x1
+	add	r4, r4, r7
+	ldrb	r4, [r4]
+	cmp	r6, r4
 	blt	.L247	@cond_branch
 .L245:
-	ldr	r4, .L249
-	ldr	r0, [r4]
-	add	r0, r0, #0x44
+	ldr	r5, .L249
+	ldr	r0, [r5]
+	mov	r2, #0x84
+	lsl	r2, r2, #0x2
+	add	r0, r0, r2
 	ldrb	r1, [r0]
 	mov	r0, #0x64
 	mul	r0, r0, r1
@@ -2232,38 +2253,39 @@ CreateLearnableMovesList:
 	mov	r1, #0x2
 	mov	r2, sp
 	bl	GetMonData
-	ldr	r0, .L249+0xc
+	ldr	r0, .L249+0x10
 	mov	r1, sp
 	bl	StringCopy10
-	ldr	r2, [r4]
-	mov	r5, #0x88
-	lsl	r5, r5, #0x1
-	add	r3, r2, r5
-	ldrb	r0, [r3]
-	lsl	r0, r0, #0x3
-	add	r1, r2, #0
-	add	r1, r1, #0x48
-	add	r1, r1, r0
-	ldr	r0, .L249+0x10
-	str	r0, [r1]
-	ldrb	r0, [r3]
-	lsl	r0, r0, #0x3
-	add	r2, r2, #0x4c
-	add	r2, r2, r0
-	mov	r0, #0x2
-	neg	r0, r0
-	str	r0, [r2]
-	ldrb	r0, [r3]
-	add	r0, r0, #0x1
-	strb	r0, [r3]
-	ldr	r1, [r4]
-	add	r0, r1, #0
-	add	r0, r0, #0x48
-	add	r1, r1, r5
+	ldr	r3, [r5]
+	ldr	r6, .L249+0x8
+	add	r4, r3, r6
+	ldrb	r2, [r4]
+	lsl	r2, r2, #0x3
+	mov	r0, #0x85
+	lsl	r0, r0, #0x2
+	add	r1, r3, r0
+	add	r1, r1, r2
+	ldr	r2, .L249+0x14
+	str	r2, [r1]
+	ldrb	r1, [r4]
+	lsl	r1, r1, #0x3
+	mov	r2, #0x86
+	lsl	r2, r2, #0x2
+	add	r3, r3, r2
+	add	r3, r3, r1
+	mov	r1, #0x2
+	neg	r1, r1
+	str	r1, [r3]
+	ldrb	r1, [r4]
+	add	r1, r1, #0x1
+	strb	r1, [r4]
+	ldr	r1, [r5]
+	add	r0, r1, r0
+	add	r1, r1, r6
 	ldrb	r1, [r1]
 	bl	LoadMoveRelearnerMovesList
-	ldr	r1, [r4]
-	ldr	r2, .L249+0x14
+	ldr	r1, [r5]
+	ldr	r2, .L249+0x18
 	add	r1, r1, r2
 	strb	r0, [r1]
 	add	sp, sp, #0xc
@@ -2278,10 +2300,11 @@ CreateLearnableMovesList:
 .L249:
 	.word	sMoveRelearnerStruct
 	.word	gPlayerParty
+	.word	0xa0c
 	.word	gMoveNames
 	.word	gStringVar1
 	.word	gText_Cancel
-	.word	0x111
+	.word	0xa0d
 .Lfe18:
 	.size	 CreateLearnableMovesList,.Lfe18-CreateLearnableMovesList
 	.align	2, 0

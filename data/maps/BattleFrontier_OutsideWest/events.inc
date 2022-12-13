@@ -38,9 +38,9 @@ BattleFrontier_OutsideWest_MapWarps:
 	warp_def 53, 44, 0, 0, MAP_BATTLE_FRONTIER_LOUNGE4
 	warp_def 5, 20, 0, 0, MAP_BATTLE_FRONTIER_LOUNGE7
 	warp_def 26, 65, 0, 0, MAP_BATTLE_FRONTIER_RECEPTION_GATE
-	warp_def 26, 61, 0, 1, MAP_BATTLE_FRONTIER_RECEPTION_GATE
+	warp_def 26, 61, 0, 0, MAP_BATTLE_FRONTIER_RECEPTION_GATE
 	warp_def 50, 61, 0, 0, MAP_ARTISAN_CAVE_B1F
-	warp_def 0, 0, 0, 0, MAP_BATTLE_FRONTIER_OUTSIDE_WEST
+	warp_def 50, 50, 0, 0, MAP_BATTLE_FRONTIER_MART
 
 BattleFrontier_OutsideWest_MapBGEvents:
 	bg_event 15, 18, 0, BG_EVENT_PLAYER_FACING_ANY, BattleFrontier_OutsideWest_EventScript_BattleDomeSign

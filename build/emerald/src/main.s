@@ -822,31 +822,18 @@ IntrDummy:
 	.type	 WaitForVBlank,function
 	.thumb_func
 WaitForVBlank:
-	push	{lr}
-	ldr	r2, .L113
-	ldrh	r1, [r2, #0x1c]
-	ldr	r0, .L113+0x4
-	and	r0, r0, r1
-	ldrh	r1, [r2, #0x1c]
-	strh	r0, [r2, #0x1c]
-	ldrh	r1, [r2, #0x1c]
-	mov	r0, #0x1
-	and	r0, r0, r1
-	cmp	r0, #0
-	bne	.L110	@cond_branch
-	mov	r3, #0x1
-.L109:
-	ldrh	r1, [r2, #0x1c]
-	add	r0, r3, #0
-	and	r0, r0, r1
-	cmp	r0, #0
-	beq	.L109	@cond_branch
+	ldr	r1, .L109
+	ldrh	r2, [r1, #0x1c]
+	ldr	r0, .L109+0x4
+	and	r0, r0, r2
+	ldrh	r2, [r1, #0x1c]
+	strh	r0, [r1, #0x1c]
+	swi 0x5
+	.code	16
+	bx	lr
 .L110:
-	pop	{r0}
-	bx	r0
-.L114:
 	.align	2, 0
-.L113:
+.L109:
 	.word	gMain
 	.word	0xfffe
 .Lfe25:
@@ -856,12 +843,12 @@ WaitForVBlank:
 	.type	 SetTrainerHillVBlankCounter,function
 	.thumb_func
 SetTrainerHillVBlankCounter:
-	ldr	r1, .L116
+	ldr	r1, .L112
 	str	r0, [r1]
 	bx	lr
-.L117:
+.L113:
 	.align	2, 0
-.L116:
+.L112:
 	.word	gTrainerHillVBlankCounter
 .Lfe26:
 	.size	 SetTrainerHillVBlankCounter,.Lfe26-SetTrainerHillVBlankCounter
@@ -870,13 +857,13 @@ SetTrainerHillVBlankCounter:
 	.type	 ClearTrainerHillVBlankCounter,function
 	.thumb_func
 ClearTrainerHillVBlankCounter:
-	ldr	r1, .L119
+	ldr	r1, .L115
 	mov	r0, #0x0
 	str	r0, [r1]
 	bx	lr
-.L120:
+.L116:
 	.align	2, 0
-.L119:
+.L115:
 	.word	gTrainerHillVBlankCounter
 .Lfe27:
 	.size	 ClearTrainerHillVBlankCounter,.Lfe27-ClearTrainerHillVBlankCounter
@@ -886,19 +873,19 @@ ClearTrainerHillVBlankCounter:
 	.thumb_func
 DoSoftReset:
 	push	{r4, lr}
-	ldr	r1, .L122
+	ldr	r1, .L118
 	mov	r0, #0x0
 	strh	r0, [r1]
 	bl	m4aSoundVSyncOff
 	bl	ScanlineEffect_Stop
-	ldr	r1, .L122+0x4
+	ldr	r1, .L118+0x4
 	ldrh	r2, [r1, #0xa]
-	ldr	r3, .L122+0x8
+	ldr	r3, .L118+0x8
 	add	r0, r3, #0
 	and	r0, r0, r2
 	strh	r0, [r1, #0xa]
 	ldrh	r4, [r1, #0xa]
-	ldr	r2, .L122+0xc
+	ldr	r2, .L118+0xc
 	add	r0, r2, #0
 	and	r0, r0, r4
 	strh	r0, [r1, #0xa]
@@ -913,7 +900,7 @@ DoSoftReset:
 	and	r0, r0, r4
 	strh	r0, [r1, #0xa]
 	ldrh	r0, [r1, #0xa]
-	ldr	r0, .L122+0x10
+	ldr	r0, .L118+0x10
 	ldrh	r1, [r0, #0xa]
 	and	r3, r3, r1
 	strh	r3, [r0, #0xa]
@@ -927,9 +914,9 @@ DoSoftReset:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L123:
+.L119:
 	.align	2, 0
-.L122:
+.L118:
 	.word	0x4000208
 	.word	0x40000bc
 	.word	0xc5ff
@@ -947,16 +934,16 @@ ClearPokemonCrySongs:
 	mov	r1, sp
 	mov	r0, #0x0
 	strh	r0, [r1]
-	ldr	r1, .L125
-	ldr	r2, .L125+0x4
+	ldr	r1, .L121
+	ldr	r2, .L121+0x4
 	mov	r0, sp
 	bl	CpuSet
 	add	sp, sp, #0x4
 	pop	{r0}
 	bx	r0
-.L126:
+.L122:
 	.align	2, 0
-.L125:
+.L121:
 	.word	gPokemonCrySongs
 	.word	0x1000034
 .Lfe29:

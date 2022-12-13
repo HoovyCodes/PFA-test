@@ -1,6 +1,6 @@
-# 1 "src/battle_ai_switch_items.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/battle_ai_switch_items.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/battle_ai_switch_items.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -3144,6 +3144,13 @@ void ClearIllusionMon(u32 battlerId);
 bool32 SetIllusionMon(struct Pokemon *mon, u32 battlerId);
 bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
 u8 GetBattleMoveSplit(u32 moveId);
+bool32 CanSleep(u8 battlerId);
+bool32 CanBePoisoned(u8 battlerId);
+bool32 CanBeBurned(u8 battlerId);
+bool32 CanBeParalyzed(u8 battlerId);
+bool32 CanBeFrozen(u8 battlerId);
+bool32 CanBeConfused(u8 battlerId);
+bool32 IsBattlerTerrainAffected(u8 battlerId, u32 terrainFlag);
 # 9 "include/battle.h" 2
 # 1 "include/battle_script_commands.h" 1
 # 9 "include/battle_script_commands.h"
@@ -3809,8 +3816,9 @@ struct BattleStruct
     u8 sameMoveTurns[4];
     u16 moveEffect2;
     u16 changedSpecies[6];
+ u8 abilityPopUpSpriteIds[4][2];
 };
-# 579 "include/battle.h"
+# 580 "include/battle.h"
 struct BattleScripting
 {
     s32 painSplitHp;
@@ -3846,6 +3854,7 @@ struct BattleScripting
     u16 moveEffect;
     u16 multihitMoveEffect;
     u8 illusionNickHack;
+    bool8 fixedPopup;
 };
 
 
@@ -3920,6 +3929,7 @@ struct BattleBarInfo
     s32 oldValue;
     s32 receivedValue;
     s32 currValue;
+ u8 oddFrame;
 };
 
 struct BattleSpriteData
@@ -5097,6 +5107,69 @@ void GetAIPartyIndexes(u32 battlerId, s32 *firstId, s32 *lastId)
     }
 }
 
+static bool8 HasBadOdds(void)
+{
+ u8 opposingPosition;
+    u8 opposingBattler;
+ u8 atkType1;
+ u8 atkType2;
+ u8 defType1;
+ u8 defType2;
+ u16 move;
+ s32 i;
+ u32 typeDmg=((u16)((1.0) * 4096));
+
+ opposingPosition = ((GetBattlerPosition(gActiveBattler)) ^ 1);
+    opposingBattler = GetBattlerAtPosition(opposingPosition);
+
+ atkType1 = gBattleMons[opposingBattler].type1;
+ atkType2 = gBattleMons[opposingBattler].type2;
+ defType1 = gBattleMons[gActiveBattler].type1;
+ defType2 = gBattleMons[gActiveBattler].type2;
+
+    if (gBattleTypeFlags & (1 << 0))
+        return 0;
+
+ typeDmg *= ((int)((GetTypeModifier(atkType1, defType1)) / 4096));
+ if (atkType2!=atkType1)
+  typeDmg *=((int)((GetTypeModifier(atkType2, defType1)) / 4096));
+ if (defType2!=defType1)
+ {
+  typeDmg *=((int)((GetTypeModifier(atkType1, defType2)) / 4096));
+  if (atkType2!=atkType1)
+   typeDmg *=((int)((GetTypeModifier(atkType2, defType2)) / 4096));
+ }
+ if (typeDmg>=((u16)((2.0) * 4096)))
+ {
+  if (GetMostSuitableMonToSwitchInto()==6)
+   return 0;
+  if ((!HasSuperEffectiveMoveAgainstOpponents(0))
+   && (gBattleMons[gActiveBattler].hp >= gBattleMons[gActiveBattler].maxHP/2))
+  {
+   for (i = 0; i < 4; i++)
+   {
+    move = gBattleMons[gActiveBattler].moves[i];
+    if ((move == 115 || move == 113
+    || move == 191 || move == 390 || move == 446 || move == 564 || move == 73
+    || move == 153 || move == 120
+    || move == 79 || move == 281 || move == 142 || move == 320 || move == 95
+    || move == 92 || move == 624
+    || move == 261
+    || move == 271 || move == 433 || move== 472 || move == 375 || move == 252
+    || move == 78 || move == 86 || move == 609 || move == 137
+    ) && Random()%5<4)
+    {
+     return 0;
+    }
+   }
+   *(gBattleStruct->AI_monToSwitchIntoId + gActiveBattler) = 6;
+   BtlController_EmitTwoReturnValues(1, 2, 0);
+   return 1;
+  }
+ }
+ return 0;
+}
+
 static bool8 ShouldSwitchIfAllBadMoves(void)
 {
     if (gBattleResources->ai->switchMon)
@@ -5549,6 +5622,8 @@ static bool8 ShouldSwitch(void)
         return 1;
     if (ShouldSwitchIfNaturalCure())
         return 1;
+ if (HasBadOdds())
+  return 1;
     if (HasSuperEffectiveMoveAgainstOpponents(0))
         return 0;
     if (AreStatsRaised())
@@ -5819,9 +5894,6 @@ u8 GetMostSuitableMonToSwitchInto(void)
     if (bestMonId != 6)
         return bestMonId;
 
-    bestMonId = GetBestMonDmg(party, firstId, lastId, invalidMons, opposingBattler);
-    if (bestMonId != 6)
-        return bestMonId;
 
     return 6;
 }

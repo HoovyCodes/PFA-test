@@ -1,6 +1,6 @@
-# 1 "src/new_game.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/new_game.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/new_game.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -4159,6 +4159,8 @@ u8 ItemId_GetBattleUsage(u16 itemId);
 ItemUseFunc ItemId_GetBattleFunc(u16 itemId);
 u8 ItemId_GetSecondaryId(u16 itemId);
 # 29 "src/new_game.c" 2
+# 1 "include/constants/items.h" 1
+# 30 "src/new_game.c" 2
 # 1 "include/pokedex.h" 1
 
 
@@ -4204,7 +4206,7 @@ bool16 HasAllHoennMons(void);
 void ResetPokedexScrollPositions(void);
 bool16 HasAllMons(void);
 void CB2_OpenPokedex(void);
-# 30 "src/new_game.c" 2
+# 31 "src/new_game.c" 2
 # 1 "include/apprentice.h" 1
 
 
@@ -4230,7 +4232,7 @@ void ResetApprenticeStruct(struct Apprentice *apprentice);
 void ResetAllApprenticeData(void);
 void CallApprenticeFunction(void);
 const u8 *GetApprenticeNameInLanguage(u32 apprenticeId, s32 language);
-# 31 "src/new_game.c" 2
+# 32 "src/new_game.c" 2
 # 1 "include/frontier_util.h" 1
 
 
@@ -4260,14 +4262,14 @@ u8 GetFrontierBrainMonEvs(u8 monId, u8 evStatId);
 s32 GetFronterBrainSymbol(void);
 
 extern const u16 gFrontierBannedSpecies[];
-# 32 "src/new_game.c" 2
+# 33 "src/new_game.c" 2
 # 1 "include/constants/maps.h" 1
 
 
 
 # 1 "include/constants/map_groups.h" 1
 # 5 "include/constants/maps.h" 2
-# 33 "src/new_game.c" 2
+# 34 "src/new_game.c" 2
 
 # 1 "include/save.h" 1
 
@@ -4352,7 +4354,7 @@ void Task_LinkSave(u8 taskId);
 
 
 void DoSaveFailedScreen(u8 saveType);
-# 35 "src/new_game.c" 2
+# 36 "src/new_game.c" 2
 # 1 "include/link_rfu.h" 1
 
 
@@ -5301,9 +5303,9 @@ void InitHostRFUtgtGname(struct GFtgtGname *data, u8 activity, bool32 started, s
 void CreateWirelessStatusIndicatorSprite(u8 x, u8 y);
 void DestroyWirelessStatusIndicatorSprite(void);
 void LoadWirelessStatusIndicatorSpriteGfx(void);
-# 36 "src/new_game.c" 2
-# 1 "include/main.h" 1
 # 37 "src/new_game.c" 2
+# 1 "include/main.h" 1
+# 38 "src/new_game.c" 2
 # 1 "include/contest.h" 1
 
 
@@ -5715,7 +5717,7 @@ bool8 sub_80DEDA8(u8 a);
 u8 sub_80DEFA8(u8 a, u8 b);
 void ClearContestWinnerPicsInContestHall(void);
 void StripPlayerAndMonNamesForLinkContest(struct ContestPokemon *mon, s32 language);
-# 38 "src/new_game.c" 2
+# 39 "src/new_game.c" 2
 # 1 "include/item_menu.h" 1
 
 
@@ -5927,7 +5929,7 @@ void BagMenu_InitListsMenu(u8 taskId);
 void UpdatePocketItemList(u8 pocketId);
 void DisplayItemMessage(u8 taskId, u8 fontId, const u8 *str, void ( *callback)(u8 taskId));
 void DisplayItemMessageOnField(u8 taskId, const u8 *src, TaskFunc callback);
-# 39 "src/new_game.c" 2
+# 40 "src/new_game.c" 2
 # 1 "include/pokemon_storage_system.h" 1
 # 18 "include/pokemon_storage_system.h"
 struct PokemonStorage
@@ -5986,7 +5988,7 @@ void SetWaldaWallpaperColors(u16 color1, u16 color2);
 u8 *GetWaldaPhrasePtr(void);
 void SetWaldaPhrase(const u8 *src);
 bool32 IsWaldaPhraseEmpty(void);
-# 40 "src/new_game.c" 2
+# 41 "src/new_game.c" 2
 # 1 "include/pokemon_jump.h" 1
 
 
@@ -5998,7 +6000,7 @@ bool32 IsSpeciesAllowedInPokemonJump(u16 species);
 void IsPokemonJumpSpeciesInParty(void);
 void ResetPokeJumpResults(void);
 void ShowPokemonJumpRecords(void);
-# 41 "src/new_game.c" 2
+# 42 "src/new_game.c" 2
 # 1 "include/decoration_inventory.h" 1
 
 
@@ -6021,7 +6023,7 @@ s8 DecorationRemove(u8 decor);
 void CondenseDecorationsInCategory(u8 category);
 u8 GetNumOwnedDecorationsInCategory(u8 category);
 u8 GetNumOwnedDecorations(void);
-# 42 "src/new_game.c" 2
+# 43 "src/new_game.c" 2
 # 1 "include/secret_base.h" 1
 
 
@@ -6051,7 +6053,7 @@ void CheckPlayerHasSecretBase(void);
 void ToggleSecretBaseEntranceMetatile(void);
 void EnableBothScriptContexts(void);
 void ReceiveSecretBasesData(void *records, size_t recordSize, u8 linkIdx);
-# 43 "src/new_game.c" 2
+# 44 "src/new_game.c" 2
 # 1 "include/player_pc.h" 1
 
 
@@ -6231,7 +6233,7 @@ void ReshowPlayerPC(u8 taskId);
 void sub_816B31C(void);
 void Mailbox_ReturnToMailListAfterDeposit(void);
 void NewGameInitPCItems(void);
-# 44 "src/new_game.c" 2
+# 45 "src/new_game.c" 2
 # 1 "include/field_specials.h" 1
 
 
@@ -6266,7 +6268,7 @@ bool8 UsedPokemonCenterWarp(void);
 void ResetFanClub(void);
 bool8 ShouldShowBoxWasFullMessage(void);
 void SetPCBoxToSendMon(u8 boxId);
-# 45 "src/new_game.c" 2
+# 46 "src/new_game.c" 2
 # 1 "include/berry_powder.h" 1
 
 
@@ -6275,7 +6277,7 @@ void SetBerryPowder(u32 *powder, u32 amount);
 void ApplyNewEncryptionKeyToBerryPowder(u32 encryptionKey);
 bool8 GiveBerryPowder(u32 amountToAdd);
 u32 GetBerryPowder(void);
-# 46 "src/new_game.c" 2
+# 47 "src/new_game.c" 2
 # 1 "include/mevent.h" 1
 
 
@@ -6338,14 +6340,14 @@ u16 MEventStruct_Unk1442CC_GetValueNFrom_unk_20(const struct MEventStruct_Unk144
 u16 mevent_081445C0(u32 command);
 void ResetReceivedWonderCardFlag(void);
 bool32 MEventHandleReceivedWonderCard(u16 a0);
-# 47 "src/new_game.c" 2
+# 48 "src/new_game.c" 2
 # 1 "include/union_room_chat.h" 1
 
 
 
 void EnterUnionRoomChat(void);
 void InitUnionRoomChatRegisteredTexts(void);
-# 48 "src/new_game.c" 2
+# 49 "src/new_game.c" 2
 
 extern const u8 EventScript_ResetAllMapFlags[];
 
@@ -6396,7 +6398,7 @@ static void InitPlayerTrainerId(void)
 static void SetDefaultOptions(void)
 {
     gSaveBlock2Ptr->optionsTextSpeed = 2;
-    gSaveBlock2Ptr->optionsWindowFrameType = 0;
+    gSaveBlock2Ptr->optionsWindowFrameType = 2;
     gSaveBlock2Ptr->optionsSound = 1;
     gSaveBlock2Ptr->optionsBattleStyle = 1;
     gSaveBlock2Ptr->optionsBattleSceneOff = 1;
@@ -6429,7 +6431,7 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void)
 {
-    SetWarpDestination(((4 | (26 << 8)) >> 8), ((4 | (26 << 8)) & 0xFF), -1, 19, 66);
+    SetWarpDestination(((4 | (26 << 8)) >> 8), ((50 | (26 << 8)) & 0xFF), 0, 0, 0);
     WarpIntoMap();
 }
 
@@ -6472,7 +6474,7 @@ void NewGameInitData(void)
     ResetGabbyAndTy();
     ClearSecretBases();
     ClearBerryTrees();
-    SetMoney(&gSaveBlock1Ptr->money, 3000);
+    SetMoney(&gSaveBlock1Ptr->money, 0);
     SetCoins(0);
     ResetLinkContestBoolean();
     ResetGameStats();
@@ -6485,8 +6487,10 @@ void NewGameInitData(void)
     ResetPokemonStorageSystem();
     ClearRoamerData();
     ClearRoamerLocationData();
-    gSaveBlock1Ptr->registeredItem = 0;
     ClearBag();
+ AddBagItem(467, 1);
+ AddBagItem(444, 1);
+ gSaveBlock1Ptr->registeredItem = 467;
     NewGameInitPCItems();
     ClearPokeblocks();
     ClearDecorationInventories();

@@ -150,7 +150,7 @@ SafariZoneTakeStep:
 	push	{lr}
 	bl	GetSafariZoneFlag
 	cmp	r0, #0
-	beq	.L21	@cond_branch
+	beq	.L19	@cond_branch
 	bl	DecrementFeederStepCounters
 	ldr	r1, .L22
 	ldrh	r0, [r1]
@@ -158,25 +158,27 @@ SafariZoneTakeStep:
 	strh	r0, [r1]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	beq	.L19	@cond_branch
-.L21:
-	mov	r0, #0x0
-	b	.L20
+	beq	.L20	@cond_branch
+	bl	CalculatePlayerPartyCount
+	lsl	r0, r0, #0x18
+	lsr	r0, r0, #0x18
+	cmp	r0, #0x6
+	bne	.L19	@cond_branch
+.L20:
+	ldr	r0, .L22+0x4
+	bl	ScriptContext1_SetupScript
+	mov	r0, #0x1
+	b	.L21
 .L23:
 	.align	2, 0
 .L22:
 	.word	sSafariZoneStepCounter
+	.word	SafariZone_EventScript_TimesUp
 .L19:
-	ldr	r0, .L24
-	bl	ScriptContext1_SetupScript
-	mov	r0, #0x1
-.L20:
+	mov	r0, #0x0
+.L21:
 	pop	{r1}
 	bx	r1
-.L25:
-	.align	2, 0
-.L24:
-	.word	SafariZone_EventScript_TimesUp
 .Lfe6:
 	.size	 SafariZoneTakeStep,.Lfe6-SafariZoneTakeStep
 	.align	2, 0
@@ -185,13 +187,13 @@ SafariZoneTakeStep:
 	.thumb_func
 SafariZoneRetirePrompt:
 	push	{lr}
-	ldr	r0, .L27
+	ldr	r0, .L25
 	bl	ScriptContext1_SetupScript
 	pop	{r0}
 	bx	r0
-.L28:
+.L26:
 	.align	2, 0
-.L27:
+.L25:
 	.word	SafariZone_EventScript_RetirePrompt
 .Lfe7:
 	.size	 SafariZoneRetirePrompt,.Lfe7-SafariZoneRetirePrompt
@@ -201,71 +203,71 @@ SafariZoneRetirePrompt:
 	.thumb_func
 CB2_EndSafariBattle:
 	push	{lr}
-	ldr	r1, .L36
-	ldr	r0, .L36+0x4
+	ldr	r1, .L34
+	ldr	r0, .L34+0x4
 	ldrb	r0, [r0, #0x1f]
 	ldrb	r2, [r1]
 	add	r0, r0, r2
 	strb	r0, [r1]
-	ldr	r2, .L36+0x8
+	ldr	r2, .L34+0x8
 	ldrb	r0, [r2]
 	cmp	r0, #0x7
-	bne	.L30	@cond_branch
-	ldr	r1, .L36+0xc
+	bne	.L28	@cond_branch
+	ldr	r1, .L34+0xc
 	ldrb	r0, [r1]
 	add	r0, r0, #0x1
 	strb	r0, [r1]
-.L30:
-	ldr	r0, .L36+0x10
+.L28:
+	ldr	r0, .L34+0x10
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L31	@cond_branch
-	ldr	r0, .L36+0x14
+	beq	.L29	@cond_branch
+	ldr	r0, .L34+0x14
 	bl	SetMainCallback2
-	b	.L32
-.L37:
+	b	.L30
+.L35:
 	.align	2, 0
-.L36:
+.L34:
 	.word	sSafariZonePkblkUses
 	.word	gBattleResults
 	.word	gBattleOutcome
 	.word	sSafariZoneCaughtMons
 	.word	gNumSafariBalls
 	.word	CB2_ReturnToField
-.L31:
+.L29:
 	ldrb	r0, [r2]
 	cmp	r0, #0x8
-	bne	.L33	@cond_branch
-	ldr	r0, .L38
+	bne	.L31	@cond_branch
+	ldr	r0, .L36
 	bl	ScriptContext2_RunNewScript
 	bl	WarpIntoMap
-	ldr	r1, .L38+0x4
-	ldr	r0, .L38+0x8
+	ldr	r1, .L36+0x4
+	ldr	r0, .L36+0x8
 	str	r0, [r1]
-	ldr	r0, .L38+0xc
+	ldr	r0, .L36+0xc
 	bl	SetMainCallback2
-	b	.L32
-.L39:
+	b	.L30
+.L37:
 	.align	2, 0
-.L38:
+.L36:
 	.word	SafariZone_EventScript_OutOfBallsMidBattle
 	.word	gFieldCallback
 	.word	sub_80AF6F0
 	.word	CB2_LoadMap
-.L33:
+.L31:
 	cmp	r0, #0x7
-	bne	.L32	@cond_branch
-	ldr	r0, .L40
+	bne	.L30	@cond_branch
+	ldr	r0, .L38
 	bl	ScriptContext1_SetupScript
 	bl	ScriptContext1_Stop
-	ldr	r0, .L40+0x4
+	ldr	r0, .L38+0x4
 	bl	SetMainCallback2
-.L32:
+.L30:
 	pop	{r0}
 	bx	r0
-.L41:
+.L39:
 	.align	2, 0
-.L40:
+.L38:
 	.word	SafariZone_EventScript_OutOfBalls
 	.word	CB2_ReturnToFieldContinueScriptPlayMapMusic
 .Lfe8:
@@ -277,16 +279,16 @@ ClearPokeblockFeeder:
 	push	{lr}
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x14
-	ldr	r1, .L43
+	ldr	r1, .L41
 	add	r0, r0, r1
 	mov	r1, #0x0
 	mov	r2, #0x10
 	bl	memset
 	pop	{r0}
 	bx	r0
-.L44:
+.L42:
 	.align	2, 0
-.L43:
+.L41:
 	.word	sPokeblockFeeders
 .Lfe9:
 	.size	 ClearPokeblockFeeder,.Lfe9-ClearPokeblockFeeder
@@ -295,15 +297,15 @@ ClearPokeblockFeeder:
 	.thumb_func
 ClearAllPokeblockFeeders:
 	push	{lr}
-	ldr	r0, .L46
+	ldr	r0, .L44
 	mov	r1, #0x0
 	mov	r2, #0xa0
 	bl	memset
 	pop	{r0}
 	bx	r0
-.L47:
+.L45:
 	.align	2, 0
-.L46:
+.L44:
 	.word	sPokeblockFeeders
 .Lfe10:
 	.size	 ClearAllPokeblockFeeders,.Lfe10-ClearAllPokeblockFeeders
@@ -320,10 +322,10 @@ GetPokeblockFeederInFront:
 	add	r1, r4, #0
 	bl	GetXYCoordsOneStepInFrontOfPlayer
 	mov	r5, #0x0
-.L52:
-	ldr	r0, .L55
+.L50:
+	ldr	r0, .L53
 	ldr	r2, [r0]
-	ldr	r1, .L55+0x4
+	ldr	r1, .L53+0x4
 	lsl	r0, r5, #0x4
 	add	r3, r0, r1
 	mov	r1, #0x5
@@ -331,56 +333,56 @@ GetPokeblockFeederInFront:
 	mov	r0, #0x4
 	ldrsb	r0, [r3, r0]
 	cmp	r1, r0
-	bne	.L51	@cond_branch
+	bne	.L49	@cond_branch
 	mov	r0, sp
 	mov	r2, #0x0
 	ldrsh	r1, [r3, r2]
 	mov	r2, #0x0
 	ldrsh	r0, [r0, r2]
 	cmp	r1, r0
-	bne	.L51	@cond_branch
+	bne	.L49	@cond_branch
 	mov	r0, #0x2
 	ldrsh	r1, [r3, r0]
 	mov	r2, #0x0
 	ldrsh	r0, [r4, r2]
 	cmp	r1, r0
-	bne	.L51	@cond_branch
-	ldr	r0, .L55+0x8
+	bne	.L49	@cond_branch
+	ldr	r0, .L53+0x8
 	strh	r5, [r0]
-	ldr	r1, .L55+0xc
+	ldr	r1, .L53+0xc
 	ldrb	r0, [r3, #0x8]
 	lsl	r0, r0, #0x2
 	add	r0, r0, r1
 	ldr	r1, [r0]
-	ldr	r0, .L55+0x10
+	ldr	r0, .L53+0x10
 	bl	StringCopy
-	b	.L48
-.L56:
+	b	.L46
+.L54:
 	.align	2, 0
-.L55:
+.L53:
 	.word	gSaveBlock1Ptr
 	.word	sPokeblockFeeders
 	.word	gSpecialVar_Result
 	.word	gPokeblockNames
 	.word	gStringVar1
-.L51:
+.L49:
 	add	r0, r5, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r5, r0, #0x10
 	cmp	r5, #0x9
-	bls	.L52	@cond_branch
-	ldr	r1, .L57
-	ldr	r2, .L57+0x4
+	bls	.L50	@cond_branch
+	ldr	r1, .L55
+	ldr	r2, .L55+0x4
 	add	r0, r2, #0
 	strh	r0, [r1]
-.L48:
+.L46:
 	add	sp, sp, #0x4
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L58:
+.L56:
 	.align	2, 0
-.L57:
+.L55:
 	.word	gSpecialVar_Result
 	.word	0xffff
 .Lfe11:
@@ -399,12 +401,12 @@ GetPokeblockFeederWithinRange:
 	bl	PlayerGetDestCoords
 	mov	r5, #0x0
 	add	r6, r4, #0
-	ldr	r0, .L69
+	ldr	r0, .L67
 	ldr	r7, [r0]
 	mov	r4, sp
-	ldr	r0, .L69+0x4
+	ldr	r0, .L67+0x4
 	mov	ip, r0
-.L63:
+.L61:
 	lsl	r0, r5, #0x4
 	mov	r1, ip
 	add	r3, r0, r1
@@ -413,7 +415,7 @@ GetPokeblockFeederWithinRange:
 	mov	r0, #0x4
 	ldrsb	r0, [r3, r0]
 	cmp	r1, r0
-	bne	.L62	@cond_branch
+	bne	.L60	@cond_branch
 	ldrh	r0, [r4]
 	ldrh	r1, [r3]
 	sub	r0, r0, r1
@@ -426,51 +428,51 @@ GetPokeblockFeederWithinRange:
 	mov	r1, #0x0
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bge	.L65	@cond_branch
+	bge	.L63	@cond_branch
 	neg	r0, r0
 	strh	r0, [r4]
-.L65:
+.L63:
 	mov	r1, #0x0
 	ldrsh	r0, [r2, r1]
 	cmp	r0, #0
-	bge	.L66	@cond_branch
+	bge	.L64	@cond_branch
 	neg	r0, r0
 	strh	r0, [r2]
-.L66:
+.L64:
 	mov	r2, #0x0
 	ldrsh	r0, [r4, r2]
 	mov	r2, #0x0
 	ldrsh	r1, [r6, r2]
 	add	r0, r0, r1
 	cmp	r0, #0x5
-	bgt	.L62	@cond_branch
-	ldr	r0, .L69+0x8
+	bgt	.L60	@cond_branch
+	ldr	r0, .L67+0x8
 	strh	r5, [r0]
-	b	.L59
-.L70:
+	b	.L57
+.L68:
 	.align	2, 0
-.L69:
+.L67:
 	.word	gSaveBlock1Ptr
 	.word	sPokeblockFeeders
 	.word	gSpecialVar_Result
-.L62:
+.L60:
 	add	r0, r5, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r5, r0, #0x10
 	cmp	r5, #0x9
-	bls	.L63	@cond_branch
-	ldr	r1, .L71
-	ldr	r2, .L71+0x4
+	bls	.L61	@cond_branch
+	ldr	r1, .L69
+	ldr	r2, .L69+0x4
 	add	r0, r2, #0
 	strh	r0, [r1]
-.L59:
+.L57:
 	add	sp, sp, #0x4
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L72:
+.L70:
 	.align	2, 0
-.L71:
+.L69:
 	.word	gSpecialVar_Result
 	.word	0xffff
 .Lfe12:
@@ -482,25 +484,25 @@ GetPokeblockFeederWithinRange:
 SafariZoneGetPokeblockInFront:
 	push	{lr}
 	bl	GetPokeblockFeederInFront
-	ldr	r2, .L77
+	ldr	r2, .L75
 	ldrh	r1, [r2]
-	ldr	r0, .L77+0x4
+	ldr	r0, .L75+0x4
 	cmp	r1, r0
-	beq	.L74	@cond_branch
+	beq	.L72	@cond_branch
 	add	r0, r1, #0
 	lsl	r0, r0, #0x4
-	ldr	r1, .L77+0x8
+	ldr	r1, .L75+0x8
 	add	r0, r0, r1
-	b	.L76
-.L78:
+	b	.L74
+.L76:
 	.align	2, 0
-.L77:
+.L75:
 	.word	gSpecialVar_Result
 	.word	0xffff
 	.word	sPokeblockFeeders+0x8
-.L74:
+.L72:
 	mov	r0, #0x0
-.L76:
+.L74:
 	pop	{r1}
 	bx	r1
 .Lfe13:
@@ -512,25 +514,25 @@ SafariZoneGetPokeblockInFront:
 SafariZoneGetActivePokeblock:
 	push	{lr}
 	bl	GetPokeblockFeederWithinRange
-	ldr	r2, .L83
+	ldr	r2, .L81
 	ldrh	r1, [r2]
-	ldr	r0, .L83+0x4
+	ldr	r0, .L81+0x4
 	cmp	r1, r0
-	beq	.L80	@cond_branch
+	beq	.L78	@cond_branch
 	add	r0, r1, #0
 	lsl	r0, r0, #0x4
-	ldr	r1, .L83+0x8
+	ldr	r1, .L81+0x8
 	add	r0, r0, r1
-	b	.L82
-.L84:
+	b	.L80
+.L82:
 	.align	2, 0
-.L83:
+.L81:
 	.word	gSpecialVar_Result
 	.word	0xffff
 	.word	sPokeblockFeeders+0x8
-.L80:
+.L78:
 	mov	r0, #0x0
-.L82:
+.L80:
 	pop	{r1}
 	bx	r1
 .Lfe14:
@@ -549,28 +551,28 @@ SafariZoneActivatePokeblockFeeder:
 	lsr	r0, r0, #0x18
 	mov	r8, r0
 	mov	r1, #0x0
-	ldr	r2, .L92
+	ldr	r2, .L90
 	mov	r6, sp
 	add	r6, r6, #0x2
 	mov	r0, #0x8
 	add	r0, r0, r2
 	mov	r9, r0
-	ldr	r7, .L92+0x4
-.L89:
+	ldr	r7, .L90+0x4
+.L87:
 	lsl	r5, r1, #0x4
 	add	r4, r5, r2
 	mov	r0, #0x4
 	ldrsb	r0, [r4, r0]
 	cmp	r0, #0
-	bne	.L88	@cond_branch
+	bne	.L86	@cond_branch
 	mov	r3, #0x0
 	ldrsh	r0, [r4, r3]
 	cmp	r0, #0
-	bne	.L88	@cond_branch
+	bne	.L86	@cond_branch
 	mov	r3, #0x2
 	ldrsh	r0, [r4, r3]
 	cmp	r0, #0
-	bne	.L88	@cond_branch
+	bne	.L86	@cond_branch
 	mov	r0, sp
 	add	r1, r6, #0
 	bl	GetXYCoordsOneStepInFrontOfPlayer
@@ -582,7 +584,7 @@ SafariZoneActivatePokeblockFeeder:
 	ldr	r0, [r7]
 	mov	r3, r8
 	lsl	r1, r3, #0x3
-	ldr	r3, .L92+0x8
+	ldr	r3, .L90+0x8
 	add	r0, r0, r3
 	add	r0, r0, r1
 	ldr	r1, [r0, #0x4]		@ created by thumb_load_double_from_address
@@ -596,20 +598,20 @@ SafariZoneActivatePokeblockFeeder:
 	strh	r0, [r4]
 	ldrh	r0, [r6]
 	strh	r0, [r4, #0x2]
-	b	.L87
-.L93:
+	b	.L85
+.L91:
 	.align	2, 0
-.L92:
+.L90:
 	.word	sPokeblockFeeders
 	.word	gSaveBlock1Ptr
 	.word	0x848
-.L88:
+.L86:
 	add	r0, r1, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
 	cmp	r1, #0x9
-	bls	.L89	@cond_branch
-.L87:
+	bls	.L87	@cond_branch
+.L85:
 	add	sp, sp, #0x4
 	pop	{r3, r4}
 	mov	r8, r3
@@ -625,32 +627,32 @@ SafariZoneActivatePokeblockFeeder:
 DecrementFeederStepCounters:
 	push	{r4, r5, lr}
 	mov	r4, #0x0
-	ldr	r5, .L102
-.L98:
+	ldr	r5, .L100
+.L96:
 	lsl	r0, r4, #0x4
 	add	r1, r0, r5
 	ldrb	r0, [r1, #0x5]
 	cmp	r0, #0
-	beq	.L97	@cond_branch
+	beq	.L95	@cond_branch
 	sub	r0, r0, #0x1
 	strb	r0, [r1, #0x5]
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L97	@cond_branch
+	bne	.L95	@cond_branch
 	add	r0, r4, #0
 	bl	ClearPokeblockFeeder
-.L97:
+.L95:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x9
-	bls	.L98	@cond_branch
+	bls	.L96	@cond_branch
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L103:
+.L101:
 	.align	2, 0
-.L102:
+.L100:
 	.word	sPokeblockFeeders
 .Lfe16:
 	.size	 DecrementFeederStepCounters,.Lfe16-DecrementFeederStepCounters
@@ -661,13 +663,13 @@ DecrementFeederStepCounters:
 GetInFrontFeederPokeblockAndSteps:
 	push	{lr}
 	bl	GetPokeblockFeederInFront
-	ldr	r3, .L107
+	ldr	r3, .L105
 	ldrh	r1, [r3]
-	ldr	r0, .L107+0x4
+	ldr	r0, .L105+0x4
 	cmp	r1, r0
-	beq	.L105	@cond_branch
-	ldr	r0, .L107+0x8
-	ldr	r2, .L107+0xc
+	beq	.L103	@cond_branch
+	ldr	r0, .L105+0x8
+	ldr	r2, .L105+0xc
 	lsl	r1, r1, #0x4
 	add	r1, r1, r2
 	ldrb	r1, [r1, #0x5]
@@ -675,17 +677,17 @@ GetInFrontFeederPokeblockAndSteps:
 	mov	r3, #0x3
 	bl	ConvertIntToDecimalStringN
 	mov	r0, #0x1
-	b	.L106
-.L108:
+	b	.L104
+.L106:
 	.align	2, 0
-.L107:
+.L105:
 	.word	gSpecialVar_Result
 	.word	0xffff
 	.word	gStringVar2
 	.word	sPokeblockFeeders
-.L105:
+.L103:
 	mov	r0, #0x0
-.L106:
+.L104:
 	pop	{r1}
 	bx	r1
 .Lfe17:

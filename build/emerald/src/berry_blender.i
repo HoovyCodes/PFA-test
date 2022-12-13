@@ -1,6 +1,6 @@
-# 1 "src/berry_blender.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/berry_blender.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/berry_blender.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -15411,8 +15411,11 @@ extern const u8 gText_ChikoritaDoll80BP[];
 extern const u8 gText_TotodileDoll80BP[];
 
 extern const u8 gText_Dolls[];
-extern const u8 gText_Cushions[];
+extern const u8 gText_MatDesk[];
+extern const u8 gText_OrnaPost[];
+extern const u8 gText_ChairPlant[];
 extern const u8 gText_Contest[];
+extern const u8 gText_TMs[];
 extern const u8 gText_MegaC[];
 extern const u8 gText_MegaB[];
 extern const u8 gText_MegaA[];
@@ -15590,8 +15593,11 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Doll[];
-extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Cushion[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MatDesk[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_OrnaPost[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChairPlant[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Contest[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TM[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaC[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaB[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaA[];
@@ -18002,15 +18008,15 @@ static const u8 sUnusedText_Space[] = _(" ");
 static const u8 sUnusedText_Terminating[] = _("Terminating.");
 static const u8 sUnusedText_LinkPartnerNotFound[] = _("Link partner(s) not found.\nPlease try again.\p");
 
-static const u8 sText_BerryBlenderStart[] = _("Starting up the BERRY BLENDER.\pPlease select a BERRY from your BAG\nto put in the BERRY BLENDER.\p");
+static const u8 sText_BerryBlenderStart[] = _("Starting up the Berry Blender.\pPlease select a berry from your Bag\nto put in the Berry Blender.\p");
 static const u8 sText_NewParagraph[] = _("\p");
 static const u8 sText_WasMade[] = _(" was made!");
-static const u8 sText_Mister[] = _("MISTER");
-static const u8 sText_Laddie[] = _("LADDIE");
-static const u8 sText_Lassie[] = _("LASSIE");
-static const u8 sText_Master[] = _("MASTER");
-static const u8 sText_Dude[] = _("DUDE");
-static const u8 sText_Miss[] = _("MISS");
+static const u8 sText_Mister[] = _("Mister");
+static const u8 sText_Laddie[] = _("Laddie");
+static const u8 sText_Lassie[] = _("Lassie");
+static const u8 sText_Master[] = _("Master");
+static const u8 sText_Dude[] = _("Dude");
+static const u8 sText_Miss[] = _("Miss");
 
 static const u8* const sBlenderOpponentsNames[] =
 {
@@ -18025,23 +18031,23 @@ static const u8* const sBlenderOpponentsNames[] =
 static const u8 sText_PressAToStart[] = _("Press the A Button to start.");
 static const u8 sText_PleaseWaitAWhile[] = _("Please wait a while.");
 static const u8 sText_CommunicationStandby[] = _("Communication standby…");
-static const u8 sText_WouldLikeToBlendAnotherBerry[] = _("Would you like to blend another BERRY?");
-static const u8 sText_RunOutOfBerriesForBlending[] = _("You've run out of BERRIES for\nblending in the BERRY BLENDER.\p");
-static const u8 sText_YourPokeblockCaseIsFull[] = _("Your {POKEBLOCK} CASE is full.\p");
-static const u8 sText_HasNoBerriesToPut[] = _(" has no BERRIES to put in\nthe BERRY BLENDER.");
-static const u8 sText_ApostropheSPokeblockCaseIsFull[] = _("'s {POKEBLOCK} CASE is full.\p");
-static const u8 sText_BlendingResults[] = _("RESULTS OF BLENDING");
-static const u8 sText_BerryUsed[] = _("BERRY USED");
-static const u8 sText_SpaceBerry[] = _(" BERRY");
+static const u8 sText_WouldLikeToBlendAnotherBerry[] = _("Would you like to blend another berry?");
+static const u8 sText_RunOutOfBerriesForBlending[] = _("You've run out of berries for\nblending in the Berry Blender.\p");
+static const u8 sText_YourPokeblockCaseIsFull[] = _("Your {POKEBLOCK} Case is full.\p");
+static const u8 sText_HasNoBerriesToPut[] = _(" has no berries to put in\nthe Berry Blender.");
+static const u8 sText_ApostropheSPokeblockCaseIsFull[] = _("'s {POKEBLOCK} Case is full.\p");
+static const u8 sText_BlendingResults[] = _("Results of Blending");
+static const u8 sText_BerryUsed[] = _("Berry Used");
+static const u8 sText_SpaceBerry[] = _(" Berry");
 static const u8 sText_Time[] = _("Time:");
 static const u8 sText_Min[] = _(" min. ");
 static const u8 sText_Sec[] = _(" sec.");
-static const u8 sText_MaximumSpeed[] = _("MAXIMUM SPEED");
+static const u8 sText_MaximumSpeed[] = _("Maximum Speed");
 static const u8 sText_RPM[] = _(" RPM");
 static const u8 sText_Dot[] = _(".");
 static const u8 sText_NewLine[] = _("\n");
 static const u8 sText_Space[] = _(" ");
-static const u8 sText_Ranking[] = _("RANKING");
+static const u8 sText_Ranking[] = _("Ranking");
 static const u8 sText_TheLevelIs[] = _("The level is ");
 static const u8 sText_TheFeelIs[] = _(", and the feel is ");
 static const u8 sText_Dot2[] = _(".");
@@ -19565,9 +19571,7 @@ static void Task_HandleOpponent1(u8 taskId)
                         gRecvCmds[1][2] = 0x4523;
                     else
                         gRecvCmds[1][2] = 0x5432;
-
-
-                    gRecvCmds[1][2] = 0x5432;
+     gRecvCmds[1][2] = 0x5432;
                 }
                 else if (sBerryBlender->speed < 1500)
                 {
@@ -19849,8 +19853,8 @@ static void UpdateOpponentScores(void)
 
 
             if (gRecvCmds[i][2] == 0x2345
-             || gRecvCmds[2][i] == 0x4523
-             || gRecvCmds[2][i] == 0x5432)
+             || gRecvCmds[i][2] == 0x4523
+             || gRecvCmds[i][2] == 0x5432)
             {
                 if (sBerryBlender->speed > 1500)
                     m4aMPlayTempoControl(&gMPlayInfo_BGM, ((sBerryBlender->speed - 750) / 20) + 256);

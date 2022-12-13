@@ -300,25 +300,25 @@ static const s8 gUnknown_0831ACE0[] ={-32, -16, -16, -32, -32, 0, 0, 0};
 
 const u8 gTypeNames[NUMBER_OF_MON_TYPES][TYPE_NAME_LENGTH + 1] =
 {
-    _("NORMAL"),
-    _("FIGHT"),
-    _("FLYING"),
-    _("POISON"),
-    _("GROUND"),
-    _("ROCK"),
-    _("BUG"),
-    _("GHOST"),
-    _("STEEL"),
+    _("Normal"),
+    _("Fight"),
+    _("Flying"),
+    _("Poison"),
+    _("Ground"),
+    _("Rock"),
+    _("Bug"),
+    _("Ghost"),
+    _("Steel"),
     _("???"),
-    _("FIRE"),
-    _("WATER"),
-    _("GRASS"),
-    _("ELECTR"),
-    _("PSYCHC"),
-    _("ICE"),
-    _("DRAGON"),
-    _("DARK"),
-    _("FAIRY"),
+    _("Fire"),
+    _("Water"),
+    _("Grass"),
+    _("Electr"),
+    _("Psychc"),
+    _("Ice"),
+    _("Dragon"),
+    _("Dark"),
+    _("Fairy"),
 };
 
 // This is a factor in how much money you get for beating a trainer.
@@ -355,7 +355,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {TRAINER_CLASS_POKEFAN, 20},
     {TRAINER_CLASS_EXPERT, 10},
     {TRAINER_CLASS_YOUNGSTER, 4},
-    {TRAINER_CLASS_CHAMPION, 50},
+    {TRAINER_CLASS_CHAMPION, 0},
     {TRAINER_CLASS_FISHERMAN, 10},
     {TRAINER_CLASS_TRIATHLETE, 10},
     {TRAINER_CLASS_DRAGON_TAMER, 12},
@@ -379,6 +379,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {TRAINER_CLASS_HIKER, 10},
     {TRAINER_CLASS_YOUNG_COUPLE, 8},
     {TRAINER_CLASS_WINSTRATE, 10},
+	{TRAINER_CLASS_MIMIC, 0},
     {0xFF, 5},
 };
 
@@ -2896,8 +2897,16 @@ static void BattleStartClearSetData(void)
 
     if (!(gBattleTypeFlags & BATTLE_TYPE_RECORDED))
     {
-        if (!(gBattleTypeFlags & BATTLE_TYPE_LINK) && gSaveBlock2Ptr->optionsBattleSceneOff == TRUE)
-            gHitMarker |= HITMARKER_NO_ANIMATIONS;
+		if (!(gBattleTypeFlags & BATTLE_TYPE_LINK) && gSaveBlock2Ptr->optionsBattleSceneOff == TRUE && !(gTrainerBattleOpponent_A == TRAINER_FRONTIER_BRAIN))
+		{
+			u8 trainerClass = 0;
+			if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
+				trainerClass = GetFrontierOpponentClass(gTrainerBattleOpponent_A);
+			else
+				trainerClass = gTrainers[gTrainerBattleOpponent_A].trainerClass;
+			if (!(trainerClass == TRAINER_CLASS_MIMIC || trainerClass == TRAINER_CLASS_CHAMPION))
+				gHitMarker |= HITMARKER_NO_ANIMATIONS;	
+		}
     }
     else if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_x2000000)) && GetBattleSceneInRecordedBattle())
     {
@@ -4561,10 +4570,18 @@ static void CheckMegaEvolutionBeforeTurn(void)
             {
                 gBattleStruct->mega.toEvolve &= ~(gBitTable[gActiveBattler]);
                 gLastUsedItem = gBattleMons[gActiveBattler].item;
-                if (gBattleStruct->mega.isWishMegaEvo == TRUE)
-                    BattleScriptExecute(BattleScript_WishMegaEvolution);
-                else
-                    BattleScriptExecute(BattleScript_MegaEvolution);
+                if (gBattleStruct->mega.isWishMegaEvo == TRUE){
+					if (gHitMarker & HITMARKER_NO_ANIMATIONS)
+						BattleScriptExecute(BattleScript_WishMegaEvolutionQ);
+					else 
+						BattleScriptExecute(BattleScript_WishMegaEvolution);
+				}
+                else{
+					if (gHitMarker & HITMARKER_NO_ANIMATIONS)
+						BattleScriptExecute(BattleScript_MegaEvolutionQ);
+					else 
+						BattleScriptExecute(BattleScript_MegaEvolution);
+				}
                 return;
             }
         }

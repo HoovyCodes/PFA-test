@@ -82,865 +82,2515 @@ gBattlePartyCurrentOrder:
 	.align	1, 0
 	.type	 gTutorMoves,object
 gTutorMoves:
-	.short	0x5
-	.short	0xe
-	.short	0x19
-	.short	0x22
-	.short	0x26
-	.short	0x44
-	.short	0x45
-	.short	0x66
-	.short	0x76
-	.short	0x87
-	.short	0x8a
-	.short	0x56
-	.short	0x99
-	.short	0x9d
-	.short	0xa4
-	.short	0xdf
+	.space	2
+	.short	0x208
+	.short	0x207
+	.short	0x206
+	.short	0x152
+	.short	0x133
+	.short	0x134
+	.short	0x1b2
+	.short	0x26c
+	.short	0x224
+	.short	0x223
+	.short	0xd2
 	.short	0xcd
-	.short	0xf4
-	.short	0xad
-	.short	0xc4
-	.short	0xcb
-	.short	0xbd
-	.short	0x8
-	.short	0xcf
-	.short	0xd6
+	.short	0x45
+	.short	0x157
+	.short	0x19a
+	.short	0x15f
+	.short	0x1c2
+	.short	0x13a
 	.short	0x81
-	.short	0x6f
+	.short	0x121
+	.short	0x66
+	.short	0xbd
+	.short	0x76
+	.short	0x1d2
+	.short	0xa2
+	.short	0x44
+	.short	0x144
+	.short	0x1b0
+	.short	0x115
+	.short	0x164
+	.short	0x192
+	.short	0xdf
+	.short	0xeb
+	.short	0xdc
+	.short	0xfd
+	.short	0x1d4
+	.short	0x11b
+	.short	0x184
+	.short	0xf4
 	.short	0x9
 	.short	0x7
-	.short	0xd2
-	.size	 gTutorMoves,60
+	.short	0x8
+	.short	0xc4
+	.short	0x20f
+	.short	0x43
+	.short	0x14e
+	.short	0x189
+	.short	0x16e
+	.short	0x1ac
+	.short	0x212
+	.short	0x22
+	.short	0x16a
+	.short	0xcf
+	.short	0x1ba
+	.short	0x87
+	.short	0x183
+	.short	0x110
+	.short	0x211
+	.short	0x10f
+	.short	0x191
+	.short	0x8f
+	.short	0x1ec
+	.short	0x26
+	.short	0x154
+	.short	0xd7
+	.short	0x114
+	.short	0x10e
+	.short	0x101
+	.short	0xc8
+	.short	0x11a
+	.short	0x298
+	.short	0x130
+	.short	0x19e
+	.short	0x1b9
+	.short	0x18c
+	.short	0x27e
+	.short	0x17c
+	.short	0x198
+	.short	0x21e
+	.size	 gTutorMoves,160
 	.align	2, 0
 	.type	 sTutorLearnsets,object
 sTutorLearnsets:
-	.word	0x857
-	.word	0x25b4409a
-	.word	0x25b4409a
-	.word	0x25b4409a
-	.word	0x3fb4e0ff
-	.word	0x3fb4e0ff
-	.word	0x3fb4e0ff
-	.word	0x5fdc0fd
-	.word	0x5fdc0fd
-	.word	0x5fde0fd
-	.word	0x40000
-	.word	0x0
-	.word	0x3964490
-	.word	0x0
-	.word	0x0
-	.word	0x23944092
-	.word	0x3b44090
-	.word	0x3b44090
-	.word	0x3b44090
-	.word	0x7bc48b8
-	.word	0x7bc48ba
-	.word	0x3b44090
-	.word	0x3b44090
-	.word	0x1946098
-	.word	0x1946098
-	.word	0xfb5c8fd
-	.word	0xfb5c8fd
-	.word	0x27b5e0fa
-	.word	0x27b5e0fa
-	.word	0x5b440b8
-	.word	0x5b440b8
-	.word	0x3dfce0fd
-	.word	0x5b440b8
-	.word	0x5b440b8
-	.word	0x3dfce0fd
-	.word	0x1dffcffd
-	.word	0x1dffcffd
-	.word	0x3964098
-	.word	0x3964498
-	.word	0x1dffccfd
-	.word	0x1dffccfd
-	.word	0x3944090
-	.word	0x3944090
-	.word	0x1944092
-	.word	0x1944092
-	.word	0x194409a
-	.word	0x219440ba
-	.word	0x219440ba
-	.word	0x3944090
-	.word	0x3944090
-	.word	0x1b46098
-	.word	0x1b46098
-	.word	0x7be4498
-	.word	0x7be4498
-	.word	0x3fec0fd
-	.word	0x23fec0fd
-	.word	0x1ff6e1fd
-	.word	0x1ff6e1fd
-	.word	0x3b44098
-	.word	0x3b44098
-	.word	0x59c4098
-	.word	0x5fc41fd
-	.word	0x5fce1fd
-	.word	0x19d6cdfd
-	.word	0x19d6cdfd
-	.word	0x19d6cdfd
-	.word	0x19f4e1fd
-	.word	0x19f4e1fd
-	.word	0x19f4e1fd
-	.word	0x1944092
-	.word	0x1944092
-	.word	0x194409a
-	.word	0x19c4092
-	.word	0x19c4092
-	.word	0x1db5f1f9
-	.word	0x1db5f1f9
-	.word	0x3db5f1fd
-	.word	0x3944098
-	.word	0x3944098
-	.word	0x3be4c98
-	.word	0x23feccfd
-	.word	0x3975890
-	.word	0x3975890
-	.word	0x23b6409a
-	.word	0x3b4409a
-	.word	0x3b4409a
-	.word	0x19c4098
-	.word	0x19c4098
-	.word	0x19f4f088
-	.word	0x19f4f088
-	.word	0x39c5090
-	.word	0x39c5090
-	.word	0x19de5480
-	.word	0x19de5480
-	.word	0x19ded5fd
-	.word	0x5b77098
-	.word	0x19d6cdfd
-	.word	0x19d6cdfd
-	.word	0x21bc609a
-	.word	0x21bc609a
-	.word	0x3955880
-	.word	0x3955880
-	.word	0x1975492
-	.word	0x1975492
-	.word	0x39bce0ff
-	.word	0x39bce0ff
-	.word	0x3b4e1fd
-	.word	0x1bf4e1fd
-	.word	0x1dffe4ff
-	.word	0x1955080
-	.word	0x1955080
-	.word	0x1bd60ba
-	.word	0x39fde0ff
-	.word	0x1dffeffd
-	.word	0x196409a
-	.word	0x39fce0fd
-	.word	0x39c4090
-	.word	0x39c4090
-	.word	0x23bc4098
-	.word	0x23bc4090
-	.word	0x39f4890
-	.word	0x39f4c90
-	.word	0x19fecdfd
-	.word	0x239440b2
-	.word	0x1fec5fd
-	.word	0x1bf4c9fd
-	.word	0x19b4c1fd
-	.word	0x219460da
-	.word	0x19c6098
-	.word	0x0
-	.word	0x19c4898
-	.word	0x19c4498
-	.word	0x0
-	.word	0x3b44098
-	.word	0x3bc4098
-	.word	0x3b44898
-	.word	0x3b44098
-	.word	0x79e4c90
-	.word	0x19d6098
-	.word	0x19d60d8
-	.word	0x1bd6098
-	.word	0x21bd60de
-	.word	0x3946090
-	.word	0x1dffe1fd
-	.word	0x3bc4090
-	.word	0x3b44890
-	.word	0x3b44090
-	.word	0x39c4898
-	.word	0x39c4898
-	.word	0x3bfce898
-	.word	0x1bfeedfd
-	.word	0x3fffffff
-	.word	0x21b440ba
-	.word	0x21b440ba
-	.word	0x21b440ba
-	.word	0x7b54098
-	.word	0x27b54098
-	.word	0x3fb5e0fd
-	.word	0x1fce0ff
-	.word	0x21fce0ff
-	.word	0x21fce0ff
-	.word	0x3ff5c098
-	.word	0x3ff5c098
-	.word	0x3b64490
-	.word	0x3b64490
-	.word	0xbd5c0b3
-	.word	0xbd5c093
-	.word	0x1944098
-	.word	0x194409a
-	.word	0x3944090
-	.word	0x19c4890
-	.word	0x19c4890
-	.word	0xfb548fd
-	.word	0x5bf4ffd
-	.word	0x5bf4cfd
-	.word	0x7b74ffd
-	.word	0x7b74ffd
-	.word	0x3964c90
-	.word	0x3964c90
-	.word	0x7944898
-	.word	0x1f94c8fd
-	.word	0x1f94c8fd
-	.word	0x1944092
-	.word	0x7fdc0dd
-	.word	0x7fdc0dd
-	.word	0x1df7f0fd
-	.word	0x5fcc1fd
-	.word	0x5964092
-	.word	0x5964092
-	.word	0x5964092
-	.word	0x3ff4cdfd
-	.word	0x1944092
-	.word	0x1944092
-	.word	0x3944490
-	.word	0x5fdc0b8
-	.word	0x5fde0fd
-	.word	0x3b64498
-	.word	0x3b64498
-	.word	0x3be4c90
-	.word	0x23feccfd
-	.word	0x79e4c90
-	.word	0x0
+	.word	0x40300401
+	.word	0x40140021
 	.word	0x20
-	.word	0x3b64c98
-	.word	0x79570b8
-	.word	0x59570b8
-	.word	0x5b76cb8
-	.word	0x239464b2
-	.word	0x5b77098
-	.word	0x1df4c9fd
-	.word	0x1df4e9fd
-	.word	0x79d5892
-	.word	0x239440b2
-	.word	0x5b56098
-	.word	0x219460fa
-	.word	0x27fec4b2
-	.word	0x3ff5e1ff
-	.word	0x3ff5e1ff
-	.word	0x5b56098
-	.word	0x5b57098
-	.word	0x5bc6098
-	.word	0x5bc6098
-	.word	0x5bd7098
-	.word	0x7bc4890
-	.word	0x7bc48d0
-	.word	0x3fd40fd
-	.word	0x3bc6098
-	.word	0x23bc60b2
-	.word	0x3b444b8
-	.word	0x3b444b8
-	.word	0x39c4098
-	.word	0x5b560b8
-	.word	0x5b560b8
-	.word	0x79e4c90
-	.word	0x3b64c98
-	.word	0x1000040
-	.word	0x3b460fc
-	.word	0x3b560fc
-	.word	0x1fec5fd
-	.word	0x1bf4c8fd
-	.word	0x19b4c0fd
-	.word	0x1dffe9fd
-	.word	0x1dffeffd
-	.word	0x3b64898
-	.word	0x3b64098
-	.word	0x3be4098
-	.word	0x1b46098
-	.word	0x1b46098
-	.word	0x39f4e8fd
-	.word	0x3be4c98
-	.word	0x3b64c90
-	.word	0x7b64d92
-	.word	0x2bb4e0ff
-	.word	0x2bb4e0ff
-	.word	0x2bb4e0ff
-	.word	0x3b460ff
-	.word	0x3bb4e0ff
-	.word	0x3bb4e0ff
-	.word	0x5bd60b8
-	.word	0x5fde0fd
-	.word	0x5fde0fd
-	.word	0x1b640b8
-	.word	0x1b640b8
-	.word	0x27bd4898
-	.word	0x27bd4898
-	.word	0x40000
+	.word	-0x7f9ff7fe
+	.word	-0x7fd7ffbe
+	.word	0x40
+	.word	-0x7f9ff7fe
+	.word	-0x7fd7ffbe
+	.word	0x40
+	.word	-0x7f9ff7ee
+	.word	-0x7fd7ffbe
+	.word	0x60
+	.word	0x4682804
+	.word	-0x7fd7fcef
+	.word	0x30
+	.word	0x4682804
+	.word	-0x7fd7fcef
+	.word	0x30
+	.word	0x156c2824
+	.word	-0x7fd6fcef
+	.word	0x8810
+	.word	0x4603008
+	.word	-0x6fc5b3ff
 	.word	0x0
-	.word	0x3944090
+	.word	0x4603008
+	.word	-0x6fc5b3ff
 	.word	0x0
-	.word	0x3944090
-	.word	0x19c40ba
-	.word	0x19fcc09a
-	.word	0x19fcc1ff
-	.word	0x595509a
-	.word	0x27b7709e
-	.word	0x27bf709e
-	.word	0x3b440b0
-	.word	0x3b440b0
-	.word	0x3bc4090
-	.word	0x3bc4090
-	.word	0x1ffe4c98
-	.word	0x1ffe4c98
-	.word	0x1ffe4c98
-	.word	0x3be4090
-	.word	0x3be4090
-	.word	0x194409a
-	.word	0x29b4e0ff
-	.word	0x39fce0fd
-	.word	0x39fce0fd
-	.word	0x39fce0fd
-	.word	0x21b44090
-	.word	0x23b44092
-	.word	0x21b44492
-	.word	0x1dffc0fd
-	.word	0x1dffe0fd
-	.word	0x1dffe0fd
-	.word	0x19f4e1fd
-	.word	0x19f4e1fd
-	.word	0x7bd4098
-	.word	0x1df5f898
-	.word	0x7bf4c98
-	.word	0x7bf4c98
-	.word	0x39fec5fd
-	.word	0x9fee0ff
-	.word	0x25b56098
-	.word	0x25b56098
-	.word	0x3dfde8fd
-	.word	0x1bf6e5fd
-	.word	0x1bf6e5fd
-	.word	0x3b44898
-	.word	0x3b44898
-	.word	0xfb5c9fd
-	.word	0xfb5c9fd
-	.word	0xbf6c9fd
-	.word	0xbf6c9fd
-	.word	0x23b6409a
-	.word	0x1df5d4b8
-	.word	0x1df5d4b8
-	.word	0x23bc4090
-	.word	0x23bc4090
-	.word	0x59d4098
-	.word	0x59d4098
-	.word	0x5b56098
-	.word	0x5b57098
-	.word	0x1b57098
-	.word	0x39e4c98
-	.word	0x1bfeccfd
-	.word	0x1fffe5fd
-	.word	0x21b46098
-	.word	0x23b46098
-	.word	0x3bb46098
-	.word	0x29b4c0fb
-	.word	0x29b4c0ff
-	.word	0x3b64498
-	.word	0x3b64498
-	.word	0x3ffde8ff
-	.word	0x23b4409a
-	.word	0x79f7498
-	.word	0x7977498
-	.word	0x1bc4090
-	.word	0x1bc6090
-	.word	0x21bc60ba
-	.word	0x23bc60ba
-	.word	0x1b67490
-	.word	0x1b67490
-	.word	0x1b6609a
-	.word	0x1b6609a
-	.word	0x21b4609a
-	.word	0x21b460da
-	.word	0x39c4090
-	.word	0x3be4098
-	.word	0x79e4898
-	.word	0x3fffe9fd
-	.word	0x19e4c98
-	.word	0x1be4d98
-	.word	0x19e4498
-	.word	0x19fee5fd
-	.word	0x21b4409a
-	.word	0x59f4c90
-	.word	0x23be6cba
-	.word	0x20
-	.word	0x19d4098
-	.word	0x59d5098
-	.word	0x5bd6098
-	.word	0x5bd6098
-	.word	0x25bd6098
-	.word	0x19c4098
-	.word	0x3bc4098
-	.word	0x3be4098
-	.word	0x1be6098
-	.word	0x39e4090
-	.word	0x25b46098
-	.word	0x25b56098
-	.word	0x27b56098
+	.word	0xc603048
+	.word	-0x6fc5b3ff
+	.word	0x8a0
+	.word	0x20000
+	.word	0x201000
 	.word	0x0
-	.word	0x2ffff098
-	.word	0x2ffff098
-	.word	0x1df7f8fd
-	.word	0xdfff8fd
-	.word	0xdf7f8fd
-	.word	0x23be4c98
-	.word	0x23be4c98
-	.word	0x7be6898
-	.word	0x3fb7e8ff
-	.word	0x23be689a
-	.word	0x1ffecd98
-	.word	0x1bfeecfd
-	.word	0x1b4401a
-	.word	0x1b44002
-	.word	0x1b46002
-	.word	0x1bb54022
-	.word	0x1bb56002
-	.word	0x1bb56002
-	.word	0x1bc4000
-	.word	0x1bc4000
-	.word	0x21bc6002
-	.word	0x3b44010
-	.word	0x3b44000
-	.word	0x3b44000
-	.word	0x27bd4812
-	.word	0x27bd4802
-	.word	0x240000
-	.word	0x21b44002
-	.word	0x23b44800
-	.word	0x23b44800
-	.word	0x23b44800
-	.word	0x3b64002
-	.word	0x23b64002
-	.word	0x19b46012
-	.word	0x19b46002
-	.word	0x1b46038
-	.word	0x1b46000
-	.word	0x40000
-	.word	0x1964400
-	.word	0x3b64400
-	.word	0x2240000
-	.word	0x23b44000
-	.word	0xfb54800
-	.word	0x23fc4000
-	.word	0x3fc4000
-	.word	0x5954002
-	.word	0x1954002
-	.word	0x1bc4028
-	.word	0x1bc6008
-	.word	0x3bf44c00
-	.word	0x3bf5c08
-	.word	0x3bf5c00
-	.word	0x1ff44800
-	.word	0x3ff44800
-	.word	0x39e4c00
-	.word	0x3be4c00
-	.word	0x23b64400
-	.word	0x23b74408
-	.word	0x39f4c00
-	.word	0x23b45010
-	.word	0x23b45000
-	.word	0x1976400
-	.word	0x1977400
-	.word	0x59770b0
-	.word	0x1be4c80
-	.word	0x1bf4d20
-	.word	0x3b44080
-	.word	0x19e4400
-	.word	0x23b46018
-	.word	0x23b46000
-	.word	0x23b46002
-	.word	0x1dfd6138
-	.word	0x2bf46022
-	.word	0x2bf46022
-	.word	0x1b46018
-	.word	0x1b46010
-	.word	0x21b44002
-	.word	0x21b46002
-	.word	0x29fce020
-	.word	0x29fc6002
-	.word	0x21b44002
-	.word	0x39e4000
-	.word	0x39e4000
-	.word	0x3bc6000
-	.word	0x1fc4012
-	.word	0x1fc6002
-	.word	0x23fe4402
-	.word	0x3975800
-	.word	0x1dff7402
-	.word	0x39fd6002
-	.word	0x1b66002
-	.word	0x1bf46800
-	.word	0x19b46000
-	.word	0x3b74c00
-	.word	0x3b64400
-	.word	0x23b44002
-	.word	0x3bc4000
-	.word	0x23b46002
-	.word	0x1bc6000
-	.word	0x39e4c00
-	.word	0x3bf66c02
-	.word	0x19f57800
-	.word	0x19fe6400
-	.word	0x1ff4c00
-	.word	0x3b64c00
-	.word	0x1bf64c00
-	.word	0x1bf64c00
-	.word	0x1bf65c00
-	.word	0x23b66800
-	.word	0x23b66800
-	.word	0x1b47000
-	.word	0x19fe6801
-	.word	0x23be4c00
-	.word	0x23be4c00
-	.word	0x3be4000
-	.word	0x3be4000
-	.word	0x3be6c02
-	.word	0x7b64002
-	.word	0x23be6c42
-	.word	0x19964810
-	.word	0x1844002
-	.word	0x1844002
-	.word	0x1844002
-	.word	0x5854008
-	.word	0x1d856000
-	.word	0x1d856000
-	.word	0x218c4002
-	.word	0x218c4002
-	.word	0x218c4002
-	.word	0x1844002
-	.word	0x19c64c02
-	.word	0x1b44800
-	.word	0x1844800
-	.word	0x1844800
-	.word	0x1864c00
-	.word	0x1864c00
-	.word	0x1844000
-	.word	0x1846000
-	.word	0x11844000
-	.word	0x11846000
-	.word	0x1cc4000
-	.word	0x1cc6000
-	.word	0x7866c00
-	.word	0x5866c00
-	.word	0x1844000
-	.word	0x1844000
-	.word	0x1864000
-	.word	0x1944810
-	.word	0x1844800
-	.word	0x1a47000
-	.word	0x1a47000
-	.word	0x1a47000
-	.word	0x1864c00
-	.word	0x1864c00
-	.word	0x1a46002
-	.word	0x1a46002
-	.word	0x19ce4c10
-	.word	0x19d4e020
-	.word	0x19c4e000
-	.word	0x19c4e000
-	.word	0x18c4000
-	.word	0x18c4000
-	.word	0x1cc6000
-	.word	0x19d46048
-	.word	0x19d46020
-	.word	0x1944400
-	.word	0x1844400
-	.word	0x1844402
-	.word	0x5854010
-	.word	0x5854010
-	.word	0x5856012
-	.word	0x1844400
-	.word	0x1844400
-	.word	0x1944400
-	.word	0x1844402
-	.word	0x38c4010
-	.word	0x1a46030
-	.word	0x1a46000
-	.word	0x1a46020
-	.word	0x11956000
-	.word	0x11856000
-	.word	0x1844000
-	.word	0x21946022
-	.word	0x1846022
-	.word	0x19c46020
-	.word	0x19c46000
-	.word	0x18e4c00
-	.word	0x1964400
-	.word	0x1864400
-	.word	0x18d6008
-	.word	0x18d6000
-	.word	0x1846000
-	.word	0x1846000
-	.word	0x1855000
-	.word	0x1845008
-	.word	0x1864022
-	.word	0x1864002
-	.word	0x3b44800
-	.word	0x1844800
-	.word	0x1866c00
-	.word	0x1866c00
-	.word	0x1866c00
-	.word	0x1877c00
-	.word	0x1877c00
-	.word	0x19c77c00
-	.word	0x18c4000
-	.word	0x18c4000
-	.word	0x18c5000
-	.word	0x18c5000
-	.word	0x18c5000
-	.word	0x1844810
-	.word	0x1844812
-	.word	0x1844800
-	.word	0x21944032
-	.word	0x1844012
-	.word	0x5954008
-	.word	0x1844000
-	.word	0x18e4400
-	.word	0x18e4400
-	.word	0x19e4000
-	.word	0x21844800
-	.word	0x21844800
-	.word	0x1855800
-	.word	0x1855802
-	.word	0x1844800
-	.word	0x1844800
-	.word	0x1844800
+	.word	0x20000
+	.word	0x205000
+	.word	0x0
+	.word	0x112e0000
+	.word	-0x7fdeef80
+	.word	0x8000
+	.word	0x20000
+	.word	0x201000
+	.word	0x0
+	.word	0x20000
+	.word	0x205000
+	.word	0x0
+	.word	0x112e0800
+	.word	-0x7bdeefe0
+	.word	0x9040
+	.word	0x116c0000
+	.word	-0x5fdefff8
+	.word	0x8010
+	.word	0x116c0000
+	.word	-0x5fdefff8
+	.word	0x8010
+	.word	0x116c0000
+	.word	-0x5fdefff8
+	.word	0x8010
+	.word	0x6794000
+	.word	-0x7ed5f7c8
+	.word	0x0
+	.word	0x6794000
+	.word	-0x7ed5f7c8
+	.word	0x1000
+	.word	0x116c0000
+	.word	-0x5bdefff8
+	.word	0x8010
+	.word	0x116c0000
+	.word	-0x5bdefff8
+	.word	0x9010
+	.word	-0x7fd00000
+	.word	-0x6fd80000
+	.word	0x2400
+	.word	-0x7fd00000
+	.word	-0x6fd80000
+	.word	0x3400
+	.word	0xc697000
+	.word	-0x7fd76eff
+	.word	0x48
+	.word	0xc697000
+	.word	-0x7fd76eff
+	.word	0x848
+	.word	0x6687800
+	.word	-0x7fd7ffef
+	.word	0x240
+	.word	0x6687800
+	.word	-0x7fd7ffef
+	.word	0xa40
+	.word	0x6610000
+	.word	-0x7fd7fff0
+	.word	0x8
+	.word	0x6610000
+	.word	-0x7fd7fff0
+	.word	0x8
+	.word	0x6612800
+	.word	-0x6bd7f0e7
+	.word	0x1a2c
+	.word	0x6610000
+	.word	-0x7bd7fff0
+	.word	0x8
+	.word	0x6612000
+	.word	-0x7bd7fff0
+	.word	0x8
+	.word	0x6610800
+	.word	-0x6bd7f0e7
+	.word	0x1a2c
+	.word	0x6cf17000
+	.word	-0x7455f05f
+	.word	0x14b
+	.word	0x6cf17000
+	.word	-0x7457f05f
+	.word	0x94b
+	.word	0x1284000
+	.word	-0x3dd7ff7c
+	.word	0x10
+	.word	0x1284000
+	.word	-0x3dd7ff7c
+	.word	0x10
+	.word	0x64717000
+	.word	-0x7cd7f05b
+	.word	0x14b
+	.word	0x64717000
+	.word	-0x7cd7f05b
+	.word	0x94b
+	.word	0x133c0000
+	.word	-0x7fdcfff8
+	.word	0x10
+	.word	0x133c0000
+	.word	-0x7fdcfff8
+	.word	0x10
+	.word	-0x7fe00000
+	.word	-0x7fdfffbe
+	.word	0x2000
+	.word	-0x7fe00000
+	.word	-0x7fdfffbe
+	.word	0x2000
+	.word	-0x7fe00000
+	.word	-0x7fd7ffbe
+	.word	0x2000
+	.word	-0x7bddf800
+	.word	-0x7fd7ffae
+	.word	0x40
+	.word	-0x7bddf800
+	.word	-0x7fd7ffae
+	.word	0x1040
+	.word	0x82a0000
+	.word	-0x7fde0000
+	.word	0x0
+	.word	0x192e0000
+	.word	-0x7fdd0000
+	.word	0x8000
+	.word	0x600000
+	.word	-0x7fd7ffe8
+	.word	0x200
+	.word	0x600000
+	.word	-0x7fd7ffe8
+	.word	0x200
+	.word	-0x7f86c000
+	.word	-0x3ed7f768
+	.word	0x1540
+	.word	-0x7f86c000
+	.word	-0x3ed7f768
+	.word	0x5540
+	.word	0xc682000
+	.word	-0x6dc5f32f
+	.word	0x0
+	.word	0xc682800
+	.word	-0x6dc5d32f
+	.word	0x4880
+	.word	-0x7b172000
+	.word	-0x7dd3dc47
+	.word	0xc28
+	.word	-0x7b172000
+	.word	-0x7dd3d847
+	.word	0x1c28
+	.word	0x684000
+	.word	-0x7fd80000
+	.word	0x38
+	.word	0x684000
+	.word	-0x7f980000
+	.word	0x38
+	.word	0x200000
+	.word	-0x7fd7f7e0
+	.word	0x8
+	.word	0x4e02000
+	.word	-0x7fd7f3df
+	.word	0x8
+	.word	0x4e0a000
+	.word	-0x7fd3f3df
+	.word	0x1808
+	.word	0x6cb12000
+	.word	-0x35d5f87f
+	.word	0x40
+	.word	0x6cb12000
+	.word	-0x35d5f87f
+	.word	0x40
+	.word	0x6cb12000
+	.word	-0x35d5f87f
+	.word	0x840
+	.word	0x4e0a000
+	.word	-0x7dd3d9ff
+	.word	0x84c
+	.word	0x4e0a000
+	.word	-0x7dd3d9ff
+	.word	0x84c
+	.word	0xe0a000
+	.word	-0x7dd3d9ff
+	.word	0x184c
+	.word	-0x7fe00000
+	.word	-0x7fdfffbe
+	.word	0x2040
+	.word	-0x7fde0000
+	.word	-0x7fdfffbe
+	.word	0x2040
+	.word	-0x7fde0000
+	.word	-0x7fd7ffbe
+	.word	0x2040
+	.word	0x20200000
+	.word	-0x7fcff800
+	.word	0x40
+	.word	0x20200000
+	.word	-0x7fcff800
+	.word	0x40
+	.word	0x4e03000
+	.word	-0x7fd7bcff
+	.word	0x4204
+	.word	0x4e03000
+	.word	-0x7fd7bcff
+	.word	0x4204
+	.word	0x4e03800
+	.word	-0x7f97bcff
+	.word	0x4a04
+	.word	0x280000
+	.word	-0x7fd7e000
+	.word	0x11
+	.word	0x280000
+	.word	-0x7bd7e000
+	.word	0x1011
+	.word	0x28680000
+	.word	-0x67c5f780
+	.word	0x0
+	.word	0x2c682800
+	.word	-0x27c5b37f
 	.word	0x800
-	.word	0x1844800
-	.word	0x19846800
-	.word	0x1866c00
-	.word	0x1866c00
-	.word	0x1964400
-	.word	0x1864400
-	.word	0x1864400
-	.word	0x1944022
-	.word	0x1844002
-	.word	0x1846002
-	.word	0x1dc4000
-	.word	0x1dc6002
-	.word	0x18c5000
-	.word	0x1b44018
-	.word	0x3844000
-	.word	0x1b46800
-	.word	0x3966002
-	.word	0x3866002
-	.word	0x19846000
-	.word	0x1dede001
-	.word	0x1dede001
-	.word	0x21844802
-	.word	0x21844802
-	.word	0x1a46002
-	.word	0x1846000
-	.word	0x1846000
-	.word	0x1864000
-	.word	0x1864000
-	.word	0x19844008
-	.word	0x21946800
-	.word	0x1864808
-	.word	0x1864808
-	.word	0x1866808
-	.word	0x1944010
-	.word	0x1844000
-	.word	0x1864802
-	.word	0x1866002
-	.word	0x1864002
-	.word	0x18c4000
-	.word	0x9844800
-	.word	0x1846000
-	.word	0x9846800
-	.word	0x1847002
-	.word	0x18c6000
-	.word	0x18e4002
-	.word	0x19c64c00
-	.word	0x21845800
-	.word	0xd85600a
-	.word	0x985600a
-	.word	0x985600a
-	.word	0x1864400
-	.word	0x19864400
-	.word	0x19864400
-	.word	0x18c6000
-	.word	0x1cc6000
-	.word	0x1cc6000
-	.word	0x5a56000
-	.word	0x19e46002
-	.word	0x1844002
-	.word	0x1844002
-	.word	0x1844002
+	.word	0x68291000
+	.word	-0x7fdf2f80
+	.word	0x0
+	.word	0x60291000
+	.word	-0x7fdf2f80
+	.word	0x0
+	.word	0x116c4800
+	.word	-0x5ed6ff78
+	.word	0x9058
+	.word	0x6c0000
+	.word	-0x5fd7ffd8
+	.word	0x40
+	.word	0x6c0000
+	.word	-0x5fd7ffd8
+	.word	0x40
+	.word	0x8200000
+	.word	-0x6bc7f800
+	.word	0x0
+	.word	0x8200000
+	.word	-0x6bc7f800
+	.word	0x80
+	.word	0x610000
+	.word	0x280705
+	.word	0x440
+	.word	0x610000
+	.word	0x280705
+	.word	0xc40
+	.word	0x280000
+	.word	-0x7fcfb800
+	.word	0x80
+	.word	0x8280000
+	.word	-0x7fcfb800
+	.word	0x80
+	.word	0x1300000
+	.word	0x48200f8c
+	.word	0x40
+	.word	0x1300000
+	.word	0x48200f8c
+	.word	0x40
+	.word	0x1b02000
+	.word	-0x35d7f073
+	.word	0x840
+	.word	0x201000
+	.word	-0x7f97ff80
+	.word	0x4200
+	.word	0x2cb02000
+	.word	-0x35d7d87f
+	.word	0x0
+	.word	0x2cb02000
+	.word	-0x35d5d87f
+	.word	0x800
+	.word	0x600800
+	.word	-0x7fc7b7f0
+	.word	0xc4
+	.word	0x600800
+	.word	-0x7fc7b7f0
+	.word	0xc4
+	.word	0x28291000
+	.word	0x40208000
+	.word	0x0
+	.word	0x28291000
+	.word	0x40208000
+	.word	0x0
+	.word	-0x3fdff000
+	.word	-0x7fdfff36
+	.word	0x0
+	.word	-0x3fdff000
+	.word	-0x7fdddf36
+	.word	0x0
+	.word	0x4602800
+	.word	-0x7f9794d7
+	.word	0x240
+	.word	0x4602800
+	.word	-0x7f9794d7
+	.word	0x1a60
+	.word	0x4e8e000
+	.word	-0x7dd7dfff
+	.word	0x84d
+	.word	0x4e8e000
+	.word	-0x7dd7d8ff
+	.word	0x1808
+	.word	0x4613000
+	.word	-0x6fd5f07f
+	.word	0x0
+	.word	0x211000
+	.word	0x20000c
+	.word	0x0
+	.word	0x211000
+	.word	0x20000c
+	.word	0x0
+	.word	0x4611000
+	.word	-0x6bd7f7d8
+	.word	0x204
+	.word	0x4613800
+	.word	-0x6bd7f0d7
+	.word	0xa24
+	.word	0x44f17000
+	.word	-0x7e55f05f
+	.word	0x10a
+	.word	-0x7fdf0000
+	.word	-0x7fd7ff1a
+	.word	0x40
+	.word	0x4616800
+	.word	-0x6fd7d0d7
+	.word	0x828
+	.word	0x8280000
+	.word	-0x7fcff800
+	.word	0x21
+	.word	0x8280000
+	.word	-0x7fcff800
+	.word	0x21
+	.word	0x8280800
+	.word	-0x6bdff800
+	.word	0x1040
+	.word	0x8280800
+	.word	-0x6bdff800
+	.word	0x1040
+	.word	0x68281000
+	.word	-0x7fcff77c
+	.word	0x4000
+	.word	0x68281000
+	.word	-0x77cff77c
+	.word	0x4000
+	.word	0x2cf16000
+	.word	-0x35d5b080
+	.word	0x808
+	.word	0x152a8800
+	.word	-0x7fdf0000
+	.word	0x40
+	.word	0x2ce06000
+	.word	-0x75d5f37f
+	.word	0x90a
+	.word	0xce96000
+	.word	-0x7fd348ff
+	.word	0x808
+	.word	0x4e06000
+	.word	-0x7fd3dcff
+	.word	0x818
+	.word	0x222800
+	.word	-0x7fd7c000
+	.word	0x1844
+	.word	0x210000
+	.word	-0x7d95f7d8
+	.word	0x28
+	.word	0x200000
+	.word	-0x7fe00000
+	.word	0x0
+	.word	0x200000
+	.word	-0x6f87f7f8
+	.word	0x8021
+	.word	0x8210000
+	.word	-0x6b8df800
+	.word	0x122
+	.word	0x200000
+	.word	-0x7fe00000
+	.word	0x0
+	.word	0x684000
+	.word	-0x7ed80000
+	.word	0x10a
+	.word	0x8684000
+	.word	-0x6ec7f800
+	.word	0x10a
+	.word	0x8694000
+	.word	-0x7ed80000
+	.word	0x10a
+	.word	0x684000
+	.word	-0x7ed80000
+	.word	0x11e
+	.word	0x68290000
+	.word	-0x36dd677c
+	.word	0x4000
+	.word	0x201000
+	.word	-0x7fc7b800
+	.word	0x4240
+	.word	0x203000
+	.word	-0x7fc7b800
+	.word	0x4240
+	.word	0x201000
+	.word	-0x7fc7b7f0
+	.word	0x4240
+	.word	0x203800
+	.word	-0x6fc797f0
+	.word	0x42c4
+	.word	0x11280000
+	.word	-0x4f9efff0
+	.word	0xc210
+	.word	-0x7b0e9000
+	.word	-0x7e95f87f
+	.word	0xd24
+	.word	0x196c0000
+	.word	-0x5fdef800
+	.word	0xc000
+	.word	0x196d0000
+	.word	-0x5fdf0000
+	.word	0x8010
+	.word	0x116c0000
+	.word	-0x5fdf0000
+	.word	0x8010
+	.word	0x290080
+	.word	-0x6fd7f800
+	.word	0x20
+	.word	0x290080
+	.word	-0x6fd7f800
+	.word	0x20
+	.word	0x116d0880
+	.word	-0x6f96f0ef
+	.word	0x8834
+	.word	0x6cf92000
+	.word	-0x25d5d07f
+	.word	0x8800
+	.word	-0x800
+	.word	-0x1
+	.word	0xffff
+	.word	-0x5b9ff7fe
+	.word	-0x7fd7ffbe
+	.word	0x0
+	.word	-0x5b9ff7fe
+	.word	-0x7fd7ffbe
+	.word	0x0
+	.word	-0x5b9ff7ee
+	.word	-0x7fd7ffbe
+	.word	0x20
+	.word	0x685004
+	.word	-0x7fd80000
+	.word	0x10
+	.word	0x685804
+	.word	-0x7fd80000
+	.word	0x10
+	.word	0x4687824
+	.word	-0x7fd7dcff
+	.word	0x1810
+	.word	0x4602008
+	.word	-0x6fd7d3e7
+	.word	0x4
+	.word	0x4602808
+	.word	-0x6fd7d3e7
+	.word	0x4
+	.word	0x4602848
+	.word	-0x6fd7d3e7
+	.word	0x8a4
+	.word	0x2695800
+	.word	-0x66d7f8e7
+	.word	0x148
+	.word	0x2695800
+	.word	-0x66d7f8e7
+	.word	0x948
+	.word	0x316c0000
+	.word	-0x5fdcff78
+	.word	0x8110
+	.word	0x316c0000
+	.word	-0x5fdcff78
+	.word	0x8110
+	.word	0x12e1000
+	.word	-0x7fdefaf7
+	.word	0x40
+	.word	0x112e1000
+	.word	-0x7fdefaf7
+	.word	0x840
+	.word	0x8220000
+	.word	-0x3fd7eff0
+	.word	0x1
+	.word	0x8220000
+	.word	-0x3fd7eff0
+	.word	0x1001
+	.word	0x133c0000
+	.word	-0x5fdcfff8
+	.word	0x10
+	.word	0x8210000
+	.word	-0x7fcff800
+	.word	0x3
+	.word	0x8210000
+	.word	-0x6fcff800
+	.word	0x3
+	.word	0xc697000
+	.word	-0x7fd76ef8
+	.word	0x8
+	.word	0x6ce17000
+	.word	-0x7455f758
+	.word	0x108
+	.word	0x64e17000
+	.word	-0x7cd5f754
+	.word	0x10b
+	.word	0x2ce97000
+	.word	-0x7655ff58
+	.word	0x102
+	.word	0x3ded7000
+	.word	-0x5654ff60
+	.word	0x8112
+	.word	0x392c0000
+	.word	-0x57dcff7c
+	.word	0x10
+	.word	0x392c0000
+	.word	-0x17dcff7c
+	.word	0x8010
+	.word	0x8290000
+	.word	-0x7fd77000
+	.word	0x4002
+	.word	0xc292000
+	.word	-0x7fd76cff
+	.word	0x4002
+	.word	0xc292000
+	.word	-0x7fd76cff
+	.word	0x4822
+	.word	-0x7fe00000
+	.word	-0x7fdfffb6
+	.word	0x2000
+	.word	0x687000
+	.word	-0x6fd7f3ff
+	.word	0x14d
+	.word	0x687000
+	.word	-0x6fd7f3ff
+	.word	0x9cd
+	.word	0x4607000
+	.word	-0x3dd7f87f
+	.word	0x4208
+	.word	0x4e02000
+	.word	-0x7fd7f3df
+	.word	0x909
+	.word	-0x7fe00000
+	.word	-0x7fdfff3e
+	.word	0x9
+	.word	-0x7fe00000
+	.word	-0x7fdfff3e
+	.word	0x9
+	.word	-0x7fe00000
+	.word	-0x7fdfff3e
+	.word	0x8009
+	.word	-0x7b06b800
+	.word	-0x3cd7d8e7
+	.word	0x441
+	.word	-0x7fe00000
+	.word	-0x7fdfff96
+	.word	0x208
+	.word	-0x7fe00000
+	.word	-0x7fdfff96
+	.word	0x208
+	.word	0x192e0000
+	.word	-0x7fdefff8
+	.word	0x8000
+	.word	0x601000
+	.word	-0x6fd7f3ff
+	.word	0x200
+	.word	0x4603000
+	.word	-0x6fd7f3ff
+	.word	0xa00
+	.word	0x28684000
+	.word	-0x76d5ff80
+	.word	0x410a
+	.word	0x784000
+	.word	-0x3ed7ff80
+	.word	0x110a
+	.word	0x117c0000
+	.word	-0x1fdef778
+	.word	0x8010
+	.word	0x2c682800
+	.word	-0x27c5b37f
+	.word	0x4800
+	.word	0x21390000
+	.word	-0x37dff774
+	.word	0x4102
 	.word	0x0
 	.word	0x0
-	.word	0x1864400
-	.word	0x1844000
-	.word	0x1844000
-	.word	0x1844000
-	.word	0x1844000
-	.word	0x1844000
-	.word	0x5856010
-	.word	0x1846010
-	.word	0x19c4600a
-	.word	0x19c4600a
-	.word	0x1844880
-	.word	0x1864c00
-	.word	0x1864c00
-	.word	0x21846002
-	.word	0x21846002
-	.word	0x21846002
-	.word	0x1864400
-	.word	0x1864400
-	.word	0x1864400
-	.word	0x1864400
-	.word	0x1866000
-	.word	0x1866000
-	.word	0x21ac6002
-	.word	0x21ac6002
-	.word	0x18c4000
-	.word	0x18c4000
-	.word	0x19c6002
-	.word	0x18c6002
-	.word	0x1a66800
-	.word	0x19866800
-	.word	0x1846000
-	.word	0x1846000
-	.word	0x18e6c00
-	.word	0x18e6c00
-	.word	0x3864000
-	.word	0x19846002
-	.word	0x9844800
-	.word	0x1867000
-	.word	0x1946028
-	.word	0x1846008
-	.word	0x19846008
-	.word	0x1864800
-	.word	0x1846400
-	.word	0x1846400
-	.word	0x1807400
-	.word	0x1807400
-	.word	0x18c6010
-	.word	0x18c6018
-	.word	0x1844400
-	.word	0x1844400
-	.word	0x1866800
-	.word	0x1846400
-	.word	0x1846000
-	.word	0x1867000
-	.word	0x19c64c00
-	.word	0x1847008
-	.word	0x1844002
-	.word	0x1844002
-	.word	0x1844002
-	.word	0x184400a
-	.word	0x1844002
-	.word	0x19844002
-	.word	0x18c4000
-	.word	0x18c4000
-	.word	0x18e4000
-	.word	0x1844002
-	.word	0x1844002
-	.word	0x1844002
-	.word	0x1a44000
-	.word	0x19e44000
-	.word	0x1b44800
-	.word	0x1a44800
-	.word	0x1a44800
-	.word	0x9c4e000
-	.word	0x9cce000
-	.word	0x18c4002
-	.word	0x1864400
-	.word	0x1864400
-	.word	0x1846000
-	.word	0x1846002
-	.word	0x1844010
-	.word	0x18c4000
-	.word	0x18c4000
-	.word	0x1a4603c
-	.word	0x1a46024
-	.word	0x18c4000
-	.word	0x18c4000
-	.word	0x21844002
-	.word	0x21844002
-	.word	0x1844c00
-	.word	0x1844c00
-	.word	0x1844000
-	.word	0x1844000
-	.word	0x9d46016
-	.word	0x9c46012
-	.word	0x1844000
-	.word	0x1844000
-	.word	0x1844000
-	.word	0x1964000
-	.word	0x1866400
-	.word	0x1846050
-	.word	0x1844000
-	.word	0x218e6002
-	.word	0x1846000
-	.word	0x1846000
-	.word	0x1924020
-	.word	0x18c6812
-	.word	0x18c7812
-	.word	0x7877010
-	.word	0x5876002
-	.word	0x1945008
-	.word	0x5854800
-	.word	0x1864c82
-	.word	0x1844402
-	.word	0x10e6800
-	.word	0x1846002
-	.word	0x1846022
-	.word	0x1846002
-	.word	0x19c46002
-	.word	0x9864800
-	.word	0x1864000
-	.word	0x1866002
-	.word	0x1ce4000
+	.word	0x0
+	.word	0x200000
+	.word	-0x80000000
+	.word	0x0
+	.word	0x68690000
+	.word	-0x37d5ff78
+	.word	0x100
+	.word	0x44221000
+	.word	-0x7bd7bffc
+	.word	0x0
+	.word	0x4c221000
+	.word	-0x7bd73ffc
+	.word	0x0
+	.word	0x24611000
+	.word	-0x6ad5ff5c
+	.word	0x0
+	.word	0x142a0800
+	.word	-0x6fdefff0
+	.word	0x1240
+	.word	0x601000
+	.word	-0x6f977f80
+	.word	0x4200
+	.word	0x6e16000
+	.word	-0x7ed7d8ff
+	.word	0x106
+	.word	0x6e16000
+	.word	-0x7ed7d8ff
+	.word	0x926
+	.word	0x8290000
+	.word	-0x6fcff7fc
+	.word	0x1081
+	.word	0x152a8800
+	.word	-0x7f9ec000
+	.word	0x44
+	.word	0x620000
+	.word	-0x7fd80000
+	.word	0x6248
+	.word	0x422a800
+	.word	-0x7fd7a000
+	.word	0x1848
+	.word	0x4780800
+	.word	-0x3fdfd36f
+	.word	0x1040
+	.word	-0x7b178800
+	.word	-0x7ed7f8ef
+	.word	0x504
+	.word	-0x7b178800
+	.word	-0x7ed7d8e7
+	.word	0x1d04
+	.word	0x601000
+	.word	-0x7fd7bffc
+	.word	0x210
+	.word	0x601000
+	.word	-0x7fd7bffc
+	.word	0x4210
+	.word	0x600000
+	.word	-0x7fd7f7e0
+	.word	0x204
+	.word	0x600000
+	.word	-0x7fd7f7e0
+	.word	0x204
+	.word	0x20601000
+	.word	-0x7fc7b7e0
+	.word	0x5280
+	.word	-0x77980000
+	.word	-0x7fcff800
+	.word	0x401
+	.word	-0x7797e000
+	.word	-0x7fcff800
+	.word	0x401
+	.word	-0x6397d000
+	.word	-0x5fd7f400
+	.word	0x8001
+	.word	-0x679c0000
+	.word	-0x6f86f800
+	.word	0x8489
+	.word	0x15640800
+	.word	-0x5f9eb800
+	.word	0x8000
+	.word	0x6780000
+	.word	-0x3dd7fff8
+	.word	0x110
+	.word	0x6780000
+	.word	-0x3dd7fff8
+	.word	0x1110
+	.word	0x8280080
+	.word	-0x7f87f800
+	.word	0x8021
+	.word	-0x7b9ff000
+	.word	-0x7ed7ffe0
+	.word	0x744
+	.word	-0x7b9ff000
+	.word	-0x7ed7bfe0
+	.word	0x745
+	.word	0x68290000
+	.word	-0x36dd677c
+	.word	0x4000
+	.word	0x48690000
+	.word	-0x7cddff78
+	.word	0x1001
+	.word	0x200000
+	.word	-0x7fe00000
+	.word	0x0
+	.word	0x468e000
+	.word	-0x7dd7dff8
+	.word	0x8
+	.word	0x468f000
+	.word	-0x79d7dfd8
+	.word	0x8
+	.word	0x2ce06000
+	.word	-0x75d5f377
+	.word	0xa
+	.word	0xce96000
+	.word	-0x7fd348f7
+	.word	0x8
+	.word	0x4e06000
+	.word	-0x7fd3fcf7
+	.word	0x18
+	.word	0x4e13000
+	.word	-0x7f95f07f
+	.word	0x80a
+	.word	0x44f17000
+	.word	-0x7e55f05f
+	.word	0x90a
+	.word	0x8690000
+	.word	-0x7f977f80
+	.word	0x1800
+	.word	0x680000
+	.word	-0x7f97ff80
+	.word	0x10
+	.word	0x9680000
+	.word	-0x7f86f780
+	.word	0x8000
+	.word	0x600000
+	.word	-0x7f97bff8
+	.word	0x4224
+	.word	0x600000
+	.word	-0x7f97bff8
+	.word	0x4224
+	.word	0x4612800
+	.word	-0x2f9798e7
+	.word	0x4a24
+	.word	0x196d0000
+	.word	-0x4784f780
+	.word	0x8300
+	.word	0x196d0000
+	.word	-0x5f9cff80
+	.word	0x8310
+	.word	-0x57170000
+	.word	-0x76ddff36
+	.word	0x20a
+	.word	-0x7b97d7fe
+	.word	-0x7fd7de9d
+	.word	0x0
+	.word	-0x7b97d7fe
+	.word	-0x7fd7de9d
+	.word	0x0
+	.word	-0x7b97d76e
+	.word	-0x7fd3de8d
+	.word	0x1a20
+	.word	0x14682004
+	.word	-0x7ed7dff0
+	.word	0x19
+	.word	0x1468a804
+	.word	-0x7ed3dcef
+	.word	0x819
+	.word	0x1468a824
+	.word	-0x7cd3dcef
+	.word	0x85d
+	.word	0x4601008
+	.word	-0x6fd7d7d8
+	.word	0x204
+	.word	0x4603008
+	.word	-0x6fd7d3d7
+	.word	0x204
+	.word	0x4603048
+	.word	-0x6fd7d3d7
+	.word	0xa24
+	.word	0x6704000
+	.word	-0x3fd7fff8
+	.word	0x100
+	.word	0x6704000
+	.word	-0x3fd7fff8
+	.word	0x1100
+	.word	-0x7d96a800
+	.word	-0x76d7f7f0
+	.word	0x508
+	.word	-0x7d96a800
+	.word	-0x76d7f7f0
+	.word	0x1508
+	.word	0x20000
+	.word	0x201000
+	.word	0x0
+	.word	0x20000
+	.word	0x205000
+	.word	0x0
+	.word	0x192e0000
+	.word	-0x7fdef000
+	.word	0x8000
+	.word	0x20000
+	.word	0x205000
+	.word	0x0
+	.word	0x192e0000
+	.word	-0x7fdef000
+	.word	0x8000
+	.word	-0x7fe00000
+	.word	-0x7fd5f7f6
+	.word	0x0
+	.word	-0x7fa00000
+	.word	-0x7fd5f0e5
+	.word	0x140
+	.word	-0x7b1fe000
+	.word	-0x7fd5f4e5
+	.word	0x940
+	.word	-0x6fdff000
+	.word	-0x3fd7ffbe
+	.word	0x0
+	.word	-0x6f97e800
+	.word	-0x3fd7df3d
+	.word	0x0
+	.word	-0x6e93e800
+	.word	-0x3fd6d73d
+	.word	0x9841
+	.word	0x156c0000
+	.word	-0x5fdeffe0
+	.word	0x8010
+	.word	0x156c0000
+	.word	-0x5fdeffe0
+	.word	0x8010
+	.word	0x116d0000
+	.word	-0x5fcef7f8
+	.word	0x80c0
+	.word	-0x6e930000
+	.word	-0x5fcef7f8
+	.word	0x84c0
+	.word	0x28790000
+	.word	-0x77d5f07c
+	.word	0x108
+	.word	0x28790000
+	.word	-0x77d5f07c
+	.word	0x108
+	.word	0x28790000
+	.word	-0x77d5f07c
+	.word	0x90a
+	.word	0x8680000
+	.word	-0x7fdff780
+	.word	0x80
+	.word	0x196e0000
+	.word	-0x7fdef780
+	.word	0x8080
+	.word	-0x7fce0000
+	.word	-0x7fd7ffbe
+	.word	0x8
+	.word	-0x7b8f5800
+	.word	-0x7fd7febd
+	.word	0x80c
+	.word	0x4616800
+	.word	-0x7fd7f0ef
+	.word	0x400
+	.word	0x4616800
+	.word	-0x7fd7d0e7
+	.word	0xc00
+	.word	0x4616800
+	.word	-0x7fdfd0e7
+	.word	0xc00
+	.word	0x620800
+	.word	-0x7fdffff0
+	.word	0x0
+	.word	0x116e0800
+	.word	-0x7fdfffe8
+	.word	0x8000
+	.word	0x620800
+	.word	-0x77dffff0
+	.word	0x0
+	.word	0x4613000
+	.word	-0x7fd5f0d7
+	.word	0x100
+	.word	0x4613000
+	.word	-0x7fd5d0d7
+	.word	0x100
+	.word	0x4613000
+	.word	-0x7fd5d0d7
+	.word	0x920
+	.word	0x4e0a000
+	.word	-0x7dd7d8ff
+	.word	0x84c
+	.word	0x4e0a000
+	.word	-0x7d87d8ff
+	.word	0x1844
+	.word	0x685000
+	.word	-0x7fd7f7f8
+	.word	0x149
+	.word	0x60611000
+	.word	-0x7fd738fb
+	.word	0x4200
+	.word	0x695000
+	.word	-0x7ed5f778
+	.word	0x10a
+	.word	0x695000
+	.word	-0x7ed5f778
+	.word	0x10a
+	.word	0x6df12800
+	.word	-0x35d5d46b
+	.word	0x4040
+	.word	0x6702000
+	.word	-0x3e97327b
+	.word	0x840
+	.word	0x611800
+	.word	-0x7f973fc8
+	.word	0x4204
+	.word	0x611800
+	.word	-0x7f973fc8
+	.word	0x4204
+	.word	0x4611800
+	.word	-0x6f9710c7
+	.word	0x4a24
+	.word	0x6ce8a000
+	.word	-0x75d5d87b
+	.word	0x808
+	.word	0x6ce8a000
+	.word	-0x75d5d87b
+	.word	0x808
+	.word	0x8690000
+	.word	-0x7fd77ff8
+	.word	0x0
+	.word	0x8690000
+	.word	-0x7fd77ff8
+	.word	0x0
+	.word	0xce97000
+	.word	-0x7ed76ef7
+	.word	0x8
+	.word	0xce97000
+	.word	-0x7ed76ef7
+	.word	0x8
+	.word	0x1def2000
+	.word	-0x77d4fa7f
+	.word	0x8008
+	.word	0x1def6000
+	.word	-0x7fd4fa7f
+	.word	0x8008
+	.word	-0x7f97b800
+	.word	-0x7fd7ff3e
+	.word	0x0
+	.word	-0x7b8ef000
+	.word	-0x7fd7f8fb
+	.word	0x2400
+	.word	-0x7b8ef000
+	.word	-0x7fd7f8fb
+	.word	0x2400
+	.word	0x2680800
+	.word	-0x7fcdf7f8
+	.word	0x1
+	.word	0x2680800
+	.word	-0x7fcdf7f8
+	.word	0x81
+	.word	0x201000
+	.word	-0x7fc5f800
+	.word	0x101
+	.word	0x201000
+	.word	-0x7f85f800
+	.word	0x181
+	.word	0x601000
+	.word	-0x7f980000
+	.word	0x210
+	.word	0x601000
+	.word	-0x7f980000
+	.word	0x210
+	.word	0x600000
+	.word	-0x7fdfc000
+	.word	0x214
+	.word	0x28394000
+	.word	-0x75d5f780
+	.word	0x4003
+	.word	0x2c796000
+	.word	-0x75d5f07f
+	.word	0x4803
+	.word	0x4f97000
+	.word	-0x74d5d277
+	.word	0x108
+	.word	0x8620800
+	.word	-0x7fd80000
+	.word	0x204
+	.word	0x196e0880
+	.word	-0x7fd6fff8
+	.word	0x9234
+	.word	0x196e0880
+	.word	-0x7fd6fce8
+	.word	0x9234
+	.word	-0x7b9fd800
+	.word	-0x7dd7debd
+	.word	0x200
+	.word	-0x7b9fd800
+	.word	-0x3dd7debd
+	.word	0xa04
+	.word	0x116c0000
+	.word	-0x5fd6ff78
+	.word	0x8132
+	.word	0x116c0080
+	.word	-0x5fd6ff68
+	.word	0x8132
+	.word	0x4693800
+	.word	-0x7ed7d0cf
+	.word	0x1840
+	.word	0x780800
+	.word	-0x6fd80000
+	.word	0x3040
+	.word	0x68281000
+	.word	-0x7f95f77c
+	.word	0x4208
+	.word	0x68281000
+	.word	-0x7f95bf7c
+	.word	0x4218
+	.word	0x600000
+	.word	-0x6fdff800
+	.word	0x201
+	.word	0x600000
+	.word	-0x6fddf800
+	.word	0x201
+	.word	0x4600800
+	.word	-0x7fd7b7d0
+	.word	0x44
+	.word	0x4680800
+	.word	-0x7fd7b7d0
+	.word	0xc4
+	.word	0x68600000
+	.word	-0x73ddff80
+	.word	0x200
+	.word	0x68600000
+	.word	-0x73ddff80
+	.word	0x200
+	.word	-0x7fa00000
+	.word	-0x7fd7ffba
+	.word	0x6200
+	.word	-0x7fa00000
+	.word	-0x7fd7ffba
+	.word	0x6200
+	.word	0x620800
+	.word	-0x7fd7bff0
+	.word	0x4240
+	.word	0x622800
+	.word	-0x6fd79ff0
+	.word	0x42c4
+	.word	0x280000
+	.word	-0x7fdff800
+	.word	0x0
+	.word	0x20680000
+	.word	-0x6f97f780
+	.word	0x0
+	.word	0x11290000
+	.word	-0x7ed6f780
+	.word	0x8000
+	.word	0x24f93800
+	.word	-0x2cd7d06f
+	.word	0x40
+	.word	0x21310000
+	.word	-0x35d7f77c
+	.word	0x40
+	.word	0x21f10000
+	.word	-0x35d7f77c
+	.word	0x1040
+	.word	0x61300000
+	.word	-0x77d7f77c
+	.word	0x0
+	.word	0x65f02000
+	.word	-0x77d7f07b
+	.word	0x0
+	.word	-0x6e9bf800
+	.word	-0x7fd6ffbe
+	.word	0x8020
+	.word	0x78311000
+	.word	-0x76ddf778
+	.word	0x814a
+	.word	0x24790800
+	.word	-0x3dd5f770
+	.word	0x1045
+	.word	0x200000
+	.word	-0x80000000
+	.word	0x0
+	.word	0x201000
+	.word	-0x7fd7f800
+	.word	0x0
+	.word	0xa201000
+	.word	-0x7f97f800
+	.word	0x4000
+	.word	0xa601000
+	.word	-0x6fc7f800
+	.word	0x0
+	.word	0xa601000
+	.word	-0x6fc7f800
+	.word	0x0
+	.word	0xa601800
+	.word	-0x6f87f800
+	.word	0x0
+	.word	0x200000
+	.word	-0x7fc7b800
+	.word	0x0
+	.word	0x2780000
+	.word	-0x6fc7f800
+	.word	0x1
+	.word	0x8680000
+	.word	-0x6fc7f780
+	.word	0x1
+	.word	0x600000
+	.word	-0x6fc5f780
+	.word	0x4201
+	.word	0x280000
+	.word	-0x7fcff780
+	.word	0x81
+	.word	0x600880
+	.word	-0x7fd5fff0
+	.word	0x120
+	.word	0x601880
+	.word	-0x7fd5bff0
+	.word	0x120
+	.word	0x116c1880
+	.word	-0x6fd4fff0
+	.word	0x8130
+	.word	0x200000
+	.word	-0x7f9dc000
+	.word	0x0
+	.word	0x48681800
+	.word	-0x7795326f
+	.word	0x0
+	.word	0x48681800
+	.word	-0x7795326f
+	.word	0x0
+	.word	0x44613000
+	.word	-0x7f97b87f
+	.word	0x4a04
+	.word	0x4c613000
+	.word	-0x7f97f27f
+	.word	0x804
+	.word	0x44613000
+	.word	-0x7f973a6f
+	.word	0x804
+	.word	0x30694880
+	.word	-0x74d4f770
+	.word	0x8028
+	.word	0x30690880
+	.word	-0x76d4f770
+	.word	0x8028
+	.word	0x8690000
+	.word	-0x6f87f778
+	.word	0x80
+	.word	0x4693800
+	.word	-0x7f97fc67
+	.word	0xa00
+	.word	0x10690980
+	.word	-0x6f96ff68
+	.word	0x8b20
+	.word	0x68e90000
+	.word	-0x7695b077
+	.word	0x8
+	.word	0x6c792000
+	.word	-0x75d5d07f
+	.word	0x5840
+	.word	-0x7f9ffffe
+	.word	-0x7fd7ffbe
+	.word	0x204
+	.word	-0x7f9ffffe
+	.word	-0x7fd7ffbe
+	.word	0x204
+	.word	-0x7b9fffee
+	.word	-0x7f97ffbe
+	.word	0x224
+	.word	0x4e8f004
+	.word	-0x7dd7dcc7
+	.word	0x418
+	.word	0x4e8f004
+	.word	-0x7dd3dccf
+	.word	0xc18
+	.word	0x4e8f024
+	.word	-0x7dd3dccf
+	.word	0xc18
+	.word	0x18604008
+	.word	-0x7fc7f800
+	.word	0x0
+	.word	0x18606008
+	.word	-0x7fc7f7f0
+	.word	0x0
+	.word	0x1c606848
+	.word	-0x7fc7b7f0
+	.word	0x10c0
+	.word	0x156c0000
+	.word	-0x7fdeffd8
+	.word	0x8010
+	.word	0x156c0000
+	.word	-0x7fdeffd8
+	.word	0x8010
+	.word	0x156c0000
+	.word	-0x5fdeffd8
+	.word	0x8010
+	.word	0x6695800
+	.word	-0x6ed7f800
+	.word	0x4
+	.word	0x6697800
+	.word	-0x6ed7f7ff
+	.word	0x84
+	.word	0x420000
+	.word	0x28
+	.word	0x0
+	.word	0x620800
+	.word	-0x7fd7ffc8
+	.word	0x1142
+	.word	0xc690800
+	.word	-0x7fd78000
+	.word	0x8
+	.word	0xc690800
+	.word	-0x7fd78000
+	.word	0x8
+	.word	0xc690800
+	.word	-0x7fd78000
+	.word	0x100c
+	.word	-0x7f97c000
+	.word	-0x7fdfff36
+	.word	0x0
+	.word	-0x7f97b800
+	.word	-0x7fd7ff3e
+	.word	0x0
+	.word	0x4610000
+	.word	-0x7f95fcd7
+	.word	0x4204
+	.word	0x4612000
+	.word	-0x7f95fcd3
+	.word	0x4a24
+	.word	0x4610000
+	.word	-0x7f974000
+	.word	0x4200
+	.word	0x24610000
+	.word	-0x7f974000
+	.word	0x4220
+	.word	0x20000
+	.word	0x1000
+	.word	0x0
+	.word	-0x77de0000
+	.word	-0x7fdfef16
+	.word	0x0
+	.word	0x196e0000
+	.word	-0x7fdeef80
+	.word	0x8000
+	.word	0x14e0000
+	.word	-0x7fdeffe0
+	.word	0x0
+	.word	0x196e0800
+	.word	-0x7fdeffd0
+	.word	0xc000
+	.word	-0x7996b000
+	.word	-0x7ed76ef8
+	.word	0x408
+	.word	0x4e80000
+	.word	-0x6fc7f3ff
+	.word	0x8
+	.word	0x4e82000
+	.word	-0x6fc7d3ff
+	.word	0x888
+	.word	-0x7fdff000
+	.word	-0x7fdfffbe
+	.word	0x8
+	.word	-0x7fdff000
+	.word	-0x7fdfffbe
+	.word	0x8
+	.word	0x4200000
+	.word	-0x7fc7f7fc
+	.word	0x200
+	.word	0x4600000
+	.word	-0x7fc7f7fc
+	.word	0x200
+	.word	-0x7b069800
+	.word	-0x3cd7d8e7
+	.word	0x441
+	.word	0x316d1000
+	.word	-0x77def77c
+	.word	0x8040
+	.word	0x316d1000
+	.word	-0x77def77c
+	.word	0x8040
+	.word	0x24e96000
+	.word	-0x7ed7d8d7
+	.word	0x10b
+	.word	0x24e96800
+	.word	-0x7ed7d8d7
+	.word	0x90b
+	.word	0x21390000
+	.word	-0x37dff774
+	.word	0x4102
+	.word	0x117c0000
+	.word	-0x1fdef778
+	.word	0x8014
+	.word	0x6794800
+	.word	-0x3ed7ff70
+	.word	0x140
+	.word	0x6795800
+	.word	-0x3ed7ff70
+	.word	0x1140
+	.word	0x68381000
+	.word	-0x76ddf778
+	.word	0x14a
+	.word	0x14780800
+	.word	-0x3fd7fff0
+	.word	0x1000
+	.word	0x14780800
+	.word	-0x3fd7fff0
+	.word	0x1000
+	.word	0x48201000
+	.word	-0x77d7bf80
+	.word	0x0
+	.word	0x48201000
+	.word	-0x7795bf80
+	.word	0x2
+	.word	0x4205000
+	.word	-0x3dd7dff8
+	.word	0x4208
+	.word	0x8714000
+	.word	-0x75d7f777
+	.word	0x8
+	.word	0x44e15000
+	.word	-0x7e55f7d7
+	.word	0x10a
+	.word	0x11680000
+	.word	-0x5ddefff8
+	.word	0x8110
+	.word	0x1310000
+	.word	-0x37dff774
+	.word	0x0
+	.word	0x4680880
+	.word	-0x7f97fff0
+	.word	0x220
+	.word	0x4682880
+	.word	-0x7f93fff0
+	.word	0x220
+	.word	0x4682880
+	.word	-0x6f93fff0
+	.word	0x220
+	.word	-0x7b0e9000
+	.word	-0x7ed5f0f7
+	.word	0x504
+	.word	0x468a800
+	.word	-0x7dd11aff
+	.word	0x808
+	.word	0x468a800
+	.word	-0x7dd11aef
+	.word	0x808
+	.word	0x4600000
+	.word	-0x7fd80000
+	.word	0x204
+	.word	0x4600000
+	.word	-0x7f980000
+	.word	0x204
+	.word	0x620800
+	.word	-0x6fdffff0
+	.word	0x40
+	.word	0x4622800
+	.word	-0x6fd7fff0
+	.word	0x1440
+	.word	0x670a800
+	.word	-0x3dd3d2ff
+	.word	0xc49
+	.word	0x670a800
+	.word	-0x3dd3d2ff
+	.word	0x1c49
+	.word	-0x6f9df800
+	.word	-0x7fdfffbe
+	.word	0x3040
+	.word	0x192c0000
+	.word	-0x6fcef780
+	.word	0x1
+	.word	0x192c0000
+	.word	-0x6fcef780
+	.word	0x1
+	.word	0x86c0000
+	.word	-0x7fdef800
+	.word	0x9
+	.word	-0x7f9fe000
+	.word	-0x7dd7f3bd
+	.word	0x0
+	.word	-0x7b9fe000
+	.word	-0x7dd7f3bd
+	.word	0x820
+	.word	0x4780800
+	.word	-0x3fdfd36f
+	.word	0x5840
+	.word	0x68291000
+	.word	-0x7f972f80
+	.word	0x0
+	.word	0x4613000
+	.word	-0x6fd5f47f
+	.word	0x840
+	.word	0x4613800
+	.word	-0x6b97f4d7
+	.word	0x4a24
+	.word	-0x7b1ee000
+	.word	-0x7fd7ff99
+	.word	0x840
+	.word	0xce96000
+	.word	-0x7fd34cff
+	.word	0x808
+	.word	0x4e06000
+	.word	-0x7fd3dcff
+	.word	0x818
+	.word	0x3ded7000
+	.word	-0x5654ff5f
+	.word	0x8912
+	.word	0x196e0000
+	.word	-0x7fdeff78
+	.word	0x8000
+	.word	-0x7f97b800
+	.word	-0x7ed7ffbe
+	.word	0x34a
+	.word	0x8684000
+	.word	-0x6ed7f800
+	.word	0x430a
+	.word	0x106a0800
+	.word	-0x4fd6fff0
+	.word	0x1240
+	.word	0x600800
+	.word	-0x7f97f7e0
+	.word	0x244
+	.word	0x68290000
+	.word	-0x36dd6774
+	.word	0x4000
+	.word	0x2c79a800
+	.word	-0x77d1dc7c
+	.word	0x1948
+	.word	0x64611000
+	.word	-0x7f973cfc
+	.word	0x4200
+	.word	0x45702000
+	.word	-0x77d7f07b
+	.word	0x800
+	.word	0x9611000
+	.word	-0x77dff37c
+	.word	0x4000
+	.word	0x19790000
+	.word	-0x37dfef74
+	.word	0x0
+	.word	0x28690000
+	.word	-0x35d5f87f
+	.word	0x404a
+	.word	0x28690000
+	.word	-0x75d5f87f
+	.word	0x4048
+	.word	0x28690000
+	.word	-0x74d5f877
+	.word	0x4048
+	.word	0x44690880
+	.word	-0x7f973f70
+	.word	0x4b20
+	.word	0x44692880
+	.word	-0x6fc7ff6f
+	.word	0xcba0
+	.word	0x620000
+	.word	-0x7f97bff8
+	.word	0x210
+	.word	0x44612000
+	.word	-0x7f95f07f
+	.word	0x4a44
+	.word	0x716d0880
+	.word	-0x6f96f76c
+	.word	0xb20
+	.word	0x68680800
+	.word	-0x77d5f780
+	.word	0x8
+	.word	0x8684000
+	.word	-0x7ecff778
+	.word	0x40cb
+	.word	0x8684000
+	.word	-0x7ecff778
+	.word	0x40cb
+	.word	0x5790000
+	.word	-0x36d7f77f
+	.word	0x1840
+	.word	-0x7f97c000
+	.word	-0x7edcff1e
+	.word	0x200
+	.word	0x7d692800
+	.word	-0x6685b770
+	.word	0xcbb0
+	.word	0x28692000
+	.word	-0x74d5fc77
+	.word	0x819
+	.word	-0x6f8ff7fe
+	.word	-0x6fd7ffbe
+	.word	0x2040
+	.word	-0x6f8ff7fe
+	.word	-0x6fd7ffbe
+	.word	0x2040
+	.word	-0x6f8ff76e
+	.word	-0x6fd7ffbe
+	.word	0x2060
+	.word	0x4605004
+	.word	-0x7fd5ffe0
+	.word	0x1c
+	.word	0x460f004
+	.word	-0x7fd5dcdf
+	.word	0x81c
+	.word	0x460f024
+	.word	-0x7f95dcdf
+	.word	0x81c
+	.word	0x4684808
+	.word	-0x6fc7f7ff
+	.word	0x8
+	.word	0x468e808
+	.word	-0x6fc7f7ff
+	.word	0x808
+	.word	0x468e848
+	.word	-0x6bc7f7ff
+	.word	0x8cc
+	.word	-0x799ec000
+	.word	-0x6ed5dfdf
+	.word	0x408
+	.word	-0x719e9800
+	.word	-0x6ed5da5f
+	.word	0xc48
+	.word	0x4614000
+	.word	-0x7ed7fff8
+	.word	0x108
+	.word	0x4614000
+	.word	-0x7ed7fff8
+	.word	0x108
+	.word	0x4614000
+	.word	-0x7e97fff8
+	.word	0x10c
+	.word	-0x7b87b800
+	.word	-0x35d7ff70
+	.word	0x540
+	.word	-0x7b87b800
+	.word	-0x35d7ff70
+	.word	0x1540
+	.word	-0x7b17b7fe
+	.word	-0x7dd7df85
+	.word	0x2448
+	.word	-0x7b1797fe
+	.word	-0x7dd7df85
+	.word	0x3c4c
+	.word	0x4e84004
+	.word	-0x7dd7ddc7
+	.word	0x2458
+	.word	0x4e86004
+	.word	-0x7dd7ddc7
+	.word	0x3c5c
+	.word	0x4e84008
+	.word	-0x6dd7d3c7
+	.word	0x2448
+	.word	0x4e86008
+	.word	-0x6dd7d3c7
+	.word	0x3c4c
+	.word	0x68691000
+	.word	-0x77d5ff3c
+	.word	0xa
+	.word	0x68691000
+	.word	-0x77d5ff3c
+	.word	0xa
+	.word	0x116c0000
+	.word	-0x5fdefff8
+	.word	0x8010
+	.word	0x116c0000
+	.word	-0x5fdefff8
+	.word	0x8010
+	.word	0x116c0000
+	.word	-0x5fdeff78
+	.word	0x8010
+	.word	0xc790000
+	.word	-0x7fd76000
+	.word	0x1
+	.word	0xc790000
+	.word	-0x7fd76000
+	.word	0x1
+	.word	0x44681000
+	.word	-0x7fd7c000
+	.word	0x4200
+	.word	0x44681000
+	.word	-0x7fd7c000
+	.word	0x4200
+	.word	0x44681000
+	.word	-0x7f97c000
+	.word	0x5204
+	.word	0x3b6d0000
+	.word	-0x77dcff58
+	.word	0x8058
+	.word	0x3b6d0000
+	.word	-0x57dcff58
+	.word	0x8058
+	.word	0x4601800
+	.word	-0x7bd7bff0
+	.word	0x200
+	.word	0x4603800
+	.word	-0x7b973ff0
+	.word	0xa00
+	.word	0x6cf06000
+	.word	-0x7c55d073
+	.word	0x114a
+	.word	0x4e0a000
+	.word	-0x7fd7d8ff
+	.word	0x84c
+	.word	0x4e0a000
+	.word	-0x7fd7d8ff
+	.word	0x84c
+	.word	0x4e0a000
+	.word	-0x7fd7d8ff
+	.word	0x84c
+	.word	0x600000
+	.word	-0x7fd7f7d8
+	.word	0x301
+	.word	0x601000
+	.word	-0x7fd7f7d7
+	.word	0x2301
+	.word	0x4603000
+	.word	-0x7fd7d3d7
+	.word	0x2b41
+	.word	0x4e0a000
+	.word	-0x7fd5d8fb
+	.word	0x84c
+	.word	0x4e0a000
+	.word	-0x7fd1d8fb
+	.word	0x184c
+	.word	-0x53de0000
+	.word	-0x7fdfafbe
+	.word	0x0
+	.word	-0x53de0000
+	.word	-0x7fdfafbe
+	.word	0x0
+	.word	-0x5391f800
+	.word	-0x7fd7afae
+	.word	0x904a
+	.word	0xc6a1000
+	.word	-0x7fd7bfe0
+	.word	0x0
+	.word	0xc6a1000
+	.word	-0x7fd7bfe0
+	.word	0x0
+	.word	0xc7a1800
+	.word	-0x6fd7bfe0
+	.word	0x1004
+	.word	-0x6fd7c000
+	.word	-0x7fdeffa0
+	.word	0x48
+	.word	-0x6f17c000
+	.word	-0x7fd6ffa0
+	.word	0x8048
+	.word	-0x7fd7c000
+	.word	-0x7fdfffbe
+	.word	0xa
+	.word	-0x7f97b800
+	.word	-0x7dd7ffbe
+	.word	0x20a
+	.word	0x280000
+	.word	-0x6fc5f7d8
+	.word	0x85
+	.word	0x4700000
+	.word	-0x2fd7ffe8
+	.word	0x200
+	.word	0x4702800
+	.word	-0x2fd7dfe7
+	.word	0x240
+	.word	0x4702800
+	.word	-0x2fd7dfe7
+	.word	0x1a64
+	.word	0x4f03000
+	.word	-0x7fd5fdd7
+	.word	0x14
+	.word	0x4f03000
+	.word	-0x7fd5fdd7
+	.word	0x814
+	.word	-0x7f9fd800
+	.word	-0x7fdfff95
+	.word	0x1141
+	.word	0x4621800
+	.word	-0x7fd7bff0
+	.word	0x4040
+	.word	0x4621800
+	.word	-0x7fd7bff0
+	.word	0x4040
+	.word	0x6f0a000
+	.word	-0x3f9198ff
+	.word	0x840
+	.word	0x6f0a000
+	.word	-0x3f9198ff
+	.word	0x1860
+	.word	0x796d0000
+	.word	-0x57dcf780
+	.word	0x8010
+	.word	0x21390000
+	.word	-0x75ddbf7c
+	.word	0x40
+	.word	0x21b91000
+	.word	-0x75ddbf7c
+	.word	0x4040
+	.word	0x4601000
+	.word	-0x6fc5b800
+	.word	0x40c0
+	.word	0x4603000
+	.word	-0x6f8597ff
+	.word	0x48c4
+	.word	0x10640000
+	.word	-0x6fdcbfc8
+	.word	0x4051
+	.word	0x11640000
+	.word	-0x4fdcbfc8
+	.word	0xc871
+	.word	-0x7b9ff000
+	.word	-0x7fd7fffb
+	.word	0x400
+	.word	-0x7b9fd000
+	.word	-0x7fd7fffb
+	.word	0xc00
+	.word	0x4784800
+	.word	-0x37d7ff68
+	.word	0x141
+	.word	0x4786800
+	.word	-0x37d7df67
+	.word	0x1941
+	.word	-0x7f16c000
+	.word	-0x6ed7fff8
+	.word	0x548
+	.word	-0x7f16c000
+	.word	-0x6ed7fff8
+	.word	0xd48
+	.word	0x68f14000
+	.word	-0x35d5ff78
+	.word	0xa
+	.word	0x68f14000
+	.word	-0x35d5ff78
+	.word	0xa
+	.word	0x68f14000
+	.word	-0x35d5ff78
+	.word	0xa
+	.word	0x6c311000
+	.word	-0x75d5bf5c
+	.word	0x8
+	.word	0x6c311000
+	.word	-0x75d5bf5c
+	.word	0x8
+	.word	0x6cf11000
+	.word	-0x75d5b85b
+	.word	0x84c
+	.word	0x11640000
+	.word	-0x7fcef7d8
+	.word	0x8080
+	.word	0x11640000
+	.word	-0x5fcef7d8
+	.word	0x8080
+	.word	0x28280000
+	.word	-0x7fd737f8
+	.word	0x4000
+	.word	0x28280000
+	.word	-0x7fd737f8
+	.word	0x4000
+	.word	0x28280000
+	.word	-0x7fd737f8
+	.word	0x4000
+	.word	-0x7f9ff800
+	.word	-0x7ed7ffbe
+	.word	0x1
+	.word	-0x7f9ff800
+	.word	-0x7ed7ffbe
+	.word	0x1
+	.word	0x116d4000
+	.word	-0x7ed6f000
+	.word	0x8048
+	.word	0xc6a0800
+	.word	-0x7bd7c000
+	.word	0x40
+	.word	0xc6a1800
+	.word	-0x7b97c000
+	.word	0x840
+	.word	-0x7fdff000
+	.word	-0x3fdfffbe
+	.word	0x2000
+	.word	-0x7fdff000
+	.word	-0x3fd7ffbe
+	.word	0x2000
+	.word	0x21210000
+	.word	-0x77cff77c
+	.word	0x0
+	.word	0x21210000
+	.word	-0x77cff77c
+	.word	0x0
+	.word	0x20600000
+	.word	-0x7fc7f77c
+	.word	0xc9
+	.word	0x86b0800
+	.word	-0x7fd7f000
+	.word	0x2001
+	.word	0x86b0800
+	.word	-0x7fd7f000
+	.word	0x3001
+	.word	-0x3bdff000
+	.word	-0x7f97bf90
+	.word	0x40
+	.word	-0x3bdff000
+	.word	-0x7f97bf90
+	.word	0x40
+	.word	0x68211000
+	.word	-0x7fd7bff8
+	.word	0x0
+	.word	0x68211000
+	.word	-0x7fd7bff8
+	.word	0x0
+	.word	0x68211000
+	.word	-0x7fd7bff8
 	.word	0x0
 	.word	0x0
-	.word	0x1866800
-	.word	0x18e4c00
-	.word	0x1844800
-	.word	0x9d4e021
-	.word	0x38c4000
-	.word	0x9844800
-	.word	0x1847010
-	.word	0x21844002
-	.word	0x1046000
-	.word	0x1846802
-	.word	0x4845800
-	.word	0x19c66020
-	.word	0x1044000
-	.word	0x1044000
-	.word	0x1046010
-	.word	0x1845000
-	.word	0x19044800
-	.space	468
-	.word	0x40000
-	.word	0x40000
-	.word	0x1b74400
-	.word	0x1964400
-	.space	12
-	.word	0x3b64c00
-	.word	0x3b64c00
-	.word	0x3b64c00
-	.word	0x3b64c00
-	.word	0x3b64c00
-	.space	120
-	.word	0x18c6000
-	.word	0x18c6000
-	.space	196
-	.word	0x1864c00
-	.size	 sTutorLearnsets,4076
+	.word	0x8000
+	.word	0x0
+	.word	0xa690000
+	.word	-0x6fc78000
+	.word	0x3041
+	.word	0xa692000
+	.word	-0x6fc77cef
+	.word	0x3065
+	.word	0x6cf10000
+	.word	-0x75d5ff73
+	.word	0x0
+	.word	0x6cf12000
+	.word	-0x75d5ff73
+	.word	0x0
+	.word	0x1210000
+	.word	-0x77dfff7c
+	.word	0x10
+	.word	0x1210000
+	.word	-0x77dfff7c
+	.word	0x10
+	.word	0x1210000
+	.word	-0x77dfff7c
+	.word	0x10
+	.word	0x4610880
+	.word	-0x6fd3ffd0
+	.word	0x24
+	.word	0x4612880
+	.word	-0x6fd3dfcf
+	.word	0x24
+	.word	0x4612880
+	.word	-0x6fd3dfcf
+	.word	0x824
+	.word	0x4607800
+	.word	-0x7fc7d3ef
+	.word	0x4
+	.word	0x4607800
+	.word	-0x7fc7d3ef
+	.word	0x1804
+	.word	0x38280800
+	.word	-0x7fdfb800
+	.word	0xc040
+	.word	0x8621000
+	.word	-0x7fe00000
+	.word	0x2000
+	.word	0x86a9000
+	.word	-0x7fd80000
+	.word	0x2840
+	.word	0x610000
+	.word	-0x2fd76fd4
+	.word	0x201
+	.word	0x468a000
+	.word	-0x7dd3df7f
+	.word	0x849
+	.word	0x468a000
+	.word	-0x7dd3df7f
+	.word	0x849
+	.word	0x47d2880
+	.word	-0x6f97fcef
+	.word	0xc34
+	.word	0x69e13000
+	.word	-0x7fd790ff
+	.word	0xa04
+	.word	0x69e13000
+	.word	-0x7fd590ff
+	.word	0xa04
+	.word	0x4788800
+	.word	-0x3d931ff0
+	.word	0x40
+	.word	0x478a800
+	.word	-0x3d931ff0
+	.word	0x1840
+	.word	0x4600000
+	.word	-0x7f95ffc8
+	.word	0x24
+	.word	0x156c0800
+	.word	-0x7fd6fff0
+	.word	0x8014
+	.word	0x156c0800
+	.word	-0x5fdcfff0
+	.word	0x8014
+	.word	0x11740000
+	.word	-0x3fdebf80
+	.word	0x8050
+	.word	0x11740000
+	.word	-0x1fdebf80
+	.word	0x8050
+	.word	0x720000
+	.word	-0x7fd7dcef
+	.word	0x3854
+	.word	0x6a0800
+	.word	-0x7f97bfd0
+	.word	0x4
+	.word	0x610080
+	.word	-0x6fd5ff78
+	.word	0x324
+	.word	0x610080
+	.word	-0x6fd5ff78
+	.word	0x324
+	.word	0x196d0080
+	.word	-0x6fd4ff78
+	.word	0x9b34
+	.word	0x8220000
+	.word	-0x7fd58000
+	.word	0x10
+	.word	0x18660000
+	.word	-0x7fd48000
+	.word	0x8010
+	.word	0x4680800
+	.word	-0x7f953f70
+	.word	0x80d
+	.word	0x4680800
+	.word	-0x7f95ff80
+	.word	0x4a0c
+	.word	-0x7b97f800
+	.word	-0x7fd5ff3e
+	.word	0x80d
+	.word	0x11ec0000
+	.word	-0x3ddef7f7
+	.word	0x8854
+	.word	0x11ed0000
+	.word	-0x3ddfeef7
+	.word	0x8844
+	.word	0x10600080
+	.word	-0x7fd4fff0
+	.word	0x8b30
+	.word	0x18612080
+	.word	-0x7fd47ef0
+	.word	0xb20
+	.word	0x55ec0000
+	.word	-0x7ddfffff
+	.word	0x8a64
+	.word	0x8600080
+	.word	-0x7f95f7d0
+	.word	0x920
+	.word	0x4684a00
+	.word	-0x6ec7d760
+	.word	0x88d
+	.word	0x68714400
+	.word	-0x74d1d867
+	.word	0x94a
+	.word	0x68630800
+	.word	-0x7e9d2ff0
+	.word	0x400
+	.word	-0x791fe7fe
+	.word	-0x7f919e99
+	.word	0xc
+	.word	-0x791fc7fe
+	.word	-0x7f919e99
+	.word	0xc
+	.word	-0x791f47ee
+	.word	-0x7f919e89
+	.word	0x80c
+	.word	0x20684004
+	.word	-0x3fd7ff80
+	.word	0x10
+	.word	0x20f94004
+	.word	-0x37d7dc7f
+	.word	0x810
+	.word	0x28f94024
+	.word	-0x35d5dc7f
+	.word	0x810
+	.word	0x780808
+	.word	-0x7dd7f7ff
+	.word	0x1
+	.word	0x788808
+	.word	-0x7dd7d3ff
+	.word	0x401
+	.word	0x788848
+	.word	-0x7dd7d3ff
+	.word	0x401
+	.word	0x6601000
+	.word	-0x7e97ffdf
+	.word	0x1
+	.word	0x6703000
+	.word	-0x3e97d8d7
+	.word	0x2645
+	.word	0x117c0000
+	.word	-0x7fdf0000
+	.word	0x8010
+	.word	0x117c0000
+	.word	-0x7fdf0000
+	.word	0x8010
+	.word	0x117c0000
+	.word	-0x7fdefff0
+	.word	0x8010
+	.word	0x20000
+	.word	0x0
+	.word	0x0
+	.word	0x20000
+	.word	0x5000
+	.word	0x0
+	.word	0x196e0000
+	.word	-0x7fdeef60
+	.word	0x8000
+	.word	0x4780000
+	.word	-0x7fd7ffe0
+	.word	0x118
+	.word	0x4780000
+	.word	-0x7fd7ffe0
+	.word	0x119
+	.word	-0x5f1fc000
+	.word	-0x7fdfff9e
+	.word	0xa
+	.word	-0x5f1fc000
+	.word	-0x7fdfff9e
+	.word	0xa
+	.word	-0x4f1fc000
+	.word	-0x7fdfff9e
+	.word	0xa
+	.word	-0x7b9ff800
+	.word	-0x7fd5ffbe
+	.word	0x0
+	.word	-0x7b9ff800
+	.word	-0x7fd5ffbe
+	.word	0x5
+	.word	0x4f0e800
+	.word	-0x3f91d8d7
+	.word	0x54c
+	.word	0x4f0e800
+	.word	-0x3f91d8c7
+	.word	0x1d6c
+	.word	0x4600000
+	.word	-0x7cd5ffd8
+	.word	0x108
+	.word	0x68714000
+	.word	-0x75d5ff80
+	.word	0xa
+	.word	0x68714000
+	.word	-0x75d5ff80
+	.word	0xa
+	.word	0x1210800
+	.word	-0x7f9f4000
+	.word	0x0
+	.word	0x1210800
+	.word	-0x7f9f4000
+	.word	0x0
+	.word	0x1210800
+	.word	-0x7f9f4000
+	.word	0x0
+	.word	0x24604000
+	.word	-0x7fd7ff60
+	.word	0xa
+	.word	0x24e06000
+	.word	-0x7fd7ff5f
+	.word	0xa
+	.word	0x24604000
+	.word	-0x7fd7ff60
+	.word	0x200a
+	.word	0x24e06000
+	.word	-0x7fd7ff5f
+	.word	0x200a
+	.word	0x4702800
+	.word	-0x3dc7ff80
+	.word	0x44
+	.word	0xc702800
+	.word	-0x3dc7ff80
+	.word	0x1044
+	.word	0x4e03800
+	.word	-0x7fc3b7d0
+	.word	0x4088
+	.word	0x4e03800
+	.word	-0x7fc397cf
+	.word	0x4a8c
+	.word	0x610000
+	.word	-0x6fcff800
+	.word	0x421
+	.word	0x610080
+	.word	-0x6fcff800
+	.word	0xc21
+	.word	0x600000
+	.word	-0x6fcff800
+	.word	0x9
+	.word	0x600000
+	.word	-0x6fc7f800
+	.word	0x889
+	.word	0x8690000
+	.word	-0x7fd76f80
+	.word	0x0
+	.word	0x8690000
+	.word	-0x7fd74c7f
+	.word	0x900
+	.word	0x4601880
+	.word	-0x7b95bff0
+	.word	0x4324
+	.word	0x4603880
+	.word	-0x7b95bfef
+	.word	0x4324
+	.word	0x4600000
+	.word	-0x6f953780
+	.word	0x4320
+	.word	0x4600000
+	.word	-0x6f953780
+	.word	0x4320
+	.word	0x20684000
+	.word	-0x7ed7ff80
+	.word	0x10a
+	.word	0x146ca800
+	.word	-0x5e90dccf
+	.word	0x980d
+	.word	0xa614000
+	.word	-0x7ed76eff
+	.word	0x8
+	.word	0x64605000
+	.word	-0x7fd73f80
+	.word	0x4200
+	.word	0x4611080
+	.word	-0x7fd80000
+	.word	0x20
+	.word	0x4611080
+	.word	-0x7fd80000
+	.word	0x20
+	.word	0x4e13880
+	.word	-0x6fd7fcff
+	.word	0x824
+	.word	0x30284000
+	.word	-0x3edf3f80
+	.word	0x0
+	.word	-0x5e9ff800
+	.word	-0x35d7ffba
+	.word	0x0
+	.word	-0x5e9fd800
+	.word	-0x35d7ffa9
+	.word	0x800
+	.word	-0x5e9ff000
+	.word	-0x35d7ffba
+	.word	0x0
+	.word	-0x5e9ff000
+	.word	-0x35d7ffba
+	.word	0x800
+	.word	0x4201800
+	.word	-0x7fc7b800
+	.word	0x4000
+	.word	0x4201800
+	.word	-0x7f87b800
+	.word	0x4004
+	.word	0x137c0880
+	.word	-0x5fdefff8
+	.word	0x8030
+	.word	0x137c0880
+	.word	-0x5fdeffe8
+	.word	0x8930
+	.word	0x50600800
+	.word	-0x7fd5ff60
+	.word	0x920
+	.word	0x11642800
+	.word	-0x1fdcfff0
+	.word	0x8950
+	.word	0x4611080
+	.word	-0x7fd5fffc
+	.word	0xb24
+	.word	0x40e04000
+	.word	-0x7ed73f60
+	.word	0x420a
+	.word	0x6df16000
+	.word	-0x34d1f877
+	.word	0x1c40
+	.word	0x14600000
+	.word	-0x7fd80000
+	.word	0xa94
+	.word	-0x6e93b7fe
+	.word	-0x5fd7ffae
+	.word	0x8000
+	.word	-0x6e93b7fe
+	.word	-0x5fd7ffae
+	.word	0x8000
+	.word	-0x6e9397ee
+	.word	-0x5fd6ffae
+	.word	0x8000
+	.word	0x4684804
+	.word	-0x7fd7ffd0
+	.word	0x30
+	.word	0x4684804
+	.word	-0x7fd3ffd0
+	.word	0x30
+	.word	0x4f8e824
+	.word	-0x7f93dccf
+	.word	0x1874
+	.word	0x604008
+	.word	-0x6fc7f7f8
+	.word	0x108
+	.word	0x604008
+	.word	-0x6fc7f7f8
+	.word	0x108
+	.word	0x20604048
+	.word	-0x6fc7f778
+	.word	0x188
+	.word	0x11640000
+	.word	-0x5fdeffe8
+	.word	0x8550
+	.word	0x11640000
+	.word	-0x5fdeffe8
+	.word	0x8550
+	.word	-0x6e9c0000
+	.word	-0x5fdeffe8
+	.word	0x8550
+	.word	0x6610000
+	.word	-0x7ed7ffc8
+	.word	0x0
+	.word	0x6610000
+	.word	-0x7e91f8c7
+	.word	0x0
+	.word	0x630000
+	.word	-0x7fdf7000
+	.word	0x0
+	.word	0x630000
+	.word	-0x7fdf3000
+	.word	0x0
+	.word	0x9670800
+	.word	-0x7fdf3000
+	.word	0x8000
+	.word	0x460a800
+	.word	-0x7f81bacf
+	.word	0x804
+	.word	0x460a800
+	.word	-0x7f81b2cf
+	.word	0x804
+	.word	0x116c4000
+	.word	-0x5ddef800
+	.word	0x8008
+	.word	0x18264000
+	.word	-0x76deff80
+	.word	0x8008
+	.word	0x18266000
+	.word	-0x76deff80
+	.word	0x8008
+	.word	0x684000
+	.word	-0x7e95bfd0
+	.word	0x4300
+	.word	0x686000
+	.word	-0x7a95bfd0
+	.word	0x4300
+	.word	0x204000
+	.word	-0x6fc7ffe0
+	.word	0x8
+	.word	0x24705000
+	.word	-0x7fc7b7fc
+	.word	0x24c0
+	.word	0x24705000
+	.word	-0x7fc7b7fc
+	.word	0x24c0
+	.word	0x4600000
+	.word	-0x7f979fe0
+	.word	0x204
+	.word	0x4600000
+	.word	-0x7f979fe0
+	.word	0xa04
+	.word	0x2c220800
+	.word	-0x7fdfb800
+	.word	0x80
+	.word	0x2c220800
+	.word	-0x7fdfb800
+	.word	0x80
+	.word	-0x679df800
+	.word	-0x7fd3ffae
+	.word	0x0
+	.word	-0x679dd800
+	.word	-0x7fd3ffae
+	.word	0x44
+	.word	-0x57dff000
+	.word	-0x7fdfffbe
+	.word	0x0
+	.word	-0x57dff000
+	.word	-0x7fdfffbe
+	.word	0x0
+	.word	0x784800
+	.word	-0x3fdffff0
+	.word	0x458
+	.word	0x784800
+	.word	-0x3fdffff0
+	.word	0x458
+	.word	0x5602000
+	.word	-0x7d91fafb
+	.word	0x804
+	.word	0x5602000
+	.word	-0x7d91dafb
+	.word	0x804
+	.word	-0x7b97b000
+	.word	-0x7fd5ff9e
+	.word	0x9
+	.word	-0x7b179000
+	.word	-0x7fd5ff9d
+	.word	0x49
+	.word	-0x7b171000
+	.word	-0x7fd5df9d
+	.word	0x809
+	.word	-0x4fdfc000
+	.word	-0x75deff3a
+	.word	0xa
+	.word	0x64f06000
+	.word	-0x37d5ff7b
+	.word	0x840
+	.word	-0x7b0e6000
+	.word	-0x7f97efd7
+	.word	0xc44
+	.word	0x600000
+	.word	-0x7fcffff0
+	.word	0x0
+	.word	0x6a2800
+	.word	-0x7b83b74b
+	.word	0x18c0
+	.word	0x41600000
+	.word	-0x75dfbffc
+	.word	0x200
+	.word	0x41600000
+	.word	-0x75dfbffc
+	.word	0x200
+	.word	0x4200000
+	.word	-0x7fdfff7c
+	.word	0x2008
+	.word	0x28680800
+	.word	-0x7e97b7f0
+	.word	0x0
+	.word	0x3c682800
+	.word	-0x7e94b800
+	.word	0x8130
+	.word	0x40281000
+	.word	-0x7e957f60
+	.word	0xc000
+	.word	0x603000
+	.word	-0x7e95ff60
+	.word	0x44
+	.word	0x4612880
+	.word	-0x7f97bfc7
+	.word	0x930
+	.word	0x46617800
+	.word	-0x7c956fdf
+	.word	0x9
+	.word	0x1706800
+	.word	-0x76d7ff6c
+	.word	0x0
+	.word	0x28380000
+	.word	-0x6fc7fff4
+	.word	0x80
+	.word	0x1d250080
+	.word	-0x7ffef748
+	.word	0x893c
+	.word	0x200800
+	.word	-0x7d9fbffa
+	.word	0xc8
+	.word	0x4600880
+	.word	-0x6f939fe8
+	.word	0x820
+	.word	0x460a880
+	.word	-0x6f939fe7
+	.word	0x820
+	.word	0x461a880
+	.word	-0x6f9398c7
+	.word	0x924
+	.word	0x156d3000
+	.word	-0x5f97ae80
+	.word	0x8100
+	.word	0x64603000
+	.word	-0x7fd7bf80
+	.word	0x800
+	.word	-0x7b9fd000
+	.word	-0x7fd1bf3d
+	.word	0x804
+	.word	0x74603000
+	.word	-0x77c7b380
+	.word	0x40
+	.word	0x200000
+	.word	-0x7fe00000
+	.word	0x0
+	.word	0x200000
+	.word	-0x7fe00000
+	.word	0x0
+	.word	0x4690000
+	.word	-0x7e95bf50
+	.word	0x964
+	.word	0x396d0000
+	.word	-0x57def780
+	.word	0x8810
+	.word	0x20600000
+	.word	-0x3d9dffbc
+	.word	0x4440
+	.word	0x4e2a000
+	.word	-0x7f93fadf
+	.word	0x25
+	.word	0xc7ba800
+	.word	-0x3bd7c800
+	.word	0x1021
+	.word	0x68610000
+	.word	-0x7fdf6f00
+	.word	0x0
+	.word	-0x3a9b0000
+	.word	-0x7f954000
+	.word	0x8004
+	.word	0x146c8800
+	.word	-0x7edebffe
+	.word	0x8040
+	.word	0x4610080
+	.word	-0x7eb37fef
+	.word	0x2070
+	.word	0x48612000
+	.word	-0x7f973fff
+	.word	0x4370
+	.word	0x8610000
+	.word	-0x7e953ffc
+	.word	0x80a
+	.word	0xf0a000
+	.word	-0x3c95d85f
+	.word	0x1865
+	.word	0x8704000
+	.word	-0x7fdffff8
+	.word	0x2408
+	.word	0x97d4080
+	.word	-0x5fdeffe8
+	.word	0xb438
+	.word	0x64601000
+	.word	-0x7d974000
+	.word	0x4
+	.word	0x1600000
+	.word	-0x36d5fff4
+	.word	0x50
+	.word	0x4f92800
+	.word	-0x7fd3cccf
+	.word	0x1865
+	.size	 sTutorLearnsets,9696
 	.align	2, 0
 	.type	 sPartyMenuBgTemplates,object
 	.size	 sPartyMenuBgTemplates,12
@@ -2229,8 +3879,6 @@ sUnused_08615B94:
 sCursorOptions:
 	.word	gText_Summary5
 	.word	CursorCb_Summary
-	.word	gText_Nickname
-	.word	CursorCb_Nickname
 	.word	gText_Switch2
 	.word	CursorCb_Switch
 	.word	gText_Cancel2
@@ -2295,83 +3943,83 @@ sCursorOptions:
 	.word	CursorCb_FieldMove
 	.word	gMoveNames+0xbae
 	.word	CursorCb_FieldMove
-	.size	 sCursorOptions,272
+	.size	 sCursorOptions,264
 	.type	 sPartyMenuAction_SummarySwitchCancel,object
 sPartyMenuAction_SummarySwitchCancel:
 	.byte	0x0
+	.byte	0x1
 	.byte	0x2
-	.byte	0x3
 	.size	 sPartyMenuAction_SummarySwitchCancel,3
 	.type	 sPartyMenuAction_ShiftSummaryCancel,object
 sPartyMenuAction_ShiftSummaryCancel:
-	.byte	0xb
+	.byte	0xa
 	.byte	0x0
-	.byte	0x3
+	.byte	0x2
 	.size	 sPartyMenuAction_ShiftSummaryCancel,3
 	.type	 sPartyMenuAction_SendOutSummaryCancel,object
 sPartyMenuAction_SendOutSummaryCancel:
-	.byte	0xc
+	.byte	0xb
 	.byte	0x0
-	.byte	0x3
+	.byte	0x2
 	.size	 sPartyMenuAction_SendOutSummaryCancel,3
 	.type	 sPartyMenuAction_SummaryCancel,object
 sPartyMenuAction_SummaryCancel:
 	.byte	0x0
-	.byte	0x3
+	.byte	0x2
 	.size	 sPartyMenuAction_SummaryCancel,2
 	.type	 sPartyMenuAction_EnterSummaryCancel,object
 sPartyMenuAction_EnterSummaryCancel:
-	.byte	0xd
+	.byte	0xc
 	.byte	0x0
-	.byte	0x3
+	.byte	0x2
 	.size	 sPartyMenuAction_EnterSummaryCancel,3
 	.type	 sPartyMenuAction_NoEntrySummaryCancel,object
 sPartyMenuAction_NoEntrySummaryCancel:
-	.byte	0xe
+	.byte	0xd
 	.byte	0x0
-	.byte	0x3
+	.byte	0x2
 	.size	 sPartyMenuAction_NoEntrySummaryCancel,3
 	.type	 sPartyMenuAction_StoreSummaryCancel,object
 sPartyMenuAction_StoreSummaryCancel:
-	.byte	0xf
+	.byte	0xe
 	.byte	0x0
-	.byte	0x3
+	.byte	0x2
 	.size	 sPartyMenuAction_StoreSummaryCancel,3
 	.type	 sPartyMenuAction_GiveTakeItemCancel,object
 sPartyMenuAction_GiveTakeItemCancel:
+	.byte	0x4
 	.byte	0x5
-	.byte	0x6
-	.byte	0xa
+	.byte	0x9
 	.size	 sPartyMenuAction_GiveTakeItemCancel,3
 	.type	 sPartyMenuAction_ReadTakeMailCancel,object
 sPartyMenuAction_ReadTakeMailCancel:
-	.byte	0x9
 	.byte	0x8
-	.byte	0xa
+	.byte	0x7
+	.byte	0x9
 	.size	 sPartyMenuAction_ReadTakeMailCancel,3
 	.type	 sPartyMenuAction_RegisterSummaryCancel,object
 sPartyMenuAction_RegisterSummaryCancel:
-	.byte	0x10
+	.byte	0xf
 	.byte	0x0
-	.byte	0x3
+	.byte	0x2
 	.size	 sPartyMenuAction_RegisterSummaryCancel,3
 	.type	 sPartyMenuAction_TradeSummaryCancel1,object
 sPartyMenuAction_TradeSummaryCancel1:
-	.byte	0x11
+	.byte	0x10
 	.byte	0x0
-	.byte	0x3
+	.byte	0x2
 	.size	 sPartyMenuAction_TradeSummaryCancel1,3
 	.type	 sPartyMenuAction_TradeSummaryCancel2,object
 sPartyMenuAction_TradeSummaryCancel2:
-	.byte	0x12
+	.byte	0x11
 	.byte	0x0
-	.byte	0x3
+	.byte	0x2
 	.size	 sPartyMenuAction_TradeSummaryCancel2,3
 	.type	 sPartyMenuAction_TakeItemTossCancel,object
 sPartyMenuAction_TakeItemTossCancel:
-	.byte	0x6
-	.byte	0x13
-	.byte	0x3
+	.byte	0x5
+	.byte	0x12
+	.byte	0x2
 	.size	 sPartyMenuAction_TakeItemTossCancel,3
 	.align	2, 0
 	.type	 sPartyMenuActions,object
@@ -7900,7 +9548,6 @@ CanMonLearnTMTutor:
 	lsr	r0, r0, #0x10
 	add	r1, r6, #0
 	bl	CanLearnTutorMove
-	lsl	r0, r0, #0x18
 	cmp	r0, #0
 	bne	.L794	@cond_branch
 .L799:
@@ -7951,30 +9598,67 @@ GetTutorMove:
 	.type	 CanLearnTutorMove,function
 	.thumb_func
 CanLearnTutorMove:
-	push	{lr}
+	push	{r4, lr}
 	lsl	r0, r0, #0x10
+	lsr	r3, r0, #0x10
+	add	r4, r3, #0
 	lsl	r1, r1, #0x18
-	lsr	r1, r1, #0x18
-	ldr	r2, .L810
-	lsr	r0, r0, #0xe
+	lsr	r0, r1, #0x18
+	add	r1, r0, #0
+	cmp	r0, #0x1f
+	bhi	.L807	@cond_branch
+	mov	r1, #0x1
+	lsl	r1, r1, r0
+	ldr	r2, .L814
+	lsl	r0, r3, #0x1
+	add	r0, r0, r3
+	lsl	r0, r0, #0x2
 	add	r0, r0, r2
-	mov	r2, #0x1
-	lsl	r2, r2, r1
 	ldr	r0, [r0]
-	and	r0, r0, r2
-	cmp	r0, #0
-	bne	.L807	@cond_branch
-	mov	r0, #0x0
-	b	.L809
-.L811:
+	and	r0, r0, r1
+	b	.L812
+.L815:
 	.align	2, 0
-.L810:
+.L814:
 	.word	sTutorLearnsets
 .L807:
-	mov	r0, #0x1
+	cmp	r0, #0x3f
+	bls	.L809	@cond_branch
+	sub	r0, r0, #0x40
+	mov	r2, #0x1
+	lsl	r2, r2, r0
+	ldr	r1, .L816
+	lsl	r0, r3, #0x1
+	add	r0, r0, r3
+	lsl	r0, r0, #0x2
+	add	r1, r1, #0x8
+	b	.L813
+.L817:
+	.align	2, 0
+.L816:
+	.word	sTutorLearnsets
 .L809:
+	add	r0, r1, #0
+	sub	r0, r0, #0x20
+	mov	r2, #0x1
+	lsl	r2, r2, r0
+	ldr	r1, .L818
+	lsl	r0, r4, #0x1
+	add	r0, r0, r4
+	lsl	r0, r0, #0x2
+	add	r1, r1, #0x4
+.L813:
+	add	r0, r0, r1
+	ldr	r0, [r0]
+	and	r0, r0, r2
+.L812:
+	pop	{r4}
 	pop	{r1}
 	bx	r1
+.L819:
+	.align	2, 0
+.L818:
+	.word	sTutorLearnsets
 .Lfe81:
 	.size	 CanLearnTutorMove,.Lfe81-CanLearnTutorMove
 	.align	2, 0
@@ -7986,47 +9670,47 @@ InitPartyMenuWindows:
 	lsr	r0, r0, #0x18
 	add	r1, r0, #0
 	cmp	r0, #0x1
-	beq	.L815	@cond_branch
+	beq	.L823	@cond_branch
 	cmp	r0, #0x1
-	bgt	.L819	@cond_branch
+	bgt	.L827	@cond_branch
 	cmp	r0, #0
-	beq	.L814	@cond_branch
-	b	.L817
-.L819:
-	cmp	r1, #0x2
-	beq	.L816	@cond_branch
-	b	.L817
-.L814:
-	ldr	r0, .L825
-	bl	InitWindows
-	b	.L813
-.L826:
-	.align	2, 0
-.L825:
-	.word	sSinglePartyMenuWindowTemplate
-.L815:
-	ldr	r0, .L827
-	bl	InitWindows
-	b	.L813
-.L828:
-	.align	2, 0
+	beq	.L822	@cond_branch
+	b	.L825
 .L827:
-	.word	sDoublePartyMenuWindowTemplate
-.L816:
-	ldr	r0, .L829
+	cmp	r1, #0x2
+	beq	.L824	@cond_branch
+	b	.L825
+.L822:
+	ldr	r0, .L833
 	bl	InitWindows
-	b	.L813
-.L830:
+	b	.L821
+.L834:
 	.align	2, 0
-.L829:
-	.word	sMultiPartyMenuWindowTemplate
-.L817:
-	ldr	r0, .L831
+.L833:
+	.word	sSinglePartyMenuWindowTemplate
+.L823:
+	ldr	r0, .L835
 	bl	InitWindows
-.L813:
+	b	.L821
+.L836:
+	.align	2, 0
+.L835:
+	.word	sDoublePartyMenuWindowTemplate
+.L824:
+	ldr	r0, .L837
+	bl	InitWindows
+	b	.L821
+.L838:
+	.align	2, 0
+.L837:
+	.word	sMultiPartyMenuWindowTemplate
+.L825:
+	ldr	r0, .L839
+	bl	InitWindows
+.L821:
 	bl	DeactivateAllTextPrinters
 	mov	r4, #0x0
-.L823:
+.L831:
 	add	r0, r4, #0
 	mov	r1, #0x0
 	bl	FillWindowPixelBuffer
@@ -8034,7 +9718,7 @@ InitPartyMenuWindows:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x5
-	bls	.L823	@cond_branch
+	bls	.L831	@cond_branch
 	mov	r0, #0x0
 	mov	r1, #0x4f
 	mov	r2, #0xd0
@@ -8043,16 +9727,16 @@ InitPartyMenuWindows:
 	mov	r1, #0xe0
 	mov	r2, #0x20
 	bl	LoadPalette
-	ldr	r0, .L831+0x4
+	ldr	r0, .L839+0x4
 	mov	r1, #0xf0
 	mov	r2, #0x20
 	bl	LoadPalette
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L832:
+.L840:
 	.align	2, 0
-.L831:
+.L839:
 	.word	sShowcaseMultiPartyMenuWindowTemplate
 	.word	gUnknown_0860F074
 .Lfe82:
@@ -8065,17 +9749,17 @@ CreateCancelConfirmWindows:
 	add	sp, sp, #-0x14
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
-	ldr	r0, .L839
+	ldr	r0, .L847
 	ldrb	r1, [r0, #0x8]
 	mov	r0, #0xf
 	and	r0, r0, r1
 	cmp	r0, #0x5
-	bne	.LCB6318
-	b	.L834	@long jump
-.LCB6318:
+	bne	.LCB6364
+	b	.L842	@long jump
+.LCB6364:
 	cmp	r2, #0x1
-	bne	.L835	@cond_branch
-	ldr	r0, .L839+0x4
+	bne	.L843	@cond_branch
+	ldr	r0, .L847+0x4
 	bl	AddWindow
 	add	r4, r0, #0
 	lsl	r4, r4, #0x18
@@ -8083,7 +9767,7 @@ CreateCancelConfirmWindows:
 	add	r0, r4, #0
 	mov	r1, #0x0
 	bl	FillWindowPixelBuffer
-	ldr	r5, .L839+0x8
+	ldr	r5, .L847+0x8
 	mov	r0, #0x0
 	add	r1, r5, #0
 	mov	r2, #0x30
@@ -8093,7 +9777,7 @@ CreateCancelConfirmWindows:
 	mov	r0, #0x0
 	str	r0, [sp]
 	str	r0, [sp, #0x4]
-	ldr	r0, .L839+0xc
+	ldr	r0, .L847+0xc
 	str	r0, [sp, #0x8]
 	mov	r0, #0x1
 	neg	r0, r0
@@ -8108,37 +9792,37 @@ CreateCancelConfirmWindows:
 	add	r0, r4, #0
 	mov	r1, #0x2
 	bl	CopyWindowToVram
-	ldr	r0, .L839+0x10
+	ldr	r0, .L847+0x10
 	bl	AddWindow
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	mov	r6, #0x0
-	b	.L836
-.L840:
+	b	.L844
+.L848:
 	.align	2, 0
-.L839:
+.L847:
 	.word	gPartyMenu
 	.word	sConfirmButtonWindowTemplate
 	.word	gMenuText_Confirm
 	.word	sFontColorTable
 	.word	sMultiCancelButtonWindowTemplate
-.L835:
-	ldr	r0, .L841
+.L843:
+	ldr	r0, .L849
 	bl	AddWindow
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	mov	r6, #0x3
-.L836:
+.L844:
 	add	r0, r5, #0
 	mov	r1, #0x0
 	bl	FillWindowPixelBuffer
-	ldr	r0, .L841+0x4
+	ldr	r0, .L849+0x4
 	ldrb	r1, [r0, #0x8]
 	mov	r0, #0xf
 	and	r0, r0, r1
 	cmp	r0, #0xa
-	beq	.L837	@cond_branch
-	ldr	r4, .L841+0x8
+	beq	.L845	@cond_branch
+	ldr	r4, .L849+0x8
 	mov	r0, #0x0
 	add	r1, r4, #0
 	mov	r2, #0x30
@@ -8148,7 +9832,7 @@ CreateCancelConfirmWindows:
 	add	r2, r2, r6
 	lsl	r2, r2, #0x18
 	lsr	r2, r2, #0x18
-	ldr	r0, .L841+0xc
+	ldr	r0, .L849+0xc
 	str	r0, [sp]
 	mov	r0, #0x1
 	neg	r0, r0
@@ -8158,16 +9842,16 @@ CreateCancelConfirmWindows:
 	mov	r1, #0x0
 	mov	r3, #0x1
 	bl	AddTextPrinterParameterized3
-	b	.L838
-.L842:
+	b	.L846
+.L850:
 	.align	2, 0
-.L841:
+.L849:
 	.word	sCancelButtonWindowTemplate
 	.word	gPartyMenu
 	.word	gText_Cancel
 	.word	sFontColorTable
-.L837:
-	ldr	r4, .L843
+.L845:
+	ldr	r4, .L851
 	mov	r0, #0x0
 	add	r1, r4, #0
 	mov	r2, #0x30
@@ -8177,7 +9861,7 @@ CreateCancelConfirmWindows:
 	add	r2, r2, r6
 	lsl	r2, r2, #0x18
 	lsr	r2, r2, #0x18
-	ldr	r0, .L843+0x4
+	ldr	r0, .L851+0x4
 	str	r0, [sp]
 	mov	r0, #0x1
 	neg	r0, r0
@@ -8187,7 +9871,7 @@ CreateCancelConfirmWindows:
 	mov	r1, #0x0
 	mov	r3, #0x1
 	bl	AddTextPrinterParameterized3
-.L838:
+.L846:
 	add	r0, r5, #0
 	bl	PutWindowTilemap
 	add	r0, r5, #0
@@ -8195,14 +9879,14 @@ CreateCancelConfirmWindows:
 	bl	CopyWindowToVram
 	mov	r0, #0x0
 	bl	ScheduleBgCopyTilemapToVram
-.L834:
+.L842:
 	add	sp, sp, #0x14
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L844:
+.L852:
 	.align	2, 0
-.L843:
+.L851:
 	.word	gText_Cancel2
 	.word	sFontColorTable
 .Lfe83:
@@ -8212,16 +9896,16 @@ CreateCancelConfirmWindows:
 	.thumb_func
 GetPartyMenuPalBufferPtr:
 	lsl	r0, r0, #0x18
-	ldr	r1, .L846
+	ldr	r1, .L854
 	lsr	r0, r0, #0x17
 	add	r0, r0, #0x18
 	ldr	r1, [r1]
 	add	r1, r1, r0
 	add	r0, r1, #0
 	bx	lr
-.L847:
+.L855:
 	.align	2, 0
-.L846:
+.L854:
 	.word	sPartyMenuInternal
 .Lfe84:
 	.size	 GetPartyMenuPalBufferPtr,.Lfe84-GetPartyMenuPalBufferPtr
@@ -8262,7 +9946,7 @@ BlitBitmapToPartyWindow:
 	bl	AllocZeroed
 	mov	r9, r0
 	cmp	r0, #0
-	beq	.L849	@cond_branch
+	beq	.L857	@cond_branch
 	mov	r5, #0x0
 	ldr	r0, [sp, #0x14]
 	lsl	r0, r0, #0x13
@@ -8276,20 +9960,20 @@ BlitBitmapToPartyWindow:
 	lsl	r0, r0, #0x13
 	str	r0, [sp, #0x28]
 	cmp	r5, sl
-	bcs	.L851	@cond_branch
-.L853:
+	bcs	.L859	@cond_branch
+.L861:
 	mov	r4, #0x0
 	add	r1, r5, #0x1
 	mov	r8, r1
 	cmp	r4, r6
-	bcs	.L852	@cond_branch
+	bcs	.L860	@cond_branch
 	ldr	r2, [sp, #0x18]
 	add	r0, r2, r5
 	ldr	r2, [sp, #0x10]
 	mov	r1, r0
 	mul	r1, r1, r2
 	add	r7, r1, #0
-.L857:
+.L865:
 	ldr	r1, [sp, #0x14]
 	add	r0, r1, r4
 	add	r0, r0, r7
@@ -8308,14 +9992,14 @@ BlitBitmapToPartyWindow:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, r6
-	bcc	.L857	@cond_branch
-.L852:
+	bcc	.L865	@cond_branch
+.L860:
 	mov	r1, r8
 	lsl	r0, r1, #0x18
 	lsr	r5, r0, #0x18
 	cmp	r5, sl
-	bcc	.L853	@cond_branch
-.L851:
+	bcc	.L861	@cond_branch
+.L859:
 	ldr	r0, [sp, #0x1c]
 	lsr	r2, r0, #0x10
 	ldr	r1, [sp, #0x20]
@@ -8331,7 +10015,7 @@ BlitBitmapToPartyWindow:
 	bl	BlitBitmapToWindow
 	mov	r0, r9
 	bl	Free
-.L849:
+.L857:
 	add	sp, sp, #0x2c
 	pop	{r3, r4, r5}
 	mov	r8, r3
@@ -8363,42 +10047,42 @@ BlitBitmapToPartyWindow_LeftColumn:
 	lsl	r5, r5, #0x18
 	lsr	r5, r5, #0x18
 	cmp	r3, #0
-	bne	.L861	@cond_branch
+	bne	.L869	@cond_branch
 	cmp	r4, #0
-	bne	.L861	@cond_branch
+	bne	.L869	@cond_branch
 	mov	r3, #0xa
 	mov	r4, #0x7
-.L861:
+.L869:
 	cmp	r5, #0
-	bne	.L862	@cond_branch
-	ldr	r1, .L864
+	bne	.L870	@cond_branch
+	ldr	r1, .L872
 	str	r2, [sp]
 	str	r3, [sp, #0x4]
 	str	r4, [sp, #0x8]
 	mov	r2, #0xa
 	add	r3, r6, #0
 	bl	BlitBitmapToPartyWindow
-	b	.L863
-.L865:
+	b	.L871
+.L873:
 	.align	2, 0
-.L864:
+.L872:
 	.word	sMainSlotTileNums
-.L862:
-	ldr	r1, .L866
+.L870:
+	ldr	r1, .L874
 	str	r2, [sp]
 	str	r3, [sp, #0x4]
 	str	r4, [sp, #0x8]
 	mov	r2, #0xa
 	add	r3, r6, #0
 	bl	BlitBitmapToPartyWindow
-.L863:
+.L871:
 	add	sp, sp, #0xc
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L867:
+.L875:
 	.align	2, 0
-.L866:
+.L874:
 	.word	sMainSlotTileNums_Egg
 .Lfe86:
 	.size	 BlitBitmapToPartyWindow_LeftColumn,.Lfe86-BlitBitmapToPartyWindow_LeftColumn
@@ -8423,42 +10107,42 @@ BlitBitmapToPartyWindow_RightColumn:
 	lsl	r5, r5, #0x18
 	lsr	r5, r5, #0x18
 	cmp	r3, #0
-	bne	.L869	@cond_branch
+	bne	.L877	@cond_branch
 	cmp	r4, #0
-	bne	.L869	@cond_branch
+	bne	.L877	@cond_branch
 	mov	r3, #0x12
 	mov	r4, #0x3
-.L869:
+.L877:
 	cmp	r5, #0
-	bne	.L870	@cond_branch
-	ldr	r1, .L872
+	bne	.L878	@cond_branch
+	ldr	r1, .L880
 	str	r2, [sp]
 	str	r3, [sp, #0x4]
 	str	r4, [sp, #0x8]
 	mov	r2, #0x12
 	add	r3, r6, #0
 	bl	BlitBitmapToPartyWindow
-	b	.L871
-.L873:
+	b	.L879
+.L881:
 	.align	2, 0
-.L872:
+.L880:
 	.word	sOtherSlotsTileNums
-.L870:
-	ldr	r1, .L874
+.L878:
+	ldr	r1, .L882
 	str	r2, [sp]
 	str	r3, [sp, #0x4]
 	str	r4, [sp, #0x8]
 	mov	r2, #0x12
 	add	r3, r6, #0
 	bl	BlitBitmapToPartyWindow
-.L871:
+.L879:
 	add	sp, sp, #0xc
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L875:
+.L883:
 	.align	2, 0
-.L874:
+.L882:
 	.word	sOtherSlotsTileNums_Egg
 .Lfe87:
 	.size	 BlitBitmapToPartyWindow_RightColumn,.Lfe87-BlitBitmapToPartyWindow_RightColumn
@@ -8470,7 +10154,7 @@ DrawEmptySlot:
 	add	sp, sp, #-0xc
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r1, .L877
+	ldr	r1, .L885
 	mov	r2, #0x0
 	str	r2, [sp]
 	mov	r2, #0x12
@@ -8483,9 +10167,9 @@ DrawEmptySlot:
 	add	sp, sp, #0xc
 	pop	{r0}
 	bx	r0
-.L878:
+.L886:
 	.align	2, 0
-.L877:
+.L885:
 	.word	sEmptySlotTileNums
 .Lfe88:
 	.size	 DrawEmptySlot,.Lfe88-DrawEmptySlot
@@ -8506,154 +10190,66 @@ LoadPartyBoxPalette:
 	mov	r0, #0x40
 	and	r0, r0, r4
 	cmp	r0, #0
-	beq	.L880	@cond_branch
-	ldr	r5, .L905
-	ldrb	r0, [r5]
-	bl	GetPartyMenuPalBufferPtr
-	ldr	r4, .L905+0x4
-	b	.L902
-.L906:
-	.align	2, 0
-.L905:
-	.word	sPartyBoxNoMonPalIds
-	.word	sPartyBoxNoMonPalOffsets
-.L880:
-	mov	r0, #0x20
-	and	r0, r0, r4
-	cmp	r0, #0
-	beq	.L882	@cond_branch
-	mov	r0, #0x1
-	and	r0, r0, r4
-	cmp	r0, #0
-	beq	.L883	@cond_branch
-	ldr	r5, .L907
-	b	.L903
-.L908:
-	.align	2, 0
-.L907:
-	.word	sPartyBoxSelectedForActionPalIds1
-.L883:
-	ldr	r5, .L909
-	ldrb	r0, [r5]
-	bl	GetPartyMenuPalBufferPtr
-	ldr	r4, .L909+0x4
-	ldrb	r1, [r4]
-	add	r1, r1, r6
-	mov	r2, #0x2
-	bl	LoadPalette
-	ldrb	r0, [r5, #0x1]
-	bl	GetPartyMenuPalBufferPtr
-	ldrb	r1, [r4, #0x1]
-	add	r1, r1, r6
-	mov	r2, #0x2
-	bl	LoadPalette
-	ldrb	r0, [r5, #0x2]
-	bl	GetPartyMenuPalBufferPtr
-	ldrb	r1, [r4, #0x2]
-	add	r1, r1, r6
-	mov	r2, #0x2
-	bl	LoadPalette
-	ldr	r5, .L909+0x8
-	b	.L904
-.L910:
-	.align	2, 0
-.L909:
-	.word	sPartyBoxSelectedForActionPalIds1
-	.word	sPartyBoxPalOffsets1
-	.word	sPartyBoxSelectedForActionPalIds2
-.L882:
-	mov	r0, #0x10
-	and	r0, r0, r4
-	cmp	r0, #0
-	beq	.L886	@cond_branch
-	ldr	r5, .L911
-	ldrb	r0, [r5]
-	bl	GetPartyMenuPalBufferPtr
-	ldr	r4, .L911+0x4
-	ldrb	r1, [r4]
-	add	r1, r1, r6
-	mov	r2, #0x2
-	bl	LoadPalette
-	ldrb	r0, [r5, #0x1]
-	bl	GetPartyMenuPalBufferPtr
-	ldrb	r1, [r4, #0x1]
-	add	r1, r1, r6
-	mov	r2, #0x2
-	bl	LoadPalette
-	ldrb	r0, [r5, #0x2]
-	bl	GetPartyMenuPalBufferPtr
-	ldrb	r1, [r4, #0x2]
-	add	r1, r1, r6
-	mov	r2, #0x2
-	bl	LoadPalette
-	ldr	r5, .L911+0x8
-	b	.L904
-.L912:
-	.align	2, 0
-.L911:
-	.word	sPartyBoxSelectedForActionPalIds1
-	.word	sPartyBoxPalOffsets1
-	.word	sPartyBoxSelectedForActionPalIds2
-.L886:
-	mov	r0, #0x4
-	and	r0, r0, r4
-	cmp	r0, #0
 	beq	.L888	@cond_branch
-	mov	r0, #0x1
-	and	r0, r0, r4
-	cmp	r0, #0
-	beq	.L889	@cond_branch
 	ldr	r5, .L913
-	b	.L903
+	ldrb	r0, [r5]
+	bl	GetPartyMenuPalBufferPtr
+	ldr	r4, .L913+0x4
+	b	.L910
 .L914:
 	.align	2, 0
 .L913:
-	.word	sPartyBoxSelectedForActionPalIds1
-.L889:
+	.word	sPartyBoxNoMonPalIds
+	.word	sPartyBoxNoMonPalOffsets
+.L888:
+	mov	r0, #0x20
+	and	r0, r0, r4
+	cmp	r0, #0
+	beq	.L890	@cond_branch
+	mov	r0, #0x1
+	and	r0, r0, r4
+	cmp	r0, #0
+	beq	.L891	@cond_branch
 	ldr	r5, .L915
-	ldrb	r0, [r5]
-	bl	GetPartyMenuPalBufferPtr
-	ldr	r4, .L915+0x4
-	ldrb	r1, [r4]
-	add	r1, r1, r6
-	mov	r2, #0x2
-	bl	LoadPalette
-	ldrb	r0, [r5, #0x1]
-	bl	GetPartyMenuPalBufferPtr
-	ldrb	r1, [r4, #0x1]
-	add	r1, r1, r6
-	mov	r2, #0x2
-	bl	LoadPalette
-	ldrb	r0, [r5, #0x2]
-	bl	GetPartyMenuPalBufferPtr
-	ldrb	r1, [r4, #0x2]
-	add	r1, r1, r6
-	mov	r2, #0x2
-	bl	LoadPalette
-	ldr	r5, .L915+0x8
-	b	.L904
+	b	.L911
 .L916:
 	.align	2, 0
 .L915:
 	.word	sPartyBoxSelectedForActionPalIds1
-	.word	sPartyBoxPalOffsets1
-	.word	sPartyBoxSelectedForActionPalIds2
-.L888:
-	mov	r0, #0x2
-	and	r0, r0, r4
-	cmp	r0, #0
-	beq	.L892	@cond_branch
-	mov	r0, #0x1
-	and	r0, r0, r4
-	cmp	r0, #0
-	beq	.L893	@cond_branch
+.L891:
 	ldr	r5, .L917
-	b	.L903
+	ldrb	r0, [r5]
+	bl	GetPartyMenuPalBufferPtr
+	ldr	r4, .L917+0x4
+	ldrb	r1, [r4]
+	add	r1, r1, r6
+	mov	r2, #0x2
+	bl	LoadPalette
+	ldrb	r0, [r5, #0x1]
+	bl	GetPartyMenuPalBufferPtr
+	ldrb	r1, [r4, #0x1]
+	add	r1, r1, r6
+	mov	r2, #0x2
+	bl	LoadPalette
+	ldrb	r0, [r5, #0x2]
+	bl	GetPartyMenuPalBufferPtr
+	ldrb	r1, [r4, #0x2]
+	add	r1, r1, r6
+	mov	r2, #0x2
+	bl	LoadPalette
+	ldr	r5, .L917+0x8
+	b	.L912
 .L918:
 	.align	2, 0
 .L917:
-	.word	sPartyBoxCurrSelectionFaintedPalIds
-.L893:
+	.word	sPartyBoxSelectedForActionPalIds1
+	.word	sPartyBoxPalOffsets1
+	.word	sPartyBoxSelectedForActionPalIds2
+.L890:
+	mov	r0, #0x10
+	and	r0, r0, r4
+	cmp	r0, #0
+	beq	.L894	@cond_branch
 	ldr	r5, .L919
 	ldrb	r0, [r5]
 	bl	GetPartyMenuPalBufferPtr
@@ -8675,15 +10271,15 @@ LoadPartyBoxPalette:
 	mov	r2, #0x2
 	bl	LoadPalette
 	ldr	r5, .L919+0x8
-	b	.L904
+	b	.L912
 .L920:
 	.align	2, 0
 .L919:
-	.word	sPartyBoxFaintedPalIds1
+	.word	sPartyBoxSelectedForActionPalIds1
 	.word	sPartyBoxPalOffsets1
-	.word	sPartyBoxFaintedPalIds2
-.L892:
-	mov	r0, #0x8
+	.word	sPartyBoxSelectedForActionPalIds2
+.L894:
+	mov	r0, #0x4
 	and	r0, r0, r4
 	cmp	r0, #0
 	beq	.L896	@cond_branch
@@ -8692,11 +10288,11 @@ LoadPartyBoxPalette:
 	cmp	r0, #0
 	beq	.L897	@cond_branch
 	ldr	r5, .L921
-	b	.L903
+	b	.L911
 .L922:
 	.align	2, 0
 .L921:
-	.word	sPartyBoxCurrSelectionMultiPalIds
+	.word	sPartyBoxSelectedForActionPalIds1
 .L897:
 	ldr	r5, .L923
 	ldrb	r0, [r5]
@@ -8719,94 +10315,162 @@ LoadPartyBoxPalette:
 	mov	r2, #0x2
 	bl	LoadPalette
 	ldr	r5, .L923+0x8
-	b	.L904
+	b	.L912
 .L924:
 	.align	2, 0
 .L923:
-	.word	sPartyBoxMultiPalIds1
+	.word	sPartyBoxSelectedForActionPalIds1
 	.word	sPartyBoxPalOffsets1
-	.word	sPartyBoxMultiPalIds2
+	.word	sPartyBoxSelectedForActionPalIds2
 .L896:
-	mov	r0, #0x1
-	and	r5, r5, r0
-	cmp	r5, #0
+	mov	r0, #0x2
+	and	r0, r0, r4
+	cmp	r0, #0
 	beq	.L900	@cond_branch
+	mov	r0, #0x1
+	and	r0, r0, r4
+	cmp	r0, #0
+	beq	.L901	@cond_branch
 	ldr	r5, .L925
-.L903:
-	ldrb	r0, [r5]
-	bl	GetPartyMenuPalBufferPtr
-	ldr	r4, .L925+0x4
-	ldrb	r1, [r4]
-	add	r1, r1, r6
-	mov	r2, #0x2
-	bl	LoadPalette
-	ldrb	r0, [r5, #0x1]
-	bl	GetPartyMenuPalBufferPtr
-	ldrb	r1, [r4, #0x1]
-	add	r1, r1, r6
-	mov	r2, #0x2
-	bl	LoadPalette
-	ldrb	r0, [r5, #0x2]
-	bl	GetPartyMenuPalBufferPtr
-	ldrb	r1, [r4, #0x2]
-	add	r1, r1, r6
-	mov	r2, #0x2
-	bl	LoadPalette
-	ldr	r5, .L925+0x8
-.L904:
-	ldrb	r0, [r5]
-	bl	GetPartyMenuPalBufferPtr
-	ldr	r4, .L925+0xc
-.L902:
-	ldrb	r1, [r4]
-	add	r1, r1, r6
-	mov	r2, #0x2
-	bl	LoadPalette
-	ldrb	r0, [r5, #0x1]
-	bl	GetPartyMenuPalBufferPtr
-	ldrb	r1, [r4, #0x1]
-	add	r1, r1, r6
-	mov	r2, #0x2
-	bl	LoadPalette
-	ldrb	r0, [r5, #0x2]
-	bl	GetPartyMenuPalBufferPtr
-	ldrb	r1, [r4, #0x2]
-	add	r1, r1, r6
-	mov	r2, #0x2
-	bl	LoadPalette
-	b	.L881
+	b	.L911
 .L926:
 	.align	2, 0
 .L925:
-	.word	sPartyBoxCurrSelectionPalIds1
-	.word	sPartyBoxPalOffsets1
-	.word	sPartyBoxCurrSelectionPalIds2
-	.word	sPartyBoxPalOffsets2
-.L900:
+	.word	sPartyBoxCurrSelectionFaintedPalIds
+.L901:
 	ldr	r5, .L927
 	ldrb	r0, [r5]
 	bl	GetPartyMenuPalBufferPtr
 	ldr	r4, .L927+0x4
 	ldrb	r1, [r4]
-	add	r1, r1, r7
+	add	r1, r1, r6
 	mov	r2, #0x2
 	bl	LoadPalette
 	ldrb	r0, [r5, #0x1]
 	bl	GetPartyMenuPalBufferPtr
 	ldrb	r1, [r4, #0x1]
-	add	r1, r1, r7
+	add	r1, r1, r6
 	mov	r2, #0x2
 	bl	LoadPalette
 	ldrb	r0, [r5, #0x2]
 	bl	GetPartyMenuPalBufferPtr
 	ldrb	r1, [r4, #0x2]
-	add	r1, r1, r7
+	add	r1, r1, r6
 	mov	r2, #0x2
 	bl	LoadPalette
 	ldr	r5, .L927+0x8
+	b	.L912
+.L928:
+	.align	2, 0
+.L927:
+	.word	sPartyBoxFaintedPalIds1
+	.word	sPartyBoxPalOffsets1
+	.word	sPartyBoxFaintedPalIds2
+.L900:
+	mov	r0, #0x8
+	and	r0, r0, r4
+	cmp	r0, #0
+	beq	.L904	@cond_branch
+	mov	r0, #0x1
+	and	r0, r0, r4
+	cmp	r0, #0
+	beq	.L905	@cond_branch
+	ldr	r5, .L929
+	b	.L911
+.L930:
+	.align	2, 0
+.L929:
+	.word	sPartyBoxCurrSelectionMultiPalIds
+.L905:
+	ldr	r5, .L931
 	ldrb	r0, [r5]
 	bl	GetPartyMenuPalBufferPtr
-	ldr	r4, .L927+0xc
+	ldr	r4, .L931+0x4
+	ldrb	r1, [r4]
+	add	r1, r1, r6
+	mov	r2, #0x2
+	bl	LoadPalette
+	ldrb	r0, [r5, #0x1]
+	bl	GetPartyMenuPalBufferPtr
+	ldrb	r1, [r4, #0x1]
+	add	r1, r1, r6
+	mov	r2, #0x2
+	bl	LoadPalette
+	ldrb	r0, [r5, #0x2]
+	bl	GetPartyMenuPalBufferPtr
+	ldrb	r1, [r4, #0x2]
+	add	r1, r1, r6
+	mov	r2, #0x2
+	bl	LoadPalette
+	ldr	r5, .L931+0x8
+	b	.L912
+.L932:
+	.align	2, 0
+.L931:
+	.word	sPartyBoxMultiPalIds1
+	.word	sPartyBoxPalOffsets1
+	.word	sPartyBoxMultiPalIds2
+.L904:
+	mov	r0, #0x1
+	and	r5, r5, r0
+	cmp	r5, #0
+	beq	.L908	@cond_branch
+	ldr	r5, .L933
+.L911:
+	ldrb	r0, [r5]
+	bl	GetPartyMenuPalBufferPtr
+	ldr	r4, .L933+0x4
+	ldrb	r1, [r4]
+	add	r1, r1, r6
+	mov	r2, #0x2
+	bl	LoadPalette
+	ldrb	r0, [r5, #0x1]
+	bl	GetPartyMenuPalBufferPtr
+	ldrb	r1, [r4, #0x1]
+	add	r1, r1, r6
+	mov	r2, #0x2
+	bl	LoadPalette
+	ldrb	r0, [r5, #0x2]
+	bl	GetPartyMenuPalBufferPtr
+	ldrb	r1, [r4, #0x2]
+	add	r1, r1, r6
+	mov	r2, #0x2
+	bl	LoadPalette
+	ldr	r5, .L933+0x8
+.L912:
+	ldrb	r0, [r5]
+	bl	GetPartyMenuPalBufferPtr
+	ldr	r4, .L933+0xc
+.L910:
+	ldrb	r1, [r4]
+	add	r1, r1, r6
+	mov	r2, #0x2
+	bl	LoadPalette
+	ldrb	r0, [r5, #0x1]
+	bl	GetPartyMenuPalBufferPtr
+	ldrb	r1, [r4, #0x1]
+	add	r1, r1, r6
+	mov	r2, #0x2
+	bl	LoadPalette
+	ldrb	r0, [r5, #0x2]
+	bl	GetPartyMenuPalBufferPtr
+	ldrb	r1, [r4, #0x2]
+	add	r1, r1, r6
+	mov	r2, #0x2
+	bl	LoadPalette
+	b	.L889
+.L934:
+	.align	2, 0
+.L933:
+	.word	sPartyBoxCurrSelectionPalIds1
+	.word	sPartyBoxPalOffsets1
+	.word	sPartyBoxCurrSelectionPalIds2
+	.word	sPartyBoxPalOffsets2
+.L908:
+	ldr	r5, .L935
+	ldrb	r0, [r5]
+	bl	GetPartyMenuPalBufferPtr
+	ldr	r4, .L935+0x4
 	ldrb	r1, [r4]
 	add	r1, r1, r7
 	mov	r2, #0x2
@@ -8823,13 +10487,33 @@ LoadPartyBoxPalette:
 	add	r1, r1, r7
 	mov	r2, #0x2
 	bl	LoadPalette
-.L881:
+	ldr	r5, .L935+0x8
+	ldrb	r0, [r5]
+	bl	GetPartyMenuPalBufferPtr
+	ldr	r4, .L935+0xc
+	ldrb	r1, [r4]
+	add	r1, r1, r7
+	mov	r2, #0x2
+	bl	LoadPalette
+	ldrb	r0, [r5, #0x1]
+	bl	GetPartyMenuPalBufferPtr
+	ldrb	r1, [r4, #0x1]
+	add	r1, r1, r7
+	mov	r2, #0x2
+	bl	LoadPalette
+	ldrb	r0, [r5, #0x2]
+	bl	GetPartyMenuPalBufferPtr
+	ldrb	r1, [r4, #0x2]
+	add	r1, r1, r7
+	mov	r2, #0x2
+	bl	LoadPalette
+.L889:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L928:
+.L936:
 	.align	2, 0
-.L927:
+.L935:
 	.word	sPartyBoxEmptySlotPalIds1
 	.word	sPartyBoxPalOffsets1
 	.word	sPartyBoxEmptySlotPalIds2
@@ -8850,7 +10534,7 @@ DisplayPartyPokemonBarDetail:
 	ldrb	r3, [r3, #0x1]
 	lsl	r4, r2, #0x1
 	add	r4, r4, r2
-	ldr	r2, .L930
+	ldr	r2, .L938
 	add	r4, r4, r2
 	str	r4, [sp]
 	mov	r2, #0x0
@@ -8863,9 +10547,9 @@ DisplayPartyPokemonBarDetail:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L931:
+.L939:
 	.align	2, 0
-.L930:
+.L938:
 	.word	sFontColorTable
 .Lfe90:
 	.size	 DisplayPartyPokemonBarDetail,.Lfe90-DisplayPartyPokemonBarDetail
@@ -8882,9 +10566,9 @@ DisplayPartyPokemonNickname:
 	mov	r1, #0xb
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L933	@cond_branch
+	beq	.L941	@cond_branch
 	cmp	r4, #0x1
-	bne	.L934	@cond_branch
+	bne	.L942	@cond_branch
 	ldr	r5, [r6]
 	ldrb	r0, [r6, #0x8]
 	ldrb	r1, [r5, #0x4]
@@ -8900,7 +10584,7 @@ DisplayPartyPokemonNickname:
 	str	r4, [sp, #0x4]
 	ldr	r4, [r5]
 	bl	_call_via_r4
-.L934:
+.L942:
 	add	r0, r7, #0
 	add	r1, sp, #0x8
 	bl	GetMonNickname
@@ -8910,7 +10594,7 @@ DisplayPartyPokemonNickname:
 	add	r1, sp, #0x8
 	mov	r2, #0x0
 	bl	DisplayPartyPokemonBarDetail
-.L933:
+.L941:
 	add	sp, sp, #0x14
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
@@ -8933,18 +10617,18 @@ DisplayPartyPokemonLevelCheck:
 	mov	r1, #0xb
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L936	@cond_branch
+	beq	.L944	@cond_branch
 	add	r0, r6, #0
 	bl	GetMonAilment
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L938	@cond_branch
+	beq	.L946	@cond_branch
 	cmp	r0, #0x6
-	bne	.L936	@cond_branch
-.L938:
+	bne	.L944	@cond_branch
+.L946:
 	cmp	r4, #0
-	beq	.L939	@cond_branch
+	beq	.L947	@cond_branch
 	ldr	r5, [r7]
 	ldrb	r0, [r7, #0x8]
 	ldrb	r1, [r5, #0x8]
@@ -8961,10 +10645,10 @@ DisplayPartyPokemonLevelCheck:
 	str	r4, [sp, #0x4]
 	ldr	r4, [r5]
 	bl	_call_via_r4
-.L939:
+.L947:
 	mov	r0, r8
 	cmp	r0, #0x2
-	beq	.L936	@cond_branch
+	beq	.L944	@cond_branch
 	add	r0, r6, #0
 	mov	r1, #0x38
 	bl	GetMonData
@@ -8972,7 +10656,7 @@ DisplayPartyPokemonLevelCheck:
 	lsr	r0, r0, #0x18
 	add	r1, r7, #0
 	bl	DisplayPartyPokemonLevel
-.L936:
+.L944:
 	add	sp, sp, #0x8
 	pop	{r3}
 	mov	r8, r3
@@ -8990,14 +10674,14 @@ DisplayPartyPokemonLevel:
 	add	r6, r1, #0
 	lsl	r2, r2, #0x18
 	lsr	r2, r2, #0x18
-	ldr	r5, .L942
+	ldr	r5, .L950
 	add	r0, r5, #0
 	add	r1, r2, #0
 	mov	r2, #0x0
 	mov	r3, #0x3
 	bl	ConvertIntToDecimalStringN
-	ldr	r4, .L942+0x4
-	ldr	r1, .L942+0x8
+	ldr	r4, .L950+0x4
+	ldr	r1, .L950+0x8
 	add	r0, r4, #0
 	bl	StringCopy
 	add	r0, r4, #0
@@ -9012,9 +10696,9 @@ DisplayPartyPokemonLevel:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L943:
+.L951:
 	.align	2, 0
-.L942:
+.L950:
 	.word	gStringVar2
 	.word	gStringVar1
 	.word	gText_LevelSymbol
@@ -9031,7 +10715,7 @@ DisplayPartyPokemonGenderNidoranCheck:
 	lsl	r2, r2, #0x18
 	lsr	r2, r2, #0x18
 	cmp	r2, #0x1
-	bne	.L945	@cond_branch
+	bne	.L953	@cond_branch
 	ldr	r5, [r7]
 	ldrb	r0, [r7, #0x8]
 	ldrb	r1, [r5, #0xc]
@@ -9048,7 +10732,7 @@ DisplayPartyPokemonGenderNidoranCheck:
 	str	r4, [sp, #0x4]
 	ldr	r4, [r5]
 	bl	_call_via_r4
-.L945:
+.L953:
 	add	r0, r6, #0
 	add	r1, sp, #0x8
 	bl	GetMonNickname
@@ -9095,37 +10779,37 @@ DisplayPartyPokemonGender:
 	lsl	r0, r0, #0x1c
 	lsr	r6, r0, #0x18
 	cmp	r4, #0
-	beq	.L946	@cond_branch
+	beq	.L954	@cond_branch
 	cmp	r4, #0x20
-	beq	.L949	@cond_branch
+	beq	.L957	@cond_branch
 	cmp	r4, #0x1d
-	bne	.L948	@cond_branch
-.L949:
+	bne	.L956	@cond_branch
+.L957:
 	mov	r0, #0xb
 	mov	r1, r5
 	mul	r1, r1, r0
-	ldr	r0, .L955
+	ldr	r0, .L963
 	add	r1, r1, r0
 	mov	r0, r9
 	bl	StringCompare
 	cmp	r0, #0
-	beq	.L946	@cond_branch
-.L948:
+	beq	.L954	@cond_branch
+.L956:
 	mov	r0, r8
 	cmp	r0, #0
-	beq	.L951	@cond_branch
+	beq	.L959	@cond_branch
 	cmp	r0, #0xfe
-	beq	.L952	@cond_branch
-	b	.L946
-.L956:
+	beq	.L960	@cond_branch
+	b	.L954
+.L964:
 	.align	2, 0
-.L955:
+.L963:
 	.word	gSpeciesNames
-.L951:
-	ldr	r5, .L957
+.L959:
+	ldr	r5, .L965
 	ldrb	r0, [r5]
 	bl	GetPartyMenuPalBufferPtr
-	ldr	r4, .L957+0x4
+	ldr	r4, .L965+0x4
 	ldrb	r1, [r4]
 	add	r1, r1, r6
 	mov	r2, #0x2
@@ -9137,23 +10821,23 @@ DisplayPartyPokemonGender:
 	mov	r2, #0x2
 	bl	LoadPalette
 	ldrb	r0, [r7, #0x8]
-	ldr	r1, .L957+0x8
+	ldr	r1, .L965+0x8
 	ldr	r3, [r7]
 	add	r3, r3, #0xc
 	mov	r2, #0x2
 	bl	DisplayPartyPokemonBarDetail
-	b	.L946
-.L958:
+	b	.L954
+.L966:
 	.align	2, 0
-.L957:
+.L965:
 	.word	sGenderMalePalIds
 	.word	sGenderPalOffsets
 	.word	gText_MaleSymbol
-.L952:
-	ldr	r5, .L959
+.L960:
+	ldr	r5, .L967
 	ldrb	r0, [r5]
 	bl	GetPartyMenuPalBufferPtr
-	ldr	r4, .L959+0x4
+	ldr	r4, .L967+0x4
 	ldrb	r1, [r4]
 	add	r1, r1, r6
 	mov	r2, #0x2
@@ -9165,21 +10849,21 @@ DisplayPartyPokemonGender:
 	mov	r2, #0x2
 	bl	LoadPalette
 	ldrb	r0, [r7, #0x8]
-	ldr	r1, .L959+0x8
+	ldr	r1, .L967+0x8
 	ldr	r3, [r7]
 	add	r3, r3, #0xc
 	mov	r2, #0x2
 	bl	DisplayPartyPokemonBarDetail
-.L946:
+.L954:
 	pop	{r3, r4}
 	mov	r8, r3
 	mov	r9, r4
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L960:
+.L968:
 	.align	2, 0
-.L959:
+.L967:
 	.word	sGenderFemalePalIds
 	.word	sGenderPalOffsets
 	.word	gText_FemaleSymbol
@@ -9201,9 +10885,9 @@ DisplayPartyPokemonHPCheck:
 	mov	r1, #0xb
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L962	@cond_branch
+	beq	.L970	@cond_branch
 	cmp	r4, #0
-	beq	.L963	@cond_branch
+	beq	.L971	@cond_branch
 	ldr	r5, [r6]
 	ldrb	r0, [r6, #0x8]
 	ldrb	r1, [r5, #0x10]
@@ -9220,10 +10904,10 @@ DisplayPartyPokemonHPCheck:
 	str	r4, [sp, #0x4]
 	ldr	r4, [r5]
 	bl	_call_via_r4
-.L963:
+.L971:
 	mov	r0, r8
 	cmp	r0, #0x2
-	beq	.L962	@cond_branch
+	beq	.L970	@cond_branch
 	add	r0, r7, #0
 	mov	r1, #0x39
 	bl	GetMonData
@@ -9231,7 +10915,7 @@ DisplayPartyPokemonHPCheck:
 	lsr	r0, r0, #0x10
 	add	r1, r6, #0
 	bl	DisplayPartyPokemonHP
-.L962:
+.L970:
 	add	sp, sp, #0x8
 	pop	{r3}
 	mov	r8, r3
@@ -9249,7 +10933,7 @@ DisplayPartyPokemonHP:
 	add	r4, r1, #0
 	lsl	r2, r2, #0x10
 	lsr	r2, r2, #0x10
-	ldr	r5, .L966
+	ldr	r5, .L974
 	add	r0, r5, #0
 	add	r1, r2, #0
 	mov	r2, #0x1
@@ -9268,9 +10952,9 @@ DisplayPartyPokemonHP:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L967:
+.L975:
 	.align	2, 0
-.L966:
+.L974:
 	.word	gStringVar1
 .Lfe97:
 	.size	 DisplayPartyPokemonHP,.Lfe97-DisplayPartyPokemonHP
@@ -9290,9 +10974,9 @@ DisplayPartyPokemonMaxHPCheck:
 	mov	r1, #0xb
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L969	@cond_branch
+	beq	.L977	@cond_branch
 	cmp	r4, #0
-	beq	.L970	@cond_branch
+	beq	.L978	@cond_branch
 	ldr	r5, [r6]
 	ldrb	r0, [r6, #0x8]
 	ldrb	r1, [r5, #0x14]
@@ -9310,10 +10994,10 @@ DisplayPartyPokemonMaxHPCheck:
 	str	r4, [sp, #0x4]
 	ldr	r4, [r5]
 	bl	_call_via_r4
-.L970:
+.L978:
 	mov	r0, r8
 	cmp	r0, #0x2
-	beq	.L969	@cond_branch
+	beq	.L977	@cond_branch
 	add	r0, r7, #0
 	mov	r1, #0x3a
 	bl	GetMonData
@@ -9321,7 +11005,7 @@ DisplayPartyPokemonMaxHPCheck:
 	lsr	r0, r0, #0x10
 	add	r1, r6, #0
 	bl	DisplayPartyPokemonMaxHP
-.L969:
+.L977:
 	add	sp, sp, #0x8
 	pop	{r3}
 	mov	r8, r3
@@ -9339,14 +11023,14 @@ DisplayPartyPokemonMaxHP:
 	add	r6, r1, #0
 	lsl	r2, r2, #0x10
 	lsr	r2, r2, #0x10
-	ldr	r5, .L973
+	ldr	r5, .L981
 	add	r0, r5, #0
 	add	r1, r2, #0
 	mov	r2, #0x1
 	mov	r3, #0x3
 	bl	ConvertIntToDecimalStringN
-	ldr	r4, .L973+0x4
-	ldr	r1, .L973+0x8
+	ldr	r4, .L981+0x4
+	ldr	r1, .L981+0x8
 	add	r0, r4, #0
 	bl	StringCopy
 	add	r0, r4, #0
@@ -9361,9 +11045,9 @@ DisplayPartyPokemonMaxHP:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L974:
+.L982:
 	.align	2, 0
-.L973:
+.L981:
 	.word	gStringVar2
 	.word	gStringVar1
 	.word	gText_Slash
@@ -9379,7 +11063,7 @@ DisplayPartyPokemonHPBarCheck:
 	mov	r1, #0xb
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L976	@cond_branch
+	beq	.L984	@cond_branch
 	add	r0, r5, #0
 	mov	r1, #0x39
 	bl	GetMonData
@@ -9395,7 +11079,7 @@ DisplayPartyPokemonHPBarCheck:
 	add	r0, r4, #0
 	add	r2, r6, #0
 	bl	DisplayPartyPokemonHPBar
-.L976:
+.L984:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
@@ -9432,23 +11116,23 @@ DisplayPartyPokemonHPBar:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x2
-	beq	.L981	@cond_branch
+	beq	.L989	@cond_branch
 	cmp	r0, #0x2
-	blt	.L982	@cond_branch
+	blt	.L990	@cond_branch
 	cmp	r0, #0x4
-	bgt	.L982	@cond_branch
-	ldr	r5, .L986
-	b	.L985
-.L987:
+	bgt	.L990	@cond_branch
+	ldr	r5, .L994
+	b	.L993
+.L995:
 	.align	2, 0
-.L986:
+.L994:
 	.word	sHPBarGreenPalIds
-.L981:
-	ldr	r5, .L988
-.L985:
+.L989:
+	ldr	r5, .L996
+.L993:
 	ldrb	r0, [r5]
 	bl	GetPartyMenuPalBufferPtr
-	ldr	r4, .L988+0x4
+	ldr	r4, .L996+0x4
 	ldrb	r1, [r4]
 	add	r1, r1, r7
 	mov	r2, #0x2
@@ -9459,17 +11143,17 @@ DisplayPartyPokemonHPBar:
 	add	r1, r1, r7
 	mov	r2, #0x2
 	bl	LoadPalette
-	b	.L978
-.L989:
+	b	.L986
+.L997:
 	.align	2, 0
-.L988:
+.L996:
 	.word	sHPBarYellowPalIds
 	.word	sHPBarPalOffsets
-.L982:
-	ldr	r5, .L990
+.L990:
+	ldr	r5, .L998
 	ldrb	r0, [r5]
 	bl	GetPartyMenuPalBufferPtr
-	ldr	r4, .L990+0x4
+	ldr	r4, .L998+0x4
 	ldrb	r1, [r4]
 	add	r1, r1, r7
 	mov	r2, #0x2
@@ -9480,7 +11164,7 @@ DisplayPartyPokemonHPBar:
 	add	r1, r1, r7
 	mov	r2, #0x2
 	bl	LoadPalette
-.L978:
+.L986:
 	mov	r1, r8
 	lsl	r0, r1, #0x10
 	asr	r0, r0, #0x10
@@ -9493,7 +11177,7 @@ DisplayPartyPokemonHPBar:
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	ldrb	r0, [r6, #0x8]
-	ldr	r4, .L990+0x4
+	ldr	r4, .L998+0x4
 	ldrb	r1, [r4, #0x1]
 	ldr	r3, [r6]
 	ldrb	r2, [r3, #0x18]
@@ -9515,7 +11199,7 @@ DisplayPartyPokemonHPBar:
 	ldr	r1, [r6]
 	ldrb	r0, [r1, #0x1a]
 	cmp	r5, r0
-	beq	.L984	@cond_branch
+	beq	.L992	@cond_branch
 	ldrb	r0, [r6, #0x8]
 	ldrb	r2, [r1, #0x18]
 	add	r2, r2, r5
@@ -9542,7 +11226,7 @@ DisplayPartyPokemonHPBar:
 	str	r4, [sp, #0x4]
 	mov	r1, #0x2
 	bl	FillWindowPixelRect
-.L984:
+.L992:
 	ldrb	r0, [r6, #0x8]
 	mov	r1, #0x2
 	bl	CopyWindowToVram
@@ -9553,9 +11237,9 @@ DisplayPartyPokemonHPBar:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L991:
+.L999:
 	.align	2, 0
-.L990:
+.L998:
 	.word	sHPBarRedPalIds
 	.word	sHPBarPalOffsets
 .Lfe101:
@@ -9575,7 +11259,7 @@ DisplayPartyPokemonDescriptionText:
 	lsl	r2, r2, #0x18
 	lsr	r7, r2, #0x18
 	cmp	r7, #0
-	beq	.L993	@cond_branch
+	beq	.L1001	@cond_branch
 	ldr	r5, [r6]
 	ldrb	r1, [r5, #0x1c]
 	mov	r4, #0x7
@@ -9600,18 +11284,18 @@ DisplayPartyPokemonDescriptionText:
 	str	r4, [sp, #0x4]
 	ldr	r4, [r5]
 	bl	_call_via_r4
-.L993:
+.L1001:
 	cmp	r7, #0x2
-	beq	.L996	@cond_branch
+	beq	.L1004	@cond_branch
 	ldrb	r0, [r6, #0x8]
 	ldr	r1, [r6]
 	ldrb	r2, [r1, #0x1c]
 	ldrb	r3, [r1, #0x1d]
-	ldr	r1, .L997
+	ldr	r1, .L1005
 	str	r1, [sp]
 	mov	r1, #0x0
 	str	r1, [sp, #0x4]
-	ldr	r4, .L997+0x4
+	ldr	r4, .L1005+0x4
 	mov	r5, r8
 	lsl	r1, r5, #0x2
 	add	r1, r1, r4
@@ -9619,16 +11303,16 @@ DisplayPartyPokemonDescriptionText:
 	str	r1, [sp, #0x8]
 	mov	r1, #0x1
 	bl	AddTextPrinterParameterized3
-.L996:
+.L1004:
 	add	sp, sp, #0xc
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L998:
+.L1006:
 	.align	2, 0
-.L997:
+.L1005:
 	.word	sFontColorTable
 	.word	sDescriptionStringTable
 .Lfe102:
@@ -9641,7 +11325,7 @@ PartyMenuRemoveWindow:
 	add	r4, r0, #0
 	ldrb	r0, [r4]
 	cmp	r0, #0xff
-	beq	.L1000	@cond_branch
+	beq	.L1008	@cond_branch
 	mov	r1, #0x0
 	bl	ClearStdWindowAndFrameToTransparent
 	ldrb	r0, [r4]
@@ -9650,7 +11334,7 @@ PartyMenuRemoveWindow:
 	strb	r0, [r4]
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
-.L1000:
+.L1008:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
@@ -9664,113 +11348,113 @@ DisplayPartyMenuStdMessage:
 	push	{r4, r5, r6, lr}
 	add	sp, sp, #-0xc
 	add	r6, r0, #0
-	ldr	r0, .L1018
+	ldr	r0, .L1026
 	ldr	r4, [r0]
 	add	r5, r4, #0
 	add	r5, r5, #0xd
 	ldrb	r0, [r4, #0xd]
 	cmp	r0, #0xff
-	beq	.L1002	@cond_branch
+	beq	.L1010	@cond_branch
 	add	r0, r5, #0
 	bl	PartyMenuRemoveWindow
-.L1002:
+.L1010:
 	cmp	r6, #0x7f
-	beq	.L1003	@cond_branch
+	beq	.L1011	@cond_branch
 	add	r0, r6, #0
 	sub	r0, r0, #0x15
 	cmp	r0, #0x5
-	bhi	.L1011	@cond_branch
+	bhi	.L1019	@cond_branch
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1018+0x4
+	ldr	r1, .L1026+0x4
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L1019:
-	.align	2, 0
-.L1018:
-	.word	sPartyMenuInternal
-	.word	.L1012
-	.align	2, 0
-	.align	2, 0
-.L1012:
-	.word	.L1005
-	.word	.L1009
-	.word	.L1009
-	.word	.L1006
-	.word	.L1007
-	.word	.L1010
-.L1005:
-	ldr	r0, .L1020
-	b	.L1017
-.L1021:
-	.align	2, 0
-.L1020:
-	.word	sDoWhatWithMonMsgWindowTemplate
-.L1006:
-	ldr	r0, .L1022
-	b	.L1017
-.L1023:
-	.align	2, 0
-.L1022:
-	.word	sDoWhatWithItemMsgWindowTemplate
-.L1007:
-	ldr	r0, .L1024
-	b	.L1017
-.L1025:
-	.align	2, 0
-.L1024:
-	.word	sDoWhatWithMailMsgWindowTemplate
-.L1009:
-	ldr	r0, .L1026
-	b	.L1017
 .L1027:
 	.align	2, 0
 .L1026:
-	.word	sWhichMoveMsgWindowTemplate
-.L1010:
+	.word	sPartyMenuInternal
+	.word	.L1020
+	.align	2, 0
+	.align	2, 0
+.L1020:
+	.word	.L1013
+	.word	.L1017
+	.word	.L1017
+	.word	.L1014
+	.word	.L1015
+	.word	.L1018
+.L1013:
 	ldr	r0, .L1028
-.L1017:
-	bl	AddWindow
-	strb	r0, [r5]
-	b	.L1004
+	b	.L1025
 .L1029:
 	.align	2, 0
 .L1028:
-	.word	sAlreadyHoldingOneMsgWindowTemplate
-.L1011:
+	.word	sDoWhatWithMonMsgWindowTemplate
+.L1014:
 	ldr	r0, .L1030
+	b	.L1025
+.L1031:
+	.align	2, 0
+.L1030:
+	.word	sDoWhatWithItemMsgWindowTemplate
+.L1015:
+	ldr	r0, .L1032
+	b	.L1025
+.L1033:
+	.align	2, 0
+.L1032:
+	.word	sDoWhatWithMailMsgWindowTemplate
+.L1017:
+	ldr	r0, .L1034
+	b	.L1025
+.L1035:
+	.align	2, 0
+.L1034:
+	.word	sWhichMoveMsgWindowTemplate
+.L1018:
+	ldr	r0, .L1036
+.L1025:
+	bl	AddWindow
+	strb	r0, [r5]
+	b	.L1012
+.L1037:
+	.align	2, 0
+.L1036:
+	.word	sAlreadyHoldingOneMsgWindowTemplate
+.L1019:
+	ldr	r0, .L1038
 	bl	AddWindow
 	strb	r0, [r4, #0xd]
-.L1004:
+.L1012:
 	cmp	r6, #0
-	bne	.L1013	@cond_branch
-	ldr	r0, .L1030+0x4
+	bne	.L1021	@cond_branch
+	ldr	r0, .L1038+0x4
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x8]
 	lsl	r0, r0, #0x1f
 	cmp	r0, #0
-	beq	.L1014	@cond_branch
+	beq	.L1022	@cond_branch
 	mov	r6, #0x2
-	b	.L1013
-.L1031:
+	b	.L1021
+.L1039:
 	.align	2, 0
-.L1030:
+.L1038:
 	.word	sDefaultPartyMsgWindowTemplate
 	.word	sPartyMenuInternal
-.L1014:
+.L1022:
 	bl	ShouldUseChooseMonText
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L1013	@cond_branch
+	bne	.L1021	@cond_branch
 	mov	r6, #0x1
-.L1013:
+.L1021:
 	ldrb	r0, [r5]
 	mov	r1, #0x0
 	mov	r2, #0x4f
 	mov	r3, #0xd
 	bl	DrawStdFrameWithCustomTileAndPalette
-	ldr	r4, .L1032
-	ldr	r1, .L1032+0x4
+	ldr	r4, .L1040
+	ldr	r1, .L1040+0x4
 	lsl	r0, r6, #0x2
 	add	r0, r0, r1
 	ldr	r1, [r0]
@@ -9788,14 +11472,14 @@ DisplayPartyMenuStdMessage:
 	bl	AddTextPrinterParameterized
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
-.L1003:
+.L1011:
 	add	sp, sp, #0xc
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1033:
+.L1041:
 	.align	2, 0
-.L1032:
+.L1040:
 	.word	gStringVar4
 	.word	sActionStringTable
 .Lfe104:
@@ -9805,23 +11489,23 @@ DisplayPartyMenuStdMessage:
 	.thumb_func
 ShouldUseChooseMonText:
 	push	{r4, r5, r6, r7, lr}
-	ldr	r7, .L1047
+	ldr	r7, .L1055
 	mov	r6, #0x0
-	ldr	r0, .L1047+0x4
+	ldr	r0, .L1055+0x4
 	ldrb	r0, [r0, #0xb]
 	cmp	r0, #0x1
-	bne	.L1035	@cond_branch
-.L1046:
+	bne	.L1043	@cond_branch
+.L1054:
 	mov	r0, #0x1
-	b	.L1044
-.L1048:
+	b	.L1052
+.L1056:
 	.align	2, 0
-.L1047:
+.L1055:
 	.word	gPlayerParty
 	.word	gPartyMenu
-.L1035:
+.L1043:
 	mov	r5, #0x0
-.L1039:
+.L1047:
 	mov	r0, #0x64
 	mul	r0, r0, r5
 	add	r4, r7, r0
@@ -9829,31 +11513,31 @@ ShouldUseChooseMonText:
 	mov	r1, #0xb
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L1040	@cond_branch
+	beq	.L1048	@cond_branch
 	add	r0, r4, #0
 	mov	r1, #0x39
 	bl	GetMonData
 	cmp	r0, #0
-	bne	.L1041	@cond_branch
+	bne	.L1049	@cond_branch
 	add	r0, r4, #0
 	mov	r1, #0x2d
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L1040	@cond_branch
-.L1041:
+	beq	.L1048	@cond_branch
+.L1049:
 	add	r0, r6, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-.L1040:
+.L1048:
 	cmp	r6, #0x1
-	bhi	.L1046	@cond_branch
+	bhi	.L1054	@cond_branch
 	add	r0, r5, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	cmp	r5, #0x5
-	bls	.L1039	@cond_branch
+	bls	.L1047	@cond_branch
 	mov	r0, #0x0
-.L1044:
+.L1052:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
@@ -9871,18 +11555,18 @@ DisplaySelectionWindow:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x1
-	beq	.L1052	@cond_branch
+	beq	.L1060	@cond_branch
 	cmp	r4, #0x1
-	bgt	.L1056	@cond_branch
+	bgt	.L1064	@cond_branch
 	cmp	r4, #0
-	beq	.L1051	@cond_branch
-	b	.L1054
-.L1056:
+	beq	.L1059	@cond_branch
+	b	.L1062
+.L1064:
 	cmp	r4, #0x2
-	beq	.L1053	@cond_branch
-	b	.L1054
-.L1051:
-	ldr	r0, .L1069
+	beq	.L1061	@cond_branch
+	b	.L1062
+.L1059:
+	ldr	r0, .L1077
 	ldr	r1, [r0]
 	ldrb	r0, [r1, #0x17]
 	lsl	r0, r0, #0x1
@@ -9898,43 +11582,43 @@ DisplaySelectionWindow:
 	str	r0, [sp, #0x4]
 	mov	r0, #0xe
 	str	r0, [sp, #0x8]
-	ldr	r0, .L1069+0x4
+	ldr	r0, .L1077+0x4
 	str	r0, [sp, #0xc]
 	add	r0, sp, #0x14
 	mov	r1, #0x2
 	mov	r2, #0x13
 	bl	SetWindowTemplateFields
-	b	.L1050
-.L1070:
+	b	.L1058
+.L1078:
 	.align	2, 0
-.L1069:
+.L1077:
 	.word	sPartyMenuInternal
 	.word	0x2e9
-.L1052:
-	ldr	r0, .L1071
-	b	.L1066
-.L1072:
+.L1060:
+	ldr	r0, .L1079
+	b	.L1074
+.L1080:
 	.align	2, 0
-.L1071:
+.L1079:
 	.word	sItemGiveTakeWindowTemplate
-.L1053:
-	ldr	r0, .L1073
-	b	.L1066
-.L1074:
+.L1061:
+	ldr	r0, .L1081
+	b	.L1074
+.L1082:
 	.align	2, 0
-.L1073:
+.L1081:
 	.word	sMailReadTakeWindowTemplate
-.L1054:
-	ldr	r0, .L1075
-.L1066:
+.L1062:
+	ldr	r0, .L1083
+.L1074:
 	ldr	r1, [r0, #0x4]		@ created by thumb_load_double_from_address
 	ldr	r0, [r0]		@ created by thumb_load_double_from_address
 	str	r0, [sp, #0x14]
 	str	r1, [sp, #0x18]
-.L1050:
+.L1058:
 	add	r0, sp, #0x14
 	bl	AddWindow
-	ldr	r6, .L1075+0x4
+	ldr	r6, .L1083+0x4
 	ldr	r1, [r6]
 	strb	r0, [r1, #0xc]
 	ldr	r0, [r6]
@@ -9944,15 +11628,15 @@ DisplaySelectionWindow:
 	mov	r3, #0xd
 	bl	DrawStdFrameWithCustomTileAndPalette
 	cmp	r4, #0x3
-	bne	.L1057	@cond_branch
+	bne	.L1065	@cond_branch
 	ldr	r0, [r6]
-	b	.L1068
-.L1076:
+	b	.L1076
+.L1084:
 	.align	2, 0
-.L1075:
+.L1083:
 	.word	sMoveSelectWindowTemplate
 	.word	sPartyMenuInternal
-.L1057:
+.L1065:
 	mov	r0, #0x1
 	mov	r1, #0x0
 	bl	GetMenuCursorDimensionByFont
@@ -9969,20 +11653,20 @@ DisplaySelectionWindow:
 	ldr	r0, [r6]
 	ldrb	r0, [r0, #0x17]
 	cmp	r5, r0
-	bcs	.L1059	@cond_branch
+	bcs	.L1067	@cond_branch
 	add	r7, r6, #0
 	mov	r6, #0x0
-.L1061:
+.L1069:
 	ldr	r1, [r7]
 	add	r0, r1, #0
 	add	r0, r0, #0xf
 	add	r4, r0, r5
 	ldrb	r0, [r4]
 	mov	r2, #0x3
-	cmp	r0, #0x13
-	bls	.L1062	@cond_branch
+	cmp	r0, #0x12
+	bls	.L1070	@cond_branch
 	mov	r2, #0x4
-.L1062:
+.L1070:
 	ldrb	r0, [r1, #0xc]
 	lsl	r3, r5, #0x4
 	add	r3, r3, #0x1
@@ -9993,11 +11677,11 @@ DisplaySelectionWindow:
 	str	r6, [sp, #0x4]
 	lsl	r1, r2, #0x1
 	add	r1, r1, r2
-	ldr	r2, .L1077
+	ldr	r2, .L1085
 	add	r1, r1, r2
 	str	r1, [sp, #0x8]
 	str	r6, [sp, #0xc]
-	ldr	r2, .L1077+0x4
+	ldr	r2, .L1085+0x4
 	ldrb	r1, [r4]
 	lsl	r1, r1, #0x3
 	add	r1, r1, r2
@@ -10012,9 +11696,9 @@ DisplaySelectionWindow:
 	ldr	r0, [r7]
 	ldrb	r0, [r0, #0x17]
 	cmp	r5, r0
-	bcc	.L1061	@cond_branch
-.L1059:
-	ldr	r4, .L1077+0x8
+	bcc	.L1069	@cond_branch
+.L1067:
+	ldr	r4, .L1085+0x8
 	ldr	r1, [r4]
 	ldrb	r0, [r1, #0xc]
 	ldrb	r1, [r1, #0x17]
@@ -10024,7 +11708,7 @@ DisplaySelectionWindow:
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
 	ldr	r0, [r4]
-.L1068:
+.L1076:
 	ldrb	r0, [r0, #0xc]
 	add	sp, sp, #0x1c
 	pop	{r3, r4}
@@ -10033,9 +11717,9 @@ DisplaySelectionWindow:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.L1078:
+.L1086:
 	.align	2, 0
-.L1077:
+.L1085:
 	.word	sFontColorTable
 	.word	sCursorOptions
 	.word	sPartyMenuInternal
@@ -10053,7 +11737,7 @@ PartyMenuPrintText:
 	mov	r2, #0x4f
 	mov	r3, #0xd
 	bl	DrawStdFrameWithCustomTileAndPalette
-	ldr	r2, .L1080
+	ldr	r2, .L1088
 	ldrb	r0, [r2]
 	mov	r1, #0x1
 	orr	r0, r0, r1
@@ -10078,9 +11762,9 @@ PartyMenuPrintText:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1081:
+.L1089:
 	.align	2, 0
-.L1080:
+.L1088:
 	.word	gTextFlags
 .Lfe107:
 	.size	 PartyMenuPrintText,.Lfe107-PartyMenuPrintText
@@ -10089,16 +11773,16 @@ PartyMenuPrintText:
 	.thumb_func
 PartyMenuDisplayYesNoMenu:
 	push	{lr}
-	ldr	r0, .L1083
+	ldr	r0, .L1091
 	mov	r1, #0x4f
 	mov	r2, #0xd
 	mov	r3, #0x0
 	bl	CreateYesNoMenu
 	pop	{r0}
 	bx	r0
-.L1084:
+.L1092:
 	.align	2, 0
-.L1083:
+.L1091:
 	.word	sPartyMenuYesNoWindowTemplate
 .Lfe108:
 	.size	 PartyMenuDisplayYesNoMenu,.Lfe108-PartyMenuDisplayYesNoMenu
@@ -10107,9 +11791,9 @@ PartyMenuDisplayYesNoMenu:
 	.thumb_func
 CreateLevelUpStatsWindow:
 	push	{r4, lr}
-	ldr	r0, .L1086
+	ldr	r0, .L1094
 	bl	AddWindow
-	ldr	r4, .L1086+0x4
+	ldr	r4, .L1094+0x4
 	ldr	r1, [r4]
 	strb	r0, [r1, #0xc]
 	ldr	r0, [r4]
@@ -10123,9 +11807,9 @@ CreateLevelUpStatsWindow:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-.L1087:
+.L1095:
 	.align	2, 0
-.L1086:
+.L1094:
 	.word	sLevelUpStatsWindowTemplate
 	.word	sPartyMenuInternal
 .Lfe109:
@@ -10135,7 +11819,7 @@ CreateLevelUpStatsWindow:
 	.thumb_func
 RemoveLevelUpStatsWindow:
 	push	{r4, lr}
-	ldr	r4, .L1089
+	ldr	r4, .L1097
 	ldr	r0, [r4]
 	ldrb	r0, [r0, #0xc]
 	bl	ClearWindowTilemap
@@ -10145,9 +11829,9 @@ RemoveLevelUpStatsWindow:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1090:
+.L1098:
 	.align	2, 0
-.L1089:
+.L1097:
 	.word	sPartyMenuInternal
 .Lfe110:
 	.size	 RemoveLevelUpStatsWindow,.Lfe110-RemoveLevelUpStatsWindow
@@ -10161,13 +11845,13 @@ SetPartyMonSelectionActions:
 	lsl	r2, r2, #0x18
 	lsr	r2, r2, #0x18
 	cmp	r2, #0
-	bne	.L1092	@cond_branch
+	bne	.L1100	@cond_branch
 	bl	SetPartyMonFieldSelectionActions
-	b	.L1093
-.L1092:
-	ldr	r4, .L1099
+	b	.L1101
+.L1100:
+	ldr	r4, .L1107
 	ldr	r1, [r4]
-	ldr	r0, .L1099+0x4
+	ldr	r0, .L1107+0x4
 	add	r0, r2, r0
 	ldrb	r0, [r0]
 	strb	r0, [r1, #0x17]
@@ -10175,11 +11859,11 @@ SetPartyMonSelectionActions:
 	ldr	r0, [r4]
 	ldrb	r0, [r0, #0x17]
 	cmp	r3, r0
-	bcs	.L1093	@cond_branch
-	ldr	r1, .L1099+0x8
+	bcs	.L1101	@cond_branch
+	ldr	r1, .L1107+0x8
 	lsl	r0, r2, #0x2
 	add	r2, r0, r1
-.L1097:
+.L1105:
 	ldr	r1, [r4]
 	add	r1, r1, #0xf
 	add	r1, r1, r3
@@ -10193,14 +11877,14 @@ SetPartyMonSelectionActions:
 	ldr	r0, [r4]
 	ldrb	r0, [r0, #0x17]
 	cmp	r3, r0
-	bcc	.L1097	@cond_branch
-.L1093:
+	bcc	.L1105	@cond_branch
+.L1101:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1100:
+.L1108:
 	.align	2, 0
-.L1099:
+.L1107:
 	.word	sPartyMenuInternal
 	.word	sPartyMenuActionCounts
 	.word	sPartyMenuActions
@@ -10220,38 +11904,32 @@ SetPartyMonFieldSelectionActions:
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
 	mov	sl, r1
-	ldr	r4, .L1117
-	ldr	r1, [r4]
+	ldr	r2, .L1125
+	ldr	r1, [r2]
 	mov	r0, #0x0
 	strb	r0, [r1, #0x17]
-	ldr	r1, [r4]
+	ldr	r1, [r2]
 	add	r0, r1, #0
 	add	r0, r0, #0xf
 	add	r1, r1, #0x17
 	mov	r2, #0x0
 	bl	AppendToList
-	ldr	r1, [r4]
-	add	r0, r1, #0
-	add	r0, r0, #0xf
-	add	r1, r1, #0x17
-	mov	r2, #0x1
-	bl	AppendToList
 	mov	r7, #0x0
-	ldr	r0, .L1117+0x4
+	ldr	r0, .L1125+0x4
 	ldrh	r0, [r0]
 	str	r0, [sp]
-.L1105:
+.L1113:
 	mov	r4, #0x0
 	add	r0, r7, #0x1
 	mov	r8, r0
 	ldr	r1, [sp]
 	cmp	r1, #0xe
-	beq	.L1104	@cond_branch
+	beq	.L1112	@cond_branch
 	mov	r0, #0x64
 	mov	r6, sl
 	mul	r6, r6, r0
-	ldr	r5, .L1117+0x4
-.L1109:
+	ldr	r5, .L1125+0x4
+.L1117:
 	mov	r1, r9
 	add	r0, r1, r6
 	add	r1, r7, #0
@@ -10261,24 +11939,24 @@ SetPartyMonFieldSelectionActions:
 	add	r1, r1, r5
 	ldrh	r1, [r1]
 	cmp	r0, r1
-	bne	.L1108	@cond_branch
-	ldr	r0, .L1117
+	bne	.L1116	@cond_branch
+	ldr	r0, .L1125
 	ldr	r1, [r0]
 	add	r0, r1, #0
 	add	r0, r0, #0xf
 	add	r1, r1, #0x17
 	add	r2, r4, #0
-	add	r2, r2, #0x14
+	add	r2, r2, #0x13
 	lsl	r2, r2, #0x18
 	lsr	r2, r2, #0x18
 	bl	AppendToList
-	b	.L1104
-.L1118:
+	b	.L1112
+.L1126:
 	.align	2, 0
-.L1117:
+.L1125:
 	.word	sPartyMenuInternal
 	.word	sFieldMoves
-.L1108:
+.L1116:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
@@ -10286,31 +11964,31 @@ SetPartyMonFieldSelectionActions:
 	add	r0, r0, r5
 	ldrh	r0, [r0]
 	cmp	r0, #0xe
-	bne	.L1109	@cond_branch
-.L1104:
+	bne	.L1117	@cond_branch
+.L1112:
 	mov	r1, r8
 	lsl	r0, r1, #0x18
 	lsr	r7, r0, #0x18
 	cmp	r7, #0x3
-	bls	.L1105	@cond_branch
+	bls	.L1113	@cond_branch
 	bl	InBattlePike
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L1113	@cond_branch
+	bne	.L1121	@cond_branch
 	mov	r0, r9
 	add	r0, r0, #0x64
 	mov	r1, #0xb
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L1114	@cond_branch
-	ldr	r0, .L1119
+	beq	.L1122	@cond_branch
+	ldr	r0, .L1127
 	ldr	r1, [r0]
 	add	r0, r1, #0
 	add	r0, r0, #0xf
 	add	r1, r1, #0x17
-	mov	r2, #0x2
+	mov	r2, #0x1
 	bl	AppendToList
-.L1114:
+.L1122:
 	mov	r0, #0x64
 	mov	r1, sl
 	mul	r1, r1, r0
@@ -10323,34 +12001,34 @@ SetPartyMonFieldSelectionActions:
 	bl	ItemIsMail
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1115	@cond_branch
-	ldr	r0, .L1119
+	beq	.L1123	@cond_branch
+	ldr	r0, .L1127
 	ldr	r1, [r0]
 	add	r0, r1, #0
 	add	r0, r0, #0xf
 	add	r1, r1, #0x17
-	mov	r2, #0x7
+	mov	r2, #0x6
 	bl	AppendToList
-	b	.L1113
-.L1120:
+	b	.L1121
+.L1128:
 	.align	2, 0
-.L1119:
+.L1127:
 	.word	sPartyMenuInternal
-.L1115:
-	ldr	r0, .L1121
-	ldr	r1, [r0]
-	add	r0, r1, #0
-	add	r0, r0, #0xf
-	add	r1, r1, #0x17
-	mov	r2, #0x4
-	bl	AppendToList
-.L1113:
-	ldr	r0, .L1121
+.L1123:
+	ldr	r0, .L1129
 	ldr	r1, [r0]
 	add	r0, r1, #0
 	add	r0, r0, #0xf
 	add	r1, r1, #0x17
 	mov	r2, #0x3
+	bl	AppendToList
+.L1121:
+	ldr	r0, .L1129
+	ldr	r1, [r0]
+	add	r0, r1, #0
+	add	r0, r0, #0xf
+	add	r1, r1, #0x17
+	mov	r2, #0x2
 	bl	AppendToList
 	add	sp, sp, #0x4
 	pop	{r3, r4, r5}
@@ -10360,9 +12038,9 @@ SetPartyMonFieldSelectionActions:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1122:
+.L1130:
 	.align	2, 0
-.L1121:
+.L1129:
 	.word	sPartyMenuInternal
 .Lfe112:
 	.size	 SetPartyMonFieldSelectionActions,.Lfe112-SetPartyMonFieldSelectionActions
@@ -10372,101 +12050,101 @@ SetPartyMonFieldSelectionActions:
 GetPartyMenuActionsType:
 	push	{r4, lr}
 	add	r4, r0, #0
-	ldr	r1, .L1145
+	ldr	r1, .L1153
 	ldrb	r0, [r1, #0x8]
 	lsl	r0, r0, #0x1c
 	lsr	r0, r0, #0x1c
 	add	r2, r1, #0
 	cmp	r0, #0xc
-	bhi	.L1143	@cond_branch
+	bhi	.L1151	@cond_branch
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1145+0x4
+	ldr	r1, .L1153+0x4
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L1146:
+.L1154:
 	.align	2, 0
-.L1145:
+.L1153:
 	.word	gPartyMenu
+	.word	.L1152
+	.align	2, 0
+	.align	2, 0
+.L1152:
+	.word	.L1133
+	.word	.L1137
+	.word	.L1151
+	.word	.L1151
+	.word	.L1138
+	.word	.L1151
 	.word	.L1144
-	.align	2, 0
-	.align	2, 0
-.L1144:
-	.word	.L1125
-	.word	.L1129
-	.word	.L1143
-	.word	.L1143
-	.word	.L1130
-	.word	.L1143
-	.word	.L1136
-	.word	.L1143
-	.word	.L1139
-	.word	.L1140
-	.word	.L1141
-	.word	.L1143
-	.word	.L1142
-.L1125:
+	.word	.L1151
+	.word	.L1147
+	.word	.L1148
+	.word	.L1149
+	.word	.L1151
+	.word	.L1150
+.L1133:
 	bl	InMultiPartnerRoom
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L1127	@cond_branch
+	beq	.L1135	@cond_branch
 	add	r0, r4, #0
 	mov	r1, #0x2d
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L1143	@cond_branch
-.L1127:
+	beq	.L1151	@cond_branch
+.L1135:
 	mov	r1, #0x1
-	b	.L1124
-.L1129:
+	b	.L1132
+.L1137:
 	add	r0, r4, #0
 	bl	GetPartyMenuActionsTypeInBattle
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
-	b	.L1124
-.L1130:
+	b	.L1132
+.L1138:
 	mov	r0, #0x9
 	ldrsb	r0, [r2, r0]
 	bl	GetPartySlotEntryStatus
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1133	@cond_branch
+	beq	.L1141	@cond_branch
 	cmp	r0, #0x1
-	beq	.L1134	@cond_branch
+	beq	.L1142	@cond_branch
 	mov	r1, #0x7
-	b	.L1124
-.L1133:
+	b	.L1132
+.L1141:
 	mov	r1, #0x4
-	b	.L1124
-.L1134:
+	b	.L1132
+.L1142:
 	mov	r1, #0x5
-	b	.L1124
-.L1136:
+	b	.L1132
+.L1144:
 	add	r0, r4, #0
 	mov	r1, #0x2d
 	bl	GetMonData
 	mov	r1, #0x6
 	cmp	r0, #0
-	beq	.L1124	@cond_branch
+	beq	.L1132	@cond_branch
 	mov	r1, #0x7
-	b	.L1124
-.L1139:
+	b	.L1132
+.L1147:
 	mov	r1, #0xa
-	b	.L1124
-.L1140:
+	b	.L1132
+.L1148:
 	mov	r1, #0xb
-	b	.L1124
-.L1141:
+	b	.L1132
+.L1149:
 	mov	r1, #0xc
-	b	.L1124
-.L1142:
+	b	.L1132
+.L1150:
 	mov	r1, #0xd
-	b	.L1124
-.L1143:
+	b	.L1132
+.L1151:
 	mov	r1, #0x0
-.L1124:
+.L1132:
 	add	r0, r1, #0
 	pop	{r4}
 	pop	{r1}
@@ -10483,17 +12161,17 @@ CreateSelectionWindow:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	mov	r8, r0
-	ldr	r4, .L1153
+	ldr	r4, .L1161
 	mov	r1, #0x9
 	ldrsb	r1, [r4, r1]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r7, .L1153+0x4
+	ldr	r7, .L1161+0x4
 	add	r5, r0, r7
-	ldr	r1, .L1153+0x8
+	ldr	r1, .L1161+0x8
 	add	r0, r5, #0
 	bl	GetMonNickname
-	ldr	r0, .L1153+0xc
+	ldr	r0, .L1161+0xc
 	ldr	r0, [r0]
 	add	r0, r0, #0xd
 	bl	PartyMenuRemoveWindow
@@ -10501,7 +12179,7 @@ CreateSelectionWindow:
 	mov	r0, #0xf
 	and	r0, r0, r1
 	cmp	r0, #0xc
-	beq	.L1148	@cond_branch
+	beq	.L1156	@cond_branch
 	ldrb	r4, [r4, #0x9]
 	add	r0, r5, #0
 	bl	GetPartyMenuActionsType
@@ -10515,24 +12193,24 @@ CreateSelectionWindow:
 	bl	DisplaySelectionWindow
 	mov	r0, #0x15
 	bl	DisplayPartyMenuStdMessage
-	b	.L1149
-.L1154:
+	b	.L1157
+.L1162:
 	.align	2, 0
-.L1153:
+.L1161:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gStringVar1
 	.word	sPartyMenuInternal
-.L1148:
+.L1156:
 	add	r0, r5, #0
 	mov	r1, #0xc
 	bl	GetMonData
 	lsl	r0, r0, #0x10
 	lsr	r6, r0, #0x10
 	cmp	r6, #0
-	bne	.L1150	@cond_branch
-	ldr	r4, .L1155
-	ldr	r1, .L1155+0x4
+	bne	.L1158	@cond_branch
+	ldr	r4, .L1163
+	ldr	r1, .L1163+0x4
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	add	r0, r4, #0
@@ -10540,24 +12218,24 @@ CreateSelectionWindow:
 	bl	DisplayPartyMenuMessage
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
-	ldr	r1, .L1155+0x8
+	ldr	r1, .L1163+0x8
 	mov	r2, r8
 	lsl	r0, r2, #0x2
 	add	r0, r0, r8
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1155+0xc
+	ldr	r1, .L1163+0xc
 	str	r1, [r0]
 	mov	r0, #0x0
-	b	.L1152
-.L1156:
+	b	.L1160
+.L1164:
 	.align	2, 0
-.L1155:
+.L1163:
 	.word	gStringVar4
 	.word	gText_PkmnNotHolding
 	.word	gTasks
 	.word	Task_UpdateHeldItemSprite
-.L1150:
+.L1158:
 	ldrb	r4, [r4, #0x9]
 	add	r0, r5, #0
 	bl	GetPartyMenuActionsType
@@ -10569,22 +12247,22 @@ CreateSelectionWindow:
 	bl	SetPartyMonSelectionActions
 	mov	r0, #0x1
 	bl	DisplaySelectionWindow
-	ldr	r1, .L1157
+	ldr	r1, .L1165
 	add	r0, r6, #0
 	bl	CopyItemName
 	mov	r0, #0x1a
 	bl	DisplayPartyMenuStdMessage
-.L1149:
+.L1157:
 	mov	r0, #0x1
-.L1152:
+.L1160:
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.L1158:
+.L1166:
 	.align	2, 0
-.L1157:
+.L1165:
 	.word	gStringVar2
 .Lfe114:
 	.size	 CreateSelectionWindow,.Lfe114-CreateSelectionWindow
@@ -10599,23 +12277,23 @@ Task_TryCreateSelectionWindow:
 	bl	CreateSelectionWindow
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1160	@cond_branch
-	ldr	r1, .L1161
+	beq	.L1168	@cond_branch
+	ldr	r1, .L1169
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
 	mov	r1, #0xff
 	strh	r1, [r0, #0x8]
-	ldr	r1, .L1161+0x4
+	ldr	r1, .L1169+0x4
 	str	r1, [r0]
-.L1160:
+.L1168:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1162:
+.L1170:
 	.align	2, 0
-.L1161:
+.L1169:
 	.word	gTasks
 	.word	Task_HandleSelectionMenuInput
 .Lfe115:
@@ -10627,38 +12305,38 @@ Task_HandleSelectionMenuInput:
 	push	{r4, r5, r6, lr}
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-	ldr	r0, .L1173
+	ldr	r0, .L1181
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1164	@cond_branch
+	bne	.L1172	@cond_branch
 	bl	MenuHelpers_CallLinkSomething
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L1164	@cond_branch
+	beq	.L1172	@cond_branch
 	lsl	r0, r6, #0x2
 	add	r0, r0, r6
 	lsl	r0, r0, #0x3
-	ldr	r1, .L1173+0x4
+	ldr	r1, .L1181+0x4
 	add	r5, r0, r1
-	ldr	r0, .L1173+0x8
+	ldr	r0, .L1181+0x8
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x17]
 	cmp	r0, #0x3
-	bhi	.L1165	@cond_branch
+	bhi	.L1173	@cond_branch
 	bl	Menu_ProcessInputNoWrapAround_other
-	b	.L1172
-.L1174:
+	b	.L1180
+.L1182:
 	.align	2, 0
-.L1173:
+.L1181:
 	.word	gPaletteFade
 	.word	gTasks+0x8
 	.word	sPartyMenuInternal
-.L1165:
+.L1173:
 	bl	ProcessMenuInput_other
-.L1172:
+.L1180:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	bl	Menu_GetCursorPos
@@ -10670,17 +12348,17 @@ Task_HandleSelectionMenuInput:
 	mov	r0, #0x2
 	neg	r0, r0
 	cmp	r5, r0
-	beq	.L1164	@cond_branch
+	beq	.L1172	@cond_branch
 	add	r0, r0, #0x1
 	cmp	r5, r0
-	bne	.L1170	@cond_branch
+	bne	.L1178	@cond_branch
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r4, .L1175
+	ldr	r4, .L1183
 	ldr	r0, [r4]
 	add	r0, r0, #0xe
 	bl	PartyMenuRemoveWindow
-	ldr	r2, .L1175+0x4
+	ldr	r2, .L1183+0x4
 	ldr	r0, [r4]
 	ldrb	r1, [r0, #0x17]
 	add	r0, r0, r1
@@ -10691,18 +12369,18 @@ Task_HandleSelectionMenuInput:
 	ldr	r1, [r0]
 	add	r0, r6, #0
 	bl	_call_via_r1
-	b	.L1164
-.L1176:
+	b	.L1172
+.L1184:
 	.align	2, 0
-.L1175:
+.L1183:
 	.word	sPartyMenuInternal
 	.word	sCursorOptions
-.L1170:
-	ldr	r4, .L1177
+.L1178:
+	ldr	r4, .L1185
 	ldr	r0, [r4]
 	add	r0, r0, #0xe
 	bl	PartyMenuRemoveWindow
-	ldr	r1, .L1177+0x4
+	ldr	r1, .L1185+0x4
 	ldr	r0, [r4]
 	add	r0, r0, #0xf
 	add	r0, r0, r5
@@ -10713,13 +12391,13 @@ Task_HandleSelectionMenuInput:
 	ldr	r1, [r0]
 	add	r0, r6, #0
 	bl	_call_via_r1
-.L1164:
+.L1172:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1178:
+.L1186:
 	.align	2, 0
-.L1177:
+.L1185:
 	.word	sPartyMenuInternal
 	.word	sCursorOptions
 .Lfe116:
@@ -10734,18 +12412,18 @@ CursorCb_Summary:
 	lsr	r4, r4, #0x18
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r0, .L1180
+	ldr	r0, .L1188
 	ldr	r1, [r0]
-	ldr	r0, .L1180+0x4
+	ldr	r0, .L1188+0x4
 	str	r0, [r1, #0x4]
 	add	r0, r4, #0
 	bl	Task_ClosePartyMenu
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1181:
+.L1189:
 	.align	2, 0
-.L1180:
+.L1188:
 	.word	sPartyMenuInternal
 	.word	CB2_ShowPokemonSummaryScreen
 .Lfe117:
@@ -10756,52 +12434,52 @@ CursorCb_Summary:
 CB2_ShowPokemonSummaryScreen:
 	push	{r4, lr}
 	add	sp, sp, #-0x4
-	ldr	r4, .L1185
+	ldr	r4, .L1193
 	ldrb	r1, [r4, #0x8]
 	mov	r0, #0xf
 	and	r0, r0, r1
 	cmp	r0, #0x1
-	bne	.L1183	@cond_branch
+	bne	.L1191	@cond_branch
 	bl	UpdatePartyToBattleOrder
-	ldr	r1, .L1185+0x4
+	ldr	r1, .L1193+0x4
 	ldrb	r2, [r4, #0x9]
-	ldr	r0, .L1185+0x8
+	ldr	r0, .L1193+0x8
 	ldrb	r3, [r0]
 	sub	r3, r3, #0x1
 	lsl	r3, r3, #0x18
 	lsr	r3, r3, #0x18
-	ldr	r0, .L1185+0xc
+	ldr	r0, .L1193+0xc
 	str	r0, [sp]
 	mov	r0, #0x1
 	bl	ShowPokemonSummaryScreen
-	b	.L1184
-.L1186:
+	b	.L1192
+.L1194:
 	.align	2, 0
-.L1185:
+.L1193:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gPlayerPartyCount
 	.word	CB2_ReturnToPartyMenuFromSummaryScreen
-.L1183:
-	ldr	r1, .L1187
+.L1191:
+	ldr	r1, .L1195
 	ldrb	r2, [r4, #0x9]
-	ldr	r0, .L1187+0x4
+	ldr	r0, .L1195+0x4
 	ldrb	r3, [r0]
 	sub	r3, r3, #0x1
 	lsl	r3, r3, #0x18
 	lsr	r3, r3, #0x18
-	ldr	r0, .L1187+0x8
+	ldr	r0, .L1195+0x8
 	str	r0, [sp]
 	mov	r0, #0x0
 	bl	ShowPokemonSummaryScreen
-.L1184:
+.L1192:
 	add	sp, sp, #0x4
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1188:
+.L1196:
 	.align	2, 0
-.L1187:
+.L1195:
 	.word	gPlayerParty
 	.word	gPlayerPartyCount
 	.word	CB2_ReturnToPartyMenuFromSummaryScreen
@@ -10813,13 +12491,13 @@ CB2_ShowPokemonSummaryScreen:
 CB2_ReturnToPartyMenuFromSummaryScreen:
 	push	{lr}
 	add	sp, sp, #-0xc
-	ldr	r2, .L1190
+	ldr	r2, .L1198
 	ldrb	r0, [r2, #0x8]
 	mov	r1, #0x80
 	orr	r0, r0, r1
 	strb	r0, [r2, #0x8]
-	ldr	r3, .L1190+0x4
-	ldr	r0, .L1190+0x8
+	ldr	r3, .L1198+0x4
+	ldr	r0, .L1198+0x8
 	ldrb	r0, [r0]
 	strb	r0, [r3, #0x9]
 	ldrb	r0, [r3, #0x8]
@@ -10828,7 +12506,7 @@ CB2_ReturnToPartyMenuFromSummaryScreen:
 	ldrb	r2, [r3, #0xb]
 	mov	r1, #0x15
 	str	r1, [sp]
-	ldr	r1, .L1190+0xc
+	ldr	r1, .L1198+0xc
 	str	r1, [sp, #0x4]
 	ldr	r1, [r3]
 	str	r1, [sp, #0x8]
@@ -10838,9 +12516,9 @@ CB2_ReturnToPartyMenuFromSummaryScreen:
 	add	sp, sp, #0xc
 	pop	{r0}
 	bx	r0
-.L1191:
+.L1199:
 	.align	2, 0
-.L1190:
+.L1198:
 	.word	gPaletteFade
 	.word	gPartyMenu
 	.word	gLastViewedMonIndex
@@ -10857,10 +12535,10 @@ CursorCb_Switch:
 	lsr	r6, r6, #0x18
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r5, .L1193
+	ldr	r5, .L1201
 	mov	r0, #0x8
 	strb	r0, [r5, #0xb]
-	ldr	r4, .L1193+0x4
+	ldr	r4, .L1201+0x4
 	ldr	r0, [r4]
 	add	r0, r0, #0xd
 	bl	PartyMenuRemoveWindow
@@ -10874,19 +12552,19 @@ CursorCb_Switch:
 	bl	AnimatePartySlot
 	ldrb	r0, [r5, #0x9]
 	strb	r0, [r5, #0xa]
-	ldr	r1, .L1193+0x8
+	ldr	r1, .L1201+0x8
 	lsl	r0, r6, #0x2
 	add	r0, r0, r6
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1193+0xc
+	ldr	r1, .L1201+0xc
 	str	r1, [r0]
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1194:
+.L1202:
 	.align	2, 0
-.L1193:
+.L1201:
 	.word	gPartyMenu
 	.word	sPartyMenuInternal
 	.word	gTasks
@@ -10904,28 +12582,28 @@ SwitchSelectedMons:
 	lsl	r0, r7, #0x2
 	add	r0, r0, r7
 	lsl	r0, r0, #0x3
-	ldr	r1, .L1204
+	ldr	r1, .L1212
 	add	r6, r0, r1
-	ldr	r3, .L1204+0x4
+	ldr	r3, .L1212+0x4
 	mov	r1, #0xa
 	ldrsb	r1, [r3, r1]
 	mov	r0, #0x9
 	ldrsb	r0, [r3, r0]
 	cmp	r1, r0
-	bne	.L1196	@cond_branch
+	bne	.L1204	@cond_branch
 	add	r0, r7, #0
 	bl	FinishTwoMonAction
-	b	.L1197
-.L1205:
+	b	.L1205
+.L1213:
 	.align	2, 0
-.L1204:
+.L1212:
 	.word	gTasks+0x8
 	.word	gPartyMenu
-.L1196:
+.L1204:
 	add	r2, sp, #0x8
 	mov	r0, #0x9
 	ldrsb	r0, [r3, r0]
-	ldr	r1, .L1206
+	ldr	r1, .L1214
 	ldr	r1, [r1]
 	lsl	r0, r0, #0x4
 	add	r0, r0, r1
@@ -10956,25 +12634,25 @@ SwitchSelectedMons:
 	mov	r1, #0x4
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0xa
-	bne	.L1198	@cond_branch
+	bne	.L1206	@cond_branch
 	mov	r2, #0x1
 	neg	r2, r2
 	add	r0, r2, #0
-	b	.L1202
-.L1207:
+	b	.L1210
+.L1215:
 	.align	2, 0
-.L1206:
+.L1214:
 	.word	sPartyMenuBoxes
-.L1198:
+.L1206:
 	mov	r0, #0x1
-.L1202:
+.L1210:
 	strh	r0, [r6, #0x14]
 	add	r2, sp, #0x8
-	ldr	r0, .L1208
+	ldr	r0, .L1216
 	ldrb	r0, [r0, #0xa]
 	lsl	r0, r0, #24
 	asr	r0, r0, #24
-	ldr	r1, .L1208+0x4
+	ldr	r1, .L1216+0x4
 	ldr	r1, [r1]
 	lsl	r0, r0, #0x4
 	add	r0, r0, r1
@@ -11005,21 +12683,21 @@ SwitchSelectedMons:
 	mov	r1, #0xc
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0xa
-	bne	.L1200	@cond_branch
+	bne	.L1208	@cond_branch
 	mov	r2, #0x1
 	neg	r2, r2
 	add	r0, r2, #0
-	b	.L1203
-.L1209:
+	b	.L1211
+.L1217:
 	.align	2, 0
-.L1208:
+.L1216:
 	.word	gPartyMenu
 	.word	sPartyMenuBoxes
-.L1200:
+.L1208:
 	mov	r0, #0x1
-.L1203:
+.L1211:
 	strh	r0, [r6, #0x16]
-	ldr	r4, .L1210
+	ldr	r4, .L1218
 	mov	r0, #0x4
 	ldrsh	r1, [r6, r0]
 	mov	r2, #0x6
@@ -11028,7 +12706,7 @@ SwitchSelectedMons:
 	mul	r0, r0, r1
 	bl	Alloc
 	str	r0, [r4]
-	ldr	r5, .L1210+0x4
+	ldr	r5, .L1218+0x4
 	mov	r0, #0xc
 	ldrsh	r1, [r6, r0]
 	mov	r2, #0xe
@@ -11061,7 +12739,7 @@ SwitchSelectedMons:
 	add	r0, sp, #0x8
 	ldrb	r0, [r0, #0x1]
 	bl	ClearWindowTilemap
-	ldr	r4, .L1210+0x8
+	ldr	r4, .L1218+0x8
 	mov	r0, #0x9
 	strb	r0, [r4, #0xb]
 	ldrb	r0, [r4, #0x9]
@@ -11072,21 +12750,21 @@ SwitchSelectedMons:
 	bl	AnimatePartySlot
 	add	r0, r7, #0
 	bl	SlidePartyMenuBoxOneStep
-	ldr	r1, .L1210+0xc
+	ldr	r1, .L1218+0xc
 	lsl	r0, r7, #0x2
 	add	r0, r0, r7
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1210+0x10
+	ldr	r1, .L1218+0x10
 	str	r1, [r0]
-.L1197:
+.L1205:
 	add	sp, sp, #0xc
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1211:
+.L1219:
 	.align	2, 0
-.L1210:
+.L1218:
 	.word	sSlot1TilemapBuffer
 	.word	sSlot2TilemapBuffer
 	.word	gPartyMenu
@@ -11116,15 +12794,15 @@ TryMovePartySlot:
 	asr	r0, r0, #0x10
 	add	r4, r1, r0
 	cmp	r4, #0
-	blt	.L1220	@cond_branch
+	blt	.L1228	@cond_branch
 	cmp	r1, #0x1f
-	ble	.L1214	@cond_branch
-.L1220:
+	ble	.L1222	@cond_branch
+.L1228:
 	mov	r0, #0x0
-	b	.L1219
-.L1214:
+	b	.L1227
+.L1222:
 	cmp	r1, #0
-	bge	.L1215	@cond_branch
+	bge	.L1223	@cond_branch
 	neg	r0, r1
 	strb	r0, [r6]
 	mov	r0, #0x0
@@ -11132,24 +12810,24 @@ TryMovePartySlot:
 	strb	r0, [r1]
 	add	r0, r2, r3
 	strb	r0, [r7]
-	b	.L1216
-.L1215:
+	b	.L1224
+.L1223:
 	mov	r0, #0x0
 	strb	r0, [r6]
 	mov	r0, ip
 	strb	r5, [r0]
 	cmp	r4, #0x1f
-	ble	.L1217	@cond_branch
+	ble	.L1225	@cond_branch
 	mov	r0, #0x20
 	sub	r0, r0, r5
 	strb	r0, [r7]
-	b	.L1216
-.L1217:
+	b	.L1224
+.L1225:
 	mov	r1, r8
 	strb	r1, [r7]
-.L1216:
+.L1224:
 	mov	r0, #0x1
-.L1219:
+.L1227:
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
@@ -11198,7 +12876,7 @@ MoveAndBufferPartySlot:
 	bl	TryMovePartySlot
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1222	@cond_branch
+	beq	.L1230	@cond_branch
 	ldrb	r2, [r5]
 	mov	r1, r9
 	lsl	r0, r1, #0x18
@@ -11227,7 +12905,7 @@ MoveAndBufferPartySlot:
 	bl	TryMovePartySlot
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1222	@cond_branch
+	beq	.L1230	@cond_branch
 	add	r0, sp, #0x24
 	ldrb	r2, [r0]
 	ldr	r1, [sp, #0x2c]
@@ -11250,7 +12928,7 @@ MoveAndBufferPartySlot:
 	ldr	r1, [sp, #0x28]
 	mov	r3, #0x0
 	bl	CopyRectToBgTilemapBufferRect
-.L1222:
+.L1230:
 	add	sp, sp, #0x34
 	pop	{r3, r4, r5}
 	mov	r8, r3
@@ -11266,7 +12944,7 @@ MoveAndBufferPartySlot:
 	.thumb_func
 MovePartyMenuBoxSprites:
 	push	{r4, lr}
-	ldr	r4, .L1225
+	ldr	r4, .L1233
 	ldrb	r2, [r0, #0xb]
 	lsl	r3, r2, #0x4
 	add	r3, r3, r2
@@ -11304,9 +12982,9 @@ MovePartyMenuBoxSprites:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1226:
+.L1234:
 	.align	2, 0
-.L1225:
+.L1233:
 	.word	gSprites
 .Lfe124:
 	.size	 MovePartyMenuBoxSprites,.Lfe124-MovePartyMenuBoxSprites
@@ -11320,14 +12998,14 @@ SlidePartyMenuBoxSpritesOneStep:
 	lsl	r1, r0, #0x2
 	add	r1, r1, r0
 	lsl	r1, r1, #0x3
-	ldr	r0, .L1230
+	ldr	r0, .L1238
 	add	r4, r1, r0
 	mov	r1, #0x14
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	beq	.L1228	@cond_branch
-	ldr	r2, .L1230+0x4
-	ldr	r0, .L1230+0x8
+	beq	.L1236	@cond_branch
+	ldr	r2, .L1238+0x4
+	ldr	r0, .L1238+0x8
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	lsl	r1, r1, #0x4
@@ -11336,13 +13014,13 @@ SlidePartyMenuBoxSpritesOneStep:
 	mov	r2, #0x14
 	ldrsh	r1, [r4, r2]
 	bl	MovePartyMenuBoxSprites
-.L1228:
+.L1236:
 	mov	r1, #0x16
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	beq	.L1229	@cond_branch
-	ldr	r2, .L1230+0x4
-	ldr	r0, .L1230+0x8
+	beq	.L1237	@cond_branch
+	ldr	r2, .L1238+0x4
+	ldr	r0, .L1238+0x8
 	mov	r1, #0xa
 	ldrsb	r1, [r0, r1]
 	lsl	r1, r1, #0x4
@@ -11351,13 +13029,13 @@ SlidePartyMenuBoxSpritesOneStep:
 	mov	r2, #0x16
 	ldrsh	r1, [r4, r2]
 	bl	MovePartyMenuBoxSprites
-.L1229:
+.L1237:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1231:
+.L1239:
 	.align	2, 0
-.L1230:
+.L1238:
 	.word	gTasks+0x8
 	.word	sPartyMenuBoxes
 	.word	gPartyMenu
@@ -11374,13 +13052,13 @@ SlidePartyMenuBoxOneStep:
 	lsl	r1, r0, #0x2
 	add	r1, r1, r0
 	lsl	r1, r1, #0x3
-	ldr	r0, .L1235
+	ldr	r0, .L1243
 	add	r5, r1, r0
 	mov	r1, #0x14
 	ldrsh	r0, [r5, r1]
 	cmp	r0, #0
-	beq	.L1233	@cond_branch
-	ldr	r0, .L1235+0x4
+	beq	.L1241	@cond_branch
+	ldr	r0, .L1243+0x4
 	ldr	r0, [r0]
 	ldrh	r1, [r5, #0x10]
 	ldrh	r2, [r5]
@@ -11398,12 +13076,12 @@ SlidePartyMenuBoxOneStep:
 	ldrsh	r4, [r5, r6]
 	str	r4, [sp, #0x4]
 	bl	MoveAndBufferPartySlot
-.L1233:
+.L1241:
 	mov	r1, #0x16
 	ldrsh	r0, [r5, r1]
 	cmp	r0, #0
-	beq	.L1234	@cond_branch
-	ldr	r0, .L1235+0x8
+	beq	.L1242	@cond_branch
+	ldr	r0, .L1243+0x8
 	ldr	r0, [r0]
 	ldrh	r1, [r5, #0x12]
 	ldrh	r2, [r5, #0x8]
@@ -11421,16 +13099,16 @@ SlidePartyMenuBoxOneStep:
 	ldrsh	r4, [r5, r6]
 	str	r4, [sp, #0x4]
 	bl	MoveAndBufferPartySlot
-.L1234:
+.L1242:
 	mov	r0, #0x0
 	bl	ScheduleBgCopyTilemapToVram
 	add	sp, sp, #0x8
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1236:
+.L1244:
 	.align	2, 0
-.L1235:
+.L1243:
 	.word	gTasks+0x8
 	.word	sSlot1TilemapBuffer
 	.word	sSlot2TilemapBuffer
@@ -11450,7 +13128,7 @@ Task_SlideSelectedSlotsOffscreen:
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r7, r0, #0x3
-	ldr	r0, .L1239
+	ldr	r0, .L1247
 	mov	r8, r0
 	add	r6, r7, r0
 	add	r0, r4, #0
@@ -11477,11 +13155,11 @@ Task_SlideSelectedSlotsOffscreen:
 	add	r0, r1, #0
 	ldrh	r0, [r0]
 	cmp	r0, #0x21
-	bls	.L1238	@cond_branch
+	bls	.L1246	@cond_branch
 	lsl	r0, r2, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x21
-	bls	.L1238	@cond_branch
+	bls	.L1246	@cond_branch
 	mov	r1, #0x14
 	ldrsh	r0, [r6, r1]
 	neg	r0, r0
@@ -11491,14 +13169,14 @@ Task_SlideSelectedSlotsOffscreen:
 	neg	r0, r0
 	strh	r0, [r6, #0x16]
 	bl	SwitchPartyMon
-	ldr	r4, .L1239+0x4
+	ldr	r4, .L1247+0x4
 	ldrb	r0, [r4, #0x9]
 	bl	DisplayPartyPokemonData
 	ldrb	r0, [r4, #0xa]
 	bl	DisplayPartyPokemonData
 	mov	r0, #0x9
 	ldrsb	r0, [r4, r0]
-	ldr	r5, .L1239+0x8
+	ldr	r5, .L1247+0x8
 	ldr	r1, [r5]
 	lsl	r0, r0, #0x4
 	add	r0, r0, r1
@@ -11511,7 +13189,7 @@ Task_SlideSelectedSlotsOffscreen:
 	add	r0, r0, r1
 	ldrb	r0, [r0, #0x8]
 	bl	PutWindowTilemap
-	ldr	r0, .L1239+0xc
+	ldr	r0, .L1247+0xc
 	ldr	r1, [r0]
 	ldrb	r2, [r6]
 	ldrb	r3, [r6, #0x2]
@@ -11521,7 +13199,7 @@ Task_SlideSelectedSlotsOffscreen:
 	str	r0, [sp, #0x4]
 	mov	r0, #0x0
 	bl	CopyToBufferFromBgTilemap
-	ldr	r0, .L1239+0x10
+	ldr	r0, .L1247+0x10
 	ldr	r1, [r0]
 	ldrb	r2, [r6, #0x8]
 	ldrb	r3, [r6, #0xa]
@@ -11548,18 +13226,18 @@ Task_SlideSelectedSlotsOffscreen:
 	mov	r0, r8
 	sub	r0, r0, #0x8
 	add	r0, r7, r0
-	ldr	r1, .L1239+0x14
+	ldr	r1, .L1247+0x14
 	str	r1, [r0]
-.L1238:
+.L1246:
 	add	sp, sp, #0xc
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1240:
+.L1248:
 	.align	2, 0
-.L1239:
+.L1247:
 	.word	gTasks+0x8
 	.word	gPartyMenu
 	.word	sPartyMenuBoxes
@@ -11578,7 +13256,7 @@ Task_SlideSelectedSlotsOnscreen:
 	lsl	r0, r6, #0x2
 	add	r0, r0, r6
 	lsl	r0, r0, #0x3
-	ldr	r1, .L1246
+	ldr	r1, .L1254
 	add	r4, r0, r1
 	add	r0, r6, #0
 	bl	SlidePartyMenuBoxOneStep
@@ -11587,15 +13265,15 @@ Task_SlideSelectedSlotsOnscreen:
 	mov	r1, #0x14
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L1242	@cond_branch
+	bne	.L1250	@cond_branch
 	mov	r2, #0x16
 	ldrsh	r0, [r4, r2]
 	cmp	r0, #0
-	bne	.L1242	@cond_branch
-	ldr	r5, .L1246+0x4
+	bne	.L1250	@cond_branch
+	ldr	r5, .L1254+0x4
 	mov	r0, #0x9
 	ldrsb	r0, [r5, r0]
-	ldr	r4, .L1246+0x8
+	ldr	r4, .L1254+0x8
 	ldr	r1, [r4]
 	lsl	r0, r0, #0x4
 	add	r0, r0, r1
@@ -11610,24 +13288,24 @@ Task_SlideSelectedSlotsOnscreen:
 	bl	PutWindowTilemap
 	mov	r0, #0x0
 	bl	ScheduleBgCopyTilemapToVram
-	ldr	r0, .L1246+0xc
+	ldr	r0, .L1254+0xc
 	ldr	r0, [r0]
 	bl	Free
-	ldr	r0, .L1246+0x10
+	ldr	r0, .L1254+0x10
 	ldr	r0, [r0]
 	bl	Free
 	add	r0, r6, #0
 	bl	FinishTwoMonAction
-	b	.L1243
-.L1247:
+	b	.L1251
+.L1255:
 	.align	2, 0
-.L1246:
+.L1254:
 	.word	gTasks+0x8
 	.word	gPartyMenu
 	.word	sPartyMenuBoxes
 	.word	sSlot1TilemapBuffer
 	.word	sSlot2TilemapBuffer
-.L1242:
+.L1250:
 	ldrh	r1, [r4, #0x14]
 	ldrh	r0, [r4, #0x10]
 	add	r1, r1, r0
@@ -11639,15 +13317,15 @@ Task_SlideSelectedSlotsOnscreen:
 	lsl	r1, r1, #0x10
 	asr	r1, r1, #0x10
 	cmp	r1, #0
-	bne	.L1244	@cond_branch
+	bne	.L1252	@cond_branch
 	strh	r1, [r4, #0x14]
-.L1244:
+.L1252:
 	mov	r1, #0x12
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L1243	@cond_branch
+	bne	.L1251	@cond_branch
 	strh	r0, [r4, #0x16]
-.L1243:
+.L1251:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
@@ -11666,7 +13344,7 @@ SwitchMenuBoxSprites:
 	ldrb	r2, [r1]
 	strb	r2, [r0]
 	strb	r3, [r1]
-	ldr	r5, .L1249
+	ldr	r5, .L1257
 	ldrb	r2, [r0]
 	lsl	r3, r2, #0x4
 	add	r3, r3, r2
@@ -11756,9 +13434,9 @@ SwitchMenuBoxSprites:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1250:
+.L1258:
 	.align	2, 0
-.L1249:
+.L1257:
 	.word	gSprites
 .Lfe129:
 	.size	 SwitchMenuBoxSprites,.Lfe129-SwitchMenuBoxSprites
@@ -11768,8 +13446,8 @@ SwitchMenuBoxSprites:
 SwitchPartyMon:
 	push	{r4, r5, r6, lr}
 	add	sp, sp, #-0x8
-	ldr	r1, .L1252
-	ldr	r2, .L1252+0x4
+	ldr	r1, .L1260
+	ldr	r2, .L1260+0x4
 	mov	r3, #0x9
 	ldrsb	r3, [r2, r3]
 	lsl	r0, r3, #0x4
@@ -11785,7 +13463,7 @@ SwitchPartyMon:
 	mov	r1, #0x64
 	mov	r4, r3
 	mul	r4, r4, r1
-	ldr	r0, .L1252+0x8
+	ldr	r0, .L1260+0x8
 	add	r4, r4, r0
 	mov	r5, r2
 	mul	r5, r5, r1
@@ -11830,9 +13508,9 @@ SwitchPartyMon:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1253:
+.L1261:
 	.align	2, 0
-.L1252:
+.L1260:
 	.word	sPartyMenuBoxes
 	.word	gPartyMenu
 	.word	gPlayerParty
@@ -11846,11 +13524,11 @@ FinishTwoMonAction:
 	add	r5, r0, #0
 	lsl	r5, r5, #0x18
 	lsr	r5, r5, #0x18
-	ldr	r0, .L1255
+	ldr	r0, .L1263
 	ldr	r0, [r0]
 	add	r0, r0, #0xd
 	bl	PartyMenuRemoveWindow
-	ldr	r4, .L1255+0x4
+	ldr	r4, .L1263+0x4
 	mov	r0, #0x0
 	strb	r0, [r4, #0xb]
 	ldrb	r0, [r4, #0x9]
@@ -11863,19 +13541,19 @@ FinishTwoMonAction:
 	bl	AnimatePartySlot
 	mov	r0, #0x0
 	bl	DisplayPartyMenuStdMessage
-	ldr	r1, .L1255+0x8
+	ldr	r1, .L1263+0x8
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1255+0xc
+	ldr	r1, .L1263+0xc
 	str	r1, [r0]
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1256:
+.L1264:
 	.align	2, 0
-.L1255:
+.L1263:
 	.word	sPartyMenuInternal
 	.word	gPartyMenu
 	.word	gTasks
@@ -11891,44 +13569,44 @@ CursorCb_Cancel1:
 	lsr	r5, r0, #0x18
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r4, .L1260
+	ldr	r4, .L1268
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	bl	PartyMenuRemoveWindow
 	ldr	r0, [r4]
 	add	r0, r0, #0xd
 	bl	PartyMenuRemoveWindow
-	ldr	r0, .L1260+0x4
+	ldr	r0, .L1268+0x4
 	ldrb	r1, [r0, #0x8]
 	mov	r0, #0xf
 	and	r0, r0, r1
 	cmp	r0, #0x6
-	bne	.L1258	@cond_branch
+	bne	.L1266	@cond_branch
 	mov	r0, #0xf
 	bl	DisplayPartyMenuStdMessage
-	b	.L1259
-.L1261:
+	b	.L1267
+.L1269:
 	.align	2, 0
-.L1260:
+.L1268:
 	.word	sPartyMenuInternal
 	.word	gPartyMenu
-.L1258:
+.L1266:
 	mov	r0, #0x0
 	bl	DisplayPartyMenuStdMessage
-.L1259:
-	ldr	r0, .L1262
+.L1267:
+	ldr	r0, .L1270
 	lsl	r1, r5, #0x2
 	add	r1, r1, r5
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L1262+0x4
+	ldr	r0, .L1270+0x4
 	str	r0, [r1]
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1263:
+.L1271:
 	.align	2, 0
-.L1262:
+.L1270:
 	.word	gTasks
 	.word	Task_HandleChooseMonInput
 .Lfe132:
@@ -11943,15 +13621,15 @@ CursorCb_Item:
 	lsr	r5, r5, #0x18
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r4, .L1265
+	ldr	r4, .L1273
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	bl	PartyMenuRemoveWindow
 	ldr	r0, [r4]
 	add	r0, r0, #0xd
 	bl	PartyMenuRemoveWindow
-	ldr	r0, .L1265+0x4
-	ldr	r1, .L1265+0x8
+	ldr	r0, .L1273+0x4
+	ldr	r1, .L1273+0x8
 	ldrb	r1, [r1, #0x9]
 	mov	r2, #0x8
 	bl	SetPartyMonSelectionActions
@@ -11959,21 +13637,21 @@ CursorCb_Item:
 	bl	DisplaySelectionWindow
 	mov	r0, #0x18
 	bl	DisplayPartyMenuStdMessage
-	ldr	r1, .L1265+0xc
+	ldr	r1, .L1273+0xc
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
 	mov	r1, #0xff
 	strh	r1, [r0, #0x8]
-	ldr	r1, .L1265+0x10
+	ldr	r1, .L1273+0x10
 	str	r1, [r0]
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1266:
+.L1274:
 	.align	2, 0
-.L1265:
+.L1273:
 	.word	sPartyMenuInternal
 	.word	gPlayerParty
 	.word	gPartyMenu
@@ -11991,18 +13669,18 @@ CursorCb_Give:
 	lsr	r4, r4, #0x18
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r0, .L1268
+	ldr	r0, .L1276
 	ldr	r1, [r0]
-	ldr	r0, .L1268+0x4
+	ldr	r0, .L1276+0x4
 	str	r0, [r1, #0x4]
 	add	r0, r4, #0
 	bl	Task_ClosePartyMenu
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1269:
+.L1277:
 	.align	2, 0
-.L1268:
+.L1276:
 	.word	sPartyMenuInternal
 	.word	CB2_SelectBagItemToGive
 .Lfe134:
@@ -12015,26 +13693,26 @@ CB2_SelectBagItemToGive:
 	bl	InBattlePyramid
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L1271	@cond_branch
-	ldr	r2, .L1273
+	bne	.L1279	@cond_branch
+	ldr	r2, .L1281
 	mov	r0, #0x2
 	mov	r1, #0x5
 	bl	GoToBagMenu
-	b	.L1272
-.L1274:
+	b	.L1280
+.L1282:
 	.align	2, 0
-.L1273:
+.L1281:
 	.word	CB2_GiveHoldItem
-.L1271:
-	ldr	r1, .L1275
+.L1279:
+	ldr	r1, .L1283
 	mov	r0, #0x2
 	bl	GoToBattlePyramidBagMenu
-.L1272:
+.L1280:
 	pop	{r0}
 	bx	r0
-.L1276:
+.L1284:
 	.align	2, 0
-.L1275:
+.L1283:
 	.word	CB2_GiveHoldItem
 .Lfe135:
 	.size	 CB2_SelectBagItemToGive,.Lfe135-CB2_SelectBagItemToGive
@@ -12046,30 +13724,30 @@ CB2_GiveHoldItem:
 	mov	r7, r8
 	push	{r7}
 	add	sp, sp, #-0xc
-	ldr	r6, .L1285
+	ldr	r6, .L1293
 	ldrh	r0, [r6]
 	cmp	r0, #0
-	bne	.L1278	@cond_branch
-	ldr	r3, .L1285+0x4
+	bne	.L1286	@cond_branch
+	ldr	r3, .L1293+0x4
 	ldrb	r0, [r3, #0x8]
 	lsl	r0, r0, #0x1c
 	lsr	r0, r0, #0x1c
 	ldrb	r2, [r3, #0xb]
 	mov	r1, #0x7f
 	str	r1, [sp]
-	ldr	r1, .L1285+0x8
+	ldr	r1, .L1293+0x8
 	str	r1, [sp, #0x4]
 	ldr	r1, [r3]
-	b	.L1284
-.L1286:
+	b	.L1292
+.L1294:
 	.align	2, 0
-.L1285:
+.L1293:
 	.word	gSpecialVar_ItemId
 	.word	gPartyMenu
 	.word	Task_TryCreateSelectionWindow
-.L1278:
-	ldr	r4, .L1287
-	ldr	r5, .L1287+0x4
+.L1286:
+	ldr	r4, .L1295
+	ldr	r5, .L1295+0x4
 	mov	r0, #0x9
 	ldrsb	r0, [r5, r0]
 	mov	r1, #0x64
@@ -12077,42 +13755,42 @@ CB2_GiveHoldItem:
 	mov	r1, r8
 	mul	r1, r1, r0
 	add	r0, r1, #0
-	ldr	r7, .L1287+0x8
+	ldr	r7, .L1295+0x8
 	add	r0, r0, r7
 	mov	r1, #0xc
 	bl	GetMonData
 	strh	r0, [r4]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	beq	.L1280	@cond_branch
+	beq	.L1288	@cond_branch
 	ldrb	r0, [r5, #0x8]
 	lsl	r0, r0, #0x1c
 	lsr	r0, r0, #0x1c
 	ldrb	r2, [r5, #0xb]
 	mov	r1, #0x7f
 	str	r1, [sp]
-	ldr	r1, .L1287+0xc
+	ldr	r1, .L1295+0xc
 	str	r1, [sp, #0x4]
 	ldr	r1, [r5]
-.L1284:
+.L1292:
 	str	r1, [sp, #0x8]
 	mov	r1, #0xff
 	mov	r3, #0x1
 	bl	InitPartyMenu
-	b	.L1279
-.L1288:
+	b	.L1287
+.L1296:
 	.align	2, 0
-.L1287:
+.L1295:
 	.word	sPartyMenuItemId
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	Task_SwitchHoldItemsPrompt
-.L1280:
+.L1288:
 	ldrh	r0, [r6]
 	bl	ItemIsMail
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1282	@cond_branch
+	beq	.L1290	@cond_branch
 	ldrh	r0, [r6]
 	mov	r1, #0x1
 	bl	RemoveBagItem
@@ -12125,31 +13803,31 @@ CB2_GiveHoldItem:
 	ldrh	r1, [r6]
 	bl	GiveItemToMon
 	bl	CB2_WriteMailToGiveMon
-	b	.L1279
-.L1282:
+	b	.L1287
+.L1290:
 	ldrb	r0, [r5, #0x8]
 	lsl	r0, r0, #0x1c
 	lsr	r0, r0, #0x1c
 	ldrb	r2, [r5, #0xb]
 	mov	r1, #0x7f
 	str	r1, [sp]
-	ldr	r1, .L1289
+	ldr	r1, .L1297
 	str	r1, [sp, #0x4]
 	ldr	r1, [r5]
 	str	r1, [sp, #0x8]
 	mov	r1, #0xff
 	mov	r3, #0x1
 	bl	InitPartyMenu
-.L1279:
+.L1287:
 	add	sp, sp, #0xc
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1290:
+.L1298:
 	.align	2, 0
-.L1289:
+.L1297:
 	.word	Task_GiveHoldItem
 .Lfe136:
 	.size	 CB2_GiveHoldItem,.Lfe136-CB2_GiveHoldItem
@@ -12162,22 +13840,22 @@ Task_GiveHoldItem:
 	push	{r7}
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	ldr	r0, .L1293
+	ldr	r0, .L1301
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1292	@cond_branch
-	ldr	r0, .L1293+0x4
+	bne	.L1300	@cond_branch
+	ldr	r0, .L1301+0x4
 	ldrh	r4, [r0]
-	ldr	r0, .L1293+0x8
+	ldr	r0, .L1301+0x8
 	mov	r8, r0
 	ldrb	r0, [r0, #0x9]
 	lsl	r0, r0, #24
 	asr	r0, r0, #24
 	mov	r6, #0x64
 	mul	r0, r0, r6
-	ldr	r5, .L1293+0xc
+	ldr	r5, .L1301+0xc
 	add	r0, r0, r5
 	add	r1, r4, #0
 	mov	r2, #0x0
@@ -12193,22 +13871,22 @@ Task_GiveHoldItem:
 	add	r0, r4, #0
 	mov	r1, #0x1
 	bl	RemoveBagItem
-	ldr	r1, .L1293+0x10
+	ldr	r1, .L1301+0x10
 	lsl	r0, r7, #0x2
 	add	r0, r0, r7
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1293+0x14
+	ldr	r1, .L1301+0x14
 	str	r1, [r0]
-.L1292:
+.L1300:
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1294:
+.L1302:
 	.align	2, 0
-.L1293:
+.L1301:
 	.word	gPaletteFade
 	.word	gSpecialVar_ItemId
 	.word	gPartyMenu
@@ -12224,37 +13902,37 @@ Task_SwitchHoldItemsPrompt:
 	push	{r4, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r0, .L1297
+	ldr	r0, .L1305
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1296	@cond_branch
-	ldr	r0, .L1297+0x4
+	bne	.L1304	@cond_branch
+	ldr	r0, .L1305+0x4
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L1297+0x8
+	ldr	r1, .L1305+0x8
 	add	r0, r0, r1
-	ldr	r1, .L1297+0xc
+	ldr	r1, .L1305+0xc
 	ldrh	r1, [r1]
 	mov	r2, #0x1
 	bl	DisplayAlreadyHoldingItemSwitchMessage
-	ldr	r1, .L1297+0x10
+	ldr	r1, .L1305+0x10
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1297+0x14
+	ldr	r1, .L1305+0x14
 	str	r1, [r0]
-.L1296:
+.L1304:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1298:
+.L1306:
 	.align	2, 0
-.L1297:
+.L1305:
 	.word	gPaletteFade
 	.word	gPartyMenu
 	.word	gPlayerParty
@@ -12274,22 +13952,22 @@ Task_SwitchItemsYesNo:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L1300	@cond_branch
+	beq	.L1308	@cond_branch
 	bl	PartyMenuDisplayYesNoMenu
-	ldr	r0, .L1301
+	ldr	r0, .L1309
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L1301+0x4
+	ldr	r0, .L1309+0x4
 	str	r0, [r1]
-.L1300:
+.L1308:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1302:
+.L1310:
 	.align	2, 0
-.L1301:
+.L1309:
 	.word	gTasks
 	.word	Task_HandleSwitchItemsYesNoInput
 .Lfe139:
@@ -12305,91 +13983,91 @@ Task_HandleSwitchItemsYesNoInput:
 	lsl	r0, r0, #0x18
 	asr	r1, r0, #0x18
 	cmp	r1, #0
-	beq	.L1305	@cond_branch
+	beq	.L1313	@cond_branch
 	cmp	r1, #0
-	bgt	.L1314	@cond_branch
+	bgt	.L1322	@cond_branch
 	mov	r0, #0x1
 	neg	r0, r0
 	cmp	r1, r0
-	beq	.L1310	@cond_branch
-	b	.L1304
-.L1314:
+	beq	.L1318	@cond_branch
+	b	.L1312
+.L1322:
 	cmp	r1, #0x1
-	beq	.L1311	@cond_branch
-	b	.L1304
-.L1305:
-	ldr	r5, .L1315
+	beq	.L1319	@cond_branch
+	b	.L1312
+.L1313:
+	ldr	r5, .L1323
 	ldrh	r0, [r5]
 	mov	r1, #0x1
 	bl	RemoveBagItem
-	ldr	r6, .L1315+0x4
+	ldr	r6, .L1323+0x4
 	ldrh	r0, [r6]
 	mov	r1, #0x1
 	bl	AddBagItem
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L1306	@cond_branch
+	bne	.L1314	@cond_branch
 	ldrh	r0, [r5]
 	mov	r1, #0x1
 	bl	AddBagItem
 	ldrh	r0, [r6]
 	bl	BufferBagFullCantTakeItemMessage
-	ldr	r0, .L1315+0x8
+	ldr	r0, .L1323+0x8
 	mov	r1, #0x0
 	bl	DisplayPartyMenuMessage
-	ldr	r1, .L1315+0xc
+	ldr	r1, .L1323+0xc
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1315+0x10
+	ldr	r1, .L1323+0x10
 	str	r1, [r0]
-	b	.L1304
-.L1316:
+	b	.L1312
+.L1324:
 	.align	2, 0
-.L1315:
+.L1323:
 	.word	gSpecialVar_ItemId
 	.word	sPartyMenuItemId
 	.word	gStringVar4
 	.word	gTasks
 	.word	Task_ReturnToChooseMonAfterText
-.L1306:
+.L1314:
 	ldrh	r0, [r5]
 	bl	ItemIsMail
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1308	@cond_branch
-	ldr	r0, .L1317
+	beq	.L1316	@cond_branch
+	ldr	r0, .L1325
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L1317+0x4
+	ldr	r1, .L1325+0x4
 	add	r0, r0, r1
 	ldrh	r1, [r5]
 	bl	GiveItemToMon
-	ldr	r1, .L1317+0x8
+	ldr	r1, .L1325+0x8
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1317+0xc
+	ldr	r1, .L1325+0xc
 	str	r1, [r0]
-	b	.L1304
-.L1318:
+	b	.L1312
+.L1326:
 	.align	2, 0
-.L1317:
+.L1325:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gTasks
 	.word	Task_WriteMailToGiveMonAfterText
-.L1308:
-	ldr	r0, .L1319
+.L1316:
+	ldr	r0, .L1327
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L1319+0x4
+	ldr	r1, .L1327+0x4
 	add	r0, r0, r1
 	ldrh	r1, [r5]
 	bl	GiveItemToMon
@@ -12397,39 +14075,39 @@ Task_HandleSwitchItemsYesNoInput:
 	ldrh	r1, [r6]
 	mov	r2, #0x1
 	bl	DisplaySwitchedHeldItemMessage
-	ldr	r1, .L1319+0x8
+	ldr	r1, .L1327+0x8
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1319+0xc
+	ldr	r1, .L1327+0xc
 	str	r1, [r0]
-	b	.L1304
-.L1320:
+	b	.L1312
+.L1328:
 	.align	2, 0
-.L1319:
+.L1327:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gTasks
 	.word	Task_UpdateHeldItemSprite
-.L1310:
+.L1318:
 	mov	r0, #0x5
 	bl	PlaySE
-.L1311:
-	ldr	r0, .L1321
+.L1319:
+	ldr	r0, .L1329
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L1321+0x4
+	ldr	r0, .L1329+0x4
 	str	r0, [r1]
-.L1304:
+.L1312:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1322:
+.L1330:
 	.align	2, 0
-.L1321:
+.L1329:
 	.word	gTasks
 	.word	Task_ReturnToChooseMonAfterText
 .Lfe140:
@@ -12445,20 +14123,20 @@ Task_WriteMailToGiveMonAfterText:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L1324	@cond_branch
-	ldr	r0, .L1325
+	beq	.L1332	@cond_branch
+	ldr	r0, .L1333
 	ldr	r1, [r0]
-	ldr	r0, .L1325+0x4
+	ldr	r0, .L1333+0x4
 	str	r0, [r1, #0x4]
 	add	r0, r4, #0
 	bl	Task_ClosePartyMenu
-.L1324:
+.L1332:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1326:
+.L1334:
 	.align	2, 0
-.L1325:
+.L1333:
 	.word	sPartyMenuInternal
 	.word	CB2_WriteMailToGiveMon
 .Lfe141:
@@ -12468,34 +14146,34 @@ Task_WriteMailToGiveMonAfterText:
 	.thumb_func
 CB2_WriteMailToGiveMon:
 	push	{lr}
-	ldr	r0, .L1328
+	ldr	r0, .L1336
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L1328+0x4
+	ldr	r1, .L1336+0x4
 	add	r0, r0, r1
 	mov	r1, #0x40
 	bl	GetMonData
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r1, .L1328+0x8
+	ldr	r1, .L1336+0x8
 	lsl	r2, r0, #0x3
 	add	r2, r2, r0
 	lsl	r2, r2, #0x2
-	ldr	r0, .L1328+0xc
+	ldr	r0, .L1336+0xc
 	add	r2, r2, r0
 	ldr	r1, [r1]
 	add	r1, r1, r2
-	ldr	r2, .L1328+0x10
+	ldr	r2, .L1336+0x10
 	mov	r0, #0x4
 	mov	r3, #0x3
 	bl	DoEasyChatScreen
 	pop	{r0}
 	bx	r0
-.L1329:
+.L1337:
 	.align	2, 0
-.L1328:
+.L1336:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gSaveBlock1Ptr
@@ -12511,12 +14189,12 @@ CB2_ReturnToPartyMenuFromWritingMail:
 	mov	r7, r8
 	push	{r7}
 	add	sp, sp, #-0xc
-	ldr	r6, .L1333
+	ldr	r6, .L1341
 	mov	r1, #0x9
 	ldrsb	r1, [r6, r1]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L1333+0x4
+	ldr	r0, .L1341+0x4
 	add	r5, r1, r0
 	add	r0, r5, #0
 	mov	r1, #0xc
@@ -12524,13 +14202,13 @@ CB2_ReturnToPartyMenuFromWritingMail:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	mov	r8, r0
-	ldr	r0, .L1333+0x8
+	ldr	r0, .L1341+0x8
 	ldrh	r7, [r0]
 	cmp	r7, #0
-	bne	.L1331	@cond_branch
+	bne	.L1339	@cond_branch
 	add	r0, r5, #0
 	bl	TakeMailFromMon
-	ldr	r4, .L1333+0xc
+	ldr	r4, .L1341+0xc
 	add	r0, r5, #0
 	mov	r1, #0xc
 	add	r2, r4, #0
@@ -12546,46 +14224,46 @@ CB2_ReturnToPartyMenuFromWritingMail:
 	lsr	r0, r0, #0x1c
 	ldrb	r2, [r6, #0xb]
 	str	r7, [sp]
-	ldr	r1, .L1333+0x10
+	ldr	r1, .L1341+0x10
 	str	r1, [sp, #0x4]
 	ldr	r1, [r6]
 	str	r1, [sp, #0x8]
 	mov	r1, #0xff
 	mov	r3, #0x1
 	bl	InitPartyMenu
-	b	.L1332
-.L1334:
+	b	.L1340
+.L1342:
 	.align	2, 0
-.L1333:
+.L1341:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gSpecialVar_Result
 	.word	sPartyMenuItemId
 	.word	Task_TryCreateSelectionWindow
-.L1331:
+.L1339:
 	ldrb	r0, [r6, #0x8]
 	lsl	r0, r0, #0x1c
 	lsr	r0, r0, #0x1c
 	ldrb	r2, [r6, #0xb]
 	mov	r1, #0x7f
 	str	r1, [sp]
-	ldr	r1, .L1335
+	ldr	r1, .L1343
 	str	r1, [sp, #0x4]
 	ldr	r1, [r6]
 	str	r1, [sp, #0x8]
 	mov	r1, #0xff
 	mov	r3, #0x1
 	bl	InitPartyMenu
-.L1332:
+.L1340:
 	add	sp, sp, #0xc
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1336:
+.L1344:
 	.align	2, 0
-.L1335:
+.L1343:
 	.word	Task_DisplayGaveMailFromPartyMessage
 .Lfe143:
 	.size	 CB2_ReturnToPartyMenuFromWritingMail,.Lfe143-CB2_ReturnToPartyMenuFromWritingMail
@@ -12596,58 +14274,58 @@ Task_DisplayGaveMailFromPartyMessage:
 	push	{r4, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r0, .L1341
+	ldr	r0, .L1349
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1338	@cond_branch
-	ldr	r1, .L1341+0x4
+	bne	.L1346	@cond_branch
+	ldr	r1, .L1349+0x4
 	ldrh	r0, [r1]
 	cmp	r0, #0
-	bne	.L1339	@cond_branch
-	ldr	r0, .L1341+0x8
+	bne	.L1347	@cond_branch
+	ldr	r0, .L1349+0x8
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L1341+0xc
+	ldr	r1, .L1349+0xc
 	add	r0, r0, r1
-	ldr	r1, .L1341+0x10
+	ldr	r1, .L1349+0x10
 	ldrh	r1, [r1]
 	mov	r2, #0x0
 	mov	r3, #0x0
 	bl	DisplayGaveHeldItemMessage
-	b	.L1340
-.L1342:
+	b	.L1348
+.L1350:
 	.align	2, 0
-.L1341:
+.L1349:
 	.word	gPaletteFade
 	.word	sPartyMenuItemId
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gSpecialVar_ItemId
-.L1339:
-	ldr	r0, .L1343
+.L1347:
+	ldr	r0, .L1351
 	ldrh	r0, [r0]
 	ldrh	r1, [r1]
 	mov	r2, #0x0
 	bl	DisplaySwitchedHeldItemMessage
-.L1340:
-	ldr	r0, .L1343+0x4
+.L1348:
+	ldr	r0, .L1351+0x4
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L1343+0x8
+	ldr	r0, .L1351+0x8
 	str	r0, [r1]
-.L1338:
+.L1346:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1344:
+.L1352:
 	.align	2, 0
-.L1343:
+.L1351:
 	.word	gSpecialVar_ItemId
 	.word	gTasks
 	.word	Task_UpdateHeldItemSprite
@@ -12660,19 +14338,19 @@ Task_UpdateHeldItemSprite:
 	push	{r4, r5, r6, r7, lr}
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	ldr	r4, .L1350
+	ldr	r4, .L1358
 	mov	r1, #0x9
 	ldrsb	r1, [r4, r1]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L1350+0x4
+	ldr	r0, .L1358+0x4
 	add	r6, r1, r0
 	bl	IsPartyMenuTextPrinterActive
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L1346	@cond_branch
-	ldr	r5, .L1350+0x8
+	beq	.L1354	@cond_branch
+	ldr	r5, .L1358+0x8
 	mov	r0, #0x9
 	ldrsb	r0, [r4, r0]
 	lsl	r0, r0, #0x4
@@ -12684,12 +14362,12 @@ Task_UpdateHeldItemSprite:
 	mov	r0, #0xf
 	and	r0, r0, r1
 	cmp	r0, #0xc
-	bne	.L1347	@cond_branch
+	bne	.L1355	@cond_branch
 	add	r0, r6, #0
 	mov	r1, #0xc
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L1348	@cond_branch
+	beq	.L1356	@cond_branch
 	mov	r0, #0x9
 	ldrsb	r0, [r4, r0]
 	lsl	r0, r0, #0x4
@@ -12698,14 +14376,14 @@ Task_UpdateHeldItemSprite:
 	mov	r0, #0xb
 	mov	r2, #0x1
 	bl	DisplayPartyPokemonDescriptionText
-	b	.L1347
-.L1351:
+	b	.L1355
+.L1359:
 	.align	2, 0
-.L1350:
+.L1358:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	sPartyMenuBoxes
-.L1348:
+.L1356:
 	mov	r0, #0x9
 	ldrsb	r0, [r4, r0]
 	lsl	r0, r0, #0x4
@@ -12714,10 +14392,10 @@ Task_UpdateHeldItemSprite:
 	mov	r0, #0xc
 	mov	r2, #0x1
 	bl	DisplayPartyPokemonDescriptionText
-.L1347:
+.L1355:
 	add	r0, r7, #0
 	bl	Task_ReturnToChooseMonAfterText
-.L1346:
+.L1354:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
@@ -12730,12 +14408,12 @@ CursorCb_TakeItem:
 	push	{r4, r5, r6, r7, lr}
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	ldr	r0, .L1361
+	ldr	r0, .L1369
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L1361+0x4
+	ldr	r0, .L1369+0x4
 	add	r5, r1, r0
 	add	r0, r5, #0
 	mov	r1, #0xc
@@ -12744,7 +14422,7 @@ CursorCb_TakeItem:
 	lsr	r6, r0, #0x10
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r4, .L1361+0x8
+	ldr	r4, .L1369+0x8
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	bl	PartyMenuRemoveWindow
@@ -12756,59 +14434,59 @@ CursorCb_TakeItem:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1354	@cond_branch
+	beq	.L1362	@cond_branch
 	cmp	r0, #0x1
-	beq	.L1355	@cond_branch
+	beq	.L1363	@cond_branch
 	add	r0, r5, #0
 	add	r1, r6, #0
 	mov	r2, #0x1
 	bl	DisplayTookHeldItemMessage
-	b	.L1353
-.L1362:
+	b	.L1361
+.L1370:
 	.align	2, 0
-.L1361:
+.L1369:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	sPartyMenuInternal
-.L1354:
-	ldr	r1, .L1363
+.L1362:
+	ldr	r1, .L1371
 	add	r0, r5, #0
 	bl	GetMonNickname
-	ldr	r4, .L1363+0x4
-	ldr	r1, .L1363+0x8
+	ldr	r4, .L1371+0x4
+	ldr	r1, .L1371+0x8
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	add	r0, r4, #0
-	b	.L1360
-.L1364:
+	b	.L1368
+.L1372:
 	.align	2, 0
-.L1363:
+.L1371:
 	.word	gStringVar1
 	.word	gStringVar4
 	.word	gText_PkmnNotHolding
-.L1355:
+.L1363:
 	add	r0, r6, #0
 	bl	BufferBagFullCantTakeItemMessage
-	ldr	r0, .L1365
-.L1360:
+	ldr	r0, .L1373
+.L1368:
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
-.L1353:
+.L1361:
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
-	ldr	r0, .L1365+0x4
+	ldr	r0, .L1373+0x4
 	lsl	r1, r7, #0x2
 	add	r1, r1, r7
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L1365+0x8
+	ldr	r0, .L1373+0x8
 	str	r0, [r1]
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1366:
+.L1374:
 	.align	2, 0
-.L1365:
+.L1373:
 	.word	gStringVar4
 	.word	gTasks
 	.word	Task_UpdateHeldItemSprite
@@ -12821,12 +14499,12 @@ CursorCb_Toss:
 	push	{r4, r5, r6, r7, lr}
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-	ldr	r0, .L1371
+	ldr	r0, .L1379
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L1371+0x4
+	ldr	r0, .L1379+0x4
 	add	r7, r1, r0
 	add	r0, r7, #0
 	mov	r1, #0xc
@@ -12835,7 +14513,7 @@ CursorCb_Toss:
 	lsr	r5, r0, #0x10
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r4, .L1371+0x8
+	ldr	r4, .L1379+0x8
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	bl	PartyMenuRemoveWindow
@@ -12843,27 +14521,27 @@ CursorCb_Toss:
 	add	r0, r0, #0xd
 	bl	PartyMenuRemoveWindow
 	cmp	r5, #0
-	bne	.L1368	@cond_branch
-	ldr	r1, .L1371+0xc
+	bne	.L1376	@cond_branch
+	ldr	r1, .L1379+0xc
 	add	r0, r7, #0
 	bl	GetMonNickname
-	ldr	r4, .L1371+0x10
-	ldr	r1, .L1371+0x14
+	ldr	r4, .L1379+0x10
+	ldr	r1, .L1379+0x14
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	add	r0, r4, #0
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
-	ldr	r1, .L1371+0x18
+	ldr	r1, .L1379+0x18
 	lsl	r0, r6, #0x2
 	add	r0, r0, r6
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1371+0x1c
-	b	.L1370
-.L1372:
+	ldr	r1, .L1379+0x1c
+	b	.L1378
+.L1380:
 	.align	2, 0
-.L1371:
+.L1379:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	sPartyMenuInternal
@@ -12872,31 +14550,31 @@ CursorCb_Toss:
 	.word	gText_PkmnNotHolding
 	.word	gTasks
 	.word	Task_UpdateHeldItemSprite
-.L1368:
-	ldr	r1, .L1373
+.L1376:
+	ldr	r1, .L1381
 	add	r0, r5, #0
 	bl	CopyItemName
-	ldr	r4, .L1373+0x4
-	ldr	r1, .L1373+0x8
+	ldr	r4, .L1381+0x4
+	ldr	r1, .L1381+0x8
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	add	r0, r4, #0
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
-	ldr	r1, .L1373+0xc
+	ldr	r1, .L1381+0xc
 	lsl	r0, r6, #0x2
 	add	r0, r0, r6
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1373+0x10
-.L1370:
+	ldr	r1, .L1381+0x10
+.L1378:
 	str	r1, [r0]
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1374:
+.L1382:
 	.align	2, 0
-.L1373:
+.L1381:
 	.word	gStringVar1
 	.word	gStringVar4
 	.word	gText_ThrowAwayItem
@@ -12915,22 +14593,22 @@ Task_TossHeldItemYesNo:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L1376	@cond_branch
+	beq	.L1384	@cond_branch
 	bl	PartyMenuDisplayYesNoMenu
-	ldr	r0, .L1377
+	ldr	r0, .L1385
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L1377+0x4
+	ldr	r0, .L1385+0x4
 	str	r0, [r1]
-.L1376:
+.L1384:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1378:
+.L1386:
 	.align	2, 0
-.L1377:
+.L1385:
 	.word	gTasks
 	.word	Task_HandleTossHeldItemYesNoInput
 .Lfe148:
@@ -12942,83 +14620,83 @@ Task_HandleTossHeldItemYesNoInput:
 	push	{r4, r5, lr}
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
-	ldr	r0, .L1387
+	ldr	r0, .L1395
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L1387+0x4
+	ldr	r0, .L1395+0x4
 	add	r4, r1, r0
 	bl	Menu_ProcessInputNoWrapClearOnChoose
 	lsl	r0, r0, #0x18
 	asr	r1, r0, #0x18
 	cmp	r1, #0
-	beq	.L1381	@cond_branch
+	beq	.L1389	@cond_branch
 	cmp	r1, #0
-	bgt	.L1386	@cond_branch
+	bgt	.L1394	@cond_branch
 	mov	r0, #0x1
 	neg	r0, r0
 	cmp	r1, r0
-	beq	.L1382	@cond_branch
-	b	.L1380
-.L1388:
+	beq	.L1390	@cond_branch
+	b	.L1388
+.L1396:
 	.align	2, 0
-.L1387:
+.L1395:
 	.word	gPartyMenu
 	.word	gPlayerParty
-.L1386:
+.L1394:
 	cmp	r1, #0x1
-	beq	.L1383	@cond_branch
-	b	.L1380
-.L1381:
+	beq	.L1391	@cond_branch
+	b	.L1388
+.L1389:
 	add	r0, r4, #0
 	mov	r1, #0xc
 	bl	GetMonData
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
-	ldr	r1, .L1389
+	ldr	r1, .L1397
 	bl	CopyItemName
-	ldr	r4, .L1389+0x4
-	ldr	r1, .L1389+0x8
+	ldr	r4, .L1397+0x4
+	ldr	r1, .L1397+0x8
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	add	r0, r4, #0
 	mov	r1, #0x0
 	bl	DisplayPartyMenuMessage
-	ldr	r1, .L1389+0xc
+	ldr	r1, .L1397+0xc
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1389+0x10
+	ldr	r1, .L1397+0x10
 	str	r1, [r0]
-	b	.L1380
-.L1390:
+	b	.L1388
+.L1398:
 	.align	2, 0
-.L1389:
+.L1397:
 	.word	gStringVar1
 	.word	gStringVar4
 	.word	gText_ItemThrownAway
 	.word	gTasks
 	.word	Task_TossHeldItem
-.L1382:
+.L1390:
 	mov	r0, #0x5
 	bl	PlaySE
-.L1383:
-	ldr	r0, .L1391
+.L1391:
+	ldr	r0, .L1399
 	lsl	r1, r5, #0x2
 	add	r1, r1, r5
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L1391+0x4
+	ldr	r0, .L1399+0x4
 	str	r0, [r1]
-.L1380:
+.L1388:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1392:
+.L1400:
 	.align	2, 0
-.L1391:
+.L1399:
 	.word	gTasks
 	.word	Task_ReturnToChooseMonAfterText
 .Lfe149:
@@ -13031,18 +14709,18 @@ Task_TossHeldItem:
 	add	sp, sp, #-0x4
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	ldr	r6, .L1395
+	ldr	r6, .L1403
 	mov	r1, #0x9
 	ldrsb	r1, [r6, r1]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L1395+0x4
+	ldr	r0, .L1403+0x4
 	add	r5, r1, r0
 	bl	IsPartyMenuTextPrinterActive
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L1394	@cond_branch
+	beq	.L1402	@cond_branch
 	mov	r1, #0x0
 	mov	r0, sp
 	strh	r1, [r0]
@@ -13050,7 +14728,7 @@ Task_TossHeldItem:
 	mov	r1, #0xc
 	mov	r2, sp
 	bl	SetMonData
-	ldr	r4, .L1395+0x8
+	ldr	r4, .L1403+0x8
 	mov	r0, #0x9
 	ldrsb	r0, [r6, r0]
 	lsl	r0, r0, #0x4
@@ -13066,21 +14744,21 @@ Task_TossHeldItem:
 	mov	r0, #0xc
 	mov	r2, #0x1
 	bl	DisplayPartyPokemonDescriptionText
-	ldr	r1, .L1395+0xc
+	ldr	r1, .L1403+0xc
 	lsl	r0, r7, #0x2
 	add	r0, r0, r7
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1395+0x10
+	ldr	r1, .L1403+0x10
 	str	r1, [r0]
-.L1394:
+.L1402:
 	add	sp, sp, #0x4
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1396:
+.L1404:
 	.align	2, 0
-.L1395:
+.L1403:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	sPartyMenuBoxes
@@ -13098,15 +14776,15 @@ CursorCb_Mail:
 	lsr	r5, r5, #0x18
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r4, .L1398
+	ldr	r4, .L1406
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	bl	PartyMenuRemoveWindow
 	ldr	r0, [r4]
 	add	r0, r0, #0xd
 	bl	PartyMenuRemoveWindow
-	ldr	r0, .L1398+0x4
-	ldr	r1, .L1398+0x8
+	ldr	r0, .L1406+0x4
+	ldr	r1, .L1406+0x8
 	ldrb	r1, [r1, #0x9]
 	mov	r2, #0x9
 	bl	SetPartyMonSelectionActions
@@ -13114,21 +14792,21 @@ CursorCb_Mail:
 	bl	DisplaySelectionWindow
 	mov	r0, #0x19
 	bl	DisplayPartyMenuStdMessage
-	ldr	r1, .L1398+0xc
+	ldr	r1, .L1406+0xc
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
 	mov	r1, #0xff
 	strh	r1, [r0, #0x8]
-	ldr	r1, .L1398+0x10
+	ldr	r1, .L1406+0x10
 	str	r1, [r0]
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1399:
+.L1407:
 	.align	2, 0
-.L1398:
+.L1406:
 	.word	sPartyMenuInternal
 	.word	gPlayerParty
 	.word	gPartyMenu
@@ -13146,18 +14824,18 @@ CursorCb_Read:
 	lsr	r4, r4, #0x18
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r0, .L1401
+	ldr	r0, .L1409
 	ldr	r1, [r0]
-	ldr	r0, .L1401+0x4
+	ldr	r0, .L1409+0x4
 	str	r0, [r1, #0x4]
 	add	r0, r4, #0
 	bl	Task_ClosePartyMenu
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1402:
+.L1410:
 	.align	2, 0
-.L1401:
+.L1409:
 	.word	sPartyMenuInternal
 	.word	CB2_ReadHeldMail
 .Lfe152:
@@ -13167,31 +14845,31 @@ CursorCb_Read:
 	.thumb_func
 CB2_ReadHeldMail:
 	push	{lr}
-	ldr	r0, .L1404
+	ldr	r0, .L1412
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L1404+0x4
+	ldr	r1, .L1412+0x4
 	add	r0, r0, r1
 	mov	r1, #0x40
 	bl	GetMonData
-	ldr	r2, .L1404+0x8
+	ldr	r2, .L1412+0x8
 	lsl	r1, r0, #0x3
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
-	ldr	r0, .L1404+0xc
+	ldr	r0, .L1412+0xc
 	add	r1, r1, r0
 	ldr	r0, [r2]
 	add	r0, r0, r1
-	ldr	r1, .L1404+0x10
+	ldr	r1, .L1412+0x10
 	mov	r2, #0x1
 	bl	ReadMail
 	pop	{r0}
 	bx	r0
-.L1405:
+.L1413:
 	.align	2, 0
-.L1404:
+.L1412:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gSaveBlock1Ptr
@@ -13205,19 +14883,19 @@ CB2_ReadHeldMail:
 CB2_ReturnToPartyMenuFromReadingMail:
 	push	{lr}
 	add	sp, sp, #-0xc
-	ldr	r2, .L1407
+	ldr	r2, .L1415
 	ldrb	r0, [r2, #0x8]
 	mov	r1, #0x80
 	orr	r0, r0, r1
 	strb	r0, [r2, #0x8]
-	ldr	r3, .L1407+0x4
+	ldr	r3, .L1415+0x4
 	ldrb	r0, [r3, #0x8]
 	lsl	r0, r0, #0x1c
 	lsr	r0, r0, #0x1c
 	ldrb	r2, [r3, #0xb]
 	mov	r1, #0x15
 	str	r1, [sp]
-	ldr	r1, .L1407+0x8
+	ldr	r1, .L1415+0x8
 	str	r1, [sp, #0x4]
 	ldr	r1, [r3]
 	str	r1, [sp, #0x8]
@@ -13227,9 +14905,9 @@ CB2_ReturnToPartyMenuFromReadingMail:
 	add	sp, sp, #0xc
 	pop	{r0}
 	bx	r0
-.L1408:
+.L1416:
 	.align	2, 0
-.L1407:
+.L1415:
 	.word	gPaletteFade
 	.word	gPartyMenu
 	.word	Task_TryCreateSelectionWindow
@@ -13245,29 +14923,29 @@ CursorCb_TakeMail:
 	lsr	r4, r4, #0x18
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r5, .L1410
+	ldr	r5, .L1418
 	ldr	r0, [r5]
 	add	r0, r0, #0xd
 	bl	PartyMenuRemoveWindow
 	ldr	r0, [r5]
 	add	r0, r0, #0xc
 	bl	PartyMenuRemoveWindow
-	ldr	r0, .L1410+0x4
+	ldr	r0, .L1418+0x4
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
-	ldr	r1, .L1410+0x8
+	ldr	r1, .L1418+0x8
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1410+0xc
+	ldr	r1, .L1418+0xc
 	str	r1, [r0]
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1411:
+.L1419:
 	.align	2, 0
-.L1410:
+.L1418:
 	.word	sPartyMenuInternal
 	.word	gText_SendMailToPC
 	.word	gTasks
@@ -13285,22 +14963,22 @@ Task_SendMailToPCYesNo:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L1413	@cond_branch
+	beq	.L1421	@cond_branch
 	bl	PartyMenuDisplayYesNoMenu
-	ldr	r0, .L1414
+	ldr	r0, .L1422
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L1414+0x4
+	ldr	r0, .L1422+0x4
 	str	r0, [r1]
-.L1413:
+.L1421:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1415:
+.L1423:
 	.align	2, 0
-.L1414:
+.L1422:
 	.word	gTasks
 	.word	Task_HandleSendMailToPCYesNoInput
 .Lfe156:
@@ -13316,88 +14994,88 @@ Task_HandleSendMailToPCYesNoInput:
 	lsl	r0, r0, #0x18
 	asr	r1, r0, #0x18
 	cmp	r1, #0
-	beq	.L1418	@cond_branch
+	beq	.L1426	@cond_branch
 	cmp	r1, #0
-	bgt	.L1425	@cond_branch
+	bgt	.L1433	@cond_branch
 	mov	r0, #0x1
 	neg	r0, r0
 	cmp	r1, r0
-	beq	.L1421	@cond_branch
-	b	.L1417
-.L1425:
+	beq	.L1429	@cond_branch
+	b	.L1425
+.L1433:
 	cmp	r1, #0x1
-	beq	.L1422	@cond_branch
-	b	.L1417
-.L1418:
-	ldr	r0, .L1427
+	beq	.L1430	@cond_branch
+	b	.L1425
+.L1426:
+	ldr	r0, .L1435
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L1427+0x4
+	ldr	r1, .L1435+0x4
 	add	r0, r0, r1
 	bl	TakeMailFromMon2
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0xff
-	beq	.L1419	@cond_branch
-	ldr	r0, .L1427+0x8
+	beq	.L1427	@cond_branch
+	ldr	r0, .L1435+0x8
 	mov	r1, #0x0
 	bl	DisplayPartyMenuMessage
-	ldr	r1, .L1427+0xc
+	ldr	r1, .L1435+0xc
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1427+0x10
-	b	.L1426
-.L1428:
+	ldr	r1, .L1435+0x10
+	b	.L1434
+.L1436:
 	.align	2, 0
-.L1427:
+.L1435:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gText_MailSentToPC
 	.word	gTasks
 	.word	Task_UpdateHeldItemSprite
-.L1419:
-	ldr	r0, .L1429
+.L1427:
+	ldr	r0, .L1437
 	mov	r1, #0x0
 	bl	DisplayPartyMenuMessage
-	ldr	r1, .L1429+0x4
+	ldr	r1, .L1437+0x4
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1429+0x8
-	b	.L1426
-.L1430:
+	ldr	r1, .L1437+0x8
+	b	.L1434
+.L1438:
 	.align	2, 0
-.L1429:
+.L1437:
 	.word	gText_PCMailboxFull
 	.word	gTasks
 	.word	Task_ReturnToChooseMonAfterText
-.L1421:
+.L1429:
 	mov	r0, #0x5
 	bl	PlaySE
-.L1422:
-	ldr	r0, .L1431
+.L1430:
+	ldr	r0, .L1439
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
-	ldr	r1, .L1431+0x4
+	ldr	r1, .L1439+0x4
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1431+0x8
-.L1426:
+	ldr	r1, .L1439+0x8
+.L1434:
 	str	r1, [r0]
-.L1417:
+.L1425:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1432:
+.L1440:
 	.align	2, 0
-.L1431:
+.L1439:
 	.word	gText_MailMessageWillBeLost
 	.word	gTasks
 	.word	Task_LoseMailMessageYesNo
@@ -13414,22 +15092,22 @@ Task_LoseMailMessageYesNo:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L1434	@cond_branch
+	beq	.L1442	@cond_branch
 	bl	PartyMenuDisplayYesNoMenu
-	ldr	r0, .L1435
+	ldr	r0, .L1443
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L1435+0x4
+	ldr	r0, .L1443+0x4
 	str	r0, [r1]
-.L1434:
+.L1442:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1436:
+.L1444:
 	.align	2, 0
-.L1435:
+.L1443:
 	.word	gTasks
 	.word	Task_HandleLoseMailMessageYesNoInput
 .Lfe158:
@@ -13447,27 +15125,27 @@ Task_HandleLoseMailMessageYesNoInput:
 	lsl	r0, r0, #0x18
 	asr	r1, r0, #0x18
 	cmp	r1, #0
-	beq	.L1439	@cond_branch
+	beq	.L1447	@cond_branch
 	cmp	r1, #0
-	bgt	.L1446	@cond_branch
+	bgt	.L1454	@cond_branch
 	mov	r0, #0x1
 	neg	r0, r0
 	cmp	r1, r0
-	beq	.L1442	@cond_branch
-	b	.L1438
-.L1446:
+	beq	.L1450	@cond_branch
+	b	.L1446
+.L1454:
 	cmp	r1, #0x1
-	beq	.L1443	@cond_branch
-	b	.L1438
-.L1439:
-	ldr	r0, .L1447
+	beq	.L1451	@cond_branch
+	b	.L1446
+.L1447:
+	ldr	r0, .L1455
 	mov	r8, r0
 	ldrb	r0, [r0, #0x9]
 	lsl	r0, r0, #24
 	asr	r0, r0, #24
 	mov	r7, #0x64
 	mul	r0, r0, r7
-	ldr	r6, .L1447+0x4
+	ldr	r6, .L1455+0x4
 	add	r0, r0, r6
 	mov	r1, #0xc
 	bl	GetMonData
@@ -13479,72 +15157,72 @@ Task_HandleLoseMailMessageYesNoInput:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.L1440	@cond_branch
+	bne	.L1448	@cond_branch
 	mov	r1, r8
 	mov	r0, #0x9
 	ldrsb	r0, [r1, r0]
 	mul	r0, r0, r7
 	add	r0, r0, r6
 	bl	TakeMailFromMon
-	ldr	r0, .L1447+0x8
+	ldr	r0, .L1455+0x8
 	mov	r1, #0x0
 	bl	DisplayPartyMenuMessage
-	ldr	r1, .L1447+0xc
+	ldr	r1, .L1455+0xc
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1447+0x10
+	ldr	r1, .L1455+0x10
 	str	r1, [r0]
-	b	.L1438
-.L1448:
+	b	.L1446
+.L1456:
 	.align	2, 0
-.L1447:
+.L1455:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gText_MailTakenFromPkmn
 	.word	gTasks
 	.word	Task_UpdateHeldItemSprite
-.L1440:
+.L1448:
 	add	r0, r4, #0
 	bl	BufferBagFullCantTakeItemMessage
-	ldr	r0, .L1449
+	ldr	r0, .L1457
 	mov	r1, #0x0
 	bl	DisplayPartyMenuMessage
-	ldr	r1, .L1449+0x4
+	ldr	r1, .L1457+0x4
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1449+0x8
+	ldr	r1, .L1457+0x8
 	str	r1, [r0]
-	b	.L1438
-.L1450:
+	b	.L1446
+.L1458:
 	.align	2, 0
-.L1449:
+.L1457:
 	.word	gStringVar4
 	.word	gTasks
 	.word	Task_ReturnToChooseMonAfterText
-.L1442:
+.L1450:
 	mov	r0, #0x5
 	bl	PlaySE
-.L1443:
-	ldr	r0, .L1451
+.L1451:
+	ldr	r0, .L1459
 	lsl	r1, r5, #0x2
 	add	r1, r1, r5
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L1451+0x4
+	ldr	r0, .L1459+0x4
 	str	r0, [r1]
-.L1438:
+.L1446:
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1452:
+.L1460:
 	.align	2, 0
-.L1451:
+.L1459:
 	.word	gTasks
 	.word	Task_ReturnToChooseMonAfterText
 .Lfe159:
@@ -13559,16 +15237,16 @@ CursorCb_Cancel2:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	mov	r8, r0
-	ldr	r5, .L1456
+	ldr	r5, .L1464
 	mov	r1, #0x9
 	ldrsb	r1, [r5, r1]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r6, .L1456+0x4
+	ldr	r6, .L1464+0x4
 	add	r7, r0, r6
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r4, .L1456+0x8
+	ldr	r4, .L1464+0x8
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	bl	PartyMenuRemoveWindow
@@ -13588,19 +15266,19 @@ CursorCb_Cancel2:
 	mov	r0, #0xf
 	and	r0, r0, r1
 	cmp	r0, #0xc
-	beq	.L1454	@cond_branch
+	beq	.L1462	@cond_branch
 	mov	r0, #0x0
 	bl	DisplaySelectionWindow
 	mov	r0, #0x15
 	bl	DisplayPartyMenuStdMessage
-	b	.L1455
-.L1457:
+	b	.L1463
+.L1465:
 	.align	2, 0
-.L1456:
+.L1464:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	sPartyMenuInternal
-.L1454:
+.L1462:
 	mov	r0, #0x1
 	bl	DisplaySelectionWindow
 	add	r0, r7, #0
@@ -13608,12 +15286,12 @@ CursorCb_Cancel2:
 	bl	GetMonData
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
-	ldr	r1, .L1458
+	ldr	r1, .L1466
 	bl	CopyItemName
 	mov	r0, #0x1a
 	bl	DisplayPartyMenuStdMessage
-.L1455:
-	ldr	r1, .L1458+0x4
+.L1463:
+	ldr	r1, .L1466+0x4
 	mov	r2, r8
 	lsl	r0, r2, #0x2
 	add	r0, r0, r8
@@ -13621,16 +15299,16 @@ CursorCb_Cancel2:
 	add	r0, r0, r1
 	mov	r1, #0xff
 	strh	r1, [r0, #0x8]
-	ldr	r1, .L1458+0x8
+	ldr	r1, .L1466+0x8
 	str	r1, [r0]
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1459:
+.L1467:
 	.align	2, 0
-.L1458:
+.L1466:
 	.word	gStringVar2
 	.word	gTasks
 	.word	Task_HandleSelectionMenuInput
@@ -13645,7 +15323,7 @@ CursorCb_SendMon:
 	lsr	r4, r0, #0x18
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r5, .L1463
+	ldr	r5, .L1471
 	ldr	r0, [r5]
 	add	r0, r0, #0xc
 	bl	PartyMenuRemoveWindow
@@ -13653,35 +15331,35 @@ CursorCb_SendMon:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.L1461	@cond_branch
+	bne	.L1469	@cond_branch
 	add	r0, r4, #0
 	bl	Task_ClosePartyMenu
-	b	.L1462
-.L1464:
+	b	.L1470
+.L1472:
 	.align	2, 0
-.L1463:
+.L1471:
 	.word	sPartyMenuInternal
-.L1461:
+.L1469:
 	ldr	r0, [r5]
 	add	r0, r0, #0xd
 	bl	PartyMenuRemoveWindow
-	ldr	r0, .L1465
+	ldr	r0, .L1473
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
-	ldr	r1, .L1465+0x4
+	ldr	r1, .L1473+0x4
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1465+0x8
+	ldr	r1, .L1473+0x8
 	str	r1, [r0]
-.L1462:
+.L1470:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1466:
+.L1474:
 	.align	2, 0
-.L1465:
+.L1473:
 	.word	gStringVar4
 	.word	gTasks
 	.word	Task_ReturnToChooseMonAfterText
@@ -13697,7 +15375,7 @@ CursorCb_Enter:
 	add	sp, sp, #-0x4
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	ldr	r4, .L1475
+	ldr	r4, .L1483
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	bl	PartyMenuRemoveWindow
@@ -13709,20 +15387,20 @@ CursorCb_Enter:
 	lsr	r6, r0, #0x18
 	mov	r5, #0x0
 	cmp	r5, r6
-	bcs	.L1469	@cond_branch
-	ldr	r2, .L1475+0x4
-	ldr	r1, .L1475+0x8
+	bcs	.L1477	@cond_branch
+	ldr	r2, .L1483+0x4
+	ldr	r1, .L1483+0x8
 	lsl	r0, r7, #0x2
 	add	r0, r0, r7
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
 	mov	r8, r0
-.L1471:
-	ldr	r0, .L1475+0xc
+.L1479:
+	ldr	r0, .L1483+0xc
 	add	r4, r5, r0
 	ldrb	r0, [r4]
 	cmp	r0, #0
-	bne	.L1470	@cond_branch
+	bne	.L1478	@cond_branch
 	mov	r0, #0x5
 	str	r2, [sp]
 	bl	PlaySE
@@ -13733,7 +15411,7 @@ CursorCb_Enter:
 	add	r0, r5, #0x2
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r1, .L1475+0x10
+	ldr	r1, .L1483+0x10
 	ldrb	r2, [r2, #0x9]
 	lsl	r2, r2, #24
 	asr	r2, r2, #24
@@ -13744,38 +15422,38 @@ CursorCb_Enter:
 	bl	DisplayPartyPokemonDescriptionText
 	sub	r0, r6, #0x1
 	cmp	r5, r0
-	bne	.L1473	@cond_branch
+	bne	.L1481	@cond_branch
 	bl	MoveCursorToConfirm
-.L1473:
+.L1481:
 	mov	r0, #0x0
 	bl	DisplayPartyMenuStdMessage
-	ldr	r0, .L1475+0x14
+	ldr	r0, .L1483+0x14
 	mov	r1, r8
 	str	r0, [r1]
-	b	.L1467
-.L1476:
+	b	.L1475
+.L1484:
 	.align	2, 0
-.L1475:
+.L1483:
 	.word	sPartyMenuInternal
 	.word	gPartyMenu
 	.word	gTasks
 	.word	gSelectedOrderFromParty
 	.word	sPartyMenuBoxes
 	.word	Task_HandleChooseMonInput
-.L1470:
+.L1478:
 	add	r0, r5, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	cmp	r5, r6
-	bcc	.L1471	@cond_branch
-.L1469:
-	ldr	r0, .L1477
+	bcc	.L1479	@cond_branch
+.L1477:
+	ldr	r0, .L1485
 	add	r1, r6, #0
 	mov	r2, #0x0
 	mov	r3, #0x1
 	bl	ConvertIntToDecimalStringN
-	ldr	r4, .L1477+0x4
-	ldr	r1, .L1477+0x8
+	ldr	r4, .L1485+0x4
+	ldr	r1, .L1485+0x8
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	mov	r0, #0x20
@@ -13783,23 +15461,23 @@ CursorCb_Enter:
 	add	r0, r4, #0
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
-	ldr	r1, .L1477+0xc
+	ldr	r1, .L1485+0xc
 	lsl	r0, r7, #0x2
 	add	r0, r0, r7
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1477+0x10
+	ldr	r1, .L1485+0x10
 	str	r1, [r0]
-.L1467:
+.L1475:
 	add	sp, sp, #0x4
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1478:
+.L1486:
 	.align	2, 0
-.L1477:
+.L1485:
 	.word	gStringVar1
 	.word	gStringVar4
 	.word	gText_NoMoreThanVar1Pkmn
@@ -13812,7 +15490,7 @@ CursorCb_Enter:
 	.thumb_func
 MoveCursorToConfirm:
 	push	{r4, lr}
-	ldr	r4, .L1480
+	ldr	r4, .L1488
 	ldrb	r0, [r4, #0x9]
 	mov	r1, #0x0
 	bl	AnimatePartySlot
@@ -13823,9 +15501,9 @@ MoveCursorToConfirm:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1481:
+.L1489:
 	.align	2, 0
-.L1480:
+.L1488:
 	.word	gPartyMenu
 .Lfe163:
 	.size	 MoveCursorToConfirm,.Lfe163-MoveCursorToConfirm
@@ -13841,7 +15519,7 @@ CursorCb_NoEntry:
 	mov	r8, r0
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r4, .L1500
+	ldr	r4, .L1508
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	bl	PartyMenuRemoveWindow
@@ -13853,25 +15531,25 @@ CursorCb_NoEntry:
 	lsr	r5, r0, #0x18
 	mov	r4, #0x0
 	cmp	r4, r5
-	bcs	.L1484	@cond_branch
-	ldr	r6, .L1500+0x4
+	bcs	.L1492	@cond_branch
+	ldr	r6, .L1508+0x4
 	sub	r2, r5, #0x1
 	add	r7, r6, #0
-	ldr	r3, .L1500+0x8
-.L1486:
+	ldr	r3, .L1508+0x8
+.L1494:
 	add	r0, r4, r6
 	ldrb	r1, [r0]
 	mov	r0, #0x9
 	ldrsb	r0, [r3, r0]
 	add	r0, r0, #0x1
 	cmp	r1, r0
-	bne	.L1485	@cond_branch
+	bne	.L1493	@cond_branch
 	add	r0, r4, #0
 	add	r4, r2, #0
 	cmp	r0, r4
-	bge	.L1489	@cond_branch
+	bge	.L1497	@cond_branch
 	add	r3, r7, #0
-.L1491:
+.L1499:
 	add	r2, r0, r3
 	add	r1, r0, #0x1
 	add	r0, r1, r3
@@ -13880,27 +15558,27 @@ CursorCb_NoEntry:
 	lsl	r1, r1, #0x18
 	lsr	r0, r1, #0x18
 	cmp	r0, r4
-	blt	.L1491	@cond_branch
-.L1489:
+	blt	.L1499	@cond_branch
+.L1497:
 	add	r1, r0, r6
 	mov	r0, #0x0
 	strb	r0, [r1]
-	b	.L1484
-.L1501:
+	b	.L1492
+.L1509:
 	.align	2, 0
-.L1500:
+.L1508:
 	.word	sPartyMenuInternal
 	.word	gSelectedOrderFromParty
 	.word	gPartyMenu
-.L1485:
+.L1493:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, r5
-	bcc	.L1486	@cond_branch
-.L1484:
-	ldr	r6, .L1502
-	ldr	r0, .L1502+0x4
+	bcc	.L1494	@cond_branch
+.L1492:
+	ldr	r6, .L1510
+	ldr	r0, .L1510+0x4
 	ldrb	r0, [r0, #0x9]
 	lsl	r0, r0, #24
 	asr	r0, r0, #24
@@ -13915,13 +15593,13 @@ CursorCb_NoEntry:
 	mov	r0, r8
 	lsl	r7, r0, #0x2
 	cmp	r4, r5
-	bge	.L1495	@cond_branch
-.L1497:
-	ldr	r0, .L1502+0x8
+	bge	.L1503	@cond_branch
+.L1505:
+	ldr	r0, .L1510+0x8
 	add	r1, r4, r0
 	ldrb	r0, [r1]
 	cmp	r0, #0
-	beq	.L1496	@cond_branch
+	beq	.L1504	@cond_branch
 	add	r0, r4, #0x2
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
@@ -13932,30 +15610,30 @@ CursorCb_NoEntry:
 	add	r1, r1, r2
 	mov	r2, #0x1
 	bl	DisplayPartyPokemonDescriptionText
-.L1496:
+.L1504:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, r5
-	blt	.L1497	@cond_branch
-.L1495:
+	blt	.L1505	@cond_branch
+.L1503:
 	mov	r0, #0x0
 	bl	DisplayPartyMenuStdMessage
-	ldr	r0, .L1502+0xc
+	ldr	r0, .L1510+0xc
 	mov	r2, r8
 	add	r1, r7, r2
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L1502+0x10
+	ldr	r0, .L1510+0x10
 	str	r0, [r1]
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1503:
+.L1511:
 	.align	2, 0
-.L1502:
+.L1510:
 	.word	sPartyMenuBoxes
 	.word	gPartyMenu
 	.word	gSelectedOrderFromParty
@@ -13990,7 +15668,7 @@ CursorCb_Register:
 	push	{r6, r7}
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	ldr	r0, .L1511
+	ldr	r0, .L1519
 	mov	r9, r0
 	ldrb	r0, [r0, #0x9]
 	lsl	r0, r0, #24
@@ -14000,7 +15678,7 @@ CursorCb_Register:
 	mov	r1, r8
 	mul	r1, r1, r0
 	add	r0, r1, #0
-	ldr	r4, .L1511+0x4
+	ldr	r4, .L1519+0x4
 	add	r0, r0, r4
 	mov	r1, #0x41
 	bl	GetMonData
@@ -14038,67 +15716,67 @@ CursorCb_Register:
 	add	r3, r4, #0
 	bl	CanRegisterMonForTradingBoard
 	cmp	r0, #0x1
-	beq	.L1507	@cond_branch
+	beq	.L1515	@cond_branch
 	cmp	r0, #0x2
-	beq	.L1508	@cond_branch
+	beq	.L1516	@cond_branch
 	mov	r0, #0x5
 	bl	PlaySE
 	add	r0, r7, #0
 	bl	Task_ClosePartyMenu
-	b	.L1505
-.L1512:
+	b	.L1513
+.L1520:
 	.align	2, 0
-.L1511:
+.L1519:
 	.word	gPartyMenu
 	.word	gPlayerParty
-.L1507:
-	ldr	r0, .L1513
-	ldr	r1, .L1513+0x4
+.L1515:
+	ldr	r0, .L1521
+	ldr	r1, .L1521+0x4
 	bl	StringExpandPlaceholders
-	b	.L1506
-.L1514:
+	b	.L1514
+.L1522:
 	.align	2, 0
-.L1513:
+.L1521:
 	.word	gStringVar4
 	.word	gText_PkmnCantBeTradedNow
-.L1508:
-	ldr	r0, .L1515
-	ldr	r1, .L1515+0x4
+.L1516:
+	ldr	r0, .L1523
+	ldr	r1, .L1523+0x4
 	bl	StringExpandPlaceholders
-.L1506:
+.L1514:
 	mov	r0, #0x20
 	bl	PlaySE
-	ldr	r4, .L1515+0x8
+	ldr	r4, .L1523+0x8
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	bl	PartyMenuRemoveWindow
 	ldr	r0, [r4]
 	add	r0, r0, #0xd
 	bl	PartyMenuRemoveWindow
-	ldr	r4, .L1515
-	ldr	r1, .L1515+0xc
+	ldr	r4, .L1523
+	ldr	r1, .L1523+0xc
 	add	r0, r4, #0
 	bl	StringAppend
 	add	r0, r4, #0
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
-	ldr	r1, .L1515+0x10
+	ldr	r1, .L1523+0x10
 	lsl	r0, r7, #0x2
 	add	r0, r0, r7
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1515+0x14
+	ldr	r1, .L1523+0x14
 	str	r1, [r0]
-.L1505:
+.L1513:
 	pop	{r3, r4}
 	mov	r8, r3
 	mov	r9, r4
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1516:
+.L1524:
 	.align	2, 0
-.L1515:
+.L1523:
 	.word	gStringVar4
 	.word	gText_EggCantBeTradedNow
 	.word	sPartyMenuInternal
@@ -14118,14 +15796,14 @@ CursorCb_Trade1:
 	add	sp, sp, #-0xc
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	ldr	r0, .L1520
+	ldr	r0, .L1528
 	mov	r8, r0
 	ldrb	r0, [r0, #0x9]
 	lsl	r0, r0, #24
 	asr	r0, r0, #24
 	mov	r6, #0x64
 	mul	r0, r0, r6
-	ldr	r4, .L1520+0x4
+	ldr	r4, .L1528+0x4
 	add	r0, r0, r4
 	mov	r1, #0x41
 	bl	GetMonData
@@ -14156,11 +15834,11 @@ CursorCb_Trade1:
 	lsr	r4, r4, #0x18
 	bl	GetHostRFUtgtGname
 	ldr	r0, [r0]
-	ldr	r1, .L1520+0x8
+	ldr	r1, .L1528+0x8
 	ldr	r1, [r1]
-	ldr	r2, .L1520+0xc
+	ldr	r2, .L1528+0xc
 	ldrh	r3, [r2]
-	ldr	r2, .L1520+0x10
+	ldr	r2, .L1528+0x10
 	ldrb	r2, [r2]
 	str	r2, [sp]
 	str	r5, [sp, #0x4]
@@ -14168,9 +15846,9 @@ CursorCb_Trade1:
 	mov	r2, r9
 	bl	GetUnionRoomTradeMessageId
 	cmp	r0, #0
-	beq	.L1518	@cond_branch
-	ldr	r5, .L1520+0x14
-	ldr	r1, .L1520+0x18
+	beq	.L1526	@cond_branch
+	ldr	r5, .L1528+0x14
+	ldr	r1, .L1528+0x18
 	sub	r0, r0, #0x1
 	lsl	r0, r0, #0x2
 	add	r0, r0, r1
@@ -14179,30 +15857,30 @@ CursorCb_Trade1:
 	bl	StringExpandPlaceholders
 	mov	r0, #0x20
 	bl	PlaySE
-	ldr	r4, .L1520+0x1c
+	ldr	r4, .L1528+0x1c
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	bl	PartyMenuRemoveWindow
 	ldr	r0, [r4]
 	add	r0, r0, #0xd
 	bl	PartyMenuRemoveWindow
-	ldr	r1, .L1520+0x20
+	ldr	r1, .L1528+0x20
 	add	r0, r5, #0
 	bl	StringAppend
 	add	r0, r5, #0
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
-	ldr	r1, .L1520+0x24
+	ldr	r1, .L1528+0x24
 	lsl	r0, r7, #0x2
 	add	r0, r0, r7
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1520+0x28
+	ldr	r1, .L1528+0x28
 	str	r1, [r0]
-	b	.L1519
-.L1521:
+	b	.L1527
+.L1529:
 	.align	2, 0
-.L1520:
+.L1528:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gPartnerTgtGnameSub
@@ -14214,12 +15892,12 @@ CursorCb_Trade1:
 	.word	gText_PauseUntilPress
 	.word	gTasks
 	.word	Task_ReturnToChooseMonAfterText
-.L1518:
+.L1526:
 	mov	r0, #0x5
 	bl	PlaySE
 	add	r0, r7, #0
 	bl	Task_ClosePartyMenu
-.L1519:
+.L1527:
 	add	sp, sp, #0xc
 	pop	{r3, r4}
 	mov	r8, r3
@@ -14236,15 +15914,15 @@ CursorCb_Trade2:
 	push	{r4, r5, lr}
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
-	ldr	r4, .L1531
+	ldr	r4, .L1539
 	ldr	r0, [r4]
 	add	r0, r0, #0xc
 	bl	PartyMenuRemoveWindow
 	ldr	r0, [r4]
 	add	r0, r0, #0xd
 	bl	PartyMenuRemoveWindow
-	ldr	r0, .L1531+0x4
-	ldr	r1, .L1531+0x8
+	ldr	r0, .L1539+0x4
+	ldr	r1, .L1539+0x8
 	ldrb	r1, [r1, #0x9]
 	lsl	r1, r1, #24
 	asr	r1, r1, #24
@@ -14252,81 +15930,81 @@ CursorCb_Trade2:
 	lsr	r1, r1, #0x10
 	bl	CanSpinTradeMon
 	cmp	r0, #0x2
-	beq	.L1525	@cond_branch
+	beq	.L1533	@cond_branch
 	cmp	r0, #0x2
-	bgt	.L1529	@cond_branch
+	bgt	.L1537	@cond_branch
 	cmp	r0, #0x1
-	beq	.L1524	@cond_branch
-	b	.L1527
-.L1532:
+	beq	.L1532	@cond_branch
+	b	.L1535
+.L1540:
 	.align	2, 0
-.L1531:
+.L1539:
 	.word	sPartyMenuInternal
 	.word	gPlayerParty
 	.word	gPartyMenu
-.L1529:
+.L1537:
 	cmp	r0, #0x3
-	beq	.L1526	@cond_branch
-	b	.L1527
-.L1524:
-	ldr	r0, .L1533
-	ldr	r1, .L1533+0x4
+	beq	.L1534	@cond_branch
+	b	.L1535
+.L1532:
+	ldr	r0, .L1541
+	ldr	r1, .L1541+0x4
 	bl	StringExpandPlaceholders
-	b	.L1523
-.L1534:
+	b	.L1531
+.L1542:
 	.align	2, 0
-.L1533:
+.L1541:
 	.word	gStringVar4
 	.word	gText_OnlyPkmnForBattle
-.L1525:
-	ldr	r0, .L1535
-	ldr	r1, .L1535+0x4
+.L1533:
+	ldr	r0, .L1543
+	ldr	r1, .L1543+0x4
 	bl	StringExpandPlaceholders
-	b	.L1523
-.L1536:
+	b	.L1531
+.L1544:
 	.align	2, 0
-.L1535:
+.L1543:
 	.word	gStringVar4
 	.word	gText_PkmnCantBeTradedNow
-.L1526:
-	ldr	r0, .L1537
-	ldr	r1, .L1537+0x4
+.L1534:
+	ldr	r0, .L1545
+	ldr	r1, .L1545+0x4
 	bl	StringExpandPlaceholders
-	b	.L1523
-.L1538:
+	b	.L1531
+.L1546:
 	.align	2, 0
-.L1537:
+.L1545:
 	.word	gStringVar4
 	.word	gText_EggCantBeTradedNow
-.L1527:
+.L1535:
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r0, .L1539
+	ldr	r0, .L1547
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L1539+0x4
+	ldr	r1, .L1547+0x4
 	add	r0, r0, r1
-	ldr	r1, .L1539+0x8
+	ldr	r1, .L1547+0x8
 	bl	GetMonNickname
-	ldr	r4, .L1539+0xc
-	ldr	r1, .L1539+0x10
+	ldr	r4, .L1547+0xc
+	ldr	r1, .L1547+0x10
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	add	r0, r4, #0
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
-	ldr	r1, .L1539+0x14
+	ldr	r1, .L1547+0x14
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1539+0x18
-	b	.L1530
-.L1540:
+	ldr	r1, .L1547+0x18
+	b	.L1538
+.L1548:
 	.align	2, 0
-.L1539:
+.L1547:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gStringVar1
@@ -14334,30 +16012,30 @@ CursorCb_Trade2:
 	.word	gJPText_AreYouSureYouWantToSpinTradeMon
 	.word	gTasks
 	.word	Task_SpinTradeYesNo
-.L1523:
+.L1531:
 	mov	r0, #0x20
 	bl	PlaySE
-	ldr	r4, .L1541
-	ldr	r1, .L1541+0x4
+	ldr	r4, .L1549
+	ldr	r1, .L1549+0x4
 	add	r0, r4, #0
 	bl	StringAppend
 	add	r0, r4, #0
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
-	ldr	r1, .L1541+0x8
+	ldr	r1, .L1549+0x8
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1541+0xc
-.L1530:
+	ldr	r1, .L1549+0xc
+.L1538:
 	str	r1, [r0]
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1542:
+.L1550:
 	.align	2, 0
-.L1541:
+.L1549:
 	.word	gStringVar4
 	.word	gText_PauseUntilPress
 	.word	gTasks
@@ -14375,22 +16053,22 @@ Task_SpinTradeYesNo:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L1544	@cond_branch
+	beq	.L1552	@cond_branch
 	bl	PartyMenuDisplayYesNoMenu
-	ldr	r0, .L1545
+	ldr	r0, .L1553
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L1545+0x4
+	ldr	r0, .L1553+0x4
 	str	r0, [r1]
-.L1544:
+.L1552:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1546:
+.L1554:
 	.align	2, 0
-.L1545:
+.L1553:
 	.word	gTasks
 	.word	Task_HandleSpinTradeYesNoInput
 .Lfe169:
@@ -14406,29 +16084,29 @@ Task_HandleSpinTradeYesNoInput:
 	lsl	r0, r0, #0x18
 	asr	r1, r0, #0x18
 	cmp	r1, #0
-	beq	.L1549	@cond_branch
+	beq	.L1557	@cond_branch
 	cmp	r1, #0
-	bgt	.L1554	@cond_branch
+	bgt	.L1562	@cond_branch
 	mov	r0, #0x1
 	neg	r0, r0
 	cmp	r1, r0
-	beq	.L1550	@cond_branch
-	b	.L1548
-.L1554:
+	beq	.L1558	@cond_branch
+	b	.L1556
+.L1562:
 	cmp	r1, #0x1
-	beq	.L1551	@cond_branch
-	b	.L1548
-.L1549:
+	beq	.L1559	@cond_branch
+	b	.L1556
+.L1557:
 	add	r0, r4, #0
 	bl	Task_ClosePartyMenu
-	b	.L1548
-.L1550:
+	b	.L1556
+.L1558:
 	mov	r0, #0x5
 	bl	PlaySE
-.L1551:
+.L1559:
 	add	r0, r4, #0
 	bl	Task_ReturnToChooseMonAfterText
-.L1548:
+.L1556:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
@@ -14442,26 +16120,26 @@ CursorCb_FieldMove:
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
 	bl	Menu_GetCursorPos
-	ldr	r5, .L1583
+	ldr	r5, .L1591
 	ldr	r1, [r5]
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	add	r1, r1, #0xf
 	add	r1, r1, r0
 	ldrb	r0, [r1]
-	sub	r0, r0, #0x14
+	sub	r0, r0, #0x13
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r1, .L1583+0x4
+	ldr	r1, .L1591+0x4
 	lsl	r0, r4, #0x3
 	add	r7, r0, r1
 	ldr	r0, [r7]
 	cmp	r0, #0
-	bne	.LCB14502
-	b	.L1555	@long jump
-.LCB14502:
+	bne	.LCB14540
+	b	.L1563	@long jump
+.LCB14540:
 	ldr	r0, [r5]
 	add	r0, r0, #0xc
 	bl	PartyMenuRemoveWindow
@@ -14472,58 +16150,58 @@ CursorCb_FieldMove:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L1558	@cond_branch
+	beq	.L1566	@cond_branch
 	bl	InUnionRoom
 	cmp	r0, #0x1
-	bne	.L1557	@cond_branch
-.L1558:
+	bne	.L1565	@cond_branch
+.L1566:
 	add	r0, r4, #0
 	sub	r0, r0, #0xb
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bhi	.L1559	@cond_branch
+	bhi	.L1567	@cond_branch
 	mov	r0, #0xd
 	bl	DisplayPartyMenuStdMessage
-	b	.L1574
-.L1584:
+	b	.L1582
+.L1592:
 	.align	2, 0
-.L1583:
+.L1591:
 	.word	sPartyMenuInternal
 	.word	sFieldMoveCursorCallbacks
-.L1559:
+.L1567:
 	ldrb	r0, [r7, #0x4]
-	b	.L1582
-.L1557:
+	b	.L1590
+.L1565:
 	cmp	r4, #0x7
-	bhi	.L1562	@cond_branch
-	ldr	r1, .L1585
+	bhi	.L1570	@cond_branch
+	ldr	r1, .L1593
 	add	r0, r4, r1
 	bl	FlagGet
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L1562	@cond_branch
-	ldr	r0, .L1585+0x4
+	beq	.L1570	@cond_branch
+	ldr	r0, .L1593+0x4
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
-	ldr	r1, .L1585+0x8
+	ldr	r1, .L1593+0x8
 	lsl	r0, r6, #0x2
 	add	r0, r0, r6
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1585+0xc
+	ldr	r1, .L1593+0xc
 	str	r1, [r0]
-	b	.L1555
-.L1586:
+	b	.L1563
+.L1594:
 	.align	2, 0
-.L1585:
+.L1593:
 	.word	0x867
 	.word	gText_CantUseUntilNewBadge
 	.word	gTasks
 	.word	Task_ReturnToChooseMonAfterText
-.L1562:
-	ldr	r1, .L1587
+.L1570:
+	ldr	r1, .L1595
 	lsl	r0, r4, #0x3
 	add	r5, r0, r1
 	ldr	r0, [r5]
@@ -14531,39 +16209,39 @@ CursorCb_FieldMove:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.LCB14594
-	b	.L1564	@long jump
-.LCB14594:
+	beq	.LCB14632
+	b	.L1572	@long jump
+.LCB14632:
 	sub	r0, r4, #0x5
 	cmp	r0, #0x7
-	bhi	.L1571	@cond_branch
+	bhi	.L1579	@cond_branch
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1587+0x4
+	ldr	r1, .L1595+0x4
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L1588:
+.L1596:
 	.align	2, 0
-.L1587:
+.L1595:
 	.word	sFieldMoveCursorCallbacks
-	.word	.L1572
+	.word	.L1580
 	.align	2, 0
 	.align	2, 0
-.L1572:
-	.word	.L1570
-	.word	.L1571
-	.word	.L1571
-	.word	.L1568
-	.word	.L1569
-	.word	.L1571
-	.word	.L1567
-	.word	.L1567
-.L1567:
+.L1580:
+	.word	.L1578
+	.word	.L1579
+	.word	.L1579
+	.word	.L1576
+	.word	.L1577
+	.word	.L1579
+	.word	.L1575
+	.word	.L1575
+.L1575:
 	add	r0, r6, #0
 	bl	ChooseMonForSoftboiled
-	b	.L1555
-.L1568:
-	ldr	r0, .L1589
+	b	.L1563
+.L1576:
+	ldr	r0, .L1597
 	ldr	r1, [r0]
 	mov	r0, #0x1c
 	ldrsb	r0, [r1, r0]
@@ -14576,21 +16254,21 @@ CursorCb_FieldMove:
 	lsr	r1, r1, #0x10
 	bl	Overworld_GetMapHeaderByGroupAndId
 	add	r1, r0, #0
-	ldr	r0, .L1589+0x4
+	ldr	r0, .L1597+0x4
 	ldrb	r1, [r1, #0x14]
 	bl	GetMapNameGeneric
-	ldr	r0, .L1589+0x8
-	ldr	r1, .L1589+0xc
-	b	.L1579
-.L1590:
+	ldr	r0, .L1597+0x8
+	ldr	r1, .L1597+0xc
+	b	.L1587
+.L1598:
 	.align	2, 0
-.L1589:
+.L1597:
 	.word	gSaveBlock1Ptr
 	.word	gStringVar1
 	.word	gStringVar4
 	.word	gText_ReturnToHealingSpot
-.L1569:
-	ldr	r0, .L1591
+.L1577:
+	ldr	r0, .L1599
 	ldr	r1, [r0]
 	add	r0, r1, #0
 	add	r0, r0, #0x24
@@ -14607,81 +16285,81 @@ CursorCb_FieldMove:
 	lsr	r1, r1, #0x10
 	bl	Overworld_GetMapHeaderByGroupAndId
 	add	r1, r0, #0
-	ldr	r0, .L1591+0x4
+	ldr	r0, .L1599+0x4
 	ldrb	r1, [r1, #0x14]
 	bl	GetMapNameGeneric
-	ldr	r0, .L1591+0x8
-	ldr	r1, .L1591+0xc
-.L1579:
+	ldr	r0, .L1599+0x8
+	ldr	r1, .L1599+0xc
+.L1587:
 	bl	StringExpandPlaceholders
 	add	r0, r6, #0
 	bl	DisplayFieldMoveExitAreaMessage
-	ldr	r0, .L1591+0x10
+	ldr	r0, .L1599+0x10
 	ldr	r0, [r0]
 	mov	r1, #0x86
 	lsl	r1, r1, #0x2
 	add	r0, r0, r1
 	strh	r4, [r0]
-	b	.L1555
-.L1592:
+	b	.L1563
+.L1600:
 	.align	2, 0
-.L1591:
+.L1599:
 	.word	gSaveBlock1Ptr
 	.word	gStringVar1
 	.word	gStringVar4
 	.word	gText_EscapeFromHere
 	.word	sPartyMenuInternal
-.L1570:
-	ldr	r1, .L1593
-	ldr	r0, .L1593+0x4
-	b	.L1580
-.L1594:
+.L1578:
+	ldr	r1, .L1601
+	ldr	r0, .L1601+0x4
+	b	.L1588
+.L1602:
 	.align	2, 0
-.L1593:
+.L1601:
 	.word	gPartyMenu
 	.word	CB2_OpenFlyMap
-.L1571:
-	ldr	r1, .L1595
-	ldr	r0, .L1595+0x4
-.L1580:
+.L1579:
+	ldr	r1, .L1603
+	ldr	r0, .L1603+0x4
+.L1588:
 	str	r0, [r1]
 	add	r0, r6, #0
 	bl	Task_ClosePartyMenu
-	b	.L1555
-.L1596:
+	b	.L1563
+.L1604:
 	.align	2, 0
-.L1595:
+.L1603:
 	.word	gPartyMenu
 	.word	CB2_ReturnToField
-.L1564:
+.L1572:
 	cmp	r4, #0x1
-	beq	.L1576	@cond_branch
+	beq	.L1584	@cond_branch
 	cmp	r4, #0x4
-	bne	.L1577	@cond_branch
+	bne	.L1585	@cond_branch
 	bl	DisplayCantUseSurfMessage
-	b	.L1574
-.L1576:
+	b	.L1582
+.L1584:
 	bl	DisplayCantUseFlashMessage
-	b	.L1574
-.L1577:
+	b	.L1582
+.L1585:
 	ldrb	r0, [r5, #0x4]
-.L1582:
+.L1590:
 	bl	DisplayPartyMenuStdMessage
-.L1574:
-	ldr	r0, .L1597
+.L1582:
+	ldr	r0, .L1605
 	lsl	r1, r6, #0x2
 	add	r1, r1, r6
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L1597+0x4
+	ldr	r0, .L1605+0x4
 	str	r0, [r1]
-.L1555:
+.L1563:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1598:
+.L1606:
 	.align	2, 0
-.L1597:
+.L1605:
 	.word	gTasks
 	.word	Task_CancelAfterAorBPress
 .Lfe171:
@@ -14694,22 +16372,22 @@ DisplayFieldMoveExitAreaMessage:
 	add	r4, r0, #0
 	lsl	r4, r4, #0x18
 	lsr	r4, r4, #0x18
-	ldr	r0, .L1600
+	ldr	r0, .L1608
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
-	ldr	r1, .L1600+0x4
+	ldr	r1, .L1608+0x4
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1600+0x8
+	ldr	r1, .L1608+0x8
 	str	r1, [r0]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1601:
+.L1609:
 	.align	2, 0
-.L1600:
+.L1608:
 	.word	gStringVar4
 	.word	gTasks
 	.word	Task_FieldMoveExitAreaYesNo
@@ -14726,22 +16404,22 @@ Task_FieldMoveExitAreaYesNo:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L1603	@cond_branch
+	beq	.L1611	@cond_branch
 	bl	PartyMenuDisplayYesNoMenu
-	ldr	r0, .L1604
+	ldr	r0, .L1612
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L1604+0x4
+	ldr	r0, .L1612+0x4
 	str	r0, [r1]
-.L1603:
+.L1611:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1605:
+.L1613:
 	.align	2, 0
-.L1604:
+.L1612:
 	.word	gTasks
 	.word	Task_HandleFieldMoveExitAreaYesNoInput
 .Lfe173:
@@ -14757,48 +16435,48 @@ Task_HandleFieldMoveExitAreaYesNoInput:
 	lsl	r0, r0, #0x18
 	asr	r1, r0, #0x18
 	cmp	r1, #0
-	beq	.L1608	@cond_branch
+	beq	.L1616	@cond_branch
 	cmp	r1, #0
-	bgt	.L1613	@cond_branch
+	bgt	.L1621	@cond_branch
 	mov	r0, #0x1
 	neg	r0, r0
 	cmp	r1, r0
-	beq	.L1609	@cond_branch
-	b	.L1607
-.L1613:
+	beq	.L1617	@cond_branch
+	b	.L1615
+.L1621:
 	cmp	r1, #0x1
-	beq	.L1610	@cond_branch
-	b	.L1607
-.L1608:
-	ldr	r1, .L1614
-	ldr	r0, .L1614+0x4
+	beq	.L1618	@cond_branch
+	b	.L1615
+.L1616:
+	ldr	r1, .L1622
+	ldr	r0, .L1622+0x4
 	str	r0, [r1]
 	add	r0, r4, #0
 	bl	Task_ClosePartyMenu
-	b	.L1607
-.L1615:
+	b	.L1615
+.L1623:
 	.align	2, 0
-.L1614:
+.L1622:
 	.word	gPartyMenu
 	.word	CB2_ReturnToField
-.L1609:
+.L1617:
 	mov	r0, #0x5
 	bl	PlaySE
-.L1610:
-	ldr	r0, .L1616
+.L1618:
+	ldr	r0, .L1624
 	mov	r1, #0x0
 	str	r1, [r0]
-	ldr	r0, .L1616+0x4
+	ldr	r0, .L1624+0x4
 	str	r1, [r0]
 	add	r0, r4, #0
 	bl	Task_ReturnToChooseMonAfterText
-.L1607:
+.L1615:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1617:
+.L1625:
 	.align	2, 0
-.L1616:
+.L1624:
 	.word	gFieldCallback2
 	.word	gPostMenuFieldCallback
 .Lfe174:
@@ -14810,15 +16488,15 @@ Task_HandleFieldMoveExitAreaYesNoInput:
 FieldCallback_PrepareFadeInFromMenu:
 	push	{lr}
 	bl	FadeInFromBlack
-	ldr	r0, .L1619
+	ldr	r0, .L1627
 	mov	r1, #0x8
 	bl	CreateTask
 	mov	r0, #0x1
 	pop	{r1}
 	bx	r1
-.L1620:
+.L1628:
 	.align	2, 0
-.L1619:
+.L1627:
 	.word	Task_FieldMoveWaitForFade
 .Lfe175:
 	.size	 FieldCallback_PrepareFadeInFromMenu,.Lfe175-FieldCallback_PrepareFadeInFromMenu
@@ -14833,24 +16511,24 @@ Task_FieldMoveWaitForFade:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.L1622	@cond_branch
+	bne	.L1630	@cond_branch
 	bl	GetFieldMoveMonSpecies
-	ldr	r1, .L1623
+	ldr	r1, .L1631
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	str	r0, [r1]
-	ldr	r0, .L1623+0x4
+	ldr	r0, .L1631+0x4
 	ldr	r0, [r0]
 	bl	_call_via_r0
 	add	r0, r4, #0
 	bl	DestroyTask
-.L1622:
+.L1630:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1624:
+.L1632:
 	.align	2, 0
-.L1623:
+.L1631:
 	.word	gFieldEffectArguments
 	.word	gPostMenuFieldCallback
 .Lfe176:
@@ -14860,12 +16538,12 @@ Task_FieldMoveWaitForFade:
 	.thumb_func
 GetFieldMoveMonSpecies:
 	push	{lr}
-	ldr	r0, .L1626
+	ldr	r0, .L1634
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L1626+0x4
+	ldr	r1, .L1634+0x4
 	add	r0, r0, r1
 	mov	r1, #0xb
 	bl	GetMonData
@@ -14873,9 +16551,9 @@ GetFieldMoveMonSpecies:
 	lsr	r0, r0, #0x10
 	pop	{r1}
 	bx	r1
-.L1627:
+.L1635:
 	.align	2, 0
-.L1626:
+.L1634:
 	.word	gPartyMenu
 	.word	gPlayerParty
 .Lfe177:
@@ -14887,25 +16565,25 @@ Task_CancelAfterAorBPress:
 	push	{lr}
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
-	ldr	r0, .L1631
+	ldr	r0, .L1639
 	ldrh	r1, [r0, #0x2e]
 	mov	r0, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1630	@cond_branch
+	bne	.L1638	@cond_branch
 	mov	r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1629	@cond_branch
-.L1630:
+	beq	.L1637	@cond_branch
+.L1638:
 	add	r0, r2, #0
 	bl	CursorCb_Cancel1
-.L1629:
+.L1637:
 	pop	{r0}
 	bx	r0
-.L1632:
+.L1640:
 	.align	2, 0
-.L1631:
+.L1639:
 	.word	gMain
 .Lfe178:
 	.size	 Task_CancelAfterAorBPress,.Lfe178-Task_CancelAfterAorBPress
@@ -14914,23 +16592,23 @@ Task_CancelAfterAorBPress:
 	.thumb_func
 DisplayCantUseFlashMessage:
 	push	{lr}
-	ldr	r0, .L1636
+	ldr	r0, .L1644
 	bl	FlagGet
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.L1634	@cond_branch
+	bne	.L1642	@cond_branch
 	mov	r0, #0xc
 	bl	DisplayPartyMenuStdMessage
-	b	.L1635
-.L1637:
+	b	.L1643
+.L1645:
 	.align	2, 0
-.L1636:
+.L1644:
 	.word	0x888
-.L1634:
+.L1642:
 	mov	r0, #0xd
 	bl	DisplayPartyMenuStdMessage
-.L1635:
+.L1643:
 	pop	{r0}
 	bx	r0
 .Lfe179:
@@ -14941,7 +16619,7 @@ DisplayCantUseFlashMessage:
 FieldCallback_Surf:
 	push	{lr}
 	bl	GetCursorSelectionMonId
-	ldr	r1, .L1639
+	ldr	r1, .L1647
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	str	r0, [r1]
@@ -14949,9 +16627,9 @@ FieldCallback_Surf:
 	bl	FieldEffectStart
 	pop	{r0}
 	bx	r0
-.L1640:
+.L1648:
 	.align	2, 0
-.L1639:
+.L1647:
 	.word	gFieldEffectArguments
 .Lfe180:
 	.size	 FieldCallback_Surf,.Lfe180-FieldCallback_Surf
@@ -14964,30 +16642,30 @@ SetUpFieldMove_Surf:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.L1642	@cond_branch
+	bne	.L1650	@cond_branch
 	bl	IsPlayerFacingSurfableFishableWater
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.L1642	@cond_branch
-	ldr	r1, .L1644
-	ldr	r0, .L1644+0x4
+	bne	.L1650	@cond_branch
+	ldr	r1, .L1652
+	ldr	r0, .L1652+0x4
 	str	r0, [r1]
-	ldr	r1, .L1644+0x8
-	ldr	r0, .L1644+0xc
+	ldr	r1, .L1652+0x8
+	ldr	r0, .L1652+0xc
 	str	r0, [r1]
 	mov	r0, #0x1
-	b	.L1643
-.L1645:
+	b	.L1651
+.L1653:
 	.align	2, 0
-.L1644:
+.L1652:
 	.word	gFieldCallback2
 	.word	FieldCallback_PrepareFadeInFromMenu
 	.word	gPostMenuFieldCallback
 	.word	FieldCallback_Surf
-.L1642:
+.L1650:
 	mov	r0, #0x0
-.L1643:
+.L1651:
 	pop	{r1}
 	bx	r1
 .Lfe181:
@@ -15001,14 +16679,14 @@ DisplayCantUseSurfMessage:
 	bl	TestPlayerAvatarFlags
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1647	@cond_branch
+	beq	.L1655	@cond_branch
 	mov	r0, #0x9
 	bl	DisplayPartyMenuStdMessage
-	b	.L1648
-.L1647:
+	b	.L1656
+.L1655:
 	mov	r0, #0x8
 	bl	DisplayPartyMenuStdMessage
-.L1648:
+.L1656:
 	pop	{r0}
 	bx	r0
 .Lfe182:
@@ -15018,22 +16696,22 @@ DisplayCantUseSurfMessage:
 	.thumb_func
 SetUpFieldMove_Fly:
 	push	{lr}
-	ldr	r0, .L1653
+	ldr	r0, .L1661
 	ldrb	r0, [r0, #0x17]
 	bl	Overworld_MapTypeAllowsTeleportAndFly
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L1650	@cond_branch
+	beq	.L1658	@cond_branch
 	mov	r0, #0x0
-	b	.L1652
-.L1654:
+	b	.L1660
+.L1662:
 	.align	2, 0
-.L1653:
+.L1661:
 	.word	gMapHeader
-.L1650:
+.L1658:
 	mov	r0, #0x1
-.L1652:
+.L1660:
 	pop	{r1}
 	bx	r1
 .Lfe183:
@@ -15047,9 +16725,9 @@ CB2_ReturnToPartyMenuFromFlyMap:
 	add	sp, sp, #-0xc
 	mov	r0, #0x0
 	str	r0, [sp]
-	ldr	r0, .L1656
+	ldr	r0, .L1664
 	str	r0, [sp, #0x4]
-	ldr	r0, .L1656+0x4
+	ldr	r0, .L1664+0x4
 	str	r0, [sp, #0x8]
 	mov	r0, #0x0
 	mov	r1, #0x0
@@ -15059,9 +16737,9 @@ CB2_ReturnToPartyMenuFromFlyMap:
 	add	sp, sp, #0xc
 	pop	{r0}
 	bx	r0
-.L1657:
+.L1665:
 	.align	2, 0
-.L1656:
+.L1664:
 	.word	Task_HandleChooseMonInput
 	.word	CB2_ReturnToFieldWithOpenMenu
 .Lfe184:
@@ -15072,7 +16750,7 @@ CB2_ReturnToPartyMenuFromFlyMap:
 FieldCallback_Waterfall:
 	push	{lr}
 	bl	GetCursorSelectionMonId
-	ldr	r1, .L1659
+	ldr	r1, .L1667
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	str	r0, [r1]
@@ -15080,9 +16758,9 @@ FieldCallback_Waterfall:
 	bl	FieldEffectStart
 	pop	{r0}
 	bx	r0
-.L1660:
+.L1668:
 	.align	2, 0
-.L1659:
+.L1667:
 	.word	gFieldEffectArguments
 .Lfe185:
 	.size	 FieldCallback_Waterfall,.Lfe185-FieldCallback_Waterfall
@@ -15109,30 +16787,30 @@ SetUpFieldMove_Waterfall:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.L1662	@cond_branch
+	bne	.L1670	@cond_branch
 	bl	IsPlayerSurfingNorth
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.L1662	@cond_branch
-	ldr	r1, .L1664
-	ldr	r0, .L1664+0x4
+	bne	.L1670	@cond_branch
+	ldr	r1, .L1672
+	ldr	r0, .L1672+0x4
 	str	r0, [r1]
-	ldr	r1, .L1664+0x8
-	ldr	r0, .L1664+0xc
+	ldr	r1, .L1672+0x8
+	ldr	r0, .L1672+0xc
 	str	r0, [r1]
 	mov	r0, #0x1
-	b	.L1663
-.L1665:
+	b	.L1671
+.L1673:
 	.align	2, 0
-.L1664:
+.L1672:
 	.word	gFieldCallback2
 	.word	FieldCallback_PrepareFadeInFromMenu
 	.word	gPostMenuFieldCallback
 	.word	FieldCallback_Waterfall
-.L1662:
+.L1670:
 	mov	r0, #0x0
-.L1663:
+.L1671:
 	add	sp, sp, #0x4
 	pop	{r4}
 	pop	{r1}
@@ -15145,7 +16823,7 @@ SetUpFieldMove_Waterfall:
 FieldCallback_Dive:
 	push	{lr}
 	bl	GetCursorSelectionMonId
-	ldr	r1, .L1667
+	ldr	r1, .L1675
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	str	r0, [r1]
@@ -15153,9 +16831,9 @@ FieldCallback_Dive:
 	bl	FieldEffectStart
 	pop	{r0}
 	bx	r0
-.L1668:
+.L1676:
 	.align	2, 0
-.L1667:
+.L1675:
 	.word	gFieldEffectArguments
 .Lfe187:
 	.size	 FieldCallback_Dive,.Lfe187-FieldCallback_Dive
@@ -15165,32 +16843,32 @@ FieldCallback_Dive:
 SetUpFieldMove_Dive:
 	push	{lr}
 	bl	TrySetDiveWarp
-	ldr	r1, .L1672
+	ldr	r1, .L1680
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	str	r0, [r1, #0x4]
 	cmp	r0, #0
-	bne	.L1670	@cond_branch
+	bne	.L1678	@cond_branch
 	mov	r0, #0x0
-	b	.L1671
-.L1673:
+	b	.L1679
+.L1681:
 	.align	2, 0
-.L1672:
+.L1680:
 	.word	gFieldEffectArguments
-.L1670:
-	ldr	r1, .L1674
-	ldr	r0, .L1674+0x4
+.L1678:
+	ldr	r1, .L1682
+	ldr	r0, .L1682+0x4
 	str	r0, [r1]
-	ldr	r1, .L1674+0x8
-	ldr	r0, .L1674+0xc
+	ldr	r1, .L1682+0x8
+	ldr	r0, .L1682+0xc
 	str	r0, [r1]
 	mov	r0, #0x1
-.L1671:
+.L1679:
 	pop	{r1}
 	bx	r1
-.L1675:
+.L1683:
 	.align	2, 0
-.L1674:
+.L1682:
 	.word	gFieldCallback2
 	.word	FieldCallback_PrepareFadeInFromMenu
 	.word	gPostMenuFieldCallback
@@ -15211,23 +16889,23 @@ CreatePartyMonIconSprite:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.L1677	@cond_branch
-	ldr	r0, .L1679
-	ldr	r1, .L1679+0x4
+	bne	.L1685	@cond_branch
+	ldr	r0, .L1687
+	ldr	r1, .L1687+0x4
 	add	r0, r0, r1
 	ldrb	r1, [r0]
 	mov	r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1677	@cond_branch
-	ldr	r0, .L1679+0x8
+	beq	.L1685	@cond_branch
+	ldr	r0, .L1687+0x8
 	add	r0, r4, r0
 	ldrb	r1, [r0]
 	eor	r1, r1, r6
 	neg	r0, r1
 	orr	r0, r0, r1
 	lsr	r6, r0, #0x1f
-.L1677:
+.L1685:
 	add	r0, r5, #0
 	mov	r1, #0x41
 	bl	GetMonData
@@ -15250,9 +16928,9 @@ CreatePartyMonIconSprite:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1680:
+.L1688:
 	.align	2, 0
-.L1679:
+.L1687:
 	.word	gMain
 	.word	0x439
 	.word	sMultiBattlePartnersPartyMask
@@ -15271,8 +16949,8 @@ CreatePartyMonIconSpriteParameterized:
 	lsl	r3, r3, #0x18
 	lsr	r7, r3, #0x18
 	cmp	r5, #0
-	beq	.L1682	@cond_branch
-	ldr	r1, .L1683
+	beq	.L1690	@cond_branch
+	ldr	r1, .L1691
 	ldr	r0, [r4, #0x4]
 	ldrb	r2, [r0]
 	ldrb	r3, [r0, #0x1]
@@ -15284,7 +16962,7 @@ CreatePartyMonIconSpriteParameterized:
 	add	r0, r5, #0
 	bl	CreateMonIcon
 	strb	r0, [r4, #0x9]
-	ldr	r2, .L1683+0x4
+	ldr	r2, .L1691+0x4
 	ldrb	r0, [r4, #0x9]
 	lsl	r1, r0, #0x4
 	add	r1, r1, r0
@@ -15300,14 +16978,14 @@ CreatePartyMonIconSpriteParameterized:
 	and	r0, r0, r3
 	orr	r0, r0, r2
 	strb	r0, [r1, #0x5]
-.L1682:
+.L1690:
 	add	sp, sp, #0xc
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1684:
+.L1692:
 	.align	2, 0
-.L1683:
+.L1691:
 	.word	SpriteCB_MonIcon
 	.word	gSprites
 .Lfe190:
@@ -15329,83 +17007,83 @@ UpdateHPBar:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x2
-	beq	.L1689	@cond_branch
+	beq	.L1697	@cond_branch
 	cmp	r0, #0x2
-	bgt	.L1693	@cond_branch
+	bgt	.L1701	@cond_branch
 	cmp	r0, #0x1
-	beq	.L1690	@cond_branch
-	b	.L1691
-.L1693:
-	cmp	r0, #0x3
-	beq	.L1688	@cond_branch
-	cmp	r0, #0x4
-	bne	.L1691	@cond_branch
-	lsl	r0, r4, #0x4
-	add	r0, r0, r4
-	lsl	r0, r0, #0x2
-	ldr	r1, .L1694
-	add	r0, r0, r1
-	mov	r1, #0x0
-	bl	SetPartyHPBarSprite
-	b	.L1686
-.L1695:
-	.align	2, 0
-.L1694:
-	.word	gSprites
-.L1688:
-	lsl	r0, r4, #0x4
-	add	r0, r0, r4
-	lsl	r0, r0, #0x2
-	ldr	r1, .L1696
-	add	r0, r0, r1
-	mov	r1, #0x1
-	bl	SetPartyHPBarSprite
-	b	.L1686
-.L1697:
-	.align	2, 0
-.L1696:
-	.word	gSprites
-.L1689:
-	lsl	r0, r4, #0x4
-	add	r0, r0, r4
-	lsl	r0, r0, #0x2
-	ldr	r1, .L1698
-	add	r0, r0, r1
-	mov	r1, #0x2
-	bl	SetPartyHPBarSprite
-	b	.L1686
-.L1699:
-	.align	2, 0
-.L1698:
-	.word	gSprites
-.L1690:
-	lsl	r0, r4, #0x4
-	add	r0, r0, r4
-	lsl	r0, r0, #0x2
-	ldr	r1, .L1700
-	add	r0, r0, r1
-	mov	r1, #0x3
-	bl	SetPartyHPBarSprite
-	b	.L1686
+	beq	.L1698	@cond_branch
+	b	.L1699
 .L1701:
-	.align	2, 0
-.L1700:
-	.word	gSprites
-.L1691:
+	cmp	r0, #0x3
+	beq	.L1696	@cond_branch
+	cmp	r0, #0x4
+	bne	.L1699	@cond_branch
 	lsl	r0, r4, #0x4
 	add	r0, r0, r4
 	lsl	r0, r0, #0x2
 	ldr	r1, .L1702
 	add	r0, r0, r1
-	mov	r1, #0x4
+	mov	r1, #0x0
 	bl	SetPartyHPBarSprite
-.L1686:
-	pop	{r4}
-	pop	{r0}
-	bx	r0
+	b	.L1694
 .L1703:
 	.align	2, 0
 .L1702:
+	.word	gSprites
+.L1696:
+	lsl	r0, r4, #0x4
+	add	r0, r0, r4
+	lsl	r0, r0, #0x2
+	ldr	r1, .L1704
+	add	r0, r0, r1
+	mov	r1, #0x1
+	bl	SetPartyHPBarSprite
+	b	.L1694
+.L1705:
+	.align	2, 0
+.L1704:
+	.word	gSprites
+.L1697:
+	lsl	r0, r4, #0x4
+	add	r0, r0, r4
+	lsl	r0, r0, #0x2
+	ldr	r1, .L1706
+	add	r0, r0, r1
+	mov	r1, #0x2
+	bl	SetPartyHPBarSprite
+	b	.L1694
+.L1707:
+	.align	2, 0
+.L1706:
+	.word	gSprites
+.L1698:
+	lsl	r0, r4, #0x4
+	add	r0, r0, r4
+	lsl	r0, r0, #0x2
+	ldr	r1, .L1708
+	add	r0, r0, r1
+	mov	r1, #0x3
+	bl	SetPartyHPBarSprite
+	b	.L1694
+.L1709:
+	.align	2, 0
+.L1708:
+	.word	gSprites
+.L1699:
+	lsl	r0, r4, #0x4
+	add	r0, r0, r4
+	lsl	r0, r0, #0x2
+	ldr	r1, .L1710
+	add	r0, r0, r1
+	mov	r1, #0x4
+	bl	SetPartyHPBarSprite
+.L1694:
+	pop	{r4}
+	pop	{r0}
+	bx	r0
+.L1711:
+	.align	2, 0
+.L1710:
 	.word	gSprites
 .Lfe191:
 	.size	 UpdateHPBar,.Lfe191-UpdateHPBar
@@ -15446,7 +17124,7 @@ AnimateSelectedPartyIcon:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	lsl	r1, r1, #0x18
-	ldr	r5, .L1711
+	ldr	r5, .L1719
 	lsl	r0, r4, #0x4
 	add	r0, r0, r4
 	lsl	r6, r0, #0x2
@@ -15456,53 +17134,53 @@ AnimateSelectedPartyIcon:
 	strh	r3, [r2, #0x2e]
 	mov	ip, r5
 	cmp	r1, #0
-	bne	.L1706	@cond_branch
+	bne	.L1714	@cond_branch
 	mov	r1, #0x20
 	ldrsh	r0, [r2, r1]
 	cmp	r0, #0x10
-	bne	.L1707	@cond_branch
+	bne	.L1715	@cond_branch
 	strh	r3, [r2, #0x24]
-	ldr	r0, .L1711+0x4
+	ldr	r0, .L1719+0x4
 	strh	r0, [r2, #0x26]
-	b	.L1708
-.L1712:
+	b	.L1716
+.L1720:
 	.align	2, 0
-.L1711:
+.L1719:
 	.word	gSprites
 	.word	0xfffc
-.L1707:
-	ldr	r0, .L1713
+.L1715:
+	ldr	r0, .L1721
 	strh	r0, [r2, #0x24]
 	strh	r3, [r2, #0x26]
-.L1708:
+.L1716:
 	lsl	r0, r4, #0x4
 	add	r0, r0, r4
 	lsl	r0, r0, #0x2
 	mov	r1, ip
 	add	r1, r1, #0x1c
 	add	r0, r0, r1
-	ldr	r1, .L1713+0x4
-	b	.L1710
-.L1714:
+	ldr	r1, .L1721+0x4
+	b	.L1718
+.L1722:
 	.align	2, 0
-.L1713:
+.L1721:
 	.word	0xfffc
 	.word	SpriteCB_UpdatePartyMonIcon
-.L1706:
+.L1714:
 	strh	r3, [r2, #0x24]
 	strh	r3, [r2, #0x26]
 	add	r0, r5, #0
 	add	r0, r0, #0x1c
 	add	r0, r6, r0
-	ldr	r1, .L1715
-.L1710:
+	ldr	r1, .L1723
+.L1718:
 	str	r1, [r0]
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1716:
+.L1724:
 	.align	2, 0
-.L1715:
+.L1723:
 	.word	SpriteCB_BouncePartyMonIcon
 .Lfe193:
 	.size	 AnimateSelectedPartyIcon,.Lfe193-AnimateSelectedPartyIcon
@@ -15516,21 +17194,21 @@ SpriteCB_BouncePartyMonIcon:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1718	@cond_branch
+	beq	.L1726	@cond_branch
 	mov	r1, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1719	@cond_branch
-	ldr	r0, .L1721
+	beq	.L1727	@cond_branch
+	ldr	r0, .L1729
 	strh	r0, [r4, #0x26]
-	b	.L1718
-.L1722:
+	b	.L1726
+.L1730:
 	.align	2, 0
-.L1721:
+.L1729:
 	.word	0xfffd
-.L1719:
+.L1727:
 	strh	r1, [r4, #0x26]
-.L1718:
+.L1726:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
@@ -15556,8 +17234,8 @@ CreatePartyMonHeldItemSprite:
 	mov	r1, #0xb
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L1725	@cond_branch
-	ldr	r0, .L1726
+	beq	.L1733	@cond_branch
+	ldr	r0, .L1734
 	ldr	r2, [r4, #0x4]
 	ldrb	r1, [r2, #0x2]
 	ldrb	r2, [r2, #0x3]
@@ -15567,13 +17245,13 @@ CreatePartyMonHeldItemSprite:
 	add	r0, r5, #0
 	add	r1, r4, #0
 	bl	UpdatePartyMonHeldItemSprite
-.L1725:
+.L1733:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1727:
+.L1735:
 	.align	2, 0
-.L1726:
+.L1734:
 	.word	sSpriteTemplate_HeldItem
 .Lfe196:
 	.size	 CreatePartyMonHeldItemSprite,.Lfe196-CreatePartyMonHeldItemSprite
@@ -15587,15 +17265,15 @@ CreatePartyMonHeldItemSpriteParameterized:
 	lsl	r1, r1, #0x10
 	lsr	r5, r1, #0x10
 	cmp	r0, #0
-	beq	.L1729	@cond_branch
-	ldr	r0, .L1730
+	beq	.L1737	@cond_branch
+	ldr	r0, .L1738
 	ldr	r2, [r4, #0x4]
 	ldrb	r1, [r2, #0x2]
 	ldrb	r2, [r2, #0x3]
 	mov	r3, #0x0
 	bl	CreateSprite
 	strb	r0, [r4, #0xa]
-	ldr	r2, .L1730+0x4
+	ldr	r2, .L1738+0x4
 	ldrb	r0, [r4, #0xa]
 	lsl	r1, r0, #0x4
 	add	r1, r1, r0
@@ -15609,13 +17287,13 @@ CreatePartyMonHeldItemSpriteParameterized:
 	add	r0, r5, #0
 	add	r1, r4, #0
 	bl	ShowOrHideHeldItemSprite
-.L1729:
+.L1737:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1731:
+.L1739:
 	.align	2, 0
-.L1730:
+.L1738:
 	.word	sSpriteTemplate_HeldItem
 	.word	gSprites
 .Lfe197:
@@ -15646,8 +17324,8 @@ ShowOrHideHeldItemSprite:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0
-	bne	.L1734	@cond_branch
-	ldr	r2, .L1739
+	bne	.L1742	@cond_branch
+	ldr	r2, .L1747
 	ldrb	r1, [r4, #0xa]
 	lsl	r0, r1, #0x4
 	add	r0, r0, r1
@@ -15657,40 +17335,40 @@ ShowOrHideHeldItemSprite:
 	ldrb	r1, [r0]
 	mov	r2, #0x4
 	orr	r1, r1, r2
-	b	.L1738
-.L1740:
+	b	.L1746
+.L1748:
 	.align	2, 0
-.L1739:
+.L1747:
 	.word	gSprites
-.L1734:
+.L1742:
 	bl	ItemIsMail
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1736	@cond_branch
+	beq	.L1744	@cond_branch
 	ldrb	r1, [r4, #0xa]
 	lsl	r0, r1, #0x4
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1741
+	ldr	r1, .L1749
 	add	r0, r0, r1
 	mov	r1, #0x1
 	bl	StartSpriteAnim
-	b	.L1737
-.L1742:
+	b	.L1745
+.L1750:
 	.align	2, 0
-.L1741:
+.L1749:
 	.word	gSprites
-.L1736:
+.L1744:
 	ldrb	r1, [r4, #0xa]
 	lsl	r0, r1, #0x4
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1743
+	ldr	r1, .L1751
 	add	r0, r0, r1
 	mov	r1, #0x0
 	bl	StartSpriteAnim
-.L1737:
-	ldr	r2, .L1743
+.L1745:
+	ldr	r2, .L1751
 	ldrb	r1, [r4, #0xa]
 	lsl	r0, r1, #0x4
 	add	r0, r0, r1
@@ -15701,14 +17379,14 @@ ShowOrHideHeldItemSprite:
 	mov	r1, #0x5
 	neg	r1, r1
 	and	r1, r1, r2
-.L1738:
+.L1746:
 	strb	r1, [r0]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1744:
+.L1752:
 	.align	2, 0
-.L1743:
+.L1751:
 	.word	gSprites
 .Lfe199:
 	.size	 ShowOrHideHeldItemSprite,.Lfe199-ShowOrHideHeldItemSprite
@@ -15718,15 +17396,15 @@ ShowOrHideHeldItemSprite:
 	.thumb_func
 LoadHeldItemIcons:
 	push	{lr}
-	ldr	r0, .L1746
+	ldr	r0, .L1754
 	bl	LoadSpriteSheet
-	ldr	r0, .L1746+0x4
+	ldr	r0, .L1754+0x4
 	bl	LoadSpritePalette
 	pop	{r0}
 	bx	r0
-.L1747:
+.L1755:
 	.align	2, 0
-.L1746:
+.L1754:
 	.word	sSpriteSheet_HeldItem
 	.word	sSpritePalette_HeldItem
 .Lfe200:
@@ -15742,26 +17420,26 @@ DrawHeldItemIconsForTrade:
 	lsl	r2, r2, #0x18
 	lsr	r2, r2, #0x18
 	cmp	r2, #0
-	beq	.L1750	@cond_branch
+	beq	.L1758	@cond_branch
 	cmp	r2, #0x1
-	beq	.L1757	@cond_branch
-	b	.L1749
-.L1750:
+	beq	.L1765	@cond_branch
+	b	.L1757
+.L1758:
 	mov	r5, #0x0
 	ldrb	r0, [r6]
 	cmp	r5, r0
-	bcs	.L1749	@cond_branch
-.L1754:
+	bcs	.L1757	@cond_branch
+.L1762:
 	mov	r0, #0x64
 	mul	r0, r0, r5
-	ldr	r1, .L1767
+	ldr	r1, .L1775
 	add	r0, r0, r1
 	mov	r1, #0xc
 	bl	GetMonData
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
 	cmp	r1, #0
-	beq	.L1753	@cond_branch
+	beq	.L1761	@cond_branch
 	add	r0, r7, r5
 	ldrb	r4, [r0]
 	add	r0, r1, #0
@@ -15771,32 +17449,32 @@ DrawHeldItemIconsForTrade:
 	lsr	r1, r1, #0x18
 	add	r0, r4, #0
 	bl	CreateHeldItemSpriteForTrade
-.L1753:
+.L1761:
 	add	r0, r5, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r5, r0, #0x10
 	ldrb	r0, [r6]
 	cmp	r5, r0
-	bcc	.L1754	@cond_branch
-	b	.L1749
-.L1768:
+	bcc	.L1762	@cond_branch
+	b	.L1757
+.L1776:
 	.align	2, 0
-.L1767:
+.L1775:
 	.word	gPlayerParty
-.L1757:
+.L1765:
 	mov	r5, #0x0
-	b	.L1766
-.L1761:
+	b	.L1774
+.L1769:
 	mov	r0, #0x64
 	mul	r0, r0, r5
-	ldr	r1, .L1769
+	ldr	r1, .L1777
 	add	r0, r0, r1
 	mov	r1, #0xc
 	bl	GetMonData
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
 	cmp	r1, #0
-	beq	.L1760	@cond_branch
+	beq	.L1768	@cond_branch
 	add	r0, r5, r7
 	ldrb	r4, [r0, #0x6]
 	add	r0, r1, #0
@@ -15806,21 +17484,21 @@ DrawHeldItemIconsForTrade:
 	lsr	r1, r1, #0x18
 	add	r0, r4, #0
 	bl	CreateHeldItemSpriteForTrade
-.L1760:
+.L1768:
 	add	r0, r5, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r5, r0, #0x10
-.L1766:
+.L1774:
 	ldrb	r0, [r6, #0x1]
 	cmp	r5, r0
-	bcc	.L1761	@cond_branch
-.L1749:
+	bcc	.L1769	@cond_branch
+.L1757:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1770:
+.L1778:
 	.align	2, 0
-.L1769:
+.L1777:
 	.word	gEnemyParty
 .Lfe201:
 	.size	 DrawHeldItemIconsForTrade,.Lfe201-DrawHeldItemIconsForTrade
@@ -15840,7 +17518,7 @@ CreateHeldItemSpriteForTrade:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	mov	r9, r0
-	ldr	r0, .L1772
+	ldr	r0, .L1780
 	mov	r8, r0
 	lsl	r0, r6, #0x4
 	add	r0, r0, r6
@@ -15848,7 +17526,7 @@ CreateHeldItemSpriteForTrade:
 	add	r0, r0, r8
 	add	r0, r0, #0x43
 	ldrb	r3, [r0]
-	ldr	r0, .L1772+0x4
+	ldr	r0, .L1780+0x4
 	sub	r3, r3, #0x1
 	lsl	r3, r3, #0x18
 	lsr	r3, r3, #0x18
@@ -15869,7 +17547,7 @@ CreateHeldItemSpriteForTrade:
 	mov	r0, #0x1c
 	add	r8, r8, r0
 	add	r4, r4, r8
-	ldr	r0, .L1772+0x8
+	ldr	r0, .L1780+0x8
 	str	r0, [r4]
 	strh	r6, [r5, #0x3c]
 	add	r0, r5, #0
@@ -15884,9 +17562,9 @@ CreateHeldItemSpriteForTrade:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L1773:
+.L1781:
 	.align	2, 0
-.L1772:
+.L1780:
 	.word	gSprites
 	.word	sSpriteTemplate_HeldItem
 	.word	SpriteCB_HeldItem
@@ -15901,7 +17579,7 @@ SpriteCB_HeldItem:
 	ldrh	r1, [r4, #0x3c]
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
-	ldr	r2, .L1777
+	ldr	r2, .L1785
 	lsl	r0, r1, #0x4
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
@@ -15911,19 +17589,19 @@ SpriteCB_HeldItem:
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1d
 	cmp	r0, #0
-	bge	.L1775	@cond_branch
+	bge	.L1783	@cond_branch
 	add	r0, r4, #0
 	add	r0, r0, #0x3e
 	ldrb	r1, [r0]
 	mov	r2, #0x4
 	orr	r1, r1, r2
 	strb	r1, [r0]
-	b	.L1776
-.L1778:
+	b	.L1784
+.L1786:
 	.align	2, 0
-.L1777:
+.L1785:
 	.word	gSprites
-.L1775:
+.L1783:
 	add	r3, r4, #0
 	add	r3, r3, #0x3e
 	ldrb	r1, [r3]
@@ -15939,7 +17617,7 @@ SpriteCB_HeldItem:
 	ldrh	r2, [r2, #0x22]
 	add	r0, r0, r2
 	strh	r0, [r4, #0x22]
-.L1776:
+.L1784:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
@@ -15954,21 +17632,21 @@ CreatePartyMonPokeballSprite:
 	mov	r1, #0xb
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L1780	@cond_branch
-	ldr	r0, .L1781
+	beq	.L1788	@cond_branch
+	ldr	r0, .L1789
 	ldr	r2, [r4, #0x4]
 	ldrb	r1, [r2, #0x6]
 	ldrb	r2, [r2, #0x7]
 	mov	r3, #0x8
 	bl	CreateSprite
 	strb	r0, [r4, #0xb]
-.L1780:
+.L1788:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1782:
+.L1790:
 	.align	2, 0
-.L1781:
+.L1789:
 	.word	sSpriteTemplate_MenuPokeball
 .Lfe204:
 	.size	 CreatePartyMonPokeballSprite,.Lfe204-CreatePartyMonPokeballSprite
@@ -15980,15 +17658,15 @@ CreatePartyMonPokeballSpriteParameterized:
 	add	r4, r1, #0
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	beq	.L1784	@cond_branch
-	ldr	r0, .L1785
+	beq	.L1792	@cond_branch
+	ldr	r0, .L1793
 	ldr	r2, [r4, #0x4]
 	ldrb	r1, [r2, #0x6]
 	ldrb	r2, [r2, #0x7]
 	mov	r3, #0x8
 	bl	CreateSprite
 	strb	r0, [r4, #0xb]
-	ldr	r2, .L1785+0x4
+	ldr	r2, .L1793+0x4
 	ldrb	r0, [r4, #0xb]
 	lsl	r1, r0, #0x4
 	add	r1, r1, r0
@@ -15999,13 +17677,13 @@ CreatePartyMonPokeballSpriteParameterized:
 	neg	r0, r0
 	and	r0, r0, r2
 	strb	r0, [r1, #0x5]
-.L1784:
+.L1792:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L1786:
+.L1794:
 	.align	2, 0
-.L1785:
+.L1793:
 	.word	sSpriteTemplate_MenuPokeball
 	.word	gSprites
 .Lfe205:
@@ -16021,13 +17699,13 @@ CreatePokeballButtonSprite:
 	lsr	r3, r3, #0x18
 	lsl	r2, r2, #0x18
 	lsr	r2, r2, #0x18
-	ldr	r0, .L1788
+	ldr	r0, .L1796
 	add	r1, r3, #0
 	mov	r3, #0x8
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r2, .L1788+0x4
+	ldr	r2, .L1796+0x4
 	lsl	r1, r0, #0x4
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
@@ -16041,9 +17719,9 @@ CreatePokeballButtonSprite:
 	strb	r2, [r1, #0x5]
 	pop	{r1}
 	bx	r1
-.L1789:
+.L1797:
 	.align	2, 0
-.L1788:
+.L1796:
 	.word	sSpriteTemplate_MenuPokeball
 	.word	gSprites
 .Lfe206:
@@ -16059,7 +17737,7 @@ CreateSmallPokeballButtonSprite:
 	lsr	r3, r3, #0x18
 	lsl	r2, r2, #0x18
 	lsr	r2, r2, #0x18
-	ldr	r0, .L1791
+	ldr	r0, .L1799
 	add	r1, r3, #0
 	mov	r3, #0x8
 	bl	CreateSprite
@@ -16067,9 +17745,9 @@ CreateSmallPokeballButtonSprite:
 	lsr	r0, r0, #0x18
 	pop	{r1}
 	bx	r1
-.L1792:
+.L1800:
 	.align	2, 0
-.L1791:
+.L1799:
 	.word	sSpriteTemplate_MenuPokeballSmall
 .Lfe207:
 	.size	 CreateSmallPokeballButtonSprite,.Lfe207-CreateSmallPokeballButtonSprite
@@ -16086,14 +17764,14 @@ PartyMenuStartSpriteAnim:
 	lsl	r0, r2, #0x4
 	add	r0, r0, r2
 	lsl	r0, r0, #0x2
-	ldr	r2, .L1794
+	ldr	r2, .L1802
 	add	r0, r0, r2
 	bl	StartSpriteAnim
 	pop	{r0}
 	bx	r0
-.L1795:
+.L1803:
 	.align	2, 0
-.L1794:
+.L1802:
 	.word	gSprites
 .Lfe208:
 	.size	 PartyMenuStartSpriteAnim,.Lfe208-PartyMenuStartSpriteAnim
@@ -16111,11 +17789,11 @@ SpriteCB_BounceConfirmCancelButton:
 	lsl	r2, r2, #0x18
 	lsr	r6, r2, #0x18
 	cmp	r6, #0
-	bne	.L1797	@cond_branch
+	bne	.L1805	@cond_branch
 	lsl	r4, r0, #0x4
 	add	r4, r4, r0
 	lsl	r4, r4, #0x2
-	ldr	r0, .L1799
+	ldr	r0, .L1807
 	mov	r8, r0
 	add	r4, r4, r8
 	add	r0, r4, #0
@@ -16130,16 +17808,16 @@ SpriteCB_BounceConfirmCancelButton:
 	bl	StartSpriteAnim
 	strh	r6, [r4, #0x26]
 	strh	r6, [r5, #0x26]
-	b	.L1798
-.L1800:
+	b	.L1806
+.L1808:
 	.align	2, 0
-.L1799:
+.L1807:
 	.word	gSprites
-.L1797:
+.L1805:
 	lsl	r5, r0, #0x4
 	add	r5, r5, r0
 	lsl	r5, r5, #0x2
-	ldr	r0, .L1801
+	ldr	r0, .L1809
 	mov	r8, r0
 	add	r5, r5, r8
 	add	r0, r5, #0
@@ -16152,19 +17830,19 @@ SpriteCB_BounceConfirmCancelButton:
 	add	r0, r4, #0
 	mov	r1, #0x5
 	bl	StartSpriteAnim
-	ldr	r0, .L1801+0x4
+	ldr	r0, .L1809+0x4
 	strh	r0, [r5, #0x26]
 	mov	r0, #0x4
 	strh	r0, [r4, #0x26]
-.L1798:
+.L1806:
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1802:
+.L1810:
 	.align	2, 0
-.L1801:
+.L1809:
 	.word	gSprites
 	.word	0xfffc
 .Lfe209:
@@ -16174,17 +17852,17 @@ SpriteCB_BounceConfirmCancelButton:
 	.thumb_func
 LoadPartyMenuPokeballGfx:
 	push	{lr}
-	ldr	r0, .L1804
+	ldr	r0, .L1812
 	bl	LoadCompressedSpriteSheet
-	ldr	r0, .L1804+0x4
+	ldr	r0, .L1812+0x4
 	bl	LoadCompressedSpriteSheet
-	ldr	r0, .L1804+0x8
+	ldr	r0, .L1812+0x8
 	bl	LoadCompressedSpritePalette
 	pop	{r0}
 	bx	r0
-.L1805:
+.L1813:
 	.align	2, 0
-.L1804:
+.L1812:
 	.word	sSpriteSheet_MenuPokeball
 	.word	sSpriteSheet_MenuPokeballSmall
 	.word	sSpritePalette_MenuPokeball
@@ -16200,8 +17878,8 @@ CreatePartyMonStatusSprite:
 	mov	r1, #0xb
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L1807	@cond_branch
-	ldr	r0, .L1808
+	beq	.L1815	@cond_branch
+	ldr	r0, .L1816
 	ldr	r2, [r4, #0x4]
 	ldrb	r1, [r2, #0x4]
 	ldrb	r2, [r2, #0x5]
@@ -16211,13 +17889,13 @@ CreatePartyMonStatusSprite:
 	add	r0, r5, #0
 	add	r1, r4, #0
 	bl	SetPartyMonAilmentGfx
-.L1807:
+.L1815:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1809:
+.L1817:
 	.align	2, 0
-.L1808:
+.L1816:
 	.word	sSpriteTemplate_StatusIcons
 .Lfe211:
 	.size	 CreatePartyMonStatusSprite,.Lfe211-CreatePartyMonStatusSprite
@@ -16231,8 +17909,8 @@ CreatePartyMonStatusSpriteParameterized:
 	lsl	r1, r1, #0x18
 	lsr	r5, r1, #0x18
 	cmp	r0, #0
-	beq	.L1811	@cond_branch
-	ldr	r0, .L1812
+	beq	.L1819	@cond_branch
+	ldr	r0, .L1820
 	ldr	r2, [r4, #0x4]
 	ldrb	r1, [r2, #0x4]
 	ldrb	r2, [r2, #0x5]
@@ -16242,7 +17920,7 @@ CreatePartyMonStatusSpriteParameterized:
 	add	r0, r5, #0
 	add	r1, r4, #0
 	bl	UpdatePartyMonAilmentGfx
-	ldr	r2, .L1812+0x4
+	ldr	r2, .L1820+0x4
 	ldrb	r0, [r4, #0xc]
 	lsl	r1, r0, #0x4
 	add	r1, r1, r0
@@ -16253,13 +17931,13 @@ CreatePartyMonStatusSpriteParameterized:
 	neg	r0, r0
 	and	r0, r0, r2
 	strb	r0, [r1, #0x5]
-.L1811:
+.L1819:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1813:
+.L1821:
 	.align	2, 0
-.L1812:
+.L1820:
 	.word	sSpriteTemplate_StatusIcons
 	.word	gSprites
 .Lfe212:
@@ -16289,11 +17967,11 @@ UpdatePartyMonAilmentGfx:
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	cmp	r2, #0
-	beq	.L1818	@cond_branch
+	beq	.L1826	@cond_branch
 	cmp	r2, #0x6
-	bne	.L1819	@cond_branch
-.L1818:
-	ldr	r2, .L1822
+	bne	.L1827	@cond_branch
+.L1826:
+	ldr	r2, .L1830
 	ldrb	r1, [r5, #0xc]
 	lsl	r0, r1, #0x4
 	add	r0, r0, r1
@@ -16303,17 +17981,17 @@ UpdatePartyMonAilmentGfx:
 	ldrb	r1, [r0]
 	mov	r2, #0x4
 	orr	r1, r1, r2
-	b	.L1821
-.L1823:
+	b	.L1829
+.L1831:
 	.align	2, 0
-.L1822:
+.L1830:
 	.word	gSprites
-.L1819:
+.L1827:
 	ldrb	r1, [r5, #0xc]
 	lsl	r0, r1, #0x4
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r4, .L1824
+	ldr	r4, .L1832
 	add	r0, r0, r4
 	sub	r1, r2, #0x1
 	lsl	r1, r1, #0x18
@@ -16329,14 +18007,14 @@ UpdatePartyMonAilmentGfx:
 	mov	r1, #0x5
 	neg	r1, r1
 	and	r1, r1, r2
-.L1821:
+.L1829:
 	strb	r1, [r0]
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L1825:
+.L1833:
 	.align	2, 0
-.L1824:
+.L1832:
 	.word	gSprites
 .Lfe214:
 	.size	 UpdatePartyMonAilmentGfx,.Lfe214-UpdatePartyMonAilmentGfx
@@ -16345,15 +18023,15 @@ UpdatePartyMonAilmentGfx:
 	.thumb_func
 LoadPartyMenuAilmentGfx:
 	push	{lr}
-	ldr	r0, .L1827
+	ldr	r0, .L1835
 	bl	LoadCompressedSpriteSheet
-	ldr	r0, .L1827+0x4
+	ldr	r0, .L1835+0x4
 	bl	LoadCompressedSpritePalette
 	pop	{r0}
 	bx	r0
-.L1828:
+.L1836:
 	.align	2, 0
-.L1827:
+.L1835:
 	.word	sSpriteSheet_StatusIcons
 	.word	sSpritePalette_StatusIcons
 .Lfe215:
@@ -16367,95 +18045,95 @@ CB2_ShowPartyMenuForItemUse:
 	mov	r7, r8
 	push	{r7}
 	add	sp, sp, #-0xc
-	ldr	r0, .L1843
+	ldr	r0, .L1851
 	mov	r8, r0
-	ldr	r0, .L1843+0x4
-	ldr	r1, .L1843+0x8
+	ldr	r0, .L1851+0x4
+	ldr	r1, .L1851+0x8
 	add	r0, r0, r1
 	ldrb	r1, [r0]
 	mov	r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L1830	@cond_branch
+	beq	.L1838	@cond_branch
 	mov	r7, #0x1
 	bl	GetPartyLayoutFromBattleType
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-	b	.L1831
-.L1844:
+	b	.L1839
+.L1852:
 	.align	2, 0
-.L1843:
+.L1851:
 	.word	CB2_ReturnToBagMenu
 	.word	gMain
 	.word	0x439
-.L1842:
-	ldr	r0, .L1845
+.L1850:
+	ldr	r0, .L1853
 	strb	r5, [r0, #0x9]
-	b	.L1834
-.L1846:
+	b	.L1842
+.L1854:
 	.align	2, 0
-.L1845:
+.L1853:
 	.word	gPartyMenu
-.L1830:
+.L1838:
 	mov	r7, #0x0
 	mov	r6, #0x0
-.L1831:
-	ldr	r4, .L1847
+.L1839:
+	ldr	r4, .L1855
 	ldrh	r0, [r4]
 	bl	GetItemEffectType
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0xa
-	bne	.L1832	@cond_branch
-	ldr	r1, .L1847+0x4
+	bne	.L1840	@cond_branch
+	ldr	r1, .L1855+0x4
 	mov	r0, #0x0
 	strb	r0, [r1, #0x9]
 	mov	r5, #0x0
-.L1836:
+.L1844:
 	mov	r0, #0x64
 	mov	r1, r5
 	mul	r1, r1, r0
-	ldr	r0, .L1847+0x8
+	ldr	r0, .L1855+0x8
 	add	r4, r1, r0
 	add	r0, r4, #0
 	mov	r1, #0xb
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L1835	@cond_branch
+	beq	.L1843	@cond_branch
 	add	r0, r4, #0
 	mov	r1, #0x39
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L1842	@cond_branch
-.L1835:
+	beq	.L1850	@cond_branch
+.L1843:
 	add	r0, r5, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	cmp	r5, #0x5
-	bls	.L1836	@cond_branch
-.L1834:
-	ldr	r0, .L1847+0xc
+	bls	.L1844	@cond_branch
+.L1842:
+	ldr	r0, .L1855+0xc
 	mov	r1, #0x7f
-	b	.L1839
-.L1848:
+	b	.L1847
+.L1856:
 	.align	2, 0
-.L1847:
+.L1855:
 	.word	gSpecialVar_ItemId
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	Task_SetSacredAshCB
-.L1832:
+.L1840:
 	ldrh	r0, [r4]
 	bl	GetPocketByItemId
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	mov	r1, #0x5
 	cmp	r0, #0x3
-	bne	.L1840	@cond_branch
+	bne	.L1848	@cond_branch
 	mov	r1, #0x4
-.L1840:
-	ldr	r0, .L1849
-.L1839:
+.L1848:
+	ldr	r0, .L1857
+.L1847:
 	str	r1, [sp]
 	str	r0, [sp, #0x4]
 	mov	r0, r8
@@ -16471,9 +18149,9 @@ CB2_ShowPartyMenuForItemUse:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1850:
+.L1858:
 	.align	2, 0
-.L1849:
+.L1857:
 	.word	Task_HandleChooseMonInput
 .Lfe216:
 	.size	 CB2_ShowPartyMenuForItemUse,.Lfe216-CB2_ShowPartyMenuForItemUse
@@ -16485,23 +18163,23 @@ CB2_ReturnToBagMenu:
 	bl	InBattlePyramid
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L1852	@cond_branch
+	bne	.L1860	@cond_branch
 	mov	r0, #0xc
 	mov	r1, #0x5
 	mov	r2, #0x0
 	bl	GoToBagMenu
-	b	.L1853
-.L1852:
-	ldr	r0, .L1854
+	b	.L1861
+.L1860:
+	ldr	r0, .L1862
 	ldr	r1, [r0]
 	mov	r0, #0x4
 	bl	GoToBattlePyramidBagMenu
-.L1853:
+.L1861:
 	pop	{r0}
 	bx	r0
-.L1855:
+.L1863:
 	.align	2, 0
-.L1854:
+.L1862:
 	.word	gPyramidBagCursorData
 .Lfe217:
 	.size	 CB2_ReturnToBagMenu,.Lfe217-CB2_ReturnToBagMenu
@@ -16512,34 +18190,34 @@ Task_SetSacredAshCB:
 	push	{lr}
 	lsl	r0, r0, #0x18
 	lsr	r3, r0, #0x18
-	ldr	r0, .L1859
+	ldr	r0, .L1867
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1857	@cond_branch
-	ldr	r0, .L1859+0x4
+	bne	.L1865	@cond_branch
+	ldr	r0, .L1867+0x4
 	ldrb	r1, [r0, #0x8]
 	mov	r0, #0xf
 	and	r0, r0, r1
 	cmp	r0, #0x1
-	bne	.L1858	@cond_branch
-	ldr	r0, .L1859+0x8
+	bne	.L1866	@cond_branch
+	ldr	r0, .L1867+0x8
 	ldr	r1, [r0]
-	ldr	r0, .L1859+0xc
+	ldr	r0, .L1867+0xc
 	str	r0, [r1, #0x4]
-.L1858:
-	ldr	r0, .L1859+0x10
-	ldr	r1, .L1859+0x14
+.L1866:
+	ldr	r0, .L1867+0x10
+	ldr	r1, .L1867+0x14
 	ldr	r2, [r0]
 	add	r0, r3, #0
 	bl	_call_via_r2
-.L1857:
+.L1865:
 	pop	{r0}
 	bx	r0
-.L1860:
+.L1868:
 	.align	2, 0
-.L1859:
+.L1867:
 	.word	gPaletteFade
 	.word	gPartyMenu
 	.word	sPartyMenuInternal
@@ -16556,38 +18234,38 @@ IsHPRecoveryItem:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0xcd
-	bne	.L1862	@cond_branch
-	ldr	r0, .L1867
+	bne	.L1870	@cond_branch
+	ldr	r0, .L1875
 	ldr	r0, [r0]
-	ldr	r1, .L1867+0x4
+	ldr	r1, .L1875+0x4
 	add	r0, r0, r1
-	b	.L1863
-.L1868:
+	b	.L1871
+.L1876:
 	.align	2, 0
-.L1867:
+.L1875:
 	.word	gSaveBlock1Ptr
 	.word	0x3214
-.L1862:
-	ldr	r1, .L1869
+.L1870:
+	ldr	r1, .L1877
 	sub	r0, r0, #0x1c
 	lsl	r0, r0, #0x2
 	add	r0, r0, r1
 	ldr	r0, [r0]
-.L1863:
+.L1871:
 	ldrb	r1, [r0, #0x4]
 	mov	r0, #0x4
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1864	@cond_branch
+	bne	.L1872	@cond_branch
 	mov	r0, #0x0
-	b	.L1866
-.L1870:
+	b	.L1874
+.L1878:
 	.align	2, 0
-.L1869:
+.L1877:
 	.word	gItemEffectTable
-.L1864:
+.L1872:
 	mov	r0, #0x1
-.L1866:
+.L1874:
 	pop	{r1}
 	bx	r1
 .Lfe219:
@@ -16604,211 +18282,211 @@ GetMedicineItemEffectMessage:
 	lsr	r0, r0, #0x18
 	sub	r0, r0, #0x3
 	cmp	r0, #0x12
-	bls	.LCB17133
-	b	.L1890	@long jump
-.LCB17133:
+	bls	.LCB17171
+	b	.L1898	@long jump
+.LCB17171:
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1893
+	ldr	r1, .L1901
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L1894:
-	.align	2, 0
-.L1893:
-	.word	.L1891
-	.align	2, 0
-	.align	2, 0
-.L1891:
-	.word	.L1873
-	.word	.L1874
-	.word	.L1875
-	.word	.L1876
-	.word	.L1877
-	.word	.L1878
-	.word	.L1879
-	.word	.L1890
-	.word	.L1880
-	.word	.L1882
-	.word	.L1881
-	.word	.L1885
-	.word	.L1886
-	.word	.L1884
-	.word	.L1883
-	.word	.L1890
-	.word	.L1888
-	.word	.L1888
-	.word	.L1889
-.L1873:
-	ldr	r0, .L1895
-	ldr	r1, .L1895+0x4
-	bl	StringExpandPlaceholders
-	b	.L1872
-.L1896:
-	.align	2, 0
-.L1895:
-	.word	gStringVar4
-	.word	gText_PkmnCuredOfPoison
-.L1874:
-	ldr	r0, .L1897
-	ldr	r1, .L1897+0x4
-	bl	StringExpandPlaceholders
-	b	.L1872
-.L1898:
-	.align	2, 0
-.L1897:
-	.word	gStringVar4
-	.word	gText_PkmnWokeUp2
-.L1875:
-	ldr	r0, .L1899
-	ldr	r1, .L1899+0x4
-	bl	StringExpandPlaceholders
-	b	.L1872
-.L1900:
-	.align	2, 0
-.L1899:
-	.word	gStringVar4
-	.word	gText_PkmnBurnHealed
-.L1876:
-	ldr	r0, .L1901
-	ldr	r1, .L1901+0x4
-	bl	StringExpandPlaceholders
-	b	.L1872
 .L1902:
 	.align	2, 0
 .L1901:
-	.word	gStringVar4
-	.word	gText_PkmnThawedOut
-.L1877:
+	.word	.L1899
+	.align	2, 0
+	.align	2, 0
+.L1899:
+	.word	.L1881
+	.word	.L1882
+	.word	.L1883
+	.word	.L1884
+	.word	.L1885
+	.word	.L1886
+	.word	.L1887
+	.word	.L1898
+	.word	.L1888
+	.word	.L1890
+	.word	.L1889
+	.word	.L1893
+	.word	.L1894
+	.word	.L1892
+	.word	.L1891
+	.word	.L1898
+	.word	.L1896
+	.word	.L1896
+	.word	.L1897
+.L1881:
 	ldr	r0, .L1903
 	ldr	r1, .L1903+0x4
 	bl	StringExpandPlaceholders
-	b	.L1872
+	b	.L1880
 .L1904:
 	.align	2, 0
 .L1903:
 	.word	gStringVar4
-	.word	gText_PkmnCuredOfParalysis
-.L1878:
+	.word	gText_PkmnCuredOfPoison
+.L1882:
 	ldr	r0, .L1905
 	ldr	r1, .L1905+0x4
 	bl	StringExpandPlaceholders
-	b	.L1872
+	b	.L1880
 .L1906:
 	.align	2, 0
 .L1905:
 	.word	gStringVar4
-	.word	gText_PkmnSnappedOutOfConfusion
-.L1879:
+	.word	gText_PkmnWokeUp2
+.L1883:
 	ldr	r0, .L1907
 	ldr	r1, .L1907+0x4
 	bl	StringExpandPlaceholders
-	b	.L1872
+	b	.L1880
 .L1908:
 	.align	2, 0
 .L1907:
 	.word	gStringVar4
-	.word	gText_PkmnGotOverInfatuation
-.L1880:
+	.word	gText_PkmnBurnHealed
+.L1884:
 	ldr	r0, .L1909
 	ldr	r1, .L1909+0x4
 	bl	StringExpandPlaceholders
-	b	.L1872
+	b	.L1880
 .L1910:
 	.align	2, 0
 .L1909:
 	.word	gStringVar4
-	.word	gText_PkmnBecameHealthy
-.L1881:
+	.word	gText_PkmnThawedOut
+.L1885:
 	ldr	r0, .L1911
 	ldr	r1, .L1911+0x4
-	b	.L1892
+	bl	StringExpandPlaceholders
+	b	.L1880
 .L1912:
 	.align	2, 0
 .L1911:
-	.word	gStringVar2
-	.word	gText_HP3
-.L1882:
+	.word	gStringVar4
+	.word	gText_PkmnCuredOfParalysis
+.L1886:
 	ldr	r0, .L1913
 	ldr	r1, .L1913+0x4
-	b	.L1892
+	bl	StringExpandPlaceholders
+	b	.L1880
 .L1914:
 	.align	2, 0
 .L1913:
-	.word	gStringVar2
-	.word	gText_Attack3
-.L1883:
+	.word	gStringVar4
+	.word	gText_PkmnSnappedOutOfConfusion
+.L1887:
 	ldr	r0, .L1915
 	ldr	r1, .L1915+0x4
-	b	.L1892
+	bl	StringExpandPlaceholders
+	b	.L1880
 .L1916:
 	.align	2, 0
 .L1915:
-	.word	gStringVar2
-	.word	gText_Defense3
-.L1884:
+	.word	gStringVar4
+	.word	gText_PkmnGotOverInfatuation
+.L1888:
 	ldr	r0, .L1917
 	ldr	r1, .L1917+0x4
-	b	.L1892
+	bl	StringExpandPlaceholders
+	b	.L1880
 .L1918:
 	.align	2, 0
 .L1917:
-	.word	gStringVar2
-	.word	gText_Speed2
-.L1885:
+	.word	gStringVar4
+	.word	gText_PkmnBecameHealthy
+.L1889:
 	ldr	r0, .L1919
 	ldr	r1, .L1919+0x4
-	b	.L1892
+	b	.L1900
 .L1920:
 	.align	2, 0
 .L1919:
 	.word	gStringVar2
-	.word	gText_SpAtk3
-.L1886:
+	.word	gText_HP3
+.L1890:
 	ldr	r0, .L1921
 	ldr	r1, .L1921+0x4
-.L1892:
-	bl	StringCopy
-	ldr	r0, .L1921+0x8
-	ldr	r1, .L1921+0xc
-	bl	StringExpandPlaceholders
-	b	.L1872
+	b	.L1900
 .L1922:
 	.align	2, 0
 .L1921:
 	.word	gStringVar2
-	.word	gText_SpDef3
-	.word	gStringVar4
-	.word	gText_PkmnBaseVar2StatIncreased
-.L1888:
+	.word	gText_Attack3
+.L1891:
 	ldr	r0, .L1923
 	ldr	r1, .L1923+0x4
-	bl	StringExpandPlaceholders
-	b	.L1872
+	b	.L1900
 .L1924:
 	.align	2, 0
 .L1923:
-	.word	gStringVar4
-	.word	gText_MovesPPIncreased
-.L1889:
+	.word	gStringVar2
+	.word	gText_Defense3
+.L1892:
 	ldr	r0, .L1925
 	ldr	r1, .L1925+0x4
-	bl	StringExpandPlaceholders
-	b	.L1872
+	b	.L1900
 .L1926:
 	.align	2, 0
 .L1925:
-	.word	gStringVar4
-	.word	gText_PPWasRestored
-.L1890:
+	.word	gStringVar2
+	.word	gText_Speed2
+.L1893:
 	ldr	r0, .L1927
 	ldr	r1, .L1927+0x4
-	bl	StringExpandPlaceholders
-.L1872:
-	pop	{r0}
-	bx	r0
+	b	.L1900
 .L1928:
 	.align	2, 0
 .L1927:
+	.word	gStringVar2
+	.word	gText_SpAtk3
+.L1894:
+	ldr	r0, .L1929
+	ldr	r1, .L1929+0x4
+.L1900:
+	bl	StringCopy
+	ldr	r0, .L1929+0x8
+	ldr	r1, .L1929+0xc
+	bl	StringExpandPlaceholders
+	b	.L1880
+.L1930:
+	.align	2, 0
+.L1929:
+	.word	gStringVar2
+	.word	gText_SpDef3
+	.word	gStringVar4
+	.word	gText_PkmnBaseVar2StatIncreased
+.L1896:
+	ldr	r0, .L1931
+	ldr	r1, .L1931+0x4
+	bl	StringExpandPlaceholders
+	b	.L1880
+.L1932:
+	.align	2, 0
+.L1931:
+	.word	gStringVar4
+	.word	gText_MovesPPIncreased
+.L1897:
+	ldr	r0, .L1933
+	ldr	r1, .L1933+0x4
+	bl	StringExpandPlaceholders
+	b	.L1880
+.L1934:
+	.align	2, 0
+.L1933:
+	.word	gStringVar4
+	.word	gText_PPWasRestored
+.L1898:
+	ldr	r0, .L1935
+	ldr	r1, .L1935+0x4
+	bl	StringExpandPlaceholders
+.L1880:
+	pop	{r0}
+	bx	r0
+.L1936:
+	.align	2, 0
+.L1935:
 	.word	gStringVar4
 	.word	gText_WontHaveEffect
 .Lfe220:
@@ -16825,19 +18503,19 @@ NotUsingHPEVItemOnShedinja:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0xd
-	bne	.L1930	@cond_branch
+	bne	.L1938	@cond_branch
 	add	r0, r4, #0
 	mov	r1, #0xb
 	bl	GetMonData
 	mov	r1, #0x92
 	lsl	r1, r1, #0x1
 	cmp	r0, r1
-	bne	.L1930	@cond_branch
+	bne	.L1938	@cond_branch
 	mov	r0, #0x0
-	b	.L1931
-.L1930:
+	b	.L1939
+.L1938:
 	mov	r0, #0x1
-.L1931:
+.L1939:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
@@ -16851,17 +18529,17 @@ IsItemFlute:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x36
-	beq	.L1934	@cond_branch
+	beq	.L1942	@cond_branch
 	cmp	r0, #0x38
-	beq	.L1934	@cond_branch
+	beq	.L1942	@cond_branch
 	cmp	r0, #0x37
-	bne	.L1933	@cond_branch
-.L1934:
+	bne	.L1941	@cond_branch
+.L1942:
 	mov	r0, #0x1
-	b	.L1935
-.L1933:
+	b	.L1943
+.L1941:
 	mov	r0, #0x0
-.L1935:
+.L1943:
 	pop	{r1}
 	bx	r1
 .Lfe222:
@@ -16877,32 +18555,32 @@ ExecuteTableBasedItemEffect_:
 	lsr	r5, r1, #0x10
 	lsl	r2, r2, #0x18
 	lsr	r6, r2, #0x18
-	ldr	r0, .L1942
-	ldr	r1, .L1942+0x4
+	ldr	r0, .L1950
+	ldr	r1, .L1950+0x4
 	add	r0, r0, r1
 	ldrb	r1, [r0]
 	mov	r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L1937	@cond_branch
+	bne	.L1945	@cond_branch
 	mov	r0, #0x64
 	mul	r0, r0, r3
-	ldr	r1, .L1942+0x8
+	ldr	r1, .L1950+0x8
 	add	r0, r0, r1
 	add	r1, r5, #0
 	add	r2, r3, #0
-	b	.L1941
-.L1943:
+	b	.L1949
+.L1951:
 	.align	2, 0
-.L1942:
+.L1950:
 	.word	gMain
 	.word	0x439
 	.word	gPlayerParty
-.L1937:
+.L1945:
 	mov	r0, #0x64
 	mov	r4, r3
 	mul	r4, r4, r0
-	ldr	r0, .L1944
+	ldr	r0, .L1952
 	add	r4, r4, r0
 	add	r0, r3, #0
 	bl	GetPartyIdFromBattleSlot
@@ -16911,7 +18589,7 @@ ExecuteTableBasedItemEffect_:
 	lsr	r2, r2, #0x18
 	add	r0, r4, #0
 	add	r1, r5, #0
-.L1941:
+.L1949:
 	add	r3, r6, #0
 	bl	ExecuteTableBasedItemEffect
 	lsl	r0, r0, #0x18
@@ -16919,9 +18597,9 @@ ExecuteTableBasedItemEffect_:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.L1945:
+.L1953:
 	.align	2, 0
-.L1944:
+.L1952:
 	.word	gPlayerParty
 .Lfe223:
 	.size	 ExecuteTableBasedItemEffect_,.Lfe223-ExecuteTableBasedItemEffect_
@@ -16942,28 +18620,28 @@ ItemUseCB_Medicine:
 	mov	r9, r0
 	mov	r0, #0x0
 	mov	sl, r0
-	ldr	r0, .L1962
+	ldr	r0, .L1970
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L1962+0x4
+	ldr	r0, .L1970+0x4
 	add	r5, r1, r0
-	ldr	r0, .L1962+0x8
+	ldr	r0, .L1970+0x8
 	ldrh	r6, [r0]
 	add	r0, r5, #0
 	add	r1, r6, #0
 	bl	NotUsingHPEVItemOnShedinja
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1960	@cond_branch
+	beq	.L1968	@cond_branch
 	add	r0, r6, #0
 	bl	IsHPRecoveryItem
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	mov	r8, r0
 	cmp	r0, #0x1
-	bne	.L1949	@cond_branch
+	bne	.L1957	@cond_branch
 	add	r0, r5, #0
 	mov	r1, #0x39
 	bl	GetMonData
@@ -16974,62 +18652,62 @@ ItemUseCB_Medicine:
 	mov	r1, #0x3a
 	bl	GetMonData
 	cmp	sl, r0
-	bne	.L1949	@cond_branch
+	bne	.L1957	@cond_branch
 	mov	r1, #0x0
 	mov	r8, r1
-.L1949:
-	ldr	r4, .L1962
+.L1957:
+	ldr	r4, .L1970
 	ldrb	r0, [r4, #0x9]
 	add	r1, r6, #0
 	mov	r2, #0x0
 	bl	ExecuteTableBasedItemEffect_
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L1951	@cond_branch
-.L1960:
-	ldr	r1, .L1962+0xc
+	beq	.L1959	@cond_branch
+.L1968:
+	ldr	r1, .L1970+0xc
 	mov	r0, #0x0
 	strb	r0, [r1]
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r0, .L1962+0x10
-	b	.L1961
-.L1963:
+	ldr	r0, .L1970+0x10
+	b	.L1969
+.L1971:
 	.align	2, 0
-.L1962:
+.L1970:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gSpecialVar_ItemId
 	.word	gPartyMenuUseExitCallback
 	.word	gText_WontHaveEffect
-.L1951:
-	ldr	r1, .L1964
+.L1959:
+	ldr	r1, .L1972
 	mov	r0, #0x1
 	strb	r0, [r1]
 	add	r0, r6, #0
 	bl	IsItemFlute
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L1953	@cond_branch
+	bne	.L1961	@cond_branch
 	mov	r0, #0x1
 	bl	PlaySE
 	ldrb	r0, [r4, #0xb]
 	cmp	r0, #0xe
-	beq	.L1955	@cond_branch
+	beq	.L1963	@cond_branch
 	add	r0, r6, #0
 	mov	r1, #0x1
 	bl	RemoveBagItem
-	b	.L1955
-.L1965:
+	b	.L1963
+.L1973:
 	.align	2, 0
-.L1964:
+.L1972:
 	.word	gPartyMenuUseExitCallback
-.L1953:
+.L1961:
 	mov	r0, #0x75
 	bl	PlaySE
-.L1955:
-	ldr	r4, .L1966
-	ldr	r7, .L1966+0x4
+.L1963:
+	ldr	r4, .L1974
+	ldr	r7, .L1974+0x4
 	mov	r0, #0x9
 	ldrsb	r0, [r7, r0]
 	lsl	r0, r0, #0x4
@@ -17037,7 +18715,7 @@ ItemUseCB_Medicine:
 	add	r1, r1, r0
 	add	r0, r5, #0
 	bl	SetPartyMonAilmentGfx
-	ldr	r2, .L1966+0x8
+	ldr	r2, .L1974+0x8
 	mov	r0, #0x9
 	ldrsb	r0, [r7, r0]
 	ldr	r1, [r4]
@@ -17052,22 +18730,22 @@ ItemUseCB_Medicine:
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1d
 	cmp	r0, #0
-	bge	.L1956	@cond_branch
+	bge	.L1964	@cond_branch
 	add	r0, r5, #0
 	add	r1, r3, #0
 	mov	r2, #0x1
 	bl	DisplayPartyPokemonLevelCheck
-.L1956:
+.L1964:
 	mov	r2, r8
 	cmp	r2, #0x1
-	bne	.L1957	@cond_branch
+	bne	.L1965	@cond_branch
 	mov	r0, sl
 	cmp	r0, #0
-	bne	.L1958	@cond_branch
+	bne	.L1966	@cond_branch
 	ldrb	r0, [r7, #0x9]
 	mov	r1, #0x1
 	bl	AnimatePartySlot
-.L1958:
+.L1966:
 	add	r0, r5, #0
 	mov	r1, #0x39
 	bl	GetMonData
@@ -17077,7 +18755,7 @@ ItemUseCB_Medicine:
 	lsl	r3, r3, #0x10
 	asr	r3, r3, #0x10
 	ldrb	r1, [r7, #0x9]
-	ldr	r0, .L1966+0xc
+	ldr	r0, .L1974+0xc
 	str	r0, [sp]
 	mov	r0, r9
 	mov	r2, #0x1
@@ -17086,27 +18764,27 @@ ItemUseCB_Medicine:
 	mov	r1, #0x0
 	mov	r2, sl
 	bl	ResetHPTaskData
-	b	.L1946
-.L1967:
+	b	.L1954
+.L1975:
 	.align	2, 0
-.L1966:
+.L1974:
 	.word	sPartyMenuBoxes
 	.word	gPartyMenu
 	.word	gSprites
 	.word	Task_DisplayHPRestoredMessage
-.L1957:
-	ldr	r1, .L1968
+.L1965:
+	ldr	r1, .L1976
 	add	r0, r5, #0
 	bl	GetMonNickname
 	add	r0, r6, #0
 	bl	GetMedicineItemEffectMessage
-	ldr	r0, .L1968+0x4
-.L1961:
+	ldr	r0, .L1976+0x4
+.L1969:
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
-	ldr	r1, .L1968+0x8
+	ldr	r1, .L1976+0x8
 	mov	r2, r9
 	lsl	r0, r2, #0x2
 	add	r0, r0, r9
@@ -17114,7 +18792,7 @@ ItemUseCB_Medicine:
 	add	r0, r0, r1
 	ldr	r1, [sp, #0x4]
 	str	r1, [r0]
-.L1946:
+.L1954:
 	add	sp, sp, #0x8
 	pop	{r3, r4, r5}
 	mov	r8, r3
@@ -17123,9 +18801,9 @@ ItemUseCB_Medicine:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L1969:
+.L1977:
 	.align	2, 0
-.L1968:
+.L1976:
 	.word	gStringVar1
 	.word	gStringVar4
 	.word	gTasks
@@ -17219,35 +18897,35 @@ Task_AbilityCapsule:
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
-	ldr	r1, .L1993
+	ldr	r1, .L2001
 	add	r5, r0, r1
 	mov	r1, #0x0
 	ldrsh	r0, [r5, r1]
 	cmp	r0, #0x5
-	bls	.LCB17819
-	b	.L1970	@long jump
-.LCB17819:
+	bls	.LCB17857
+	b	.L1978	@long jump
+.LCB17857:
 	lsl	r0, r0, #0x2
-	ldr	r1, .L1993+0x4
+	ldr	r1, .L2001+0x4
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L1994:
+.L2002:
 	.align	2, 0
-.L1993:
+.L2001:
 	.word	gTasks+0x8
-	.word	.L1989
+	.word	.L1997
 	.align	2, 0
 	.align	2, 0
-.L1989:
-	.word	.L1972
-	.word	.L1975
-	.word	.L1977
+.L1997:
+	.word	.L1980
+	.word	.L1983
 	.word	.L1985
-	.word	.L1986
-	.word	.L1988
-.L1972:
-	ldr	r2, .L1995
+	.word	.L1993
+	.word	.L1994
+	.word	.L1996
+.L1980:
+	ldr	r2, .L2003
 	mov	r0, #0x2
 	ldrsh	r1, [r5, r0]
 	lsl	r0, r1, #0x3
@@ -17257,56 +18935,56 @@ Task_AbilityCapsule:
 	ldrh	r1, [r0, #0x18]
 	ldrh	r0, [r0, #0x1a]
 	cmp	r1, r0
-	beq	.L1974	@cond_branch
+	beq	.L1982	@cond_branch
 	cmp	r0, #0
-	beq	.L1974	@cond_branch
+	beq	.L1982	@cond_branch
 	mov	r1, #0x4
 	ldrsh	r0, [r5, r1]
 	cmp	r0, #0x1
-	bgt	.L1974	@cond_branch
+	bgt	.L1982	@cond_branch
 	mov	r1, #0x2
 	ldrsh	r0, [r5, r1]
 	cmp	r0, #0
-	bne	.L1973	@cond_branch
-.L1974:
-	ldr	r1, .L1995+0x4
+	bne	.L1981	@cond_branch
+.L1982:
+	ldr	r1, .L2003+0x4
 	mov	r0, #0x0
 	strb	r0, [r1]
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r0, .L1995+0x8
+	ldr	r0, .L2003+0x8
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
-	ldr	r1, .L1995+0xc
+	ldr	r1, .L2003+0xc
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L1995+0x10
-	b	.L1991
-.L1996:
+	ldr	r1, .L2003+0x10
+	b	.L1999
+.L2004:
 	.align	2, 0
-.L1995:
+.L2003:
 	.word	gBaseStats
 	.word	gPartyMenuUseExitCallback
 	.word	gText_WontHaveEffect
 	.word	gTasks
 	.word	Task_ClosePartyMenuAfterText
-.L1973:
-	ldr	r1, .L1997
+.L1981:
+	ldr	r1, .L2005
 	mov	r0, #0x1
 	strb	r0, [r1]
 	mov	r0, #0x6
 	ldrsh	r1, [r5, r0]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L1997+0x4
+	ldr	r1, .L2005+0x4
 	add	r0, r0, r1
-	ldr	r1, .L1997+0x8
+	ldr	r1, .L2005+0x8
 	bl	GetMonNickname
-	ldr	r4, .L1997+0xc
+	ldr	r4, .L2005+0xc
 	ldrh	r0, [r5, #0x2]
 	ldrb	r1, [r5, #0x4]
 	bl	GetAbilityBySpecies
@@ -17314,12 +18992,12 @@ Task_AbilityCapsule:
 	lsr	r0, r0, #0x10
 	mov	r1, #0xd
 	mul	r1, r1, r0
-	ldr	r0, .L1997+0x10
+	ldr	r0, .L2005+0x10
 	add	r1, r1, r0
 	add	r0, r4, #0
 	bl	StringCopy
-	ldr	r4, .L1997+0x14
-	ldr	r1, .L1997+0x18
+	ldr	r4, .L2005+0x14
+	ldr	r1, .L2005+0x18
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	mov	r0, #0x5
@@ -17329,10 +19007,10 @@ Task_AbilityCapsule:
 	bl	DisplayPartyMenuMessage
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
-	b	.L1992
-.L1998:
+	b	.L2000
+.L2006:
 	.align	2, 0
-.L1997:
+.L2005:
 	.word	gPartyMenuUseExitCallback
 	.word	gPlayerParty
 	.word	gStringVar1
@@ -17340,31 +19018,31 @@ Task_AbilityCapsule:
 	.word	gAbilityNames
 	.word	gStringVar4
 	.word	askText.675
-.L1975:
+.L1983:
 	bl	IsPartyMenuTextPrinterActive
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L1970	@cond_branch
+	bne	.L1978	@cond_branch
 	bl	PartyMenuDisplayYesNoMenu
-	b	.L1992
-.L1977:
+	b	.L2000
+.L1985:
 	bl	Menu_ProcessInputNoWrapClearOnChoose
 	lsl	r0, r0, #0x18
 	asr	r1, r0, #0x18
 	cmp	r1, #0
-	beq	.L1992	@cond_branch
+	beq	.L2000	@cond_branch
 	cmp	r1, #0
-	bgt	.L1984	@cond_branch
+	bgt	.L1992	@cond_branch
 	mov	r0, #0x1
 	neg	r0, r0
 	cmp	r1, r0
-	beq	.L1981	@cond_branch
-	b	.L1970
-.L1984:
+	beq	.L1989	@cond_branch
+	b	.L1978
+.L1992:
 	cmp	r1, #0x1
-	bne	.L1970	@cond_branch
-.L1981:
-	ldr	r1, .L1999
+	bne	.L1978	@cond_branch
+.L1989:
+	ldr	r1, .L2007
 	mov	r0, #0x0
 	strb	r0, [r1]
 	mov	r0, #0x5
@@ -17381,23 +19059,23 @@ Task_AbilityCapsule:
 	add	r0, r4, #0
 	mov	r1, #0x4
 	bl	GetWordTaskArg
-	ldr	r2, .L1999+0x4
+	ldr	r2, .L2007+0x4
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r2
 	str	r0, [r1]
-	b	.L1970
-.L2000:
+	b	.L1978
+.L2008:
 	.align	2, 0
-.L1999:
+.L2007:
 	.word	gPartyMenuUseExitCallback
 	.word	gTasks
-.L1985:
+.L1993:
 	mov	r0, #0x1
 	bl	PlaySE
-	ldr	r4, .L2001
-	ldr	r1, .L2001+0x4
+	ldr	r4, .L2009
+	ldr	r1, .L2009+0x4
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	add	r0, r4, #0
@@ -17405,51 +19083,51 @@ Task_AbilityCapsule:
 	bl	DisplayPartyMenuMessage
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
-	b	.L1992
-.L2002:
+	b	.L2000
+.L2010:
 	.align	2, 0
-.L2001:
+.L2009:
 	.word	gStringVar4
 	.word	doneText.676
-.L1986:
+.L1994:
 	bl	IsPartyMenuTextPrinterActive
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L1970	@cond_branch
-.L1992:
+	bne	.L1978	@cond_branch
+.L2000:
 	ldrh	r0, [r5]
 	add	r0, r0, #0x1
 	strh	r0, [r5]
-	b	.L1970
-.L1988:
+	b	.L1978
+.L1996:
 	mov	r0, #0x6
 	ldrsh	r1, [r5, r0]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L2003
+	ldr	r1, .L2011
 	add	r0, r0, r1
 	add	r2, r5, #0x4
 	mov	r1, #0x2e
 	bl	SetMonData
-	ldr	r0, .L2003+0x4
+	ldr	r0, .L2011+0x4
 	ldrh	r0, [r0]
 	mov	r1, #0x1
 	bl	RemoveBagItem
-	ldr	r1, .L2003+0x8
+	ldr	r1, .L2011+0x8
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2003+0xc
-.L1991:
+	ldr	r1, .L2011+0xc
+.L1999:
 	str	r1, [r0]
-.L1970:
+.L1978:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L2004:
+.L2012:
 	.align	2, 0
-.L2003:
+.L2011:
 	.word	gPlayerParty
 	.word	gSpecialVar_ItemId
 	.word	gTasks
@@ -17472,12 +19150,12 @@ ItemUseCB_AbilityCapsule:
 	lsl	r4, r5, #0x2
 	add	r4, r4, r5
 	lsl	r4, r4, #0x3
-	ldr	r0, .L2006
+	ldr	r0, .L2014
 	mov	r8, r0
 	add	r6, r4, r0
 	mov	r0, #0x0
 	strh	r0, [r6]
-	ldr	r0, .L2006+0x4
+	ldr	r0, .L2014+0x4
 	ldrb	r0, [r0, #0x9]
 	lsl	r0, r0, #24
 	asr	r0, r0, #24
@@ -17489,7 +19167,7 @@ ItemUseCB_AbilityCapsule:
 	mov	r1, sl
 	mul	r1, r1, r0
 	add	r0, r1, #0
-	ldr	r1, .L2006+0x8
+	ldr	r1, .L2014+0x8
 	mov	r9, r1
 	add	r0, r0, r9
 	mov	r1, #0xb
@@ -17516,7 +19194,7 @@ ItemUseCB_AbilityCapsule:
 	add	r0, r5, #0
 	mov	r1, #0x4
 	bl	SetWordTaskArg
-	ldr	r0, .L2006+0xc
+	ldr	r0, .L2014+0xc
 	str	r0, [r4]
 	pop	{r3, r4, r5}
 	mov	r8, r3
@@ -17525,9 +19203,9 @@ ItemUseCB_AbilityCapsule:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L2007:
+.L2015:
 	.align	2, 0
-.L2006:
+.L2014:
 	.word	gTasks+0x8
 	.word	gPartyMenu
 	.word	gPlayerParty
@@ -17542,17 +19220,17 @@ Task_DisplayHPRestoredMessage:
 	add	r5, r0, #0
 	lsl	r5, r5, #0x18
 	lsr	r5, r5, #0x18
-	ldr	r0, .L2009
+	ldr	r0, .L2017
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L2009+0x4
+	ldr	r1, .L2017+0x4
 	add	r0, r0, r1
-	ldr	r1, .L2009+0x8
+	ldr	r1, .L2017+0x8
 	bl	GetMonNickname
-	ldr	r4, .L2009+0xc
-	ldr	r1, .L2009+0x10
+	ldr	r4, .L2017+0xc
+	ldr	r1, .L2017+0x10
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	add	r0, r4, #0
@@ -17561,19 +19239,19 @@ Task_DisplayHPRestoredMessage:
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
 	bl	HandleBattleLowHpMusicChange
-	ldr	r1, .L2009+0x14
+	ldr	r1, .L2017+0x14
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2009+0x18
+	ldr	r1, .L2017+0x18
 	str	r1, [r0]
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L2010:
+.L2018:
 	.align	2, 0
-.L2009:
+.L2017:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gStringVar1
@@ -17594,24 +19272,24 @@ Task_ClosePartyMenuAfterText:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L2012	@cond_branch
-	ldr	r0, .L2014
+	beq	.L2020	@cond_branch
+	ldr	r0, .L2022
 	ldrb	r1, [r0]
 	cmp	r1, #0
-	bne	.L2013	@cond_branch
-	ldr	r0, .L2014+0x4
+	bne	.L2021	@cond_branch
+	ldr	r0, .L2022+0x4
 	ldr	r0, [r0]
 	str	r1, [r0, #0x4]
-.L2013:
+.L2021:
 	add	r0, r4, #0
 	bl	Task_ClosePartyMenu
-.L2012:
+.L2020:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2015:
+.L2023:
 	.align	2, 0
-.L2014:
+.L2022:
 	.word	gPartyMenuUseExitCallback
 	.word	sPartyMenuInternal
 .Lfe228:
@@ -17631,14 +19309,14 @@ ItemUseCB_ReduceEV:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	mov	sl, r0
-	ldr	r4, .L2025
+	ldr	r4, .L2033
 	mov	r1, #0x9
 	ldrsb	r1, [r4, r1]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L2025+0x4
+	ldr	r0, .L2033+0x4
 	add	r5, r1, r0
-	ldr	r0, .L2025+0x8
+	ldr	r0, .L2033+0x8
 	ldrh	r6, [r0]
 	add	r0, r6, #0
 	bl	GetItemEffectType
@@ -17676,31 +19354,31 @@ ItemUseCB_ReduceEV:
 	lsr	r0, r0, #0x10
 	mov	r8, r0
 	cmp	r4, #0
-	bne	.L2018	@cond_branch
+	bne	.L2026	@cond_branch
 	ldr	r0, [sp, #0x4]
 	cmp	r0, r9
-	bne	.L2017	@cond_branch
+	bne	.L2025	@cond_branch
 	ldr	r1, [sp, #0x8]
 	cmp	r1, r8
-	bne	.L2017	@cond_branch
-.L2018:
-	ldr	r1, .L2025+0xc
+	bne	.L2025	@cond_branch
+.L2026:
+	ldr	r1, .L2033+0xc
 	mov	r0, #0x0
 	strb	r0, [r1]
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r0, .L2025+0x10
-	b	.L2024
-.L2026:
+	ldr	r0, .L2033+0x10
+	b	.L2032
+.L2034:
 	.align	2, 0
-.L2025:
+.L2033:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gSpecialVar_ItemId
 	.word	gPartyMenuUseExitCallback
 	.word	gText_WontHaveEffect
-.L2017:
-	ldr	r1, .L2027
+.L2025:
+	ldr	r1, .L2035
 	mov	r0, #0x1
 	strb	r0, [r1]
 	mov	r0, #0x1
@@ -17708,52 +19386,52 @@ ItemUseCB_ReduceEV:
 	add	r0, r6, #0
 	mov	r1, #0x1
 	bl	RemoveBagItem
-	ldr	r1, .L2027+0x4
+	ldr	r1, .L2035+0x4
 	add	r0, r5, #0
 	bl	GetMonNickname
-	ldr	r1, .L2027+0x8
+	ldr	r1, .L2035+0x8
 	add	r0, r7, #0
 	bl	ItemEffectToStatString
 	ldr	r2, [sp, #0x4]
 	cmp	r2, r9
-	beq	.L2020	@cond_branch
+	beq	.L2028	@cond_branch
 	ldr	r0, [sp, #0x8]
 	cmp	r0, r8
-	beq	.L2021	@cond_branch
-	ldr	r0, .L2027+0xc
-	ldr	r1, .L2027+0x10
+	beq	.L2029	@cond_branch
+	ldr	r0, .L2035+0xc
+	ldr	r1, .L2035+0x10
 	bl	StringExpandPlaceholders
-	b	.L2023
-.L2028:
+	b	.L2031
+.L2036:
 	.align	2, 0
-.L2027:
+.L2035:
 	.word	gPartyMenuUseExitCallback
 	.word	gStringVar1
 	.word	gStringVar2
 	.word	gStringVar4
 	.word	gText_PkmnFriendlyBaseVar2Fell
-.L2021:
-	ldr	r0, .L2029
-	ldr	r1, .L2029+0x4
-	bl	StringExpandPlaceholders
-	b	.L2023
-.L2030:
-	.align	2, 0
 .L2029:
+	ldr	r0, .L2037
+	ldr	r1, .L2037+0x4
+	bl	StringExpandPlaceholders
+	b	.L2031
+.L2038:
+	.align	2, 0
+.L2037:
 	.word	gStringVar4
 	.word	gText_PkmnFriendlyBaseVar2CantFall
-.L2020:
-	ldr	r0, .L2031
-	ldr	r1, .L2031+0x4
+.L2028:
+	ldr	r0, .L2039
+	ldr	r1, .L2039+0x4
 	bl	StringExpandPlaceholders
-.L2023:
-	ldr	r0, .L2031
-.L2024:
+.L2031:
+	ldr	r0, .L2039
+.L2032:
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
-	ldr	r1, .L2031+0x8
+	ldr	r1, .L2039+0x8
 	mov	r2, sl
 	lsl	r0, r2, #0x2
 	add	r0, r0, sl
@@ -17769,9 +19447,9 @@ ItemUseCB_ReduceEV:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L2032:
+.L2040:
 	.align	2, 0
-.L2031:
+.L2039:
 	.word	gStringVar4
 	.word	gText_PkmnAdoresBaseVar2Fell
 	.word	gTasks
@@ -17788,63 +19466,63 @@ ItemEffectToMonEv:
 	add	r0, r1, #0
 	sub	r0, r0, #0xc
 	cmp	r0, #0x5
-	bhi	.L2034	@cond_branch
+	bhi	.L2042	@cond_branch
 	lsl	r0, r0, #0x2
-	ldr	r1, .L2046
+	ldr	r1, .L2054
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L2047:
+.L2055:
 	.align	2, 0
-.L2046:
-	.word	.L2042
+.L2054:
+	.word	.L2050
 	.align	2, 0
 	.align	2, 0
-.L2042:
-	.word	.L2037
-	.word	.L2035
-	.word	.L2040
-	.word	.L2041
-	.word	.L2039
-	.word	.L2038
-.L2035:
+.L2050:
+	.word	.L2045
+	.word	.L2043
+	.word	.L2048
+	.word	.L2049
+	.word	.L2047
+	.word	.L2046
+.L2043:
 	add	r0, r4, #0
 	mov	r1, #0xb
 	bl	GetMonData
 	mov	r1, #0x92
 	lsl	r1, r1, #0x1
 	cmp	r0, r1
-	beq	.L2034	@cond_branch
+	beq	.L2042	@cond_branch
 	add	r0, r4, #0
 	mov	r1, #0x1a
-	b	.L2045
-.L2037:
+	b	.L2053
+.L2045:
 	add	r0, r4, #0
 	mov	r1, #0x1b
-	b	.L2045
-.L2038:
+	b	.L2053
+.L2046:
 	add	r0, r4, #0
 	mov	r1, #0x1c
-	b	.L2045
-.L2039:
+	b	.L2053
+.L2047:
 	add	r0, r4, #0
 	mov	r1, #0x1d
-	b	.L2045
-.L2040:
+	b	.L2053
+.L2048:
 	add	r0, r4, #0
 	mov	r1, #0x1e
-	b	.L2045
-.L2041:
+	b	.L2053
+.L2049:
 	add	r0, r4, #0
 	mov	r1, #0x1f
-.L2045:
+.L2053:
 	bl	GetMonData
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
-	b	.L2044
-.L2034:
+	b	.L2052
+.L2042:
 	mov	r0, #0x0
-.L2044:
+.L2052:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
@@ -17860,73 +19538,73 @@ ItemEffectToStatString:
 	lsr	r0, r0, #0x18
 	sub	r0, r0, #0xc
 	cmp	r0, #0x5
-	bhi	.L2049	@cond_branch
+	bhi	.L2057	@cond_branch
 	lsl	r0, r0, #0x2
-	ldr	r1, .L2059
+	ldr	r1, .L2067
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L2060:
-	.align	2, 0
-.L2059:
-	.word	.L2056
-	.align	2, 0
-	.align	2, 0
-.L2056:
-	.word	.L2051
-	.word	.L2050
-	.word	.L2054
-	.word	.L2055
-	.word	.L2053
-	.word	.L2052
-.L2050:
-	ldr	r1, .L2061
-	b	.L2058
-.L2062:
-	.align	2, 0
-.L2061:
-	.word	gText_HP3
-.L2051:
-	ldr	r1, .L2063
-	b	.L2058
-.L2064:
-	.align	2, 0
-.L2063:
-	.word	gText_Attack3
-.L2052:
-	ldr	r1, .L2065
-	b	.L2058
-.L2066:
-	.align	2, 0
-.L2065:
-	.word	gText_Defense3
-.L2053:
-	ldr	r1, .L2067
-	b	.L2058
 .L2068:
 	.align	2, 0
 .L2067:
-	.word	gText_Speed2
-.L2054:
-	ldr	r1, .L2069
+	.word	.L2064
+	.align	2, 0
+	.align	2, 0
+.L2064:
+	.word	.L2059
+	.word	.L2058
+	.word	.L2062
+	.word	.L2063
+	.word	.L2061
+	.word	.L2060
 .L2058:
-	add	r0, r2, #0
-	bl	StringCopy
-	b	.L2049
+	ldr	r1, .L2069
+	b	.L2066
 .L2070:
 	.align	2, 0
 .L2069:
-	.word	gText_SpAtk3
-.L2055:
+	.word	gText_HP3
+.L2059:
 	ldr	r1, .L2071
-	add	r0, r2, #0
-	bl	StringCopy
-.L2049:
-	pop	{r0}
-	bx	r0
+	b	.L2066
 .L2072:
 	.align	2, 0
 .L2071:
+	.word	gText_Attack3
+.L2060:
+	ldr	r1, .L2073
+	b	.L2066
+.L2074:
+	.align	2, 0
+.L2073:
+	.word	gText_Defense3
+.L2061:
+	ldr	r1, .L2075
+	b	.L2066
+.L2076:
+	.align	2, 0
+.L2075:
+	.word	gText_Speed2
+.L2062:
+	ldr	r1, .L2077
+.L2066:
+	add	r0, r2, #0
+	bl	StringCopy
+	b	.L2057
+.L2078:
+	.align	2, 0
+.L2077:
+	.word	gText_SpAtk3
+.L2063:
+	ldr	r1, .L2079
+	add	r0, r2, #0
+	bl	StringCopy
+.L2057:
+	pop	{r0}
+	bx	r0
+.L2080:
+	.align	2, 0
+.L2079:
 	.word	gText_SpDef3
 .Lfe231:
 	.size	 ItemEffectToStatString,.Lfe231-ItemEffectToStatString
@@ -17955,9 +19633,9 @@ ShowMoveSelectWindow:
 	mov	r1, r4
 	mul	r1, r1, r0
 	mov	r8, r1
-	ldr	r0, .L2080
+	ldr	r0, .L2088
 	mov	r9, r0
-.L2077:
+.L2085:
 	add	r1, r5, #0
 	add	r1, r1, #0xd
 	mov	r0, r8
@@ -17969,7 +19647,7 @@ ShowMoveSelectWindow:
 	mov	r0, #0xd
 	mov	r2, r4
 	mul	r2, r2, r0
-	ldr	r0, .L2080+0x4
+	ldr	r0, .L2088+0x4
 	add	r2, r2, r0
 	lsl	r0, r5, #0x4
 	add	r0, r0, #0x1
@@ -17985,16 +19663,16 @@ ShowMoveSelectWindow:
 	mov	r3, #0x8
 	bl	AddTextPrinterParameterized
 	cmp	r4, #0
-	beq	.L2076	@cond_branch
+	beq	.L2084	@cond_branch
 	add	r0, r7, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-.L2076:
+.L2084:
 	add	r0, r5, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	cmp	r5, #0x3
-	bls	.L2077	@cond_branch
+	bls	.L2085	@cond_branch
 	add	r0, r6, #0
 	add	r1, r7, #0
 	mov	r2, #0x0
@@ -18009,9 +19687,9 @@ ShowMoveSelectWindow:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L2081:
+.L2089:
 	.align	2, 0
-.L2080:
+.L2088:
 	.word	gPlayerParty
 	.word	gMoveNames
 .Lfe232:
@@ -18030,29 +19708,29 @@ Task_HandleWhichMoveInput:
 	mov	r0, #0x2
 	neg	r0, r0
 	cmp	r1, r0
-	beq	.L2083	@cond_branch
+	beq	.L2091	@cond_branch
 	add	r0, r0, #0x1
 	cmp	r1, r0
-	bne	.L2084	@cond_branch
+	bne	.L2092	@cond_branch
 	mov	r0, #0x5
 	bl	PlaySE
 	add	r0, r4, #0
 	bl	ReturnToUseOnWhichMon
-	b	.L2083
-.L2084:
-	ldr	r0, .L2086
+	b	.L2091
+.L2092:
+	ldr	r0, .L2094
 	ldr	r0, [r0]
 	add	r0, r0, #0xd
 	bl	PartyMenuRemoveWindow
 	add	r0, r5, #0
 	bl	SetSelectedMoveForPPItem
-.L2083:
+.L2091:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L2087:
+.L2095:
 	.align	2, 0
-.L2086:
+.L2094:
 	.word	sPartyMenuInternal
 .Lfe233:
 	.size	 Task_HandleWhichMoveInput,.Lfe233-Task_HandleWhichMoveInput
@@ -18064,67 +19742,67 @@ ItemUseCB_PPRecovery:
 	push	{r4, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r0, .L2093
+	ldr	r0, .L2101
 	ldrh	r0, [r0]
 	cmp	r0, #0xcd
-	bne	.L2089	@cond_branch
-	ldr	r0, .L2093+0x4
+	bne	.L2097	@cond_branch
+	ldr	r0, .L2101+0x4
 	ldr	r0, [r0]
-	ldr	r1, .L2093+0x8
+	ldr	r1, .L2101+0x8
 	add	r0, r0, r1
-	b	.L2090
-.L2094:
+	b	.L2098
+.L2102:
 	.align	2, 0
-.L2093:
+.L2101:
 	.word	gSpecialVar_ItemId
 	.word	gSaveBlock1Ptr
 	.word	0x3214
-.L2089:
-	ldr	r1, .L2095
+.L2097:
+	ldr	r1, .L2103
 	sub	r0, r0, #0x1c
 	lsl	r0, r0, #0x2
 	add	r0, r0, r1
 	ldr	r0, [r0]
-.L2090:
+.L2098:
 	ldrb	r1, [r0, #0x4]
 	mov	r0, #0x10
 	and	r0, r0, r1
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
 	cmp	r1, #0
-	bne	.L2091	@cond_branch
-	ldr	r0, .L2095+0x4
+	bne	.L2099	@cond_branch
+	ldr	r0, .L2103+0x4
 	strh	r1, [r0, #0xe]
 	add	r0, r4, #0
 	bl	TryUsePPItem
-	b	.L2092
-.L2096:
+	b	.L2100
+.L2104:
 	.align	2, 0
-.L2095:
+.L2103:
 	.word	gItemEffectTable
 	.word	gPartyMenu
-.L2091:
+.L2099:
 	mov	r0, #0x5
 	bl	PlaySE
 	mov	r0, #0x16
 	bl	DisplayPartyMenuStdMessage
-	ldr	r0, .L2097
+	ldr	r0, .L2105
 	ldrb	r0, [r0, #0x9]
 	bl	ShowMoveSelectWindow
-	ldr	r1, .L2097+0x4
+	ldr	r1, .L2105+0x4
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2097+0x8
+	ldr	r1, .L2105+0x8
 	str	r1, [r0]
-.L2092:
+.L2100:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2098:
+.L2106:
 	.align	2, 0
-.L2097:
+.L2105:
 	.word	gPartyMenu
 	.word	gTasks
 	.word	Task_HandleWhichMoveInput
@@ -18138,12 +19816,12 @@ SetSelectedMoveForPPItem:
 	add	r4, r0, #0
 	lsl	r4, r4, #0x18
 	lsr	r4, r4, #0x18
-	ldr	r0, .L2100
+	ldr	r0, .L2108
 	ldr	r0, [r0]
 	add	r0, r0, #0xc
 	bl	PartyMenuRemoveWindow
 	bl	Menu_GetCursorPos
-	ldr	r1, .L2100+0x4
+	ldr	r1, .L2108+0x4
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r1, #0xe]
@@ -18152,9 +19830,9 @@ SetSelectedMoveForPPItem:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2101:
+.L2109:
 	.align	2, 0
-.L2100:
+.L2108:
 	.word	sPartyMenuInternal
 	.word	gPartyMenu
 .Lfe235:
@@ -18166,14 +19844,14 @@ ReturnToUseOnWhichMon:
 	push	{lr}
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r2, .L2103
+	ldr	r2, .L2111
 	lsl	r1, r0, #0x2
 	add	r1, r1, r0
 	lsl	r1, r1, #0x3
 	add	r1, r1, r2
-	ldr	r0, .L2103+0x4
+	ldr	r0, .L2111+0x4
 	str	r0, [r1]
-	ldr	r0, .L2103+0x8
+	ldr	r0, .L2111+0x8
 	ldr	r0, [r0]
 	mov	r1, #0x0
 	str	r1, [r0, #0x4]
@@ -18183,9 +19861,9 @@ ReturnToUseOnWhichMon:
 	bl	DisplayPartyMenuStdMessage
 	pop	{r0}
 	bx	r0
-.L2104:
+.L2112:
 	.align	2, 0
-.L2103:
+.L2111:
 	.word	gTasks
 	.word	Task_HandleChooseMonInput
 	.word	sPartyMenuInternal
@@ -18201,8 +19879,8 @@ TryUsePPItem:
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
 	mov	r4, #0x0
-	ldr	r7, .L2109
-	ldr	r0, .L2109+0x4
+	ldr	r7, .L2117
+	ldr	r0, .L2117+0x4
 	ldrh	r5, [r0]
 	mov	r0, #0xe
 	neg	r0, r0
@@ -18214,22 +19892,22 @@ TryUsePPItem:
 	bl	ExecuteTableBasedItemEffect_
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L2106	@cond_branch
-	ldr	r0, .L2109+0x8
+	beq	.L2114	@cond_branch
+	ldr	r0, .L2117+0x8
 	strb	r4, [r0]
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r0, .L2109+0xc
-	b	.L2108
-.L2110:
+	ldr	r0, .L2117+0xc
+	b	.L2116
+.L2118:
 	.align	2, 0
-.L2109:
+.L2117:
 	.word	gPartyMenu+0xe
 	.word	gSpecialVar_ItemId
 	.word	gPartyMenuUseExitCallback
 	.word	gText_WontHaveEffect
-.L2106:
-	ldr	r1, .L2111
+.L2114:
+	ldr	r1, .L2119
 	mov	r0, #0x1
 	strb	r0, [r1]
 	mov	r0, r8
@@ -18238,7 +19916,7 @@ TryUsePPItem:
 	mov	r0, #0x64
 	mov	r4, r1
 	mul	r4, r4, r0
-	ldr	r0, .L2111+0x4
+	ldr	r0, .L2119+0x4
 	add	r4, r4, r0
 	mov	r0, #0x1
 	bl	PlaySE
@@ -18252,35 +19930,35 @@ TryUsePPItem:
 	bl	GetMonData
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
-	ldr	r0, .L2111+0x8
+	ldr	r0, .L2119+0x8
 	mov	r1, #0xd
 	mul	r1, r1, r4
-	ldr	r2, .L2111+0xc
+	ldr	r2, .L2119+0xc
 	add	r1, r1, r2
 	bl	StringCopy
 	add	r0, r5, #0
 	bl	GetMedicineItemEffectMessage
-	ldr	r0, .L2111+0x10
-.L2108:
+	ldr	r0, .L2119+0x10
+.L2116:
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
-	ldr	r1, .L2111+0x14
+	ldr	r1, .L2119+0x14
 	lsl	r0, r6, #0x2
 	add	r0, r0, r6
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2111+0x18
+	ldr	r1, .L2119+0x18
 	str	r1, [r0]
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L2112:
+.L2120:
 	.align	2, 0
-.L2111:
+.L2119:
 	.word	gPartyMenuUseExitCallback
 	.word	gPlayerParty
 	.word	gStringVar1
@@ -18303,22 +19981,22 @@ ItemUseCB_PPUp:
 	bl	PlaySE
 	mov	r0, #0x17
 	bl	DisplayPartyMenuStdMessage
-	ldr	r0, .L2114
+	ldr	r0, .L2122
 	ldrb	r0, [r0, #0x9]
 	bl	ShowMoveSelectWindow
-	ldr	r1, .L2114+0x4
+	ldr	r1, .L2122+0x4
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2114+0x8
+	ldr	r1, .L2122+0x8
 	str	r1, [r0]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2115:
+.L2123:
 	.align	2, 0
-.L2114:
+.L2122:
 	.word	gPartyMenu
 	.word	gTasks
 	.word	Task_HandleWhichMoveInput
@@ -18330,16 +20008,16 @@ ItemUseCB_PPUp:
 	.thumb_func
 ItemIdToBattleMoveId:
 	lsl	r0, r0, #0x10
-	ldr	r1, .L2117
+	ldr	r1, .L2125
 	add	r0, r0, r1
-	ldr	r1, .L2117+0x4
+	ldr	r1, .L2125+0x4
 	lsr	r0, r0, #0xf
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	bx	lr
-.L2118:
+.L2126:
 	.align	2, 0
-.L2117:
+.L2125:
 	.word	-0x1e20000
 	.word	sTMHMMoves
 .Lfe239:
@@ -18353,29 +20031,29 @@ IsMoveHm:
 	lsl	r0, r0, #0x10
 	lsr	r2, r0, #0x10
 	mov	r1, #0x0
-	ldr	r3, .L2127
-.L2123:
+	ldr	r3, .L2135
+.L2131:
 	add	r0, r1, #0
 	add	r0, r0, #0x32
 	lsl	r0, r0, #0x1
 	add	r0, r0, r3
 	ldrh	r0, [r0]
 	cmp	r0, r2
-	bne	.L2122	@cond_branch
+	bne	.L2130	@cond_branch
 	mov	r0, #0x1
-	b	.L2126
-.L2128:
+	b	.L2134
+.L2136:
 	.align	2, 0
-.L2127:
+.L2135:
 	.word	sTMHMMoves
-.L2122:
+.L2130:
 	add	r0, r1, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
 	cmp	r1, #0x7
-	bls	.L2123	@cond_branch
+	bls	.L2131	@cond_branch
 	mov	r0, #0x0
-.L2126:
+.L2134:
 	pop	{r1}
 	bx	r1
 .Lfe240:
@@ -18390,23 +20068,23 @@ MonKnowsMove:
 	lsl	r1, r1, #0x10
 	lsr	r5, r1, #0x10
 	mov	r4, #0x0
-.L2133:
+.L2141:
 	add	r1, r4, #0
 	add	r1, r1, #0xd
 	add	r0, r6, #0
 	bl	GetMonData
 	cmp	r0, r5
-	bne	.L2132	@cond_branch
+	bne	.L2140	@cond_branch
 	mov	r0, #0x1
-	b	.L2136
-.L2132:
+	b	.L2144
+.L2140:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x3
-	bls	.L2133	@cond_branch
+	bls	.L2141	@cond_branch
 	mov	r0, #0x0
-.L2136:
+.L2144:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
@@ -18418,7 +20096,7 @@ MonKnowsMove:
 DisplayLearnMoveMessage:
 	push	{r4, lr}
 	add	r1, r0, #0
-	ldr	r4, .L2138
+	ldr	r4, .L2146
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	add	r0, r4, #0
@@ -18429,9 +20107,9 @@ DisplayLearnMoveMessage:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2139:
+.L2147:
 	.align	2, 0
-.L2138:
+.L2146:
 	.word	gStringVar4
 .Lfe242:
 	.size	 DisplayLearnMoveMessage,.Lfe242-DisplayLearnMoveMessage
@@ -18445,19 +20123,19 @@ DisplayLearnMoveMessageAndClose:
 	lsl	r4, r4, #0x18
 	lsr	r4, r4, #0x18
 	bl	DisplayLearnMoveMessage
-	ldr	r1, .L2141
+	ldr	r1, .L2149
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2141+0x4
+	ldr	r1, .L2149+0x4
 	str	r1, [r0]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2142:
+.L2150:
 	.align	2, 0
-.L2141:
+.L2149:
 	.word	gTasks
 	.word	Task_ClosePartyMenuAfterText
 .Lfe243:
@@ -18474,30 +20152,30 @@ ItemUseCB_TMHM:
 	lsr	r6, r0, #0x18
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r7, .L2153
+	ldr	r7, .L2161
 	mov	r1, #0x9
 	ldrsb	r1, [r7, r1]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L2153+0x4
+	ldr	r0, .L2161+0x4
 	add	r5, r1, r0
 	mov	r0, #0xe
 	add	r0, r0, r7
 	mov	r8, r0
-	ldr	r0, .L2153+0x8
+	ldr	r0, .L2161+0x8
 	ldrh	r4, [r0]
-	ldr	r1, .L2153+0xc
+	ldr	r1, .L2161+0xc
 	add	r0, r5, #0
 	bl	GetMonNickname
 	add	r0, r4, #0
 	bl	ItemIdToBattleMoveId
 	strh	r0, [r7, #0xe]
-	ldr	r0, .L2153+0x10
+	ldr	r0, .L2161+0x10
 	mov	r1, #0xe
 	ldrsh	r2, [r7, r1]
 	mov	r1, #0xd
 	mul	r1, r1, r2
-	ldr	r2, .L2153+0x14
+	ldr	r2, .L2161+0x14
 	add	r1, r1, r2
 	bl	StringCopy
 	mov	r0, #0x0
@@ -18510,27 +20188,27 @@ ItemUseCB_TMHM:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L2145	@cond_branch
+	beq	.L2153	@cond_branch
 	cmp	r0, #0x2
-	beq	.L2146	@cond_branch
+	beq	.L2154	@cond_branch
 	ldrh	r1, [r7, #0xe]
 	add	r0, r5, #0
 	bl	GiveMoveToMon
 	lsl	r0, r0, #0x10
-	ldr	r1, .L2153+0x18
+	ldr	r1, .L2161+0x18
 	cmp	r0, r1
-	beq	.L2149	@cond_branch
-	ldr	r0, .L2153+0x1c
+	beq	.L2157	@cond_branch
+	ldr	r0, .L2161+0x1c
 	lsl	r1, r6, #0x2
 	add	r1, r1, r6
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L2153+0x20
+	ldr	r0, .L2161+0x20
 	str	r0, [r1]
-	b	.L2143
-.L2154:
+	b	.L2151
+.L2162:
 	.align	2, 0
-.L2153:
+.L2161:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gSpecialVar_ItemId
@@ -18540,42 +20218,42 @@ ItemUseCB_TMHM:
 	.word	-0x10000
 	.word	gTasks
 	.word	Task_LearnedMove
-.L2145:
-	ldr	r1, .L2155
-	b	.L2152
-.L2156:
+.L2153:
+	ldr	r1, .L2163
+	b	.L2160
+.L2164:
 	.align	2, 0
-.L2155:
+.L2163:
 	.word	gText_PkmnCantLearnMove
-.L2146:
-	ldr	r1, .L2157
-.L2152:
+.L2154:
+	ldr	r1, .L2165
+.L2160:
 	add	r0, r6, #0
 	bl	DisplayLearnMoveMessageAndClose
-	b	.L2143
-.L2158:
+	b	.L2151
+.L2166:
 	.align	2, 0
-.L2157:
+.L2165:
 	.word	gText_PkmnAlreadyKnows
-.L2149:
-	ldr	r0, .L2159
+.L2157:
+	ldr	r0, .L2167
 	bl	DisplayLearnMoveMessage
-	ldr	r1, .L2159+0x4
+	ldr	r1, .L2167+0x4
 	lsl	r0, r6, #0x2
 	add	r0, r0, r6
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2159+0x8
+	ldr	r1, .L2167+0x8
 	str	r1, [r0]
-.L2143:
+.L2151:
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L2160:
+.L2168:
 	.align	2, 0
-.L2159:
+.L2167:
 	.word	gText_PkmnNeedsToReplaceMove
 	.word	gTasks
 	.word	Task_ReplaceMoveYesNo
@@ -18585,47 +20263,37 @@ ItemUseCB_TMHM:
 	.type	 Task_LearnedMove,function
 	.thumb_func
 Task_LearnedMove:
-	push	{r4, r5, r6, r7, lr}
+	push	{r4, r5, r6, lr}
 	lsl	r0, r0, #0x18
-	lsr	r7, r0, #0x18
-	ldr	r2, .L2164
+	lsr	r6, r0, #0x18
+	ldr	r5, .L2171
 	mov	r1, #0x9
-	ldrsb	r1, [r2, r1]
+	ldrsb	r1, [r5, r1]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L2164+0x4
-	add	r5, r1, r0
-	add	r6, r2, #0
-	add	r6, r6, #0xe
-	ldr	r0, .L2164+0x8
-	ldrh	r4, [r0]
-	mov	r1, #0x2
-	ldrsh	r0, [r6, r1]
+	ldr	r0, .L2171+0x4
+	add	r4, r1, r0
+	mov	r1, #0x10
+	ldrsh	r0, [r5, r1]
 	cmp	r0, #0
-	bne	.L2162	@cond_branch
-	add	r0, r5, #0
+	bne	.L2170	@cond_branch
+	add	r0, r4, #0
 	mov	r1, #0x4
 	bl	AdjustFriendship
-	ldr	r0, .L2164+0xc
-	cmp	r4, r0
-	bhi	.L2162	@cond_branch
+.L2170:
+	ldr	r1, .L2171+0x8
 	add	r0, r4, #0
-	mov	r1, #0x1
-	bl	RemoveBagItem
-.L2162:
-	ldr	r1, .L2164+0x10
-	add	r0, r5, #0
 	bl	GetMonNickname
-	ldr	r0, .L2164+0x14
-	mov	r1, #0x0
-	ldrsh	r2, [r6, r1]
+	ldr	r0, .L2171+0xc
+	mov	r1, #0xe
+	ldrsh	r2, [r5, r1]
 	mov	r1, #0xd
 	mul	r1, r1, r2
-	ldr	r2, .L2164+0x18
+	ldr	r2, .L2171+0x10
 	add	r1, r1, r2
 	bl	StringCopy
-	ldr	r4, .L2164+0x1c
-	ldr	r1, .L2164+0x20
+	ldr	r4, .L2171+0x14
+	ldr	r1, .L2171+0x18
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	add	r0, r4, #0
@@ -18633,23 +20301,21 @@ Task_LearnedMove:
 	bl	DisplayPartyMenuMessage
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
-	ldr	r1, .L2164+0x24
-	lsl	r0, r7, #0x2
-	add	r0, r0, r7
+	ldr	r1, .L2171+0x1c
+	lsl	r0, r6, #0x2
+	add	r0, r0, r6
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2164+0x28
+	ldr	r1, .L2171+0x20
 	str	r1, [r0]
-	pop	{r4, r5, r6, r7}
+	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L2165:
+.L2172:
 	.align	2, 0
-.L2164:
+.L2171:
 	.word	gPartyMenu
 	.word	gPlayerParty
-	.word	gSpecialVar_ItemId
-	.word	0x213
 	.word	gStringVar1
 	.word	gStringVar2
 	.word	gMoveNames
@@ -18670,23 +20336,23 @@ Task_DoLearnedMoveFanfareAfterText:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L2167	@cond_branch
-	ldr	r0, .L2168
+	beq	.L2174	@cond_branch
+	ldr	r0, .L2175
 	bl	PlayFanfare
-	ldr	r1, .L2168+0x4
+	ldr	r1, .L2175+0x4
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2168+0x8
+	ldr	r1, .L2175+0x8
 	str	r1, [r0]
-.L2167:
+.L2174:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2169:
+.L2176:
 	.align	2, 0
-.L2168:
+.L2175:
 	.word	0x16f
 	.word	gTasks
 	.word	Task_LearnNextMoveOrClosePartyMenu
@@ -18703,47 +20369,47 @@ Task_LearnNextMoveOrClosePartyMenu:
 	bl	IsFanfareTaskInactive
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L2171	@cond_branch
-	ldr	r0, .L2176
+	beq	.L2178	@cond_branch
+	ldr	r0, .L2183
 	ldrh	r1, [r0, #0x2e]
 	mov	r2, #0x1
 	add	r0, r2, #0
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L2172	@cond_branch
+	bne	.L2179	@cond_branch
 	mov	r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L2171	@cond_branch
-.L2172:
-	ldr	r0, .L2176+0x4
+	beq	.L2178	@cond_branch
+.L2179:
+	ldr	r0, .L2183+0x4
 	mov	r1, #0x10
 	ldrsh	r0, [r0, r1]
 	cmp	r0, #0x1
-	bne	.L2173	@cond_branch
+	bne	.L2180	@cond_branch
 	add	r0, r4, #0
 	bl	Task_TryLearningNextMove
-	b	.L2171
-.L2177:
+	b	.L2178
+.L2184:
 	.align	2, 0
-.L2176:
+.L2183:
 	.word	gMain
 	.word	gPartyMenu
-.L2173:
+.L2180:
 	cmp	r0, #0x2
-	bne	.L2175	@cond_branch
-	ldr	r0, .L2178
+	bne	.L2182	@cond_branch
+	ldr	r0, .L2185
 	strh	r2, [r0]
-.L2175:
+.L2182:
 	add	r0, r5, #0
 	bl	Task_ClosePartyMenu
-.L2171:
+.L2178:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L2179:
+.L2186:
 	.align	2, 0
-.L2178:
+.L2185:
 	.word	gSpecialVar_Result
 .Lfe247:
 	.size	 Task_LearnNextMoveOrClosePartyMenu,.Lfe247-Task_LearnNextMoveOrClosePartyMenu
@@ -18758,22 +20424,22 @@ Task_ReplaceMoveYesNo:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L2181	@cond_branch
+	beq	.L2188	@cond_branch
 	bl	PartyMenuDisplayYesNoMenu
-	ldr	r0, .L2182
+	ldr	r0, .L2189
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L2182+0x4
+	ldr	r0, .L2189+0x4
 	str	r0, [r1]
-.L2181:
+.L2188:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2183:
+.L2190:
 	.align	2, 0
-.L2182:
+.L2189:
 	.word	gTasks
 	.word	Task_HandleReplaceMoveYesNoInput
 .Lfe248:
@@ -18789,43 +20455,43 @@ Task_HandleReplaceMoveYesNoInput:
 	lsl	r0, r0, #0x18
 	asr	r1, r0, #0x18
 	cmp	r1, #0
-	beq	.L2186	@cond_branch
+	beq	.L2193	@cond_branch
 	cmp	r1, #0
-	bgt	.L2191	@cond_branch
+	bgt	.L2198	@cond_branch
 	mov	r0, #0x1
 	neg	r0, r0
 	cmp	r1, r0
-	beq	.L2187	@cond_branch
-	b	.L2185
-.L2191:
+	beq	.L2194	@cond_branch
+	b	.L2192
+.L2198:
 	cmp	r1, #0x1
-	beq	.L2188	@cond_branch
-	b	.L2185
-.L2186:
-	ldr	r0, .L2192
+	beq	.L2195	@cond_branch
+	b	.L2192
+.L2193:
+	ldr	r0, .L2199
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
-	ldr	r1, .L2192+0x4
+	ldr	r1, .L2199+0x4
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2192+0x8
+	ldr	r1, .L2199+0x8
 	str	r1, [r0]
-	b	.L2185
-.L2193:
+	b	.L2192
+.L2200:
 	.align	2, 0
-.L2192:
+.L2199:
 	.word	gText_WhichMoveToForget
 	.word	gTasks
 	.word	Task_ShowSummaryScreenToForgetMove
-.L2187:
+.L2194:
 	mov	r0, #0x5
 	bl	PlaySE
-.L2188:
+.L2195:
 	add	r0, r4, #0
 	bl	StopLearningMovePrompt
-.L2185:
+.L2192:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
@@ -18842,73 +20508,39 @@ Task_ShowSummaryScreenToForgetMove:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L2195	@cond_branch
-	ldr	r0, .L2196
+	beq	.L2202	@cond_branch
+	ldr	r0, .L2203
 	ldr	r1, [r0]
-	ldr	r0, .L2196+0x4
+	ldr	r0, .L2203+0x4
 	str	r0, [r1, #0x4]
 	add	r0, r4, #0
 	bl	Task_ClosePartyMenu
-.L2195:
+.L2202:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2197:
+.L2204:
 	.align	2, 0
-.L2196:
+.L2203:
 	.word	sPartyMenuInternal
 	.word	CB2_ShowSummaryScreenToForgetMove
 .Lfe250:
 	.size	 Task_ShowSummaryScreenToForgetMove,.Lfe250-Task_ShowSummaryScreenToForgetMove
-	.align	2, 0
-	.type	 CursorCb_Nickname,function
-	.thumb_func
-CursorCb_Nickname:
-	push	{r4, lr}
-	add	r4, r0, #0
-	lsl	r4, r4, #0x18
-	lsr	r4, r4, #0x18
-	mov	r0, #0x5
-	bl	PlaySE
-	ldr	r1, .L2199
-	ldr	r0, .L2199+0x4
-	ldrb	r0, [r0, #0x9]
-	lsl	r0, r0, #24
-	asr	r0, r0, #24
-	strh	r0, [r1]
-	ldr	r0, .L2199+0x8
-	ldr	r1, [r0]
-	ldr	r0, .L2199+0xc
-	str	r0, [r1, #0x4]
-	add	r0, r4, #0
-	bl	Task_ClosePartyMenu
-	pop	{r4}
-	pop	{r0}
-	bx	r0
-.L2200:
-	.align	2, 0
-.L2199:
-	.word	gSpecialVar_0x8004
-	.word	gPartyMenu
-	.word	sPartyMenuInternal
-	.word	ChangePokemonNickname
-.Lfe251:
-	.size	 CursorCb_Nickname,.Lfe251-CursorCb_Nickname
 	.align	2, 0
 	.type	 CB2_ShowSummaryScreenToForgetMove,function
 	.thumb_func
 CB2_ShowSummaryScreenToForgetMove:
 	push	{r4, lr}
 	add	sp, sp, #-0x4
-	ldr	r0, .L2202
-	ldr	r4, .L2202+0x4
+	ldr	r0, .L2206
+	ldr	r4, .L2206+0x4
 	ldrb	r1, [r4, #0x9]
-	ldr	r2, .L2202+0x8
+	ldr	r2, .L2206+0x8
 	ldrb	r2, [r2]
 	sub	r2, r2, #0x1
 	lsl	r2, r2, #0x18
 	lsr	r2, r2, #0x18
-	ldr	r3, .L2202+0xc
+	ldr	r3, .L2206+0xc
 	ldrh	r4, [r4, #0xe]
 	str	r4, [sp]
 	bl	ShowSelectMovePokemonSummaryScreen
@@ -18916,15 +20548,15 @@ CB2_ShowSummaryScreenToForgetMove:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2203:
+.L2207:
 	.align	2, 0
-.L2202:
+.L2206:
 	.word	gPlayerParty
 	.word	gPartyMenu
 	.word	gPlayerPartyCount
 	.word	CB2_ReturnToPartyMenuWhileLearningMove
-.Lfe252:
-	.size	 CB2_ShowSummaryScreenToForgetMove,.Lfe252-CB2_ShowSummaryScreenToForgetMove
+.Lfe251:
+	.size	 CB2_ShowSummaryScreenToForgetMove,.Lfe251-CB2_ShowSummaryScreenToForgetMove
 	.align	2, 0
 	.type	 CB2_ReturnToPartyMenuWhileLearningMove,function
 	.thumb_func
@@ -18933,9 +20565,9 @@ CB2_ReturnToPartyMenuWhileLearningMove:
 	add	sp, sp, #-0xc
 	mov	r0, #0x7f
 	str	r0, [sp]
-	ldr	r0, .L2205
+	ldr	r0, .L2209
 	str	r0, [sp, #0x4]
-	ldr	r0, .L2205+0x4
+	ldr	r0, .L2209+0x4
 	ldr	r0, [r0]
 	str	r0, [sp, #0x8]
 	mov	r0, #0x0
@@ -18946,13 +20578,13 @@ CB2_ReturnToPartyMenuWhileLearningMove:
 	add	sp, sp, #0xc
 	pop	{r0}
 	bx	r0
-.L2206:
+.L2210:
 	.align	2, 0
-.L2205:
+.L2209:
 	.word	Task_ReturnToPartyMenuWhileLearningMove
 	.word	gPartyMenu
-.Lfe253:
-	.size	 CB2_ReturnToPartyMenuWhileLearningMove,.Lfe253-CB2_ReturnToPartyMenuWhileLearningMove
+.Lfe252:
+	.size	 CB2_ReturnToPartyMenuWhileLearningMove,.Lfe252-CB2_ReturnToPartyMenuWhileLearningMove
 	.align	2, 0
 	.type	 Task_ReturnToPartyMenuWhileLearningMove,function
 	.thumb_func
@@ -18961,33 +20593,33 @@ Task_ReturnToPartyMenuWhileLearningMove:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	add	r5, r4, #0
-	ldr	r0, .L2211
+	ldr	r0, .L2215
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L2208	@cond_branch
+	bne	.L2212	@cond_branch
 	bl	GetMoveSlotToReplace
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x4
-	beq	.L2209	@cond_branch
+	beq	.L2213	@cond_branch
 	add	r0, r4, #0
 	bl	DisplayPartyMenuForgotMoveMessage
-	b	.L2208
-.L2212:
+	b	.L2212
+.L2216:
 	.align	2, 0
-.L2211:
+.L2215:
 	.word	gPaletteFade
-.L2209:
+.L2213:
 	add	r0, r5, #0
 	bl	StopLearningMovePrompt
-.L2208:
+.L2212:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.Lfe254:
-	.size	 Task_ReturnToPartyMenuWhileLearningMove,.Lfe254-Task_ReturnToPartyMenuWhileLearningMove
+.Lfe253:
+	.size	 Task_ReturnToPartyMenuWhileLearningMove,.Lfe253-Task_ReturnToPartyMenuWhileLearningMove
 	.align	2, 0
 	.type	 DisplayPartyMenuForgotMoveMessage,function
 	.thumb_func
@@ -18996,13 +20628,13 @@ DisplayPartyMenuForgotMoveMessage:
 	add	r6, r0, #0
 	lsl	r6, r6, #0x18
 	lsr	r6, r6, #0x18
-	ldr	r0, .L2214
+	ldr	r0, .L2218
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mov	r5, r1
 	mul	r5, r5, r0
-	ldr	r0, .L2214+0x4
+	ldr	r0, .L2218+0x4
 	add	r5, r5, r0
 	bl	GetMoveSlotToReplace
 	add	r1, r0, #0
@@ -19014,30 +20646,30 @@ DisplayPartyMenuForgotMoveMessage:
 	add	r4, r0, #0
 	lsl	r4, r4, #0x10
 	lsr	r4, r4, #0x10
-	ldr	r1, .L2214+0x8
+	ldr	r1, .L2218+0x8
 	add	r0, r5, #0
 	bl	GetMonNickname
-	ldr	r0, .L2214+0xc
+	ldr	r0, .L2218+0xc
 	mov	r1, #0xd
 	mul	r1, r1, r4
-	ldr	r2, .L2214+0x10
+	ldr	r2, .L2218+0x10
 	add	r1, r1, r2
 	bl	StringCopy
-	ldr	r0, .L2214+0x14
+	ldr	r0, .L2218+0x14
 	bl	DisplayLearnMoveMessage
-	ldr	r1, .L2214+0x18
+	ldr	r1, .L2218+0x18
 	lsl	r0, r6, #0x2
 	add	r0, r0, r6
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2214+0x1c
+	ldr	r1, .L2218+0x1c
 	str	r1, [r0]
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L2215:
+.L2219:
 	.align	2, 0
-.L2214:
+.L2218:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gStringVar1
@@ -19046,8 +20678,8 @@ DisplayPartyMenuForgotMoveMessage:
 	.word	gText_12PoofForgotMove
 	.word	gTasks
 	.word	Task_PartyMenuReplaceMove
-.Lfe255:
-	.size	 DisplayPartyMenuForgotMoveMessage,.Lfe255-DisplayPartyMenuForgotMoveMessage
+.Lfe254:
+	.size	 DisplayPartyMenuForgotMoveMessage,.Lfe254-DisplayPartyMenuForgotMoveMessage
 	.align	2, 0
 	.type	 Task_PartyMenuReplaceMove,function
 	.thumb_func
@@ -19059,14 +20691,14 @@ Task_PartyMenuReplaceMove:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L2217	@cond_branch
-	ldr	r5, .L2218
+	beq	.L2221	@cond_branch
+	ldr	r5, .L2222
 	mov	r1, #0x9
 	ldrsb	r1, [r5, r1]
 	mov	r0, #0x64
 	mov	r4, r1
 	mul	r4, r4, r0
-	ldr	r0, .L2218+0x4
+	ldr	r0, .L2222+0x4
 	add	r4, r4, r0
 	bl	GetMoveSlotToReplace
 	add	r1, r0, #0
@@ -19084,17 +20716,17 @@ Task_PartyMenuReplaceMove:
 	bl	SetMonMoveSlot
 	add	r0, r6, #0
 	bl	Task_LearnedMove
-.L2217:
+.L2221:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L2219:
+.L2223:
 	.align	2, 0
-.L2218:
+.L2222:
 	.word	gPartyMenu
 	.word	gPlayerParty
-.Lfe256:
-	.size	 Task_PartyMenuReplaceMove,.Lfe256-Task_PartyMenuReplaceMove
+.Lfe255:
+	.size	 Task_PartyMenuReplaceMove,.Lfe255-Task_PartyMenuReplaceMove
 	.align	2, 0
 	.type	 StopLearningMovePrompt,function
 	.thumb_func
@@ -19103,17 +20735,17 @@ StopLearningMovePrompt:
 	add	r5, r0, #0
 	lsl	r5, r5, #0x18
 	lsr	r5, r5, #0x18
-	ldr	r0, .L2221
-	ldr	r1, .L2221+0x4
+	ldr	r0, .L2225
+	ldr	r1, .L2225+0x4
 	mov	r3, #0xe
 	ldrsh	r2, [r1, r3]
 	mov	r1, #0xd
 	mul	r1, r1, r2
-	ldr	r2, .L2221+0x8
+	ldr	r2, .L2225+0x8
 	add	r1, r1, r2
 	bl	StringCopy
-	ldr	r4, .L2221+0xc
-	ldr	r1, .L2221+0x10
+	ldr	r4, .L2225+0xc
+	ldr	r1, .L2225+0x10
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	add	r0, r4, #0
@@ -19121,19 +20753,19 @@ StopLearningMovePrompt:
 	bl	DisplayPartyMenuMessage
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
-	ldr	r1, .L2221+0x14
+	ldr	r1, .L2225+0x14
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2221+0x18
+	ldr	r1, .L2225+0x18
 	str	r1, [r0]
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L2222:
+.L2226:
 	.align	2, 0
-.L2221:
+.L2225:
 	.word	gStringVar2
 	.word	gPartyMenu
 	.word	gMoveNames
@@ -19141,8 +20773,8 @@ StopLearningMovePrompt:
 	.word	gText_StopLearningMove2
 	.word	gTasks
 	.word	Task_StopLearningMoveYesNo
-.Lfe257:
-	.size	 StopLearningMovePrompt,.Lfe257-StopLearningMovePrompt
+.Lfe256:
+	.size	 StopLearningMovePrompt,.Lfe256-StopLearningMovePrompt
 	.align	2, 0
 	.type	 Task_StopLearningMoveYesNo,function
 	.thumb_func
@@ -19154,26 +20786,26 @@ Task_StopLearningMoveYesNo:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L2224	@cond_branch
+	beq	.L2228	@cond_branch
 	bl	PartyMenuDisplayYesNoMenu
-	ldr	r0, .L2225
+	ldr	r0, .L2229
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L2225+0x4
+	ldr	r0, .L2229+0x4
 	str	r0, [r1]
-.L2224:
+.L2228:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2226:
+.L2230:
 	.align	2, 0
-.L2225:
+.L2229:
 	.word	gTasks
 	.word	Task_HandleStopLearningMoveYesNoInput
-.Lfe258:
-	.size	 Task_StopLearningMoveYesNo,.Lfe258-Task_StopLearningMoveYesNo
+.Lfe257:
+	.size	 Task_StopLearningMoveYesNo,.Lfe257-Task_StopLearningMoveYesNo
 	.align	2, 0
 	.type	 Task_HandleStopLearningMoveYesNoInput,function
 	.thumb_func
@@ -19181,48 +20813,48 @@ Task_HandleStopLearningMoveYesNoInput:
 	push	{r4, r5, r6, r7, lr}
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-	ldr	r7, .L2238
+	ldr	r7, .L2242
 	mov	r1, #0x9
 	ldrsb	r1, [r7, r1]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L2238+0x4
+	ldr	r0, .L2242+0x4
 	add	r4, r1, r0
 	bl	Menu_ProcessInputNoWrapClearOnChoose
 	lsl	r0, r0, #0x18
 	asr	r5, r0, #0x18
 	cmp	r5, #0
-	beq	.L2229	@cond_branch
+	beq	.L2233	@cond_branch
 	cmp	r5, #0
-	bgt	.L2237	@cond_branch
+	bgt	.L2241	@cond_branch
 	mov	r0, #0x1
 	neg	r0, r0
 	cmp	r5, r0
-	beq	.L2233	@cond_branch
-	b	.L2228
-.L2239:
+	beq	.L2237	@cond_branch
+	b	.L2232
+.L2243:
 	.align	2, 0
-.L2238:
+.L2242:
 	.word	gPartyMenu
 	.word	gPlayerParty
-.L2237:
+.L2241:
 	cmp	r5, #0x1
-	beq	.L2234	@cond_branch
-	b	.L2228
-.L2229:
-	ldr	r1, .L2240
+	beq	.L2238	@cond_branch
+	b	.L2232
+.L2233:
+	ldr	r1, .L2244
 	add	r0, r4, #0
 	bl	GetMonNickname
-	ldr	r0, .L2240+0x4
+	ldr	r0, .L2244+0x4
 	mov	r1, #0xe
 	ldrsh	r2, [r7, r1]
 	mov	r1, #0xd
 	mul	r1, r1, r2
-	ldr	r2, .L2240+0x8
+	ldr	r2, .L2244+0x8
 	add	r1, r1, r2
 	bl	StringCopy
-	ldr	r4, .L2240+0xc
-	ldr	r1, .L2240+0x10
+	ldr	r4, .L2244+0xc
+	ldr	r1, .L2244+0x10
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	add	r0, r4, #0
@@ -19231,18 +20863,18 @@ Task_HandleStopLearningMoveYesNoInput:
 	mov	r3, #0x10
 	ldrsh	r0, [r7, r3]
 	cmp	r0, #0x1
-	bne	.L2230	@cond_branch
-	ldr	r0, .L2240+0x14
+	bne	.L2234	@cond_branch
+	ldr	r0, .L2244+0x14
 	lsl	r1, r6, #0x2
 	add	r1, r1, r6
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L2240+0x18
+	ldr	r0, .L2244+0x18
 	str	r0, [r1]
-	b	.L2228
-.L2241:
+	b	.L2232
+.L2245:
 	.align	2, 0
-.L2240:
+.L2244:
 	.word	gStringVar1
 	.word	gStringVar2
 	.word	gMoveNames
@@ -19250,58 +20882,58 @@ Task_HandleStopLearningMoveYesNoInput:
 	.word	gText_MoveNotLearned
 	.word	gTasks
 	.word	Task_TryLearningNextMoveAfterText
-.L2230:
+.L2234:
 	cmp	r0, #0x2
-	bne	.L2232	@cond_branch
-	ldr	r0, .L2242
+	bne	.L2236	@cond_branch
+	ldr	r0, .L2246
 	strh	r5, [r0]
-.L2232:
-	ldr	r0, .L2242+0x4
+.L2236:
+	ldr	r0, .L2246+0x4
 	lsl	r1, r6, #0x2
 	add	r1, r1, r6
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L2242+0x8
+	ldr	r0, .L2246+0x8
 	str	r0, [r1]
-	b	.L2228
-.L2243:
+	b	.L2232
+.L2247:
 	.align	2, 0
-.L2242:
+.L2246:
 	.word	gSpecialVar_Result
 	.word	gTasks
 	.word	Task_ClosePartyMenuAfterText
-.L2233:
+.L2237:
 	mov	r0, #0x5
 	bl	PlaySE
-.L2234:
-	ldr	r1, .L2244
+.L2238:
+	ldr	r1, .L2248
 	add	r0, r4, #0
 	bl	GetMonNickname
-	ldr	r0, .L2244+0x4
-	ldr	r1, .L2244+0x8
+	ldr	r0, .L2248+0x4
+	ldr	r1, .L2248+0x8
 	mov	r3, #0xe
 	ldrsh	r2, [r1, r3]
 	mov	r1, #0xd
 	mul	r1, r1, r2
-	ldr	r2, .L2244+0xc
+	ldr	r2, .L2248+0xc
 	add	r1, r1, r2
 	bl	StringCopy
-	ldr	r0, .L2244+0x10
+	ldr	r0, .L2248+0x10
 	bl	DisplayLearnMoveMessage
-	ldr	r1, .L2244+0x14
+	ldr	r1, .L2248+0x14
 	lsl	r0, r6, #0x2
 	add	r0, r0, r6
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2244+0x18
+	ldr	r1, .L2248+0x18
 	str	r1, [r0]
-.L2228:
+.L2232:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L2245:
+.L2249:
 	.align	2, 0
-.L2244:
+.L2248:
 	.word	gStringVar1
 	.word	gStringVar2
 	.word	gPartyMenu
@@ -19309,8 +20941,8 @@ Task_HandleStopLearningMoveYesNoInput:
 	.word	gText_PkmnNeedsToReplaceMove
 	.word	gTasks
 	.word	Task_ReplaceMoveYesNo
-.Lfe259:
-	.size	 Task_HandleStopLearningMoveYesNoInput,.Lfe259-Task_HandleStopLearningMoveYesNoInput
+.Lfe258:
+	.size	 Task_HandleStopLearningMoveYesNoInput,.Lfe258-Task_HandleStopLearningMoveYesNoInput
 	.align	2, 0
 	.type	 Task_TryLearningNextMoveAfterText,function
 	.thumb_func
@@ -19322,15 +20954,15 @@ Task_TryLearningNextMoveAfterText:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L2247	@cond_branch
+	beq	.L2251	@cond_branch
 	add	r0, r4, #0
 	bl	Task_TryLearningNextMove
-.L2247:
+.L2251:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.Lfe260:
-	.size	 Task_TryLearningNextMoveAfterText,.Lfe260-Task_TryLearningNextMoveAfterText
+.Lfe259:
+	.size	 Task_TryLearningNextMoveAfterText,.Lfe259-Task_TryLearningNextMoveAfterText
 	.align	2, 0
 	.globl	ItemUseCB_RareCandy
 	.type	 ItemUseCB_RareCandy,function
@@ -19344,26 +20976,26 @@ ItemUseCB_RareCandy:
 	mov	sl, r1
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	ldr	r0, .L2254
+	ldr	r0, .L2258
 	mov	r9, r0
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L2254+0x4
+	ldr	r0, .L2258+0x4
 	add	r5, r1, r0
-	ldr	r0, .L2254+0x8
+	ldr	r0, .L2258+0x8
 	ldr	r6, [r0]
 	mov	r1, #0x86
 	lsl	r1, r1, #0x2
 	add	r4, r6, r1
-	ldr	r2, .L2254+0xc
+	ldr	r2, .L2258+0xc
 	mov	r8, r2
 	add	r0, r5, #0
 	mov	r1, #0x38
 	bl	GetMonData
 	cmp	r0, #0x64
-	beq	.L2249	@cond_branch
+	beq	.L2253	@cond_branch
 	add	r0, r5, #0
 	add	r1, r4, #0
 	bl	BufferMonStatsToTaskData
@@ -19380,60 +21012,60 @@ ItemUseCB_RareCandy:
 	add	r1, r6, r0
 	add	r0, r5, #0
 	bl	BufferMonStatsToTaskData
-	b	.L2250
-.L2255:
+	b	.L2254
+.L2259:
 	.align	2, 0
-.L2254:
+.L2258:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	sPartyMenuInternal
 	.word	gSpecialVar_ItemId
-.L2249:
+.L2253:
 	mov	r4, #0x1
-.L2250:
+.L2254:
 	mov	r0, #0x5
 	bl	PlaySE
 	cmp	r4, #0
-	beq	.L2251	@cond_branch
-	ldr	r1, .L2256
+	beq	.L2255	@cond_branch
+	ldr	r1, .L2260
 	mov	r0, #0x0
 	strb	r0, [r1]
-	ldr	r0, .L2256+0x4
+	ldr	r0, .L2260+0x4
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
-	ldr	r1, .L2256+0x8
+	ldr	r1, .L2260+0x8
 	lsl	r0, r7, #0x2
 	add	r0, r0, r7
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
 	mov	r1, sl
-	b	.L2253
-.L2257:
+	b	.L2257
+.L2261:
 	.align	2, 0
-.L2256:
+.L2260:
 	.word	gPartyMenuUseExitCallback
 	.word	gText_WontHaveEffect
 	.word	gTasks
-.L2251:
-	ldr	r1, .L2258
+.L2255:
+	ldr	r1, .L2262
 	mov	r0, #0x1
 	strb	r0, [r1]
 	mov	r0, #0x0
 	bl	PlayFanfareByFanfareNum
-	ldr	r0, .L2258+0x4
+	ldr	r0, .L2262+0x4
 	ldrb	r0, [r0, #0x9]
 	add	r1, r5, #0
 	bl	UpdateMonDisplayInfoAfterRareCandy
-	ldr	r0, .L2258+0x8
+	ldr	r0, .L2262+0x8
 	ldrh	r0, [r0]
 	mov	r1, #0x1
 	bl	RemoveBagItem
-	ldr	r1, .L2258+0xc
+	ldr	r1, .L2262+0xc
 	add	r0, r5, #0
 	bl	GetMonNickname
-	ldr	r4, .L2258+0x10
+	ldr	r4, .L2262+0x10
 	add	r0, r5, #0
 	mov	r1, #0x38
 	bl	GetMonData
@@ -19442,8 +21074,8 @@ ItemUseCB_RareCandy:
 	mov	r2, #0x0
 	mov	r3, #0x3
 	bl	ConvertIntToDecimalStringN
-	ldr	r4, .L2258+0x14
-	ldr	r1, .L2258+0x18
+	ldr	r4, .L2262+0x14
+	ldr	r1, .L2262+0x18
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	add	r0, r4, #0
@@ -19451,13 +21083,13 @@ ItemUseCB_RareCandy:
 	bl	DisplayPartyMenuMessage
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
-	ldr	r1, .L2258+0x1c
+	ldr	r1, .L2262+0x1c
 	lsl	r0, r7, #0x2
 	add	r0, r0, r7
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2258+0x20
-.L2253:
+	ldr	r1, .L2262+0x20
+.L2257:
 	str	r1, [r0]
 	pop	{r3, r4, r5}
 	mov	r8, r3
@@ -19466,9 +21098,9 @@ ItemUseCB_RareCandy:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L2259:
+.L2263:
 	.align	2, 0
-.L2258:
+.L2262:
 	.word	gPartyMenuUseExitCallback
 	.word	gPartyMenu
 	.word	gSpecialVar_ItemId
@@ -19478,8 +21110,8 @@ ItemUseCB_RareCandy:
 	.word	gText_PkmnElevatedToLvVar2
 	.word	gTasks
 	.word	Task_DisplayLevelUpStatsPg1
-.Lfe261:
-	.size	 ItemUseCB_RareCandy,.Lfe261-ItemUseCB_RareCandy
+.Lfe260:
+	.size	 ItemUseCB_RareCandy,.Lfe260-ItemUseCB_RareCandy
 	.align	2, 0
 	.type	 UpdateMonDisplayInfoAfterRareCandy,function
 	.thumb_func
@@ -19489,13 +21121,13 @@ UpdateMonDisplayInfoAfterRareCandy:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	add	r7, r0, #0
-	ldr	r6, .L2262
+	ldr	r6, .L2266
 	lsl	r4, r7, #0x4
 	ldr	r1, [r6]
 	add	r1, r1, r4
 	add	r0, r5, #0
 	bl	SetPartyMonAilmentGfx
-	ldr	r2, .L2262+0x4
+	ldr	r2, .L2266+0x4
 	ldr	r0, [r6]
 	add	r3, r4, r0
 	ldrb	r1, [r3, #0xc]
@@ -19507,12 +21139,12 @@ UpdateMonDisplayInfoAfterRareCandy:
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1d
 	cmp	r0, #0
-	bge	.L2261	@cond_branch
+	bge	.L2265	@cond_branch
 	add	r0, r5, #0
 	add	r1, r3, #0
 	mov	r2, #0x1
 	bl	DisplayPartyPokemonLevelCheck
-.L2261:
+.L2265:
 	ldr	r1, [r6]
 	add	r1, r1, r4
 	add	r0, r5, #0
@@ -19540,13 +21172,13 @@ UpdateMonDisplayInfoAfterRareCandy:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L2263:
+.L2267:
 	.align	2, 0
-.L2262:
+.L2266:
 	.word	sPartyMenuBoxes
 	.word	gSprites
-.Lfe262:
-	.size	 UpdateMonDisplayInfoAfterRareCandy,.Lfe262-UpdateMonDisplayInfoAfterRareCandy
+.Lfe261:
+	.size	 UpdateMonDisplayInfoAfterRareCandy,.Lfe261-UpdateMonDisplayInfoAfterRareCandy
 	.align	2, 0
 	.type	 Task_DisplayLevelUpStatsPg1,function
 	.thumb_func
@@ -19558,46 +21190,46 @@ Task_DisplayLevelUpStatsPg1:
 	bl	WaitFanfare
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L2265	@cond_branch
+	beq	.L2269	@cond_branch
 	bl	IsPartyMenuTextPrinterActive
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L2265	@cond_branch
-	ldr	r0, .L2267
+	beq	.L2269	@cond_branch
+	ldr	r0, .L2271
 	ldrh	r1, [r0, #0x2e]
 	mov	r0, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L2266	@cond_branch
+	bne	.L2270	@cond_branch
 	mov	r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L2265	@cond_branch
-.L2266:
+	beq	.L2269	@cond_branch
+.L2270:
 	mov	r0, #0x5
 	bl	PlaySE
 	add	r0, r4, #0
 	bl	DisplayLevelUpStatsPg1
-	ldr	r0, .L2267+0x4
+	ldr	r0, .L2271+0x4
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L2267+0x8
+	ldr	r0, .L2271+0x8
 	str	r0, [r1]
-.L2265:
+.L2269:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2268:
+.L2272:
 	.align	2, 0
-.L2267:
+.L2271:
 	.word	gMain
 	.word	gTasks
 	.word	Task_DisplayLevelUpStatsPg2
-.Lfe263:
-	.size	 Task_DisplayLevelUpStatsPg1,.Lfe263-Task_DisplayLevelUpStatsPg1
+.Lfe262:
+	.size	 Task_DisplayLevelUpStatsPg1,.Lfe262-Task_DisplayLevelUpStatsPg1
 	.align	2, 0
 	.type	 Task_DisplayLevelUpStatsPg2,function
 	.thumb_func
@@ -19605,47 +21237,47 @@ Task_DisplayLevelUpStatsPg2:
 	push	{r4, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r0, .L2272
+	ldr	r0, .L2276
 	ldrh	r1, [r0, #0x2e]
 	mov	r0, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L2271	@cond_branch
+	bne	.L2275	@cond_branch
 	mov	r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L2270	@cond_branch
-.L2271:
+	beq	.L2274	@cond_branch
+.L2275:
 	mov	r0, #0x5
 	bl	PlaySE
 	add	r0, r4, #0
 	bl	DisplayLevelUpStatsPg2
-	ldr	r0, .L2272+0x4
+	ldr	r0, .L2276+0x4
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L2272+0x8
+	ldr	r0, .L2276+0x8
 	str	r0, [r1]
-.L2270:
+.L2274:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2273:
+.L2277:
 	.align	2, 0
-.L2272:
+.L2276:
 	.word	gMain
 	.word	gTasks
 	.word	Task_TryLearnNewMoves
-.Lfe264:
-	.size	 Task_DisplayLevelUpStatsPg2,.Lfe264-Task_DisplayLevelUpStatsPg2
+.Lfe263:
+	.size	 Task_DisplayLevelUpStatsPg2,.Lfe263-Task_DisplayLevelUpStatsPg2
 	.align	2, 0
 	.type	 DisplayLevelUpStatsPg1,function
 	.thumb_func
 DisplayLevelUpStatsPg1:
 	push	{r4, r5, lr}
 	add	sp, sp, #-0x8
-	ldr	r0, .L2275
+	ldr	r0, .L2279
 	ldr	r5, [r0]
 	mov	r0, #0x86
 	lsl	r0, r0, #0x2
@@ -19674,19 +21306,19 @@ DisplayLevelUpStatsPg1:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L2276:
+.L2280:
 	.align	2, 0
-.L2275:
+.L2279:
 	.word	sPartyMenuInternal
-.Lfe265:
-	.size	 DisplayLevelUpStatsPg1,.Lfe265-DisplayLevelUpStatsPg1
+.Lfe264:
+	.size	 DisplayLevelUpStatsPg1,.Lfe264-DisplayLevelUpStatsPg1
 	.align	2, 0
 	.type	 DisplayLevelUpStatsPg2,function
 	.thumb_func
 DisplayLevelUpStatsPg2:
 	push	{r4, lr}
 	add	sp, sp, #-0x4
-	ldr	r0, .L2278
+	ldr	r0, .L2282
 	ldr	r1, [r0]
 	mov	r0, #0x86
 	lsl	r0, r0, #0x2
@@ -19709,12 +21341,12 @@ DisplayLevelUpStatsPg2:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2279:
+.L2283:
 	.align	2, 0
-.L2278:
+.L2282:
 	.word	sPartyMenuInternal
-.Lfe266:
-	.size	 DisplayLevelUpStatsPg2,.Lfe266-DisplayLevelUpStatsPg2
+.Lfe265:
+	.size	 DisplayLevelUpStatsPg2,.Lfe265-DisplayLevelUpStatsPg2
 	.align	2, 0
 	.type	 Task_TryLearnNewMoves,function
 	.thumb_func
@@ -19726,87 +21358,87 @@ Task_TryLearnNewMoves:
 	bl	WaitFanfare
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L2281	@cond_branch
-	ldr	r0, .L2290
+	beq	.L2285	@cond_branch
+	ldr	r0, .L2294
 	ldrh	r1, [r0, #0x2e]
 	mov	r6, #0x1
 	add	r0, r6, #0
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L2282	@cond_branch
+	bne	.L2286	@cond_branch
 	mov	r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L2281	@cond_branch
-.L2282:
+	beq	.L2285	@cond_branch
+.L2286:
 	bl	RemoveLevelUpStatsWindow
-	ldr	r4, .L2290+0x4
+	ldr	r4, .L2294+0x4
 	mov	r1, #0x9
 	ldrsb	r1, [r4, r1]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L2290+0x8
+	ldr	r1, .L2294+0x8
 	add	r0, r0, r1
 	mov	r1, #0x1
 	bl	MonTryLearningNewMove
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
 	strh	r6, [r4, #0x10]
-	ldr	r0, .L2290+0xc
+	ldr	r0, .L2294+0xc
 	cmp	r1, r0
-	beq	.L2286	@cond_branch
+	beq	.L2290	@cond_branch
 	cmp	r1, r0
-	bgt	.L2289	@cond_branch
+	bgt	.L2293	@cond_branch
 	cmp	r1, #0
-	beq	.L2284	@cond_branch
-	b	.L2287
-.L2291:
+	beq	.L2288	@cond_branch
+	b	.L2291
+.L2295:
 	.align	2, 0
-.L2290:
+.L2294:
 	.word	gMain
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	0xfffe
-.L2289:
-	ldr	r0, .L2292
-	cmp	r1, r0
-	beq	.L2285	@cond_branch
-	b	.L2287
 .L2293:
+	ldr	r0, .L2296
+	cmp	r1, r0
+	beq	.L2289	@cond_branch
+	b	.L2291
+.L2297:
 	.align	2, 0
-.L2292:
+.L2296:
 	.word	0xffff
-.L2284:
+.L2288:
 	add	r0, r5, #0
 	bl	PartyMenuTryEvolution
-	b	.L2281
-.L2285:
+	b	.L2285
+.L2289:
 	add	r0, r5, #0
 	bl	DisplayMonNeedsToReplaceMove
-	b	.L2281
-.L2286:
-	ldr	r0, .L2294
+	b	.L2285
+.L2290:
+	ldr	r0, .L2298
 	lsl	r1, r5, #0x2
 	add	r1, r1, r5
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L2294+0x4
+	ldr	r0, .L2298+0x4
 	str	r0, [r1]
-	b	.L2281
-.L2295:
+	b	.L2285
+.L2299:
 	.align	2, 0
-.L2294:
+.L2298:
 	.word	gTasks
 	.word	Task_TryLearningNextMove
-.L2287:
+.L2291:
 	add	r0, r5, #0
 	bl	DisplayMonLearnedMove
-.L2281:
+.L2285:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.Lfe267:
-	.size	 Task_TryLearnNewMoves,.Lfe267-Task_TryLearnNewMoves
+.Lfe266:
+	.size	 Task_TryLearnNewMoves,.Lfe266-Task_TryLearnNewMoves
 	.align	2, 0
 	.type	 Task_TryLearningNextMove,function
 	.thumb_func
@@ -19814,57 +21446,57 @@ Task_TryLearningNextMove:
 	push	{r4, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r0, .L2304
+	ldr	r0, .L2308
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L2304+0x4
+	ldr	r1, .L2308+0x4
 	add	r0, r0, r1
 	mov	r1, #0x0
 	bl	MonTryLearningNewMove
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
-	ldr	r0, .L2304+0x8
+	ldr	r0, .L2308+0x8
 	cmp	r1, r0
-	beq	.L2296	@cond_branch
+	beq	.L2300	@cond_branch
 	cmp	r1, r0
-	bgt	.L2303	@cond_branch
+	bgt	.L2307	@cond_branch
 	cmp	r1, #0
-	beq	.L2298	@cond_branch
-	b	.L2301
-.L2305:
+	beq	.L2302	@cond_branch
+	b	.L2305
+.L2309:
 	.align	2, 0
-.L2304:
+.L2308:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	0xfffe
-.L2303:
-	ldr	r0, .L2306
-	cmp	r1, r0
-	beq	.L2299	@cond_branch
-	b	.L2301
 .L2307:
+	ldr	r0, .L2310
+	cmp	r1, r0
+	beq	.L2303	@cond_branch
+	b	.L2305
+.L2311:
 	.align	2, 0
-.L2306:
+.L2310:
 	.word	0xffff
-.L2298:
+.L2302:
 	add	r0, r4, #0
 	bl	PartyMenuTryEvolution
-	b	.L2296
-.L2299:
+	b	.L2300
+.L2303:
 	add	r0, r4, #0
 	bl	DisplayMonNeedsToReplaceMove
-	b	.L2296
-.L2301:
+	b	.L2300
+.L2305:
 	add	r0, r4, #0
 	bl	DisplayMonLearnedMove
-.L2296:
+.L2300:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.Lfe268:
-	.size	 Task_TryLearningNextMove,.Lfe268-Task_TryLearningNextMove
+.Lfe267:
+	.size	 Task_TryLearningNextMove,.Lfe267-Task_TryLearningNextMove
 	.align	2, 0
 	.type	 PartyMenuTryEvolution,function
 	.thumb_func
@@ -19872,12 +21504,12 @@ PartyMenuTryEvolution:
 	push	{r4, r5, r6, r7, lr}
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
-	ldr	r6, .L2311
+	ldr	r6, .L2315
 	mov	r1, #0x9
 	ldrsb	r1, [r6, r1]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L2311+0x4
+	ldr	r0, .L2315+0x4
 	add	r7, r1, r0
 	add	r0, r7, #0
 	mov	r1, #0x0
@@ -19887,9 +21519,9 @@ PartyMenuTryEvolution:
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
 	cmp	r4, #0
-	beq	.L2309	@cond_branch
+	beq	.L2313	@cond_branch
 	bl	FreePartyPointers
-	ldr	r0, .L2311+0x8
+	ldr	r0, .L2315+0x8
 	ldr	r1, [r6]
 	str	r1, [r0]
 	ldrb	r3, [r6, #0x9]
@@ -19899,32 +21531,32 @@ PartyMenuTryEvolution:
 	bl	BeginEvolutionScene
 	add	r0, r5, #0
 	bl	DestroyTask
-	b	.L2310
-.L2312:
+	b	.L2314
+.L2316:
 	.align	2, 0
-.L2311:
+.L2315:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gCB2_AfterEvolution
-.L2309:
-	ldr	r0, .L2313
+.L2313:
+	ldr	r0, .L2317
 	lsl	r1, r5, #0x2
 	add	r1, r1, r5
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L2313+0x4
+	ldr	r0, .L2317+0x4
 	str	r0, [r1]
-.L2310:
+.L2314:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L2314:
+.L2318:
 	.align	2, 0
-.L2313:
+.L2317:
 	.word	gTasks
 	.word	Task_ClosePartyMenuAfterText
-.Lfe269:
-	.size	 PartyMenuTryEvolution,.Lfe269-PartyMenuTryEvolution
+.Lfe268:
+	.size	 PartyMenuTryEvolution,.Lfe268-PartyMenuTryEvolution
 	.align	2, 0
 	.type	 DisplayMonNeedsToReplaceMove,function
 	.thumb_func
@@ -19935,26 +21567,26 @@ DisplayMonNeedsToReplaceMove:
 	add	r5, r0, #0
 	lsl	r5, r5, #0x18
 	lsr	r5, r5, #0x18
-	ldr	r0, .L2316
+	ldr	r0, .L2320
 	mov	r8, r0
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L2316+0x4
+	ldr	r1, .L2320+0x4
 	add	r0, r0, r1
-	ldr	r1, .L2316+0x8
+	ldr	r1, .L2320+0x8
 	bl	GetMonNickname
-	ldr	r0, .L2316+0xc
-	ldr	r6, .L2316+0x10
+	ldr	r0, .L2320+0xc
+	ldr	r6, .L2320+0x10
 	ldrh	r2, [r6]
 	mov	r1, #0xd
 	mul	r1, r1, r2
-	ldr	r2, .L2316+0x14
+	ldr	r2, .L2320+0x14
 	add	r1, r1, r2
 	bl	StringCopy
-	ldr	r4, .L2316+0x18
-	ldr	r1, .L2316+0x1c
+	ldr	r4, .L2320+0x18
+	ldr	r1, .L2320+0x1c
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	add	r0, r4, #0
@@ -19965,21 +21597,21 @@ DisplayMonNeedsToReplaceMove:
 	ldrh	r0, [r6]
 	mov	r1, r8
 	strh	r0, [r1, #0xe]
-	ldr	r1, .L2316+0x20
+	ldr	r1, .L2320+0x20
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2316+0x24
+	ldr	r1, .L2320+0x24
 	str	r1, [r0]
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L2317:
+.L2321:
 	.align	2, 0
-.L2316:
+.L2320:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gStringVar1
@@ -19990,8 +21622,8 @@ DisplayMonNeedsToReplaceMove:
 	.word	gText_PkmnNeedsToReplaceMove
 	.word	gTasks
 	.word	Task_ReplaceMoveYesNo
-.Lfe270:
-	.size	 DisplayMonNeedsToReplaceMove,.Lfe270-DisplayMonNeedsToReplaceMove
+.Lfe269:
+	.size	 DisplayMonNeedsToReplaceMove,.Lfe269-DisplayMonNeedsToReplaceMove
 	.align	2, 0
 	.type	 DisplayMonLearnedMove,function
 	.thumb_func
@@ -20005,24 +21637,24 @@ DisplayMonLearnedMove:
 	lsr	r6, r6, #0x18
 	lsl	r5, r5, #0x10
 	lsr	r5, r5, #0x10
-	ldr	r0, .L2319
+	ldr	r0, .L2323
 	mov	r8, r0
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L2319+0x4
+	ldr	r1, .L2323+0x4
 	add	r0, r0, r1
-	ldr	r1, .L2319+0x8
+	ldr	r1, .L2323+0x8
 	bl	GetMonNickname
-	ldr	r0, .L2319+0xc
+	ldr	r0, .L2323+0xc
 	mov	r1, #0xd
 	mul	r1, r1, r5
-	ldr	r2, .L2319+0x10
+	ldr	r2, .L2323+0x10
 	add	r1, r1, r2
 	bl	StringCopy
-	ldr	r4, .L2319+0x14
-	ldr	r1, .L2319+0x18
+	ldr	r4, .L2323+0x14
+	ldr	r1, .L2323+0x18
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	add	r0, r4, #0
@@ -20032,21 +21664,21 @@ DisplayMonLearnedMove:
 	bl	ScheduleBgCopyTilemapToVram
 	mov	r0, r8
 	strh	r5, [r0, #0xe]
-	ldr	r1, .L2319+0x1c
+	ldr	r1, .L2323+0x1c
 	lsl	r0, r6, #0x2
 	add	r0, r0, r6
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2319+0x20
+	ldr	r1, .L2323+0x20
 	str	r1, [r0]
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L2320:
+.L2324:
 	.align	2, 0
-.L2319:
+.L2323:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gStringVar1
@@ -20056,8 +21688,8 @@ DisplayMonLearnedMove:
 	.word	gText_PkmnLearnedMove3
 	.word	gTasks
 	.word	Task_DoLearnedMoveFanfareAfterText
-.Lfe271:
-	.size	 DisplayMonLearnedMove,.Lfe271-DisplayMonLearnedMove
+.Lfe270:
+	.size	 DisplayMonLearnedMove,.Lfe270-DisplayMonLearnedMove
 	.align	2, 0
 	.type	 BufferMonStatsToTaskData,function
 	.thumb_func
@@ -20091,8 +21723,8 @@ BufferMonStatsToTaskData:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.Lfe272:
-	.size	 BufferMonStatsToTaskData,.Lfe272-BufferMonStatsToTaskData
+.Lfe271:
+	.size	 BufferMonStatsToTaskData,.Lfe271-BufferMonStatsToTaskData
 	.align	2, 0
 	.globl	ItemUseCB_SacredAsh
 	.type	 ItemUseCB_SacredAsh,function
@@ -20101,17 +21733,17 @@ ItemUseCB_SacredAsh:
 	push	{r4, lr}
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r1, .L2323
+	ldr	r1, .L2327
 	ldr	r2, [r1]
 	mov	r3, #0x86
 	lsl	r3, r3, #0x2
 	add	r1, r2, r3
 	mov	r3, #0x0
 	strh	r3, [r1]
-	ldr	r4, .L2323+0x4
+	ldr	r4, .L2327+0x4
 	add	r1, r2, r4
 	strh	r3, [r1]
-	ldr	r1, .L2323+0x8
+	ldr	r1, .L2327+0x8
 	ldrb	r1, [r1, #0x9]
 	lsl	r1, r1, #24
 	asr	r1, r1, #24
@@ -20123,14 +21755,14 @@ ItemUseCB_SacredAsh:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2324:
+.L2328:
 	.align	2, 0
-.L2323:
+.L2327:
 	.word	sPartyMenuInternal
 	.word	0x21a
 	.word	gPartyMenu
-.Lfe273:
-	.size	 ItemUseCB_SacredAsh,.Lfe273-ItemUseCB_SacredAsh
+.Lfe272:
+	.size	 ItemUseCB_SacredAsh,.Lfe272-ItemUseCB_SacredAsh
 	.align	2, 0
 	.type	 UseSacredAsh,function
 	.thumb_func
@@ -20142,52 +21774,52 @@ UseSacredAsh:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	mov	r8, r4
-	ldr	r6, .L2330
+	ldr	r6, .L2334
 	mov	r1, #0x9
 	ldrsb	r1, [r6, r1]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L2330+0x4
+	ldr	r0, .L2334+0x4
 	add	r5, r1, r0
 	add	r0, r5, #0
 	mov	r1, #0xb
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L2329	@cond_branch
+	beq	.L2333	@cond_branch
 	add	r0, r5, #0
 	mov	r1, #0x39
 	bl	GetMonData
 	lsl	r0, r0, #0x10
 	lsr	r7, r0, #0x10
 	ldrb	r0, [r6, #0x9]
-	ldr	r1, .L2330+0x8
+	ldr	r1, .L2334+0x8
 	ldrh	r1, [r1]
 	mov	r2, #0x0
 	bl	ExecuteTableBasedItemEffect_
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L2327	@cond_branch
-.L2329:
-	ldr	r0, .L2330+0xc
+	beq	.L2331	@cond_branch
+.L2333:
+	ldr	r0, .L2334+0xc
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L2330+0x10
+	ldr	r0, .L2334+0x10
 	str	r0, [r1]
-	b	.L2325
-.L2331:
+	b	.L2329
+.L2335:
 	.align	2, 0
-.L2330:
+.L2334:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gSpecialVar_ItemId
 	.word	gTasks
 	.word	Task_SacredAshLoop
-.L2327:
+.L2331:
 	mov	r0, #0x1
 	bl	PlaySE
-	ldr	r4, .L2332
+	ldr	r4, .L2336
 	mov	r0, #0x9
 	ldrsb	r0, [r6, r0]
 	lsl	r0, r0, #0x4
@@ -20195,7 +21827,7 @@ UseSacredAsh:
 	add	r1, r1, r0
 	add	r0, r5, #0
 	bl	SetPartyMonAilmentGfx
-	ldr	r2, .L2332+0x4
+	ldr	r2, .L2336+0x4
 	mov	r0, #0x9
 	ldrsb	r0, [r6, r0]
 	ldr	r1, [r4]
@@ -20210,13 +21842,13 @@ UseSacredAsh:
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1d
 	cmp	r0, #0
-	bge	.L2328	@cond_branch
+	bge	.L2332	@cond_branch
 	add	r0, r5, #0
 	add	r1, r3, #0
 	mov	r2, #0x1
 	bl	DisplayPartyPokemonLevelCheck
-.L2328:
-	ldr	r4, .L2332+0x8
+.L2332:
+	ldr	r4, .L2336+0x8
 	ldr	r0, [r4]
 	mov	r1, #0x87
 	lsl	r1, r1, #0x2
@@ -20235,7 +21867,7 @@ UseSacredAsh:
 	lsl	r3, r3, #0x10
 	asr	r3, r3, #0x10
 	ldrb	r1, [r6, #0x9]
-	ldr	r0, .L2332+0xc
+	ldr	r0, .L2336+0xc
 	str	r0, [sp]
 	mov	r0, r8
 	mov	r2, #0x1
@@ -20250,26 +21882,26 @@ UseSacredAsh:
 	add	r1, r0, r2
 	mov	r2, #0x1
 	strh	r2, [r1]
-	ldr	r1, .L2332+0x10
+	ldr	r1, .L2336+0x10
 	add	r0, r0, r1
 	strh	r2, [r0]
-.L2325:
+.L2329:
 	add	sp, sp, #0x4
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L2333:
+.L2337:
 	.align	2, 0
-.L2332:
+.L2336:
 	.word	sPartyMenuBoxes
 	.word	gSprites
 	.word	sPartyMenuInternal
 	.word	Task_SacredAshDisplayHPRestored
 	.word	0x21a
-.Lfe274:
-	.size	 UseSacredAsh,.Lfe274-UseSacredAsh
+.Lfe273:
+	.size	 UseSacredAsh,.Lfe273-UseSacredAsh
 	.align	2, 0
 	.type	 Task_SacredAshLoop,function
 	.thumb_func
@@ -20281,17 +21913,17 @@ Task_SacredAshLoop:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L2335	@cond_branch
-	ldr	r5, .L2341
+	beq	.L2339	@cond_branch
+	ldr	r5, .L2345
 	ldr	r2, [r5]
 	mov	r0, #0x86
 	lsl	r0, r0, #0x2
 	add	r1, r2, r0
 	mov	r3, #0x0
 	ldrsh	r0, [r1, r3]
-	ldr	r3, .L2341+0x4
+	ldr	r3, .L2345+0x4
 	cmp	r0, #0x1
-	bne	.L2336	@cond_branch
+	bne	.L2340	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r1]
 	mov	r1, #0x9
@@ -20300,74 +21932,74 @@ Task_SacredAshLoop:
 	lsl	r6, r6, #0x2
 	add	r0, r2, r6
 	strh	r1, [r0]
-.L2336:
+.L2340:
 	ldrb	r0, [r3, #0x9]
 	add	r0, r0, #0x1
 	strb	r0, [r3, #0x9]
 	lsl	r0, r0, #0x18
 	asr	r0, r0, #0x18
 	cmp	r0, #0x6
-	bne	.L2337	@cond_branch
+	bne	.L2341	@cond_branch
 	ldr	r0, [r5]
-	ldr	r1, .L2341+0x8
+	ldr	r1, .L2345+0x8
 	add	r0, r0, r1
 	mov	r2, #0x0
 	ldrsh	r1, [r0, r2]
 	cmp	r1, #0
-	bne	.L2338	@cond_branch
-	ldr	r0, .L2341+0xc
+	bne	.L2342	@cond_branch
+	ldr	r0, .L2345+0xc
 	strb	r1, [r0]
-	ldr	r0, .L2341+0x10
+	ldr	r0, .L2345+0x10
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
-	b	.L2339
-.L2342:
+	b	.L2343
+.L2346:
 	.align	2, 0
-.L2341:
+.L2345:
 	.word	sPartyMenuInternal
 	.word	gPartyMenu
 	.word	0x21a
 	.word	gPartyMenuUseExitCallback
 	.word	gText_WontHaveEffect
-.L2338:
-	ldr	r1, .L2343
+.L2342:
+	ldr	r1, .L2347
 	mov	r0, #0x1
 	strb	r0, [r1]
-	ldr	r0, .L2343+0x4
+	ldr	r0, .L2347+0x4
 	ldrh	r0, [r0]
 	mov	r1, #0x1
 	bl	RemoveBagItem
-.L2339:
-	ldr	r1, .L2343+0x8
+.L2343:
+	ldr	r1, .L2347+0x8
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2343+0xc
+	ldr	r1, .L2347+0xc
 	str	r1, [r0]
-	ldr	r1, .L2343+0x10
+	ldr	r1, .L2347+0x10
 	mov	r0, #0x0
 	strb	r0, [r1, #0x9]
-	b	.L2335
-.L2344:
+	b	.L2339
+.L2348:
 	.align	2, 0
-.L2343:
+.L2347:
 	.word	gPartyMenuUseExitCallback
 	.word	gSpecialVar_ItemId
 	.word	gTasks
 	.word	Task_ClosePartyMenuAfterText
 	.word	gPartyMenu
-.L2337:
+.L2341:
 	add	r0, r4, #0
 	bl	UseSacredAsh
-.L2335:
+.L2339:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.Lfe275:
-	.size	 Task_SacredAshLoop,.Lfe275-Task_SacredAshLoop
+.Lfe274:
+	.size	 Task_SacredAshLoop,.Lfe274-Task_SacredAshLoop
 	.align	2, 0
 	.type	 Task_SacredAshDisplayHPRestored,function
 	.thumb_func
@@ -20376,17 +22008,17 @@ Task_SacredAshDisplayHPRestored:
 	add	r5, r0, #0
 	lsl	r5, r5, #0x18
 	lsr	r5, r5, #0x18
-	ldr	r0, .L2346
+	ldr	r0, .L2350
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L2346+0x4
+	ldr	r1, .L2350+0x4
 	add	r0, r0, r1
-	ldr	r1, .L2346+0x8
+	ldr	r1, .L2350+0x8
 	bl	GetMonNickname
-	ldr	r4, .L2346+0xc
-	ldr	r1, .L2346+0x10
+	ldr	r4, .L2350+0xc
+	ldr	r1, .L2350+0x10
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
 	add	r0, r4, #0
@@ -20394,19 +22026,19 @@ Task_SacredAshDisplayHPRestored:
 	bl	DisplayPartyMenuMessage
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
-	ldr	r1, .L2346+0x14
+	ldr	r1, .L2350+0x14
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2346+0x18
+	ldr	r1, .L2350+0x18
 	str	r1, [r0]
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L2347:
+.L2351:
 	.align	2, 0
-.L2346:
+.L2350:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gStringVar1
@@ -20414,8 +22046,8 @@ Task_SacredAshDisplayHPRestored:
 	.word	gText_PkmnHPRestoredByVar2
 	.word	gTasks
 	.word	Task_SacredAshLoop
-.Lfe276:
-	.size	 Task_SacredAshDisplayHPRestored,.Lfe276-Task_SacredAshDisplayHPRestored
+.Lfe275:
+	.size	 Task_SacredAshDisplayHPRestored,.Lfe275-Task_SacredAshDisplayHPRestored
 	.align	2, 0
 	.globl	ItemUseCB_EvolutionStone
 	.type	 ItemUseCB_EvolutionStone,function
@@ -20427,53 +22059,53 @@ ItemUseCB_EvolutionStone:
 	lsr	r5, r0, #0x18
 	mov	r0, #0x5
 	bl	PlaySE
-	ldr	r2, .L2351
-	ldr	r1, .L2351+0x4
+	ldr	r2, .L2355
+	ldr	r1, .L2355+0x4
 	ldr	r0, [r1]
 	str	r0, [r2]
 	ldrb	r0, [r1, #0x9]
-	ldr	r4, .L2351+0x8
+	ldr	r4, .L2355+0x8
 	ldrh	r1, [r4]
 	mov	r2, #0x0
 	bl	ExecuteTableBasedItemEffect_
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L2349	@cond_branch
-	ldr	r1, .L2351+0xc
+	beq	.L2353	@cond_branch
+	ldr	r1, .L2355+0xc
 	mov	r0, #0x0
 	strb	r0, [r1]
-	ldr	r0, .L2351+0x10
+	ldr	r0, .L2355+0x10
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
-	ldr	r1, .L2351+0x14
+	ldr	r1, .L2355+0x14
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
 	str	r6, [r0]
-	b	.L2350
-.L2352:
+	b	.L2354
+.L2356:
 	.align	2, 0
-.L2351:
+.L2355:
 	.word	gCB2_AfterEvolution
 	.word	gPartyMenu
 	.word	gSpecialVar_ItemId
 	.word	gPartyMenuUseExitCallback
 	.word	gText_WontHaveEffect
 	.word	gTasks
-.L2349:
+.L2353:
 	ldrh	r0, [r4]
 	mov	r1, #0x1
 	bl	RemoveBagItem
 	bl	FreePartyPointers
-.L2350:
+.L2354:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.Lfe277:
-	.size	 ItemUseCB_EvolutionStone,.Lfe277-ItemUseCB_EvolutionStone
+.Lfe276:
+	.size	 ItemUseCB_EvolutionStone,.Lfe276-ItemUseCB_EvolutionStone
 	.align	2, 0
 	.globl	GetItemEffectType
 	.type	 GetItemEffectType,function
@@ -20487,206 +22119,206 @@ GetItemEffectType:
 	lsl	r0, r2, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0xb6
-	bls	.LCB21640
-	b	.L2402	@long jump
-.LCB21640:
+	bls	.LCB21633
+	b	.L2406	@long jump
+.LCB21633:
 	cmp	r1, #0xcd
-	bne	.L2355	@cond_branch
-	ldr	r0, .L2403
+	bne	.L2359	@cond_branch
+	ldr	r0, .L2407
 	ldr	r0, [r0]
-	ldr	r1, .L2403+0x4
+	ldr	r1, .L2407+0x4
 	add	r4, r0, r1
-	b	.L2356
-.L2404:
+	b	.L2360
+.L2408:
 	.align	2, 0
-.L2403:
+.L2407:
 	.word	gSaveBlock1Ptr
 	.word	0x3214
-.L2355:
-	ldr	r1, .L2405
+.L2359:
+	ldr	r1, .L2409
 	lsl	r0, r2, #0x2
 	add	r0, r0, r1
 	ldr	r4, [r0]
-.L2356:
+.L2360:
 	ldrb	r1, [r4]
 	mov	r5, #0x3f
 	add	r0, r5, #0
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L2358	@cond_branch
+	bne	.L2362	@cond_branch
 	ldrb	r0, [r4, #0x1]
 	cmp	r0, #0
-	bne	.L2358	@cond_branch
+	bne	.L2362	@cond_branch
 	ldrb	r0, [r4, #0x2]
 	cmp	r0, #0
-	bne	.L2358	@cond_branch
+	bne	.L2362	@cond_branch
 	ldrb	r3, [r4, #0x3]
 	mov	r0, #0x80
 	and	r0, r0, r3
 	cmp	r0, #0
-	beq	.L2357	@cond_branch
-.L2358:
+	beq	.L2361	@cond_branch
+.L2362:
 	mov	r0, #0x0
-	b	.L2401
-.L2406:
+	b	.L2405
+.L2410:
 	.align	2, 0
-.L2405:
+.L2409:
 	.word	gItemEffectTable
-.L2357:
+.L2361:
 	mov	r2, #0x40
 	add	r0, r2, #0
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L2360	@cond_branch
+	beq	.L2364	@cond_branch
 	mov	r0, #0xa
-	b	.L2401
-.L2360:
+	b	.L2405
+.L2364:
 	add	r0, r2, #0
 	and	r0, r0, r3
 	cmp	r0, #0
-	beq	.L2359	@cond_branch
+	beq	.L2363	@cond_branch
 	mov	r0, #0x1
-	b	.L2401
-.L2359:
+	b	.L2405
+.L2363:
 	add	r2, r5, #0
 	and	r2, r2, r3
 	cmp	r2, #0
-	bne	.L2364	@cond_branch
+	bne	.L2368	@cond_branch
 	lsr	r0, r1, #0x7
 	cmp	r0, #0
-	beq	.L2363	@cond_branch
-.L2364:
+	beq	.L2367	@cond_branch
+.L2368:
 	cmp	r2, #0x20
-	bne	.L2365	@cond_branch
-	mov	r0, #0x4
-	b	.L2401
-.L2365:
-	cmp	r2, #0x10
-	bne	.L2367	@cond_branch
-	mov	r0, #0x3
-	b	.L2401
-.L2367:
-	cmp	r2, #0x8
 	bne	.L2369	@cond_branch
-	mov	r0, #0x5
-	b	.L2401
+	mov	r0, #0x4
+	b	.L2405
 .L2369:
-	cmp	r2, #0x4
+	cmp	r2, #0x10
 	bne	.L2371	@cond_branch
-	mov	r0, #0x6
-	b	.L2401
+	mov	r0, #0x3
+	b	.L2405
 .L2371:
-	cmp	r2, #0x2
+	cmp	r2, #0x8
 	bne	.L2373	@cond_branch
-	mov	r0, #0x7
-	b	.L2401
+	mov	r0, #0x5
+	b	.L2405
 .L2373:
-	cmp	r2, #0x1
+	cmp	r2, #0x4
 	bne	.L2375	@cond_branch
-	mov	r0, #0x8
-	b	.L2401
+	mov	r0, #0x6
+	b	.L2405
 .L2375:
+	cmp	r2, #0x2
+	bne	.L2377	@cond_branch
+	mov	r0, #0x7
+	b	.L2405
+.L2377:
+	cmp	r2, #0x1
+	bne	.L2379	@cond_branch
+	mov	r0, #0x8
+	b	.L2405
+.L2379:
 	lsr	r0, r1, #0x7
 	cmp	r0, #0
-	beq	.L2377	@cond_branch
+	beq	.L2381	@cond_branch
 	cmp	r2, #0
-	bne	.L2377	@cond_branch
+	bne	.L2381	@cond_branch
 	mov	r0, #0x9
-	b	.L2401
-.L2377:
+	b	.L2405
+.L2381:
 	mov	r0, #0xb
-	b	.L2401
-.L2363:
+	b	.L2405
+.L2367:
 	ldrb	r1, [r4, #0x4]
 	mov	r0, #0x44
 	and	r0, r0, r1
 	add	r2, r1, #0
 	cmp	r0, #0
-	beq	.L2379	@cond_branch
+	beq	.L2383	@cond_branch
 	mov	r0, #0x2
-	b	.L2401
-.L2379:
+	b	.L2405
+.L2383:
 	mov	r5, #0x2
 	add	r0, r5, #0
 	and	r0, r0, r2
 	cmp	r0, #0
-	beq	.L2381	@cond_branch
+	beq	.L2385	@cond_branch
 	mov	r0, #0xc
-	b	.L2401
-.L2381:
+	b	.L2405
+.L2385:
 	mov	r3, #0x1
 	add	r0, r3, #0
 	and	r0, r0, r2
 	cmp	r0, #0
-	beq	.L2383	@cond_branch
+	beq	.L2387	@cond_branch
 	mov	r0, #0xd
-	b	.L2401
-.L2383:
+	b	.L2405
+.L2387:
 	ldrb	r1, [r4, #0x5]
 	mov	r0, #0x8
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L2385	@cond_branch
+	beq	.L2389	@cond_branch
 	mov	r0, #0xe
-	b	.L2401
-.L2385:
+	b	.L2405
+.L2389:
 	mov	r0, #0x4
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L2387	@cond_branch
+	beq	.L2391	@cond_branch
 	mov	r0, #0xf
-	b	.L2401
-.L2387:
+	b	.L2405
+.L2391:
 	add	r0, r5, #0
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L2389	@cond_branch
+	beq	.L2393	@cond_branch
 	mov	r0, #0x10
-	b	.L2401
-.L2389:
+	b	.L2405
+.L2393:
 	add	r0, r3, #0
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L2391	@cond_branch
+	beq	.L2395	@cond_branch
 	mov	r0, #0x11
-	b	.L2401
-.L2391:
+	b	.L2405
+.L2395:
 	mov	r0, #0x80
 	and	r0, r0, r2
 	cmp	r0, #0
-	beq	.L2393	@cond_branch
+	beq	.L2397	@cond_branch
 	mov	r0, #0x12
-	b	.L2401
-.L2393:
+	b	.L2405
+.L2397:
 	mov	r0, #0x20
 	and	r0, r0, r2
 	cmp	r0, #0
-	beq	.L2395	@cond_branch
+	beq	.L2399	@cond_branch
 	mov	r0, #0x13
-	b	.L2401
-.L2395:
+	b	.L2405
+.L2399:
 	mov	r0, #0x10
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L2397	@cond_branch
+	beq	.L2401	@cond_branch
 	mov	r0, #0x14
-	b	.L2401
-.L2397:
+	b	.L2405
+.L2401:
 	mov	r0, #0x18
 	and	r0, r0, r2
 	cmp	r0, #0
-	bne	.L2399	@cond_branch
-.L2402:
+	bne	.L2403	@cond_branch
+.L2406:
 	mov	r0, #0x16
-	b	.L2401
-.L2399:
+	b	.L2405
+.L2403:
 	mov	r0, #0x15
-.L2401:
+.L2405:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-.Lfe278:
-	.size	 GetItemEffectType,.Lfe278-GetItemEffectType
+.Lfe277:
+	.size	 GetItemEffectType,.Lfe277-GetItemEffectType
 	.align	2, 0
 	.type	 TryTutorSelectedMon,function
 	.thumb_func
@@ -20696,35 +22328,35 @@ TryTutorSelectedMon:
 	push	{r7}
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-	ldr	r0, .L2417
+	ldr	r0, .L2421
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L2407	@cond_branch
-	ldr	r7, .L2417+0x4
+	bne	.L2411	@cond_branch
+	ldr	r7, .L2421+0x4
 	mov	r1, #0x9
 	ldrsb	r1, [r7, r1]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L2417+0x8
+	ldr	r0, .L2421+0x8
 	add	r5, r1, r0
 	mov	r0, #0xe
 	add	r0, r0, r7
 	mov	r8, r0
-	ldr	r1, .L2417+0xc
+	ldr	r1, .L2421+0xc
 	add	r0, r5, #0
 	bl	GetMonNickname
-	ldr	r4, .L2417+0x10
+	ldr	r4, .L2421+0x10
 	ldrb	r0, [r4]
 	bl	GetTutorMove
 	strh	r0, [r7, #0xe]
-	ldr	r0, .L2417+0x14
+	ldr	r0, .L2421+0x14
 	mov	r1, #0xe
 	ldrsh	r2, [r7, r1]
 	mov	r1, #0xd
 	mul	r1, r1, r2
-	ldr	r2, .L2417+0x18
+	ldr	r2, .L2421+0x18
 	add	r1, r1, r2
 	bl	StringCopy
 	mov	r0, #0x2
@@ -20737,22 +22369,22 @@ TryTutorSelectedMon:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L2410	@cond_branch
+	beq	.L2414	@cond_branch
 	cmp	r0, #0x2
-	beq	.L2411	@cond_branch
+	beq	.L2415	@cond_branch
 	ldrh	r1, [r7, #0xe]
 	add	r0, r5, #0
 	bl	GiveMoveToMon
 	lsl	r0, r0, #0x10
-	ldr	r1, .L2417+0x1c
+	ldr	r1, .L2421+0x1c
 	cmp	r0, r1
-	beq	.L2409	@cond_branch
+	beq	.L2413	@cond_branch
 	add	r0, r6, #0
 	bl	Task_LearnedMove
-	b	.L2407
-.L2418:
+	b	.L2411
+.L2422:
 	.align	2, 0
-.L2417:
+.L2421:
 	.word	gPaletteFade
 	.word	gPartyMenu
 	.word	gPlayerParty
@@ -20761,47 +22393,47 @@ TryTutorSelectedMon:
 	.word	gStringVar2
 	.word	gMoveNames
 	.word	-0x10000
-.L2410:
-	ldr	r1, .L2419
-	b	.L2416
-.L2420:
+.L2414:
+	ldr	r1, .L2423
+	b	.L2420
+.L2424:
 	.align	2, 0
-.L2419:
+.L2423:
 	.word	gText_PkmnCantLearnMove
-.L2411:
-	ldr	r1, .L2421
-.L2416:
+.L2415:
+	ldr	r1, .L2425
+.L2420:
 	add	r0, r6, #0
 	bl	DisplayLearnMoveMessageAndClose
-	b	.L2407
-.L2422:
+	b	.L2411
+.L2426:
 	.align	2, 0
-.L2421:
+.L2425:
 	.word	gText_PkmnAlreadyKnows
-.L2409:
-	ldr	r0, .L2423
+.L2413:
+	ldr	r0, .L2427
 	bl	DisplayLearnMoveMessage
-	ldr	r1, .L2423+0x4
+	ldr	r1, .L2427+0x4
 	lsl	r0, r6, #0x2
 	add	r0, r0, r6
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2423+0x8
+	ldr	r1, .L2427+0x8
 	str	r1, [r0]
-.L2407:
+.L2411:
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L2424:
+.L2428:
 	.align	2, 0
-.L2423:
+.L2427:
 	.word	gText_PkmnNeedsToReplaceMove
 	.word	gTasks
 	.word	Task_ReplaceMoveYesNo
-.Lfe279:
-	.size	 TryTutorSelectedMon,.Lfe279-TryTutorSelectedMon
+.Lfe278:
+	.size	 TryTutorSelectedMon,.Lfe278-TryTutorSelectedMon
 	.align	2, 0
 	.globl	CB2_PartyMenuFromStartMenu
 	.type	 CB2_PartyMenuFromStartMenu,function
@@ -20811,9 +22443,9 @@ CB2_PartyMenuFromStartMenu:
 	add	sp, sp, #-0xc
 	mov	r0, #0x0
 	str	r0, [sp]
-	ldr	r0, .L2426
+	ldr	r0, .L2430
 	str	r0, [sp, #0x4]
-	ldr	r0, .L2426+0x4
+	ldr	r0, .L2430+0x4
 	str	r0, [sp, #0x8]
 	mov	r0, #0x0
 	mov	r1, #0x0
@@ -20823,13 +22455,13 @@ CB2_PartyMenuFromStartMenu:
 	add	sp, sp, #0xc
 	pop	{r0}
 	bx	r0
-.L2427:
+.L2431:
 	.align	2, 0
-.L2426:
+.L2430:
 	.word	Task_HandleChooseMonInput
 	.word	CB2_ReturnToFieldWithOpenMenu
-.Lfe280:
-	.size	 CB2_PartyMenuFromStartMenu,.Lfe280-CB2_PartyMenuFromStartMenu
+.Lfe279:
+	.size	 CB2_PartyMenuFromStartMenu,.Lfe279-CB2_PartyMenuFromStartMenu
 	.align	2, 0
 	.globl	CB2_ChooseMonToGiveItem
 	.type	 CB2_ChooseMonToGiveItem,function
@@ -20839,14 +22471,14 @@ CB2_ChooseMonToGiveItem:
 	add	sp, sp, #-0xc
 	bl	InBattlePyramid
 	lsl	r0, r0, #0x18
-	ldr	r1, .L2431
+	ldr	r1, .L2435
 	cmp	r0, #0
-	bne	.L2429	@cond_branch
-	ldr	r1, .L2431+0x4
-.L2429:
+	bne	.L2433	@cond_branch
+	ldr	r1, .L2435+0x4
+.L2433:
 	mov	r0, #0x6
 	str	r0, [sp]
-	ldr	r0, .L2431+0x8
+	ldr	r0, .L2435+0x8
 	str	r0, [sp, #0x4]
 	str	r1, [sp, #0x8]
 	mov	r0, #0x0
@@ -20854,23 +22486,23 @@ CB2_ChooseMonToGiveItem:
 	mov	r2, #0x5
 	mov	r3, #0x0
 	bl	InitPartyMenu
-	ldr	r1, .L2431+0xc
-	ldr	r0, .L2431+0x10
+	ldr	r1, .L2435+0xc
+	ldr	r0, .L2435+0x10
 	ldrh	r0, [r0]
 	strh	r0, [r1, #0xc]
 	add	sp, sp, #0xc
 	pop	{r0}
 	bx	r0
-.L2432:
+.L2436:
 	.align	2, 0
-.L2431:
+.L2435:
 	.word	CB2_ReturnToPyramidBagMenu
 	.word	CB2_ReturnToBagMenu
 	.word	Task_HandleChooseMonInput
 	.word	gPartyMenu
 	.word	gSpecialVar_ItemId
-.Lfe281:
-	.size	 CB2_ChooseMonToGiveItem,.Lfe281-CB2_ChooseMonToGiveItem
+.Lfe280:
+	.size	 CB2_ChooseMonToGiveItem,.Lfe280-CB2_ChooseMonToGiveItem
 	.align	2, 0
 	.type	 TryGiveItemOrMailToSelectedMon,function
 	.thumb_func
@@ -20882,8 +22514,8 @@ TryGiveItemOrMailToSelectedMon:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	add	r6, r4, #0
-	ldr	r5, .L2438
-	ldr	r0, .L2438+0x4
+	ldr	r5, .L2442
+	ldr	r0, .L2442+0x4
 	mov	r9, r0
 	ldrb	r0, [r0, #0x9]
 	lsl	r0, r0, #24
@@ -20893,33 +22525,33 @@ TryGiveItemOrMailToSelectedMon:
 	mov	r1, r8
 	mul	r1, r1, r0
 	add	r0, r1, #0
-	ldr	r7, .L2438+0x8
+	ldr	r7, .L2442+0x8
 	add	r0, r0, r7
 	mov	r1, #0xc
 	bl	GetMonData
 	strh	r0, [r5]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bne	.L2434	@cond_branch
+	bne	.L2438	@cond_branch
 	add	r0, r4, #0
 	bl	GiveItemOrMailToSelectedMon
-	b	.L2435
-.L2439:
+	b	.L2439
+.L2443:
 	.align	2, 0
-.L2438:
+.L2442:
 	.word	sPartyMenuItemId
 	.word	gPartyMenu
 	.word	gPlayerParty
-.L2434:
+.L2438:
 	ldrh	r0, [r5]
 	bl	ItemIsMail
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L2436	@cond_branch
+	beq	.L2440	@cond_branch
 	add	r0, r4, #0
 	bl	DisplayItemMustBeRemovedFirstMessage
-	b	.L2435
-.L2436:
+	b	.L2439
+.L2440:
 	mov	r1, r9
 	mov	r0, #0x9
 	ldrsb	r0, [r1, r0]
@@ -20930,27 +22562,27 @@ TryGiveItemOrMailToSelectedMon:
 	ldrh	r1, [r5]
 	mov	r2, #0x1
 	bl	DisplayAlreadyHoldingItemSwitchMessage
-	ldr	r1, .L2440
+	ldr	r1, .L2444
 	lsl	r0, r6, #0x2
 	add	r0, r0, r6
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2440+0x4
+	ldr	r1, .L2444+0x4
 	str	r1, [r0]
-.L2435:
+.L2439:
 	pop	{r3, r4}
 	mov	r8, r3
 	mov	r9, r4
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L2441:
+.L2445:
 	.align	2, 0
-.L2440:
+.L2444:
 	.word	gTasks
 	.word	Task_SwitchItemsFromBagYesNo
-.Lfe282:
-	.size	 TryGiveItemOrMailToSelectedMon,.Lfe282-TryGiveItemOrMailToSelectedMon
+.Lfe281:
+	.size	 TryGiveItemOrMailToSelectedMon,.Lfe281-TryGiveItemOrMailToSelectedMon
 	.align	2, 0
 	.type	 GiveItemOrMailToSelectedMon,function
 	.thumb_func
@@ -20958,36 +22590,36 @@ GiveItemOrMailToSelectedMon:
 	push	{r4, r5, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r5, .L2445
+	ldr	r5, .L2449
 	ldrh	r0, [r5, #0xc]
 	bl	ItemIsMail
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L2443	@cond_branch
+	beq	.L2447	@cond_branch
 	ldrh	r0, [r5, #0xc]
 	bl	RemoveItemToGiveFromBag
-	ldr	r0, .L2445+0x4
+	ldr	r0, .L2449+0x4
 	ldr	r1, [r0]
-	ldr	r0, .L2445+0x8
+	ldr	r0, .L2449+0x8
 	str	r0, [r1, #0x4]
 	add	r0, r4, #0
 	bl	Task_ClosePartyMenu
-	b	.L2444
-.L2446:
+	b	.L2448
+.L2450:
 	.align	2, 0
-.L2445:
+.L2449:
 	.word	gPartyMenu
 	.word	sPartyMenuInternal
 	.word	CB2_WriteMailToGiveMonFromBag
-.L2443:
+.L2447:
 	add	r0, r4, #0
 	bl	GiveItemToSelectedMon
-.L2444:
+.L2448:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.Lfe283:
-	.size	 GiveItemOrMailToSelectedMon,.Lfe283-GiveItemOrMailToSelectedMon
+.Lfe282:
+	.size	 GiveItemOrMailToSelectedMon,.Lfe282-GiveItemOrMailToSelectedMon
 	.align	2, 0
 	.type	 GiveItemToSelectedMon,function
 	.thumb_func
@@ -20997,13 +22629,13 @@ GiveItemToSelectedMon:
 	push	{r7}
 	lsl	r0, r0, #0x18
 	lsr	r7, r0, #0x18
-	ldr	r0, .L2449
+	ldr	r0, .L2453
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L2448	@cond_branch
-	ldr	r4, .L2449+0x4
+	bne	.L2452	@cond_branch
+	ldr	r4, .L2453+0x4
 	ldrh	r5, [r4, #0xc]
 	mov	r0, #0x9
 	ldrsb	r0, [r4, r0]
@@ -21012,7 +22644,7 @@ GiveItemToSelectedMon:
 	mov	r1, r8
 	mul	r1, r1, r0
 	add	r0, r1, #0
-	ldr	r6, .L2449+0x8
+	ldr	r6, .L2453+0x8
 	add	r0, r0, r6
 	add	r1, r5, #0
 	mov	r2, #0x0
@@ -21028,29 +22660,29 @@ GiveItemToSelectedMon:
 	bl	GiveItemToMon
 	add	r0, r5, #0
 	bl	RemoveItemToGiveFromBag
-	ldr	r1, .L2449+0xc
+	ldr	r1, .L2453+0xc
 	lsl	r0, r7, #0x2
 	add	r0, r0, r7
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2449+0x10
+	ldr	r1, .L2453+0x10
 	str	r1, [r0]
-.L2448:
+.L2452:
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L2450:
+.L2454:
 	.align	2, 0
-.L2449:
+.L2453:
 	.word	gPaletteFade
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gTasks
 	.word	Task_UpdateHeldItemSpriteAndClosePartyMenu
-.Lfe284:
-	.size	 GiveItemToSelectedMon,.Lfe284-GiveItemToSelectedMon
+.Lfe283:
+	.size	 GiveItemToSelectedMon,.Lfe283-GiveItemToSelectedMon
 	.align	2, 0
 	.type	 Task_UpdateHeldItemSpriteAndClosePartyMenu,function
 	.thumb_func
@@ -21058,49 +22690,49 @@ Task_UpdateHeldItemSpriteAndClosePartyMenu:
 	push	{r4, r5, lr}
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
-	ldr	r0, .L2453
+	ldr	r0, .L2457
 	ldrb	r4, [r0, #0x9]
 	bl	IsPartyMenuTextPrinterActive
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L2452	@cond_branch
+	beq	.L2456	@cond_branch
 	lsl	r2, r4, #0x18
 	asr	r2, r2, #0x18
 	mov	r0, #0x64
 	mul	r0, r0, r2
-	ldr	r1, .L2453+0x4
+	ldr	r1, .L2457+0x4
 	add	r0, r0, r1
-	ldr	r1, .L2453+0x8
+	ldr	r1, .L2457+0x8
 	lsl	r2, r2, #0x4
 	ldr	r1, [r1]
 	add	r1, r1, r2
 	bl	UpdatePartyMonHeldItemSprite
 	add	r0, r5, #0
 	bl	Task_ClosePartyMenu
-.L2452:
+.L2456:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L2454:
+.L2458:
 	.align	2, 0
-.L2453:
+.L2457:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	sPartyMenuBoxes
-.Lfe285:
-	.size	 Task_UpdateHeldItemSpriteAndClosePartyMenu,.Lfe285-Task_UpdateHeldItemSpriteAndClosePartyMenu
+.Lfe284:
+	.size	 Task_UpdateHeldItemSpriteAndClosePartyMenu,.Lfe284-Task_UpdateHeldItemSpriteAndClosePartyMenu
 	.align	2, 0
 	.type	 CB2_WriteMailToGiveMonFromBag,function
 	.thumb_func
 CB2_WriteMailToGiveMonFromBag:
 	push	{r4, r5, r6, lr}
-	ldr	r4, .L2456
+	ldr	r4, .L2460
 	mov	r0, #0x9
 	ldrsb	r0, [r4, r0]
 	mov	r6, #0x64
 	mul	r0, r0, r6
-	ldr	r5, .L2456+0x4
+	ldr	r5, .L2460+0x4
 	add	r0, r0, r5
 	ldrh	r1, [r4, #0xc]
 	bl	GiveItemToMon
@@ -21112,56 +22744,56 @@ CB2_WriteMailToGiveMonFromBag:
 	bl	GetMonData
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r1, .L2456+0x8
+	ldr	r1, .L2460+0x8
 	lsl	r2, r0, #0x3
 	add	r2, r2, r0
 	lsl	r2, r2, #0x2
-	ldr	r0, .L2456+0xc
+	ldr	r0, .L2460+0xc
 	add	r2, r2, r0
 	ldr	r1, [r1]
 	add	r1, r1, r2
-	ldr	r2, .L2456+0x10
+	ldr	r2, .L2460+0x10
 	mov	r0, #0x4
 	mov	r3, #0x3
 	bl	DoEasyChatScreen
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L2457:
+.L2461:
 	.align	2, 0
-.L2456:
+.L2460:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gSaveBlock1Ptr
 	.word	0x2be0
 	.word	CB2_ReturnToPartyOrBagMenuFromWritingMail
-.Lfe286:
-	.size	 CB2_WriteMailToGiveMonFromBag,.Lfe286-CB2_WriteMailToGiveMonFromBag
+.Lfe285:
+	.size	 CB2_WriteMailToGiveMonFromBag,.Lfe285-CB2_WriteMailToGiveMonFromBag
 	.align	2, 0
 	.type	 CB2_ReturnToPartyOrBagMenuFromWritingMail,function
 	.thumb_func
 CB2_ReturnToPartyOrBagMenuFromWritingMail:
 	push	{r4, r5, r6, r7, lr}
 	add	sp, sp, #-0xc
-	ldr	r6, .L2461
+	ldr	r6, .L2465
 	mov	r1, #0x9
 	ldrsb	r1, [r6, r1]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L2461+0x4
+	ldr	r0, .L2465+0x4
 	add	r5, r1, r0
 	add	r0, r5, #0
 	mov	r1, #0xc
 	bl	GetMonData
 	lsl	r0, r0, #0x10
 	lsr	r7, r0, #0x10
-	ldr	r0, .L2461+0x8
+	ldr	r0, .L2465+0x8
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	bne	.L2459	@cond_branch
+	bne	.L2463	@cond_branch
 	add	r0, r5, #0
 	bl	TakeMailFromMon
-	ldr	r4, .L2461+0xc
+	ldr	r4, .L2465+0xc
 	add	r0, r5, #0
 	mov	r1, #0xc
 	add	r2, r4, #0
@@ -21173,39 +22805,39 @@ CB2_ReturnToPartyOrBagMenuFromWritingMail:
 	bl	ReturnGiveItemToBagOrPC
 	ldr	r0, [r6]
 	bl	SetMainCallback2
-	b	.L2460
-.L2462:
+	b	.L2464
+.L2466:
 	.align	2, 0
-.L2461:
+.L2465:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gSpecialVar_Result
 	.word	sPartyMenuItemId
-.L2459:
+.L2463:
 	ldrb	r0, [r6, #0x8]
 	lsl	r0, r0, #0x1c
 	lsr	r0, r0, #0x1c
 	ldrb	r2, [r6, #0xb]
 	mov	r1, #0x7f
 	str	r1, [sp]
-	ldr	r1, .L2463
+	ldr	r1, .L2467
 	str	r1, [sp, #0x4]
 	ldr	r1, [r6]
 	str	r1, [sp, #0x8]
 	mov	r1, #0xff
 	mov	r3, #0x1
 	bl	InitPartyMenu
-.L2460:
+.L2464:
 	add	sp, sp, #0xc
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L2464:
+.L2468:
 	.align	2, 0
-.L2463:
+.L2467:
 	.word	Task_DisplayGaveMailFromBagMessage
-.Lfe287:
-	.size	 CB2_ReturnToPartyOrBagMenuFromWritingMail,.Lfe287-CB2_ReturnToPartyOrBagMenuFromWritingMail
+.Lfe286:
+	.size	 CB2_ReturnToPartyOrBagMenuFromWritingMail,.Lfe286-CB2_ReturnToPartyOrBagMenuFromWritingMail
 	.align	2, 0
 	.type	 Task_DisplayGaveMailFromBagMessage,function
 	.thumb_func
@@ -21213,61 +22845,61 @@ Task_DisplayGaveMailFromBagMessage:
 	push	{r4, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r0, .L2469
+	ldr	r0, .L2473
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L2466	@cond_branch
-	ldr	r1, .L2469+0x4
+	bne	.L2470	@cond_branch
+	ldr	r1, .L2473+0x4
 	ldrh	r0, [r1]
 	cmp	r0, #0
-	beq	.L2467	@cond_branch
-	ldr	r0, .L2469+0x8
+	beq	.L2471	@cond_branch
+	ldr	r0, .L2473+0x8
 	ldrh	r0, [r0, #0xc]
 	ldrh	r1, [r1]
 	mov	r2, #0x0
 	bl	DisplaySwitchedHeldItemMessage
-	b	.L2468
-.L2470:
+	b	.L2472
+.L2474:
 	.align	2, 0
-.L2469:
+.L2473:
 	.word	gPaletteFade
 	.word	sPartyMenuItemId
 	.word	gPartyMenu
-.L2467:
-	ldr	r2, .L2471
+.L2471:
+	ldr	r2, .L2475
 	mov	r1, #0x9
 	ldrsb	r1, [r2, r1]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L2471+0x4
+	ldr	r1, .L2475+0x4
 	add	r0, r0, r1
 	ldrh	r1, [r2, #0xc]
 	mov	r2, #0x0
 	mov	r3, #0x1
 	bl	DisplayGaveHeldItemMessage
-.L2468:
-	ldr	r0, .L2471+0x8
+.L2472:
+	ldr	r0, .L2475+0x8
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L2471+0xc
+	ldr	r0, .L2475+0xc
 	str	r0, [r1]
-.L2466:
+.L2470:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2472:
+.L2476:
 	.align	2, 0
-.L2471:
+.L2475:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gTasks
 	.word	Task_UpdateHeldItemSpriteAndClosePartyMenu
-.Lfe288:
-	.size	 Task_DisplayGaveMailFromBagMessage,.Lfe288-Task_DisplayGaveMailFromBagMessage
+.Lfe287:
+	.size	 Task_DisplayGaveMailFromBagMessage,.Lfe287-Task_DisplayGaveMailFromBagMessage
 	.align	2, 0
 	.type	 Task_SwitchItemsFromBagYesNo,function
 	.thumb_func
@@ -21279,26 +22911,26 @@ Task_SwitchItemsFromBagYesNo:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L2474	@cond_branch
+	beq	.L2478	@cond_branch
 	bl	PartyMenuDisplayYesNoMenu
-	ldr	r0, .L2475
+	ldr	r0, .L2479
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L2475+0x4
+	ldr	r0, .L2479+0x4
 	str	r0, [r1]
-.L2474:
+.L2478:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2476:
+.L2480:
 	.align	2, 0
-.L2475:
+.L2479:
 	.word	gTasks
 	.word	Task_HandleSwitchItemsFromBagYesNoInput
-.Lfe289:
-	.size	 Task_SwitchItemsFromBagYesNo,.Lfe289-Task_SwitchItemsFromBagYesNo
+.Lfe288:
+	.size	 Task_SwitchItemsFromBagYesNo,.Lfe288-Task_SwitchItemsFromBagYesNo
 	.align	2, 0
 	.type	 Task_HandleSwitchItemsFromBagYesNoInput,function
 	.thumb_func
@@ -21310,68 +22942,68 @@ Task_HandleSwitchItemsFromBagYesNoInput:
 	lsl	r0, r0, #0x18
 	asr	r1, r0, #0x18
 	cmp	r1, #0
-	beq	.L2479	@cond_branch
+	beq	.L2483	@cond_branch
 	cmp	r1, #0
-	bgt	.L2488	@cond_branch
+	bgt	.L2492	@cond_branch
 	mov	r0, #0x1
 	neg	r0, r0
 	cmp	r1, r0
-	beq	.L2484	@cond_branch
-	b	.L2478
-.L2488:
+	beq	.L2488	@cond_branch
+	b	.L2482
+.L2492:
 	cmp	r1, #0x1
-	beq	.L2485	@cond_branch
-	b	.L2478
-.L2479:
-	ldr	r7, .L2490
+	beq	.L2489	@cond_branch
+	b	.L2482
+.L2483:
+	ldr	r7, .L2494
 	ldrh	r4, [r7, #0xc]
 	add	r0, r4, #0
 	bl	RemoveItemToGiveFromBag
-	ldr	r6, .L2490+0x4
+	ldr	r6, .L2494+0x4
 	ldrh	r0, [r6]
 	mov	r1, #0x1
 	bl	AddBagItem
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L2480	@cond_branch
+	bne	.L2484	@cond_branch
 	add	r0, r4, #0
 	bl	ReturnGiveItemToBagOrPC
 	ldrh	r0, [r6]
 	bl	BufferBagFullCantTakeItemMessage
-	ldr	r0, .L2490+0x8
+	ldr	r0, .L2494+0x8
 	mov	r1, #0x0
 	bl	DisplayPartyMenuMessage
-	b	.L2489
-.L2491:
+	b	.L2493
+.L2495:
 	.align	2, 0
-.L2490:
+.L2494:
 	.word	gPartyMenu
 	.word	sPartyMenuItemId
 	.word	gStringVar4
-.L2480:
+.L2484:
 	add	r0, r4, #0
 	bl	ItemIsMail
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L2482	@cond_branch
-	ldr	r0, .L2492
+	beq	.L2486	@cond_branch
+	ldr	r0, .L2496
 	ldr	r1, [r0]
-	ldr	r0, .L2492+0x4
+	ldr	r0, .L2496+0x4
 	str	r0, [r1, #0x4]
 	add	r0, r5, #0
 	bl	Task_ClosePartyMenu
-	b	.L2478
-.L2493:
+	b	.L2482
+.L2497:
 	.align	2, 0
-.L2492:
+.L2496:
 	.word	sPartyMenuInternal
 	.word	CB2_WriteMailToGiveMonFromBag
-.L2482:
+.L2486:
 	mov	r1, #0x9
 	ldrsb	r1, [r7, r1]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L2494
+	ldr	r1, .L2498
 	add	r0, r0, r1
 	add	r1, r4, #0
 	bl	GiveItemToMon
@@ -21379,43 +23011,43 @@ Task_HandleSwitchItemsFromBagYesNoInput:
 	add	r0, r4, #0
 	mov	r2, #0x1
 	bl	DisplaySwitchedHeldItemMessage
-.L2489:
-	ldr	r1, .L2494+0x4
+.L2493:
+	ldr	r1, .L2498+0x4
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2494+0x8
+	ldr	r1, .L2498+0x8
 	str	r1, [r0]
-	b	.L2478
-.L2495:
+	b	.L2482
+.L2499:
 	.align	2, 0
-.L2494:
+.L2498:
 	.word	gPlayerParty
 	.word	gTasks
 	.word	Task_UpdateHeldItemSpriteAndClosePartyMenu
-.L2484:
+.L2488:
 	mov	r0, #0x5
 	bl	PlaySE
-.L2485:
-	ldr	r0, .L2496
+.L2489:
+	ldr	r0, .L2500
 	lsl	r1, r5, #0x2
 	add	r1, r1, r5
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L2496+0x4
+	ldr	r0, .L2500+0x4
 	str	r0, [r1]
-.L2478:
+.L2482:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L2497:
+.L2501:
 	.align	2, 0
-.L2496:
+.L2500:
 	.word	gTasks
 	.word	Task_UpdateHeldItemSpriteAndClosePartyMenu
-.Lfe290:
-	.size	 Task_HandleSwitchItemsFromBagYesNoInput,.Lfe290-Task_HandleSwitchItemsFromBagYesNoInput
+.Lfe289:
+	.size	 Task_HandleSwitchItemsFromBagYesNoInput,.Lfe289-Task_HandleSwitchItemsFromBagYesNoInput
 	.align	2, 0
 	.type	 DisplayItemMustBeRemovedFirstMessage,function
 	.thumb_func
@@ -21424,29 +23056,29 @@ DisplayItemMustBeRemovedFirstMessage:
 	add	r4, r0, #0
 	lsl	r4, r4, #0x18
 	lsr	r4, r4, #0x18
-	ldr	r0, .L2499
+	ldr	r0, .L2503
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
-	ldr	r1, .L2499+0x4
+	ldr	r1, .L2503+0x4
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
-	ldr	r1, .L2499+0x8
+	ldr	r1, .L2503+0x8
 	str	r1, [r0]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2500:
+.L2504:
 	.align	2, 0
-.L2499:
+.L2503:
 	.word	gText_RemoveMailBeforeItem
 	.word	gTasks
 	.word	Task_UpdateHeldItemSpriteAndClosePartyMenu
-.Lfe291:
-	.size	 DisplayItemMustBeRemovedFirstMessage,.Lfe291-DisplayItemMustBeRemovedFirstMessage
+.Lfe290:
+	.size	 DisplayItemMustBeRemovedFirstMessage,.Lfe290-DisplayItemMustBeRemovedFirstMessage
 	.align	2, 0
 	.type	 RemoveItemToGiveFromBag,function
 	.thumb_func
@@ -21454,28 +23086,28 @@ RemoveItemToGiveFromBag:
 	push	{lr}
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
-	ldr	r0, .L2504
+	ldr	r0, .L2508
 	ldrb	r0, [r0, #0xb]
 	cmp	r0, #0x6
-	bne	.L2502	@cond_branch
+	bne	.L2506	@cond_branch
 	lsl	r0, r1, #0x18
 	lsr	r0, r0, #0x18
 	mov	r1, #0x1
 	bl	RemovePCItem
-	b	.L2503
-.L2505:
+	b	.L2507
+.L2509:
 	.align	2, 0
-.L2504:
+.L2508:
 	.word	gPartyMenu
-.L2502:
+.L2506:
 	add	r0, r1, #0
 	mov	r1, #0x1
 	bl	RemoveBagItem
-.L2503:
+.L2507:
 	pop	{r0}
 	bx	r0
-.Lfe292:
-	.size	 RemoveItemToGiveFromBag,.Lfe292-RemoveItemToGiveFromBag
+.Lfe291:
+	.size	 RemoveItemToGiveFromBag,.Lfe291-RemoveItemToGiveFromBag
 	.align	2, 0
 	.type	 ReturnGiveItemToBagOrPC,function
 	.thumb_func
@@ -21483,29 +23115,29 @@ ReturnGiveItemToBagOrPC:
 	push	{lr}
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
-	ldr	r0, .L2512
+	ldr	r0, .L2516
 	ldrb	r0, [r0, #0xb]
 	cmp	r0, #0x5
-	beq	.L2507	@cond_branch
+	beq	.L2511	@cond_branch
 	add	r0, r1, #0
 	mov	r1, #0x1
 	bl	AddPCItem
-	b	.L2511
-.L2513:
+	b	.L2515
+.L2517:
 	.align	2, 0
-.L2512:
+.L2516:
 	.word	gPartyMenu
-.L2507:
+.L2511:
 	add	r0, r1, #0
 	mov	r1, #0x1
 	bl	AddBagItem
-.L2511:
+.L2515:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	pop	{r1}
 	bx	r1
-.Lfe293:
-	.size	 ReturnGiveItemToBagOrPC,.Lfe293-ReturnGiveItemToBagOrPC
+.Lfe292:
+	.size	 ReturnGiveItemToBagOrPC,.Lfe292-ReturnGiveItemToBagOrPC
 	.align	2, 0
 	.globl	ChooseMonToGiveMailFromMailbox
 	.type	 ChooseMonToGiveMailFromMailbox,function
@@ -21515,9 +23147,9 @@ ChooseMonToGiveMailFromMailbox:
 	add	sp, sp, #-0xc
 	mov	r0, #0x6
 	str	r0, [sp]
-	ldr	r0, .L2515
+	ldr	r0, .L2519
 	str	r0, [sp, #0x4]
-	ldr	r0, .L2515+0x4
+	ldr	r0, .L2519+0x4
 	str	r0, [sp, #0x8]
 	mov	r0, #0x0
 	mov	r1, #0x0
@@ -21527,13 +23159,13 @@ ChooseMonToGiveMailFromMailbox:
 	add	sp, sp, #0xc
 	pop	{r0}
 	bx	r0
-.L2516:
+.L2520:
 	.align	2, 0
-.L2515:
+.L2519:
 	.word	Task_HandleChooseMonInput
 	.word	Mailbox_ReturnToMailListAfterDeposit
-.Lfe294:
-	.size	 ChooseMonToGiveMailFromMailbox,.Lfe294-ChooseMonToGiveMailFromMailbox
+.Lfe293:
+	.size	 ChooseMonToGiveMailFromMailbox,.Lfe293-ChooseMonToGiveMailFromMailbox
 	.align	2, 0
 	.type	 TryGiveMailToSelectedMon,function
 	.thumb_func
@@ -21541,18 +23173,18 @@ TryGiveMailToSelectedMon:
 	push	{r4, r5, r6, lr}
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
-	ldr	r0, .L2520
+	ldr	r0, .L2524
 	mov	r1, #0x9
 	ldrsb	r1, [r0, r1]
 	mov	r0, #0x64
 	mul	r1, r1, r0
-	ldr	r0, .L2520+0x4
+	ldr	r0, .L2524+0x4
 	add	r5, r1, r0
-	ldr	r1, .L2520+0x8
+	ldr	r1, .L2524+0x8
 	mov	r0, #0x0
 	strb	r0, [r1]
-	ldr	r2, .L2520+0xc
-	ldr	r0, .L2520+0x10
+	ldr	r2, .L2524+0xc
+	ldr	r0, .L2524+0x10
 	ldrh	r1, [r0]
 	add	r1, r1, #0x6
 	ldrh	r0, [r0, #0x2]
@@ -21560,7 +23192,7 @@ TryGiveMailToSelectedMon:
 	lsl	r0, r1, #0x3
 	add	r0, r0, r1
 	lsl	r0, r0, #0x2
-	ldr	r1, .L2520+0x14
+	ldr	r1, .L2524+0x14
 	add	r0, r0, r1
 	ldr	r1, [r2]
 	add	r4, r1, r0
@@ -21568,14 +23200,14 @@ TryGiveMailToSelectedMon:
 	mov	r1, #0xc
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L2518	@cond_branch
-	ldr	r0, .L2520+0x18
+	beq	.L2522	@cond_branch
+	ldr	r0, .L2524+0x18
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
-	b	.L2519
-.L2521:
+	b	.L2523
+.L2525:
 	.align	2, 0
-.L2520:
+.L2524:
 	.word	gPartyMenu
 	.word	gPlayerParty
 	.word	gPartyMenuUseExitCallback
@@ -21583,36 +23215,36 @@ TryGiveMailToSelectedMon:
 	.word	playerPCItemPageInfo
 	.word	0x2be0
 	.word	gText_PkmnHoldingItemCantHoldMail
-.L2518:
+.L2522:
 	add	r0, r5, #0
 	add	r1, r4, #0
 	bl	GiveMailToMon2
 	add	r0, r4, #0
 	bl	ClearMailStruct
-	ldr	r0, .L2522
+	ldr	r0, .L2526
 	mov	r1, #0x1
 	bl	DisplayPartyMenuMessage
-.L2519:
+.L2523:
 	mov	r0, #0x2
 	bl	ScheduleBgCopyTilemapToVram
-	ldr	r0, .L2522+0x4
+	ldr	r0, .L2526+0x4
 	lsl	r1, r6, #0x2
 	add	r1, r1, r6
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L2522+0x8
+	ldr	r0, .L2526+0x8
 	str	r0, [r1]
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L2523:
+.L2527:
 	.align	2, 0
-.L2522:
+.L2526:
 	.word	gText_MailTransferredFromMailbox
 	.word	gTasks
 	.word	Task_UpdateHeldItemSpriteAndClosePartyMenu
-.Lfe295:
-	.size	 TryGiveMailToSelectedMon,.Lfe295-TryGiveMailToSelectedMon
+.Lfe294:
+	.size	 TryGiveMailToSelectedMon,.Lfe294-TryGiveMailToSelectedMon
 	.align	2, 0
 	.globl	InitChooseHalfPartyForBattle
 	.type	 InitChooseHalfPartyForBattle,function
@@ -21623,9 +23255,9 @@ InitChooseHalfPartyForBattle:
 	bl	ClearSelectedPartyOrder
 	mov	r0, #0x0
 	str	r0, [sp]
-	ldr	r0, .L2525
+	ldr	r0, .L2529
 	str	r0, [sp, #0x4]
-	ldr	r0, .L2525+0x4
+	ldr	r0, .L2529+0x4
 	ldr	r0, [r0, #0x8]
 	str	r0, [sp, #0x8]
 	mov	r0, #0x4
@@ -21633,39 +23265,39 @@ InitChooseHalfPartyForBattle:
 	mov	r2, #0x0
 	mov	r3, #0x0
 	bl	InitPartyMenu
-	ldr	r1, .L2525+0x8
-	ldr	r0, .L2525+0xc
+	ldr	r1, .L2529+0x8
+	ldr	r0, .L2529+0xc
 	str	r0, [r1, #0x4]
 	add	sp, sp, #0xc
 	pop	{r0}
 	bx	r0
-.L2526:
+.L2530:
 	.align	2, 0
-.L2525:
+.L2529:
 	.word	Task_HandleChooseMonInput
 	.word	gMain
 	.word	gPartyMenu
 	.word	Task_ValidateChosenHalfParty
-.Lfe296:
-	.size	 InitChooseHalfPartyForBattle,.Lfe296-InitChooseHalfPartyForBattle
+.Lfe295:
+	.size	 InitChooseHalfPartyForBattle,.Lfe295-InitChooseHalfPartyForBattle
 	.align	2, 0
 	.globl	ClearSelectedPartyOrder
 	.type	 ClearSelectedPartyOrder,function
 	.thumb_func
 ClearSelectedPartyOrder:
 	push	{lr}
-	ldr	r0, .L2528
+	ldr	r0, .L2532
 	mov	r1, #0x0
 	mov	r2, #0x4
 	bl	memset
 	pop	{r0}
 	bx	r0
-.L2529:
+.L2533:
 	.align	2, 0
-.L2528:
+.L2532:
 	.word	gSelectedOrderFromParty
-.Lfe297:
-	.size	 ClearSelectedPartyOrder,.Lfe297-ClearSelectedPartyOrder
+.Lfe296:
+	.size	 ClearSelectedPartyOrder,.Lfe296-ClearSelectedPartyOrder
 	.align	2, 0
 	.type	 GetPartySlotEntryStatus,function
 	.thumb_func
@@ -21675,19 +23307,19 @@ GetPartySlotEntryStatus:
 	asr	r4, r0, #0x18
 	mov	r0, #0x64
 	mul	r0, r0, r4
-	ldr	r1, .L2534
+	ldr	r1, .L2538
 	add	r0, r0, r1
 	bl	GetBattleEntryEligibility
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L2531	@cond_branch
+	bne	.L2535	@cond_branch
 	mov	r0, #0x2
-	b	.L2533
-.L2535:
+	b	.L2537
+.L2539:
 	.align	2, 0
-.L2534:
+.L2538:
 	.word	gPlayerParty
-.L2531:
+.L2535:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
@@ -21695,17 +23327,17 @@ GetPartySlotEntryStatus:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L2532	@cond_branch
+	beq	.L2536	@cond_branch
 	mov	r0, #0x0
-	b	.L2533
-.L2532:
+	b	.L2537
+.L2536:
 	mov	r0, #0x1
-.L2533:
+.L2537:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-.Lfe298:
-	.size	 GetPartySlotEntryStatus,.Lfe298-GetPartySlotEntryStatus
+.Lfe297:
+	.size	 GetPartySlotEntryStatus,.Lfe297-GetPartySlotEntryStatus
 	.align	2, 0
 	.type	 GetBattleEntryEligibility,function
 	.thumb_func
@@ -21716,7 +23348,7 @@ GetBattleEntryEligibility:
 	mov	r1, #0x2d
 	bl	GetMonData
 	cmp	r0, #0
-	bne	.L2552	@cond_branch
+	bne	.L2556	@cond_branch
 	add	r0, r5, #0
 	mov	r1, #0x38
 	bl	GetMonData
@@ -21725,59 +23357,59 @@ GetBattleEntryEligibility:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r4, r0
-	bhi	.L2552	@cond_branch
-	ldr	r0, .L2553
+	bhi	.L2556	@cond_branch
+	ldr	r0, .L2557
 	ldr	r0, [r0]
 	ldrh	r1, [r0, #0x4]
-	ldr	r0, .L2553+0x4
+	ldr	r0, .L2557+0x4
 	cmp	r1, r0
-	bne	.L2537	@cond_branch
+	bne	.L2541	@cond_branch
 	add	r0, r5, #0
 	mov	r1, #0xc
 	bl	GetMonData
 	cmp	r0, #0
-	bne	.L2552	@cond_branch
-.L2537:
-	ldr	r0, .L2553+0x8
+	bne	.L2556	@cond_branch
+.L2541:
+	ldr	r0, .L2557+0x8
 	bl	VarGet
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x8
-	beq	.L2545	@cond_branch
+	beq	.L2549	@cond_branch
 	cmp	r0, #0x9
-	bne	.L2543	@cond_branch
+	bne	.L2547	@cond_branch
 	add	r0, r5, #0
 	mov	r1, #0x39
 	bl	GetMonData
 	cmp	r0, #0
-	bne	.L2545	@cond_branch
-.L2552:
+	bne	.L2549	@cond_branch
+.L2556:
 	mov	r0, #0x0
-	b	.L2551
-.L2554:
+	b	.L2555
+.L2558:
 	.align	2, 0
-.L2553:
+.L2557:
 	.word	gSaveBlock1Ptr
 	.word	0x191a
 	.word	0x40cf
-.L2543:
+.L2547:
 	add	r0, r5, #0
 	mov	r1, #0xb
 	bl	GetMonData
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
-	ldr	r3, .L2555
+	ldr	r3, .L2559
 	lsl	r1, r6, #0x1
 	add	r0, r1, r3
 	ldrh	r0, [r0]
-	ldr	r2, .L2555+0x4
+	ldr	r2, .L2559+0x4
 	cmp	r0, r2
-	beq	.L2545	@cond_branch
-.L2547:
+	beq	.L2549	@cond_branch
+.L2551:
 	add	r0, r1, r3
 	ldrh	r0, [r0]
 	cmp	r0, r4
-	beq	.L2552	@cond_branch
+	beq	.L2556	@cond_branch
 	add	r0, r6, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r6, r0, #0x10
@@ -21785,20 +23417,20 @@ GetBattleEntryEligibility:
 	add	r0, r1, r3
 	ldrh	r0, [r0]
 	cmp	r0, r2
-	bne	.L2547	@cond_branch
-.L2545:
+	bne	.L2551	@cond_branch
+.L2549:
 	mov	r0, #0x1
-.L2551:
+.L2555:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-.L2556:
+.L2560:
 	.align	2, 0
-.L2555:
+.L2559:
 	.word	gFrontierBannedSpecies
 	.word	0xffff
-.Lfe299:
-	.size	 GetBattleEntryEligibility,.Lfe299-GetBattleEntryEligibility
+.Lfe298:
+	.size	 GetBattleEntryEligibility,.Lfe298-GetBattleEntryEligibility
 	.align	2, 0
 	.type	 CheckBattleEntriesAndGetMessage,function
 	.thumb_func
@@ -21812,33 +23444,33 @@ CheckBattleEntriesAndGetMessage:
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	add	r1, r2, #0
-	ldr	r3, .L2577
+	ldr	r3, .L2581
 	add	r0, r2, r3
 	sub	r0, r0, #0x1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L2558	@cond_branch
+	bne	.L2562	@cond_branch
 	cmp	r2, #0x1
-	bne	.L2559	@cond_branch
+	bne	.L2563	@cond_branch
 	mov	r0, #0xe
-	b	.L2573
-.L2578:
+	b	.L2577
+.L2582:
 	.align	2, 0
-.L2577:
+.L2581:
 	.word	gSelectedOrderFromParty
-.L2559:
-	ldr	r0, .L2579
+.L2563:
+	ldr	r0, .L2583
 	mov	r2, #0x0
 	mov	r3, #0x1
 	bl	ConvertIntToDecimalStringN
 	mov	r0, #0x11
-	b	.L2573
-.L2580:
+	b	.L2577
+.L2584:
 	.align	2, 0
-.L2579:
+.L2583:
 	.word	gStringVar1
-.L2558:
-	ldr	r0, .L2581
+.L2562:
+	ldr	r0, .L2585
 	bl	VarGet
 	lsl	r0, r0, #0x18
 	mov	r1, #0xf8
@@ -21846,33 +23478,33 @@ CheckBattleEntriesAndGetMessage:
 	add	r0, r0, r1
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bhi	.L2560	@cond_branch
-	b	.L2562
-.L2582:
+	bhi	.L2564	@cond_branch
+	b	.L2566
+.L2586:
 	.align	2, 0
-.L2581:
+.L2585:
 	.word	0x40cf
-.L2574:
+.L2578:
 	mov	r0, #0x12
-	b	.L2573
-.L2575:
+	b	.L2577
+.L2579:
 	mov	r0, #0x13
-	b	.L2573
-.L2560:
+	b	.L2577
+.L2564:
 	bl	GetMaxBattleEntries
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	mov	r8, r0
 	mov	r5, #0x0
-	b	.L2576
-.L2564:
-	ldr	r3, .L2583
+	b	.L2580
+.L2568:
+	ldr	r3, .L2587
 	add	r4, r3, r5
 	ldrb	r0, [r4]
 	mov	r1, #0x64
 	mul	r0, r0, r1
 	sub	r0, r0, #0x64
-	ldr	r3, .L2583+0x4
+	ldr	r3, .L2587+0x4
 	add	r0, r3, r0
 	mov	r1, #0xb
 	bl	GetMonData
@@ -21883,7 +23515,7 @@ CheckBattleEntriesAndGetMessage:
 	mov	r1, #0x64
 	mul	r0, r0, r1
 	sub	r0, r0, #0x64
-	ldr	r3, .L2583+0x4
+	ldr	r3, .L2587+0x4
 	add	r0, r3, r0
 	mov	r1, #0xc
 	bl	GetMonData
@@ -21894,49 +23526,49 @@ CheckBattleEntriesAndGetMessage:
 	lsr	r4, r0, #0x18
 	mov	r9, r1
 	cmp	r4, r8
-	bcs	.L2563	@cond_branch
+	bcs	.L2567	@cond_branch
 	mov	r7, #0x64
-.L2568:
-	ldr	r0, .L2583
+.L2572:
+	ldr	r0, .L2587
 	add	r5, r0, r4
 	ldrb	r0, [r5]
 	mul	r0, r0, r7
 	sub	r0, r0, #0x64
-	ldr	r1, .L2583+0x4
+	ldr	r1, .L2587+0x4
 	add	r0, r1, r0
 	mov	r1, #0xb
 	bl	GetMonData
 	cmp	sl, r0
-	beq	.L2574	@cond_branch
+	beq	.L2578	@cond_branch
 	cmp	r6, #0
-	beq	.L2567	@cond_branch
+	beq	.L2571	@cond_branch
 	ldrb	r0, [r5]
 	mul	r0, r0, r7
 	sub	r0, r0, #0x64
-	ldr	r3, .L2583+0x4
+	ldr	r3, .L2587+0x4
 	add	r0, r3, r0
 	mov	r1, #0xc
 	bl	GetMonData
 	cmp	r6, r0
-	beq	.L2575	@cond_branch
-.L2567:
+	beq	.L2579	@cond_branch
+.L2571:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, r8
-	bcc	.L2568	@cond_branch
-.L2563:
+	bcc	.L2572	@cond_branch
+.L2567:
 	mov	r1, r9
 	lsl	r0, r1, #0x18
 	lsr	r5, r0, #0x18
 	mov	r0, r8
-.L2576:
+.L2580:
 	sub	r0, r0, #0x1
 	cmp	r5, r0
-	blt	.L2564	@cond_branch
-.L2562:
+	blt	.L2568	@cond_branch
+.L2566:
 	mov	r0, #0xff
-.L2573:
+.L2577:
 	pop	{r3, r4, r5}
 	mov	r8, r3
 	mov	r9, r4
@@ -21944,13 +23576,13 @@ CheckBattleEntriesAndGetMessage:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.L2584:
+.L2588:
 	.align	2, 0
-.L2583:
+.L2587:
 	.word	gSelectedOrderFromParty
 	.word	gPlayerParty
-.Lfe300:
-	.size	 CheckBattleEntriesAndGetMessage,.Lfe300-CheckBattleEntriesAndGetMessage
+.Lfe299:
+	.size	 CheckBattleEntriesAndGetMessage,.Lfe299-CheckBattleEntriesAndGetMessage
 	.align	2, 0
 	.type	 HasPartySlotAlreadyBeenSelected,function
 	.thumb_func
@@ -21959,30 +23591,30 @@ HasPartySlotAlreadyBeenSelected:
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	mov	r1, #0x0
-	ldr	r3, .L2593
-.L2589:
+	ldr	r3, .L2597
+.L2593:
 	add	r0, r1, r3
 	ldrb	r0, [r0]
 	cmp	r0, r2
-	bne	.L2588	@cond_branch
+	bne	.L2592	@cond_branch
 	mov	r0, #0x1
-	b	.L2592
-.L2594:
+	b	.L2596
+.L2598:
 	.align	2, 0
-.L2593:
+.L2597:
 	.word	gSelectedOrderFromParty
-.L2588:
+.L2592:
 	add	r0, r1, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
 	cmp	r1, #0x3
-	bls	.L2589	@cond_branch
+	bls	.L2593	@cond_branch
 	mov	r0, #0x0
-.L2592:
+.L2596:
 	pop	{r1}
 	bx	r1
-.Lfe301:
-	.size	 HasPartySlotAlreadyBeenSelected,.Lfe301-HasPartySlotAlreadyBeenSelected
+.Lfe300:
+	.size	 HasPartySlotAlreadyBeenSelected,.Lfe300-HasPartySlotAlreadyBeenSelected
 	.align	2, 0
 	.type	 Task_ValidateChosenHalfParty,function
 	.thumb_func
@@ -21994,35 +23626,35 @@ Task_ValidateChosenHalfParty:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0xff
-	beq	.L2596	@cond_branch
+	beq	.L2600	@cond_branch
 	mov	r0, #0x20
 	bl	PlaySE
 	add	r0, r4, #0
 	bl	DisplayPartyMenuStdMessage
-	ldr	r0, .L2598
+	ldr	r0, .L2602
 	lsl	r1, r5, #0x2
 	add	r1, r1, r5
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L2598+0x4
+	ldr	r0, .L2602+0x4
 	str	r0, [r1]
-	b	.L2597
-.L2599:
+	b	.L2601
+.L2603:
 	.align	2, 0
-.L2598:
+.L2602:
 	.word	gTasks
 	.word	Task_ContinueChoosingHalfParty
-.L2596:
+.L2600:
 	mov	r0, #0x5
 	bl	PlaySE
 	add	r0, r5, #0
 	bl	Task_ClosePartyMenu
-.L2597:
+.L2601:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.Lfe302:
-	.size	 Task_ValidateChosenHalfParty,.Lfe302-Task_ValidateChosenHalfParty
+.Lfe301:
+	.size	 Task_ValidateChosenHalfParty,.Lfe301-Task_ValidateChosenHalfParty
 	.align	2, 0
 	.type	 Task_ContinueChoosingHalfParty,function
 	.thumb_func
@@ -22030,152 +23662,152 @@ Task_ContinueChoosingHalfParty:
 	push	{r4, lr}
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-	ldr	r0, .L2603
+	ldr	r0, .L2607
 	ldrh	r1, [r0, #0x2e]
 	mov	r0, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L2602	@cond_branch
+	bne	.L2606	@cond_branch
 	mov	r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L2601	@cond_branch
-.L2602:
+	beq	.L2605	@cond_branch
+.L2606:
 	mov	r0, #0x5
 	bl	PlaySE
 	mov	r0, #0x0
 	bl	DisplayPartyMenuStdMessage
-	ldr	r0, .L2603+0x4
+	ldr	r0, .L2607+0x4
 	lsl	r1, r4, #0x2
 	add	r1, r1, r4
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L2603+0x8
+	ldr	r0, .L2607+0x8
 	str	r0, [r1]
-.L2601:
+.L2605:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2604:
+.L2608:
 	.align	2, 0
-.L2603:
+.L2607:
 	.word	gMain
 	.word	gTasks
 	.word	Task_HandleChooseMonInput
-.Lfe303:
-	.size	 Task_ContinueChoosingHalfParty,.Lfe303-Task_ContinueChoosingHalfParty
+.Lfe302:
+	.size	 Task_ContinueChoosingHalfParty,.Lfe302-Task_ContinueChoosingHalfParty
 	.align	2, 0
 	.type	 GetMaxBattleEntries,function
 	.thumb_func
 GetMaxBattleEntries:
 	push	{lr}
-	ldr	r0, .L2612
+	ldr	r0, .L2616
 	bl	VarGet
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x8
-	beq	.L2608	@cond_branch
+	beq	.L2612	@cond_branch
 	cmp	r0, #0x9
-	bne	.L2609	@cond_branch
+	bne	.L2613	@cond_branch
 	mov	r0, #0x3
-	b	.L2611
-.L2613:
+	b	.L2615
+.L2617:
 	.align	2, 0
-.L2612:
+.L2616:
 	.word	0x40cf
-.L2608:
+.L2612:
 	mov	r0, #0x2
-	b	.L2611
-.L2609:
-	ldr	r0, .L2614
+	b	.L2615
+.L2613:
+	ldr	r0, .L2618
 	ldrb	r0, [r0]
-.L2611:
+.L2615:
 	pop	{r1}
 	bx	r1
-.L2615:
+.L2619:
 	.align	2, 0
-.L2614:
+.L2618:
 	.word	gSpecialVar_0x8005
-.Lfe304:
-	.size	 GetMaxBattleEntries,.Lfe304-GetMaxBattleEntries
+.Lfe303:
+	.size	 GetMaxBattleEntries,.Lfe303-GetMaxBattleEntries
 	.align	2, 0
 	.type	 GetMinBattleEntries,function
 	.thumb_func
 GetMinBattleEntries:
 	push	{lr}
-	ldr	r0, .L2623
+	ldr	r0, .L2627
 	bl	VarGet
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x8
-	beq	.L2619	@cond_branch
+	beq	.L2623	@cond_branch
 	cmp	r0, #0x9
-	bne	.L2620	@cond_branch
+	bne	.L2624	@cond_branch
 	mov	r0, #0x1
-	b	.L2622
-.L2624:
+	b	.L2626
+.L2628:
 	.align	2, 0
-.L2623:
+.L2627:
 	.word	0x40cf
-.L2619:
+.L2623:
 	mov	r0, #0x2
-	b	.L2622
-.L2620:
-	ldr	r0, .L2625
+	b	.L2626
+.L2624:
+	ldr	r0, .L2629
 	ldrb	r0, [r0]
-.L2622:
+.L2626:
 	pop	{r1}
 	bx	r1
-.L2626:
+.L2630:
 	.align	2, 0
-.L2625:
+.L2629:
 	.word	gSpecialVar_0x8005
-.Lfe305:
-	.size	 GetMinBattleEntries,.Lfe305-GetMinBattleEntries
+.Lfe304:
+	.size	 GetMinBattleEntries,.Lfe304-GetMinBattleEntries
 	.align	2, 0
 	.type	 GetBattleEntryLevelCap,function
 	.thumb_func
 GetBattleEntryLevelCap:
 	push	{lr}
-	ldr	r0, .L2636
+	ldr	r0, .L2640
 	bl	VarGet
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x8
-	beq	.L2630	@cond_branch
+	beq	.L2634	@cond_branch
 	cmp	r0, #0x9
-	bne	.L2631	@cond_branch
-.L2635:
+	bne	.L2635	@cond_branch
+.L2639:
 	mov	r0, #0x64
-	b	.L2634
-.L2637:
+	b	.L2638
+.L2641:
 	.align	2, 0
-.L2636:
+.L2640:
 	.word	0x40cf
-.L2630:
+.L2634:
 	mov	r0, #0x1e
-	b	.L2634
-.L2631:
-	ldr	r0, .L2638
+	b	.L2638
+.L2635:
+	ldr	r0, .L2642
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	bne	.L2635	@cond_branch
+	bne	.L2639	@cond_branch
 	mov	r0, #0x32
-.L2634:
+.L2638:
 	pop	{r1}
 	bx	r1
-.L2639:
+.L2643:
 	.align	2, 0
-.L2638:
+.L2642:
 	.word	gSpecialVar_0x8004
-.Lfe306:
-	.size	 GetBattleEntryLevelCap,.Lfe306-GetBattleEntryLevelCap
+.Lfe305:
+	.size	 GetBattleEntryLevelCap,.Lfe305-GetBattleEntryLevelCap
 	.align	2, 0
 	.type	 GetFacilityCancelString,function
 	.thumb_func
 GetFacilityCancelString:
 	push	{lr}
-	ldr	r0, .L2646
+	ldr	r0, .L2650
 	bl	VarGet
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
@@ -22184,39 +23816,39 @@ GetFacilityCancelString:
 	add	r0, r0, r2
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bhi	.L2641	@cond_branch
-	ldr	r0, .L2646+0x4
-	b	.L2645
-.L2647:
-	.align	2, 0
-.L2646:
-	.word	0x40cf
-	.word	gText_CancelBattle
-.L2641:
-	cmp	r1, #0x1
-	bne	.L2643	@cond_branch
-	ldr	r0, .L2648
-	ldrh	r0, [r0]
-	cmp	r0, #0x2
-	bne	.L2643	@cond_branch
-	ldr	r0, .L2648+0x4
-	b	.L2645
-.L2649:
-	.align	2, 0
-.L2648:
-	.word	gSpecialVar_0x8005
-	.word	gText_ReturnToWaitingRoom
-.L2643:
-	ldr	r0, .L2650
-.L2645:
-	pop	{r1}
-	bx	r1
+	bhi	.L2645	@cond_branch
+	ldr	r0, .L2650+0x4
+	b	.L2649
 .L2651:
 	.align	2, 0
 .L2650:
+	.word	0x40cf
+	.word	gText_CancelBattle
+.L2645:
+	cmp	r1, #0x1
+	bne	.L2647	@cond_branch
+	ldr	r0, .L2652
+	ldrh	r0, [r0]
+	cmp	r0, #0x2
+	bne	.L2647	@cond_branch
+	ldr	r0, .L2652+0x4
+	b	.L2649
+.L2653:
+	.align	2, 0
+.L2652:
+	.word	gSpecialVar_0x8005
+	.word	gText_ReturnToWaitingRoom
+.L2647:
+	ldr	r0, .L2654
+.L2649:
+	pop	{r1}
+	bx	r1
+.L2655:
+	.align	2, 0
+.L2654:
 	.word	gText_CancelChallenge
-.Lfe307:
-	.size	 GetFacilityCancelString,.Lfe307-GetFacilityCancelString
+.Lfe306:
+	.size	 GetFacilityCancelString,.Lfe306-GetFacilityCancelString
 	.align	2, 0
 	.globl	ChooseMonForTradingBoard
 	.type	 ChooseMonForTradingBoard,function
@@ -22228,7 +23860,7 @@ ChooseMonForTradingBoard:
 	lsr	r0, r0, #0x18
 	mov	r2, #0x0
 	str	r2, [sp]
-	ldr	r2, .L2653
+	ldr	r2, .L2657
 	str	r2, [sp, #0x4]
 	str	r1, [sp, #0x8]
 	mov	r1, #0x0
@@ -22238,12 +23870,12 @@ ChooseMonForTradingBoard:
 	add	sp, sp, #0xc
 	pop	{r0}
 	bx	r0
-.L2654:
+.L2658:
 	.align	2, 0
-.L2653:
+.L2657:
 	.word	Task_HandleChooseMonInput
-.Lfe308:
-	.size	 ChooseMonForTradingBoard,.Lfe308-ChooseMonForTradingBoard
+.Lfe307:
+	.size	 ChooseMonForTradingBoard,.Lfe307-ChooseMonForTradingBoard
 	.align	2, 0
 	.globl	ChooseMonForMoveTutor
 	.type	 ChooseMonForMoveTutor,function
@@ -22253,9 +23885,9 @@ ChooseMonForMoveTutor:
 	add	sp, sp, #-0xc
 	mov	r0, #0x4
 	str	r0, [sp]
-	ldr	r0, .L2656
+	ldr	r0, .L2660
 	str	r0, [sp, #0x4]
-	ldr	r0, .L2656+0x4
+	ldr	r0, .L2660+0x4
 	str	r0, [sp, #0x8]
 	mov	r0, #0x0
 	mov	r1, #0x0
@@ -22265,13 +23897,13 @@ ChooseMonForMoveTutor:
 	add	sp, sp, #0xc
 	pop	{r0}
 	bx	r0
-.L2657:
+.L2661:
 	.align	2, 0
-.L2656:
+.L2660:
 	.word	Task_HandleChooseMonInput
 	.word	CB2_ReturnToFieldContinueScriptPlayMapMusic
-.Lfe309:
-	.size	 ChooseMonForMoveTutor,.Lfe309-ChooseMonForMoveTutor
+.Lfe308:
+	.size	 ChooseMonForMoveTutor,.Lfe308-ChooseMonForMoveTutor
 	.align	2, 0
 	.globl	ChooseMonForWirelessMinigame
 	.type	 ChooseMonForWirelessMinigame,function
@@ -22281,9 +23913,9 @@ ChooseMonForWirelessMinigame:
 	add	sp, sp, #-0xc
 	mov	r0, #0x1
 	str	r0, [sp]
-	ldr	r0, .L2659
+	ldr	r0, .L2663
 	str	r0, [sp, #0x4]
-	ldr	r0, .L2659+0x4
+	ldr	r0, .L2663+0x4
 	str	r0, [sp, #0x8]
 	mov	r0, #0xb
 	mov	r1, #0x0
@@ -22293,13 +23925,13 @@ ChooseMonForWirelessMinigame:
 	add	sp, sp, #0xc
 	pop	{r0}
 	bx	r0
-.L2660:
+.L2664:
 	.align	2, 0
-.L2659:
+.L2663:
 	.word	Task_HandleChooseMonInput
 	.word	CB2_ReturnToFieldContinueScriptPlayMapMusic
-.Lfe310:
-	.size	 ChooseMonForWirelessMinigame,.Lfe310-ChooseMonForWirelessMinigame
+.Lfe309:
+	.size	 ChooseMonForWirelessMinigame,.Lfe309-ChooseMonForWirelessMinigame
 	.align	2, 0
 	.type	 GetPartyLayoutFromBattleType,function
 	.thumb_func
@@ -22308,24 +23940,24 @@ GetPartyLayoutFromBattleType:
 	bl	IsDoubleBattle
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L2662	@cond_branch
+	bne	.L2666	@cond_branch
 	mov	r0, #0x0
-	b	.L2664
-.L2662:
+	b	.L2668
+.L2666:
 	bl	IsMultiBattle
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	beq	.L2663	@cond_branch
+	beq	.L2667	@cond_branch
 	mov	r0, #0x1
-	b	.L2664
-.L2663:
+	b	.L2668
+.L2667:
 	mov	r0, #0x2
-.L2664:
+.L2668:
 	pop	{r1}
 	bx	r1
-.Lfe311:
-	.size	 GetPartyLayoutFromBattleType,.Lfe311-GetPartyLayoutFromBattleType
+.Lfe310:
+	.size	 GetPartyLayoutFromBattleType,.Lfe310-GetPartyLayoutFromBattleType
 	.align	2, 0
 	.globl	OpenPartyMenuInBattle
 	.type	 OpenPartyMenuInBattle,function
@@ -22342,9 +23974,9 @@ OpenPartyMenuInBattle:
 	lsr	r1, r1, #0x18
 	mov	r0, #0x0
 	str	r0, [sp]
-	ldr	r0, .L2666
+	ldr	r0, .L2670
 	str	r0, [sp, #0x4]
-	ldr	r0, .L2666+0x4
+	ldr	r0, .L2670+0x4
 	str	r0, [sp, #0x8]
 	mov	r0, #0x1
 	add	r2, r4, #0
@@ -22356,13 +23988,13 @@ OpenPartyMenuInBattle:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2667:
+.L2671:
 	.align	2, 0
-.L2666:
+.L2670:
 	.word	Task_HandleChooseMonInput
 	.word	CB2_SetUpReshowBattleScreenAfterMenu
-.Lfe312:
-	.size	 OpenPartyMenuInBattle,.Lfe312-OpenPartyMenuInBattle
+.Lfe311:
+	.size	 OpenPartyMenuInBattle,.Lfe311-OpenPartyMenuInBattle
 	.align	2, 0
 	.globl	ChooseMonForInBattleItem
 	.type	 ChooseMonForInBattleItem,function
@@ -22376,9 +24008,9 @@ ChooseMonForInBattleItem:
 	lsr	r1, r1, #0x18
 	mov	r0, #0x5
 	str	r0, [sp]
-	ldr	r0, .L2669
+	ldr	r0, .L2673
 	str	r0, [sp, #0x4]
-	ldr	r0, .L2669+0x4
+	ldr	r0, .L2673+0x4
 	str	r0, [sp, #0x8]
 	mov	r0, #0x1
 	mov	r2, #0x3
@@ -22389,62 +24021,62 @@ ChooseMonForInBattleItem:
 	add	sp, sp, #0xc
 	pop	{r0}
 	bx	r0
-.L2670:
+.L2674:
 	.align	2, 0
-.L2669:
+.L2673:
 	.word	Task_HandleChooseMonInput
 	.word	CB2_ReturnToBagMenu
-.Lfe313:
-	.size	 ChooseMonForInBattleItem,.Lfe313-ChooseMonForInBattleItem
+.Lfe312:
+	.size	 ChooseMonForInBattleItem,.Lfe312-ChooseMonForInBattleItem
 	.align	2, 0
 	.type	 GetPartyMenuActionsTypeInBattle,function
 	.thumb_func
 GetPartyMenuActionsTypeInBattle:
 	push	{r4, lr}
 	add	r4, r0, #0
-	ldr	r0, .L2676
+	ldr	r0, .L2680
 	mov	r1, #0xb
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L2672	@cond_branch
+	beq	.L2676	@cond_branch
 	add	r0, r4, #0
 	mov	r1, #0x2d
 	bl	GetMonData
 	cmp	r0, #0
-	bne	.L2672	@cond_branch
-	ldr	r0, .L2676+0x4
+	bne	.L2676	@cond_branch
+	ldr	r0, .L2680+0x4
 	ldrb	r0, [r0, #0xb]
 	cmp	r0, #0x1
-	bne	.L2673	@cond_branch
+	bne	.L2677	@cond_branch
 	mov	r0, #0x3
-	b	.L2675
-.L2677:
+	b	.L2679
+.L2681:
 	.align	2, 0
-.L2676:
+.L2680:
 	.word	gPlayerParty+0x64
 	.word	gPartyMenu
-.L2673:
-	ldr	r0, .L2678
+.L2677:
+	ldr	r0, .L2682
 	ldr	r0, [r0]
 	mov	r1, #0x80
 	lsl	r1, r1, #0xb
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L2672	@cond_branch
+	bne	.L2676	@cond_branch
 	mov	r0, #0x2
-	b	.L2675
-.L2679:
+	b	.L2679
+.L2683:
 	.align	2, 0
-.L2678:
+.L2682:
 	.word	gBattleTypeFlags
-.L2672:
+.L2676:
 	mov	r0, #0x7
-.L2675:
+.L2679:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-.Lfe314:
-	.size	 GetPartyMenuActionsTypeInBattle,.Lfe314-GetPartyMenuActionsTypeInBattle
+.Lfe313:
+	.size	 GetPartyMenuActionsTypeInBattle,.Lfe313-GetPartyMenuActionsTypeInBattle
 	.align	2, 0
 	.type	 TrySwitchInPokemon,function
 	.thumb_func
@@ -22459,149 +24091,149 @@ TrySwitchInPokemon:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.L2681	@cond_branch
+	bne	.L2685	@cond_branch
 	cmp	r5, #0x1
-	beq	.L2682	@cond_branch
+	beq	.L2686	@cond_branch
 	cmp	r5, #0x4
-	beq	.L2682	@cond_branch
+	beq	.L2686	@cond_branch
 	cmp	r5, #0x5
-	bne	.L2681	@cond_branch
-.L2682:
-	ldr	r4, .L2699
+	bne	.L2685	@cond_branch
+.L2686:
+	ldr	r4, .L2703
 	bl	GetTrainerPartnerName
 	add	r1, r0, #0
 	add	r0, r4, #0
 	bl	StringCopy
-	ldr	r0, .L2699+0x4
-	ldr	r1, .L2699+0x8
-	b	.L2696
-.L2700:
+	ldr	r0, .L2703+0x4
+	ldr	r1, .L2703+0x8
+	b	.L2700
+.L2704:
 	.align	2, 0
-.L2699:
+.L2703:
 	.word	gStringVar1
 	.word	gStringVar4
 	.word	gText_CantSwitchWithAlly
-.L2681:
+.L2685:
 	mov	r0, #0x64
 	mov	r1, r5
 	mul	r1, r1, r0
-	ldr	r0, .L2701
+	ldr	r0, .L2705
 	add	r4, r1, r0
 	add	r0, r4, #0
 	mov	r1, #0x39
 	bl	GetMonData
 	cmp	r0, #0
-	bne	.L2683	@cond_branch
-	ldr	r1, .L2701+0x4
+	bne	.L2687	@cond_branch
+	ldr	r1, .L2705+0x4
 	add	r0, r4, #0
 	bl	GetMonNickname
-	ldr	r0, .L2701+0x8
-	ldr	r1, .L2701+0xc
-	b	.L2696
-.L2702:
+	ldr	r0, .L2705+0x8
+	ldr	r1, .L2705+0xc
+	b	.L2700
+.L2706:
 	.align	2, 0
-.L2701:
+.L2705:
 	.word	gPlayerParty
 	.word	gStringVar1
 	.word	gStringVar4
 	.word	gText_PkmnHasNoEnergy
-.L2683:
-	mov	r4, #0x0
-	b	.L2697
 .L2687:
+	mov	r4, #0x0
+	b	.L2701
+.L2691:
 	add	r0, r4, #0
 	bl	GetBattlerSide
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L2686	@cond_branch
+	bne	.L2690	@cond_branch
 	add	r0, r5, #0
 	bl	GetPartyIdFromBattleSlot
 	lsl	r0, r0, #0x18
-	ldr	r2, .L2703
+	ldr	r2, .L2707
 	lsl	r1, r4, #0x1
 	add	r1, r1, r2
 	lsr	r0, r0, #0x18
 	ldrh	r1, [r1]
 	cmp	r0, r1
-	beq	.L2695	@cond_branch
-.L2686:
+	beq	.L2699	@cond_branch
+.L2690:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-.L2697:
-	ldr	r0, .L2703+0x4
+.L2701:
+	ldr	r0, .L2707+0x4
 	ldrb	r0, [r0]
 	cmp	r4, r0
-	bcc	.L2687	@cond_branch
+	bcc	.L2691	@cond_branch
 	mov	r7, #0x64
 	mov	r0, r5
 	mul	r0, r0, r7
-	ldr	r1, .L2703+0x8
+	ldr	r1, .L2707+0x8
 	mov	r8, r1
 	add	r6, r0, r1
 	add	r0, r6, #0
 	mov	r1, #0x2d
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L2690	@cond_branch
-	ldr	r0, .L2703+0xc
-	ldr	r1, .L2703+0x10
-	b	.L2696
-.L2704:
+	beq	.L2694	@cond_branch
+	ldr	r0, .L2707+0xc
+	ldr	r1, .L2707+0x10
+	b	.L2700
+.L2708:
 	.align	2, 0
-.L2703:
+.L2707:
 	.word	gBattlerPartyIndexes
 	.word	gBattlersCount
 	.word	gPlayerParty
 	.word	gStringVar4
 	.word	gText_EggCantBattle
-.L2690:
+.L2694:
 	add	r0, r5, #0
 	bl	GetPartyIdFromBattleSlot
-	ldr	r1, .L2705
+	ldr	r1, .L2709
 	ldr	r1, [r1]
 	add	r1, r1, #0x87
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	ldrb	r1, [r1]
 	cmp	r0, r1
-	bne	.L2691	@cond_branch
-	ldr	r1, .L2705+0x4
+	bne	.L2695	@cond_branch
+	ldr	r1, .L2709+0x4
 	add	r0, r6, #0
 	bl	GetMonNickname
-	ldr	r0, .L2705+0x8
-	ldr	r1, .L2705+0xc
-	b	.L2696
-.L2706:
+	ldr	r0, .L2709+0x8
+	ldr	r1, .L2709+0xc
+	b	.L2700
+.L2710:
 	.align	2, 0
-.L2705:
+.L2709:
 	.word	gBattleStruct
 	.word	gStringVar1
 	.word	gStringVar4
 	.word	gText_PkmnAlreadySelected
-.L2691:
-	ldr	r0, .L2707
+.L2695:
+	ldr	r0, .L2711
 	ldrb	r0, [r0, #0xb]
 	cmp	r0, #0x4
-	bne	.L2692	@cond_branch
+	bne	.L2696	@cond_branch
 	bl	SetMonPreventsSwitchingString
-	b	.L2698
-.L2708:
+	b	.L2702
+.L2712:
 	.align	2, 0
-.L2707:
+.L2711:
 	.word	gPartyMenu
-.L2692:
+.L2696:
 	cmp	r0, #0x2
-	beq	.L2693	@cond_branch
+	beq	.L2697	@cond_branch
 	add	r0, r5, #0
 	bl	GetPartyIdFromBattleSlot
-	ldr	r1, .L2709
+	ldr	r1, .L2713
 	strb	r0, [r1]
-	ldr	r1, .L2709+0x4
+	ldr	r1, .L2713+0x4
 	mov	r0, #0x1
 	strb	r0, [r1]
-	ldr	r1, .L2709+0x8
-	ldr	r0, .L2709+0xc
+	ldr	r1, .L2713+0x8
+	ldr	r0, .L2713+0xc
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1
 	add	r0, r0, r1
@@ -22619,35 +24251,35 @@ TrySwitchInPokemon:
 	add	r1, r6, #0
 	bl	SwapPartyPokemon
 	mov	r0, #0x1
-	b	.L2694
-.L2710:
+	b	.L2698
+.L2714:
 	.align	2, 0
-.L2709:
+.L2713:
 	.word	gSelectedMonPartyId
 	.word	gPartyMenuUseExitCallback
 	.word	gBattlerPartyIndexes
 	.word	gBattlerInMenuId
-.L2695:
+.L2699:
 	mov	r0, #0x64
 	mul	r0, r0, r5
-	ldr	r1, .L2711
+	ldr	r1, .L2715
 	add	r0, r0, r1
-	ldr	r1, .L2711+0x4
+	ldr	r1, .L2715+0x4
 	bl	GetMonNickname
-	ldr	r0, .L2711+0x8
-	ldr	r1, .L2711+0xc
-	b	.L2696
-.L2712:
+	ldr	r0, .L2715+0x8
+	ldr	r1, .L2715+0xc
+	b	.L2700
+.L2716:
 	.align	2, 0
-.L2711:
+.L2715:
 	.word	gPlayerParty
 	.word	gStringVar1
 	.word	gStringVar4
 	.word	gText_PkmnAlreadyInBattle
-.L2693:
-	ldr	r0, .L2713
+.L2697:
+	ldr	r0, .L2717
 	ldrb	r0, [r0]
-	ldr	r1, .L2713+0x4
+	ldr	r1, .L2717+0x4
 	lsl	r0, r0, #0x1
 	add	r0, r0, r1
 	ldrb	r0, [r0]
@@ -22656,37 +24288,37 @@ TrySwitchInPokemon:
 	lsr	r0, r0, #0x18
 	mul	r0, r0, r7
 	add	r0, r0, r8
-	ldr	r1, .L2713+0x8
+	ldr	r1, .L2717+0x8
 	bl	GetMonNickname
-	ldr	r0, .L2713+0xc
-	ldr	r1, .L2713+0x10
-.L2696:
+	ldr	r0, .L2717+0xc
+	ldr	r1, .L2717+0x10
+.L2700:
 	bl	StringExpandPlaceholders
-.L2698:
+.L2702:
 	mov	r0, #0x0
-.L2694:
+.L2698:
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-.L2714:
+.L2718:
 	.align	2, 0
-.L2713:
+.L2717:
 	.word	gBattlerInMenuId
 	.word	gBattlerPartyIndexes
 	.word	gStringVar1
 	.word	gStringVar4
 	.word	gText_PkmnCantSwitchOut
-.Lfe315:
-	.size	 TrySwitchInPokemon,.Lfe315-TrySwitchInPokemon
+.Lfe314:
+	.size	 TrySwitchInPokemon,.Lfe314-TrySwitchInPokemon
 	.align	2, 0
 	.globl	BufferBattlePartyCurrentOrder
 	.type	 BufferBattlePartyCurrentOrder,function
 	.thumb_func
 BufferBattlePartyCurrentOrder:
 	push	{r4, lr}
-	ldr	r4, .L2716
+	ldr	r4, .L2720
 	bl	GetPlayerFlankId
 	add	r1, r0, #0
 	lsl	r1, r1, #0x18
@@ -22696,12 +24328,12 @@ BufferBattlePartyCurrentOrder:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2717:
+.L2721:
 	.align	2, 0
-.L2716:
+.L2720:
 	.word	gBattlePartyCurrentOrder
-.Lfe316:
-	.size	 BufferBattlePartyCurrentOrder,.Lfe316-BufferBattlePartyCurrentOrder
+.Lfe315:
+	.size	 BufferBattlePartyCurrentOrder,.Lfe315-BufferBattlePartyCurrentOrder
 	.align	2, 0
 	.type	 BufferBattlePartyOrder,function
 	.thumb_func
@@ -22715,34 +24347,34 @@ BufferBattlePartyOrder:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.L2719	@cond_branch
+	bne	.L2723	@cond_branch
 	cmp	r4, #0
-	beq	.L2720	@cond_branch
+	beq	.L2724	@cond_branch
 	mov	r0, #0x30
 	strb	r0, [r6]
 	mov	r0, #0x45
 	strb	r0, [r6, #0x1]
 	mov	r0, #0x12
 	strb	r0, [r6, #0x2]
-	b	.L2718
-.L2720:
+	b	.L2722
+.L2724:
 	mov	r0, #0x3
 	strb	r0, [r6]
 	mov	r0, #0x12
 	strb	r0, [r6, #0x1]
 	mov	r0, #0x45
 	strb	r0, [r6, #0x2]
-	b	.L2718
-.L2719:
+	b	.L2722
+.L2723:
 	bl	IsDoubleBattle
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L2723	@cond_branch
+	bne	.L2727	@cond_branch
 	mov	r5, #0x1
 	mov	r0, #0x0
 	bl	GetBattlerAtPosition
 	mov	r2, sp
-	ldr	r1, .L2742
+	ldr	r1, .L2746
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x17
 	add	r0, r0, r1
@@ -22750,29 +24382,29 @@ BufferBattlePartyOrder:
 	strb	r0, [r2]
 	mov	r4, #0x0
 	mov	r1, sp
-.L2727:
+.L2731:
 	ldrb	r0, [r1]
 	cmp	r4, r0
-	beq	.L2726	@cond_branch
+	beq	.L2730	@cond_branch
 	mov	r2, sp
 	add	r0, r2, r5
 	strb	r4, [r0]
 	add	r5, r5, #0x1
-.L2726:
+.L2730:
 	add	r4, r4, #0x1
 	cmp	r4, #0x5
-	ble	.L2727	@cond_branch
-	b	.L2722
-.L2743:
+	ble	.L2731	@cond_branch
+	b	.L2726
+.L2747:
 	.align	2, 0
-.L2742:
+.L2746:
 	.word	gBattlerPartyIndexes
-.L2723:
+.L2727:
 	mov	r5, #0x2
 	mov	r0, #0x0
 	bl	GetBattlerAtPosition
 	mov	r1, sp
-	ldr	r4, .L2744
+	ldr	r4, .L2748
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x17
 	add	r0, r0, r4
@@ -22787,25 +24419,25 @@ BufferBattlePartyOrder:
 	ldrh	r0, [r0]
 	strb	r0, [r1, #0x1]
 	mov	r4, #0x0
-.L2734:
+.L2738:
 	ldrb	r0, [r1]
 	cmp	r4, r0
-	beq	.L2733	@cond_branch
+	beq	.L2737	@cond_branch
 	ldrb	r0, [r1, #0x1]
 	cmp	r4, r0
-	beq	.L2733	@cond_branch
+	beq	.L2737	@cond_branch
 	mov	r2, sp
 	add	r0, r2, r5
 	strb	r4, [r0]
 	add	r5, r5, #0x1
-.L2733:
+.L2737:
 	add	r4, r4, #0x1
 	cmp	r4, #0x5
-	ble	.L2734	@cond_branch
-.L2722:
+	ble	.L2738	@cond_branch
+.L2726:
 	mov	r4, #0x0
 	mov	r3, sp
-.L2740:
+.L2744:
 	add	r0, r6, r4
 	ldrb	r1, [r3]
 	lsl	r1, r1, #0x4
@@ -22815,18 +24447,18 @@ BufferBattlePartyOrder:
 	add	r3, r3, #0x2
 	add	r4, r4, #0x1
 	cmp	r4, #0x2
-	ble	.L2740	@cond_branch
-.L2718:
+	ble	.L2744	@cond_branch
+.L2722:
 	add	sp, sp, #0x8
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L2745:
+.L2749:
 	.align	2, 0
-.L2744:
+.L2748:
 	.word	gBattlerPartyIndexes
-.Lfe317:
-	.size	 BufferBattlePartyOrder,.Lfe317-BufferBattlePartyOrder
+.Lfe316:
+	.size	 BufferBattlePartyOrder,.Lfe316-BufferBattlePartyOrder
 	.align	2, 0
 	.globl	BufferBattlePartyCurrentOrderBySide
 	.type	 BufferBattlePartyCurrentOrderBySide,function
@@ -22838,7 +24470,7 @@ BufferBattlePartyCurrentOrderBySide:
 	lsr	r2, r2, #0x18
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
-	ldr	r0, .L2747
+	ldr	r0, .L2751
 	lsl	r3, r2, #0x1
 	add	r3, r3, r2
 	add	r3, r3, #0x60
@@ -22847,12 +24479,12 @@ BufferBattlePartyCurrentOrderBySide:
 	bl	BufferBattlePartyOrderBySide
 	pop	{r0}
 	bx	r0
-.L2748:
+.L2752:
 	.align	2, 0
-.L2747:
+.L2751:
 	.word	gBattleStruct
-.Lfe318:
-	.size	 BufferBattlePartyCurrentOrderBySide,.Lfe318-BufferBattlePartyCurrentOrderBySide
+.Lfe317:
+	.size	 BufferBattlePartyCurrentOrderBySide,.Lfe317-BufferBattlePartyCurrentOrderBySide
 	.align	2, 0
 	.type	 BufferBattlePartyOrderBySide,function
 	.thumb_func
@@ -22868,20 +24500,20 @@ BufferBattlePartyOrderBySide:
 	bl	GetBattlerSide
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L2750	@cond_branch
+	bne	.L2754	@cond_branch
 	mov	r0, #0x0
 	bl	GetBattlerAtPosition
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	mov	r0, #0x2
-	b	.L2775
-.L2750:
+	b	.L2779
+.L2754:
 	mov	r0, #0x1
 	bl	GetBattlerAtPosition
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	mov	r0, #0x3
-.L2775:
+.L2779:
 	bl	GetBattlerAtPosition
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
@@ -22889,59 +24521,59 @@ BufferBattlePartyOrderBySide:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.L2752	@cond_branch
+	bne	.L2756	@cond_branch
 	cmp	r7, #0
-	beq	.L2753	@cond_branch
+	beq	.L2757	@cond_branch
 	mov	r0, #0x30
 	strb	r0, [r5]
 	mov	r0, #0x45
 	strb	r0, [r5, #0x1]
 	mov	r0, #0x12
 	strb	r0, [r5, #0x2]
-	b	.L2749
-.L2753:
+	b	.L2753
+.L2757:
 	mov	r0, #0x3
 	strb	r0, [r5]
 	mov	r0, #0x12
 	strb	r0, [r5, #0x1]
 	mov	r0, #0x45
 	strb	r0, [r5, #0x2]
-	b	.L2749
-.L2752:
+	b	.L2753
+.L2756:
 	bl	IsDoubleBattle
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L2756	@cond_branch
+	bne	.L2760	@cond_branch
 	mov	r3, #0x1
 	mov	r2, sp
-	ldr	r1, .L2776
+	ldr	r1, .L2780
 	lsl	r0, r4, #0x1
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	strb	r0, [r2]
 	mov	r4, #0x0
 	mov	r1, sp
-.L2760:
+.L2764:
 	ldrb	r0, [r1]
 	cmp	r4, r0
-	beq	.L2759	@cond_branch
+	beq	.L2763	@cond_branch
 	mov	r2, sp
 	add	r0, r2, r3
 	strb	r4, [r0]
 	add	r3, r3, #0x1
-.L2759:
+.L2763:
 	add	r4, r4, #0x1
 	cmp	r4, #0x5
-	ble	.L2760	@cond_branch
-	b	.L2755
-.L2777:
+	ble	.L2764	@cond_branch
+	b	.L2759
+.L2781:
 	.align	2, 0
-.L2776:
+.L2780:
 	.word	gBattlerPartyIndexes
-.L2756:
+.L2760:
 	mov	r3, #0x2
 	mov	r1, sp
-	ldr	r2, .L2778
+	ldr	r2, .L2782
 	lsl	r0, r4, #0x1
 	add	r0, r0, r2
 	ldrh	r0, [r0]
@@ -22951,25 +24583,25 @@ BufferBattlePartyOrderBySide:
 	ldrh	r0, [r0]
 	strb	r0, [r1, #0x1]
 	mov	r4, #0x0
-.L2767:
+.L2771:
 	ldrb	r0, [r1]
 	cmp	r4, r0
-	beq	.L2766	@cond_branch
+	beq	.L2770	@cond_branch
 	ldrb	r0, [r1, #0x1]
 	cmp	r4, r0
-	beq	.L2766	@cond_branch
+	beq	.L2770	@cond_branch
 	mov	r2, sp
 	add	r0, r2, r3
 	strb	r4, [r0]
 	add	r3, r3, #0x1
-.L2766:
+.L2770:
 	add	r4, r4, #0x1
 	cmp	r4, #0x5
-	ble	.L2767	@cond_branch
-.L2755:
+	ble	.L2771	@cond_branch
+.L2759:
 	mov	r4, #0x0
 	mov	r3, sp
-.L2773:
+.L2777:
 	add	r0, r5, r4
 	ldrb	r1, [r3]
 	lsl	r1, r1, #0x4
@@ -22979,18 +24611,18 @@ BufferBattlePartyOrderBySide:
 	add	r3, r3, #0x2
 	add	r4, r4, #0x1
 	cmp	r4, #0x2
-	ble	.L2773	@cond_branch
-.L2749:
+	ble	.L2777	@cond_branch
+.L2753:
 	add	sp, sp, #0x8
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L2779:
+.L2783:
 	.align	2, 0
-.L2778:
+.L2782:
 	.word	gBattlerPartyIndexes
-.Lfe319:
-	.size	 BufferBattlePartyOrderBySide,.Lfe319-BufferBattlePartyOrderBySide
+.Lfe318:
+	.size	 BufferBattlePartyOrderBySide,.Lfe318-BufferBattlePartyOrderBySide
 	.align	2, 0
 	.globl	SwitchPartyOrderLinkMulti
 	.type	 SwitchPartyOrderLinkMulti,function
@@ -23008,8 +24640,8 @@ SwitchPartyOrderLinkMulti:
 	bl	IsMultiBattle
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L2781	@cond_branch
-	ldr	r0, .L2794
+	beq	.L2785	@cond_branch
+	ldr	r0, .L2798
 	lsl	r1, r4, #0x1
 	add	r1, r1, r4
 	add	r1, r1, #0x60
@@ -23020,7 +24652,7 @@ SwitchPartyOrderLinkMulti:
 	mov	ip, r6
 	mov	r6, #0xf
 	mov	r3, sp
-.L2785:
+.L2789:
 	add	r1, r4, r2
 	ldrb	r0, [r1]
 	lsr	r0, r0, #0x4
@@ -23033,36 +24665,36 @@ SwitchPartyOrderLinkMulti:
 	add	r3, r3, #0x1
 	add	r2, r2, #0x1
 	cmp	r2, #0x2
-	ble	.L2785	@cond_branch
+	ble	.L2789	@cond_branch
 	mov	r0, ip
 	ldrb	r3, [r0]
 	mov	r2, #0x0
 	mov	r0, sp
 	ldrb	r0, [r0]
 	cmp	r0, r5
-	bne	.L2789	@cond_branch
+	bne	.L2793	@cond_branch
 	mov	r0, sp
 	ldrb	r7, [r0]
 	strb	r3, [r0]
-	b	.L2788
-.L2795:
+	b	.L2792
+.L2799:
 	.align	2, 0
-.L2794:
+.L2798:
 	.word	gBattleStruct
-.L2789:
+.L2793:
 	add	r2, r2, #0x1
 	cmp	r2, #0x5
-	bgt	.L2788	@cond_branch
+	bgt	.L2792	@cond_branch
 	mov	r0, sp
 	add	r1, r0, r2
 	ldrb	r0, [r1]
 	cmp	r0, r5
-	bne	.L2789	@cond_branch
+	bne	.L2793	@cond_branch
 	add	r7, r0, #0
 	strb	r3, [r1]
-.L2788:
+.L2792:
 	cmp	r2, #0x6
-	beq	.L2781	@cond_branch
+	beq	.L2785	@cond_branch
 	mov	r0, ip
 	strb	r7, [r0]
 	mov	r0, sp
@@ -23086,13 +24718,13 @@ SwitchPartyOrderLinkMulti:
 	ldrb	r1, [r1, #0x5]
 	orr	r0, r0, r1
 	strb	r0, [r4, #0x2]
-.L2781:
+.L2785:
 	add	sp, sp, #0x8
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.Lfe320:
-	.size	 SwitchPartyOrderLinkMulti,.Lfe320-SwitchPartyOrderLinkMulti
+.Lfe319:
+	.size	 SwitchPartyOrderLinkMulti,.Lfe319-SwitchPartyOrderLinkMulti
 	.align	2, 0
 	.type	 GetPartyIdFromBattleSlot,function
 	.thumb_func
@@ -23104,32 +24736,32 @@ GetPartyIdFromBattleSlot:
 	and	r1, r1, r2
 	lsr	r2, r0, #0x19
 	cmp	r1, #0
-	beq	.L2797	@cond_branch
-	ldr	r0, .L2799
+	beq	.L2801	@cond_branch
+	ldr	r0, .L2803
 	add	r0, r2, r0
 	ldrb	r0, [r0]
 	mov	r1, #0xf
 	and	r1, r1, r0
-	b	.L2798
-.L2800:
+	b	.L2802
+.L2804:
 	.align	2, 0
-.L2799:
+.L2803:
 	.word	gBattlePartyCurrentOrder
-.L2797:
-	ldr	r0, .L2801
+.L2801:
+	ldr	r0, .L2805
 	add	r0, r2, r0
 	ldrb	r0, [r0]
 	lsr	r1, r0, #0x4
-.L2798:
+.L2802:
 	add	r0, r1, #0
 	pop	{r1}
 	bx	r1
-.L2802:
+.L2806:
 	.align	2, 0
-.L2801:
+.L2805:
 	.word	gBattlePartyCurrentOrder
-.Lfe321:
-	.size	 GetPartyIdFromBattleSlot,.Lfe321-GetPartyIdFromBattleSlot
+.Lfe320:
+	.size	 GetPartyIdFromBattleSlot,.Lfe320-GetPartyIdFromBattleSlot
 	.align	2, 0
 	.type	 SetPartyIdAtBattleSlot,function
 	.thumb_func
@@ -23143,21 +24775,21 @@ SetPartyIdAtBattleSlot:
 	and	r1, r1, r3
 	lsr	r3, r0, #0x19
 	cmp	r1, #0
-	beq	.L2804	@cond_branch
-	ldr	r0, .L2806
+	beq	.L2808	@cond_branch
+	ldr	r0, .L2810
 	add	r0, r3, r0
 	ldrb	r2, [r0]
 	mov	r1, #0xf0
 	and	r1, r1, r2
 	orr	r1, r1, r4
 	strb	r1, [r0]
-	b	.L2805
-.L2807:
+	b	.L2809
+.L2811:
 	.align	2, 0
-.L2806:
+.L2810:
 	.word	gBattlePartyCurrentOrder
-.L2804:
-	ldr	r2, .L2808
+.L2808:
+	ldr	r2, .L2812
 	add	r2, r3, r2
 	ldrb	r1, [r2]
 	mov	r0, #0xf
@@ -23165,16 +24797,16 @@ SetPartyIdAtBattleSlot:
 	lsl	r1, r4, #0x4
 	orr	r0, r0, r1
 	strb	r0, [r2]
-.L2805:
+.L2809:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2809:
+.L2813:
 	.align	2, 0
-.L2808:
+.L2812:
 	.word	gBattlePartyCurrentOrder
-.Lfe322:
-	.size	 SetPartyIdAtBattleSlot,.Lfe322-SetPartyIdAtBattleSlot
+.Lfe321:
+	.size	 SetPartyIdAtBattleSlot,.Lfe321-SetPartyIdAtBattleSlot
 	.align	2, 0
 	.globl	SwitchPartyMonSlots
 	.type	 SwitchPartyMonSlots,function
@@ -23205,8 +24837,8 @@ SwitchPartyMonSlots:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.Lfe323:
-	.size	 SwitchPartyMonSlots,.Lfe323-SwitchPartyMonSlots
+.Lfe322:
+	.size	 SwitchPartyMonSlots,.Lfe322-SwitchPartyMonSlots
 	.align	2, 0
 	.globl	GetPartyIdFromBattlePartyId
 	.type	 GetPartyIdFromBattlePartyId,function
@@ -23217,28 +24849,28 @@ GetPartyIdFromBattlePartyId:
 	lsr	r4, r0, #0x18
 	mov	r3, #0x0
 	mov	r2, #0x0
-	ldr	r5, .L2822
-.L2815:
+	ldr	r5, .L2826
+.L2819:
 	add	r0, r3, r5
 	ldrb	r1, [r0]
 	lsr	r0, r1, #0x4
 	cmp	r0, r4
-	beq	.L2821	@cond_branch
+	beq	.L2825	@cond_branch
 	add	r0, r2, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	mov	r0, #0xf
 	and	r0, r0, r1
 	cmp	r0, r4
-	bne	.L2814	@cond_branch
-.L2821:
+	bne	.L2818	@cond_branch
+.L2825:
 	add	r0, r2, #0
-	b	.L2820
-.L2823:
+	b	.L2824
+.L2827:
 	.align	2, 0
-.L2822:
+.L2826:
 	.word	gBattlePartyCurrentOrder
-.L2814:
+.L2818:
 	add	r0, r2, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
@@ -23246,14 +24878,14 @@ GetPartyIdFromBattlePartyId:
 	lsl	r0, r0, #0x18
 	lsr	r3, r0, #0x18
 	cmp	r3, #0x2
-	bls	.L2815	@cond_branch
+	bls	.L2819	@cond_branch
 	mov	r0, #0x0
-.L2820:
+.L2824:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-.Lfe324:
-	.size	 GetPartyIdFromBattlePartyId,.Lfe324-GetPartyIdFromBattlePartyId
+.Lfe323:
+	.size	 GetPartyIdFromBattlePartyId,.Lfe323-GetPartyIdFromBattlePartyId
 	.align	2, 0
 	.type	 UpdatePartyToBattleOrder,function
 	.thumb_func
@@ -23264,18 +24896,18 @@ UpdatePartyToBattleOrder:
 	add	r0, r4, #0
 	bl	Alloc
 	add	r5, r0, #0
-	ldr	r1, .L2830
+	ldr	r1, .L2834
 	add	r2, r4, #0
 	bl	memcpy
 	mov	r4, #0x0
 	mov	r6, #0x64
-.L2828:
+.L2832:
 	add	r0, r4, #0
 	bl	GetPartyIdFromBattlePartyId
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	mul	r0, r0, r6
-	ldr	r1, .L2830
+	ldr	r1, .L2834
 	add	r0, r0, r1
 	mov	r1, r4
 	mul	r1, r1, r6
@@ -23286,18 +24918,18 @@ UpdatePartyToBattleOrder:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x5
-	bls	.L2828	@cond_branch
+	bls	.L2832	@cond_branch
 	add	r0, r5, #0
 	bl	Free
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L2831:
+.L2835:
 	.align	2, 0
-.L2830:
+.L2834:
 	.word	gPlayerParty
-.Lfe325:
-	.size	 UpdatePartyToBattleOrder,.Lfe325-UpdatePartyToBattleOrder
+.Lfe324:
+	.size	 UpdatePartyToBattleOrder,.Lfe324-UpdatePartyToBattleOrder
 	.align	2, 0
 	.type	 UpdatePartyToFieldOrder,function
 	.thumb_func
@@ -23308,18 +24940,18 @@ UpdatePartyToFieldOrder:
 	add	r0, r4, #0
 	bl	Alloc
 	add	r5, r0, #0
-	ldr	r1, .L2838
+	ldr	r1, .L2842
 	add	r2, r4, #0
 	bl	memcpy
 	mov	r4, #0x0
 	mov	r6, #0x64
-.L2836:
+.L2840:
 	add	r0, r4, #0
 	bl	GetPartyIdFromBattleSlot
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	mul	r0, r0, r6
-	ldr	r1, .L2838
+	ldr	r1, .L2842
 	add	r0, r0, r1
 	mov	r1, r4
 	mul	r1, r1, r6
@@ -23330,18 +24962,18 @@ UpdatePartyToFieldOrder:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x5
-	bls	.L2836	@cond_branch
+	bls	.L2840	@cond_branch
 	add	r0, r5, #0
 	bl	Free
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L2839:
+.L2843:
 	.align	2, 0
-.L2838:
+.L2842:
 	.word	gPlayerParty
-.Lfe326:
-	.size	 UpdatePartyToFieldOrder,.Lfe326-UpdatePartyToFieldOrder
+.Lfe325:
+	.size	 UpdatePartyToFieldOrder,.Lfe325-UpdatePartyToFieldOrder
 	.align	2, 0
 	.type	 SwitchAliveMonIntoLeadSlot,function
 	.thumb_func
@@ -23351,9 +24983,9 @@ SwitchAliveMonIntoLeadSlot:
 	push	{r7}
 	mov	r6, #0x1
 	mov	r7, #0x64
-	ldr	r0, .L2847
+	ldr	r0, .L2851
 	mov	r8, r0
-.L2844:
+.L2848:
 	add	r0, r6, #0
 	bl	GetPartyIdFromBattleSlot
 	lsl	r0, r0, #0x18
@@ -23365,12 +24997,12 @@ SwitchAliveMonIntoLeadSlot:
 	mov	r1, #0xb
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L2843	@cond_branch
+	beq	.L2847	@cond_branch
 	add	r0, r5, #0
 	mov	r1, #0x39
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L2843	@cond_branch
+	beq	.L2847	@cond_branch
 	mov	r0, #0x0
 	bl	GetPartyIdFromBattleSlot
 	add	r4, r0, #0
@@ -23384,40 +25016,40 @@ SwitchAliveMonIntoLeadSlot:
 	add	r0, r0, r8
 	add	r1, r5, #0
 	bl	SwapPartyPokemon
-	b	.L2842
-.L2848:
+	b	.L2846
+.L2852:
 	.align	2, 0
-.L2847:
+.L2851:
 	.word	gPlayerParty
-.L2843:
+.L2847:
 	add	r0, r6, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
 	cmp	r6, #0x5
-	bls	.L2844	@cond_branch
-.L2842:
+	bls	.L2848	@cond_branch
+.L2846:
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.Lfe327:
-	.size	 SwitchAliveMonIntoLeadSlot,.Lfe327-SwitchAliveMonIntoLeadSlot
+.Lfe326:
+	.size	 SwitchAliveMonIntoLeadSlot,.Lfe326-SwitchAliveMonIntoLeadSlot
 	.align	2, 0
 	.type	 CB2_SetUpExitToBattleScreen,function
 	.thumb_func
 CB2_SetUpExitToBattleScreen:
 	push	{lr}
-	ldr	r0, .L2850
+	ldr	r0, .L2854
 	bl	SetMainCallback2
 	pop	{r0}
 	bx	r0
-.L2851:
+.L2855:
 	.align	2, 0
-.L2850:
+.L2854:
 	.word	CB2_SetUpReshowBattleScreenAfterMenu
-.Lfe328:
-	.size	 CB2_SetUpExitToBattleScreen,.Lfe328-CB2_SetUpExitToBattleScreen
+.Lfe327:
+	.size	 CB2_SetUpExitToBattleScreen,.Lfe327-CB2_SetUpExitToBattleScreen
 	.align	2, 0
 	.globl	ShowPartyMenuToShowcaseMultiBattleParty
 	.type	 ShowPartyMenuToShowcaseMultiBattleParty,function
@@ -23427,9 +25059,9 @@ ShowPartyMenuToShowcaseMultiBattleParty:
 	add	sp, sp, #-0xc
 	mov	r0, #0x7f
 	str	r0, [sp]
-	ldr	r0, .L2853
+	ldr	r0, .L2857
 	str	r0, [sp, #0x4]
-	ldr	r0, .L2853+0x4
+	ldr	r0, .L2857+0x4
 	ldr	r0, [r0, #0x8]
 	str	r0, [sp, #0x8]
 	mov	r0, #0x5
@@ -23440,13 +25072,13 @@ ShowPartyMenuToShowcaseMultiBattleParty:
 	add	sp, sp, #0xc
 	pop	{r0}
 	bx	r0
-.L2854:
+.L2858:
 	.align	2, 0
-.L2853:
+.L2857:
 	.word	Task_InitMultiPartnerPartySlideIn
 	.word	gMain
-.Lfe329:
-	.size	 ShowPartyMenuToShowcaseMultiBattleParty,.Lfe329-ShowPartyMenuToShowcaseMultiBattleParty
+.Lfe328:
+	.size	 ShowPartyMenuToShowcaseMultiBattleParty,.Lfe328-ShowPartyMenuToShowcaseMultiBattleParty
 	.align	2, 0
 	.type	 Task_InitMultiPartnerPartySlideIn,function
 	.thumb_func
@@ -23454,7 +25086,7 @@ Task_InitMultiPartnerPartySlideIn:
 	push	{r4, lr}
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r1, .L2856
+	ldr	r1, .L2860
 	lsl	r4, r0, #0x2
 	add	r4, r4, r0
 	lsl	r4, r4, #0x3
@@ -23468,18 +25100,18 @@ Task_InitMultiPartnerPartySlideIn:
 	mov	r0, #0x2
 	mov	r2, #0x0
 	bl	ChangeBgX
-	ldr	r0, .L2856+0x4
+	ldr	r0, .L2860+0x4
 	str	r0, [r4]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2857:
+.L2861:
 	.align	2, 0
-.L2856:
+.L2860:
 	.word	gTasks
 	.word	Task_MultiPartnerPartySlideIn
-.Lfe330:
-	.size	 Task_InitMultiPartnerPartySlideIn,.Lfe330-Task_InitMultiPartnerPartySlideIn
+.Lfe329:
+	.size	 Task_InitMultiPartnerPartySlideIn,.Lfe329-Task_InitMultiPartnerPartySlideIn
 	.align	2, 0
 	.type	 Task_MultiPartnerPartySlideIn,function
 	.thumb_func
@@ -23490,14 +25122,14 @@ Task_MultiPartnerPartySlideIn:
 	lsl	r6, r5, #0x2
 	add	r0, r6, r5
 	lsl	r0, r0, #0x3
-	ldr	r1, .L2867
+	ldr	r1, .L2871
 	add	r4, r0, r1
-	ldr	r0, .L2867+0x4
+	ldr	r0, .L2871+0x4
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	bne	.L2859	@cond_branch
+	bne	.L2863	@cond_branch
 	ldrh	r0, [r4]
 	sub	r0, r0, #0x8
 	strh	r0, [r4]
@@ -23506,52 +25138,52 @@ Task_MultiPartnerPartySlideIn:
 	mov	r1, #0x0
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	bne	.L2859	@cond_branch
+	bne	.L2863	@cond_branch
 	mov	r4, #0x3
-	ldr	r7, .L2867+0x8
-.L2864:
+	ldr	r7, .L2871+0x8
+.L2868:
 	sub	r0, r4, #0x3
 	lsl	r0, r0, #0x5
 	add	r0, r0, r7
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	beq	.L2863	@cond_branch
-	ldr	r0, .L2867+0xc
+	beq	.L2867	@cond_branch
+	ldr	r0, .L2871+0xc
 	ldr	r1, [r0]
 	lsl	r0, r4, #0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0, #0x9]
 	mov	r1, #0x0
 	bl	AnimateSelectedPartyIcon
-.L2863:
+.L2867:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x5
-	bls	.L2864	@cond_branch
+	bls	.L2868	@cond_branch
 	mov	r0, #0x78
 	bl	PlaySE
-	ldr	r0, .L2867+0x10
+	ldr	r0, .L2871+0x10
 	add	r1, r6, r5
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
-	ldr	r0, .L2867+0x14
+	ldr	r0, .L2871+0x14
 	str	r0, [r1]
-.L2859:
+.L2863:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L2868:
+.L2872:
 	.align	2, 0
-.L2867:
+.L2871:
 	.word	gTasks+0x8
 	.word	gPaletteFade
 	.word	gMultiPartnerParty
 	.word	sPartyMenuBoxes
 	.word	gTasks
 	.word	Task_WaitAfterMultiPartnerPartySlideIn
-.Lfe331:
-	.size	 Task_MultiPartnerPartySlideIn,.Lfe331-Task_MultiPartnerPartySlideIn
+.Lfe330:
+	.size	 Task_MultiPartnerPartySlideIn,.Lfe330-Task_MultiPartnerPartySlideIn
 	.align	2, 0
 	.type	 Task_WaitAfterMultiPartnerPartySlideIn,function
 	.thumb_func
@@ -23562,7 +25194,7 @@ Task_WaitAfterMultiPartnerPartySlideIn:
 	lsl	r0, r2, #0x2
 	add	r0, r0, r2
 	lsl	r0, r0, #0x3
-	ldr	r1, .L2871
+	ldr	r1, .L2875
 	add	r0, r0, r1
 	ldrh	r1, [r0]
 	add	r1, r1, #0x1
@@ -23571,18 +25203,18 @@ Task_WaitAfterMultiPartnerPartySlideIn:
 	mov	r0, #0x80
 	lsl	r0, r0, #0x11
 	cmp	r1, r0
-	bne	.L2870	@cond_branch
+	bne	.L2874	@cond_branch
 	add	r0, r2, #0
 	bl	Task_ClosePartyMenu
-.L2870:
+.L2874:
 	pop	{r0}
 	bx	r0
-.L2872:
+.L2876:
 	.align	2, 0
-.L2871:
+.L2875:
 	.word	gTasks+0x8
-.Lfe332:
-	.size	 Task_WaitAfterMultiPartnerPartySlideIn,.Lfe332-Task_WaitAfterMultiPartnerPartySlideIn
+.Lfe331:
+	.size	 Task_WaitAfterMultiPartnerPartySlideIn,.Lfe331-Task_WaitAfterMultiPartnerPartySlideIn
 	.align	2, 0
 	.type	 MoveMultiPartyMenuBoxSprite,function
 	.thumb_func
@@ -23593,22 +25225,22 @@ MoveMultiPartyMenuBoxSprite:
 	lsl	r1, r1, #0x10
 	lsr	r3, r1, #0x10
 	cmp	r1, #0
-	blt	.L2874	@cond_branch
-	ldr	r1, .L2875
+	blt	.L2878	@cond_branch
+	ldr	r1, .L2879
 	lsl	r0, r2, #0x4
 	add	r0, r0, r2
 	lsl	r0, r0, #0x2
 	add	r0, r0, r1
 	strh	r3, [r0, #0x24]
-.L2874:
+.L2878:
 	pop	{r0}
 	bx	r0
-.L2876:
+.L2880:
 	.align	2, 0
-.L2875:
+.L2879:
 	.word	gSprites
-.Lfe333:
-	.size	 MoveMultiPartyMenuBoxSprite,.Lfe333-MoveMultiPartyMenuBoxSprite
+.Lfe332:
+	.size	 MoveMultiPartyMenuBoxSprite,.Lfe332-MoveMultiPartyMenuBoxSprite
 	.align	2, 0
 	.type	 SlideMultiPartyMenuBoxSpritesOneStep,function
 	.thumb_func
@@ -23619,18 +25251,18 @@ SlideMultiPartyMenuBoxSpritesOneStep:
 	lsl	r1, r0, #0x2
 	add	r1, r1, r0
 	lsl	r1, r1, #0x3
-	ldr	r0, .L2884
+	ldr	r0, .L2888
 	add	r5, r1, r0
 	mov	r6, #0x3
-	ldr	r7, .L2884+0x4
-.L2881:
-	ldr	r0, .L2884+0x8
+	ldr	r7, .L2888+0x4
+.L2885:
+	ldr	r0, .L2888+0x8
 	sub	r1, r6, #0x3
 	lsl	r1, r1, #0x5
 	add	r1, r1, r0
 	ldrh	r0, [r1]
 	cmp	r0, #0
-	beq	.L2880	@cond_branch
+	beq	.L2884	@cond_branch
 	ldr	r0, [r7]
 	lsl	r4, r6, #0x4
 	add	r0, r4, r0
@@ -23664,12 +25296,12 @@ SlideMultiPartyMenuBoxSpritesOneStep:
 	lsl	r1, r1, #0x10
 	asr	r1, r1, #0x10
 	bl	MoveMultiPartyMenuBoxSprite
-.L2880:
+.L2884:
 	add	r0, r6, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
 	cmp	r6, #0x5
-	bls	.L2881	@cond_branch
+	bls	.L2885	@cond_branch
 	mov	r1, #0x80
 	lsl	r1, r1, #0x4
 	mov	r0, #0x2
@@ -23678,14 +25310,14 @@ SlideMultiPartyMenuBoxSpritesOneStep:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L2885:
+.L2889:
 	.align	2, 0
-.L2884:
+.L2888:
 	.word	gTasks+0x8
 	.word	sPartyMenuBoxes
 	.word	gMultiPartnerParty
-.Lfe334:
-	.size	 SlideMultiPartyMenuBoxSpritesOneStep,.Lfe334-SlideMultiPartyMenuBoxSpritesOneStep
+.Lfe333:
+	.size	 SlideMultiPartyMenuBoxSpritesOneStep,.Lfe333-SlideMultiPartyMenuBoxSpritesOneStep
 	.align	2, 0
 	.globl	ChooseMonForDaycare
 	.type	 ChooseMonForDaycare,function
@@ -23695,9 +25327,9 @@ ChooseMonForDaycare:
 	add	sp, sp, #-0xc
 	mov	r0, #0xf
 	str	r0, [sp]
-	ldr	r0, .L2887
+	ldr	r0, .L2891
 	str	r0, [sp, #0x4]
-	ldr	r0, .L2887+0x4
+	ldr	r0, .L2891+0x4
 	str	r0, [sp, #0x8]
 	mov	r0, #0x6
 	mov	r1, #0x0
@@ -23707,13 +25339,13 @@ ChooseMonForDaycare:
 	add	sp, sp, #0xc
 	pop	{r0}
 	bx	r0
-.L2888:
+.L2892:
 	.align	2, 0
-.L2887:
+.L2891:
 	.word	Task_HandleChooseMonInput
 	.word	BufferMonSelection
-.Lfe335:
-	.size	 ChooseMonForDaycare,.Lfe335-ChooseMonForDaycare
+.Lfe334:
+	.size	 ChooseMonForDaycare,.Lfe334-ChooseMonForDaycare
 	.align	2, 0
 	.type	 ChoosePartyMonByMenuType,function
 	.thumb_func
@@ -23722,14 +25354,14 @@ ChoosePartyMonByMenuType:
 	add	sp, sp, #-0xc
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r2, .L2890
-	ldr	r1, .L2890+0x4
+	ldr	r2, .L2894
+	ldr	r1, .L2894+0x4
 	str	r1, [r2]
 	mov	r1, #0x0
 	str	r1, [sp]
-	ldr	r1, .L2890+0x8
+	ldr	r1, .L2894+0x8
 	str	r1, [sp, #0x4]
-	ldr	r1, .L2890+0xc
+	ldr	r1, .L2894+0xc
 	str	r1, [sp, #0x8]
 	mov	r1, #0x0
 	mov	r2, #0xb
@@ -23738,47 +25370,47 @@ ChoosePartyMonByMenuType:
 	add	sp, sp, #0xc
 	pop	{r0}
 	bx	r0
-.L2891:
+.L2895:
 	.align	2, 0
-.L2890:
+.L2894:
 	.word	gFieldCallback2
 	.word	CB2_FadeFromPartyMenu
 	.word	Task_HandleChooseMonInput
 	.word	CB2_ReturnToField
-.Lfe336:
-	.size	 ChoosePartyMonByMenuType,.Lfe336-ChoosePartyMonByMenuType
+.Lfe335:
+	.size	 ChoosePartyMonByMenuType,.Lfe335-ChoosePartyMonByMenuType
 	.align	2, 0
 	.type	 BufferMonSelection,function
 	.thumb_func
 BufferMonSelection:
 	push	{r4, lr}
-	ldr	r4, .L2894
+	ldr	r4, .L2898
 	bl	GetCursorSelectionMonId
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4]
 	cmp	r0, #0x5
-	bls	.L2893	@cond_branch
+	bls	.L2897	@cond_branch
 	mov	r0, #0xff
 	strh	r0, [r4]
-.L2893:
-	ldr	r0, .L2894+0x4
-	ldr	r1, .L2894+0x8
+.L2897:
+	ldr	r0, .L2898+0x4
+	ldr	r1, .L2898+0x8
 	str	r1, [r0]
-	ldr	r0, .L2894+0xc
+	ldr	r0, .L2898+0xc
 	bl	SetMainCallback2
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L2895:
+.L2899:
 	.align	2, 0
-.L2894:
+.L2898:
 	.word	gSpecialVar_0x8004
 	.word	gFieldCallback2
 	.word	CB2_FadeFromPartyMenu
 	.word	CB2_ReturnToField
-.Lfe337:
-	.size	 BufferMonSelection,.Lfe337-BufferMonSelection
+.Lfe336:
+	.size	 BufferMonSelection,.Lfe336-BufferMonSelection
 	.align	2, 0
 	.globl	CB2_FadeFromPartyMenu
 	.type	 CB2_FadeFromPartyMenu,function
@@ -23786,18 +25418,18 @@ BufferMonSelection:
 CB2_FadeFromPartyMenu:
 	push	{lr}
 	bl	FadeInFromBlack
-	ldr	r0, .L2897
+	ldr	r0, .L2901
 	mov	r1, #0xa
 	bl	CreateTask
 	mov	r0, #0x1
 	pop	{r1}
 	bx	r1
-.L2898:
+.L2902:
 	.align	2, 0
-.L2897:
+.L2901:
 	.word	Task_PartyMenuWaitForFade
-.Lfe338:
-	.size	 CB2_FadeFromPartyMenu,.Lfe338-CB2_FadeFromPartyMenu
+.Lfe337:
+	.size	 CB2_FadeFromPartyMenu,.Lfe337-CB2_FadeFromPartyMenu
 	.align	2, 0
 	.type	 Task_PartyMenuWaitForFade,function
 	.thumb_func
@@ -23808,17 +25440,17 @@ Task_PartyMenuWaitForFade:
 	bl	IsWeatherNotFadingIn
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L2900	@cond_branch
+	beq	.L2904	@cond_branch
 	add	r0, r4, #0
 	bl	DestroyTask
 	bl	ScriptContext2_Disable
 	bl	EnableBothScriptContexts
-.L2900:
+.L2904:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.Lfe339:
-	.size	 Task_PartyMenuWaitForFade,.Lfe339-Task_PartyMenuWaitForFade
+.Lfe338:
+	.size	 Task_PartyMenuWaitForFade,.Lfe338-Task_PartyMenuWaitForFade
 	.align	2, 0
 	.globl	ChooseContestMon
 	.type	 ChooseContestMon,function
@@ -23829,17 +25461,17 @@ ChooseContestMon:
 	mov	r0, #0x1
 	mov	r1, #0x0
 	bl	FadeScreen
-	ldr	r0, .L2902
+	ldr	r0, .L2906
 	mov	r1, #0xa
 	bl	CreateTask
 	pop	{r0}
 	bx	r0
-.L2903:
+.L2907:
 	.align	2, 0
-.L2902:
+.L2906:
 	.word	Task_ChooseContestMon
-.Lfe340:
-	.size	 ChooseContestMon,.Lfe340-ChooseContestMon
+.Lfe339:
+	.size	 ChooseContestMon,.Lfe339-ChooseContestMon
 	.align	2, 0
 	.type	 Task_ChooseContestMon,function
 	.thumb_func
@@ -23848,19 +25480,19 @@ Task_ChooseContestMon:
 	add	sp, sp, #-0xc
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
-	ldr	r0, .L2906
+	ldr	r0, .L2910
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0
-	bne	.L2905	@cond_branch
+	bne	.L2909	@cond_branch
 	bl	CleanupOverworldWindowsAndTilemaps
 	str	r4, [sp]
-	ldr	r0, .L2906+0x4
+	ldr	r0, .L2910+0x4
 	str	r0, [sp, #0x4]
-	ldr	r0, .L2906+0x8
+	ldr	r0, .L2910+0x8
 	str	r0, [sp, #0x8]
 	mov	r0, #0x2
 	mov	r1, #0x0
@@ -23869,54 +25501,54 @@ Task_ChooseContestMon:
 	bl	InitPartyMenu
 	add	r0, r5, #0
 	bl	DestroyTask
-.L2905:
+.L2909:
 	add	sp, sp, #0xc
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L2907:
+.L2911:
 	.align	2, 0
-.L2906:
+.L2910:
 	.word	gPaletteFade
 	.word	Task_HandleChooseMonInput
 	.word	CB2_ChooseContestMon
-.Lfe341:
-	.size	 Task_ChooseContestMon,.Lfe341-Task_ChooseContestMon
+.Lfe340:
+	.size	 Task_ChooseContestMon,.Lfe340-Task_ChooseContestMon
 	.align	2, 0
 	.type	 CB2_ChooseContestMon,function
 	.thumb_func
 CB2_ChooseContestMon:
 	push	{lr}
 	bl	GetCursorSelectionMonId
-	ldr	r2, .L2910
+	ldr	r2, .L2914
 	strb	r0, [r2]
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x5
-	bls	.L2909	@cond_branch
+	bls	.L2913	@cond_branch
 	mov	r0, #0xff
 	strb	r0, [r2]
-.L2909:
-	ldr	r1, .L2910+0x4
+.L2913:
+	ldr	r1, .L2914+0x4
 	ldrb	r0, [r2]
 	strh	r0, [r1]
-	ldr	r1, .L2910+0x8
-	ldr	r0, .L2910+0xc
+	ldr	r1, .L2914+0x8
+	ldr	r0, .L2914+0xc
 	str	r0, [r1]
-	ldr	r0, .L2910+0x10
+	ldr	r0, .L2914+0x10
 	bl	SetMainCallback2
 	pop	{r0}
 	bx	r0
-.L2911:
+.L2915:
 	.align	2, 0
-.L2910:
+.L2914:
 	.word	gContestMonPartyIndex
 	.word	gSpecialVar_0x8004
 	.word	gFieldCallback2
 	.word	CB2_FadeFromPartyMenu
 	.word	CB2_ReturnToField
-.Lfe342:
-	.size	 CB2_ChooseContestMon,.Lfe342-CB2_ChooseContestMon
+.Lfe341:
+	.size	 CB2_ChooseContestMon,.Lfe341-CB2_ChooseContestMon
 	.align	2, 0
 	.globl	ChoosePartyMon
 	.type	 ChoosePartyMon,function
@@ -23927,17 +25559,17 @@ ChoosePartyMon:
 	mov	r0, #0x1
 	mov	r1, #0x0
 	bl	FadeScreen
-	ldr	r0, .L2913
+	ldr	r0, .L2917
 	mov	r1, #0xa
 	bl	CreateTask
 	pop	{r0}
 	bx	r0
-.L2914:
+.L2918:
 	.align	2, 0
-.L2913:
+.L2917:
 	.word	Task_ChoosePartyMon
-.Lfe343:
-	.size	 ChoosePartyMon,.Lfe343-ChoosePartyMon
+.Lfe342:
+	.size	 ChoosePartyMon,.Lfe342-ChoosePartyMon
 	.align	2, 0
 	.type	 Task_ChoosePartyMon,function
 	.thumb_func
@@ -23946,19 +25578,19 @@ Task_ChoosePartyMon:
 	add	sp, sp, #-0xc
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
-	ldr	r0, .L2917
+	ldr	r0, .L2921
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0
-	bne	.L2916	@cond_branch
+	bne	.L2920	@cond_branch
 	bl	CleanupOverworldWindowsAndTilemaps
 	str	r4, [sp]
-	ldr	r0, .L2917+0x4
+	ldr	r0, .L2921+0x4
 	str	r0, [sp, #0x4]
-	ldr	r0, .L2917+0x8
+	ldr	r0, .L2921+0x8
 	str	r0, [sp, #0x8]
 	mov	r0, #0x3
 	mov	r1, #0x0
@@ -23967,19 +25599,19 @@ Task_ChoosePartyMon:
 	bl	InitPartyMenu
 	add	r0, r5, #0
 	bl	DestroyTask
-.L2916:
+.L2920:
 	add	sp, sp, #0xc
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L2918:
+.L2922:
 	.align	2, 0
-.L2917:
+.L2921:
 	.word	gPaletteFade
 	.word	Task_HandleChooseMonInput
 	.word	BufferMonSelection
-.Lfe344:
-	.size	 Task_ChoosePartyMon,.Lfe344-Task_ChoosePartyMon
+.Lfe343:
+	.size	 Task_ChoosePartyMon,.Lfe343-Task_ChoosePartyMon
 	.align	2, 0
 	.globl	ChooseMonForMoveRelearner
 	.type	 ChooseMonForMoveRelearner,function
@@ -23990,17 +25622,17 @@ ChooseMonForMoveRelearner:
 	mov	r0, #0x1
 	mov	r1, #0x0
 	bl	FadeScreen
-	ldr	r0, .L2920
+	ldr	r0, .L2924
 	mov	r1, #0xa
 	bl	CreateTask
 	pop	{r0}
 	bx	r0
-.L2921:
+.L2925:
 	.align	2, 0
-.L2920:
+.L2924:
 	.word	Task_ChooseMonForMoveRelearner
-.Lfe345:
-	.size	 ChooseMonForMoveRelearner,.Lfe345-ChooseMonForMoveRelearner
+.Lfe344:
+	.size	 ChooseMonForMoveRelearner,.Lfe344-ChooseMonForMoveRelearner
 	.align	2, 0
 	.type	 Task_ChooseMonForMoveRelearner,function
 	.thumb_func
@@ -24009,19 +25641,19 @@ Task_ChooseMonForMoveRelearner:
 	add	sp, sp, #-0xc
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
-	ldr	r0, .L2924
+	ldr	r0, .L2928
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0
-	bne	.L2923	@cond_branch
+	bne	.L2927	@cond_branch
 	bl	CleanupOverworldWindowsAndTilemaps
 	str	r4, [sp]
-	ldr	r0, .L2924+0x4
+	ldr	r0, .L2928+0x4
 	str	r0, [sp, #0x4]
-	ldr	r0, .L2924+0x8
+	ldr	r0, .L2928+0x8
 	str	r0, [sp, #0x8]
 	mov	r0, #0x7
 	mov	r1, #0x0
@@ -24030,111 +25662,111 @@ Task_ChooseMonForMoveRelearner:
 	bl	InitPartyMenu
 	add	r0, r5, #0
 	bl	DestroyTask
-.L2923:
+.L2927:
 	add	sp, sp, #0xc
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L2925:
+.L2929:
 	.align	2, 0
-.L2924:
+.L2928:
 	.word	gPaletteFade
 	.word	Task_HandleChooseMonInput
 	.word	CB2_ChooseMonForMoveRelearner
-.Lfe346:
-	.size	 Task_ChooseMonForMoveRelearner,.Lfe346-Task_ChooseMonForMoveRelearner
+.Lfe345:
+	.size	 Task_ChooseMonForMoveRelearner,.Lfe345-Task_ChooseMonForMoveRelearner
 	.align	2, 0
 	.type	 CB2_ChooseMonForMoveRelearner,function
 	.thumb_func
 CB2_ChooseMonForMoveRelearner:
 	push	{r4, r5, lr}
-	ldr	r5, .L2929
+	ldr	r5, .L2933
 	bl	GetCursorSelectionMonId
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r5]
 	cmp	r0, #0x5
-	bls	.L2927	@cond_branch
+	bls	.L2931	@cond_branch
 	mov	r0, #0xff
 	strh	r0, [r5]
-	b	.L2928
-.L2930:
+	b	.L2932
+.L2934:
 	.align	2, 0
-.L2929:
+.L2933:
 	.word	gSpecialVar_0x8004
-.L2927:
-	ldr	r4, .L2931
+.L2931:
+	ldr	r4, .L2935
 	ldrh	r1, [r5]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L2931+0x4
+	ldr	r1, .L2935+0x4
 	add	r0, r0, r1
 	bl	GetNumberOfRelearnableMoves
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	strh	r0, [r4]
-.L2928:
-	ldr	r0, .L2931+0x8
-	ldr	r1, .L2931+0xc
+.L2932:
+	ldr	r0, .L2935+0x8
+	ldr	r1, .L2935+0xc
 	str	r1, [r0]
-	ldr	r0, .L2931+0x10
+	ldr	r0, .L2935+0x10
 	bl	SetMainCallback2
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L2932:
+.L2936:
 	.align	2, 0
-.L2931:
+.L2935:
 	.word	gSpecialVar_0x8005
 	.word	gPlayerParty
 	.word	gFieldCallback2
 	.word	CB2_FadeFromPartyMenu
 	.word	CB2_ReturnToField
-.Lfe347:
-	.size	 CB2_ChooseMonForMoveRelearner,.Lfe347-CB2_ChooseMonForMoveRelearner
+.Lfe346:
+	.size	 CB2_ChooseMonForMoveRelearner,.Lfe346-CB2_ChooseMonForMoveRelearner
 	.align	2, 0
 	.globl	DoBattlePyramidMonsHaveHeldItem
 	.type	 DoBattlePyramidMonsHaveHeldItem,function
 	.thumb_func
 DoBattlePyramidMonsHaveHeldItem:
 	push	{r4, r5, lr}
-	ldr	r1, .L2940
+	ldr	r1, .L2944
 	mov	r0, #0x0
 	strh	r0, [r1]
 	mov	r4, #0x0
 	add	r5, r1, #0
-	b	.L2934
-.L2941:
+	b	.L2938
+.L2945:
 	.align	2, 0
-.L2940:
+.L2944:
 	.word	gSpecialVar_Result
-.L2936:
+.L2940:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
-.L2934:
+.L2938:
 	cmp	r4, #0x2
-	bhi	.L2935	@cond_branch
+	bhi	.L2939	@cond_branch
 	mov	r0, #0x64
 	mul	r0, r0, r4
-	ldr	r1, .L2942
+	ldr	r1, .L2946
 	add	r0, r0, r1
 	mov	r1, #0xc
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L2936	@cond_branch
+	beq	.L2940	@cond_branch
 	mov	r0, #0x1
 	strh	r0, [r5]
-.L2935:
+.L2939:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L2943:
+.L2947:
 	.align	2, 0
-.L2942:
+.L2946:
 	.word	gPlayerParty
-.Lfe348:
-	.size	 DoBattlePyramidMonsHaveHeldItem,.Lfe348-DoBattlePyramidMonsHaveHeldItem
+.Lfe347:
+	.size	 DoBattlePyramidMonsHaveHeldItem,.Lfe347-DoBattlePyramidMonsHaveHeldItem
 	.align	2, 0
 	.globl	BattlePyramidChooseMonHeldItems
 	.type	 BattlePyramidChooseMonHeldItems,function
@@ -24145,17 +25777,17 @@ BattlePyramidChooseMonHeldItems:
 	mov	r0, #0x1
 	mov	r1, #0x0
 	bl	FadeScreen
-	ldr	r0, .L2945
+	ldr	r0, .L2949
 	mov	r1, #0xa
 	bl	CreateTask
 	pop	{r0}
 	bx	r0
-.L2946:
+.L2950:
 	.align	2, 0
-.L2945:
+.L2949:
 	.word	Task_BattlePyramidChooseMonHeldItems
-.Lfe349:
-	.size	 BattlePyramidChooseMonHeldItems,.Lfe349-BattlePyramidChooseMonHeldItems
+.Lfe348:
+	.size	 BattlePyramidChooseMonHeldItems,.Lfe348-BattlePyramidChooseMonHeldItems
 	.align	2, 0
 	.type	 Task_BattlePyramidChooseMonHeldItems,function
 	.thumb_func
@@ -24164,19 +25796,19 @@ Task_BattlePyramidChooseMonHeldItems:
 	add	sp, sp, #-0xc
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
-	ldr	r0, .L2949
+	ldr	r0, .L2953
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0
-	bne	.L2948	@cond_branch
+	bne	.L2952	@cond_branch
 	bl	CleanupOverworldWindowsAndTilemaps
 	str	r4, [sp]
-	ldr	r0, .L2949+0x4
+	ldr	r0, .L2953+0x4
 	str	r0, [sp, #0x4]
-	ldr	r0, .L2949+0x8
+	ldr	r0, .L2953+0x8
 	str	r0, [sp, #0x8]
 	mov	r0, #0xc
 	mov	r1, #0x0
@@ -24185,19 +25817,19 @@ Task_BattlePyramidChooseMonHeldItems:
 	bl	InitPartyMenu
 	add	r0, r5, #0
 	bl	DestroyTask
-.L2948:
+.L2952:
 	add	sp, sp, #0xc
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L2950:
+.L2954:
 	.align	2, 0
-.L2949:
+.L2953:
 	.word	gPaletteFade
 	.word	Task_HandleChooseMonInput
 	.word	BufferMonSelection
-.Lfe350:
-	.size	 Task_BattlePyramidChooseMonHeldItems,.Lfe350-Task_BattlePyramidChooseMonHeldItems
+.Lfe349:
+	.size	 Task_BattlePyramidChooseMonHeldItems,.Lfe349-Task_BattlePyramidChooseMonHeldItems
 	.align	2, 0
 	.globl	MoveDeleterChooseMoveToForget
 	.type	 MoveDeleterChooseMoveToForget,function
@@ -24205,92 +25837,92 @@ Task_BattlePyramidChooseMonHeldItems:
 MoveDeleterChooseMoveToForget:
 	push	{lr}
 	add	sp, sp, #-0x4
-	ldr	r1, .L2952
-	ldr	r0, .L2952+0x4
+	ldr	r1, .L2956
+	ldr	r0, .L2956+0x4
 	ldrb	r2, [r0]
-	ldr	r0, .L2952+0x8
+	ldr	r0, .L2956+0x8
 	ldrb	r3, [r0]
 	sub	r3, r3, #0x1
 	lsl	r3, r3, #0x18
 	lsr	r3, r3, #0x18
-	ldr	r0, .L2952+0xc
+	ldr	r0, .L2956+0xc
 	str	r0, [sp]
 	mov	r0, #0x3
 	bl	ShowPokemonSummaryScreen
-	ldr	r1, .L2952+0x10
-	ldr	r0, .L2952+0x14
+	ldr	r1, .L2956+0x10
+	ldr	r0, .L2956+0x14
 	str	r0, [r1]
 	add	sp, sp, #0x4
 	pop	{r0}
 	bx	r0
-.L2953:
+.L2957:
 	.align	2, 0
-.L2952:
+.L2956:
 	.word	gPlayerParty
 	.word	gSpecialVar_0x8004
 	.word	gPlayerPartyCount
 	.word	CB2_ReturnToField
 	.word	gFieldCallback
 	.word	FieldCB_ContinueScriptHandleMusic
-.Lfe351:
-	.size	 MoveDeleterChooseMoveToForget,.Lfe351-MoveDeleterChooseMoveToForget
+.Lfe350:
+	.size	 MoveDeleterChooseMoveToForget,.Lfe350-MoveDeleterChooseMoveToForget
 	.align	2, 0
 	.globl	GetNumMovesSelectedMonHas
 	.type	 GetNumMovesSelectedMonHas,function
 	.thumb_func
 GetNumMovesSelectedMonHas:
 	push	{r4, r5, lr}
-	ldr	r1, .L2961
+	ldr	r1, .L2965
 	mov	r0, #0x0
 	strh	r0, [r1]
 	mov	r4, #0x0
 	add	r5, r1, #0
-.L2958:
-	ldr	r0, .L2961+0x4
+.L2962:
+	ldr	r0, .L2965+0x4
 	ldrh	r1, [r0]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L2961+0x8
+	ldr	r1, .L2965+0x8
 	add	r0, r0, r1
 	add	r1, r4, #0
 	add	r1, r1, #0xd
 	bl	GetMonData
 	cmp	r0, #0
-	beq	.L2957	@cond_branch
+	beq	.L2961	@cond_branch
 	ldrh	r0, [r5]
 	add	r0, r0, #0x1
 	strh	r0, [r5]
-.L2957:
+.L2961:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x3
-	bls	.L2958	@cond_branch
+	bls	.L2962	@cond_branch
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L2962:
+.L2966:
 	.align	2, 0
-.L2961:
+.L2965:
 	.word	gSpecialVar_Result
 	.word	gSpecialVar_0x8004
 	.word	gPlayerParty
-.Lfe352:
-	.size	 GetNumMovesSelectedMonHas,.Lfe352-GetNumMovesSelectedMonHas
+.Lfe351:
+	.size	 GetNumMovesSelectedMonHas,.Lfe351-GetNumMovesSelectedMonHas
 	.align	2, 0
 	.globl	BufferMoveDeleterNicknameAndMove
 	.type	 BufferMoveDeleterNicknameAndMove,function
 	.thumb_func
 BufferMoveDeleterNicknameAndMove:
 	push	{r4, r5, lr}
-	ldr	r0, .L2964
+	ldr	r0, .L2968
 	ldrh	r1, [r0]
 	mov	r0, #0x64
 	mov	r5, r1
 	mul	r5, r5, r0
-	ldr	r0, .L2964+0x4
+	ldr	r0, .L2968+0x4
 	add	r5, r5, r0
-	ldr	r0, .L2964+0x8
+	ldr	r0, .L2968+0x8
 	ldrh	r1, [r0]
 	add	r1, r1, #0xd
 	add	r0, r5, #0
@@ -24298,29 +25930,29 @@ BufferMoveDeleterNicknameAndMove:
 	add	r4, r0, #0
 	lsl	r4, r4, #0x10
 	lsr	r4, r4, #0x10
-	ldr	r1, .L2964+0xc
+	ldr	r1, .L2968+0xc
 	add	r0, r5, #0
 	bl	GetMonNickname
-	ldr	r0, .L2964+0x10
+	ldr	r0, .L2968+0x10
 	mov	r1, #0xd
 	mul	r1, r1, r4
-	ldr	r2, .L2964+0x14
+	ldr	r2, .L2968+0x14
 	add	r1, r1, r2
 	bl	StringCopy
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L2965:
+.L2969:
 	.align	2, 0
-.L2964:
+.L2968:
 	.word	gSpecialVar_0x8004
 	.word	gPlayerParty
 	.word	gSpecialVar_0x8005
 	.word	gStringVar1
 	.word	gStringVar2
 	.word	gMoveNames
-.Lfe353:
-	.size	 BufferMoveDeleterNicknameAndMove,.Lfe353-BufferMoveDeleterNicknameAndMove
+.Lfe352:
+	.size	 BufferMoveDeleterNicknameAndMove,.Lfe352-BufferMoveDeleterNicknameAndMove
 	.align	2, 0
 	.globl	MoveDeleterForgetMove
 	.type	 MoveDeleterForgetMove,function
@@ -24329,14 +25961,14 @@ MoveDeleterForgetMove:
 	push	{r4, r5, r6, lr}
 	mov	r6, r8
 	push	{r6}
-	ldr	r0, .L2972
+	ldr	r0, .L2976
 	mov	r8, r0
 	ldrh	r0, [r0]
 	mov	r6, #0x64
 	mul	r0, r0, r6
-	ldr	r5, .L2972+0x4
+	ldr	r5, .L2976+0x4
 	add	r0, r0, r5
-	ldr	r4, .L2972+0x8
+	ldr	r4, .L2976+0x8
 	ldrb	r2, [r4]
 	mov	r1, #0x0
 	bl	SetMonMoveSlot
@@ -24348,13 +25980,13 @@ MoveDeleterForgetMove:
 	bl	RemoveMonPPBonus
 	ldrh	r4, [r4]
 	cmp	r4, #0x2
-	bhi	.L2968	@cond_branch
-.L2970:
-	ldr	r0, .L2972
+	bhi	.L2972	@cond_branch
+.L2974:
+	ldr	r0, .L2976
 	ldrh	r1, [r0]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L2972+0x4
+	ldr	r1, .L2976+0x4
 	add	r0, r0, r1
 	lsl	r1, r4, #0x18
 	lsr	r1, r1, #0x18
@@ -24365,21 +25997,21 @@ MoveDeleterForgetMove:
 	lsl	r4, r4, #0x10
 	lsr	r4, r4, #0x10
 	cmp	r4, #0x2
-	bls	.L2970	@cond_branch
-.L2968:
+	bls	.L2974	@cond_branch
+.L2972:
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L2973:
+.L2977:
 	.align	2, 0
-.L2972:
+.L2976:
 	.word	gSpecialVar_0x8004
 	.word	gPlayerParty
 	.word	gSpecialVar_0x8005
-.Lfe354:
-	.size	 MoveDeleterForgetMove,.Lfe354-MoveDeleterForgetMove
+.Lfe353:
+	.size	 MoveDeleterForgetMove,.Lfe353-MoveDeleterForgetMove
 	.align	2, 0
 	.type	 ShiftMoveSlot,function
 	.thumb_func
@@ -24440,7 +26072,7 @@ ShiftMoveSlot:
 	mov	r6, sp
 	add	r6, r6, #0x6
 	strb	r0, [r6]
-	ldr	r1, .L2975
+	ldr	r1, .L2979
 	add	r0, r5, r1
 	ldrb	r0, [r0]
 	mov	r9, r0
@@ -24500,51 +26132,51 @@ ShiftMoveSlot:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L2976:
+.L2980:
 	.align	2, 0
-.L2975:
+.L2979:
 	.word	gPPUpGetMask
-.Lfe355:
-	.size	 ShiftMoveSlot,.Lfe355-ShiftMoveSlot
+.Lfe354:
+	.size	 ShiftMoveSlot,.Lfe354-ShiftMoveSlot
 	.align	2, 0
 	.globl	IsSelectedMonEgg
 	.type	 IsSelectedMonEgg,function
 	.thumb_func
 IsSelectedMonEgg:
 	push	{lr}
-	ldr	r0, .L2980
+	ldr	r0, .L2984
 	ldrh	r1, [r0]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L2980+0x4
+	ldr	r1, .L2984+0x4
 	add	r0, r0, r1
 	mov	r1, #0x2d
 	bl	GetMonData
 	add	r1, r0, #0
 	cmp	r1, #0
-	beq	.L2978	@cond_branch
-	ldr	r1, .L2980+0x8
+	beq	.L2982	@cond_branch
+	ldr	r1, .L2984+0x8
 	mov	r0, #0x1
 	strh	r0, [r1]
-	b	.L2979
-.L2981:
+	b	.L2983
+.L2985:
 	.align	2, 0
-.L2980:
+.L2984:
 	.word	gSpecialVar_0x8004
 	.word	gPlayerParty
 	.word	gSpecialVar_Result
-.L2978:
-	ldr	r0, .L2982
+.L2982:
+	ldr	r0, .L2986
 	strh	r1, [r0]
-.L2979:
+.L2983:
 	pop	{r0}
 	bx	r0
-.L2983:
+.L2987:
 	.align	2, 0
-.L2982:
+.L2986:
 	.word	gSpecialVar_Result
-.Lfe356:
-	.size	 IsSelectedMonEgg,.Lfe356-IsSelectedMonEgg
+.Lfe355:
+	.size	 IsSelectedMonEgg,.Lfe355-IsSelectedMonEgg
 	.align	2, 0
 	.globl	IsLastMonThatKnowsSurf
 	.type	 IsLastMonThatKnowsSurf,function
@@ -24553,16 +26185,16 @@ IsLastMonThatKnowsSurf:
 	push	{r4, r5, r6, r7, lr}
 	mov	r7, r8
 	push	{r7}
-	ldr	r1, .L2999
+	ldr	r1, .L3003
 	mov	r0, #0x0
 	strh	r0, [r1]
-	ldr	r0, .L2999+0x4
+	ldr	r0, .L3003+0x4
 	ldrh	r1, [r0]
 	mov	r0, #0x64
 	mul	r0, r0, r1
-	ldr	r1, .L2999+0x8
+	ldr	r1, .L3003+0x8
 	add	r0, r0, r1
-	ldr	r1, .L2999+0xc
+	ldr	r1, .L3003+0xc
 	ldrh	r1, [r1]
 	add	r1, r1, #0xd
 	bl	GetMonData
@@ -24570,65 +26202,65 @@ IsLastMonThatKnowsSurf:
 	lsr	r0, r0, #0x10
 	mov	r8, r0
 	cmp	r0, #0x39
-	bne	.L2984	@cond_branch
+	bne	.L2988	@cond_branch
 	mov	r6, #0x0
-	b	.L2986
-.L3000:
+	b	.L2990
+.L3004:
 	.align	2, 0
-.L2999:
+.L3003:
 	.word	gSpecialVar_Result
 	.word	gSpecialVar_0x8004
 	.word	gPlayerParty
 	.word	gSpecialVar_0x8005
-.L2989:
-	ldr	r0, .L3001
+.L2993:
+	ldr	r0, .L3005
 	ldrh	r0, [r0]
 	cmp	r6, r0
-	beq	.L2988	@cond_branch
+	beq	.L2992	@cond_branch
 	mov	r4, #0x0
 	mov	r0, #0x64
 	mov	r5, r6
 	mul	r5, r5, r0
-	ldr	r7, .L3001+0x4
-.L2994:
+	ldr	r7, .L3005+0x4
+.L2998:
 	add	r1, r4, #0
 	add	r1, r1, #0xd
 	add	r0, r5, r7
 	bl	GetMonData
 	cmp	r0, #0x39
-	beq	.L2984	@cond_branch
+	beq	.L2988	@cond_branch
 	add	r4, r4, #0x1
 	cmp	r4, #0x3
-	bls	.L2994	@cond_branch
-.L2988:
+	bls	.L2998	@cond_branch
+.L2992:
 	add	r6, r6, #0x1
-.L2986:
+.L2990:
 	bl	CalculatePlayerPartyCount
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r6, r0
-	bcc	.L2989	@cond_branch
+	bcc	.L2993	@cond_branch
 	mov	r0, r8
 	bl	AnyStorageMonWithMove
 	cmp	r0, #0x1
-	beq	.L2984	@cond_branch
-	ldr	r1, .L3001+0x8
+	beq	.L2988	@cond_branch
+	ldr	r1, .L3005+0x8
 	mov	r0, #0x1
 	strh	r0, [r1]
-.L2984:
+.L2988:
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L3002:
+.L3006:
 	.align	2, 0
-.L3001:
+.L3005:
 	.word	gSpecialVar_0x8004
 	.word	gPlayerParty
 	.word	gSpecialVar_Result
-.Lfe357:
-	.size	 IsLastMonThatKnowsSurf,.Lfe357-IsLastMonThatKnowsSurf
+.Lfe356:
+	.size	 IsLastMonThatKnowsSurf,.Lfe356-IsLastMonThatKnowsSurf
 	.comm	gItemUseCB, 4	@ 4
 .text
 	.align	2, 0

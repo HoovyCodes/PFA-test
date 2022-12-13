@@ -66,6 +66,7 @@
 #include "constants/weather.h"
 #include "constants/metatile_labels.h"
 #include "palette.h"
+#include "constants/abilities.h"
 
 EWRAM_DATA bool8 gBikeCyclingChallenge = FALSE;
 EWRAM_DATA u8 gBikeCollisions = 0;
@@ -1316,7 +1317,7 @@ void RemoveCameraObject(void)
 
 u8 GetPokeblockNameByMonNature(void)
 {
-    return CopyMonFavoritePokeblockName(GetNature(&gPlayerParty[GetLeadMonIndex()]), gStringVar1);
+    return CopyMonFavoritePokeblockName(GetNature(&gPlayerParty[GetLeadMonIndex()], FALSE), gStringVar1);
 }
 
 void GetSecretBaseNearbyMapName(void)
@@ -2152,7 +2153,7 @@ void ShowFrontierManiacMessage(void)
         [FRONTIER_MANIAC_BATTLE_FACTORY]       = { 7, 21 },
         [FRONTIER_MANIAC_BATTLE_PALACE]        = { 7, 21 },
         [FRONTIER_MANIAC_BATTLE_ARENA]         = { 14, 28 },
-        [FRONTIER_MANIAC_BATTLE_PIKE]          = { 13, 112 }, //BUG: 112 (0x70) is probably a mistake; the Pike Queen is battled twice well before that
+        [FRONTIER_MANIAC_BATTLE_PIKE]          = { 13, 70 }, //BUG: 112 (0x70) is probably a mistake; the Pike Queen is battled twice well before that
         [FRONTIER_MANIAC_BATTLE_PYRAMID]       = { 7, 56 }
     };
 
@@ -2348,7 +2349,7 @@ void ShowScrollableMultichoice(void)
             break;
         case SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_2:
             task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-            task->tNumItems = 8;
+            task->tNumItems = 11;
             task->tLeft = 14;
             task->tTop = 1;
             task->tWidth = 15;
@@ -2483,8 +2484,11 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
     [SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_2] =
     {
         gText_Dolls,
-        gText_Cushions,
+		gText_MatDesk,
+		gText_OrnaPost,
+		gText_ChairPlant,
         gText_Contest,
+		gText_TMs,
         gText_MegaC,
         gText_MegaB,
 		gText_MegaA,
@@ -2894,7 +2898,7 @@ void ShowNatureGirlMessage(void)
         gSpecialVar_0x8004 = 0;
     }
 
-    nature = GetNature(&gPlayerParty[gSpecialVar_0x8004]);
+    nature = GetNature(&gPlayerParty[gSpecialVar_0x8004], FALSE);
     ShowFieldMessage(sNatureGirlMessages[nature]);
 }
 
@@ -3096,16 +3100,7 @@ static void FillFrontierExchangeCornerWindowAndItemIcon(u16 menu, u16 selection)
                 break;
             case SCROLL_MULTI_BF_EXCHANGE_CORNER_DECOR_VENDOR_2:
                 AddTextPrinterParameterized2(0, 1, sFrontierExchangeCorner_Decor2Descriptions[selection], 0, NULL, 2, 1, 3);
-                if (sFrontierExchangeCorner_Decor2[selection] == 0xFFFF)
-                {
-                    ShowFrontierExchangeCornerItemIcon(sFrontierExchangeCorner_Decor2[selection]);
-                }
-                else
-                {
-                    FreeSpriteTilesByTag(5500);
-                    FreeSpritePaletteByTag(5500);
-                    sScrollableMultichoice_ItemSpriteId = AddDecorationIconObject(sFrontierExchangeCorner_Decor2[selection], 33, 88, 0, 5500, 5500);
-                }
+				ShowFrontierExchangeCornerItemIcon(sFrontierExchangeCorner_Decor2[selection]);
                 break;
             case SCROLL_MULTI_BF_EXCHANGE_CORNER_VITAMIN_VENDOR:
                 AddTextPrinterParameterized2(0, 1, sFrontierExchangeCorner_VitaminsDescriptions[selection], 0, NULL, 2, 1, 3);
@@ -4376,91 +4371,428 @@ u8 Script_TryGainNewFanFromCounter(void)
     return TryGainNewFanFromCounter(gSpecialVar_0x8004);
 }
 
-/*void MaxIvs(void)
-{
-    SetMonData(&gPlayerParty[0], MON_DATA_HP_IV, 31);
-	SetMonData(&gPlayerParty[0], MON_DATA_ATK_IV, 31);
-	SetMonData(&gPlayerParty[0], MON_DATA_DEF_IV, 31);
-	SetMonData(&gPlayerParty[0], MON_DATA_SPEED_IV, 31);
-	SetMonData(&gPlayerParty[0], MON_DATA_SPATK_IV, 31);
-	SetMonData(&gPlayerParty[0], MON_DATA_SPDEF_IV, 31);
-    CalculateMonStats(&gPlayerParty[0]);
-	SetMonData(&gPlayerParty[1], MON_DATA_HP_IV, 31);
-	SetMonData(&gPlayerParty[1], MON_DATA_ATK_IV, 31);
-	SetMonData(&gPlayerParty[1], MON_DATA_DEF_IV, 31);
-	SetMonData(&gPlayerParty[1], MON_DATA_SPEED_IV, 31);
-	SetMonData(&gPlayerParty[1], MON_DATA_SPATK_IV, 31);
-	SetMonData(&gPlayerParty[1], MON_DATA_SPDEF_IV, 31);
-    CalculateMonStats(&gPlayerParty[1]);
-	SetMonData(&gPlayerParty[2], MON_DATA_HP_IV, 31);
-	SetMonData(&gPlayerParty[2], MON_DATA_ATK_IV, 31);
-	SetMonData(&gPlayerParty[2], MON_DATA_DEF_IV, 31);
-	SetMonData(&gPlayerParty[2], MON_DATA_SPEED_IV, 31);
-	SetMonData(&gPlayerParty[2], MON_DATA_SPATK_IV, 31);
-	SetMonData(&gPlayerParty[2], MON_DATA_SPDEF_IV, 31);
-    CalculateMonStats(&gPlayerParty[2]);
-	SetMonData(&gPlayerParty[3], MON_DATA_HP_IV, 31);
-	SetMonData(&gPlayerParty[3], MON_DATA_ATK_IV, 31);
-	SetMonData(&gPlayerParty[3], MON_DATA_DEF_IV, 31);
-	SetMonData(&gPlayerParty[3], MON_DATA_SPEED_IV, 31);
-	SetMonData(&gPlayerParty[3], MON_DATA_SPATK_IV, 31);
-	SetMonData(&gPlayerParty[3], MON_DATA_SPDEF_IV, 31);
-    CalculateMonStats(&gPlayerParty[3]);
-	SetMonData(&gPlayerParty[4], MON_DATA_HP_IV, 31);
-	SetMonData(&gPlayerParty[4], MON_DATA_ATK_IV, 31);
-	SetMonData(&gPlayerParty[4], MON_DATA_DEF_IV, 31);
-	SetMonData(&gPlayerParty[4], MON_DATA_SPEED_IV, 31);
-	SetMonData(&gPlayerParty[4], MON_DATA_SPATK_IV, 31);
-	SetMonData(&gPlayerParty[4], MON_DATA_SPDEF_IV, 31);
-    CalculateMonStats(&gPlayerParty[4]);
-	SetMonData(&gPlayerParty[5], MON_DATA_HP_IV, 31);
-	SetMonData(&gPlayerParty[5], MON_DATA_ATK_IV, 31);
-	SetMonData(&gPlayerParty[5], MON_DATA_DEF_IV, 31);
-	SetMonData(&gPlayerParty[5], MON_DATA_SPEED_IV, 31);
-	SetMonData(&gPlayerParty[5], MON_DATA_SPATK_IV, 31);
-	SetMonData(&gPlayerParty[5], MON_DATA_SPDEF_IV, 31);
-    CalculateMonStats(&gPlayerParty[5]);
-	SetMonData(&gPlayerParty[6], MON_DATA_HP_IV, 31);
-	SetMonData(&gPlayerParty[6], MON_DATA_ATK_IV, 31);
-	SetMonData(&gPlayerParty[6], MON_DATA_DEF_IV, 31);
-	SetMonData(&gPlayerParty[6], MON_DATA_SPEED_IV, 31);
-	SetMonData(&gPlayerParty[6], MON_DATA_SPATK_IV, 31);
-	SetMonData(&gPlayerParty[6], MON_DATA_SPDEF_IV, 31);
-    CalculateMonStats(&gPlayerParty[6]);
-}*/
 
-void SetEvs(void)
+
+void ClearEv(void)
 {
-    u8 HpEv = gSpecialVar_0x8000;
-    u8 AtkEv = gSpecialVar_0x8001;
-    u8 DefEv = gSpecialVar_0x8002;
-	u8 SpdEv = gSpecialVar_0x8003;
-	u8 SpAtkEv = gSpecialVar_0x8005;
-	u8 SpDefEv = gSpecialVar_0x8006;
-    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_HP_EV, &HpEv);
-	SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_ATK_EV, &AtkEv);
-	SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_DEF_EV, &DefEv);
-	SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPEED_EV, &SpdEv);
-	SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPATK_EV, &SpAtkEv);
-	SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPDEF_EV, &SpDefEv);
-    CalculateMonStats(&gPlayerParty[gSpecialVar_0x8004]);
+	u8 EVzero = 0;
+	SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_HP_EV, &EVzero);
+	SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_ATK_EV, &EVzero);
+	SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_DEF_EV, &EVzero);
+	SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_SPEED_EV, &EVzero);
+	SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_SPATK_EV, &EVzero);
+	SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_SPDEF_EV, &EVzero);
+    CalculateMonStats(&gPlayerParty[gSpecialVar_0x800B]);
 }
-void SetMoves(void)
+void SetEv(void)
 {
-    u8 Move1 = gSpecialVar_0x8000;
-    u8 Move2 = gSpecialVar_0x8001;
-    u8 Move3 = gSpecialVar_0x8002;
-	u8 Move4 = gSpecialVar_0x8003;
-    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_MOVE1, &Move1);
-	SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_MOVE2, &Move2);
-	SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_MOVE3, &Move3);
-	SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_MOVE4, &Move4);
-    CalculateMonStats(&gPlayerParty[gSpecialVar_0x8004]);
+	u8 EV = 255;
+	switch (gSpecialVar_Result) 
+	{
+		case 0:
+			SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_HP_EV, &EV);
+			break;
+		case 1:
+			SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_ATK_EV, &EV);
+			break;
+		case 2:
+			SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_DEF_EV, &EV);
+			break;
+		case 3:
+			SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_SPEED_EV, &EV);
+			break;
+		case 4:
+			SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_SPATK_EV, &EV);
+			break;
+		case 5:
+			SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_SPDEF_EV, &EV);
+			break;
+	}
+    CalculateMonStats(&gPlayerParty[gSpecialVar_0x800B]);
+}
+
+void SetIV(void)
+{
+	u8 IV;
+	switch (gSpecialVar_Result) 
+	{
+		case 0:
+			if ((GetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_HP_IV))==31)
+				IV=0;
+			else
+				IV=31;
+			SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_HP_IV, &IV);
+			break;
+		case 1:
+			if ((GetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_ATK_IV))==31)
+				IV=0;
+			else
+				IV=31;
+			SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_ATK_IV, &IV);
+			break;
+		case 2:
+			if ((GetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_DEF_IV))==31)
+				IV=0;
+			else
+				IV=31;
+			SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_DEF_IV, &IV);
+			break;
+		case 3:
+			if ((GetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_SPEED_IV))==31)
+				IV=0;
+			else
+				IV=31;
+			SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_SPEED_IV, &IV);
+			break;
+		case 4:
+			if ((GetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_SPATK_IV))==31)
+				IV=0;
+			else
+				IV=31;
+			SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_SPATK_IV, &IV);
+			break;
+		case 5:
+			if ((GetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_SPDEF_IV))==31)
+				IV=0;
+			else
+				IV=31;
+			SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_SPDEF_IV, &IV);
+			break;
+	}
+    CalculateMonStats(&gPlayerParty[gSpecialVar_0x800B]);
 }
 void SetNature(void)
 {
-	u8 Nature = gSpecialVar_0x8000;
-	SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_PERSONALITY, &Nature);
-	CalculateMonStats(&gPlayerParty[gSpecialVar_0x8004]);
+	u8 NewNature;
+	switch (gSpecialVar_Result) 
+	{
+		case 0:
+			NewNature = NATURE_LONELY;
+			break;
+		case 1:
+			NewNature = NATURE_ADAMANT;
+			break;
+		case 2:
+			NewNature = NATURE_NAUGHTY;
+			break;
+		case 3:
+			NewNature = NATURE_BRAVE;
+			break;
+		case 4:
+			NewNature = NATURE_BOLD;
+			break;
+		case 5:
+			NewNature = NATURE_IMPISH;
+			break;
+		case 6:
+			NewNature = NATURE_LAX;
+			break;
+		case 7:
+			NewNature = NATURE_RELAXED;
+			break;
+		case 8:
+			NewNature = NATURE_MODEST;
+			break;
+		case 9:
+			NewNature = NATURE_MILD;
+			break;
+		case 10:
+			NewNature = NATURE_RASH;
+			break;
+		case 11:
+			NewNature = NATURE_QUIET;
+			break;
+		case 12:
+			NewNature = NATURE_CALM;
+			break;
+		case 13:
+			NewNature = NATURE_GENTLE;
+			break;
+		case 14:
+			NewNature = NATURE_CAREFUL;
+			break;
+		case 15:
+			NewNature = NATURE_SASSY;
+			break;
+		case 16:
+			NewNature = NATURE_TIMID;
+			break;
+		case 17:
+			NewNature = NATURE_HASTY;
+			break;
+		case 18:
+			NewNature = NATURE_JOLLY;
+			break;
+		case 19:
+			NewNature = NATURE_NAIVE;
+			break;
+		case 0x7F:
+			NewNature = HIDDEN_NATURE_NONE;
+			break;
+	}
+	SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_HIDDEN_NATURE, &NewNature);
+	CalculateMonStats(&gPlayerParty[gSpecialVar_0x800B]);
 }
 
+void ClearParty(void){
+	CpuFill32(0, gPlayerParty, sizeof gPlayerParty);
+}
+
+void CatchingContestValue(void){
+	u16 result;
+	result= (GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_LEVEL)*5) + (( (GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_HP_IV)) + (GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_ATK_IV)) + (GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPEED_IV)) )*2) + ( (GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_HP)/(GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_HP)))*100);
+	gSpecialVar_Result = result;
+}
+
+void CountSymbols(void) {
+	u8 result = 0;
+	u16 i;
+	    for (i = FLAG_SYS_TOWER_SILVER; i < FLAG_SYS_TOWER_SILVER + NUM_SYMBOLS; i++)
+    {
+        if (FlagGet(i))
+            result++;
+    }
+	gSpecialVar_Result = result;
+}
+
+void doubleVar(void) {
+	gSpecialVar_0x800B=gSpecialVar_0x800B*2;
+}
+
+
+static const u8 sText_Greeting0[] = _("Let's both do our bests!$");
+static const u8 sText_Greeting1[] = _("All right;\nI'm ready!$");
+static const u8 sText_Greeting2[] = _("I'm no expert,\nso go easy on me.$");
+static const u8 sText_Greeting3[] = _("Don't waste my time.$");
+static const u8 sText_Greeting4[] = _("Do you have any legendaries?$");
+static const u8 sText_Greeting5[] = _("Don't hold back!$");
+static const u8 sText_Greeting6[] = _("Blink, and you'll\nmiss my victory.$");
+static const u8 sText_Greeting7[] = _("I'm a beginner.\nPlease be nice to me.$");
+static const u8 sText_Greeting8[] = _("I'll never lose.\nNot ever!$");
+static const u8 sText_Greeting9[] = _("You're challenging me?\nHow cute.$");
+static const u8 sText_Greeting10[] = _("Sure, I have time\nto school a kid.$");
+static const u8 sText_Greeting11[] = _("En garde!$");
+static const u8 sText_Greeting12[] = _("My dad buys me my Pokémon.$");
+static const u8 sText_Greeting13[] = _("Please!\nBreak my streak!!$");
+static const u8 sText_Greeting14[] = _("You're just another\nstepping stone on my journey.$");
+static const u8 sText_Greeting15[] = _("Can we be quick?\nI have something in the oven.$");
+static const u8 sText_Greeting16[] = _("So, they let just anyone in here now?$");
+static const u8 sText_Greeting17[] = _("I'm a natural.\nAre you?$");
+static const u8 sText_Greeting18[] = _("Remember, you can click\nRun to surrender.$");
+static const u8 sText_Greeting19[] = _("Please put up a decent fight.$");
+static const u8 sText_Greeting20[] = _("I'm going to sweep your team.$");
+static const u8 sText_Greeting21[] = _("No mercy!$");
+static const u8 sText_Greeting22[] = _("You're going to\nneed a body bag after this.$");
+static const u8 sText_Greeting23[] = _("I've never lost a battle before.$");
+static const u8 sText_Greeting24[] = _("Are you ready\nto get wrecked?$");
+static const u8 sText_Greeting25[] = _("I'm going to send your Pokémon\nto the Shadow Realm!$");
+static const u8 sText_Greeting26[] = _("What time is it?\nWhere am I?$");
+static const u8 sText_Greeting27[] = _("Is there anything\nmore fun than a battle?$");
+static const u8 sText_Greeting28[] = _("Strength comes from within.\nRemember that.$");
+static const u8 sText_Greeting29[] = _("You don't stand a\nghost of a chance.$");
+static const u8 sText_Greeting30[] = _("Let's fight\nan epic battle.$");
+
+static const u8 sText_Greeting31[] = _("Oh, hey...");
+static const u8 sText_Greeting32[] = _("Nice to meet you!");
+static const u8 sText_Greeting33[] = _("Let's have fun together!");
+static const u8 sText_Greeting34[] = _("Did you want to battle me?");
+static const u8 sText_Greeting35[] = _("Don't drag this out.");
+static const u8 sText_Greeting36[] = _("Hey, can you spare some change?");
+static const u8 sText_Greeting37[] = _("What? Battling? What's going on?");
+static const u8 sText_Greeting38[] = _("I'm ready to rock 'n roll!");
+static const u8 sText_Greeting39[] = _("No rest for the weary, eh?");
+static const u8 sText_Greeting40[] = _("You!\nI need to battle you.");
+static const u8 sText_Greeting41[] = _("The wheel of fate is turning.");
+static const u8 sText_Greeting42[] = _("I'm raring to go.");
+static const u8 sText_Greeting43[] = _("I live for battling!");
+static const u8 sText_Greeting44[] = _("Please, don't take this too seriously.");
+static const u8 sText_Greeting45[] = _("Are you the hunter or the hunted?");
+static const u8 sText_Greeting46[] = _("Fight the power!\nFree yourself of your chains.");
+static const u8 sText_Greeting47[] = _("Sure, I can fit in a battle.");
+static const u8 sText_Greeting48[] = _("Please don't hurt\nmy Pokémon too badly.");
+static const u8 sText_Greeting49[] = _("I'm hungry.");
+static const u8 sText_Greeting50[] = _("Good luck, Trainer.\nDo your best.");
+void getintro(void) {
+	switch(Random()%51){
+	case 0:
+    StringCopy(gStringVar4, sText_Greeting0);
+    break;
+    case 1:
+    StringCopy(gStringVar4, sText_Greeting1);
+    break;
+    case 2:
+    StringCopy(gStringVar4, sText_Greeting2);
+    break;
+    case 3:
+    StringCopy(gStringVar4, sText_Greeting3);
+    break;
+    case 4:
+    StringCopy(gStringVar4, sText_Greeting4);
+    break;
+    case 5:
+    StringCopy(gStringVar4, sText_Greeting5);
+    break;
+    case 6:
+    StringCopy(gStringVar4, sText_Greeting6);
+    break;
+    case 7:
+    StringCopy(gStringVar4, sText_Greeting7);
+    break;
+    case 8:
+    StringCopy(gStringVar4, sText_Greeting8);
+    break;
+    case 9:
+    StringCopy(gStringVar4, sText_Greeting9);
+    break;
+    case 10:
+    StringCopy(gStringVar4, sText_Greeting10);
+    break;
+    case 11:
+    StringCopy(gStringVar4, sText_Greeting11);
+    break;
+    case 12:
+    StringCopy(gStringVar4, sText_Greeting12);
+    break;
+    case 13:
+    StringCopy(gStringVar4, sText_Greeting13);
+    break;
+    case 14:
+    StringCopy(gStringVar4, sText_Greeting14);
+    break;
+    case 15:
+    StringCopy(gStringVar4, sText_Greeting15);
+    break;
+    case 16:
+    StringCopy(gStringVar4, sText_Greeting16);
+    break;
+    case 17:
+    StringCopy(gStringVar4, sText_Greeting17);
+    break;
+    case 18:
+    StringCopy(gStringVar4, sText_Greeting18);
+    break;
+    case 19:
+    StringCopy(gStringVar4, sText_Greeting19);
+    break;
+    case 20:
+    StringCopy(gStringVar4, sText_Greeting20);
+    break;
+    case 21:
+    StringCopy(gStringVar4, sText_Greeting21);
+    break;
+    case 22:
+    StringCopy(gStringVar4, sText_Greeting22);
+    break;
+    case 23:
+    StringCopy(gStringVar4, sText_Greeting23);
+    break;
+    case 24:
+    StringCopy(gStringVar4, sText_Greeting24);
+    break;
+    case 25:
+    StringCopy(gStringVar4, sText_Greeting25);
+    break;
+    case 26:
+    StringCopy(gStringVar4, sText_Greeting26);
+    break;
+    case 27:
+    StringCopy(gStringVar4, sText_Greeting27);
+    break;
+    case 28:
+    StringCopy(gStringVar4, sText_Greeting28);
+    break;
+    case 29:
+    StringCopy(gStringVar4, sText_Greeting29);
+    break;
+    case 30:
+    StringCopy(gStringVar4, sText_Greeting30);
+    break;
+	case 31:
+    StringCopy(gStringVar4, sText_Greeting31);
+    break;
+    case 32:
+    StringCopy(gStringVar4, sText_Greeting32);
+    break;
+    case 33:
+    StringCopy(gStringVar4, sText_Greeting33);
+    break;
+    case 34:
+    StringCopy(gStringVar4, sText_Greeting34);
+    break;
+    case 35:
+    StringCopy(gStringVar4, sText_Greeting35);
+    break;
+    case 36:
+    StringCopy(gStringVar4, sText_Greeting36);
+    break;
+    case 37:
+    StringCopy(gStringVar4, sText_Greeting37);
+    break;
+    case 38:
+    StringCopy(gStringVar4, sText_Greeting38);
+    break;
+    case 39:
+    StringCopy(gStringVar4, sText_Greeting39);
+    break;
+    case 40:
+    StringCopy(gStringVar4, sText_Greeting40);
+    break;
+    case 41:
+    StringCopy(gStringVar4, sText_Greeting41);
+    break;
+    case 42:
+    StringCopy(gStringVar4, sText_Greeting42);
+    break;
+    case 43:
+    StringCopy(gStringVar4, sText_Greeting43);
+    break;
+    case 44:
+    StringCopy(gStringVar4, sText_Greeting44);
+    break;
+    case 45:
+    StringCopy(gStringVar4, sText_Greeting45);
+    break;
+    case 46:
+    StringCopy(gStringVar4, sText_Greeting46);
+    break;
+    case 47:
+    StringCopy(gStringVar4, sText_Greeting47);
+    break;
+    case 48:
+    StringCopy(gStringVar4, sText_Greeting48);
+    break;
+    case 49:
+    StringCopy(gStringVar4, sText_Greeting49);
+    break;
+    case 50:
+    StringCopy(gStringVar4, sText_Greeting50);
+    break;
+	}
+}
+void swapAbility(void){
+	u16 species=GetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_SPECIES);
+	u16 ability0 = gBaseStats[species].abilities[0];
+	u16 ability1 = gBaseStats[species].abilities[1];
+	u16 ability2 = gBaseStats[species].abilities[2];
+	const u8* dummy0;
+	const u8* dummy1;
+	const u8* dummy2;
+	dummy0=gAbilityNames[ability0];
+	dummy1=gAbilityNames[ability1];
+	dummy2=gAbilityNames[ability2];
+	StringCopy(gStringVar1, dummy0);
+	StringCopy(gStringVar2, dummy1);
+	StringCopy(gStringVar3, dummy2);
+}
+void swapAbility2(void){
+	SetMonData(&gPlayerParty[gSpecialVar_0x800B], MON_DATA_ABILITY_NUM, &gSpecialVar_Result);
+}
+
+void GetMysteryGifts(void){
+	u16 result;
+	result = gSaveBlock2Ptr->playTimeHours;
+	gSpecialVar_Result = result;
+}
+void SetFrontierBattlePoints(void){
+	gSaveBlock2Ptr->frontier.battlePoints = 999;
+}

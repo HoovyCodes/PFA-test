@@ -10,7 +10,7 @@ BattleFrontier_BattleArenaLobby_ObjectEvents:
 	object_event 5, OBJ_EVENT_GFX_YOUNGSTER, 0, 14, 10, 3, MOVEMENT_TYPE_FACE_LEFT, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_BattleArenaLobby_EventScript_Youngster, 0
 
 BattleFrontier_BattleArenaLobby_MapWarps:
-	warp_def 7, 12, 3, 1, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
+	warp_def 7, 12, 3, 0, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
 
 BattleFrontier_BattleArenaLobby_MapBGEvents:
 	bg_event 5, 9, 3, BG_EVENT_PLAYER_FACING_NORTH, BattleFrontier_BattleArenaLobby_EventScript_ShowResults

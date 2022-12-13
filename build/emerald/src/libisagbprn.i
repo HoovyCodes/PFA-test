@@ -1,6 +1,6 @@
-# 1 "src/libisagbprn.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/libisagbprn.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/libisagbprn.c"
 # 1 "tools/agbcc/include/stdarg.h" 1
 # 9 "tools/agbcc/include/stdarg.h"

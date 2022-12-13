@@ -6806,6 +6806,7 @@ InitDomeTrainers:
 	mov	r2, #0x64
 	mul	r0, r0, r2
 	add	r0, r0, r9
+	mov	r1, #0x0
 	bl	GetNature
 	ldr	r1, [r5]
 	add	r1, r1, r7
@@ -7069,9 +7070,9 @@ InitDomeTrainers:
 	add	sl, sl, r0
 	mov	r1, sl
 	cmp	r1, #0xf
-	bgt	.LCB1629
+	bgt	.LCB1630
 	b	.L155	@long jump
-.LCB1629:
+.LCB1630:
 	mov	r7, #0x0
 	ldr	r2, [sp, #0x18]
 	strh	r7, [r2]
@@ -9286,13 +9287,13 @@ Task_ShowTourneyInfoCard:
 	.word	gTasks
 .L548:
 	cmp	r4, #0x2
-	bne	.LCB4504
+	bne	.LCB4505
 	b	.L534	@long jump
-.LCB4504:
+.LCB4505:
 	cmp	r4, #0x3
-	bne	.LCB4506
+	bne	.LCB4507
 	b	.L536	@long jump
-.LCB4506:
+.LCB4507:
 	b	.L529
 .L530:
 	mov	r0, #0x0
@@ -10478,9 +10479,9 @@ Task_HandleInfoCardInput:
 	mov	r5, #0x8
 	ldrsh	r0, [r0, r5]
 	cmp	r0, #0x8
-	bls	.LCB5974
+	bls	.LCB5975
 	bl	.L696	@far jump
-.LCB5974:
+.LCB5975:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L913+0x4
 	add	r0, r0, r1
@@ -10511,9 +10512,9 @@ Task_HandleInfoCardInput:
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
 	cmp	r1, #0
-	beq	.LCB6001
+	beq	.LCB6002
 	bl	.L696	@far jump
-.LCB6001:
+.LCB6002:
 	mov	r0, #0x1
 	neg	r0, r0
 	str	r1, [sp]
@@ -10541,9 +10542,9 @@ Task_HandleInfoCardInput:
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.LCB6036
+	beq	.LCB6037
 	bl	.L696	@far jump
-.LCB6036:
+.LCB6037:
 	mov	r1, r8
 	lsl	r0, r1, #0x2
 	add	r0, r0, r8
@@ -10570,9 +10571,9 @@ Task_HandleInfoCardInput:
 	bl	.L696	@ far jump
 .L716:
 	cmp	r6, #0x9
-	beq	.LCB6070
+	beq	.LCB6071
 	bl	.L696	@far jump
-.LCB6070:
+.LCB6071:
 	mov	r0, #0x1
 	neg	r0, r0
 	mov	r1, #0x0
@@ -10652,9 +10653,9 @@ Task_HandleInfoCardInput:
 	sub	r0, r6, #0x1
 	mov	r9, r1
 	cmp	r0, #0x7
-	bls	.LCB6168
+	bls	.LCB6169
 	bl	.L696	@far jump
-.LCB6168:
+.LCB6169:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L923+0x4
 	add	r0, r0, r1
@@ -13194,13 +13195,13 @@ Task_GetInfoCardInput:
 	mov	r1, #0xe
 	ldrsh	r0, [r3, r1]
 	cmp	r0, #0
-	bne	.LCB9313
+	bne	.LCB9314
 	b	.L1050	@long jump
-.LCB9313:
+.LCB9314:
 	cmp	r0, #0x1
-	beq	.LCB9315
+	beq	.LCB9316
 	b	.L1016	@long jump
-.LCB9315:
+.LCB9316:
 	mov	r0, #0x40
 	and	r0, r0, r4
 	cmp	r0, #0
@@ -13321,9 +13322,9 @@ Task_GetInfoCardInput:
 	mov	r7, #0x4
 .L1020:
 	cmp	r7, #0x9
-	beq	.LCB9496
+	beq	.LCB9497
 	b	.L1033	@long jump
-.LCB9496:
+.LCB9497:
 	ldr	r0, .L1061+0x8
 	ldr	r3, [r0]
 	ldrb	r0, [r3, #0x10]
@@ -14310,9 +14311,9 @@ DisplayTrainerInfoOnCard:
 	ldr	r3, .L1300+0x14
 	add	r0, r2, r3
 	cmp	r0, #0x1
-	bls	.LCB10845
+	bls	.LCB10846
 	b	.L1161	@long jump
-.LCB10845:
+.LCB10846:
 	mov	r7, #0x0
 	mov	r4, #0x0
 	mov	r9, r4
@@ -14447,9 +14448,9 @@ DisplayTrainerInfoOnCard:
 	add	r9, r9, r4
 	add	r7, r7, #0x1
 	cmp	r7, #0x2
-	bgt	.LCB11027
+	bgt	.LCB11028
 	b	.L1165	@long jump
-.LCB11027:
+.LCB11028:
 	mov	r5, #0x0
 	mov	r1, r8
 	mov	r7, #0x5
@@ -14622,9 +14623,9 @@ DisplayTrainerInfoOnCard:
 	add	r9, r9, r2
 	sub	r7, r7, #0x1
 	cmp	r7, #0
-	blt	.LCB11283
+	blt	.LCB11284
 	b	.L1199	@long jump
-.LCB11283:
+.LCB11284:
 	mov	r5, #0x0
 	mov	r1, r8
 	mov	r7, #0x5
@@ -15005,9 +15006,9 @@ BufferDomeWinString:
 	add	r0, r6, r0
 	str	r3, [sp, #0x8]
 	cmp	r6, r0
-	blt	.LCB11761
+	blt	.LCB11762
 	b	.L1327	@long jump
-.LCB11761:
+.LCB11762:
 	ldr	r5, .L1350
 	mov	sl, r5
 	ldr	r0, .L1350+0x4
@@ -15148,9 +15149,9 @@ BufferDomeWinString:
 	ldrb	r0, [r1]
 	add	r2, r2, r0
 	cmp	r6, r2
-	bge	.LCB11959
+	bge	.LCB11960
 	b	.L1329	@long jump
-.LCB11959:
+.LCB11960:
 .L1327:
 	cmp	r7, #0xe
 	beq	.L1340	@cond_branch
@@ -15707,9 +15708,9 @@ DisplayMatchInfoOnCard:
 	add	r9, r9, r3
 	add	r5, r5, #0x1
 	cmp	r5, #0x2
-	bgt	.LCB12715
+	bgt	.LCB12716
 	b	.L1386	@long jump
-.LCB12715:
+.LCB12716:
 	mov	r5, #0x0
 	ldr	r6, .L1434+0x18
 	ldr	r7, .L1434+0x1c
@@ -15872,9 +15873,9 @@ DisplayMatchInfoOnCard:
 	add	r9, r9, r3
 	add	r5, r5, #0x1
 	cmp	r5, #0x2
-	bgt	.LCB12940
+	bgt	.LCB12941
 	b	.L1397	@long jump
-.LCB12940:
+.LCB12941:
 	add	r0, sp, #0xc
 	mov	r5, #0x0
 	strb	r5, [r0, #0x6]
@@ -16227,9 +16228,9 @@ Task_HandleTourneyTreeInput:
 	ldrsh	r0, [r0, r2]
 	add	r2, r1, #0
 	cmp	r0, #0x7
-	bls	.LCB13376
+	bls	.LCB13377
 	b	.L1455	@long jump
-.LCB13376:
+.LCB13377:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L1479+0x4
 	add	r0, r0, r1
@@ -16259,9 +16260,9 @@ Task_HandleTourneyTreeInput:
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
 	cmp	r1, #0
-	beq	.LCB13403
+	beq	.LCB13404
 	b	.L1455	@long jump
-.LCB13403:
+.LCB13404:
 	mov	r0, #0x1
 	neg	r0, r0
 	str	r1, [sp]
@@ -16296,9 +16297,9 @@ Task_HandleTourneyTreeInput:
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.LCB13446
+	beq	.LCB13447
 	b	.L1455	@long jump
-.LCB13446:
+.LCB13447:
 	lsl	r0, r5, #0x2
 	add	r0, r0, r5
 	lsl	r0, r0, #0x3
@@ -16316,9 +16317,9 @@ Task_HandleTourneyTreeInput:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x1
-	bne	.LCB13470
+	bne	.LCB13471
 	b	.L1455	@long jump
-.LCB13470:
+.LCB13471:
 	cmp	r0, #0x1
 	ble	.L1463	@cond_branch
 	cmp	r0, #0x2
@@ -16393,9 +16394,9 @@ Task_HandleTourneyTreeInput:
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
 	cmp	r6, #0
-	beq	.LCB13562
+	beq	.LCB13563
 	b	.L1455	@long jump
-.LCB13562:
+.LCB13563:
 	bl	FreeAllWindowBuffers
 	bl	ScanlineEffect_Stop
 	ldr	r4, .L1491+0x4
@@ -17222,15 +17223,15 @@ GetWinningMove:
 	ldr	r0, [sp, #0x68]
 	mov	r9, r0
 	cmp	r0, #0x3
-	bgt	.LCB14614
+	bgt	.LCB14615
 	b	.L1550	@long jump
-.LCB14614:
+.LCB14615:
 	ldr	r1, [sp, #0x64]
 	str	r1, [sp, #0x50]
 	cmp	r1, #0x2
-	bgt	.LCB14621
+	bgt	.LCB14622
 	b	.L1546	@long jump
-.LCB14621:
+.LCB14622:
 	ldr	r2, [sp, #0x58]
 	mov	r9, r2
 	b	.L1583
@@ -17387,9 +17388,9 @@ Task_ShowTourneyTree:
 	mov	r1, #0x8
 	ldrsh	r0, [r0, r1]
 	cmp	r0, #0x5
-	bls	.LCB14829
+	bls	.LCB14830
 	b	.L1622	@long jump
-.LCB14829:
+.LCB14830:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L1690+0x4
 	add	r0, r0, r1
@@ -18022,9 +18023,9 @@ Task_ShowTourneyTree:
 	add	r7, r7, #0x4
 	sub	r5, r5, #0x1
 	cmp	r5, #0
-	blt	.LCB15657
+	blt	.LCB15658
 	b	.L1639	@long jump
-.LCB15657:
+.LCB15658:
 .L1683:
 	ldr	r0, .L1716+0xc
 	ldr	r1, [sp, #0x1c]
@@ -18257,9 +18258,9 @@ Task_HandleStaticTourneyTreeInput:
 	ldrsh	r0, [r0, r2]
 	add	r2, r1, #0
 	cmp	r0, #0x4
-	bls	.LCB15956
+	bls	.LCB15957
 	b	.L1733	@long jump
-.LCB15956:
+.LCB15957:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L1755+0x4
 	add	r0, r0, r1
@@ -18304,9 +18305,9 @@ Task_HandleStaticTourneyTreeInput:
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.LCB16008
+	beq	.LCB16009
 	b	.L1733	@long jump
-.LCB16008:
+.LCB16009:
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r0, r0, #0x3
@@ -19069,9 +19070,9 @@ InitRandomTourneyTreeResults:
 	add	r0, r2, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x1
-	beq	.LCB16985
+	beq	.LCB16986
 	b	.L1860	@long jump
-.LCB16985:
+.LCB16986:
 .L1861:
 	mov	r0, #0x20
 	bl	AllocZeroed
@@ -19315,9 +19316,9 @@ InitRandomTourneyTreeResults:
 	add	sl, sl, r2
 	mov	r4, sl
 	cmp	r4, #0xf
-	bgt	.LCB17314
+	bgt	.LCB17315
 	b	.L1866	@long jump
-.LCB17314:
+.LCB17315:
 	mov	r5, #0x0
 	mov	sl, r5
 	ldr	r5, [sp, #0x18]
@@ -19705,40 +19706,35 @@ DecideRoundWinners:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	str	r0, [sp]
-	mov	r0, #0x0
-	str	r0, [sp, #0xc]
-	mov	r1, #0x0
-	str	r1, [sp, #0x10]
 	mov	r5, #0x0
 	mov	r1, #0x3
-	ldr	r0, [sp]
 	and	r0, r0, r1
 	lsl	r0, r0, #0x3
 	str	r0, [sp, #0x14]
 .L1969:
-	ldr	r2, .L2016
-	ldr	r0, [r2]
+	ldr	r1, .L2016
+	ldr	r0, [r1]
 	lsl	r4, r5, #0x2
 	add	r1, r0, r4
-	ldr	r3, .L2016+0x4
-	add	r0, r1, r3
+	ldr	r2, .L2016+0x4
+	add	r0, r1, r2
 	ldrb	r0, [r0]
 	lsl	r0, r0, #0x1d
-	add	r2, r5, #0x1
-	str	r2, [sp, #0x24]
+	add	r3, r5, #0x1
+	str	r3, [sp, #0x24]
 	cmp	r0, #0
-	bge	.LCB17875
+	bge	.LCB17874
 	b	.L1968	@long jump
-.LCB17875:
-	sub	r3, r3, #0x1
-	add	r0, r1, r3
+.LCB17874:
+	sub	r2, r2, #0x1
+	add	r0, r1, r2
 	ldrh	r0, [r0]
 	lsl	r1, r0, #0x16
 	ldr	r0, .L2016+0x8
 	cmp	r1, r0
-	bne	.LCB17889
+	bne	.LCB17888
 	b	.L1968	@long jump
-.LCB17889:
+.LCB17888:
 	str	r5, [sp, #0x4]
 	lsr	r1, r1, #0x16
 	ldr	r0, [sp]
@@ -19860,36 +19856,40 @@ DecideRoundWinners:
 	str	r5, [sp, #0x24]
 	ldr	r5, [sp, #0x8]
 	cmp	r5, #0xff
-	bne	.LCB18040
+	bne	.LCB18039
 	b	.L1968	@long jump
-.LCB18040:
+.LCB18039:
 	mov	r0, #0x0
-	mov	sl, r0
-	lsl	r1, r5, #0x1
-	str	r1, [sp, #0x2c]
-	ldr	r2, [sp, #0x4]
-	lsl	r2, r2, #0x1
-	str	r2, [sp, #0x28]
+	str	r0, [sp, #0xc]
+	mov	r1, #0x0
+	str	r1, [sp, #0x10]
+	mov	sl, r1
+	lsl	r2, r5, #0x1
+	str	r2, [sp, #0x2c]
 	ldr	r3, [sp, #0x4]
-	add	r0, r2, r3
+	lsl	r3, r3, #0x1
+	str	r3, [sp, #0x28]
+	ldr	r5, [sp, #0x4]
+	add	r0, r3, r5
 	lsl	r0, r0, #0x1
 	mov	r9, r0
-	add	r0, r1, r5
+	ldr	r1, [sp, #0x8]
+	add	r0, r2, r1
 	lsl	r0, r0, #0x1
 	str	r0, [sp, #0x18]
 .L1980:
 	mov	r5, #0x0
-	mov	r0, r9
-	str	r0, [sp, #0x38]
+	mov	r2, r9
+	str	r2, [sp, #0x38]
 .L1984:
 	mov	r6, #0x0
 	lsl	r7, r5, #0x1
 	ldr	r4, [sp, #0x18]
 .L1988:
-	ldr	r2, .L2020
-	ldr	r1, [r2]
-	ldr	r3, .L2020+0x4
-	add	r1, r1, r3
+	ldr	r3, .L2020
+	ldr	r1, [r3]
+	ldr	r0, .L2020+0x4
+	add	r1, r1, r0
 	ldr	r2, [sp, #0x38]
 	add	r0, r1, r2
 	ldrh	r0, [r0]
@@ -20240,9 +20240,9 @@ DecideRoundWinners:
 .L1968:
 	ldr	r5, [sp, #0x24]
 	cmp	r5, #0xf
-	bgt	.LCB18543
+	bgt	.LCB18546
 	b	.L1969	@long jump
-.LCB18543:
+.LCB18546:
 	add	sp, sp, #0x40
 	pop	{r3, r4, r5}
 	mov	r8, r3

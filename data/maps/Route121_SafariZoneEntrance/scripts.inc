@@ -11,6 +11,25 @@ Route121_SafariZoneEntrance_EventScript_ExitSafariZone:: @ 822BBCB
 	applymovement OBJ_EVENT_ID_PLAYER, Route121_SafariZoneEntrance_Movement_ExitSafariZone
 	waitmovement 0
 	setvar VAR_SAFARI_ZONE_STATE, 0
+	special ChoosePartyMon
+	special CatchingContestValue
+	compare VAR_RESULT, 200
+	goto_if_ge Catching_Contest_Winner
+	goto Catching_Contest_Loser
+	releaseall
+	end
+	
+Catching_Contest_Winner::
+	setvar VAR_0x8004, 20
+	special GiveFrontierBattlePoints
+	msgbox SafariZoneEntrance_Text_You_Win, MSGBOX_NPC
+	releaseall
+	end
+	
+Catching_Contest_Loser::
+	setvar VAR_0x8004, 50
+	special GiveFrontierBattlePoints
+	msgbox SafariZoneEntrance_Text_You_Lose, MSGBOX_NPC
 	releaseall
 	end
 
@@ -24,7 +43,7 @@ Route121_SafariZoneEntrance_Movement_ExitSafariZone: @ 822BBDD
 	walk_right
 	walk_right
 	step_end
-
+	
 Route121_SafariZoneEntrance_EventScript_WelcomeAttendant:: @ 822BBE6
 	msgbox Route121_SafariZoneEntrance_Text_WelcomeToSafariZone, MSGBOX_NPC
 	end
@@ -57,17 +76,9 @@ Route121_SafariZoneEntrance_EventScript_EntranceCounterTrigger:: @ 822BC18
 	end
 
 Route121_SafariZoneEntrance_EventScript_TryEnterSafariZone:: @ 822BC48
-	checkitem ITEM_POKEBLOCK_CASE, 1
-	compare VAR_RESULT, 0
-	goto_if_eq Route121_SafariZoneEntrance_EventScript_NoPokeblockCase
 	call Route121_SafariZoneEntrance_EventScript_CheckHasRoomForPokemon
-	checkmoney 500, 0
-	compare VAR_RESULT, 0
-	goto_if_eq Route121_SafariZoneEntrance_EventScript_NotEnoughMoney
-	playse SE_SHOP
-	msgbox Route121_SafariZoneEntrance_Text_ThatWillBe500Please, MSGBOX_DEFAULT
-	removemoney 500, 0
-	updatemoneybox 0, 0
+	special SavePlayerParty
+	special ClearParty
 	msgbox Route121_SafariZoneEntrance_Text_HereAreYourSafariBalls, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
 	message Route121_SafariZoneEntrance_Text_Received30SafariBalls
@@ -134,4 +145,3 @@ Route121_SafariZoneEntrance_Movement_EnterSafariZone: @ 822BD18
 Route121_SafariZoneEntrance_EventScript_TrainerTipSign:: @ 822BD21
 	msgbox Route121_SafariZoneEntrance_Text_TrainerTip, MSGBOX_SIGN
 	end
-

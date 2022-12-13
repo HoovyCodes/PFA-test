@@ -196,7 +196,7 @@ m4aSoundInit:
 	.word	0x4000200
 	.word	gSoundInfo
 	.word	gCgbChans
-	.word	0x94c500
+	.word	0x94cc00
 	.word	gNumMusicPlayers
 	.word	gMPlayTable
 	.word	gMPlayMemAccArea

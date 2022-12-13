@@ -7,7 +7,7 @@ BattleFrontier_Mart:
 	.4byte BattleFrontier_Mart_MapEvents
 	.4byte BattleFrontier_Mart_MapScripts
 	.4byte 0x0
-	.2byte MUS_POKE_MART
+	.2byte MUS_B_TOWER_RS
 	.2byte LAYOUT_MART
 	.byte MAPSEC_BATTLE_FRONTIER
 	.byte 0

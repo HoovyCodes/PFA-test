@@ -1,6 +1,6 @@
-# 1 "src/field_specials.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/field_specials.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/field_specials.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -3153,6 +3153,13 @@ void ClearIllusionMon(u32 battlerId);
 bool32 SetIllusionMon(struct Pokemon *mon, u32 battlerId);
 bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
 u8 GetBattleMoveSplit(u32 moveId);
+bool32 CanSleep(u8 battlerId);
+bool32 CanBePoisoned(u8 battlerId);
+bool32 CanBeBurned(u8 battlerId);
+bool32 CanBeParalyzed(u8 battlerId);
+bool32 CanBeFrozen(u8 battlerId);
+bool32 CanBeConfused(u8 battlerId);
+bool32 IsBattlerTerrainAffected(u8 battlerId, u32 terrainFlag);
 # 9 "include/battle.h" 2
 # 1 "include/battle_script_commands.h" 1
 # 9 "include/battle_script_commands.h"
@@ -3818,8 +3825,9 @@ struct BattleStruct
     u8 sameMoveTurns[4];
     u16 moveEffect2;
     u16 changedSpecies[6];
+ u8 abilityPopUpSpriteIds[4][2];
 };
-# 579 "include/battle.h"
+# 580 "include/battle.h"
 struct BattleScripting
 {
     s32 painSplitHp;
@@ -3855,6 +3863,7 @@ struct BattleScripting
     u16 moveEffect;
     u16 multihitMoveEffect;
     u8 illusionNickHack;
+    bool8 fixedPopup;
 };
 
 
@@ -3929,6 +3938,7 @@ struct BattleBarInfo
     s32 oldValue;
     s32 receivedValue;
     s32 currValue;
+ u8 oddFrame;
 };
 
 struct BattleSpriteData
@@ -6498,7 +6508,7 @@ void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
 
-bool8 CanLearnTutorMove(u16, u8);
+bool32 CanLearnTutorMove(u16, u8);
 # 29 "src/field_specials.c" 2
 # 1 "include/pokeblock.h" 1
 
@@ -7818,8 +7828,11 @@ extern const u8 gText_ChikoritaDoll80BP[];
 extern const u8 gText_TotodileDoll80BP[];
 
 extern const u8 gText_Dolls[];
-extern const u8 gText_Cushions[];
+extern const u8 gText_MatDesk[];
+extern const u8 gText_OrnaPost[];
+extern const u8 gText_ChairPlant[];
 extern const u8 gText_Contest[];
+extern const u8 gText_TMs[];
 extern const u8 gText_MegaC[];
 extern const u8 gText_MegaB[];
 extern const u8 gText_MegaA[];
@@ -7997,8 +8010,11 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Doll[];
-extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Cushion[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MatDesk[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_OrnaPost[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChairPlant[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Contest[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TM[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaC[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaB[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaA[];
@@ -10402,6 +10418,8 @@ void TintPalette_GrayScale2(u16 *palette, u16 count);
 void TintPalette_SepiaTone(u16 *palette, u16 count);
 void TintPalette_CustomTone(u16 *palette, u16 count, u16 rTone, u16 gTone, u16 bTone);
 # 69 "src/field_specials.c" 2
+# 1 "include/constants/abilities.h" 1
+# 70 "src/field_specials.c" 2
 
 __attribute__((section("ewram_data"))) bool8 gBikeCyclingChallenge = 0;
 __attribute__((section("ewram_data"))) u8 gBikeCollisions = 0;
@@ -11652,7 +11670,7 @@ void RemoveCameraObject(void)
 
 u8 GetPokeblockNameByMonNature(void)
 {
-    return CopyMonFavoritePokeblockName(GetNature(&gPlayerParty[GetLeadMonIndex()]), gStringVar1);
+    return CopyMonFavoritePokeblockName(GetNature(&gPlayerParty[GetLeadMonIndex()], 0), gStringVar1);
 }
 
 void GetSecretBaseNearbyMapName(void)
@@ -12488,7 +12506,7 @@ void ShowFrontierManiacMessage(void)
         [5] = { 7, 21 },
         [6] = { 7, 21 },
         [7] = { 14, 28 },
-        [8] = { 13, 112 },
+        [8] = { 13, 70 },
         [9] = { 7, 56 }
     };
 
@@ -12616,7 +12634,7 @@ void BufferBattleTowerElevatorFloors(void)
     gSpecialVar_0x8005 = 4;
     gSpecialVar_0x8006 = 12;
 }
-# 2301 "src/field_specials.c"
+# 2302 "src/field_specials.c"
 void ShowScrollableMultichoice(void)
 {
     u8 taskId = CreateTask(Task_ShowScrollableMultichoice, 8);
@@ -12667,7 +12685,7 @@ void ShowScrollableMultichoice(void)
             break;
         case 4:
             task->data[0] = 6;
-            task->data[1] = 8;
+            task->data[1] = 11;
             task->data[2] = 14;
             task->data[3] = 1;
             task->data[4] = 15;
@@ -12802,8 +12820,11 @@ static const u8 *const sScrollableMultichoiceOptions[][16] =
     [4] =
     {
         gText_Dolls,
-        gText_Cushions,
+  gText_MatDesk,
+  gText_OrnaPost,
+  gText_ChairPlant,
         gText_Contest,
+  gText_TMs,
         gText_MegaC,
         gText_MegaB,
   gText_MegaA,
@@ -13141,7 +13162,7 @@ static void ScrollableMultichoice_RemoveScrollArrows(u8 taskId)
 
 void ShowGlassWorkshopMenu(void)
 {
-# 2842 "src/field_specials.c"
+# 2846 "src/field_specials.c"
 }
 
 void SetBattleTowerLinkPlayerGfx(void)
@@ -13197,7 +13218,7 @@ void ShowNatureGirlMessage(void)
         gSpecialVar_0x8004 = 0;
     }
 
-    nature = GetNature(&gPlayerParty[gSpecialVar_0x8004]);
+    nature = GetNature(&gPlayerParty[gSpecialVar_0x8004], 0);
     ShowFieldMessage(sNatureGirlMessages[nature]);
 }
 
@@ -13395,13 +13416,16 @@ static const u16 sFrontierExchangeCorner_Decor1[] =
 
 static const u16 sFrontierExchangeCorner_Decor2[] =
 {
-    113,
-    101,
-    113,
-    113,
-    113,
-    113,
-    113,
+    150,
+ 180,
+ 203,
+ 159,
+    393,
+ 482,
+    4,
+    3,
+    2,
+    1,
     0xFFFF
 };
 
@@ -13452,8 +13476,11 @@ static const u8 *const sFrontierExchangeCorner_Decor1Descriptions[] =
 static const u8 *const sFrontierExchangeCorner_Decor2Descriptions[] =
 {
     BattleFrontier_ExchangeServiceCorner_Text_Doll,
-    BattleFrontier_ExchangeServiceCorner_Text_Cushion,
+ BattleFrontier_ExchangeServiceCorner_Text_MatDesk,
+ BattleFrontier_ExchangeServiceCorner_Text_OrnaPost,
+ BattleFrontier_ExchangeServiceCorner_Text_ChairPlant,
     BattleFrontier_ExchangeServiceCorner_Text_Contest,
+ BattleFrontier_ExchangeServiceCorner_Text_TM,
     BattleFrontier_ExchangeServiceCorner_Text_MegaC,
     BattleFrontier_ExchangeServiceCorner_Text_MegaB,
  BattleFrontier_ExchangeServiceCorner_Text_MegaA,
@@ -13490,7 +13517,7 @@ static const u8 *const sFrontierExchangeCorner_HoldItemsDescriptions[] =
  BattleFrontier_ExchangeServiceCorner_Text_LeftoversDesc,
     gText_Exit
 };
-# 3078 "src/field_specials.c" 2
+# 3082 "src/field_specials.c" 2
 
     if (menu >= 3 && menu <= 6)
     {
@@ -13512,16 +13539,7 @@ static const u8 *const sFrontierExchangeCorner_HoldItemsDescriptions[] =
                 break;
             case 4:
                 AddTextPrinterParameterized2(0, 1, sFrontierExchangeCorner_Decor2Descriptions[selection], 0, ((void *)0), 2, 1, 3);
-                if (sFrontierExchangeCorner_Decor2[selection] == 0xFFFF)
-                {
-                    ShowFrontierExchangeCornerItemIcon(sFrontierExchangeCorner_Decor2[selection]);
-                }
-                else
-                {
-                    FreeSpriteTilesByTag(5500);
-                    FreeSpritePaletteByTag(5500);
-                    sScrollableMultichoice_ItemSpriteId = AddDecorationIconObject(sFrontierExchangeCorner_Decor2[selection], 33, 88, 0, 5500, 5500);
-                }
+    ShowFrontierExchangeCornerItemIcon(sFrontierExchangeCorner_Decor2[selection]);
                 break;
             case 5:
                 AddTextPrinterParameterized2(0, 1, sFrontierExchangeCorner_VitaminsDescriptions[selection], 0, ((void *)0), 2, 1, 3);
@@ -13760,7 +13778,7 @@ void sub_813AF48(void)
         DestroyTask(taskId);
     }
 }
-# 3364 "src/field_specials.c"
+# 3359 "src/field_specials.c"
 void DoDeoxysRockInteraction(void)
 {
     CreateTask(Task_DeoxysRockInteraction, 8);
@@ -14424,7 +14442,7 @@ bool8 InPokemonCenter(void)
     }
     return 0;
 }
-# 4072 "src/field_specials.c"
+# 4067 "src/field_specials.c"
 void ResetFanClub(void)
 {
     gSaveBlock1Ptr->vars[0x4041 - 0x4000] = 0;
@@ -14731,38 +14749,429 @@ u8 Script_TryGainNewFanFromCounter(void)
 {
     return TryGainNewFanFromCounter(gSpecialVar_0x8004);
 }
-# 4432 "src/field_specials.c"
-void SetEvs(void)
+
+
+
+void ClearEv(void)
 {
-    u8 HpEv = gSpecialVar_0x8000;
-    u8 AtkEv = gSpecialVar_0x8001;
-    u8 DefEv = gSpecialVar_0x8002;
- u8 SpdEv = gSpecialVar_0x8003;
- u8 SpAtkEv = gSpecialVar_0x8005;
- u8 SpDefEv = gSpecialVar_0x8006;
-    SetMonData(&gPlayerParty[gSpecialVar_0x8004], 26, &HpEv);
- SetMonData(&gPlayerParty[gSpecialVar_0x8004], 27, &AtkEv);
- SetMonData(&gPlayerParty[gSpecialVar_0x8004], 28, &DefEv);
- SetMonData(&gPlayerParty[gSpecialVar_0x8004], 29, &SpdEv);
- SetMonData(&gPlayerParty[gSpecialVar_0x8004], 30, &SpAtkEv);
- SetMonData(&gPlayerParty[gSpecialVar_0x8004], 31, &SpDefEv);
-    CalculateMonStats(&gPlayerParty[gSpecialVar_0x8004]);
+ u8 EVzero = 0;
+ SetMonData(&gPlayerParty[gSpecialVar_0x800B], 26, &EVzero);
+ SetMonData(&gPlayerParty[gSpecialVar_0x800B], 27, &EVzero);
+ SetMonData(&gPlayerParty[gSpecialVar_0x800B], 28, &EVzero);
+ SetMonData(&gPlayerParty[gSpecialVar_0x800B], 29, &EVzero);
+ SetMonData(&gPlayerParty[gSpecialVar_0x800B], 30, &EVzero);
+ SetMonData(&gPlayerParty[gSpecialVar_0x800B], 31, &EVzero);
+    CalculateMonStats(&gPlayerParty[gSpecialVar_0x800B]);
 }
-void SetMoves(void)
+void SetEv(void)
 {
-    u8 Move1 = gSpecialVar_0x8000;
-    u8 Move2 = gSpecialVar_0x8001;
-    u8 Move3 = gSpecialVar_0x8002;
- u8 Move4 = gSpecialVar_0x8003;
-    SetMonData(&gPlayerParty[gSpecialVar_0x8004], 13, &Move1);
- SetMonData(&gPlayerParty[gSpecialVar_0x8004], 14, &Move2);
- SetMonData(&gPlayerParty[gSpecialVar_0x8004], 15, &Move3);
- SetMonData(&gPlayerParty[gSpecialVar_0x8004], 16, &Move4);
-    CalculateMonStats(&gPlayerParty[gSpecialVar_0x8004]);
+ u8 EV = 255;
+ switch (gSpecialVar_Result)
+ {
+  case 0:
+   SetMonData(&gPlayerParty[gSpecialVar_0x800B], 26, &EV);
+   break;
+  case 1:
+   SetMonData(&gPlayerParty[gSpecialVar_0x800B], 27, &EV);
+   break;
+  case 2:
+   SetMonData(&gPlayerParty[gSpecialVar_0x800B], 28, &EV);
+   break;
+  case 3:
+   SetMonData(&gPlayerParty[gSpecialVar_0x800B], 29, &EV);
+   break;
+  case 4:
+   SetMonData(&gPlayerParty[gSpecialVar_0x800B], 30, &EV);
+   break;
+  case 5:
+   SetMonData(&gPlayerParty[gSpecialVar_0x800B], 31, &EV);
+   break;
+ }
+    CalculateMonStats(&gPlayerParty[gSpecialVar_0x800B]);
+}
+
+void SetIV(void)
+{
+ u8 IV;
+ switch (gSpecialVar_Result)
+ {
+  case 0:
+   if ((GetMonData(&gPlayerParty[gSpecialVar_0x800B], 39))==31)
+    IV=0;
+   else
+    IV=31;
+   SetMonData(&gPlayerParty[gSpecialVar_0x800B], 39, &IV);
+   break;
+  case 1:
+   if ((GetMonData(&gPlayerParty[gSpecialVar_0x800B], 40))==31)
+    IV=0;
+   else
+    IV=31;
+   SetMonData(&gPlayerParty[gSpecialVar_0x800B], 40, &IV);
+   break;
+  case 2:
+   if ((GetMonData(&gPlayerParty[gSpecialVar_0x800B], 41))==31)
+    IV=0;
+   else
+    IV=31;
+   SetMonData(&gPlayerParty[gSpecialVar_0x800B], 41, &IV);
+   break;
+  case 3:
+   if ((GetMonData(&gPlayerParty[gSpecialVar_0x800B], 42))==31)
+    IV=0;
+   else
+    IV=31;
+   SetMonData(&gPlayerParty[gSpecialVar_0x800B], 42, &IV);
+   break;
+  case 4:
+   if ((GetMonData(&gPlayerParty[gSpecialVar_0x800B], 43))==31)
+    IV=0;
+   else
+    IV=31;
+   SetMonData(&gPlayerParty[gSpecialVar_0x800B], 43, &IV);
+   break;
+  case 5:
+   if ((GetMonData(&gPlayerParty[gSpecialVar_0x800B], 44))==31)
+    IV=0;
+   else
+    IV=31;
+   SetMonData(&gPlayerParty[gSpecialVar_0x800B], 44, &IV);
+   break;
+ }
+    CalculateMonStats(&gPlayerParty[gSpecialVar_0x800B]);
 }
 void SetNature(void)
 {
- u8 Nature = gSpecialVar_0x8000;
- SetMonData(&gPlayerParty[gSpecialVar_0x8004], 0, &Nature);
- CalculateMonStats(&gPlayerParty[gSpecialVar_0x8004]);
+ u8 NewNature;
+ switch (gSpecialVar_Result)
+ {
+  case 0:
+   NewNature = 1;
+   break;
+  case 1:
+   NewNature = 3;
+   break;
+  case 2:
+   NewNature = 4;
+   break;
+  case 3:
+   NewNature = 2;
+   break;
+  case 4:
+   NewNature = 5;
+   break;
+  case 5:
+   NewNature = 8;
+   break;
+  case 6:
+   NewNature = 9;
+   break;
+  case 7:
+   NewNature = 7;
+   break;
+  case 8:
+   NewNature = 15;
+   break;
+  case 9:
+   NewNature = 16;
+   break;
+  case 10:
+   NewNature = 19;
+   break;
+  case 11:
+   NewNature = 17;
+   break;
+  case 12:
+   NewNature = 20;
+   break;
+  case 13:
+   NewNature = 21;
+   break;
+  case 14:
+   NewNature = 23;
+   break;
+  case 15:
+   NewNature = 22;
+   break;
+  case 16:
+   NewNature = 10;
+   break;
+  case 17:
+   NewNature = 11;
+   break;
+  case 18:
+   NewNature = 13;
+   break;
+  case 19:
+   NewNature = 14;
+   break;
+  case 0x7F:
+   NewNature = 26;
+   break;
+ }
+ SetMonData(&gPlayerParty[gSpecialVar_0x800B], 89, &NewNature);
+ CalculateMonStats(&gPlayerParty[gSpecialVar_0x800B]);
+}
+
+void ClearParty(void){
+ { vu32 tmp = (vu32)(0); CpuSet((void *)&tmp, gPlayerParty, 0x04000000 | 0x01000000 | ((sizeof gPlayerParty)/(32/8) & 0x1FFFFF)); };
+}
+
+void CatchingContestValue(void){
+ u16 result;
+ result= (GetMonData(&gPlayerParty[gSpecialVar_0x8004], 56)*5) + (( (GetMonData(&gPlayerParty[gSpecialVar_0x8004], 39)) + (GetMonData(&gPlayerParty[gSpecialVar_0x8004], 40)) + (GetMonData(&gPlayerParty[gSpecialVar_0x8004], 42)) )*2) + ( (GetMonData(&gPlayerParty[gSpecialVar_0x8004], 57)/(GetMonData(&gPlayerParty[gSpecialVar_0x8004], 57)))*100);
+ gSpecialVar_Result = result;
+}
+
+void CountSymbols(void) {
+ u8 result = 0;
+ u16 i;
+     for (i = (((0x500 + 864 - 1) + 1) + 0x64); i < (((0x500 + 864 - 1) + 1) + 0x64) + (1 + (((0x500 + 864 - 1) + 1) + 0x71)-(((0x500 + 864 - 1) + 1) + 0x64)); i++)
+    {
+        if (FlagGet(i))
+            result++;
+    }
+ gSpecialVar_Result = result;
+}
+
+void doubleVar(void) {
+ gSpecialVar_0x800B=gSpecialVar_0x800B*2;
+}
+
+
+static const u8 sText_Greeting0[] = _("Let's both do our bests!$");
+static const u8 sText_Greeting1[] = _("All right;\nI'm ready!$");
+static const u8 sText_Greeting2[] = _("I'm no expert,\nso go easy on me.$");
+static const u8 sText_Greeting3[] = _("Don't waste my time.$");
+static const u8 sText_Greeting4[] = _("Do you have any legendaries?$");
+static const u8 sText_Greeting5[] = _("Don't hold back!$");
+static const u8 sText_Greeting6[] = _("Blink, and you'll\nmiss my victory.$");
+static const u8 sText_Greeting7[] = _("I'm a beginner.\nPlease be nice to me.$");
+static const u8 sText_Greeting8[] = _("I'll never lose.\nNot ever!$");
+static const u8 sText_Greeting9[] = _("You're challenging me?\nHow cute.$");
+static const u8 sText_Greeting10[] = _("Sure, I have time\nto school a kid.$");
+static const u8 sText_Greeting11[] = _("En garde!$");
+static const u8 sText_Greeting12[] = _("My dad buys me my Pokémon.$");
+static const u8 sText_Greeting13[] = _("Please!\nBreak my streak!!$");
+static const u8 sText_Greeting14[] = _("You're just another\nstepping stone on my journey.$");
+static const u8 sText_Greeting15[] = _("Can we be quick?\nI have something in the oven.$");
+static const u8 sText_Greeting16[] = _("So, they let just anyone in here now?$");
+static const u8 sText_Greeting17[] = _("I'm a natural.\nAre you?$");
+static const u8 sText_Greeting18[] = _("Remember, you can click\nRun to surrender.$");
+static const u8 sText_Greeting19[] = _("Please put up a decent fight.$");
+static const u8 sText_Greeting20[] = _("I'm going to sweep your team.$");
+static const u8 sText_Greeting21[] = _("No mercy!$");
+static const u8 sText_Greeting22[] = _("You're going to\nneed a body bag after this.$");
+static const u8 sText_Greeting23[] = _("I've never lost a battle before.$");
+static const u8 sText_Greeting24[] = _("Are you ready\nto get wrecked?$");
+static const u8 sText_Greeting25[] = _("I'm going to send your Pokémon\nto the Shadow Realm!$");
+static const u8 sText_Greeting26[] = _("What time is it?\nWhere am I?$");
+static const u8 sText_Greeting27[] = _("Is there anything\nmore fun than a battle?$");
+static const u8 sText_Greeting28[] = _("Strength comes from within.\nRemember that.$");
+static const u8 sText_Greeting29[] = _("You don't stand a\nghost of a chance.$");
+static const u8 sText_Greeting30[] = _("Let's fight\nan epic battle.$");
+
+static const u8 sText_Greeting31[] = _("Oh, hey...");
+static const u8 sText_Greeting32[] = _("Nice to meet you!");
+static const u8 sText_Greeting33[] = _("Let's have fun together!");
+static const u8 sText_Greeting34[] = _("Did you want to battle me?");
+static const u8 sText_Greeting35[] = _("Don't drag this out.");
+static const u8 sText_Greeting36[] = _("Hey, can you spare some change?");
+static const u8 sText_Greeting37[] = _("What? Battling? What's going on?");
+static const u8 sText_Greeting38[] = _("I'm ready to rock 'n roll!");
+static const u8 sText_Greeting39[] = _("No rest for the weary, eh?");
+static const u8 sText_Greeting40[] = _("You!\nI need to battle you.");
+static const u8 sText_Greeting41[] = _("The wheel of fate is turning.");
+static const u8 sText_Greeting42[] = _("I'm raring to go.");
+static const u8 sText_Greeting43[] = _("I live for battling!");
+static const u8 sText_Greeting44[] = _("Please, don't take this too seriously.");
+static const u8 sText_Greeting45[] = _("Are you the hunter or the hunted?");
+static const u8 sText_Greeting46[] = _("Fight the power!\nFree yourself of your chains.");
+static const u8 sText_Greeting47[] = _("Sure, I can fit in a battle.");
+static const u8 sText_Greeting48[] = _("Please don't hurt\nmy Pokémon too badly.");
+static const u8 sText_Greeting49[] = _("I'm hungry.");
+static const u8 sText_Greeting50[] = _("Good luck, Trainer.\nDo your best.");
+void getintro(void) {
+ switch(Random()%51){
+ case 0:
+    StringCopy(gStringVar4, sText_Greeting0);
+    break;
+    case 1:
+    StringCopy(gStringVar4, sText_Greeting1);
+    break;
+    case 2:
+    StringCopy(gStringVar4, sText_Greeting2);
+    break;
+    case 3:
+    StringCopy(gStringVar4, sText_Greeting3);
+    break;
+    case 4:
+    StringCopy(gStringVar4, sText_Greeting4);
+    break;
+    case 5:
+    StringCopy(gStringVar4, sText_Greeting5);
+    break;
+    case 6:
+    StringCopy(gStringVar4, sText_Greeting6);
+    break;
+    case 7:
+    StringCopy(gStringVar4, sText_Greeting7);
+    break;
+    case 8:
+    StringCopy(gStringVar4, sText_Greeting8);
+    break;
+    case 9:
+    StringCopy(gStringVar4, sText_Greeting9);
+    break;
+    case 10:
+    StringCopy(gStringVar4, sText_Greeting10);
+    break;
+    case 11:
+    StringCopy(gStringVar4, sText_Greeting11);
+    break;
+    case 12:
+    StringCopy(gStringVar4, sText_Greeting12);
+    break;
+    case 13:
+    StringCopy(gStringVar4, sText_Greeting13);
+    break;
+    case 14:
+    StringCopy(gStringVar4, sText_Greeting14);
+    break;
+    case 15:
+    StringCopy(gStringVar4, sText_Greeting15);
+    break;
+    case 16:
+    StringCopy(gStringVar4, sText_Greeting16);
+    break;
+    case 17:
+    StringCopy(gStringVar4, sText_Greeting17);
+    break;
+    case 18:
+    StringCopy(gStringVar4, sText_Greeting18);
+    break;
+    case 19:
+    StringCopy(gStringVar4, sText_Greeting19);
+    break;
+    case 20:
+    StringCopy(gStringVar4, sText_Greeting20);
+    break;
+    case 21:
+    StringCopy(gStringVar4, sText_Greeting21);
+    break;
+    case 22:
+    StringCopy(gStringVar4, sText_Greeting22);
+    break;
+    case 23:
+    StringCopy(gStringVar4, sText_Greeting23);
+    break;
+    case 24:
+    StringCopy(gStringVar4, sText_Greeting24);
+    break;
+    case 25:
+    StringCopy(gStringVar4, sText_Greeting25);
+    break;
+    case 26:
+    StringCopy(gStringVar4, sText_Greeting26);
+    break;
+    case 27:
+    StringCopy(gStringVar4, sText_Greeting27);
+    break;
+    case 28:
+    StringCopy(gStringVar4, sText_Greeting28);
+    break;
+    case 29:
+    StringCopy(gStringVar4, sText_Greeting29);
+    break;
+    case 30:
+    StringCopy(gStringVar4, sText_Greeting30);
+    break;
+ case 31:
+    StringCopy(gStringVar4, sText_Greeting31);
+    break;
+    case 32:
+    StringCopy(gStringVar4, sText_Greeting32);
+    break;
+    case 33:
+    StringCopy(gStringVar4, sText_Greeting33);
+    break;
+    case 34:
+    StringCopy(gStringVar4, sText_Greeting34);
+    break;
+    case 35:
+    StringCopy(gStringVar4, sText_Greeting35);
+    break;
+    case 36:
+    StringCopy(gStringVar4, sText_Greeting36);
+    break;
+    case 37:
+    StringCopy(gStringVar4, sText_Greeting37);
+    break;
+    case 38:
+    StringCopy(gStringVar4, sText_Greeting38);
+    break;
+    case 39:
+    StringCopy(gStringVar4, sText_Greeting39);
+    break;
+    case 40:
+    StringCopy(gStringVar4, sText_Greeting40);
+    break;
+    case 41:
+    StringCopy(gStringVar4, sText_Greeting41);
+    break;
+    case 42:
+    StringCopy(gStringVar4, sText_Greeting42);
+    break;
+    case 43:
+    StringCopy(gStringVar4, sText_Greeting43);
+    break;
+    case 44:
+    StringCopy(gStringVar4, sText_Greeting44);
+    break;
+    case 45:
+    StringCopy(gStringVar4, sText_Greeting45);
+    break;
+    case 46:
+    StringCopy(gStringVar4, sText_Greeting46);
+    break;
+    case 47:
+    StringCopy(gStringVar4, sText_Greeting47);
+    break;
+    case 48:
+    StringCopy(gStringVar4, sText_Greeting48);
+    break;
+    case 49:
+    StringCopy(gStringVar4, sText_Greeting49);
+    break;
+    case 50:
+    StringCopy(gStringVar4, sText_Greeting50);
+    break;
+ }
+}
+void swapAbility(void){
+ u16 species=GetMonData(&gPlayerParty[gSpecialVar_0x800B], 11);
+ u16 ability0 = gBaseStats[species].abilities[0];
+ u16 ability1 = gBaseStats[species].abilities[1];
+ u16 ability2 = gBaseStats[species].abilities[2];
+ const u8* dummy0;
+ const u8* dummy1;
+ const u8* dummy2;
+ dummy0=gAbilityNames[ability0];
+ dummy1=gAbilityNames[ability1];
+ dummy2=gAbilityNames[ability2];
+ StringCopy(gStringVar1, dummy0);
+ StringCopy(gStringVar2, dummy1);
+ StringCopy(gStringVar3, dummy2);
+}
+void swapAbility2(void){
+ SetMonData(&gPlayerParty[gSpecialVar_0x800B], 46, &gSpecialVar_Result);
+}
+
+void GetMysteryGifts(void){
+ u16 result;
+ result = gSaveBlock2Ptr->playTimeHours;
+ gSpecialVar_Result = result;
+}
+void SetFrontierBattlePoints(void){
+ gSaveBlock2Ptr->frontier.battlePoints = 999;
 }

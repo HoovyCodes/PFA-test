@@ -7335,7 +7335,7 @@ BlitMenuInfoIcon:
 	.type	 BufferSaveMenuText,function
 	.thumb_func
 BufferSaveMenuText:
-	push	{r4, r5, r6, r7, lr}
+	push	{r4, r5, r6, lr}
 	lsl	r0, r0, #0x18
 	lsr	r3, r0, #0x18
 	lsl	r2, r2, #0x18
@@ -7360,55 +7360,46 @@ BufferSaveMenuText:
 	cmp	r3, #0x4
 	bhi	.L677	@cond_branch
 	lsl	r0, r3, #0x2
-	ldr	r1, .L694
+	ldr	r1, .L692
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L695:
+.L693:
 	.align	2, 0
-.L694:
-	.word	.L691
+.L692:
+	.word	.L689
 	.align	2, 0
 	.align	2, 0
-.L691:
+.L689:
 	.word	.L678
 	.word	.L679
+	.word	.L680
+	.word	.L681
 	.word	.L682
-	.word	.L683
-	.word	.L684
 .L678:
-	ldr	r0, .L696
+	ldr	r0, .L694
 	ldr	r1, [r0]
 	add	r0, r5, #0
 	bl	StringCopy
 	b	.L677
+.L695:
+	.align	2, 0
+.L694:
+	.word	gSaveBlock2Ptr
+.L679:
+	ldr	r0, .L696
+	ldr	r0, [r0]
+	ldr	r1, .L696+0x4
+	add	r0, r0, r1
+	ldrh	r1, [r0]
+	add	r0, r5, #0
+	b	.L691
 .L697:
 	.align	2, 0
 .L696:
 	.word	gSaveBlock2Ptr
-.L679:
-	bl	IsNationalPokedexEnabled
-	cmp	r0, #0
-	beq	.L680	@cond_branch
-	mov	r0, #0x1
-	bl	GetNationalPokedexCount
-	b	.L693
+	.word	0xeb8
 .L680:
-	mov	r0, #0x1
-	bl	GetHoennPokedexCount
-.L693:
-	add	r1, r0, #0
-	lsl	r1, r1, #0x10
-	lsr	r1, r1, #0x10
-	add	r0, r5, #0
-	mov	r2, #0x0
-	mov	r3, #0x3
-	bl	ConvertIntToDecimalStringN
-	add	r5, r0, #0
-	mov	r0, #0xff
-	strb	r0, [r5]
-	b	.L677
-.L682:
 	ldr	r4, .L698
 	ldr	r0, [r4]
 	ldrh	r1, [r0, #0xe]
@@ -7431,7 +7422,7 @@ BufferSaveMenuText:
 	.align	2, 0
 .L698:
 	.word	gSaveBlock2Ptr
-.L683:
+.L681:
 	ldr	r0, .L700
 	ldrb	r1, [r0, #0x14]
 	add	r0, r5, #0
@@ -7441,37 +7432,40 @@ BufferSaveMenuText:
 	.align	2, 0
 .L700:
 	.word	gMapHeader
-.L684:
+.L682:
 	ldr	r4, .L702
 	mov	r6, #0x0
-	add	r7, r5, #0x1
-.L688:
+.L686:
 	lsl	r0, r4, #0x10
 	lsr	r0, r0, #0x10
 	bl	FlagGet
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L687	@cond_branch
+	beq	.L685	@cond_branch
 	add	r6, r6, #0x1
-.L687:
+.L685:
 	add	r4, r4, #0x1
 	ldr	r0, .L702+0x4
 	cmp	r4, r0
-	ble	.L688	@cond_branch
-	add	r0, r6, #0
-	sub	r0, r0, #0x5f
-	strb	r0, [r5]
+	ble	.L686	@cond_branch
+	add	r0, r5, #0
+	add	r1, r6, #0
+.L691:
+	mov	r2, #0x0
+	mov	r3, #0x3
+	bl	ConvertIntToDecimalStringN
+	add	r5, r0, #0
 	mov	r0, #0xff
-	strb	r0, [r7]
+	strb	r0, [r5]
 .L677:
-	pop	{r4, r5, r6, r7}
+	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
 .L703:
 	.align	2, 0
 .L702:
-	.word	0x867
-	.word	0x86e
+	.word	0x8c4
+	.word	0x8d1
 .Lfe123:
 	.size	 BufferSaveMenuText,.Lfe123-BufferSaveMenuText
 .text

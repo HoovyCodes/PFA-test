@@ -8,8 +8,8 @@ BattleFrontier_RankingHall_ObjectEvents:
 	object_event 3, OBJ_EVENT_GFX_BOY_3, 0, 44, 11, 3, MOVEMENT_TYPE_WANDER_AROUND, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_RankingHall_EventScript_Boy, 0
 
 BattleFrontier_RankingHall_MapWarps:
-	warp_def 26, 14, 3, 4, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
-	warp_def 27, 14, 3, 4, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
+	warp_def 26, 14, 3, 0, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
+	warp_def 27, 14, 3, 0, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
 
 BattleFrontier_RankingHall_MapBGEvents:
 	bg_event 26, 9, 0, BG_EVENT_PLAYER_FACING_NORTH, BattleFrontier_RankingHall_EventScript_TowerSinglesRecords

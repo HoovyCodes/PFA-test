@@ -944,38 +944,6 @@ static void TryToggleHealboxVisibility(u8 priority, u8 healthboxLeftSpriteId, u8
     u8 spriteIds[4] = {healthboxLeftSpriteId, healthboxRightSpriteId, healthbarSpriteId, indicatorSpriteId};
     int i;
     
-    switch (gBattleResources->bufferA[gBattleAnimAttacker][0])
-    {
-    case CONTROLLER_MOVEANIMATION:
-        if (gBattleResources->bufferA[gBattleAnimAttacker][1] == MOVE_TRANSFORM)
-            return;
-        break;
-    case CONTROLLER_BALLTHROWANIM:
-        return;   //throwing ball does not hide hp boxes
-    case CONTROLLER_BATTLEANIMATION:
-        //check special anims that hide health boxes
-        switch (gBattleResources->bufferA[gBattleAnimAttacker][1])
-        {
-        case B_ANIM_TURN_TRAP:
-        case B_ANIM_LEECH_SEED_DRAIN:
-        case B_ANIM_MON_HIT:
-        case B_ANIM_SNATCH_MOVE:
-        case B_ANIM_FUTURE_SIGHT_HIT:
-        case B_ANIM_DOOM_DESIRE_HIT:
-        case B_ANIM_WISH_HEAL:
-        //new
-        case B_ANIM_MEGA_EVOLUTION:
-        case B_ANIM_TERRAIN_MISTY:
-        case B_ANIM_TERRAIN_GRASSY:
-        case B_ANIM_TERRAIN_ELECTRIC:
-        case B_ANIM_TERRAIN_PSYCHIC:
-            break;
-        }
-        return; //all other special anims dont hide
-    default:
-        return;
-    }
-    
     // if we've reached here, we should hide hp boxes
     for (i = 0; i < NELEMS(spriteIds); i++)
     {
@@ -994,7 +962,7 @@ static void TryToggleHealboxVisibility(u8 priority, u8 healthboxLeftSpriteId, u8
     }
 }
 
-void UpdateOamPriorityInAllHealthboxes(u8 priority)
+void UpdateOamPriorityInAllHealthboxes(u8 priority, bool32 hideHPBoxes)
 {
     s32 i;
     
@@ -1012,7 +980,7 @@ void UpdateOamPriorityInAllHealthboxes(u8 priority)
             gSprites[indicatorSpriteId].oam.priority = priority;
         
         #if HIDE_HEALTHBOXES_DURING_ANIMS
-        if (IsBattlerAlive(i))
+        if (hideHPBoxes && IsBattlerAlive(i))
             TryToggleHealboxVisibility(priority, healthboxLeftSpriteId, healthboxRightSpriteId, healthbarSpriteId, indicatorSpriteId);
         #endif
     }
@@ -1291,7 +1259,7 @@ static void PrintSafariMonInfo(u8 healthboxSpriteId, struct Pokemon *mon)
     memcpy(text, sUnknown_0832C3C4, sizeof(sUnknown_0832C3C4));
     barFontGfx = &gMonSpritesGfxPtr->barFontGfx[0x520 + (GetBattlerPosition(gSprites[healthboxSpriteId].hMain_Battler) * 384)];
     var = 5;
-    nature = GetNature(mon);
+    nature = GetNature(mon, FALSE);
     StringCopy(text + 6, gNatureNamePointers[nature]);
     RenderTextFont9(barFontGfx, 9, text);
 
@@ -2385,39 +2353,79 @@ void UpdateHealthboxAttribute(u8 healthboxSpriteId, struct Pokemon *mon, u8 elem
 #define B_EXPBAR_PIXELS 64
 #define B_HEALTHBAR_PIXELS 48
 
+// On odd frames, it'll be slower
+static const u8 sMoveBarTable[][2] =
+{
+    {1, 1}, // regular GF speed 0
+    {2, 1}, // 1
+    {2, 2}, // 2
+    {3, 2}, // 3
+    {3, 3}, // 4
+    {4, 3}, // 5
+    {4, 4}, // 6
+    {5, 5}, // 7
+    {6, 6}, // 8
+    {7, 7}, // 9
+    {1, 1}, // Instant
+};
+
 s32 MoveBattleBar(u8 battlerId, u8 healthboxSpriteId, u8 whichBar, u8 unused)
 {
-    s32 currentBarValue;
+    s32 i, currentBarValue, previousVal = 0, toLoop;
+    bool32 instant;
+    u16 hpBarSpeed = 8;
 
-    if (whichBar == HEALTH_BAR) // health bar
+    if (whichBar == HEALTH_BAR)
     {
-        currentBarValue = CalcNewBarValue(gBattleSpritesDataPtr->battleBars[battlerId].maxValue,
-                    gBattleSpritesDataPtr->battleBars[battlerId].oldValue,
-                    gBattleSpritesDataPtr->battleBars[battlerId].receivedValue,
-                    &gBattleSpritesDataPtr->battleBars[battlerId].currValue,
-                    B_HEALTHBAR_PIXELS / 8, 1);
+        instant = (hpBarSpeed >= 10);
+        toLoop = sMoveBarTable[hpBarSpeed][gBattleSpritesDataPtr->battleBars[battlerId].oddFrame];
     }
-    else // exp bar
+    else
     {
-        u16 expFraction = GetScaledExpFraction(gBattleSpritesDataPtr->battleBars[battlerId].oldValue,
-                    gBattleSpritesDataPtr->battleBars[battlerId].receivedValue,
-                    gBattleSpritesDataPtr->battleBars[battlerId].maxValue, 8);
-        if (expFraction == 0)
-            expFraction = 1;
-        expFraction = abs(gBattleSpritesDataPtr->battleBars[battlerId].receivedValue / expFraction);
-
-        currentBarValue = CalcNewBarValue(gBattleSpritesDataPtr->battleBars[battlerId].maxValue,
-                    gBattleSpritesDataPtr->battleBars[battlerId].oldValue,
-                    gBattleSpritesDataPtr->battleBars[battlerId].receivedValue,
-                    &gBattleSpritesDataPtr->battleBars[battlerId].currValue,
-                    B_EXPBAR_PIXELS / 8, expFraction);
+        instant = (hpBarSpeed >= 10);
+        toLoop = sMoveBarTable[hpBarSpeed][gBattleSpritesDataPtr->battleBars[battlerId].oddFrame];
     }
+    gBattleSpritesDataPtr->battleBars[battlerId].oddFrame ^= 1;
 
-    if (whichBar == EXP_BAR || (whichBar == HEALTH_BAR && !gBattleSpritesDataPtr->battlerData[battlerId].hpNumbersNoBars))
-        MoveBattleBarGraphically(battlerId, whichBar);
+    for (i = 0; i < toLoop; i++)
+    {
+        if (i != 0)
+            previousVal = currentBarValue;
+        if (whichBar == HEALTH_BAR) // health bar
+        {
+            currentBarValue = CalcNewBarValue(gBattleSpritesDataPtr->battleBars[battlerId].maxValue,
+                        gBattleSpritesDataPtr->battleBars[battlerId].oldValue,
+                        gBattleSpritesDataPtr->battleBars[battlerId].receivedValue,
+                        &gBattleSpritesDataPtr->battleBars[battlerId].currValue,
+                        B_HEALTHBAR_PIXELS / 8, 1);
+        }
+        else // exp bar
+        {
+            u16 expFraction = GetScaledExpFraction(gBattleSpritesDataPtr->battleBars[battlerId].oldValue,
+                        gBattleSpritesDataPtr->battleBars[battlerId].receivedValue,
+                        gBattleSpritesDataPtr->battleBars[battlerId].maxValue, 8);
+            if (expFraction == 0)
+                expFraction = 1;
+            expFraction = abs(gBattleSpritesDataPtr->battleBars[battlerId].receivedValue / expFraction);
 
-    if (currentBarValue == -1)
-        gBattleSpritesDataPtr->battleBars[battlerId].currValue = 0;
+            currentBarValue = CalcNewBarValue(gBattleSpritesDataPtr->battleBars[battlerId].maxValue,
+                        gBattleSpritesDataPtr->battleBars[battlerId].oldValue,
+                        gBattleSpritesDataPtr->battleBars[battlerId].receivedValue,
+                        &gBattleSpritesDataPtr->battleBars[battlerId].currValue,
+                        B_EXPBAR_PIXELS / 8, expFraction);
+        }
+
+        if (whichBar == EXP_BAR || (whichBar == HEALTH_BAR && !gBattleSpritesDataPtr->battlerData[battlerId].hpNumbersNoBars))
+            MoveBattleBarGraphically(battlerId, whichBar);
+
+        if (currentBarValue == -1)
+        {
+            gBattleSpritesDataPtr->battleBars[battlerId].currValue = 0;
+            if ((i != 0 || instant) && whichBar == HEALTH_BAR)
+                UpdateHpTextInHealthbox(gHealthboxSpriteIds[battlerId], previousVal, HP_CURRENT);
+            break;
+        }
+    }
 
     return currentBarValue;
 }
@@ -3113,6 +3121,13 @@ static void SpriteCb_AbilityPopUp(struct Sprite *sprite)
             sprite->tFrames--;
         }
     }
+}
+
+void DestroyAbilityPopUp(u8 battlerId)
+{
+    gSprites[gBattleStruct->abilityPopUpSpriteIds[battlerId][0]].tFrames = 0;
+    gSprites[gBattleStruct->abilityPopUpSpriteIds[battlerId][1]].tFrames = 0;
+    gBattleScripting.fixedPopup = FALSE;
 }
 
 static void Task_FreeAbilityPopUpGfx(u8 taskId)

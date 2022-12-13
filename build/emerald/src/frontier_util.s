@@ -38,7 +38,7 @@ sFrontierBrainStreakAppearances:
 sFrontierBrainsMons:
 	.short	0x41
 	.short	0xd3
-	.byte	0x18
+	.byte	0x1f
 	.byte	0xf
 	.byte	0x6a
 	.byte	0x0
@@ -46,13 +46,13 @@ sFrontierBrainsMons:
 	.byte	0x98
 	.byte	0x64
 	.byte	0x0
-	.short	0x9
+	.short	0x1c3
 	.short	0x7
 	.short	0x8
 	.short	0x32
 	.short	0xf4
 	.short	0x98
-	.byte	0x18
+	.byte	0x1f
 	.byte	0x1
 	.byte	0x64
 	.byte	0x98
@@ -66,7 +66,7 @@ sFrontierBrainsMons:
 	.short	0x2e
 	.short	0x8f
 	.short	0xd7
-	.byte	0x18
+	.byte	0x1f
 	.byte	0x3
 	.byte	0x98
 	.byte	0x98
@@ -93,7 +93,7 @@ sFrontierBrainsMons:
 	.short	0x73
 	.short	0x9c
 	.short	0x17d
-	.short	0xd3
+	.short	0x1a7
 	.byte	0x1f
 	.byte	0xf
 	.byte	0xfc
@@ -105,7 +105,7 @@ sFrontierBrainsMons:
 	.short	0x5e
 	.short	0x15b
 	.short	0x69
-	.short	0x151
+	.short	0x196
 	.short	0x8f
 	.short	0x91
 	.byte	0x1f
@@ -122,7 +122,7 @@ sFrontierBrainsMons:
 	.short	0xf7
 	.short	0x104
 	.short	0xe1
-	.byte	0x14
+	.byte	0x1f
 	.byte	0x2
 	.byte	0x98
 	.byte	0x98
@@ -130,13 +130,13 @@ sFrontierBrainsMons:
 	.byte	0x0
 	.byte	0x64
 	.byte	0x0
-	.short	0x39
+	.short	0x7f
 	.short	0x59
-	.short	0x3a
+	.short	0x8
 	.short	0x44
 	.short	0x175
 	.short	0x98
-	.byte	0x14
+	.byte	0x1f
 	.byte	0x3
 	.byte	0x98
 	.byte	0x98
@@ -150,7 +150,7 @@ sFrontierBrainsMons:
 	.short	0x14c
 	.short	0x6
 	.short	0xd4
-	.byte	0x14
+	.byte	0x1f
 	.byte	0x11
 	.byte	0x64
 	.byte	0x98
@@ -172,12 +172,12 @@ sFrontierBrainsMons:
 	.byte	0x0
 	.byte	0x0
 	.byte	0x0
-	.short	0x39
+	.short	0x7f
 	.short	0x59
-	.short	0x3a
+	.short	0x8
 	.short	0xf3
 	.short	0x178
-	.short	0xd7
+	.short	0x1ad
 	.byte	0x1f
 	.byte	0x2
 	.byte	0xfc
@@ -186,7 +186,7 @@ sFrontierBrainsMons:
 	.byte	0x0
 	.byte	0x0
 	.byte	0x0
-	.short	0x5e
+	.short	0x1ac
 	.short	0x135
 	.short	0x59
 	.short	0xb6
@@ -206,7 +206,7 @@ sFrontierBrainsMons:
 	.short	0x9c
 	.short	0xa9
 	.short	0xd3
-	.byte	0x10
+	.byte	0x1f
 	.byte	0x3
 	.byte	0x98
 	.byte	0x0
@@ -220,7 +220,7 @@ sFrontierBrainsMons:
 	.short	0x13
 	.short	0x121
 	.short	0xe3
-	.byte	0x10
+	.byte	0x1f
 	.byte	0x0
 	.byte	0x98
 	.byte	0x98
@@ -230,11 +230,11 @@ sFrontierBrainsMons:
 	.byte	0x0
 	.short	0x59
 	.short	0xcf
-	.short	0xf7
+	.short	0x1a5
 	.short	0x118
 	.short	0x83
 	.short	0xd7
-	.byte	0x10
+	.byte	0x1f
 	.byte	0x11
 	.byte	0x0
 	.byte	0x0
@@ -272,7 +272,7 @@ sFrontierBrainsMons:
 	.byte	0x0
 	.short	0x3f
 	.short	0x59
-	.short	0xf7
+	.short	0x1a5
 	.short	0x119
 	.short	0xf5
 	.short	0xdb
@@ -290,7 +290,7 @@ sFrontierBrainsMons:
 	.short	0x15b
 	.short	0xd6
 	.short	0xc7
-	.byte	0x14
+	.byte	0x1f
 	.byte	0xd
 	.byte	0x6a
 	.byte	0x98
@@ -304,7 +304,7 @@ sFrontierBrainsMons:
 	.short	0xb3
 	.short	0xc5
 	.short	0xe5
-	.byte	0x14
+	.byte	0x1f
 	.byte	0x14
 	.byte	0x98
 	.byte	0x0
@@ -318,7 +318,7 @@ sFrontierBrainsMons:
 	.short	0xb9
 	.short	0x124
 	.short	0xd3
-	.byte	0x14
+	.byte	0x1f
 	.byte	0x3
 	.byte	0x0
 	.byte	0xfc
@@ -326,7 +326,7 @@ sFrontierBrainsMons:
 	.byte	0xfc
 	.byte	0x0
 	.byte	0x0
-	.short	0xf7
+	.short	0x1a9
 	.short	0xd8
 	.short	0x6d
 	.short	0x14c
@@ -345,7 +345,7 @@ sFrontierBrainsMons:
 	.short	0x9c
 	.short	0x5e
 	.short	0x5e
-	.short	0xe5
+	.short	0x1a0
 	.byte	0x1f
 	.byte	0xf
 	.byte	0xfc
@@ -458,7 +458,7 @@ sFrontierBrainsMons:
 	.short	0x151
 	.short	0x150
 	.short	0xd7
-	.byte	0x10
+	.byte	0x1f
 	.byte	0x2
 	.byte	0xfc
 	.byte	0x0
@@ -472,7 +472,7 @@ sFrontierBrainsMons:
 	.short	0xca
 	.short	0xd5
 	.short	0x91
-	.byte	0x10
+	.byte	0x1f
 	.byte	0x5
 	.byte	0xfc
 	.byte	0x0
@@ -486,7 +486,7 @@ sFrontierBrainsMons:
 	.short	0x9c
 	.short	0x15e
 	.short	0xe5
-	.byte	0x10
+	.byte	0x1f
 	.byte	0xf
 	.byte	0x98
 	.byte	0x0
@@ -513,7 +513,7 @@ sFrontierBrainsMons:
 	.short	0xbc
 	.short	0xca
 	.short	0xd0
-	.short	0xd3
+	.short	0x1b8
 	.byte	0x1f
 	.byte	0x2
 	.byte	0xfc
@@ -542,7 +542,7 @@ sFrontierBrainsMons:
 	.short	0x9c
 	.short	0x179
 	.short	0xd7
-	.byte	0x10
+	.byte	0x1f
 	.byte	0x3
 	.byte	0x98
 	.byte	0x98
@@ -556,7 +556,7 @@ sFrontierBrainsMons:
 	.short	0xf6
 	.short	0x17b
 	.short	0xe5
-	.byte	0x10
+	.byte	0x1f
 	.byte	0x3
 	.byte	0x98
 	.byte	0x98
@@ -570,7 +570,7 @@ sFrontierBrainsMons:
 	.short	0x14e
 	.short	0x17a
 	.short	0x91
-	.byte	0x10
+	.byte	0x1f
 	.byte	0xf
 	.byte	0x6a
 	.byte	0x0
@@ -594,7 +594,7 @@ sFrontierBrainsMons:
 	.byte	0x0
 	.short	0x3b
 	.short	0x160
-	.short	0x14c
+	.short	0x193
 	.short	0x73
 	.short	0x91
 	.short	0x98
@@ -1567,18 +1567,9 @@ sFrontierBrainObjEventGfx:
 	.align	1, 0
 	.type	 gFrontierBannedSpecies,object
 gFrontierBannedSpecies:
-	.short	0x97
-	.short	0x96
-	.short	0xfa
-	.short	0xf9
-	.short	0xfb
-	.short	0x17e
-	.short	0x17f
-	.short	0x180
-	.short	0x181
-	.short	0x182
+	.short	0x1ed
 	.short	0xffff
-	.size	 gFrontierBannedSpecies,22
+	.size	 gFrontierBannedSpecies,4
 	.align	2, 0
 	.type	 sRecordsWindowChallengeTexts,object
 sRecordsWindowChallengeTexts:
@@ -8571,8 +8562,10 @@ ClearRankingHallRecords:
 	mov	r6, r9
 	mov	r5, r8
 	push	{r5, r6, r7}
-	add	sp, sp, #-0x8
+	add	sp, sp, #-0xc
 	mov	r1, #0x0
+	mov	r0, sp
+	strb	r1, [r0]
 	ldr	r3, .L966
 .L944:
 	mov	r6, #0x0
@@ -8598,11 +8591,11 @@ ClearRankingHallRecords:
 	add	r0, r0, r2
 	lsl	r1, r5, #0x4
 	add	r0, r0, r1
-	mov	r1, #0x0
-	str	r2, [sp]
-	str	r3, [sp, #0x4]
+	mov	r1, sp
+	str	r2, [sp, #0x4]
+	str	r3, [sp, #0x8]
 	bl	CopyTrainerId
-	ldr	r3, [sp, #0x4]
+	ldr	r3, [sp, #0x8]
 	ldr	r0, [r3]
 	add	r0, r0, r4
 	ldr	r1, .L966+0x4
@@ -8618,7 +8611,7 @@ ClearRankingHallRecords:
 	strh	r1, [r0]
 	add	r4, r4, #0x10
 	add	r5, r5, #0x1
-	ldr	r2, [sp]
+	ldr	r2, [sp, #0x4]
 	cmp	r5, #0x2
 	ble	.L952	@cond_branch
 	add	r7, r7, #0x30
@@ -8650,15 +8643,15 @@ ClearRankingHallRecords:
 	ldr	r0, [r7]
 	add	r0, r0, r6
 	add	r0, r0, r2
-	mov	r1, #0x0
-	str	r2, [sp]
+	mov	r1, sp
+	str	r2, [sp, #0x4]
 	bl	CopyTrainerId
 	ldr	r0, [r7]
 	add	r0, r0, r6
-	ldr	r2, [sp]
+	ldr	r2, [sp, #0x4]
 	add	r0, r0, r2
 	add	r0, r0, #0x4
-	mov	r1, #0x0
+	mov	r1, sp
 	bl	CopyTrainerId
 	ldr	r1, [r7]
 	add	r1, r1, r4
@@ -8682,7 +8675,7 @@ ClearRankingHallRecords:
 	mov	r1, #0x0
 	strh	r1, [r0]
 	add	r4, r4, #0x1c
-	ldr	r2, [sp]
+	ldr	r2, [sp, #0x4]
 	add	r2, r2, #0x1c
 	sub	r5, r5, #0x1
 	cmp	r5, #0
@@ -8690,7 +8683,7 @@ ClearRankingHallRecords:
 	mov	r6, r8
 	cmp	r6, #0x1
 	ble	.L959	@cond_branch
-	add	sp, sp, #0x8
+	add	sp, sp, #0xc
 	pop	{r3, r4, r5}
 	mov	r8, r3
 	mov	r9, r4
@@ -9032,9 +9025,9 @@ CreateFrontierBrainPokemon:
 	add	r3, r3, #0x1
 	str	r3, [sp, #0x28]
 	cmp	r0, #0
-	bne	.LCB9033
+	bne	.LCB9036
 	b	.L1018	@long jump
-.LCB9033:
+.LCB9036:
 	ldr	r4, [sp, #0x14]
 	lsl	r4, r4, #0x2
 	mov	r9, r4
@@ -9204,9 +9197,9 @@ CreateFrontierBrainPokemon:
 	ldr	r3, [sp, #0x28]
 	str	r3, [sp, #0x14]
 	cmp	r3, #0x2
-	bgt	.LCB9270
+	bgt	.LCB9273
 	b	.L1019	@long jump
-.LCB9270:
+.LCB9273:
 	add	sp, sp, #0x44
 	pop	{r3, r4, r5}
 	mov	r8, r3

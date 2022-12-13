@@ -151,6 +151,7 @@ static EWRAM_DATA struct PokemonSummaryScreenData
         u8 ppBonuses; // 0x34
         u8 sanity; // 0x35
         u8 OTName[17]; // 0x36
+		u8 hiddenNature;
         u32 OTID; // 0x48
     } summary;
     u16 bgTilemapBuffers[PSS_PAGE_COUNT][2][0x400];
@@ -711,6 +712,8 @@ static void (*const sTextPrinterTasks[])(u8 taskId) =
 };
 
 static const u8 sMemoNatureTextColor[] = _("{COLOR LIGHT_RED}{SHADOW GREEN}");
+static const u8 sMemoHiddenNatureTextColor[] = _(" ({COLOR BLUE}{SHADOW DARK_GREY}");
+static const u8 sText_EndParentheses[] = _("{COLOR WHITE}{SHADOW DARK_GREY})");
 static const u8 sMemoMiscTextColor[] = _("{COLOR WHITE}{SHADOW DARK_GREY}"); // This is also affected by palettes, apparently
 static const u8 sStatsLeftColumnLayout[] = _("{DYNAMIC 0}/{DYNAMIC 1}\n{DYNAMIC 2}\n{DYNAMIC 3}");
 static const u8 sStatsLeftColumnLayoutIVEV[] = _("{DYNAMIC 0}\n{DYNAMIC 1}\n{DYNAMIC 2}");
@@ -1486,7 +1489,8 @@ static bool8 ExtractMonDataToSummaryStruct(struct Pokemon *mon)
     case 2:
         if (sMonSummaryScreen->monList.mons == gPlayerParty || sMonSummaryScreen->mode == PSS_MODE_BOX || sMonSummaryScreen->unk40EF == TRUE)
         {
-            sum->nature = GetNature(mon);
+            sum->nature = GetNature(mon, FALSE);
+			sum->hiddenNature = GetMonData(mon, MON_DATA_HIDDEN_NATURE);
             sum->currentHP = GetMonData(mon, MON_DATA_HP);
             sum->maxHP = GetMonData(mon, MON_DATA_MAX_HP);
             sum->atk = GetMonData(mon, MON_DATA_ATK);
@@ -1497,7 +1501,8 @@ static bool8 ExtractMonDataToSummaryStruct(struct Pokemon *mon)
         }
         else
         {
-            sum->nature = GetNature(mon);
+            sum->nature = GetNature(mon, FALSE);
+            sum->hiddenNature = GetMonData(mon, MON_DATA_HIDDEN_NATURE);
             sum->currentHP = GetMonData(mon, MON_DATA_HP);
             sum->maxHP = GetMonData(mon, MON_DATA_MAX_HP);
             sum->atk = GetMonData(mon, MON_DATA_ATK2);
@@ -3181,6 +3186,13 @@ static void BufferMonTrainerMemo(void)
     DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, sMemoMiscTextColor);
     BufferNatureString();
 
+	if (sum->hiddenNature != HIDDEN_NATURE_NONE)
+    {    
+        DynamicPlaceholderTextUtil_SetPlaceholderPtr(5, sMemoHiddenNatureTextColor);
+        DynamicPlaceholderTextUtil_SetPlaceholderPtr(6, gNatureNamePointers[sum->hiddenNature]);
+        DynamicPlaceholderTextUtil_SetPlaceholderPtr(7, sText_EndParentheses);
+    }
+
     if (InBattleFactory() == TRUE || InSlateportBattleTent() == TRUE || IsInGamePartnerMon() == TRUE)
     {
         DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, gText_XNature);
@@ -3446,6 +3458,24 @@ static void PrintRibbonCount(void)
     PrintTextOnWindow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_RIBBON_COUNT), text, x, 1, 0, 0);
 }
 
+static void BufferStat(u8 *dst, s8 natureMod, u32 stat, u32 strId, u32 n)
+{
+    static const u8 sTextNatureDown[] = _("{COLOR}{08}"); //6:very light red 9:light red 7:light blue 5:Dark Red 8:Dark Blue
+    static const u8 sTextNatureUp[] = _("{COLOR}{05}");
+    static const u8 sTextNatureNeutral[] = _("{COLOR}{01}");
+    u8 *txtPtr;
+
+    if (natureMod == 0)
+        txtPtr = StringCopy(dst, sTextNatureNeutral);
+    else if (natureMod > 0)
+        txtPtr = StringCopy(dst, sTextNatureUp);
+    else
+        txtPtr = StringCopy(dst, sTextNatureDown);
+		
+	ConvertIntToDecimalStringN(txtPtr, stat, STR_CONV_MODE_RIGHT_ALIGN, n);
+    DynamicPlaceholderTextUtil_SetPlaceholderPtr(strId, dst);
+}
+
 static void BufferIvOrEvStats(u8 mode)
 {
     u16 hp, hp2, atk, def, spA, spD, spe;
@@ -3454,7 +3484,7 @@ static void BufferIvOrEvStats(u8 mode)
 
     switch (mode)
     {
-    case 0: // IV mode
+    case 0: // iv mode
         hp = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_HP_IV);
         atk = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_ATK_IV);
         def = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_DEF_IV);
@@ -3463,7 +3493,7 @@ static void BufferIvOrEvStats(u8 mode)
         spD = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPDEF_IV);
         spe = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPEED_IV);
         break;
-    case 1: // EV mode
+    case 1: // ev mode
         hp = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_HP_EV);
         atk = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_ATK_EV);
         def = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_DEF_EV);
@@ -3492,43 +3522,30 @@ static void BufferIvOrEvStats(u8 mode)
     {
     case 0:
     case 1:
-        ConvertIntToDecimalStringN(gStringVar1, hp, STR_CONV_MODE_RIGHT_ALIGN, 7);
-        ConvertIntToDecimalStringN(gStringVar2, atk, STR_CONV_MODE_RIGHT_ALIGN, 7);
-        ConvertIntToDecimalStringN(gStringVar3, def, STR_CONV_MODE_RIGHT_ALIGN, 7);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gStringVar1);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, gStringVar2);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, gStringVar3);
+        BufferStat(gStringVar1, 0, hp, 0, 7);
+        BufferStat(gStringVar2, 0, atk, 1, 7);
+        BufferStat(gStringVar3, 0, def, 2, 7);
         DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sStatsLeftColumnLayoutIVEV);
         PrintLeftColumnStats();
 
-        ConvertIntToDecimalStringN(gStringVar1, spA, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        ConvertIntToDecimalStringN(gStringVar2, spD, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        ConvertIntToDecimalStringN(gStringVar3, spe, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gStringVar1);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, gStringVar2);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, gStringVar3);
+        BufferStat(gStringVar1, 0, spA, 0, 3);
+        BufferStat(gStringVar2, 0, spD, 1, 3);
+        BufferStat(gStringVar3, 0, spe, 2, 3);
         DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sStatsRightColumnLayout);
         PrintRightColumnStats();
         break;
     case 2:
     default:
-        ConvertIntToDecimalStringN(currHPString, hp, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        ConvertIntToDecimalStringN(gStringVar1, hp2, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        ConvertIntToDecimalStringN(gStringVar2, atk, STR_CONV_MODE_RIGHT_ALIGN, 7);
-        ConvertIntToDecimalStringN(gStringVar3, def, STR_CONV_MODE_RIGHT_ALIGN, 7);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, currHPString);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, gStringVar1);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, gStringVar2);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(3, gStringVar3);
+        BufferStat(currHPString, 0, hp, 0, 3);
+        BufferStat(gStringVar1, 0, hp2, 1, 3);
+        BufferStat(gStringVar2, natureMod[STAT_ATK - 1], atk, 2, 7);
+        BufferStat(gStringVar3, natureMod[STAT_DEF - 1], def, 3, 7);
         DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sStatsLeftColumnLayout);
         PrintLeftColumnStats();
 
-        ConvertIntToDecimalStringN(gStringVar1, spA, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        ConvertIntToDecimalStringN(gStringVar2, spD, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        ConvertIntToDecimalStringN(gStringVar3, spe, STR_CONV_MODE_RIGHT_ALIGN, 3);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gStringVar1);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, gStringVar2);
-        DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, gStringVar3);
+        BufferStat(gStringVar1, natureMod[STAT_SPATK - 1], spA, 0, 3);
+        BufferStat(gStringVar2, natureMod[STAT_SPDEF - 1], spD, 1, 3);
+        BufferStat(gStringVar3, natureMod[STAT_SPEED - 1], spe, 2, 3);
         DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sStatsRightColumnLayout);
         PrintRightColumnStats();
         break;
@@ -3539,21 +3556,18 @@ static void BufferIvOrEvStats(u8 mode)
 
 static void BufferLeftColumnStats(void)
 {
-    u8 *currentHPString = Alloc(8);
-    u8 *maxHPString = Alloc(8);
-    u8 *attackString = Alloc(8);
-    u8 *defenseString = Alloc(8);
-
-    ConvertIntToDecimalStringN(currentHPString, sMonSummaryScreen->summary.currentHP, STR_CONV_MODE_RIGHT_ALIGN, 3);
-    ConvertIntToDecimalStringN(maxHPString, sMonSummaryScreen->summary.maxHP, STR_CONV_MODE_RIGHT_ALIGN, 3);
-    ConvertIntToDecimalStringN(attackString, sMonSummaryScreen->summary.atk, STR_CONV_MODE_RIGHT_ALIGN, 7);
-    ConvertIntToDecimalStringN(defenseString, sMonSummaryScreen->summary.def, STR_CONV_MODE_RIGHT_ALIGN, 7);
+    u8 *currentHPString = Alloc(20);
+    u8 *maxHPString = Alloc(20);
+    u8 *attackString = Alloc(20);
+    u8 *defenseString = Alloc(20);
+    const s8 *natureMod = gNatureStatTable[
+      (sMonSummaryScreen->summary.hiddenNature == HIDDEN_NATURE_NONE) ? sMonSummaryScreen->summary.nature : sMonSummaryScreen->summary.hiddenNature];
 
     DynamicPlaceholderTextUtil_Reset();
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, currentHPString);
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, maxHPString);
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, attackString);
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(3, defenseString);
+	BufferStat(currentHPString, 0, sMonSummaryScreen->summary.currentHP, 0, 3);
+    BufferStat(maxHPString, 0, sMonSummaryScreen->summary.maxHP, 1, 3);
+    BufferStat(attackString, natureMod[STAT_ATK - 1], sMonSummaryScreen->summary.atk, 2, 7);
+    BufferStat(defenseString, natureMod[STAT_DEF - 1], sMonSummaryScreen->summary.def, 3, 7);
     DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sStatsLeftColumnLayout);
 
     Free(currentHPString);
@@ -3569,14 +3583,13 @@ static void PrintLeftColumnStats(void)
 
 static void BufferRightColumnStats(void)
 {
-    ConvertIntToDecimalStringN(gStringVar1, sMonSummaryScreen->summary.spatk, STR_CONV_MODE_RIGHT_ALIGN, 3);
-    ConvertIntToDecimalStringN(gStringVar2, sMonSummaryScreen->summary.spdef, STR_CONV_MODE_RIGHT_ALIGN, 3);
-    ConvertIntToDecimalStringN(gStringVar3, sMonSummaryScreen->summary.speed, STR_CONV_MODE_RIGHT_ALIGN, 3);
+	const s8 *natureMod = gNatureStatTable[
+      (sMonSummaryScreen->summary.hiddenNature == HIDDEN_NATURE_NONE) ? sMonSummaryScreen->summary.nature : sMonSummaryScreen->summary.hiddenNature];
 
     DynamicPlaceholderTextUtil_Reset();
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(0, gStringVar1);
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(1, gStringVar2);
-    DynamicPlaceholderTextUtil_SetPlaceholderPtr(2, gStringVar3);
+	BufferStat(gStringVar1, natureMod[STAT_SPATK - 1], sMonSummaryScreen->summary.spatk, 0, 3);
+    BufferStat(gStringVar2, natureMod[STAT_SPDEF - 1], sMonSummaryScreen->summary.spdef, 1, 3);
+    BufferStat(gStringVar3, natureMod[STAT_SPEED - 1], sMonSummaryScreen->summary.speed, 2, 3);
     DynamicPlaceholderTextUtil_ExpandPlaceholders(gStringVar4, sStatsRightColumnLayout);
 }
 

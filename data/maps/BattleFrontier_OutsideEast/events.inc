@@ -35,7 +35,7 @@ BattleFrontier_OutsideEast_MapWarps:
 	warp_def 45, 56, 0, 0, MAP_BATTLE_FRONTIER_BATTLE_PALACE_LOBBY
 	warp_def 58, 14, 0, 0, MAP_BATTLE_FRONTIER_BATTLE_PYRAMID_LOBBY
 	warp_def 35, 12, 3, 0, MAP_BATTLE_FRONTIER_RANKING_HALL
-	warp_def 4, 44, 0, 0, MAP_BATTLE_FRONTIER_LOUNGE1
+	warp_def 3, 38, 0, 0, MAP_BATTLE_FRONTIER_LOUNGE1
 	warp_def 10, 28, 0, 0, MAP_BATTLE_FRONTIER_EXCHANGE_SERVICE_CORNER
 	warp_def 22, 51, 0, 0, MAP_BATTLE_FRONTIER_LOUNGE5
 	warp_def 5, 8, 0, 0, MAP_BATTLE_FRONTIER_LOUNGE6
@@ -43,6 +43,8 @@ BattleFrontier_OutsideEast_MapWarps:
 	warp_def 14, 51, 0, 0, MAP_BATTLE_FRONTIER_LOUNGE8
 	warp_def 21, 45, 0, 0, MAP_BATTLE_FRONTIER_LOUNGE9
 	warp_def 3, 51, 0, 0, MAP_BATTLE_FRONTIER_POKEMON_CENTER_1F
+	warp_def 29, 21, 0, 0, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
+	warp_def 29, 21, 0, 0, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
 
 BattleFrontier_OutsideEast_MapBGEvents:
 	bg_event 13, 17, 0, BG_EVENT_PLAYER_FACING_ANY, BattleFrontier_OutsideEast_EventScript_BattleTowerSign
@@ -53,6 +55,8 @@ BattleFrontier_OutsideEast_MapBGEvents:
 	bg_event 32, 13, 0, BG_EVENT_PLAYER_FACING_ANY, BattleFrontier_OutsideEast_EventScript_RankingHallSign
 	bg_event 4, 51, 0, BG_EVENT_PLAYER_FACING_ANY, Common_EventScript_ShowPokemonCenterSign
 	bg_event 5, 51, 0, BG_EVENT_PLAYER_FACING_ANY, Common_EventScript_ShowPokemonCenterSign
+	bg_secret_base_event 29, 7, 0, SECRET_BASE_YELLOW_CAVE4_1
+	bg_secret_base_event 55, 61, 0, SECRET_BASE_TREE2_1
 
 BattleFrontier_OutsideEast_MapEvents::
 	map_events BattleFrontier_OutsideEast_ObjectEvents, BattleFrontier_OutsideEast_MapWarps, 0x0, BattleFrontier_OutsideEast_MapBGEvents

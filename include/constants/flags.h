@@ -1473,6 +1473,7 @@
 #define FLAG_SYS_PIKE_GOLD                          (SYSTEM_FLAGS + 0x6F)
 #define FLAG_SYS_PYRAMID_SILVER                     (SYSTEM_FLAGS + 0x70)
 #define FLAG_SYS_PYRAMID_GOLD                       (SYSTEM_FLAGS + 0x71)
+#define NUM_SYMBOLS                                 (1 + FLAG_SYS_PYRAMID_GOLD-FLAG_SYS_TOWER_SILVER)
 #define FLAG_SYS_FRONTIER_PASS                      (SYSTEM_FLAGS + 0x72)
 
 #define FLAG_MAP_SCRIPT_CHECKED_DEOXYS              (SYSTEM_FLAGS + 0x73)

@@ -1,8 +1,8 @@
 gText_Birch_Welcome:: @ 82C897B
-	.string "Hi there! My name is\n"
-	.string "Professor Birch.\p"
+	.string "Hi there!\n"
+	.string "My name is Scott.\p"
 	.string "I'm sure you already know that, though.\p"
-	.string "This is assuredly not\n"
+	.string "This is definitely not\n"
 	.string "your first Pokémon adventure.\p"
 	.string "$"
 
@@ -10,14 +10,14 @@ gText_Birch_Pokemon:: @ 82C89FB
 	.string "You were called here because of your\n"
 	.string "familiarity with high-level Pokémon.\p"
 	.string "You have an affinity for\n"
-	.string "Pokémon with strength, do you not?\p?" 
+	.string "Pokémon with strength\l" 
+	.string "like this Bisharp, right?\p"
 	.string "$"
 
 gText_Birch_MainSpeech:: @ 82C8A1F
-	.string "You were called here because of your\n"
-	.string "familiarity with high-level Pokémon.\p"
-	.string "You have an affinity for Pokémon with\n"
-	.string "strength like this Bisharp, do you not?\p" 
+	.string "You have an affinity for\n"
+	.string "Pokémon with strength\l" 
+	.string "like this Bisharp, right?\p"
 	.string "As such a trainer,\n"
 	.string "you've earned the right to be here.\p"
 	.string "In a few brief moments, the\n"
@@ -31,11 +31,11 @@ gText_Birch_MainSpeech:: @ 82C8A1F
 	.string "$"
 
 gText_Birch_AndYouAre:: @ 82C8BD0
-	.string "Let's get your gender.$"
+	.string "Let's get your style.$"
 
 gText_Birch_BoyOrGirl:: @ 82C8BDD
-	.string "Are you a boy?\n"
-	.string "Or are you a girl?$"
+	.string "Would you say you're Cool?\n"
+	.string "Or are you maybe more Cute?$"
 
 gText_Birch_WhatsYourName:: @ 82C8BFF
 	.string "Splendid.\n"

@@ -1,6 +1,6 @@
-# 1 "src/menu.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/menu.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/menu.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -13376,8 +13376,11 @@ extern const u8 gText_ChikoritaDoll80BP[];
 extern const u8 gText_TotodileDoll80BP[];
 
 extern const u8 gText_Dolls[];
-extern const u8 gText_Cushions[];
+extern const u8 gText_MatDesk[];
+extern const u8 gText_OrnaPost[];
+extern const u8 gText_ChairPlant[];
 extern const u8 gText_Contest[];
+extern const u8 gText_TMs[];
 extern const u8 gText_MegaC[];
 extern const u8 gText_MegaB[];
 extern const u8 gText_MegaA[];
@@ -13555,8 +13558,11 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Doll[];
-extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Cushion[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MatDesk[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_OrnaPost[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChairPlant[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Contest[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TM[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaC[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaB[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaA[];
@@ -15849,7 +15855,7 @@ static const u8 sTextSpeedFrameDelays[] =
 {
     [0] = 8,
     [1] = 4,
-    [2] = 1
+    [2] = 1,
 };
 
 static const struct WindowTemplate sStandardTextBox_WindowTemplates[] =
@@ -17927,10 +17933,7 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
             StringCopy(string, gSaveBlock2Ptr->playerName);
             break;
         case SAVE_MENU_CAUGHT:
-            if (IsNationalPokedexEnabled())
-                string = ConvertIntToDecimalStringN(string, GetNationalPokedexCount(FLAG_GET_CAUGHT), STR_CONV_MODE_LEFT_ALIGN, 3);
-            else
-                string = ConvertIntToDecimalStringN(string, GetHoennPokedexCount(FLAG_GET_CAUGHT), STR_CONV_MODE_LEFT_ALIGN, 3);
+            string = ConvertIntToDecimalStringN(string, gSaveBlock2Ptr->frontier.battlePoints, STR_CONV_MODE_LEFT_ALIGN, 3);
             *string = 0xFF;
             break;
         case SAVE_MENU_PLAY_TIME:
@@ -17942,13 +17945,13 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
             GetMapNameGeneric(string, gMapHeader.regionMapSectionId);
             break;
         case SAVE_MENU_BADGES:
-            for (curFlag = (((0x500 + 864 - 1) + 1) + 0x7), flagCount = 0, endOfString = string + 1; curFlag < (((0x500 + 864 - 1) + 1) + 0x7) + (1 + (((0x500 + 864 - 1) + 1) + 0xE) - (((0x500 + 864 - 1) + 1) + 0x7)); curFlag++)
+            for (curFlag = (((0x500 + 864 - 1) + 1) + 0x64), flagCount = 0, endOfString = string + 1; curFlag < (((0x500 + 864 - 1) + 1) + 0x64) + (1 + (((0x500 + 864 - 1) + 1) + 0x71)-(((0x500 + 864 - 1) + 1) + 0x64)); curFlag++)
             {
                 if (FlagGet(curFlag))
                     flagCount++;
             }
-            *string = flagCount + 0xA1;
-            *endOfString = 0xFF;
+   string = ConvertIntToDecimalStringN(string, flagCount, STR_CONV_MODE_LEFT_ALIGN, 3);
+            *string = 0xFF;
             break;
     }
 }

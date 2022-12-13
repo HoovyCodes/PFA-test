@@ -19,7 +19,7 @@ LavaridgeTown_MapWarps:
 	warp_def 15, 5, 0, 0, MAP_LAVARIDGE_TOWN_MART
 	warp_def 9, 6, 0, 0, MAP_LAVARIDGE_TOWN_POKEMON_CENTER_1F
 	warp_def 16, 15, 0, 0, MAP_LAVARIDGE_TOWN_HOUSE
-	warp_def 9, 2, 3, 3, MAP_LAVARIDGE_TOWN_POKEMON_CENTER_1F
+	warp_def 9, 2, 3, 0, MAP_LAVARIDGE_TOWN_POKEMON_CENTER_1F
 
 LavaridgeTown_MapCoordEvents:
 	coord_event 6, 3, 3, 0, 0, LavaridgeTown_EventScript_HotSpringsTrigger

@@ -16423,7 +16423,7 @@ Snow_InitVars:
 	strb	r0, [r2]
 	ldr	r0, .L249+0x10
 	add	r2, r1, r0
-	mov	r0, #0x10
+	mov	r0, #0x20
 	strb	r0, [r2]
 	mov	r2, #0xdc
 	lsl	r2, r2, #0x3
@@ -16979,7 +16979,7 @@ UpdateSnowflakeSprite:
 	mov	r1, #0xff
 	and	r0, r0, r1
 	strh	r0, [r4, #0x34]
-	ldr	r1, .L320
+	ldr	r1, .L316
 	mov	r3, #0x34
 	ldrsh	r0, [r4, r3]
 	lsl	r0, r0, #0x1
@@ -16998,10 +16998,10 @@ UpdateSnowflakeSprite:
 	ldrsb	r5, [r0, r5]
 	ldrh	r0, [r4, #0x20]
 	add	r0, r0, r5
-	ldr	r1, .L320+0x4
+	ldr	r1, .L316+0x4
 	ldrh	r1, [r1]
 	add	r3, r1, r0
-	ldr	r2, .L320+0x8
+	ldr	r2, .L316+0x8
 	add	r0, r2, #0
 	and	r3, r3, r0
 	add	r2, r3, #0
@@ -17010,7 +17010,7 @@ UpdateSnowflakeSprite:
 	and	r0, r0, r2
 	cmp	r0, #0
 	beq	.L311	@cond_branch
-	ldr	r3, .L320+0xc
+	ldr	r3, .L316+0xc
 	add	r0, r3, #0
 	orr	r2, r2, r0
 	lsl	r0, r2, #0x10
@@ -17025,10 +17025,10 @@ UpdateSnowflakeSprite:
 	add	r1, r1, r5
 	mov	r0, #0xf2
 	sub	r0, r0, r1
-	b	.L319
-.L321:
+	b	.L315
+.L317:
 	.align	2, 0
-.L320:
+.L316:
 	.word	gSineTable
 	.word	gSpriteCoordOffsetX
 	.word	0x1ff
@@ -17038,96 +17038,12 @@ UpdateSnowflakeSprite:
 	ble	.L313	@cond_branch
 	add	r0, r1, r5
 	sub	r0, r2, r0
-.L319:
+.L315:
 	strh	r0, [r4, #0x20]
 .L313:
-	add	r0, r4, #0
-	add	r0, r0, #0x29
-	mov	r3, #0x0
-	ldrsb	r3, [r0, r3]
-	ldrh	r0, [r4, #0x22]
-	add	r0, r0, r3
-	ldr	r1, .L322
-	ldrh	r1, [r1]
-	add	r2, r1, r0
-	mov	r0, #0xff
-	and	r2, r2, r0
-	add	r0, r2, #0
-	sub	r0, r0, #0xa4
-	lsl	r0, r0, #0x10
-	lsr	r0, r0, #0x10
-	cmp	r0, #0x6
-	bhi	.L315	@cond_branch
-	add	r1, r1, r3
-	mov	r0, #0xfa
-	sub	r0, r0, r1
-	mov	r1, #0x0
-	strh	r0, [r4, #0x22]
-	mov	r2, #0x22
-	ldrsh	r0, [r4, r2]
-	lsl	r0, r0, #0x7
-	strh	r0, [r4, #0x2e]
-	strh	r1, [r4, #0x38]
-	mov	r0, #0xdc
-	strh	r0, [r4, #0x3a]
-	b	.L316
-.L323:
-	.align	2, 0
-.L322:
-	.word	gSpriteCoordOffsetY
-.L315:
-	add	r0, r2, #0
-	sub	r0, r0, #0xf3
-	lsl	r0, r0, #0x10
-	lsr	r0, r0, #0x10
-	cmp	r0, #0x6
-	bhi	.L316	@cond_branch
-	mov	r1, #0x0
-	mov	r0, #0xa3
-	strh	r0, [r4, #0x22]
-	lsl	r0, r0, #0x7
-	strh	r0, [r4, #0x2e]
-	strh	r1, [r4, #0x38]
-	mov	r0, #0xdc
-	strh	r0, [r4, #0x3a]
-	add	r2, r4, #0
-	add	r2, r2, #0x3e
-	ldrb	r0, [r2]
-	mov	r1, #0x4
-	orr	r0, r0, r1
-	strb	r0, [r2]
-	ldr	r0, .L324
-	str	r0, [r4, #0x1c]
-.L316:
-	ldrh	r0, [r4, #0x38]
-	add	r0, r0, #0x1
-	strh	r0, [r4, #0x38]
-	lsl	r0, r0, #0x10
-	asr	r0, r0, #0x10
-	mov	r3, #0x3a
-	ldrsh	r1, [r4, r3]
-	cmp	r0, r1
-	bne	.L318	@cond_branch
-	add	r0, r4, #0
-	bl	InitSnowflakeSpriteMovement
-	mov	r0, #0xfa
-	strh	r0, [r4, #0x22]
-	add	r2, r4, #0
-	add	r2, r2, #0x3e
-	ldrb	r0, [r2]
-	mov	r1, #0x4
-	orr	r0, r0, r1
-	strb	r0, [r2]
-	ldr	r0, .L324
-	str	r0, [r4, #0x1c]
-.L318:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L325:
-	.align	2, 0
-.L324:
-	.word	WaitSnowflakeSprite
 .Lfe39:
 	.size	 UpdateSnowflakeSprite,.Lfe39-UpdateSnowflakeSprite
 	.align	2, 0
@@ -17136,31 +17052,31 @@ UpdateSnowflakeSprite:
 	.thumb_func
 Thunderstorm_InitVars:
 	push	{r4, r5, lr}
-	ldr	r0, .L327
+	ldr	r0, .L319
 	ldr	r1, [r0]
-	ldr	r2, .L327+0x4
+	ldr	r2, .L319+0x4
 	add	r0, r1, r2
 	mov	r3, #0x0
 	mov	r2, #0x0
 	strh	r2, [r0]
-	ldr	r5, .L327+0x8
+	ldr	r5, .L319+0x8
 	add	r4, r1, r5
 	strb	r3, [r4]
 	add	r5, r5, #0x4
 	add	r0, r1, r5
 	strh	r2, [r0]
-	ldr	r0, .L327+0xc
+	ldr	r0, .L319+0xc
 	add	r2, r1, r0
 	mov	r0, #0x4
 	strb	r0, [r2]
-	ldr	r2, .L327+0x10
+	ldr	r2, .L319+0x10
 	add	r0, r1, r2
 	strb	r3, [r0]
 	add	r5, r5, #0x3
 	add	r2, r1, r5
 	mov	r0, #0x10
 	strb	r0, [r2]
-	ldr	r0, .L327+0x14
+	ldr	r0, .L319+0x14
 	add	r2, r1, r0
 	mov	r0, #0x3
 	strb	r0, [r2]
@@ -17169,7 +17085,7 @@ Thunderstorm_InitVars:
 	mov	r0, #0x14
 	strb	r0, [r2]
 	strb	r3, [r4]
-	ldr	r0, .L327+0x18
+	ldr	r0, .L319+0x18
 	add	r1, r1, r0
 	strb	r3, [r1]
 	mov	r0, #0x51
@@ -17177,9 +17093,9 @@ Thunderstorm_InitVars:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L328:
+.L320:
 	.align	2, 0
-.L327:
+.L319:
 	.word	gWeatherPtr
 	.word	0x6cc
 	.word	0x6d2
@@ -17196,26 +17112,26 @@ Thunderstorm_InitVars:
 Thunderstorm_InitAll:
 	push	{r4, lr}
 	bl	Thunderstorm_InitVars
-	ldr	r0, .L334
+	ldr	r0, .L326
 	ldr	r1, [r0]
-	ldr	r2, .L334+0x4
+	ldr	r2, .L326+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L331	@cond_branch
+	bne	.L323	@cond_branch
 	add	r4, r1, r2
-.L332:
+.L324:
 	bl	Thunderstorm_Main
 	ldrb	r0, [r4]
 	cmp	r0, #0
-	beq	.L332	@cond_branch
-.L331:
+	beq	.L324	@cond_branch
+.L323:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L335:
+.L327:
 	.align	2, 0
-.L334:
+.L326:
 	.word	gWeatherPtr
 	.word	0x6d2
 .Lfe41:
@@ -17226,20 +17142,20 @@ Thunderstorm_InitAll:
 	.thumb_func
 Downpour_InitVars:
 	push	{r4, r5, lr}
-	ldr	r0, .L337
+	ldr	r0, .L329
 	ldr	r1, [r0]
-	ldr	r2, .L337+0x4
+	ldr	r2, .L329+0x4
 	add	r0, r1, r2
 	mov	r4, #0x0
 	mov	r2, #0x0
 	strh	r2, [r0]
-	ldr	r5, .L337+0x8
+	ldr	r5, .L329+0x8
 	add	r3, r1, r5
 	strb	r4, [r3]
 	add	r5, r5, #0x4
 	add	r0, r1, r5
 	strh	r2, [r0]
-	ldr	r0, .L337+0xc
+	ldr	r0, .L329+0xc
 	add	r2, r1, r0
 	mov	r0, #0x4
 	strb	r0, [r2]
@@ -17247,7 +17163,7 @@ Downpour_InitVars:
 	add	r2, r1, r5
 	mov	r0, #0x1
 	strb	r0, [r2]
-	ldr	r0, .L337+0x10
+	ldr	r0, .L329+0x10
 	add	r2, r1, r0
 	mov	r0, #0x18
 	strb	r0, [r2]
@@ -17255,7 +17171,7 @@ Downpour_InitVars:
 	add	r2, r1, r5
 	mov	r0, #0x3
 	strb	r0, [r2]
-	ldr	r0, .L337+0x14
+	ldr	r0, .L329+0x14
 	add	r1, r1, r0
 	mov	r0, #0x14
 	strb	r0, [r1]
@@ -17265,9 +17181,9 @@ Downpour_InitVars:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L338:
+.L330:
 	.align	2, 0
-.L337:
+.L329:
 	.word	gWeatherPtr
 	.word	0x6cc
 	.word	0x6d2
@@ -17283,26 +17199,26 @@ Downpour_InitVars:
 Downpour_InitAll:
 	push	{r4, lr}
 	bl	Downpour_InitVars
-	ldr	r0, .L344
+	ldr	r0, .L336
 	ldr	r1, [r0]
-	ldr	r2, .L344+0x4
+	ldr	r2, .L336+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L341	@cond_branch
+	bne	.L333	@cond_branch
 	add	r4, r1, r2
-.L342:
+.L334:
 	bl	Thunderstorm_Main
 	ldrb	r0, [r4]
 	cmp	r0, #0
-	beq	.L342	@cond_branch
-.L341:
+	beq	.L334	@cond_branch
+.L333:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L345:
+.L337:
 	.align	2, 0
-.L344:
+.L336:
 	.word	gWeatherPtr
 	.word	0x6d2
 .Lfe43:
@@ -17314,125 +17230,125 @@ Downpour_InitAll:
 Thunderstorm_Main:
 	push	{r4, r5, lr}
 	bl	UpdateThunderSound
-	ldr	r0, .L382
+	ldr	r0, .L374
 	ldr	r0, [r0]
-	ldr	r1, .L382+0x4
+	ldr	r1, .L374+0x4
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	cmp	r0, #0xe
-	bls	.LCB3083
-	b	.L347	@long jump
-.LCB3083:
+	bls	.LCB2987
+	b	.L339	@long jump
+.LCB2987:
 	lsl	r0, r0, #0x2
-	ldr	r1, .L382+0x8
+	ldr	r1, .L374+0x8
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
+.L375:
+	.align	2, 0
+.L374:
+	.word	gWeatherPtr
+	.word	0x6cc
+	.word	.L369
+	.align	2, 0
+	.align	2, 0
+.L369:
+	.word	.L340
+	.word	.L341
+	.word	.L343
+	.word	.L345
+	.word	.L347
+	.word	.L348
+	.word	.L350
+	.word	.L351
+	.word	.L352
+	.word	.L354
+	.word	.L360
+	.word	.L362
+	.word	.L363
+	.word	.L365
+	.word	.L367
+.L340:
+	bl	LoadRainSpriteSheet
+	ldr	r0, .L376
+	ldr	r1, [r0]
+	ldr	r2, .L376+0x4
+	add	r1, r1, r2
+	ldrh	r0, [r1]
+	add	r0, r0, #0x1
+	b	.L371
+.L377:
+	.align	2, 0
+.L376:
+	.word	gWeatherPtr
+	.word	0x6cc
+.L341:
+	bl	CreateRainSprite
+	lsl	r0, r0, #0x18
+	cmp	r0, #0
+	beq	.LCB3031
+	b	.L339	@long jump
+.LCB3031:
+	ldr	r0, .L378
+	ldr	r1, [r0]
+	ldr	r3, .L378+0x4
+	add	r1, r1, r3
+	ldrh	r0, [r1]
+	add	r0, r0, #0x1
+	b	.L371
+.L379:
+	.align	2, 0
+.L378:
+	.word	gWeatherPtr
+	.word	0x6cc
+.L343:
+	bl	UpdateVisibleRainSprites
+	lsl	r0, r0, #0x18
+	cmp	r0, #0
+	beq	.LCB3054
+	b	.L339	@long jump
+.LCB3054:
+	ldr	r0, .L380
+	ldr	r1, [r0]
+	ldr	r0, .L380+0x4
+	add	r2, r1, r0
+	mov	r0, #0x1
+	strb	r0, [r2]
+	ldr	r2, .L380+0x8
+	add	r1, r1, r2
+	ldrh	r0, [r1]
+	add	r0, r0, #0x1
+	b	.L371
+.L381:
+	.align	2, 0
+.L380:
+	.word	gWeatherPtr
+	.word	0x6d2
+	.word	0x6cc
+.L345:
+	ldr	r0, .L382
+	ldr	r1, [r0]
+	ldr	r3, .L382+0x4
+	add	r0, r1, r3
+	ldrb	r0, [r0]
+	cmp	r0, #0
+	bne	.LCB3088
+	b	.L339	@long jump
+.LCB3088:
+	ldr	r0, .L382+0x8
+	add	r1, r1, r0
+	mov	r0, #0x6
+	b	.L371
 .L383:
 	.align	2, 0
 .L382:
 	.word	gWeatherPtr
-	.word	0x6cc
-	.word	.L377
-	.align	2, 0
-	.align	2, 0
-.L377:
-	.word	.L348
-	.word	.L349
-	.word	.L351
-	.word	.L353
-	.word	.L355
-	.word	.L356
-	.word	.L358
-	.word	.L359
-	.word	.L360
-	.word	.L362
-	.word	.L368
-	.word	.L370
-	.word	.L371
-	.word	.L373
-	.word	.L375
-.L348:
-	bl	LoadRainSpriteSheet
-	ldr	r0, .L384
-	ldr	r1, [r0]
-	ldr	r2, .L384+0x4
-	add	r1, r1, r2
-	ldrh	r0, [r1]
-	add	r0, r0, #0x1
-	b	.L379
-.L385:
-	.align	2, 0
-.L384:
-	.word	gWeatherPtr
-	.word	0x6cc
-.L349:
-	bl	CreateRainSprite
-	lsl	r0, r0, #0x18
-	cmp	r0, #0
-	beq	.LCB3127
-	b	.L347	@long jump
-.LCB3127:
-	ldr	r0, .L386
-	ldr	r1, [r0]
-	ldr	r3, .L386+0x4
-	add	r1, r1, r3
-	ldrh	r0, [r1]
-	add	r0, r0, #0x1
-	b	.L379
-.L387:
-	.align	2, 0
-.L386:
-	.word	gWeatherPtr
-	.word	0x6cc
-.L351:
-	bl	UpdateVisibleRainSprites
-	lsl	r0, r0, #0x18
-	cmp	r0, #0
-	beq	.LCB3150
-	b	.L347	@long jump
-.LCB3150:
-	ldr	r0, .L388
-	ldr	r1, [r0]
-	ldr	r0, .L388+0x4
-	add	r2, r1, r0
-	mov	r0, #0x1
-	strb	r0, [r2]
-	ldr	r2, .L388+0x8
-	add	r1, r1, r2
-	ldrh	r0, [r1]
-	add	r0, r0, #0x1
-	b	.L379
-.L389:
-	.align	2, 0
-.L388:
-	.word	gWeatherPtr
-	.word	0x6d2
-	.word	0x6cc
-.L353:
-	ldr	r0, .L390
-	ldr	r1, [r0]
-	ldr	r3, .L390+0x4
-	add	r0, r1, r3
-	ldrb	r0, [r0]
-	cmp	r0, #0
-	bne	.LCB3184
-	b	.L347	@long jump
-.LCB3184:
-	ldr	r0, .L390+0x8
-	add	r1, r1, r0
-	mov	r0, #0x6
-	b	.L379
-.L391:
-	.align	2, 0
-.L390:
-	.word	gWeatherPtr
 	.word	0x6c6
 	.word	0x6cc
-.L355:
-	ldr	r0, .L392
+.L347:
+	ldr	r0, .L384
 	ldr	r4, [r0]
-	ldr	r2, .L392+0x4
+	ldr	r2, .L384+0x4
 	add	r1, r4, r2
 	mov	r0, #0x1
 	strb	r0, [r1]
@@ -17444,43 +17360,43 @@ Thunderstorm_Main:
 	add	r1, r5, #0
 	bl	__umodsi3
 	add	r0, r0, r5
-	ldr	r3, .L392+0x8
+	ldr	r3, .L384+0x8
 	add	r1, r4, r3
 	strh	r0, [r1]
-	ldr	r0, .L392+0xc
+	ldr	r0, .L384+0xc
 	add	r4, r4, r0
 	ldrh	r0, [r4]
 	add	r0, r0, #0x1
 	strh	r0, [r4]
-.L356:
-	ldr	r0, .L392
+.L348:
+	ldr	r0, .L384
 	ldr	r2, [r0]
-	ldr	r3, .L392+0x8
+	ldr	r3, .L384+0x8
 	add	r1, r2, r3
 	ldrh	r0, [r1]
 	sub	r0, r0, #0x1
 	strh	r0, [r1]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	beq	.LCB3242
-	b	.L347	@long jump
-.LCB3242:
-	ldr	r0, .L392+0xc
+	beq	.LCB3146
+	b	.L339	@long jump
+.LCB3146:
+	ldr	r0, .L384+0xc
 	add	r1, r2, r0
 	ldrh	r0, [r1]
 	add	r0, r0, #0x1
-	b	.L379
-.L393:
+	b	.L371
+.L385:
 	.align	2, 0
-.L392:
+.L384:
 	.word	gWeatherPtr
 	.word	0x6ea
 	.word	0x6e6
 	.word	0x6cc
-.L358:
-	ldr	r0, .L394
+.L350:
+	ldr	r0, .L386
 	ldr	r4, [r0]
-	ldr	r1, .L394+0x4
+	ldr	r1, .L386+0x4
 	add	r0, r4, r1
 	mov	r5, #0x1
 	strb	r5, [r0]
@@ -17488,102 +17404,102 @@ Thunderstorm_Main:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	and	r0, r0, r5
-	ldr	r2, .L394+0x8
+	ldr	r2, .L386+0x8
 	add	r1, r4, r2
 	strb	r0, [r1]
-	b	.L380
-.L395:
+	b	.L372
+.L387:
 	.align	2, 0
-.L394:
+.L386:
 	.word	gWeatherPtr
 	.word	0x6ea
 	.word	0x6eb
-.L359:
+.L351:
 	bl	Random
-	ldr	r1, .L396
+	ldr	r1, .L388
 	ldr	r2, [r1]
 	mov	r1, #0x1
 	and	r1, r1, r0
 	add	r1, r1, #0x1
-	ldr	r3, .L396+0x4
+	ldr	r3, .L388+0x4
 	add	r0, r2, r3
 	strb	r1, [r0]
-	ldr	r0, .L396+0x8
+	ldr	r0, .L388+0x8
 	add	r2, r2, r0
 	ldrh	r0, [r2]
 	add	r0, r0, #0x1
 	strh	r0, [r2]
-.L360:
+.L352:
 	mov	r0, #0x13
 	bl	sub_80ABC48
-	ldr	r0, .L396
+	ldr	r0, .L388
 	ldr	r1, [r0]
-	ldr	r2, .L396+0xc
+	ldr	r2, .L388+0xc
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L361	@cond_branch
-	ldr	r3, .L396+0x4
+	bne	.L353	@cond_branch
+	ldr	r3, .L388+0x4
 	add	r0, r1, r3
 	ldrb	r0, [r0]
 	cmp	r0, #0x1
-	bne	.L361	@cond_branch
+	bne	.L353	@cond_branch
 	mov	r0, #0x14
 	bl	SetThunderCounter
-.L361:
+.L353:
 	bl	Random
-	ldr	r1, .L396
+	ldr	r1, .L388
 	ldr	r4, [r1]
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	mov	r1, #0x3
 	bl	__umodsi3
 	add	r0, r0, #0x6
-	ldr	r2, .L396+0x10
+	ldr	r2, .L388+0x10
 	add	r1, r4, r2
 	strh	r0, [r1]
-.L380:
-	ldr	r3, .L396+0x8
+.L372:
+	ldr	r3, .L388+0x8
 	add	r4, r4, r3
 	ldrh	r0, [r4]
 	add	r0, r0, #0x1
 	strh	r0, [r4]
-	b	.L347
-.L397:
+	b	.L339
+.L389:
 	.align	2, 0
-.L396:
+.L388:
 	.word	gWeatherPtr
 	.word	0x6ec
 	.word	0x6cc
 	.word	0x6eb
 	.word	0x6e6
-.L362:
-	ldr	r0, .L398
+.L354:
+	ldr	r0, .L390
 	ldr	r4, [r0]
-	ldr	r0, .L398+0x4
+	ldr	r0, .L390+0x4
 	add	r5, r4, r0
 	ldrh	r0, [r5]
 	sub	r0, r0, #0x1
 	strh	r0, [r5]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	beq	.LCB3380
-	b	.L347	@long jump
-.LCB3380:
+	beq	.LCB3284
+	b	.L339	@long jump
+.LCB3284:
 	mov	r0, #0x3
 	bl	sub_80ABC48
-	ldr	r2, .L398+0x8
+	ldr	r2, .L390+0x8
 	add	r1, r4, r2
 	mov	r0, #0x1
 	strb	r0, [r1]
-	ldr	r3, .L398+0xc
+	ldr	r3, .L390+0xc
 	add	r1, r4, r3
 	ldrb	r0, [r1]
 	sub	r0, r0, #0x1
 	strb	r0, [r1]
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L364	@cond_branch
+	beq	.L356	@cond_branch
 	bl	Random
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
@@ -17591,97 +17507,97 @@ Thunderstorm_Main:
 	and	r0, r0, r1
 	add	r0, r0, #0x3c
 	strh	r0, [r5]
-	ldr	r0, .L398+0x10
+	ldr	r0, .L390+0x10
 	add	r1, r4, r0
 	mov	r0, #0xa
-	b	.L379
-.L399:
+	b	.L371
+.L391:
 	.align	2, 0
-.L398:
+.L390:
 	.word	gWeatherPtr
 	.word	0x6e6
 	.word	0x6ea
 	.word	0x6ec
 	.word	0x6cc
-.L364:
-	ldr	r1, .L400
+.L356:
+	ldr	r1, .L392
 	add	r0, r4, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L366	@cond_branch
-	ldr	r2, .L400+0x4
+	bne	.L358	@cond_branch
+	ldr	r2, .L392+0x4
 	add	r1, r4, r2
-	b	.L381
-.L401:
+	b	.L373
+.L393:
 	.align	2, 0
-.L400:
+.L392:
 	.word	0x6eb
 	.word	0x6cc
-.L366:
-	ldr	r3, .L402
+.L358:
+	ldr	r3, .L394
 	add	r1, r4, r3
 	mov	r0, #0xb
-	b	.L379
-.L403:
+	b	.L371
+.L395:
 	.align	2, 0
-.L402:
+.L394:
 	.word	0x6cc
-.L368:
-	ldr	r0, .L404
+.L360:
+	ldr	r0, .L396
 	ldr	r2, [r0]
-	ldr	r0, .L404+0x4
+	ldr	r0, .L396+0x4
 	add	r1, r2, r0
 	ldrh	r0, [r1]
 	sub	r0, r0, #0x1
 	strh	r0, [r1]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bne	.L347	@cond_branch
-	ldr	r3, .L404+0x8
+	bne	.L339	@cond_branch
+	ldr	r3, .L396+0x8
 	add	r1, r2, r3
 	mov	r0, #0x8
-	b	.L379
-.L405:
+	b	.L371
+.L397:
 	.align	2, 0
-.L404:
+.L396:
 	.word	gWeatherPtr
 	.word	0x6e6
 	.word	0x6cc
-.L370:
+.L362:
 	bl	Random
-	ldr	r1, .L406
+	ldr	r1, .L398
 	ldr	r2, [r1]
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	mov	r1, #0xf
 	and	r0, r0, r1
 	add	r0, r0, #0x3c
-	ldr	r3, .L406+0x4
+	ldr	r3, .L398+0x4
 	add	r1, r2, r3
 	strh	r0, [r1]
-	ldr	r0, .L406+0x8
+	ldr	r0, .L398+0x8
 	add	r2, r2, r0
 	ldrh	r0, [r2]
 	add	r0, r0, #0x1
 	strh	r0, [r2]
-	b	.L347
-.L407:
+	b	.L339
+.L399:
 	.align	2, 0
-.L406:
+.L398:
 	.word	gWeatherPtr
 	.word	0x6e6
 	.word	0x6cc
-.L371:
-	ldr	r0, .L408
+.L363:
+	ldr	r0, .L400
 	ldr	r5, [r0]
-	ldr	r1, .L408+0x4
+	ldr	r1, .L400+0x4
 	add	r4, r5, r1
 	ldrh	r0, [r4]
 	sub	r0, r0, #0x1
 	strh	r0, [r4]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bne	.L347	@cond_branch
+	bne	.L339	@cond_branch
 	mov	r0, #0x64
 	bl	SetThunderCounter
 	mov	r0, #0x13
@@ -17691,68 +17607,68 @@ Thunderstorm_Main:
 	and	r1, r1, r0
 	add	r1, r1, #0x1e
 	strh	r1, [r4]
-	ldr	r2, .L408+0x8
+	ldr	r2, .L400+0x8
 	add	r1, r5, r2
 	ldrh	r0, [r1]
 	add	r0, r0, #0x1
-	b	.L379
-.L409:
+	b	.L371
+.L401:
 	.align	2, 0
-.L408:
+.L400:
 	.word	gWeatherPtr
 	.word	0x6e6
 	.word	0x6cc
-.L373:
-	ldr	r0, .L410
+.L365:
+	ldr	r0, .L402
 	ldr	r4, [r0]
-	ldr	r3, .L410+0x4
+	ldr	r3, .L402+0x4
 	add	r1, r4, r3
 	ldrh	r0, [r1]
 	sub	r0, r0, #0x1
 	strh	r0, [r1]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bne	.L347	@cond_branch
+	bne	.L339	@cond_branch
 	mov	r0, #0x13
 	mov	r1, #0x3
 	mov	r2, #0x5
 	bl	sub_80ABC7C
-	ldr	r0, .L410+0x8
+	ldr	r0, .L402+0x8
 	add	r1, r4, r0
 	ldrh	r0, [r1]
 	add	r0, r0, #0x1
-	b	.L379
-.L411:
+	b	.L371
+.L403:
 	.align	2, 0
-.L410:
+.L402:
 	.word	gWeatherPtr
 	.word	0x6e6
 	.word	0x6cc
-.L375:
-	ldr	r0, .L412
+.L367:
+	ldr	r0, .L404
 	ldr	r2, [r0]
-	ldr	r1, .L412+0x4
+	ldr	r1, .L404+0x4
 	add	r0, r2, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x3
-	bne	.L347	@cond_branch
-	ldr	r3, .L412+0x8
+	bne	.L339	@cond_branch
+	ldr	r3, .L404+0x8
 	add	r1, r2, r3
 	mov	r0, #0x1
 	strb	r0, [r1]
-	ldr	r0, .L412+0xc
+	ldr	r0, .L404+0xc
 	add	r1, r2, r0
-.L381:
+.L373:
 	mov	r0, #0x4
-.L379:
+.L371:
 	strh	r0, [r1]
-.L347:
+.L339:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L413:
+.L405:
 	.align	2, 0
-.L412:
+.L404:
 	.word	gWeatherPtr
 	.word	0x6c6
 	.word	0x6ea
@@ -17765,92 +17681,92 @@ Thunderstorm_Main:
 	.thumb_func
 Thunderstorm_Finish:
 	push	{r4, r5, r6, lr}
-	ldr	r0, .L428
+	ldr	r0, .L420
 	ldr	r6, [r0]
-	ldr	r0, .L428+0x4
+	ldr	r0, .L420+0x4
 	add	r5, r6, r0
 	ldrh	r1, [r5]
 	cmp	r1, #0x1
-	beq	.L417	@cond_branch
+	beq	.L409	@cond_branch
 	cmp	r1, #0x1
-	bgt	.L425	@cond_branch
+	bgt	.L417	@cond_branch
 	cmp	r1, #0
-	beq	.L416	@cond_branch
-	b	.L427
-.L429:
+	beq	.L408	@cond_branch
+	b	.L419
+.L421:
 	.align	2, 0
-.L428:
+.L420:
 	.word	gWeatherPtr
 	.word	0x6ce
-.L425:
+.L417:
 	cmp	r1, #0x2
-	beq	.L421	@cond_branch
-	b	.L427
-.L416:
-	ldr	r2, .L430
+	beq	.L413	@cond_branch
+	b	.L419
+.L408:
+	ldr	r2, .L422
 	add	r0, r6, r2
 	strb	r1, [r0]
 	ldrh	r0, [r5]
 	add	r0, r0, #0x1
 	strh	r0, [r5]
-.L417:
+.L409:
 	bl	Thunderstorm_Main
-	ldr	r0, .L430+0x4
+	ldr	r0, .L422+0x4
 	ldr	r2, [r0]
-	ldr	r1, .L430
+	ldr	r1, .L422
 	add	r0, r2, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L415	@cond_branch
+	beq	.L407	@cond_branch
 	sub	r1, r1, #0x19
 	add	r0, r2, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0x3
-	beq	.L427	@cond_branch
+	beq	.L419	@cond_branch
 	cmp	r0, #0x5
-	beq	.L427	@cond_branch
+	beq	.L419	@cond_branch
 	cmp	r0, #0xd
-	beq	.L427	@cond_branch
-	ldr	r0, .L430+0x8
+	beq	.L419	@cond_branch
+	ldr	r0, .L422+0x8
 	add	r1, r2, r0
 	mov	r0, #0x0
 	strb	r0, [r1]
-	ldr	r0, .L430+0xc
+	ldr	r0, .L422+0xc
 	add	r1, r2, r0
 	ldrh	r0, [r1]
 	add	r0, r0, #0x1
 	strh	r0, [r1]
-	b	.L415
-.L431:
+	b	.L407
+.L423:
 	.align	2, 0
-.L430:
+.L422:
 	.word	0x6ea
 	.word	gWeatherPtr
 	.word	0x6d9
 	.word	0x6ce
-.L421:
+.L413:
 	bl	UpdateVisibleRainSprites
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0
-	bne	.L415	@cond_branch
+	bne	.L407	@cond_branch
 	bl	DestroyRainSprites
-	ldr	r1, .L432
+	ldr	r1, .L424
 	add	r0, r6, r1
 	strb	r4, [r0]
 	ldrh	r0, [r5]
 	add	r0, r0, #0x1
 	strh	r0, [r5]
-.L427:
+.L419:
 	mov	r0, #0x0
-	b	.L426
-.L433:
+	b	.L418
+.L425:
 	.align	2, 0
-.L432:
+.L424:
 	.word	0x6ed
-.L415:
+.L407:
 	mov	r0, #0x1
-.L426:
+.L418:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
@@ -17863,13 +17779,13 @@ SetThunderCounter:
 	push	{r4, r5, r6, lr}
 	lsl	r0, r0, #0x10
 	lsr	r6, r0, #0x10
-	ldr	r0, .L436
+	ldr	r0, .L428
 	ldr	r4, [r0]
-	ldr	r0, .L436+0x4
+	ldr	r0, .L428+0x4
 	add	r5, r4, r0
 	ldrb	r0, [r5]
 	cmp	r0, #0
-	bne	.L435	@cond_branch
+	bne	.L427	@cond_branch
 	bl	Random
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
@@ -17881,13 +17797,13 @@ SetThunderCounter:
 	strh	r0, [r1]
 	mov	r0, #0x1
 	strb	r0, [r5]
-.L435:
+.L427:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L437:
+.L429:
 	.align	2, 0
-.L436:
+.L428:
 	.word	gWeatherPtr
 	.word	0x6ed
 .Lfe46:
@@ -17897,55 +17813,55 @@ SetThunderCounter:
 	.thumb_func
 UpdateThunderSound:
 	push	{r4, lr}
-	ldr	r0, .L445
+	ldr	r0, .L437
 	ldr	r1, [r0]
-	ldr	r2, .L445+0x4
+	ldr	r2, .L437+0x4
 	add	r0, r1, r2
 	ldrb	r4, [r0]
 	cmp	r4, #0x1
-	bne	.L438	@cond_branch
+	bne	.L430	@cond_branch
 	mov	r0, #0xdd
 	lsl	r0, r0, #0x3
 	add	r1, r1, r0
 	ldrh	r0, [r1]
 	cmp	r0, #0
-	bne	.L440	@cond_branch
+	bne	.L432	@cond_branch
 	bl	IsSEPlaying
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L438	@cond_branch
+	bne	.L430	@cond_branch
 	bl	Random
 	and	r4, r4, r0
 	cmp	r4, #0
-	beq	.L442	@cond_branch
+	beq	.L434	@cond_branch
 	mov	r0, #0x57
 	bl	PlaySE
-	b	.L443
-.L446:
+	b	.L435
+.L438:
 	.align	2, 0
-.L445:
+.L437:
 	.word	gWeatherPtr
 	.word	0x6ed
-.L442:
+.L434:
 	mov	r0, #0x58
 	bl	PlaySE
-.L443:
-	ldr	r0, .L447
+.L435:
+	ldr	r0, .L439
 	ldr	r0, [r0]
-	ldr	r1, .L447+0x4
+	ldr	r1, .L439+0x4
 	add	r0, r0, r1
 	mov	r1, #0x0
 	strb	r1, [r0]
-	b	.L438
-.L448:
+	b	.L430
+.L440:
 	.align	2, 0
-.L447:
+.L439:
 	.word	gWeatherPtr
 	.word	0x6ed
-.L440:
+.L432:
 	sub	r0, r0, #0x1
 	strh	r0, [r1]
-.L438:
+.L430:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
@@ -18073,28 +17989,28 @@ sFogHorizontalSpriteTemplate:
 	.thumb_func
 FogHorizontal_InitVars:
 	push	{lr}
-	ldr	r0, .L451
+	ldr	r0, .L443
 	ldr	r3, [r0]
-	ldr	r0, .L451+0x4
+	ldr	r0, .L443+0x4
 	add	r1, r3, r0
 	mov	r2, #0x0
 	mov	r0, #0x0
 	strh	r0, [r1]
-	ldr	r1, .L451+0x8
+	ldr	r1, .L443+0x8
 	add	r0, r3, r1
 	strb	r2, [r0]
 	sub	r1, r1, #0x11
 	add	r0, r3, r1
 	strb	r2, [r0]
-	ldr	r2, .L451+0xc
+	ldr	r2, .L443+0xc
 	add	r1, r3, r2
 	mov	r0, #0x14
 	strb	r0, [r1]
-	ldr	r1, .L451+0x10
+	ldr	r1, .L443+0x10
 	add	r0, r3, r1
 	ldrb	r1, [r0]
 	cmp	r1, #0
-	bne	.L450	@cond_branch
+	bne	.L442	@cond_branch
 	add	r2, r2, #0x2e
 	add	r0, r3, r2
 	strh	r1, [r0]
@@ -18107,12 +18023,12 @@ FogHorizontal_InitVars:
 	mov	r0, #0x0
 	mov	r1, #0x10
 	bl	Weather_SetBlendCoeffs
-.L450:
+.L442:
 	pop	{r0}
 	bx	r0
-.L452:
+.L444:
 	.align	2, 0
-.L451:
+.L443:
 	.word	gWeatherPtr
 	.word	0x6cc
 	.word	0x6d2
@@ -18127,26 +18043,26 @@ FogHorizontal_InitVars:
 FogHorizontal_InitAll:
 	push	{r4, lr}
 	bl	FogHorizontal_InitVars
-	ldr	r0, .L458
+	ldr	r0, .L450
 	ldr	r1, [r0]
-	ldr	r2, .L458+0x4
+	ldr	r2, .L450+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L455	@cond_branch
+	bne	.L447	@cond_branch
 	add	r4, r1, r2
-.L456:
+.L448:
 	bl	FogHorizontal_Main
 	ldrb	r0, [r4]
 	cmp	r0, #0
-	beq	.L456	@cond_branch
-.L455:
+	beq	.L448	@cond_branch
+.L447:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L459:
+.L451:
 	.align	2, 0
-.L458:
+.L450:
 	.word	gWeatherPtr
 	.word	0x6d2
 .Lfe49:
@@ -18157,17 +18073,17 @@ FogHorizontal_InitAll:
 	.thumb_func
 FogHorizontal_Main:
 	push	{r4, r5, r6, lr}
-	ldr	r0, .L470
+	ldr	r0, .L462
 	ldr	r6, [r0]
-	ldr	r0, .L470+0x4
-	ldr	r1, .L470+0x8
+	ldr	r0, .L462+0x4
+	ldr	r1, .L462+0x8
 	add	r2, r6, r1
 	ldrh	r0, [r0]
 	ldrh	r1, [r2]
 	sub	r0, r0, r1
 	mov	r1, #0xff
 	and	r0, r0, r1
-	ldr	r3, .L470+0xc
+	ldr	r3, .L462+0xc
 	add	r1, r6, r3
 	strh	r0, [r1]
 	mov	r0, #0xde
@@ -18179,79 +18095,79 @@ FogHorizontal_Main:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x3
-	bls	.L461	@cond_branch
+	bls	.L453	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r1]
 	ldrh	r0, [r2]
 	add	r0, r0, #0x1
 	strh	r0, [r2]
-.L461:
-	ldr	r1, .L470+0x10
+.L453:
+	ldr	r1, .L462+0x10
 	add	r5, r6, r1
 	ldrh	r4, [r5]
 	cmp	r4, #0
-	beq	.L463	@cond_branch
+	beq	.L455	@cond_branch
 	cmp	r4, #0x1
-	beq	.L466	@cond_branch
-	b	.L462
-.L471:
+	beq	.L458	@cond_branch
+	b	.L454
+.L463:
 	.align	2, 0
-.L470:
+.L462:
 	.word	gWeatherPtr
 	.word	gSpriteCoordOffsetX
 	.word	0x6f2
 	.word	0x6ee
 	.word	0x6cc
-.L463:
+.L455:
 	bl	CreateFogHorizontalSprites
 	mov	r3, #0xda
 	lsl	r3, r3, #0x3
 	add	r0, r6, r3
 	ldrb	r0, [r0]
 	cmp	r0, #0x6
-	bne	.L464	@cond_branch
+	bne	.L456	@cond_branch
 	mov	r0, #0xc
 	mov	r1, #0x8
 	mov	r2, #0x3
 	bl	Weather_SetTargetBlendCoeffs
-	b	.L465
-.L464:
+	b	.L457
+.L456:
 	mov	r0, #0x4
 	mov	r1, #0x10
 	mov	r2, #0x0
 	bl	Weather_SetTargetBlendCoeffs
-.L465:
-	ldr	r0, .L472
+.L457:
+	ldr	r0, .L464
 	ldr	r1, [r0]
-	ldr	r0, .L472+0x4
+	ldr	r0, .L464+0x4
 	add	r1, r1, r0
 	ldrh	r0, [r1]
 	add	r0, r0, #0x1
 	strh	r0, [r1]
-	b	.L462
-.L473:
+	b	.L454
+.L465:
 	.align	2, 0
-.L472:
+.L464:
 	.word	gWeatherPtr
 	.word	0x6cc
-.L466:
+.L458:
 	bl	Weather_UpdateBlend
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L462	@cond_branch
-	ldr	r1, .L474
+	beq	.L454	@cond_branch
+	ldr	r1, .L466
 	add	r0, r6, r1
 	strb	r4, [r0]
 	ldrh	r0, [r5]
 	add	r0, r0, #0x1
 	strh	r0, [r5]
-.L462:
+.L454:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L475:
+.L467:
 	.align	2, 0
-.L474:
+.L466:
 	.word	0x6d2
 .Lfe50:
 	.size	 FogHorizontal_Main,.Lfe50-FogHorizontal_Main
@@ -18261,17 +18177,17 @@ FogHorizontal_Main:
 	.thumb_func
 FogHorizontal_Finish:
 	push	{r4, lr}
-	ldr	r0, .L488
+	ldr	r0, .L480
 	ldr	r2, [r0]
-	ldr	r0, .L488+0x4
-	ldr	r1, .L488+0x8
+	ldr	r0, .L480+0x4
+	ldr	r1, .L480+0x8
 	add	r3, r2, r1
 	ldrh	r0, [r0]
 	ldrh	r1, [r3]
 	sub	r0, r0, r1
 	mov	r1, #0xff
 	and	r0, r0, r1
-	ldr	r4, .L488+0xc
+	ldr	r4, .L480+0xc
 	add	r1, r2, r4
 	strh	r0, [r1]
 	mov	r0, #0xde
@@ -18283,60 +18199,60 @@ FogHorizontal_Finish:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x3
-	bls	.L477	@cond_branch
+	bls	.L469	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r1]
 	ldrh	r0, [r3]
 	add	r0, r0, #0x1
 	strh	r0, [r3]
-.L477:
-	ldr	r1, .L488+0x10
+.L469:
+	ldr	r1, .L480+0x10
 	add	r4, r2, r1
 	ldrh	r0, [r4]
 	cmp	r0, #0x1
-	beq	.L480	@cond_branch
+	beq	.L472	@cond_branch
 	cmp	r0, #0x1
-	bgt	.L485	@cond_branch
+	bgt	.L477	@cond_branch
 	cmp	r0, #0
-	beq	.L479	@cond_branch
-	b	.L483
-.L489:
+	beq	.L471	@cond_branch
+	b	.L475
+.L481:
 	.align	2, 0
-.L488:
+.L480:
 	.word	gWeatherPtr
 	.word	gSpriteCoordOffsetX
 	.word	0x6f2
 	.word	0x6ee
 	.word	0x6ce
-.L485:
+.L477:
 	cmp	r0, #0x2
-	beq	.L482	@cond_branch
-	b	.L483
-.L479:
+	beq	.L474	@cond_branch
+	b	.L475
+.L471:
 	mov	r0, #0x0
 	mov	r1, #0x10
 	mov	r2, #0x3
 	bl	Weather_SetTargetBlendCoeffs
-	b	.L487
-.L480:
+	b	.L479
+.L472:
 	bl	Weather_UpdateBlend
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L478	@cond_branch
-	b	.L487
-.L482:
+	beq	.L470	@cond_branch
+	b	.L479
+.L474:
 	bl	DestroyFogHorizontalSprites
-.L487:
+.L479:
 	ldrh	r0, [r4]
 	add	r0, r0, #0x1
 	strh	r0, [r4]
-	b	.L478
-.L483:
+	b	.L470
+.L475:
 	mov	r0, #0x0
-	b	.L486
-.L478:
+	b	.L478
+.L470:
 	mov	r0, #0x1
-.L486:
+.L478:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
@@ -18348,12 +18264,12 @@ FogHorizontal_Finish:
 FogHorizontalSpriteCallback:
 	push	{r4, lr}
 	add	r3, r0, #0
-	ldr	r0, .L492
+	ldr	r0, .L484
 	ldrb	r0, [r0]
 	strh	r0, [r3, #0x26]
-	ldr	r0, .L492+0x4
+	ldr	r0, .L484+0x4
 	ldr	r0, [r0]
-	ldr	r1, .L492+0x8
+	ldr	r1, .L484+0x8
 	add	r2, r0, r1
 	ldrh	r1, [r2]
 	add	r1, r1, #0x20
@@ -18363,9 +18279,9 @@ FogHorizontalSpriteCallback:
 	add	r1, r1, r0
 	strh	r1, [r3, #0x20]
 	lsl	r1, r1, #0x10
-	ldr	r0, .L492+0xc
+	ldr	r0, .L484+0xc
 	cmp	r1, r0
-	ble	.L491	@cond_branch
+	ble	.L483	@cond_branch
 	mov	r0, #0xf0
 	lsl	r0, r0, #0x1
 	add	r1, r0, #0
@@ -18377,16 +18293,16 @@ FogHorizontalSpriteCallback:
 	sub	r0, r0, r2
 	lsl	r0, r0, #0x6
 	sub	r1, r1, r0
-	ldr	r0, .L492+0x10
+	ldr	r0, .L484+0x10
 	and	r1, r1, r0
 	strh	r1, [r3, #0x20]
-.L491:
+.L483:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L493:
+.L485:
 	.align	2, 0
-.L492:
+.L484:
 	.word	gSpriteCoordOffsetY
 	.word	gWeatherPtr
 	.word	0x6ee
@@ -18396,7 +18312,7 @@ FogHorizontalSpriteCallback:
 	.size	 FogHorizontalSpriteCallback,.Lfe52-FogHorizontalSpriteCallback
 	.section .rodata
 	.align	2, 0
-.LC81:
+.LC79:
 	.word	gWeatherFogHorizontalTiles
 	.short	0x800
 	.short	0x1201
@@ -18407,14 +18323,14 @@ FogHorizontalSpriteCallback:
 CreateFogHorizontalSprites:
 	push	{r4, r5, lr}
 	add	sp, sp, #-0x8
-	ldr	r0, .L503
+	ldr	r0, .L495
 	ldr	r0, [r0]
-	ldr	r1, .L503+0x4
+	ldr	r1, .L495+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L495	@cond_branch
-	ldr	r0, .L503+0x8
+	bne	.L487	@cond_branch
+	ldr	r0, .L495+0x8
 	ldr	r1, [r0, #0x4]		@ created by thumb_load_double_from_address
 	ldr	r0, [r0]		@ created by thumb_load_double_from_address
 	str	r0, [sp]
@@ -18422,8 +18338,8 @@ CreateFogHorizontalSprites:
 	mov	r0, sp
 	bl	LoadSpriteSheet
 	mov	r5, #0x0
-.L499:
-	ldr	r0, .L503+0xc
+.L491:
+	ldr	r0, .L495+0xc
 	mov	r1, #0x0
 	mov	r2, #0x0
 	mov	r3, #0xff
@@ -18431,11 +18347,11 @@ CreateFogHorizontalSprites:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x40
-	beq	.L500	@cond_branch
+	beq	.L492	@cond_branch
 	lsl	r4, r0, #0x4
 	add	r4, r4, r0
 	lsl	r4, r4, #0x2
-	ldr	r0, .L503+0x10
+	ldr	r0, .L495+0x10
 	add	r4, r4, r0
 	add	r0, r5, #0
 	mov	r1, #0x5
@@ -18452,48 +18368,48 @@ CreateFogHorizontalSprites:
 	lsr	r0, r0, #0xa
 	add	r0, r0, #0x20
 	strh	r0, [r4, #0x22]
-	ldr	r2, .L503
+	ldr	r2, .L495
 	ldr	r0, [r2]
 	lsl	r1, r5, #0x2
 	add	r0, r0, #0xa0
 	add	r0, r0, r1
 	str	r4, [r0]
-	b	.L498
-.L504:
+	b	.L490
+.L496:
 	.align	2, 0
-.L503:
+.L495:
 	.word	gWeatherPtr
 	.word	0x6fb
-	.word	.LC81
+	.word	.LC79
 	.word	sFogHorizontalSpriteTemplate
 	.word	gSprites
-.L500:
-	ldr	r2, .L505
+.L492:
+	ldr	r2, .L497
 	ldr	r1, [r2]
 	lsl	r0, r5, #0x2
 	add	r1, r1, #0xa0
 	add	r1, r1, r0
 	mov	r0, #0x0
 	str	r0, [r1]
-.L498:
+.L490:
 	add	r0, r5, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r5, r0, #0x10
 	cmp	r5, #0x13
-	bls	.L499	@cond_branch
+	bls	.L491	@cond_branch
 	ldr	r0, [r2]
-	ldr	r1, .L505+0x4
+	ldr	r1, .L497+0x4
 	add	r0, r0, r1
 	mov	r1, #0x1
 	strb	r1, [r0]
-.L495:
+.L487:
 	add	sp, sp, #0x8
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L506:
+.L498:
 	.align	2, 0
-.L505:
+.L497:
 	.word	gWeatherPtr
 	.word	0x6fb
 .Lfe53:
@@ -18503,44 +18419,44 @@ CreateFogHorizontalSprites:
 	.thumb_func
 DestroyFogHorizontalSprites:
 	push	{r4, r5, lr}
-	ldr	r0, .L515
+	ldr	r0, .L507
 	ldr	r1, [r0]
-	ldr	r2, .L515+0x4
+	ldr	r2, .L507+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L508	@cond_branch
+	beq	.L500	@cond_branch
 	mov	r4, #0x0
 	add	r5, r1, #0
 	add	r5, r5, #0xa0
-.L512:
+.L504:
 	lsl	r0, r4, #0x2
 	add	r0, r5, r0
 	ldr	r0, [r0]
 	cmp	r0, #0
-	beq	.L511	@cond_branch
+	beq	.L503	@cond_branch
 	bl	DestroySprite
-.L511:
+.L503:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
 	cmp	r4, #0x13
-	bls	.L512	@cond_branch
-	ldr	r0, .L515+0x8
+	bls	.L504	@cond_branch
+	ldr	r0, .L507+0x8
 	bl	FreeSpriteTilesByTag
-	ldr	r0, .L515
+	ldr	r0, .L507
 	ldr	r0, [r0]
-	ldr	r1, .L515+0x4
+	ldr	r1, .L507+0x4
 	add	r0, r0, r1
 	mov	r1, #0x0
 	strb	r1, [r0]
-.L508:
+.L500:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L516:
+.L508:
 	.align	2, 0
-.L515:
+.L507:
 	.word	gWeatherPtr
 	.word	0x6fb
 	.word	0x1201
@@ -18552,20 +18468,20 @@ DestroyFogHorizontalSprites:
 	.thumb_func
 Ash_InitVars:
 	push	{lr}
-	ldr	r0, .L519
+	ldr	r0, .L511
 	ldr	r1, [r0]
-	ldr	r0, .L519+0x4
+	ldr	r0, .L511+0x4
 	add	r2, r1, r0
 	mov	r3, #0x0
 	mov	r0, #0x0
 	strh	r0, [r2]
-	ldr	r2, .L519+0x8
+	ldr	r2, .L511+0x8
 	add	r0, r1, r2
 	strb	r3, [r0]
 	sub	r2, r2, #0x11
 	add	r0, r1, r2
 	strb	r3, [r0]
-	ldr	r3, .L519+0xc
+	ldr	r3, .L511+0xc
 	add	r0, r1, r3
 	mov	r2, #0x14
 	strb	r2, [r0]
@@ -18577,7 +18493,7 @@ Ash_InitVars:
 	add	r1, r1, r0
 	ldrb	r0, [r1]
 	cmp	r0, #0
-	bne	.L518	@cond_branch
+	bne	.L510	@cond_branch
 	mov	r0, #0x0
 	mov	r1, #0x10
 	bl	Weather_SetBlendCoeffs
@@ -18585,12 +18501,12 @@ Ash_InitVars:
 	lsl	r1, r1, #0x6
 	mov	r0, #0x52
 	bl	SetGpuReg
-.L518:
+.L510:
 	pop	{r0}
 	bx	r0
-.L520:
+.L512:
 	.align	2, 0
-.L519:
+.L511:
 	.word	gWeatherPtr
 	.word	0x6cc
 	.word	0x6d2
@@ -18604,26 +18520,26 @@ Ash_InitVars:
 Ash_InitAll:
 	push	{r4, lr}
 	bl	Ash_InitVars
-	ldr	r0, .L526
+	ldr	r0, .L518
 	ldr	r1, [r0]
-	ldr	r2, .L526+0x4
+	ldr	r2, .L518+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L523	@cond_branch
+	bne	.L515	@cond_branch
 	add	r4, r1, r2
-.L524:
+.L516:
 	bl	Ash_Main
 	ldrb	r0, [r4]
 	cmp	r0, #0
-	beq	.L524	@cond_branch
-.L523:
+	beq	.L516	@cond_branch
+.L515:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L527:
+.L519:
 	.align	2, 0
-.L526:
+.L518:
 	.word	gWeatherPtr
 	.word	0x6d2
 .Lfe56:
@@ -18634,90 +18550,90 @@ Ash_InitAll:
 	.thumb_func
 Ash_Main:
 	push	{r4, r5, lr}
-	ldr	r2, .L544
+	ldr	r2, .L536
 	ldr	r1, [r2]
-	ldr	r0, .L544+0x4
+	ldr	r0, .L536+0x4
 	ldrh	r0, [r0]
-	ldr	r3, .L544+0x8
+	ldr	r3, .L536+0x8
 	and	r3, r3, r0
-	ldr	r0, .L544+0xc
+	ldr	r0, .L536+0xc
 	add	r1, r1, r0
 	strh	r3, [r1]
 	cmp	r3, #0xef
-	bls	.L530	@cond_branch
+	bls	.L522	@cond_branch
 	add	r4, r1, #0
 	add	r1, r3, #0
-.L531:
+.L523:
 	add	r3, r1, #0
 	sub	r3, r3, #0xf0
 	add	r1, r3, #0
 	lsl	r0, r3, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0xef
-	bhi	.L531	@cond_branch
+	bhi	.L523	@cond_branch
 	strh	r3, [r4]
-.L530:
+.L522:
 	ldr	r5, [r2]
-	ldr	r1, .L544+0x10
+	ldr	r1, .L536+0x10
 	add	r4, r5, r1
 	ldrh	r0, [r4]
 	cmp	r0, #0x1
-	beq	.L535	@cond_branch
+	beq	.L527	@cond_branch
 	cmp	r0, #0x1
-	bgt	.L541	@cond_branch
+	bgt	.L533	@cond_branch
 	cmp	r0, #0
-	beq	.L534	@cond_branch
-	b	.L539
-.L545:
+	beq	.L526	@cond_branch
+	b	.L531
+.L537:
 	.align	2, 0
-.L544:
+.L536:
 	.word	gWeatherPtr
 	.word	gSpriteCoordOffsetX
 	.word	0x1ff
 	.word	0x6fc
 	.word	0x6cc
-.L541:
+.L533:
 	cmp	r0, #0x2
-	beq	.L537	@cond_branch
-	b	.L539
-.L534:
+	beq	.L529	@cond_branch
+	b	.L531
+.L526:
 	bl	LoadAshSpriteSheet
-	b	.L543
-.L535:
+	b	.L535
+.L527:
 	mov	r1, #0xe0
 	lsl	r1, r1, #0x3
 	add	r0, r5, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L536	@cond_branch
+	bne	.L528	@cond_branch
 	bl	CreateAshSprites
-.L536:
+.L528:
 	mov	r0, #0x10
 	mov	r1, #0x0
 	mov	r2, #0x1
 	bl	Weather_SetTargetBlendCoeffs
-	b	.L543
-.L537:
+	b	.L535
+.L529:
 	bl	Weather_UpdateBlend
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L533	@cond_branch
-	ldr	r0, .L546
+	beq	.L525	@cond_branch
+	ldr	r0, .L538
 	add	r1, r5, r0
 	mov	r0, #0x1
 	strb	r0, [r1]
-.L543:
+.L535:
 	ldrh	r0, [r4]
 	add	r0, r0, #0x1
 	strh	r0, [r4]
-	b	.L533
-.L547:
-	.align	2, 0
-.L546:
-	.word	0x6d2
+	b	.L525
 .L539:
+	.align	2, 0
+.L538:
+	.word	0x6d2
+.L531:
 	bl	Weather_UpdateBlend
-.L533:
+.L525:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
@@ -18729,57 +18645,57 @@ Ash_Main:
 	.thumb_func
 Ash_Finish:
 	push	{r4, lr}
-	ldr	r0, .L560
+	ldr	r0, .L552
 	ldr	r0, [r0]
-	ldr	r1, .L560+0x4
+	ldr	r1, .L552+0x4
 	add	r4, r0, r1
 	ldrh	r0, [r4]
 	cmp	r0, #0x1
-	beq	.L551	@cond_branch
+	beq	.L543	@cond_branch
 	cmp	r0, #0x1
-	bgt	.L556	@cond_branch
+	bgt	.L548	@cond_branch
 	cmp	r0, #0
-	beq	.L550	@cond_branch
-	b	.L559
-.L561:
+	beq	.L542	@cond_branch
+	b	.L551
+.L553:
 	.align	2, 0
-.L560:
+.L552:
 	.word	gWeatherPtr
 	.word	0x6ce
-.L556:
+.L548:
 	cmp	r0, #0x2
-	beq	.L553	@cond_branch
-	b	.L559
-.L550:
+	beq	.L545	@cond_branch
+	b	.L551
+.L542:
 	mov	r0, #0x0
 	mov	r1, #0x10
 	mov	r2, #0x1
 	bl	Weather_SetTargetBlendCoeffs
-	b	.L558
-.L551:
+	b	.L550
+.L543:
 	bl	Weather_UpdateBlend
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L549	@cond_branch
+	beq	.L541	@cond_branch
 	bl	DestroyAshSprites
-.L558:
+.L550:
 	ldrh	r0, [r4]
 	add	r0, r0, #0x1
 	strh	r0, [r4]
-	b	.L549
-.L553:
+	b	.L541
+.L545:
 	mov	r0, #0x52
 	mov	r1, #0x0
 	bl	SetGpuReg
 	ldrh	r0, [r4]
 	add	r0, r0, #0x1
 	strh	r0, [r4]
-.L559:
+.L551:
 	mov	r0, #0x0
-	b	.L557
-.L549:
+	b	.L549
+.L541:
 	mov	r0, #0x1
-.L557:
+.L549:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
@@ -18799,13 +18715,13 @@ sAshSpriteSheet:
 	.thumb_func
 LoadAshSpriteSheet:
 	push	{lr}
-	ldr	r0, .L563
+	ldr	r0, .L555
 	bl	LoadSpriteSheet
 	pop	{r0}
 	bx	r0
-.L564:
+.L556:
 	.align	2, 0
-.L563:
+.L555:
 	.word	sAshSpriteSheet
 .Lfe59:
 	.size	 LoadAshSpriteSheet,.Lfe59-LoadAshSpriteSheet
@@ -18856,17 +18772,17 @@ sAshSpriteTemplate:
 	.thumb_func
 CreateAshSprites:
 	push	{r4, r5, lr}
-	ldr	r0, .L574
+	ldr	r0, .L566
 	ldr	r0, [r0]
 	mov	r1, #0xe0
 	lsl	r1, r1, #0x3
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L566	@cond_branch
+	bne	.L558	@cond_branch
 	mov	r5, #0x0
-.L570:
-	ldr	r0, .L574+0x4
+.L562:
+	ldr	r0, .L566+0x4
 	mov	r1, #0x0
 	mov	r2, #0x0
 	mov	r3, #0x4e
@@ -18874,11 +18790,11 @@ CreateAshSprites:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x40
-	beq	.L571	@cond_branch
+	beq	.L563	@cond_branch
 	lsl	r4, r0, #0x4
 	add	r4, r4, r0
 	lsl	r4, r4, #0x2
-	ldr	r0, .L574+0x8
+	ldr	r0, .L566+0x8
 	add	r4, r4, r0
 	mov	r0, #0x0
 	strh	r0, [r4, #0x30]
@@ -18899,46 +18815,46 @@ CreateAshSprites:
 	lsl	r0, r0, #0x6
 	add	r0, r0, #0x20
 	strh	r0, [r4, #0x2e]
-	ldr	r2, .L574
+	ldr	r2, .L566
 	ldr	r0, [r2]
 	lsl	r1, r5, #0x2
 	add	r0, r0, #0xf0
 	add	r0, r0, r1
 	str	r4, [r0]
-	b	.L569
-.L575:
+	b	.L561
+.L567:
 	.align	2, 0
-.L574:
+.L566:
 	.word	gWeatherPtr
 	.word	sAshSpriteTemplate
 	.word	gSprites
-.L571:
-	ldr	r2, .L576
+.L563:
+	ldr	r2, .L568
 	ldr	r1, [r2]
 	lsl	r0, r5, #0x2
 	add	r1, r1, #0xf0
 	add	r1, r1, r0
 	mov	r0, #0x0
 	str	r0, [r1]
-.L569:
+.L561:
 	add	r0, r5, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	cmp	r5, #0x13
-	bls	.L570	@cond_branch
+	bls	.L562	@cond_branch
 	ldr	r0, [r2]
 	mov	r1, #0xe0
 	lsl	r1, r1, #0x3
 	add	r0, r0, r1
 	mov	r1, #0x1
 	strb	r1, [r0]
-.L566:
+.L558:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L577:
+.L569:
 	.align	2, 0
-.L576:
+.L568:
 	.word	gWeatherPtr
 .Lfe60:
 	.size	 CreateAshSprites,.Lfe60-CreateAshSprites
@@ -18947,46 +18863,46 @@ CreateAshSprites:
 	.thumb_func
 DestroyAshSprites:
 	push	{r4, r5, lr}
-	ldr	r0, .L586
+	ldr	r0, .L578
 	ldr	r1, [r0]
 	mov	r2, #0xe0
 	lsl	r2, r2, #0x3
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L579	@cond_branch
+	beq	.L571	@cond_branch
 	mov	r4, #0x0
 	add	r5, r1, #0
 	add	r5, r5, #0xf0
-.L583:
+.L575:
 	lsl	r0, r4, #0x2
 	add	r0, r5, r0
 	ldr	r0, [r0]
 	cmp	r0, #0
-	beq	.L582	@cond_branch
+	beq	.L574	@cond_branch
 	bl	DestroySprite
-.L582:
+.L574:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
 	cmp	r4, #0x13
-	bls	.L583	@cond_branch
-	ldr	r0, .L586+0x4
+	bls	.L575	@cond_branch
+	ldr	r0, .L578+0x4
 	bl	FreeSpriteTilesByTag
-	ldr	r0, .L586
+	ldr	r0, .L578
 	ldr	r0, [r0]
 	mov	r1, #0xe0
 	lsl	r1, r1, #0x3
 	add	r0, r0, r1
 	mov	r1, #0x0
 	strb	r1, [r0]
-.L579:
+.L571:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L587:
+.L579:
 	.align	2, 0
-.L586:
+.L578:
 	.word	gWeatherPtr
 	.word	0x1202
 .Lfe61:
@@ -19003,21 +18919,21 @@ UpdateAshSprite:
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x5
-	ble	.L589	@cond_branch
+	ble	.L581	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r3, #0x30]
 	ldrh	r0, [r3, #0x2e]
 	add	r0, r0, #0x1
 	strh	r0, [r3, #0x2e]
-.L589:
-	ldr	r1, .L591
+.L581:
+	ldr	r1, .L583
 	ldrh	r0, [r3, #0x2e]
 	ldrh	r1, [r1]
 	add	r0, r0, r1
 	strh	r0, [r3, #0x22]
-	ldr	r0, .L591+0x4
+	ldr	r0, .L583+0x4
 	ldr	r0, [r0]
-	ldr	r1, .L591+0x8
+	ldr	r1, .L583+0x8
 	add	r2, r0, r1
 	ldrh	r1, [r2]
 	add	r1, r1, #0x20
@@ -19027,9 +18943,9 @@ UpdateAshSprite:
 	add	r1, r1, r0
 	strh	r1, [r3, #0x20]
 	lsl	r1, r1, #0x10
-	ldr	r0, .L591+0xc
+	ldr	r0, .L583+0xc
 	cmp	r1, r0
-	ble	.L590	@cond_branch
+	ble	.L582	@cond_branch
 	mov	r0, #0xf0
 	lsl	r0, r0, #0x1
 	add	r1, r0, #0
@@ -19041,16 +18957,16 @@ UpdateAshSprite:
 	sub	r0, r0, r2
 	lsl	r0, r0, #0x6
 	sub	r1, r1, r0
-	ldr	r0, .L591+0x10
+	ldr	r0, .L583+0x10
 	and	r1, r1, r0
 	strh	r1, [r3, #0x20]
-.L590:
+.L582:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L592:
+.L584:
 	.align	2, 0
-.L591:
+.L583:
 	.word	gSpriteCoordOffsetY
 	.word	gWeatherPtr
 	.word	0x6fc
@@ -19064,20 +18980,20 @@ UpdateAshSprite:
 	.thumb_func
 FogDiagonal_InitVars:
 	push	{r4, lr}
-	ldr	r0, .L595
+	ldr	r0, .L587
 	ldr	r3, [r0]
-	ldr	r1, .L595+0x4
+	ldr	r1, .L587+0x4
 	add	r0, r3, r1
 	mov	r1, #0x0
 	mov	r2, #0x0
 	strh	r2, [r0]
-	ldr	r4, .L595+0x8
+	ldr	r4, .L587+0x8
 	add	r0, r3, r4
 	strb	r1, [r0]
 	sub	r4, r4, #0x11
 	add	r0, r3, r4
 	strb	r1, [r0]
-	ldr	r0, .L595+0xc
+	ldr	r0, .L587+0xc
 	add	r1, r3, r0
 	mov	r0, #0x14
 	strb	r0, [r1]
@@ -19089,11 +19005,11 @@ FogDiagonal_InitVars:
 	add	r1, r3, r4
 	mov	r0, #0x1
 	strh	r0, [r1]
-	ldr	r1, .L595+0x10
+	ldr	r1, .L587+0x10
 	add	r0, r3, r1
 	ldrb	r2, [r0]
 	cmp	r2, #0
-	bne	.L594	@cond_branch
+	bne	.L586	@cond_branch
 	add	r4, r4, #0x2a
 	add	r0, r3, r4
 	strh	r2, [r0]
@@ -19115,13 +19031,13 @@ FogDiagonal_InitVars:
 	mov	r0, #0x0
 	mov	r1, #0x10
 	bl	Weather_SetBlendCoeffs
-.L594:
+.L586:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L596:
+.L588:
 	.align	2, 0
-.L595:
+.L587:
 	.word	gWeatherPtr
 	.word	0x6cc
 	.word	0x6d2
@@ -19136,26 +19052,26 @@ FogDiagonal_InitVars:
 FogDiagonal_InitAll:
 	push	{r4, lr}
 	bl	FogDiagonal_InitVars
-	ldr	r0, .L602
+	ldr	r0, .L594
 	ldr	r1, [r0]
-	ldr	r2, .L602+0x4
+	ldr	r2, .L594+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L599	@cond_branch
+	bne	.L591	@cond_branch
 	add	r4, r1, r2
-.L600:
+.L592:
 	bl	FogDiagonal_Main
 	ldrb	r0, [r4]
 	cmp	r0, #0
-	beq	.L600	@cond_branch
-.L599:
+	beq	.L592	@cond_branch
+.L591:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L603:
+.L595:
 	.align	2, 0
-.L602:
+.L594:
 	.word	gWeatherPtr
 	.word	0x6d2
 .Lfe64:
@@ -19167,56 +19083,56 @@ FogDiagonal_InitAll:
 FogDiagonal_Main:
 	push	{r4, r5, lr}
 	bl	UpdateFogDiagonalMovement
-	ldr	r0, .L614
+	ldr	r0, .L606
 	ldr	r5, [r0]
-	ldr	r0, .L614+0x4
+	ldr	r0, .L606+0x4
 	add	r4, r5, r0
 	ldrh	r0, [r4]
 	cmp	r0, #0x1
-	beq	.L607	@cond_branch
+	beq	.L599	@cond_branch
 	cmp	r0, #0x1
-	bgt	.L612	@cond_branch
+	bgt	.L604	@cond_branch
 	cmp	r0, #0
-	beq	.L606	@cond_branch
-	b	.L605
-.L615:
+	beq	.L598	@cond_branch
+	b	.L597
+.L607:
 	.align	2, 0
-.L614:
+.L606:
 	.word	gWeatherPtr
 	.word	0x6cc
-.L612:
+.L604:
 	cmp	r0, #0x2
-	beq	.L608	@cond_branch
-	b	.L605
-.L606:
+	beq	.L600	@cond_branch
+	b	.L597
+.L598:
 	bl	CreateFogDiagonalSprites
-	b	.L613
-.L607:
+	b	.L605
+.L599:
 	mov	r0, #0xc
 	mov	r1, #0x8
 	mov	r2, #0x8
 	bl	Weather_SetTargetBlendCoeffs
-	b	.L613
-.L608:
+	b	.L605
+.L600:
 	bl	Weather_UpdateBlend
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L605	@cond_branch
-	ldr	r0, .L616
+	beq	.L597	@cond_branch
+	ldr	r0, .L608
 	add	r1, r5, r0
 	mov	r0, #0x1
 	strb	r0, [r1]
-.L613:
+.L605:
 	ldrh	r0, [r4]
 	add	r0, r0, #0x1
 	strh	r0, [r4]
-.L605:
+.L597:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L617:
+.L609:
 	.align	2, 0
-.L616:
+.L608:
 	.word	0x6d2
 .Lfe65:
 	.size	 FogDiagonal_Main,.Lfe65-FogDiagonal_Main
@@ -19227,52 +19143,52 @@ FogDiagonal_Main:
 FogDiagonal_Finish:
 	push	{r4, lr}
 	bl	UpdateFogDiagonalMovement
-	ldr	r0, .L629
+	ldr	r0, .L621
 	ldr	r0, [r0]
-	ldr	r1, .L629+0x4
+	ldr	r1, .L621+0x4
 	add	r4, r0, r1
 	ldrh	r0, [r4]
 	cmp	r0, #0x1
-	beq	.L621	@cond_branch
+	beq	.L613	@cond_branch
 	cmp	r0, #0x1
-	bgt	.L626	@cond_branch
+	bgt	.L618	@cond_branch
 	cmp	r0, #0
-	beq	.L620	@cond_branch
-	b	.L624
-.L630:
+	beq	.L612	@cond_branch
+	b	.L616
+.L622:
 	.align	2, 0
-.L629:
+.L621:
 	.word	gWeatherPtr
 	.word	0x6ce
-.L626:
+.L618:
 	cmp	r0, #0x2
-	beq	.L623	@cond_branch
-	b	.L624
-.L620:
+	beq	.L615	@cond_branch
+	b	.L616
+.L612:
 	mov	r0, #0x0
 	mov	r1, #0x10
 	mov	r2, #0x1
 	bl	Weather_SetTargetBlendCoeffs
-	b	.L628
-.L621:
+	b	.L620
+.L613:
 	bl	Weather_UpdateBlend
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L619	@cond_branch
-	b	.L628
-.L623:
+	beq	.L611	@cond_branch
+	b	.L620
+.L615:
 	bl	DestroyFogDiagonalSprites
-.L628:
+.L620:
 	ldrh	r0, [r4]
 	add	r0, r0, #0x1
 	strh	r0, [r4]
-	b	.L619
-.L624:
+	b	.L611
+.L616:
 	mov	r0, #0x0
-	b	.L627
-.L619:
+	b	.L619
+.L611:
 	mov	r0, #0x1
-.L627:
+.L619:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
@@ -19283,20 +19199,20 @@ FogDiagonal_Finish:
 	.thumb_func
 UpdateFogDiagonalMovement:
 	push	{r4, r5, lr}
-	ldr	r0, .L634
+	ldr	r0, .L626
 	ldr	r3, [r0]
-	ldr	r0, .L634+0x4
+	ldr	r0, .L626+0x4
 	add	r2, r3, r0
 	ldrh	r0, [r2]
 	add	r0, r0, #0x1
 	mov	r5, #0x0
 	strh	r0, [r2]
-	ldr	r1, .L634+0x8
+	ldr	r1, .L626+0x8
 	add	r4, r1, #0
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x2
-	bls	.L632	@cond_branch
+	bls	.L624	@cond_branch
 	mov	r0, #0xe4
 	lsl	r0, r0, #0x3
 	add	r1, r3, r0
@@ -19304,23 +19220,23 @@ UpdateFogDiagonalMovement:
 	add	r0, r0, #0x1
 	strh	r0, [r1]
 	strh	r5, [r2]
-.L632:
-	ldr	r1, .L634+0xc
+.L624:
+	ldr	r1, .L626+0xc
 	add	r2, r3, r1
 	ldrh	r0, [r2]
 	add	r0, r0, #0x1
 	strh	r0, [r2]
 	and	r0, r0, r4
 	cmp	r0, #0x4
-	bls	.L633	@cond_branch
-	ldr	r0, .L634+0x10
+	bls	.L625	@cond_branch
+	ldr	r0, .L626+0x10
 	add	r1, r3, r0
 	ldrh	r0, [r1]
 	add	r0, r0, #0x1
 	strh	r0, [r1]
 	strh	r5, [r2]
-.L633:
-	ldr	r0, .L634+0x14
+.L625:
+	ldr	r0, .L626+0x14
 	mov	r2, #0xe4
 	lsl	r2, r2, #0x3
 	add	r1, r3, r2
@@ -19332,7 +19248,7 @@ UpdateFogDiagonalMovement:
 	sub	r2, r2, #0x8
 	add	r1, r3, r2
 	strh	r0, [r1]
-	ldr	r1, .L634+0x18
+	ldr	r1, .L626+0x18
 	add	r2, r2, #0xa
 	add	r0, r3, r2
 	ldrh	r0, [r0]
@@ -19344,9 +19260,9 @@ UpdateFogDiagonalMovement:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L635:
+.L627:
 	.align	2, 0
-.L634:
+.L626:
 	.word	gWeatherPtr
 	.word	0x71c
 	.word	0xffff
@@ -19407,14 +19323,14 @@ sFogDiagonalSpriteTemplate:
 CreateFogDiagonalSprites:
 	push	{r4, r5, r6, lr}
 	add	sp, sp, #-0x8
-	ldr	r0, .L645
+	ldr	r0, .L637
 	ldr	r0, [r0]
-	ldr	r1, .L645+0x4
+	ldr	r1, .L637+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L637	@cond_branch
-	ldr	r0, .L645+0x8
+	bne	.L629	@cond_branch
+	ldr	r0, .L637+0x8
 	ldr	r1, [r0, #0x4]		@ created by thumb_load_double_from_address
 	ldr	r0, [r0]		@ created by thumb_load_double_from_address
 	str	r0, [sp]
@@ -19422,32 +19338,32 @@ CreateFogDiagonalSprites:
 	mov	r0, sp
 	bl	LoadSpriteSheet
 	mov	r6, #0x0
-.L641:
+.L633:
 	add	r0, r6, #0
 	mov	r1, #0x5
 	bl	__udivsi3
 	add	r5, r0, #0
 	lsl	r2, r5, #0x16
 	asr	r2, r2, #0x10
-	ldr	r0, .L645+0xc
+	ldr	r0, .L637+0xc
 	mov	r1, #0x0
 	mov	r3, #0xff
 	bl	CreateSpriteAtEnd
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x40
-	beq	.L642	@cond_branch
+	beq	.L634	@cond_branch
 	lsl	r4, r0, #0x4
 	add	r4, r4, r0
 	lsl	r4, r4, #0x2
-	ldr	r0, .L645+0x10
+	ldr	r0, .L637+0x10
 	add	r4, r4, r0
 	add	r0, r6, #0
 	mov	r1, #0x5
 	bl	__umodsi3
 	strh	r0, [r4, #0x2e]
 	strh	r5, [r4, #0x30]
-	ldr	r2, .L645
+	ldr	r2, .L637
 	ldr	r0, [r2]
 	lsl	r1, r6, #0x2
 	mov	r3, #0xa0
@@ -19455,17 +19371,17 @@ CreateFogDiagonalSprites:
 	add	r0, r0, r3
 	add	r0, r0, r1
 	str	r4, [r0]
-	b	.L640
-.L646:
+	b	.L632
+.L638:
 	.align	2, 0
-.L645:
+.L637:
 	.word	gWeatherPtr
 	.word	0x724
 	.word	gFogDiagonalSpriteSheet
 	.word	sFogDiagonalSpriteTemplate
 	.word	gSprites
-.L642:
-	ldr	r2, .L647
+.L634:
+	ldr	r2, .L639
 	ldr	r1, [r2]
 	lsl	r0, r6, #0x2
 	mov	r3, #0xa0
@@ -19474,25 +19390,25 @@ CreateFogDiagonalSprites:
 	add	r1, r1, r0
 	mov	r0, #0x0
 	str	r0, [r1]
-.L640:
+.L632:
 	add	r0, r6, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r6, r0, #0x10
 	cmp	r6, #0x13
-	bls	.L641	@cond_branch
+	bls	.L633	@cond_branch
 	ldr	r0, [r2]
-	ldr	r1, .L647+0x4
+	ldr	r1, .L639+0x4
 	add	r0, r0, r1
 	mov	r1, #0x1
 	strb	r1, [r0]
-.L637:
+.L629:
 	add	sp, sp, #0x8
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L648:
+.L640:
 	.align	2, 0
-.L647:
+.L639:
 	.word	gWeatherPtr
 	.word	0x724
 .Lfe68:
@@ -19502,45 +19418,45 @@ CreateFogDiagonalSprites:
 	.thumb_func
 DestroyFogDiagonalSprites:
 	push	{r4, r5, lr}
-	ldr	r0, .L657
+	ldr	r0, .L649
 	ldr	r1, [r0]
-	ldr	r2, .L657+0x4
+	ldr	r2, .L649+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L650	@cond_branch
+	beq	.L642	@cond_branch
 	mov	r4, #0x0
 	mov	r0, #0xa0
 	lsl	r0, r0, #0x1
 	add	r5, r1, r0
-.L654:
+.L646:
 	lsl	r0, r4, #0x2
 	add	r0, r5, r0
 	ldr	r0, [r0]
 	cmp	r0, #0
-	beq	.L653	@cond_branch
+	beq	.L645	@cond_branch
 	bl	DestroySprite
-.L653:
+.L645:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
 	cmp	r4, #0x13
-	bls	.L654	@cond_branch
-	ldr	r0, .L657+0x8
+	bls	.L646	@cond_branch
+	ldr	r0, .L649+0x8
 	bl	FreeSpriteTilesByTag
-	ldr	r0, .L657
+	ldr	r0, .L649
 	ldr	r0, [r0]
-	ldr	r1, .L657+0x4
+	ldr	r1, .L649+0x4
 	add	r0, r0, r1
 	mov	r1, #0x0
 	strb	r1, [r0]
-.L650:
+.L642:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L658:
+.L650:
 	.align	2, 0
-.L657:
+.L649:
 	.word	gWeatherPtr
 	.word	0x724
 	.word	0x1203
@@ -19552,9 +19468,9 @@ DestroyFogDiagonalSprites:
 UpdateFogDiagonalSprite:
 	push	{r4, lr}
 	add	r3, r0, #0
-	ldr	r0, .L661
+	ldr	r0, .L653
 	ldr	r1, [r0]
-	ldr	r2, .L661+0x4
+	ldr	r2, .L653+0x4
 	add	r0, r1, r2
 	ldrh	r0, [r0]
 	strh	r0, [r3, #0x26]
@@ -19569,9 +19485,9 @@ UpdateFogDiagonalSprite:
 	add	r1, r1, r0
 	strh	r1, [r3, #0x20]
 	lsl	r1, r1, #0x10
-	ldr	r0, .L661+0x8
+	ldr	r0, .L653+0x8
 	cmp	r1, r0
-	ble	.L660	@cond_branch
+	ble	.L652	@cond_branch
 	mov	r0, #0xf0
 	lsl	r0, r0, #0x1
 	add	r1, r0, #0
@@ -19583,16 +19499,16 @@ UpdateFogDiagonalSprite:
 	sub	r0, r0, r2
 	lsl	r0, r0, #0x6
 	sub	r1, r1, r0
-	ldr	r0, .L661+0xc
+	ldr	r0, .L653+0xc
 	and	r1, r1, r0
 	strh	r1, [r3, #0x20]
-.L660:
+.L652:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L662:
+.L654:
 	.align	2, 0
-.L661:
+.L653:
 	.word	gWeatherPtr
 	.word	0x71a
 	.word	0x10f0000
@@ -19605,35 +19521,35 @@ UpdateFogDiagonalSprite:
 	.thumb_func
 Sandstorm_InitVars:
 	push	{r4, lr}
-	ldr	r0, .L666
+	ldr	r0, .L658
 	ldr	r3, [r0]
-	ldr	r0, .L666+0x4
+	ldr	r0, .L658+0x4
 	add	r1, r3, r0
 	mov	r2, #0x0
 	mov	r0, #0x0
 	strh	r0, [r1]
-	ldr	r1, .L666+0x8
+	ldr	r1, .L658+0x8
 	add	r0, r3, r1
 	strb	r2, [r0]
-	ldr	r4, .L666+0xc
+	ldr	r4, .L658+0xc
 	add	r0, r3, r4
 	strb	r2, [r0]
-	ldr	r0, .L666+0x10
+	ldr	r0, .L658+0x10
 	add	r1, r3, r0
 	mov	r0, #0x14
 	strb	r0, [r1]
-	ldr	r1, .L666+0x14
+	ldr	r1, .L658+0x14
 	add	r0, r3, r1
 	ldrb	r2, [r0]
 	cmp	r2, #0
-	bne	.L664	@cond_branch
+	bne	.L656	@cond_branch
 	add	r4, r4, #0x43
 	add	r1, r3, r4
 	add	r4, r4, #0x4
 	add	r0, r3, r4
 	str	r2, [r0]
 	str	r2, [r1]
-	ldr	r0, .L666+0x18
+	ldr	r0, .L658+0x18
 	add	r1, r3, r0
 	mov	r0, #0x8
 	strh	r0, [r1]
@@ -19642,21 +19558,21 @@ Sandstorm_InitVars:
 	strh	r2, [r0]
 	ldrh	r2, [r1]
 	cmp	r2, #0x5f
-	bls	.L665	@cond_branch
+	bls	.L657	@cond_branch
 	mov	r0, #0x80
 	sub	r0, r0, r2
 	strh	r0, [r1]
-.L665:
+.L657:
 	mov	r0, #0x0
 	mov	r1, #0x10
 	bl	Weather_SetBlendCoeffs
-.L664:
+.L656:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L667:
+.L659:
 	.align	2, 0
-.L666:
+.L658:
 	.word	gWeatherPtr
 	.word	0x6cc
 	.word	0x6d2
@@ -19673,26 +19589,26 @@ Sandstorm_InitVars:
 Sandstorm_InitAll:
 	push	{r4, lr}
 	bl	Sandstorm_InitVars
-	ldr	r0, .L673
+	ldr	r0, .L665
 	ldr	r1, [r0]
-	ldr	r2, .L673+0x4
+	ldr	r2, .L665+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L670	@cond_branch
+	bne	.L662	@cond_branch
 	add	r4, r1, r2
-.L671:
+.L663:
 	bl	Sandstorm_Main
 	ldrb	r0, [r4]
 	cmp	r0, #0
-	beq	.L671	@cond_branch
-.L670:
+	beq	.L663	@cond_branch
+.L662:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L674:
+.L666:
 	.align	2, 0
-.L673:
+.L665:
 	.word	gWeatherPtr
 	.word	0x6d2
 .Lfe72:
@@ -19705,66 +19621,66 @@ Sandstorm_Main:
 	push	{r4, r5, lr}
 	bl	UpdateSandstormMovement
 	bl	UpdateSandstormWaveIndex
-	ldr	r0, .L686
+	ldr	r0, .L678
 	ldr	r5, [r0]
-	ldr	r0, .L686+0x4
+	ldr	r0, .L678+0x4
 	add	r1, r5, r0
 	ldrh	r0, [r1]
 	cmp	r0, #0x5f
-	bls	.L676	@cond_branch
+	bls	.L668	@cond_branch
 	mov	r0, #0x20
 	strh	r0, [r1]
-.L676:
-	ldr	r0, .L686+0x8
+.L668:
+	ldr	r0, .L678+0x8
 	add	r4, r5, r0
 	ldrh	r0, [r4]
 	cmp	r0, #0x1
-	beq	.L679	@cond_branch
+	beq	.L671	@cond_branch
 	cmp	r0, #0x1
-	bgt	.L684	@cond_branch
+	bgt	.L676	@cond_branch
 	cmp	r0, #0
-	beq	.L678	@cond_branch
-	b	.L677
-.L687:
+	beq	.L670	@cond_branch
+	b	.L669
+.L679:
 	.align	2, 0
-.L686:
+.L678:
 	.word	gWeatherPtr
 	.word	0x712
 	.word	0x6cc
-.L684:
+.L676:
 	cmp	r0, #0x2
-	beq	.L680	@cond_branch
-	b	.L677
-.L678:
+	beq	.L672	@cond_branch
+	b	.L669
+.L670:
 	bl	CreateSandstormSprites
 	bl	CreateSwirlSandstormSprites
-	b	.L685
-.L679:
+	b	.L677
+.L671:
 	mov	r0, #0x10
 	mov	r1, #0x0
 	mov	r2, #0x0
 	bl	Weather_SetTargetBlendCoeffs
-	b	.L685
-.L680:
+	b	.L677
+.L672:
 	bl	Weather_UpdateBlend
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L677	@cond_branch
-	ldr	r0, .L688
+	beq	.L669	@cond_branch
+	ldr	r0, .L680
 	add	r1, r5, r0
 	mov	r0, #0x1
 	strb	r0, [r1]
-.L685:
+.L677:
 	ldrh	r0, [r4]
 	add	r0, r0, #0x1
 	strh	r0, [r4]
-.L677:
+.L669:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L689:
+.L681:
 	.align	2, 0
-.L688:
+.L680:
 	.word	0x6d2
 .Lfe73:
 	.size	 Sandstorm_Main,.Lfe73-Sandstorm_Main
@@ -19776,52 +19692,52 @@ Sandstorm_Finish:
 	push	{r4, lr}
 	bl	UpdateSandstormMovement
 	bl	UpdateSandstormWaveIndex
-	ldr	r0, .L701
+	ldr	r0, .L693
 	ldr	r0, [r0]
-	ldr	r1, .L701+0x4
+	ldr	r1, .L693+0x4
 	add	r4, r0, r1
 	ldrh	r0, [r4]
 	cmp	r0, #0x1
-	beq	.L693	@cond_branch
+	beq	.L685	@cond_branch
 	cmp	r0, #0x1
-	bgt	.L698	@cond_branch
+	bgt	.L690	@cond_branch
 	cmp	r0, #0
-	beq	.L692	@cond_branch
-	b	.L696
-.L702:
+	beq	.L684	@cond_branch
+	b	.L688
+.L694:
 	.align	2, 0
-.L701:
+.L693:
 	.word	gWeatherPtr
 	.word	0x6ce
-.L698:
+.L690:
 	cmp	r0, #0x2
-	beq	.L695	@cond_branch
-	b	.L696
-.L692:
+	beq	.L687	@cond_branch
+	b	.L688
+.L684:
 	mov	r0, #0x0
 	mov	r1, #0x10
 	mov	r2, #0x0
 	bl	Weather_SetTargetBlendCoeffs
-	b	.L700
-.L693:
+	b	.L692
+.L685:
 	bl	Weather_UpdateBlend
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L691	@cond_branch
-	b	.L700
-.L695:
+	beq	.L683	@cond_branch
+	b	.L692
+.L687:
 	bl	DestroySandstormSprites
-.L700:
+.L692:
 	ldrh	r0, [r4]
 	add	r0, r0, #0x1
 	strh	r0, [r4]
-	b	.L691
-.L696:
+	b	.L683
+.L688:
 	mov	r0, #0x0
-	b	.L699
-.L691:
+	b	.L691
+.L683:
 	mov	r0, #0x1
-.L699:
+.L691:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
@@ -19832,9 +19748,9 @@ Sandstorm_Finish:
 	.thumb_func
 UpdateSandstormWaveIndex:
 	push	{lr}
-	ldr	r0, .L705
+	ldr	r0, .L697
 	ldr	r2, [r0]
-	ldr	r0, .L705+0x4
+	ldr	r0, .L697+0x4
 	add	r3, r2, r0
 	ldrh	r0, [r3]
 	add	r1, r0, #0x1
@@ -19842,20 +19758,20 @@ UpdateSandstormWaveIndex:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x4
-	bls	.L704	@cond_branch
-	ldr	r1, .L705+0x8
+	bls	.L696	@cond_branch
+	ldr	r1, .L697+0x8
 	add	r0, r2, r1
 	ldrh	r1, [r0]
 	add	r1, r1, #0x1
 	mov	r2, #0x0
 	strh	r1, [r0]
 	strh	r2, [r3]
-.L704:
+.L696:
 	pop	{r0}
 	bx	r0
-.L706:
+.L698:
 	.align	2, 0
-.L705:
+.L697:
 	.word	gWeatherPtr
 	.word	0x714
 	.word	0x712
@@ -19866,12 +19782,12 @@ UpdateSandstormWaveIndex:
 	.thumb_func
 UpdateSandstormMovement:
 	push	{r4, r5, r6, lr}
-	ldr	r0, .L708
+	ldr	r0, .L700
 	ldr	r2, [r0]
-	ldr	r0, .L708+0x4
+	ldr	r0, .L700+0x4
 	add	r4, r2, r0
-	ldr	r6, .L708+0x8
-	ldr	r1, .L708+0xc
+	ldr	r6, .L700+0x8
+	ldr	r1, .L700+0xc
 	add	r5, r2, r1
 	ldrh	r0, [r5]
 	lsl	r0, r0, #0x1
@@ -19893,17 +19809,17 @@ UpdateSandstormMovement:
 	ldr	r0, [r3]
 	sub	r0, r0, r1
 	str	r0, [r3]
-	ldr	r1, .L708+0x10
+	ldr	r1, .L700+0x10
 	ldr	r0, [r4]
 	lsr	r0, r0, #0x8
 	ldrh	r1, [r1]
 	add	r0, r0, r1
 	mov	r1, #0xff
 	and	r0, r0, r1
-	ldr	r4, .L708+0x14
+	ldr	r4, .L700+0x14
 	add	r1, r2, r4
 	strh	r0, [r1]
-	ldr	r1, .L708+0x18
+	ldr	r1, .L700+0x18
 	ldr	r0, [r3]
 	lsr	r0, r0, #0x8
 	ldrh	r1, [r1]
@@ -19915,9 +19831,9 @@ UpdateSandstormMovement:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L709:
+.L701:
 	.align	2, 0
-.L708:
+.L700:
 	.word	gWeatherPtr
 	.word	0x704
 	.word	gSineTable
@@ -19932,76 +19848,76 @@ UpdateSandstormMovement:
 	.thumb_func
 DestroySandstormSprites:
 	push	{r4, r5, lr}
-	ldr	r0, .L725
+	ldr	r0, .L717
 	ldr	r1, [r0]
-	ldr	r2, .L725+0x4
+	ldr	r2, .L717+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L711	@cond_branch
+	beq	.L703	@cond_branch
 	mov	r4, #0x0
 	mov	r0, #0xc8
 	lsl	r0, r0, #0x1
 	add	r5, r1, r0
-.L715:
+.L707:
 	lsl	r0, r4, #0x2
 	add	r0, r5, r0
 	ldr	r0, [r0]
 	cmp	r0, #0
-	beq	.L714	@cond_branch
+	beq	.L706	@cond_branch
 	bl	DestroySprite
-.L714:
+.L706:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
 	cmp	r4, #0x13
-	bls	.L715	@cond_branch
-	ldr	r0, .L725
+	bls	.L707	@cond_branch
+	ldr	r0, .L717
 	ldr	r0, [r0]
-	ldr	r1, .L725+0x4
+	ldr	r1, .L717+0x4
 	add	r0, r0, r1
 	mov	r1, #0x0
 	strb	r1, [r0]
-	ldr	r0, .L725+0x8
+	ldr	r0, .L717+0x8
 	bl	FreeSpriteTilesByTag
-.L711:
-	ldr	r0, .L725
+.L703:
+	ldr	r0, .L717
 	ldr	r1, [r0]
-	ldr	r2, .L725+0xc
+	ldr	r2, .L717+0xc
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	beq	.L718	@cond_branch
+	beq	.L710	@cond_branch
 	mov	r4, #0x0
 	mov	r0, #0xf0
 	lsl	r0, r0, #0x1
 	add	r5, r1, r0
-.L722:
+.L714:
 	lsl	r0, r4, #0x2
 	add	r0, r5, r0
 	ldr	r0, [r0]
 	cmp	r0, #0
-	beq	.L721	@cond_branch
+	beq	.L713	@cond_branch
 	bl	DestroySprite
-.L721:
+.L713:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
 	cmp	r4, #0x4
-	bls	.L722	@cond_branch
-	ldr	r0, .L725
+	bls	.L714	@cond_branch
+	ldr	r0, .L717
 	ldr	r0, [r0]
-	ldr	r1, .L725+0xc
+	ldr	r1, .L717+0xc
 	add	r0, r0, r1
 	mov	r1, #0x0
 	strb	r1, [r0]
-.L718:
+.L710:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L726:
+.L718:
 	.align	2, 0
-.L725:
+.L717:
 	.word	gWeatherPtr
 	.word	0x716
 	.word	0x1204
@@ -20069,34 +19985,34 @@ sSandstormSpriteSheet:
 CreateSandstormSprites:
 	push	{r4, r5, r6, r7, lr}
 	add	sp, sp, #-0x4
-	ldr	r0, .L736
+	ldr	r0, .L728
 	ldr	r0, [r0]
-	ldr	r1, .L736+0x4
+	ldr	r1, .L728+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L728	@cond_branch
-	ldr	r0, .L736+0x8
+	bne	.L720	@cond_branch
+	ldr	r0, .L728+0x8
 	bl	LoadSpriteSheet
-	ldr	r0, .L736+0xc
+	ldr	r0, .L728+0xc
 	bl	LoadCustomWeatherSpritePalette
 	mov	r7, #0x0
-.L732:
+.L724:
 	add	r0, r7, #0
 	mov	r1, #0x5
 	bl	__udivsi3
 	add	r6, r0, #0
 	lsl	r2, r6, #0x16
 	asr	r2, r2, #0x10
-	ldr	r0, .L736+0x10
+	ldr	r0, .L728+0x10
 	mov	r1, #0x0
 	mov	r3, #0x1
 	bl	CreateSpriteAtEnd
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
 	cmp	r1, #0x40
-	beq	.L733	@cond_branch
-	ldr	r2, .L736
+	beq	.L725	@cond_branch
+	ldr	r2, .L728
 	ldr	r5, [r2]
 	lsl	r0, r7, #0x2
 	mov	r3, #0xc8
@@ -20106,7 +20022,7 @@ CreateSandstormSprites:
 	lsl	r4, r1, #0x4
 	add	r4, r4, r1
 	lsl	r4, r4, #0x2
-	ldr	r0, .L736+0x14
+	ldr	r0, .L728+0x14
 	add	r4, r4, r0
 	str	r4, [r5]
 	add	r0, r7, #0
@@ -20117,18 +20033,18 @@ CreateSandstormSprites:
 	ldr	r0, [r5]
 	strh	r6, [r0, #0x30]
 	ldr	r2, [sp]
-	b	.L731
-.L737:
+	b	.L723
+.L729:
 	.align	2, 0
-.L736:
+.L728:
 	.word	gWeatherPtr
 	.word	0x716
 	.word	sSandstormSpriteSheet
 	.word	gSandstormWeatherPalette
 	.word	sSandstormSpriteTemplate
 	.word	gSprites
-.L733:
-	ldr	r2, .L738
+.L725:
+	ldr	r2, .L730
 	ldr	r1, [r2]
 	lsl	r0, r7, #0x2
 	mov	r3, #0xc8
@@ -20137,25 +20053,25 @@ CreateSandstormSprites:
 	add	r1, r1, r0
 	mov	r0, #0x0
 	str	r0, [r1]
-.L731:
+.L723:
 	add	r0, r7, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r7, r0, #0x10
 	cmp	r7, #0x13
-	bls	.L732	@cond_branch
+	bls	.L724	@cond_branch
 	ldr	r0, [r2]
-	ldr	r1, .L738+0x4
+	ldr	r1, .L730+0x4
 	add	r0, r0, r1
 	mov	r1, #0x1
 	strb	r1, [r0]
-.L728:
+.L720:
 	add	sp, sp, #0x4
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L739:
+.L731:
 	.align	2, 0
-.L738:
+.L730:
 	.word	gWeatherPtr
 	.word	0x716
 .Lfe78:
@@ -20181,18 +20097,18 @@ CreateSwirlSandstormSprites:
 	mov	r6, r9
 	mov	r5, r8
 	push	{r5, r6, r7}
-	ldr	r4, .L749
+	ldr	r4, .L741
 	ldr	r0, [r4]
-	ldr	r1, .L749+0x4
+	ldr	r1, .L741+0x4
 	add	r0, r0, r1
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L741	@cond_branch
+	bne	.L733	@cond_branch
 	mov	r7, #0x0
 	mov	r9, r4
 	mov	r2, #0x0
 	mov	sl, r2
-.L745:
+.L737:
 	lsl	r0, r7, #0x1
 	mov	r8, r0
 	add	r6, r0, r7
@@ -20201,14 +20117,14 @@ CreateSwirlSandstormSprites:
 	add	r1, r1, #0x18
 	lsl	r1, r1, #0x10
 	asr	r1, r1, #0x10
-	ldr	r0, .L749+0x8
+	ldr	r0, .L741+0x8
 	mov	r2, #0xd0
 	mov	r3, #0x1
 	bl	CreateSpriteAtEnd
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
 	cmp	r1, #0x40
-	beq	.L746	@cond_branch
+	beq	.L738	@cond_branch
 	mov	r2, r9
 	ldr	r4, [r2]
 	lsl	r0, r7, #0x2
@@ -20219,7 +20135,7 @@ CreateSwirlSandstormSprites:
 	lsl	r2, r1, #0x4
 	add	r2, r2, r1
 	lsl	r2, r2, #0x2
-	ldr	r0, .L749+0xc
+	ldr	r0, .L741+0xc
 	add	r2, r2, r0
 	str	r2, [r4]
 	ldrb	r1, [r2, #0x3]
@@ -20238,10 +20154,10 @@ CreateSwirlSandstormSprites:
 	mov	r1, sl
 	strh	r1, [r0, #0x32]
 	ldr	r1, [r4]
-	ldr	r0, .L749+0x10
+	ldr	r0, .L741+0x10
 	strh	r0, [r1, #0x36]
 	ldr	r1, [r4]
-	ldr	r0, .L749+0x14
+	ldr	r0, .L741+0x14
 	add	r0, r0, r8
 	ldrh	r0, [r0]
 	strh	r0, [r1, #0x34]
@@ -20254,12 +20170,12 @@ CreateSwirlSandstormSprites:
 	mov	r3, #0x0
 	bl	CalcCenterToCornerVec
 	ldr	r1, [r4]
-	ldr	r0, .L749+0x18
+	ldr	r0, .L741+0x18
 	str	r0, [r1, #0x1c]
-	b	.L747
-.L750:
+	b	.L739
+.L742:
 	.align	2, 0
-.L749:
+.L741:
 	.word	gWeatherPtr
 	.word	0x717
 	.word	sSandstormSpriteTemplate
@@ -20267,7 +20183,7 @@ CreateSwirlSandstormSprites:
 	.word	0x6730
 	.word	sSwirlEntranceDelays
 	.word	WaitSandSwirlSpriteEntrance
-.L746:
+.L738:
 	mov	r2, r9
 	ldr	r0, [r2]
 	lsl	r1, r7, #0x2
@@ -20277,10 +20193,10 @@ CreateSwirlSandstormSprites:
 	add	r0, r0, r1
 	mov	r1, sl
 	str	r1, [r0]
-.L747:
+.L739:
 	mov	r2, r9
 	ldr	r0, [r2]
-	ldr	r1, .L751
+	ldr	r1, .L743
 	add	r0, r0, r1
 	mov	r1, #0x1
 	strb	r1, [r0]
@@ -20288,8 +20204,8 @@ CreateSwirlSandstormSprites:
 	lsl	r0, r0, #0x10
 	lsr	r7, r0, #0x10
 	cmp	r7, #0x4
-	bls	.L745	@cond_branch
-.L741:
+	bls	.L737	@cond_branch
+.L733:
 	pop	{r3, r4, r5}
 	mov	r8, r3
 	mov	r9, r4
@@ -20297,9 +20213,9 @@ CreateSwirlSandstormSprites:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L752:
+.L744:
 	.align	2, 0
-.L751:
+.L743:
 	.word	0x717
 .Lfe79:
 	.size	 CreateSwirlSandstormSprites,.Lfe79-CreateSwirlSandstormSprites
@@ -20309,14 +20225,14 @@ CreateSwirlSandstormSprites:
 UpdateSandstormSprite:
 	push	{r4, lr}
 	add	r3, r0, #0
-	ldr	r0, .L755
+	ldr	r0, .L747
 	ldr	r1, [r0]
 	mov	r2, #0xe2
 	lsl	r2, r2, #0x3
 	add	r0, r1, r2
 	ldrh	r0, [r0]
 	strh	r0, [r3, #0x26]
-	ldr	r4, .L755+0x4
+	ldr	r4, .L747+0x4
 	add	r2, r1, r4
 	ldrh	r1, [r2]
 	add	r1, r1, #0x20
@@ -20326,9 +20242,9 @@ UpdateSandstormSprite:
 	add	r1, r1, r0
 	strh	r1, [r3, #0x20]
 	lsl	r1, r1, #0x10
-	ldr	r0, .L755+0x8
+	ldr	r0, .L747+0x8
 	cmp	r1, r0
-	ble	.L754	@cond_branch
+	ble	.L746	@cond_branch
 	mov	r0, #0xf0
 	lsl	r0, r0, #0x1
 	add	r1, r0, #0
@@ -20340,16 +20256,16 @@ UpdateSandstormSprite:
 	sub	r0, r0, r2
 	lsl	r0, r0, #0x6
 	sub	r1, r1, r0
-	ldr	r0, .L755+0xc
+	ldr	r0, .L747+0xc
 	and	r1, r1, r0
 	strh	r1, [r3, #0x20]
-.L754:
+.L746:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L756:
+.L748:
 	.align	2, 0
-.L755:
+.L747:
 	.word	gWeatherPtr
 	.word	0x70e
 	.word	0x10f0000
@@ -20370,15 +20286,15 @@ WaitSandSwirlSpriteEntrance:
 	mov	r1, #0x1
 	neg	r1, r1
 	cmp	r0, r1
-	bne	.L758	@cond_branch
-	ldr	r0, .L759
+	bne	.L750	@cond_branch
+	ldr	r0, .L751
 	str	r0, [r2, #0x1c]
-.L758:
+.L750:
 	pop	{r0}
 	bx	r0
-.L760:
+.L752:
 	.align	2, 0
-.L759:
+.L751:
 	.word	UpdateSandstormSwirlSprite
 .Lfe81:
 	.size	 WaitSandSwirlSpriteEntrance,.Lfe81-WaitSandSwirlSpriteEntrance
@@ -20396,15 +20312,15 @@ UpdateSandstormSwirlSprite:
 	mov	r1, #0x30
 	neg	r1, r1
 	cmp	r0, r1
-	bge	.L762	@cond_branch
+	bge	.L754	@cond_branch
 	mov	r0, #0xd0
 	strh	r0, [r5, #0x22]
 	mov	r0, #0x4
 	strh	r0, [r5, #0x2e]
-.L762:
+.L754:
 	mov	r0, #0x2e
 	ldrsh	r4, [r5, r0]
-	ldr	r3, .L764
+	ldr	r3, .L756
 	mov	r2, #0x30
 	ldrsh	r1, [r5, r2]
 	lsl	r0, r1, #0x1
@@ -20434,19 +20350,19 @@ UpdateSandstormSwirlSprite:
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x8
-	ble	.L763	@cond_branch
+	ble	.L755	@cond_branch
 	mov	r0, #0x0
 	strh	r0, [r5, #0x32]
 	ldrh	r0, [r5, #0x2e]
 	add	r0, r0, #0x1
 	strh	r0, [r5, #0x2e]
-.L763:
+.L755:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L765:
+.L757:
 	.align	2, 0
-.L764:
+.L756:
 	.word	gSineTable
 .Lfe82:
 	.size	 UpdateSandstormSwirlSprite,.Lfe82-UpdateSandstormSwirlSprite
@@ -20455,24 +20371,24 @@ UpdateSandstormSwirlSprite:
 	.type	 Shade_InitVars,function
 	.thumb_func
 Shade_InitVars:
-	ldr	r0, .L767
+	ldr	r0, .L759
 	ldr	r1, [r0]
-	ldr	r0, .L767+0x4
+	ldr	r0, .L759+0x4
 	add	r2, r1, r0
 	mov	r0, #0x0
 	strh	r0, [r2]
-	ldr	r0, .L767+0x8
+	ldr	r0, .L759+0x8
 	add	r2, r1, r0
 	mov	r0, #0x3
 	strb	r0, [r2]
-	ldr	r0, .L767+0xc
+	ldr	r0, .L759+0xc
 	add	r1, r1, r0
 	mov	r0, #0x14
 	strb	r0, [r1]
 	bx	lr
-.L768:
+.L760:
 	.align	2, 0
-.L767:
+.L759:
 	.word	gWeatherPtr
 	.word	0x6cc
 	.word	0x6c1
@@ -20564,37 +20480,37 @@ sBubbleStartCoords:
 Bubbles_InitVars:
 	push	{r4, r5, lr}
 	bl	FogHorizontal_InitVars
-	ldr	r0, .L774
+	ldr	r0, .L766
 	ldr	r4, [r0]
-	ldr	r1, .L774+0x4
+	ldr	r1, .L766+0x4
 	add	r0, r4, r1
 	ldrb	r5, [r0]
 	cmp	r5, #0
-	bne	.L773	@cond_branch
-	ldr	r0, .L774+0x8
+	bne	.L765	@cond_branch
+	ldr	r0, .L766+0x8
 	bl	LoadSpriteSheet
 	mov	r2, #0xe5
 	lsl	r2, r2, #0x3
 	add	r0, r4, r2
 	strh	r5, [r0]
-	ldr	r0, .L774+0xc
+	ldr	r0, .L766+0xc
 	ldrb	r1, [r0]
 	sub	r2, r2, #0x2
 	add	r0, r4, r2
 	strh	r1, [r0]
-	ldr	r1, .L774+0x10
+	ldr	r1, .L766+0x10
 	add	r0, r4, r1
 	strh	r5, [r0]
 	add	r2, r2, #0x6
 	add	r0, r4, r2
 	strh	r5, [r0]
-.L773:
+.L765:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L775:
+.L767:
 	.align	2, 0
-.L774:
+.L766:
 	.word	gWeatherPtr
 	.word	0x72e
 	.word	sWeatherBubbleSpriteSheet
@@ -20609,26 +20525,26 @@ Bubbles_InitVars:
 Bubbles_InitAll:
 	push	{r4, lr}
 	bl	Bubbles_InitVars
-	ldr	r0, .L781
+	ldr	r0, .L773
 	ldr	r1, [r0]
-	ldr	r2, .L781+0x4
+	ldr	r2, .L773+0x4
 	add	r0, r1, r2
 	ldrb	r0, [r0]
 	cmp	r0, #0
-	bne	.L778	@cond_branch
+	bne	.L770	@cond_branch
 	add	r4, r1, r2
-.L779:
+.L771:
 	bl	Bubbles_Main
 	ldrb	r0, [r4]
 	cmp	r0, #0
-	beq	.L779	@cond_branch
-.L778:
+	beq	.L771	@cond_branch
+.L770:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L782:
+.L774:
 	.align	2, 0
-.L781:
+.L773:
 	.word	gWeatherPtr
 	.word	0x6d2
 .Lfe88:
@@ -20640,17 +20556,17 @@ Bubbles_InitAll:
 Bubbles_Main:
 	push	{r4, r5, r6, r7, lr}
 	bl	FogHorizontal_Main
-	ldr	r0, .L787
+	ldr	r0, .L779
 	ldr	r5, [r0]
-	ldr	r0, .L787+0x4
+	ldr	r0, .L779+0x4
 	add	r4, r5, r0
 	ldrh	r0, [r4]
 	add	r0, r0, #0x1
 	mov	r6, #0x0
 	strh	r0, [r4]
-	ldr	r1, .L787+0x8
+	ldr	r1, .L779+0x8
 	add	r7, r1, #0
-	ldr	r2, .L787+0xc
+	ldr	r2, .L779+0xc
 	mov	r1, #0xe5
 	lsl	r1, r1, #0x3
 	add	r3, r5, r1
@@ -20660,17 +20576,17 @@ Bubbles_Main:
 	lsr	r0, r0, #0x10
 	ldrb	r1, [r1]
 	cmp	r0, r1
-	bls	.L784	@cond_branch
+	bls	.L776	@cond_branch
 	strh	r6, [r4]
 	ldrh	r0, [r3]
 	add	r0, r0, #0x1
 	strh	r0, [r3]
 	and	r0, r0, r7
 	cmp	r0, #0x7
-	bls	.L785	@cond_branch
+	bls	.L777	@cond_branch
 	strh	r6, [r3]
-.L785:
-	ldr	r0, .L787+0x10
+.L777:
+	ldr	r0, .L779+0x10
 	add	r4, r5, r0
 	ldrh	r0, [r4]
 	bl	CreateBubbleSprite
@@ -20679,15 +20595,15 @@ Bubbles_Main:
 	strh	r0, [r4]
 	and	r0, r0, r7
 	cmp	r0, #0xc
-	bls	.L784	@cond_branch
+	bls	.L776	@cond_branch
 	strh	r6, [r4]
-.L784:
+.L776:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L788:
+.L780:
 	.align	2, 0
-.L787:
+.L779:
 	.word	gWeatherPtr
 	.word	0x726
 	.word	0xffff
@@ -20704,13 +20620,13 @@ Bubbles_Finish:
 	bl	FogHorizontal_Finish
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L790	@cond_branch
+	beq	.L782	@cond_branch
 	mov	r0, #0x1
-	b	.L791
-.L790:
+	b	.L783
+.L782:
 	bl	DestroyBubbleSprites
 	mov	r0, #0x0
-.L791:
+.L783:
 	pop	{r1}
 	bx	r1
 .Lfe90:
@@ -20751,16 +20667,16 @@ sBubbleSpriteTemplate:
 CreateBubbleSprite:
 	push	{r4, lr}
 	lsl	r0, r0, #0x10
-	ldr	r1, .L794
+	ldr	r1, .L786
 	lsr	r0, r0, #0xe
 	add	r3, r0, r1
 	add	r1, r1, #0x2
 	add	r0, r0, r1
-	ldr	r1, .L794+0x4
+	ldr	r1, .L786+0x4
 	ldrh	r2, [r0]
 	ldrh	r0, [r1]
 	sub	r2, r2, r0
-	ldr	r0, .L794+0x8
+	ldr	r0, .L786+0x8
 	mov	r4, #0x0
 	ldrsh	r1, [r3, r4]
 	lsl	r2, r2, #0x10
@@ -20770,8 +20686,8 @@ CreateBubbleSprite:
 	lsl	r0, r0, #0x18
 	lsr	r2, r0, #0x18
 	cmp	r2, #0x40
-	beq	.L793	@cond_branch
-	ldr	r0, .L794+0xc
+	beq	.L785	@cond_branch
+	ldr	r0, .L786+0xc
 	lsl	r1, r2, #0x4
 	add	r1, r1, r2
 	lsl	r1, r1, #0x2
@@ -20793,20 +20709,20 @@ CreateBubbleSprite:
 	strh	r0, [r1, #0x2e]
 	strh	r0, [r1, #0x30]
 	strh	r0, [r1, #0x32]
-	ldr	r0, .L794+0x10
+	ldr	r0, .L786+0x10
 	ldr	r1, [r0]
-	ldr	r0, .L794+0x14
+	ldr	r0, .L786+0x14
 	add	r1, r1, r0
 	ldrh	r0, [r1]
 	add	r0, r0, #0x1
 	strh	r0, [r1]
-.L793:
+.L785:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L795:
+.L787:
 	.align	2, 0
-.L794:
+.L786:
 	.word	sBubbleStartCoords
 	.word	gSpriteCoordOffsetY
 	.word	sBubbleSpriteTemplate
@@ -20820,16 +20736,16 @@ CreateBubbleSprite:
 	.thumb_func
 DestroyBubbleSprites:
 	push	{r4, r5, lr}
-	ldr	r0, .L804
+	ldr	r0, .L796
 	ldr	r0, [r0]
-	ldr	r1, .L804+0x4
+	ldr	r1, .L796+0x4
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	beq	.L797	@cond_branch
+	beq	.L789	@cond_branch
 	mov	r4, #0x0
-	ldr	r5, .L804+0x8
-.L801:
+	ldr	r5, .L796+0x8
+.L793:
 	lsl	r0, r4, #0x4
 	add	r0, r0, r4
 	lsl	r2, r0, #0x2
@@ -20837,32 +20753,32 @@ DestroyBubbleSprites:
 	add	r0, r0, #0x14
 	add	r0, r2, r0
 	ldr	r1, [r0]
-	ldr	r0, .L804+0xc
+	ldr	r0, .L796+0xc
 	cmp	r1, r0
-	bne	.L800	@cond_branch
+	bne	.L792	@cond_branch
 	add	r0, r2, r5
 	bl	DestroySprite
-.L800:
+.L792:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
 	cmp	r4, #0x3f
-	bls	.L801	@cond_branch
-	ldr	r0, .L804+0x10
+	bls	.L793	@cond_branch
+	ldr	r0, .L796+0x10
 	bl	FreeSpriteTilesByTag
-	ldr	r0, .L804
+	ldr	r0, .L796
 	ldr	r0, [r0]
-	ldr	r1, .L804+0x4
+	ldr	r1, .L796+0x4
 	add	r0, r0, r1
 	mov	r1, #0x0
 	strh	r1, [r0]
-.L797:
+.L789:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L805:
+.L797:
 	.align	2, 0
-.L804:
+.L796:
 	.word	gWeatherPtr
 	.word	0x72c
 	.word	gSprites
@@ -20883,31 +20799,31 @@ UpdateBubbleSprite:
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x8
-	ble	.L807	@cond_branch
+	ble	.L799	@cond_branch
 	strh	r2, [r1, #0x2e]
 	mov	r3, #0x30
 	ldrsh	r0, [r1, r3]
 	cmp	r0, #0
-	bne	.L808	@cond_branch
+	bne	.L800	@cond_branch
 	ldrh	r0, [r1, #0x24]
 	add	r0, r0, #0x1
 	strh	r0, [r1, #0x24]
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x4
-	ble	.L807	@cond_branch
+	ble	.L799	@cond_branch
 	mov	r0, #0x1
 	strh	r0, [r1, #0x30]
-	b	.L807
-.L808:
+	b	.L799
+.L800:
 	ldrh	r0, [r1, #0x24]
 	sub	r0, r0, #0x1
 	strh	r0, [r1, #0x24]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bgt	.L807	@cond_branch
+	bgt	.L799	@cond_branch
 	strh	r2, [r1, #0x30]
-.L807:
+.L799:
 	ldrh	r0, [r1, #0x22]
 	sub	r0, r0, #0x3
 	strh	r0, [r1, #0x22]
@@ -20917,10 +20833,10 @@ UpdateBubbleSprite:
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0x77
-	ble	.L812	@cond_branch
+	ble	.L804	@cond_branch
 	add	r0, r1, #0
 	bl	DestroySprite
-.L812:
+.L804:
 	pop	{r0}
 	bx	r0
 .Lfe93:
@@ -20929,14 +20845,14 @@ UpdateBubbleSprite:
 	.type	 UnusedSetCurrentAbnormalWeather,function
 	.thumb_func
 UnusedSetCurrentAbnormalWeather:
-	ldr	r2, .L814
+	ldr	r2, .L806
 	strb	r0, [r2]
-	ldr	r0, .L814+0x4
+	ldr	r0, .L806+0x4
 	strh	r1, [r0]
 	bx	lr
-.L815:
+.L807:
 	.align	2, 0
-.L814:
+.L806:
 	.word	gCurrentAbnormalWeather
 	.word	gUnusedWeatherRelated
 .Lfe94:
@@ -20951,29 +20867,29 @@ Task_DoAbnormalWeather:
 	lsl	r1, r0, #0x2
 	add	r1, r1, r0
 	lsl	r1, r1, #0x3
-	ldr	r0, .L825
+	ldr	r0, .L817
 	add	r4, r1, r0
 	mov	r1, #0x0
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
-	beq	.L818	@cond_branch
+	beq	.L810	@cond_branch
 	cmp	r0, #0x1
-	beq	.L820	@cond_branch
-	b	.L817
-.L826:
-	.align	2, 0
-.L825:
-	.word	gTasks+0x8
+	beq	.L812	@cond_branch
+	b	.L809
 .L818:
+	.align	2, 0
+.L817:
+	.word	gTasks+0x8
+.L810:
 	ldrh	r0, [r4, #0x1e]
 	sub	r1, r0, #0x1
 	strh	r1, [r4, #0x1e]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bgt	.L817	@cond_branch
+	bgt	.L809	@cond_branch
 	ldrb	r0, [r4, #0x2]
 	bl	SetNextWeather
-	ldr	r1, .L827
+	ldr	r1, .L819
 	ldrh	r0, [r4, #0x2]
 	strb	r0, [r1]
 	mov	r1, #0x96
@@ -20982,21 +20898,21 @@ Task_DoAbnormalWeather:
 	strh	r0, [r4, #0x1e]
 	ldrh	r0, [r4]
 	add	r0, r0, #0x1
-	b	.L824
-.L828:
-	.align	2, 0
-.L827:
-	.word	gCurrentAbnormalWeather
+	b	.L816
 .L820:
+	.align	2, 0
+.L819:
+	.word	gCurrentAbnormalWeather
+.L812:
 	ldrh	r0, [r4, #0x1e]
 	sub	r1, r0, #0x1
 	strh	r1, [r4, #0x1e]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bgt	.L817	@cond_branch
+	bgt	.L809	@cond_branch
 	ldrb	r0, [r4, #0x4]
 	bl	SetNextWeather
-	ldr	r1, .L829
+	ldr	r1, .L821
 	ldrh	r0, [r4, #0x4]
 	strb	r0, [r1]
 	mov	r1, #0x96
@@ -21004,15 +20920,15 @@ Task_DoAbnormalWeather:
 	add	r0, r1, #0
 	strh	r0, [r4, #0x1e]
 	mov	r0, #0x0
-.L824:
+.L816:
 	strh	r0, [r4]
-.L817:
+.L809:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L830:
+.L822:
 	.align	2, 0
-.L829:
+.L821:
 	.word	gCurrentAbnormalWeather
 .Lfe95:
 	.size	 Task_DoAbnormalWeather,.Lfe95-Task_DoAbnormalWeather
@@ -21021,7 +20937,7 @@ Task_DoAbnormalWeather:
 	.thumb_func
 CreateAbnormalWeatherTask:
 	push	{lr}
-	ldr	r0, .L837
+	ldr	r0, .L829
 	mov	r1, #0x0
 	bl	CreateTask
 	lsl	r0, r0, #0x18
@@ -21029,40 +20945,40 @@ CreateAbnormalWeatherTask:
 	lsl	r1, r0, #0x2
 	add	r1, r1, r0
 	lsl	r1, r1, #0x3
-	ldr	r0, .L837+0x4
+	ldr	r0, .L829+0x4
 	add	r1, r1, r0
 	mov	r2, #0x96
 	lsl	r2, r2, #0x2
 	add	r0, r2, #0
 	strh	r0, [r1, #0x1e]
-	ldr	r3, .L837+0x8
+	ldr	r3, .L829+0x8
 	ldrb	r2, [r3]
 	cmp	r2, #0xd
-	bne	.L832	@cond_branch
+	bne	.L824	@cond_branch
 	mov	r0, #0xc
-	b	.L836
-.L838:
+	b	.L828
+.L830:
 	.align	2, 0
-.L837:
+.L829:
 	.word	Task_DoAbnormalWeather
 	.word	gTasks+0x8
 	.word	gCurrentAbnormalWeather
-.L832:
+.L824:
 	cmp	r2, #0xc
-	bne	.L834	@cond_branch
+	bne	.L826	@cond_branch
 	mov	r0, #0xd
-.L836:
+.L828:
 	strh	r0, [r1, #0x2]
 	strh	r2, [r1, #0x4]
-	b	.L833
-.L834:
+	b	.L825
+.L826:
 	mov	r0, #0xd
 	strb	r0, [r3]
 	mov	r0, #0xc
 	strh	r0, [r1, #0x2]
 	mov	r0, #0xd
 	strh	r0, [r1, #0x4]
-.L833:
+.L825:
 	pop	{r0}
 	bx	r0
 .Lfe96:
@@ -21073,7 +20989,7 @@ CreateAbnormalWeatherTask:
 	.thumb_func
 SetSav1Weather:
 	push	{r4, r5, lr}
-	ldr	r4, .L840
+	ldr	r4, .L832
 	ldr	r1, [r4]
 	add	r1, r1, #0x2e
 	ldrb	r5, [r1]
@@ -21091,9 +21007,9 @@ SetSav1Weather:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L841:
+.L833:
 	.align	2, 0
-.L840:
+.L832:
 	.word	gSaveBlock1Ptr
 .Lfe97:
 	.size	 SetSav1Weather,.Lfe97-SetSav1Weather
@@ -21102,14 +21018,14 @@ SetSav1Weather:
 	.type	 GetSav1Weather,function
 	.thumb_func
 GetSav1Weather:
-	ldr	r0, .L843
+	ldr	r0, .L835
 	ldr	r0, [r0]
 	add	r0, r0, #0x2e
 	ldrb	r0, [r0]
 	bx	lr
-.L844:
+.L836:
 	.align	2, 0
-.L843:
+.L835:
 	.word	gSaveBlock1Ptr
 .Lfe98:
 	.size	 GetSav1Weather,.Lfe98-GetSav1Weather
@@ -21119,11 +21035,11 @@ GetSav1Weather:
 	.thumb_func
 SetSav1WeatherFromCurrMapHeader:
 	push	{r4, r5, lr}
-	ldr	r4, .L846
+	ldr	r4, .L838
 	ldr	r0, [r4]
 	add	r0, r0, #0x2e
 	ldrb	r5, [r0]
-	ldr	r0, .L846+0x4
+	ldr	r0, .L838+0x4
 	ldrb	r0, [r0, #0x16]
 	bl	TranslateWeatherNum
 	ldr	r1, [r4]
@@ -21137,9 +21053,9 @@ SetSav1WeatherFromCurrMapHeader:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L847:
+.L839:
 	.align	2, 0
-.L846:
+.L838:
 	.word	gSaveBlock1Ptr
 	.word	gMapHeader
 .Lfe99:
@@ -21184,47 +21100,47 @@ DoCurrentWeather:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0xf
-	bne	.L851	@cond_branch
-	ldr	r0, .L855
+	bne	.L843	@cond_branch
+	ldr	r0, .L847
 	bl	FuncIsActiveTask
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L852	@cond_branch
+	bne	.L844	@cond_branch
 	bl	CreateAbnormalWeatherTask
-.L852:
-	ldr	r0, .L855+0x4
+.L844:
+	ldr	r0, .L847+0x4
 	ldrb	r4, [r0]
-	b	.L853
-.L856:
+	b	.L845
+.L848:
 	.align	2, 0
-.L855:
+.L847:
 	.word	Task_DoAbnormalWeather
 	.word	gCurrentAbnormalWeather
-.L851:
-	ldr	r5, .L857
+.L843:
+	ldr	r5, .L849
 	add	r0, r5, #0
 	bl	FuncIsActiveTask
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L854	@cond_branch
+	beq	.L846	@cond_branch
 	add	r0, r5, #0
 	bl	FindTaskIdByFunc
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	bl	DestroyTask
-.L854:
-	ldr	r1, .L857+0x4
+.L846:
+	ldr	r1, .L849+0x4
 	mov	r0, #0xd
 	strb	r0, [r1]
-.L853:
+.L845:
 	add	r0, r4, #0
 	bl	SetNextWeather
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L858:
+.L850:
 	.align	2, 0
-.L857:
+.L849:
 	.word	Task_DoAbnormalWeather
 	.word	gCurrentAbnormalWeather
 .Lfe102:
@@ -21239,47 +21155,47 @@ ResumePausedWeather:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0xf
-	bne	.L860	@cond_branch
-	ldr	r0, .L864
+	bne	.L852	@cond_branch
+	ldr	r0, .L856
 	bl	FuncIsActiveTask
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L861	@cond_branch
+	bne	.L853	@cond_branch
 	bl	CreateAbnormalWeatherTask
-.L861:
-	ldr	r0, .L864+0x4
+.L853:
+	ldr	r0, .L856+0x4
 	ldrb	r4, [r0]
-	b	.L862
-.L865:
+	b	.L854
+.L857:
 	.align	2, 0
-.L864:
+.L856:
 	.word	Task_DoAbnormalWeather
 	.word	gCurrentAbnormalWeather
-.L860:
-	ldr	r5, .L866
+.L852:
+	ldr	r5, .L858
 	add	r0, r5, #0
 	bl	FuncIsActiveTask
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L863	@cond_branch
+	beq	.L855	@cond_branch
 	add	r0, r5, #0
 	bl	FindTaskIdByFunc
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	bl	DestroyTask
-.L863:
-	ldr	r1, .L866+0x4
+.L855:
+	ldr	r1, .L858+0x4
 	mov	r0, #0xd
 	strb	r0, [r1]
-.L862:
+.L854:
 	add	r0, r4, #0
 	bl	SetCurrentAndNextWeather
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L867:
+.L859:
 	.align	2, 0
-.L866:
+.L858:
 	.word	Task_DoAbnormalWeather
 	.word	gCurrentAbnormalWeather
 .Lfe103:
@@ -21308,20 +21224,28 @@ TranslateWeatherNum:
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x15
-	bhi	.L888	@cond_branch
+	bhi	.L880	@cond_branch
 	lsl	r0, r0, #0x2
-	ldr	r1, .L892
+	ldr	r1, .L884
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
-.L893:
+.L885:
 	.align	2, 0
-.L892:
-	.word	.L889
+.L884:
+	.word	.L881
 	.align	2, 0
 	.align	2, 0
-.L889:
-	.word	.L888
+.L881:
+	.word	.L880
+	.word	.L863
+	.word	.L864
+	.word	.L865
+	.word	.L866
+	.word	.L867
+	.word	.L868
+	.word	.L869
+	.word	.L870
 	.word	.L871
 	.word	.L872
 	.word	.L873
@@ -21329,90 +21253,82 @@ TranslateWeatherNum:
 	.word	.L875
 	.word	.L876
 	.word	.L877
+	.word	.L880
+	.word	.L880
+	.word	.L880
+	.word	.L880
 	.word	.L878
 	.word	.L879
-	.word	.L880
-	.word	.L881
-	.word	.L882
-	.word	.L883
-	.word	.L884
-	.word	.L885
-	.word	.L888
-	.word	.L888
-	.word	.L888
-	.word	.L888
-	.word	.L886
-	.word	.L887
-.L871:
+.L863:
 	mov	r0, #0x1
-	b	.L890
-.L872:
+	b	.L882
+.L864:
 	mov	r0, #0x2
-	b	.L890
-.L873:
+	b	.L882
+.L865:
 	mov	r0, #0x3
-	b	.L890
-.L874:
+	b	.L882
+.L866:
 	mov	r0, #0x4
-	b	.L890
-.L875:
+	b	.L882
+.L867:
 	mov	r0, #0x5
-	b	.L890
-.L876:
+	b	.L882
+.L868:
 	mov	r0, #0x6
-	b	.L890
-.L877:
+	b	.L882
+.L869:
 	mov	r0, #0x7
-	b	.L890
-.L878:
+	b	.L882
+.L870:
 	mov	r0, #0x8
-	b	.L890
-.L879:
+	b	.L882
+.L871:
 	mov	r0, #0x9
-	b	.L890
-.L880:
+	b	.L882
+.L872:
 	mov	r0, #0xa
-	b	.L890
-.L881:
+	b	.L882
+.L873:
 	mov	r0, #0xb
-	b	.L890
-.L882:
+	b	.L882
+.L874:
 	mov	r0, #0xc
-	b	.L890
-.L883:
+	b	.L882
+.L875:
 	mov	r0, #0xd
-	b	.L890
-.L884:
+	b	.L882
+.L876:
 	mov	r0, #0xe
-	b	.L890
-.L885:
+	b	.L882
+.L877:
 	mov	r0, #0xf
-	b	.L890
-.L886:
-	ldr	r1, .L894
-	b	.L891
-.L895:
-	.align	2, 0
-.L894:
-	.word	sWeatherCycleRoute119
+	b	.L882
+.L878:
+	ldr	r1, .L886
+	b	.L883
 .L887:
-	ldr	r1, .L896
-.L891:
-	ldr	r0, .L896+0x4
+	.align	2, 0
+.L886:
+	.word	sWeatherCycleRoute119
+.L879:
+	ldr	r1, .L888
+.L883:
+	ldr	r0, .L888+0x4
 	ldr	r0, [r0]
 	add	r0, r0, #0x2f
 	ldrb	r0, [r0]
 	add	r0, r0, r1
 	ldrb	r0, [r0]
-	b	.L890
-.L897:
+	b	.L882
+.L889:
 	.align	2, 0
-.L896:
+.L888:
 	.word	sWeatherCycleRoute123
 	.word	gSaveBlock1Ptr
-.L888:
+.L880:
 	mov	r0, #0x0
-.L890:
+.L882:
 	pop	{r1}
 	bx	r1
 .Lfe104:
@@ -21423,7 +21339,7 @@ TranslateWeatherNum:
 	.thumb_func
 UpdateWeatherPerDay:
 	lsl	r0, r0, #0x10
-	ldr	r1, .L899
+	ldr	r1, .L891
 	ldr	r2, [r1]
 	add	r2, r2, #0x2f
 	lsr	r0, r0, #0x10
@@ -21436,9 +21352,9 @@ UpdateWeatherPerDay:
 	lsr	r1, r1, #0x10
 	strb	r1, [r2]
 	bx	lr
-.L900:
+.L892:
 	.align	2, 0
-.L899:
+.L891:
 	.word	gSaveBlock1Ptr
 .Lfe105:
 	.size	 UpdateWeatherPerDay,.Lfe105-UpdateWeatherPerDay
@@ -21451,15 +21367,15 @@ UpdateRainCounter:
 	lsl	r1, r1, #0x18
 	lsr	r2, r0, #0x18
 	cmp	r0, r1
-	beq	.L902	@cond_branch
+	beq	.L894	@cond_branch
 	cmp	r2, #0x3
-	beq	.L903	@cond_branch
+	beq	.L895	@cond_branch
 	cmp	r2, #0x5
-	bne	.L902	@cond_branch
-.L903:
+	bne	.L894	@cond_branch
+.L895:
 	mov	r0, #0x28
 	bl	IncrementGameStat
-.L902:
+.L894:
 	pop	{r0}
 	bx	r0
 .Lfe106:

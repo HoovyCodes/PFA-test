@@ -316,8 +316,18 @@ BH_Text_Leaving:
 	.string "return to the Battle Frontier?$"
 
 PlayersHouse_1F_Text_IsntItNiceInHere: @ 81F7A1C
-	.string "MOM: See, {PLAYER}?\n"
-	.string "Isn't it nice in here, too?$"
+	.string "It's so good to see you, {PLAYER}!\n"
+	.string "Are you enjoying the Battle Frontier?\p"
+	.string "I hear you can earn\n"
+	.string "cute decorations there!\p"
+	.string "If you can't find a\n"
+	.string "good place to put them,\l"
+	.string "they would look great in your room.\p"
+	.string "Also, I have your TV set to\n"
+	.string "the Famous Trainers Channel.\p"
+	.string "Make sure to watch!\p"
+	.string "Love you!$"
+
 
 PlayersHouse_1F_Text_MoversPokemonGoSetClock: @ 81F7A46
 	.string "The mover's POKéMON do all the work\n"
@@ -454,15 +464,9 @@ PlayersHouse_1F_Text_IsThatABreakingStory: @ 81F824B
 	.string "MOM: Is that a breaking news story?$"
 
 PlayersHouse_1F_Text_LatiEmergencyNewsFlash: @ 81F826F
-	.string "We bring you this emergency\n"
-	.string "news flash!\p"
-	.string "In various HOENN locales, there have\n"
-	.string "been reports of a BZZT…colored\l"
-	.string "POKéMON in flight.\p"
-	.string "The identity of this POKéMON is\n"
-	.string "currently unknown.\p"
-	.string "We now return you to the regular\n"
-	.string "movie program.$"
+	.string "This looks like\n"
+	.string "something Mom would enjoy.\p"
+	.string "It doesn't interest you much.$"
 
 PlayersHouse_1F_Text_WhatColorDidTheySay: @ 81F8351
 	.string "MOM: {PLAYER}, did you catch that?\p"

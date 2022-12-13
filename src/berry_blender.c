@@ -256,15 +256,15 @@ static const u8 sUnusedText_Space[] = _(" ");
 static const u8 sUnusedText_Terminating[] = _("Terminating.");
 static const u8 sUnusedText_LinkPartnerNotFound[] = _("Link partner(s) not found.\nPlease try again.\p");
 
-static const u8 sText_BerryBlenderStart[] = _("Starting up the BERRY BLENDER.\pPlease select a BERRY from your BAG\nto put in the BERRY BLENDER.\p");
+static const u8 sText_BerryBlenderStart[] = _("Starting up the Berry Blender.\pPlease select a berry from your Bag\nto put in the Berry Blender.\p");
 static const u8 sText_NewParagraph[] = _("\p");
 static const u8 sText_WasMade[] = _(" was made!");
-static const u8 sText_Mister[] = _("MISTER");
-static const u8 sText_Laddie[] = _("LADDIE");
-static const u8 sText_Lassie[] = _("LASSIE");
-static const u8 sText_Master[] = _("MASTER");
-static const u8 sText_Dude[] = _("DUDE");
-static const u8 sText_Miss[] = _("MISS");
+static const u8 sText_Mister[] = _("Mister");
+static const u8 sText_Laddie[] = _("Laddie");
+static const u8 sText_Lassie[] = _("Lassie");
+static const u8 sText_Master[] = _("Master");
+static const u8 sText_Dude[] = _("Dude");
+static const u8 sText_Miss[] = _("Miss");
 
 static const u8* const sBlenderOpponentsNames[] =
 {
@@ -279,23 +279,23 @@ static const u8* const sBlenderOpponentsNames[] =
 static const u8 sText_PressAToStart[] = _("Press the A Button to start.");
 static const u8 sText_PleaseWaitAWhile[] = _("Please wait a while.");
 static const u8 sText_CommunicationStandby[] = _("Communication standby…");
-static const u8 sText_WouldLikeToBlendAnotherBerry[] = _("Would you like to blend another BERRY?");
-static const u8 sText_RunOutOfBerriesForBlending[] = _("You've run out of BERRIES for\nblending in the BERRY BLENDER.\p");
-static const u8 sText_YourPokeblockCaseIsFull[] = _("Your {POKEBLOCK} CASE is full.\p");
-static const u8 sText_HasNoBerriesToPut[] = _(" has no BERRIES to put in\nthe BERRY BLENDER.");
-static const u8 sText_ApostropheSPokeblockCaseIsFull[] = _("'s {POKEBLOCK} CASE is full.\p");
-static const u8 sText_BlendingResults[] = _("RESULTS OF BLENDING");
-static const u8 sText_BerryUsed[] = _("BERRY USED");
-static const u8 sText_SpaceBerry[] = _(" BERRY");
+static const u8 sText_WouldLikeToBlendAnotherBerry[] = _("Would you like to blend another berry?");
+static const u8 sText_RunOutOfBerriesForBlending[] = _("You've run out of berries for\nblending in the Berry Blender.\p");
+static const u8 sText_YourPokeblockCaseIsFull[] = _("Your {POKEBLOCK} Case is full.\p");
+static const u8 sText_HasNoBerriesToPut[] = _(" has no berries to put in\nthe Berry Blender.");
+static const u8 sText_ApostropheSPokeblockCaseIsFull[] = _("'s {POKEBLOCK} Case is full.\p");
+static const u8 sText_BlendingResults[] = _("Results of Blending");
+static const u8 sText_BerryUsed[] = _("Berry Used");
+static const u8 sText_SpaceBerry[] = _(" Berry");
 static const u8 sText_Time[] = _("Time:");
 static const u8 sText_Min[] = _(" min. ");
 static const u8 sText_Sec[] = _(" sec.");
-static const u8 sText_MaximumSpeed[] = _("MAXIMUM SPEED");
+static const u8 sText_MaximumSpeed[] = _("Maximum Speed");
 static const u8 sText_RPM[] = _(" RPM");
 static const u8 sText_Dot[] = _(".");
 static const u8 sText_NewLine[] = _("\n");
 static const u8 sText_Space[] = _(" ");
-static const u8 sText_Ranking[] = _("RANKING");
+static const u8 sText_Ranking[] = _("Ranking");
 static const u8 sText_TheLevelIs[] = _("The level is ");
 static const u8 sText_TheFeelIs[] = _(", and the feel is ");
 static const u8 sText_Dot2[] = _(".");
@@ -1850,9 +1850,7 @@ static void Task_HandleOpponent1(u8 taskId)
                         gRecvCmds[1][BLENDER_COMM_SCORE] = LINKCMD_BLENDER_SCORE_BEST;
                     else
                         gRecvCmds[1][BLENDER_COMM_SCORE] = LINKCMD_BLENDER_SCORE_GOOD;
-
-                    // BUG: Overrwrote above assignment. Opponent 1 can't get Best at low speed
-                    gRecvCmds[1][BLENDER_COMM_SCORE] = LINKCMD_BLENDER_SCORE_GOOD;
+					gRecvCmds[1][BLENDER_COMM_SCORE] = LINKCMD_BLENDER_SCORE_GOOD;
                 }
                 else if (sBerryBlender->speed < 1500)
                 {
@@ -2134,8 +2132,8 @@ static void UpdateOpponentScores(void)
             // BUG: Should [i][BLENDER_COMM_SCORE] below, not [BLENDER_COMM_SCORE][i]
             // As a result the music tempo updates if any player misses, but only if 1 specific player hits
             if (gRecvCmds[i][BLENDER_COMM_SCORE] == LINKCMD_BLENDER_SCORE_MISS 
-             || gRecvCmds[BLENDER_COMM_SCORE][i] == LINKCMD_BLENDER_SCORE_BEST 
-             || gRecvCmds[BLENDER_COMM_SCORE][i] == LINKCMD_BLENDER_SCORE_GOOD)
+             || gRecvCmds[i][BLENDER_COMM_SCORE] == LINKCMD_BLENDER_SCORE_BEST 
+             || gRecvCmds[i][BLENDER_COMM_SCORE] == LINKCMD_BLENDER_SCORE_GOOD)
             {
                 if (sBerryBlender->speed > 1500)
                     m4aMPlayTempoControl(&gMPlayInfo_BGM, ((sBerryBlender->speed - 750) / 20) + 256);

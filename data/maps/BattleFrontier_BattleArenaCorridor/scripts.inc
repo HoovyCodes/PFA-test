@@ -27,54 +27,54 @@ BattleFrontier_BattleArenaCorridor_EventScript_WalkToBattleRoom:: @ 82573C9
 	end
 
 BattleFrontier_BattleArenaCorridor_Movement_PlayerWalkToDoor: @ 8257417
-	walk_up
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_right
-	walk_right
-	walk_right
+	walk_fast_up
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
 	step_end
 
 BattleFrontier_BattleArenaCorridor_Movement_PlayerEnterDoor: @ 825742C
-	walk_right
+	walk_fast_right
 	set_invisible
 	step_end
 
 BattleFrontier_BattleArenaCorridor_Movement_AttendantWalkToDoor: @ 825742F
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_right
-	walk_right
-	walk_right
-	walk_right
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
 	step_end
 
 BattleFrontier_BattleArenaCorridor_Movement_AttendantFacePlayer: @ 8257444
@@ -82,7 +82,7 @@ BattleFrontier_BattleArenaCorridor_Movement_AttendantFacePlayer: @ 8257444
 	step_end
 
 BattleFrontier_BattleArenaCorridor_Movement_AttendantMoveOutOfWay: @ 8257446
-	walk_up
+	walk_fast_up
 	walk_in_place_fastest_down
 	step_end
 

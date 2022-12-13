@@ -1,6 +1,6 @@
-# 1 "src/apprentice.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/apprentice.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/apprentice.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -3170,6 +3170,13 @@ void ClearIllusionMon(u32 battlerId);
 bool32 SetIllusionMon(struct Pokemon *mon, u32 battlerId);
 bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
 u8 GetBattleMoveSplit(u32 moveId);
+bool32 CanSleep(u8 battlerId);
+bool32 CanBePoisoned(u8 battlerId);
+bool32 CanBeBurned(u8 battlerId);
+bool32 CanBeParalyzed(u8 battlerId);
+bool32 CanBeFrozen(u8 battlerId);
+bool32 CanBeConfused(u8 battlerId);
+bool32 IsBattlerTerrainAffected(u8 battlerId, u32 terrainFlag);
 # 9 "include/battle.h" 2
 # 1 "include/battle_script_commands.h" 1
 # 9 "include/battle_script_commands.h"
@@ -3835,8 +3842,9 @@ struct BattleStruct
     u8 sameMoveTurns[4];
     u16 moveEffect2;
     u16 changedSpecies[6];
+ u8 abilityPopUpSpriteIds[4][2];
 };
-# 579 "include/battle.h"
+# 580 "include/battle.h"
 struct BattleScripting
 {
     s32 painSplitHp;
@@ -3872,6 +3880,7 @@ struct BattleScripting
     u16 moveEffect;
     u16 multihitMoveEffect;
     u8 illusionNickHack;
+    bool8 fixedPopup;
 };
 
 
@@ -3946,6 +3955,7 @@ struct BattleBarInfo
     s32 oldValue;
     s32 receivedValue;
     s32 currValue;
+ u8 oddFrame;
 };
 
 struct BattleSpriteData
@@ -5710,7 +5720,7 @@ void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
 
-bool8 CanLearnTutorMove(u16, u8);
+bool32 CanLearnTutorMove(u16, u8);
 # 17 "src/apprentice.c" 2
 # 1 "include/random.h" 1
 
@@ -6588,8 +6598,11 @@ extern const u8 gText_ChikoritaDoll80BP[];
 extern const u8 gText_TotodileDoll80BP[];
 
 extern const u8 gText_Dolls[];
-extern const u8 gText_Cushions[];
+extern const u8 gText_MatDesk[];
+extern const u8 gText_OrnaPost[];
+extern const u8 gText_ChairPlant[];
 extern const u8 gText_Contest[];
+extern const u8 gText_TMs[];
 extern const u8 gText_MegaC[];
 extern const u8 gText_MegaB[];
 extern const u8 gText_MegaA[];
@@ -6767,8 +6780,11 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Doll[];
-extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Cushion[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MatDesk[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_OrnaPost[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChairPlant[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Contest[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TM[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaC[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaB[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaA[];
@@ -9361,7 +9377,7 @@ extern const u8 gText_ApprenticeChallenge15[];
 const struct ApprenticeTrainer gApprentices[16] =
 {
     {
-        .name = {_("サダヒロ"), _("ALANN"), _("ALAIN"), _("ADELFO"), _("CLAUS"), _("TEO")},
+        .name = {_("サダヒロ"), _("Alann"), _("ALAIN"), _("ADELFO"), _("CLAUS"), _("TEO")},
         .otId = 0xBDC9,
         .facilityClass = 0x43,
         .species = {267, 269, 314, 275, 286, 291, 292, 127, 214, 313},
@@ -9369,7 +9385,7 @@ const struct ApprenticeTrainer gApprentices[16] =
         .speechLost = {(0x4 << 9) | 0x1d, (0xa << 9) | 0x3e, (0x6 << 9) | 0x0, (0x5 << 9) | 0x1, (0x3 << 9) | 0x30, (0xa << 9) | 0x44},
     },
     {
-        .name = {_("ヒロオ"), _("LIONEL"), _("LIONEL"), _("CAIO"), _("LUDWIG"), _("LEO")},
+        .name = {_("ヒロオ"), _("Lionel"), _("LIONEL"), _("CAIO"), _("LUDWIG"), _("LEO")},
         .otId = 0xCF09,
         .facilityClass = 0x2b,
         .species = {277, 317, 213, 310, 324, 297, 262, 272, 342, 340},
@@ -9377,7 +9393,7 @@ const struct ApprenticeTrainer gApprentices[16] =
         .speechLost = {(0x6 << 9) | 0x38, (0x5 << 9) | 0x1, (0x3 << 9) | 0x30, (0x5 << 9) | 0x6, (0x8 << 9) | 0x20, (0x11 << 9) | 0x13},
     },
     {
-        .name = {_("ケイジ"), _("SONNY"), _("HERVE"), _("FEDRO"), _("WENZEL"), _("SANTI")},
+        .name = {_("ケイジ"), _("Sonny"), _("HERVE"), _("FEDRO"), _("WENZEL"), _("SANTI")},
         .otId = 0x2E34,
         .facilityClass = 0x26,
         .species = {264, 262, 340, 335, 336, 38, 352, 213, 310, 68},
@@ -9385,7 +9401,7 @@ const struct ApprenticeTrainer gApprentices[16] =
         .speechLost = {(0x5 << 9) | 0x1, (0xb << 9) | 0xa, (0x7 << 9) | 0x15, (0x3 << 9) | 0x30, (0x6 << 9) | 0x3b, (0x6 << 9) | 0x4},
     },
     {
-        .name = {_("ユラ"), _("LAYLA"), _("LAYLA"), _("ASTRID"), _("SONJA"), _("LOLA")},
+        .name = {_("ユラ"), _("Layla"), _("LAYLA"), _("ASTRID"), _("SONJA"), _("LOLA")},
         .otId = 0x84EF,
         .facilityClass = 0x47,
         .species = {317, 178, 334, 55, 330, 65, 282, 321, 326, 262},
@@ -9393,7 +9409,7 @@ const struct ApprenticeTrainer gApprentices[16] =
         .speechLost = {(0x8 << 9) | 0xb, (0xf << 9) | 0xf, (0x8 << 9) | 0x39, (0xa << 9) | 0x21, (0x6 << 9) | 0x3, 0xFFFF},
     },
     {
-        .name = {_("ヨウカ"), _("MACY"), _("AMELIE"), _("CLEO"), _("MARIA"), _("ELISA")},
+        .name = {_("ヨウカ"), _("Macy"), _("AMELIE"), _("CLEO"), _("MARIA"), _("ELISA")},
         .otId = 0x1E43,
         .facilityClass = 0x27,
         .species = {40, 264, 230, 301, 26, 22, 121, 308, 275, 267},
@@ -9401,7 +9417,7 @@ const struct ApprenticeTrainer gApprentices[16] =
         .speechLost = {(0xf << 9) | 0xf, (0x8 << 9) | 0x14, (0x8 << 9) | 0x6, (0x14 << 9) | 0xf, (0xe << 9) | 0x1c, (0xe << 9) | 0x13},
     },
     {
-        .name = {_("ヤスシ"), _("DONTE"), _("BRAHIM"), _("GLAUCO"), _("JOSEF"), _("ROQUE")},
+        .name = {_("ヤスシ"), _("Donte"), _("BRAHIM"), _("GLAUCO"), _("JOSEF"), _("ROQUE")},
         .otId = 0x379F,
         .facilityClass = 0x30,
         .species = {121, 85, 306, 82, 68, 348, 214, 299, 295, 262},
@@ -9409,7 +9425,7 @@ const struct ApprenticeTrainer gApprentices[16] =
         .speechLost = {(0x5 << 9) | 0x29, (0xa << 9) | 0x8, (0x8 << 9) | 0x2f, (0xb << 9) | 0x38, (0x4 << 9) | 0x20, (0x6 << 9) | 0x0},
     },
     {
-        .name = {_("ミサオ"), _("AMIRA"), _("LAURE"), _("DAFNE"), _("AMELIE"), _("LARA")},
+        .name = {_("ミサオ"), _("Amira"), _("LAURE"), _("DAFNE"), _("AMELIE"), _("LARA")},
         .otId = 0xF555,
         .facilityClass = 0x31,
         .species = {121, 85, 82, 308, 262, 362, 76, 101, 279, 319},
@@ -9417,7 +9433,7 @@ const struct ApprenticeTrainer gApprentices[16] =
         .speechLost = {(0x6 << 9) | 0xb, (0x9 << 9) | 0x3e, (0x6 << 9) | 0x0, (0x5 << 9) | 0x31, (0xa << 9) | 0x30, (0x6 << 9) | 0x0},
     },
     {
-        .name = {_("カズサ"), _("KALI"), _("JODIE"), _("ILENIA"), _("KARO"), _("ELSA")},
+        .name = {_("カズサ"), _("Kali"), _("JODIE"), _("ILENIA"), _("KARO"), _("ELSA")},
         .otId = 0x8D26,
         .facilityClass = 0x14,
         .species = {38, 65, 254, 373, 55, 303, 110, 171, 282, 350},
@@ -9425,7 +9441,7 @@ const struct ApprenticeTrainer gApprentices[16] =
         .speechLost = {(0x5 << 9) | 0x6, (0x3 << 9) | 0x20, (0x5 << 9) | 0x1f, (0x5 << 9) | 0x2, (0x6 << 9) | 0x3, 0xFFFF},
     },
     {
-        .name = {_("スミレ"), _("ANNIE"), _("ANNIE"), _("IMELDA"), _("INES"), _("ROSA")},
+        .name = {_("スミレ"), _("Annie"), _("ANNIE"), _("IMELDA"), _("INES"), _("ROSA")},
         .otId = 0x800C,
         .facilityClass = 0xd,
         .species = {254, 45, 182, 315, 222, 330, 286, 350, 334, 346},
@@ -9433,7 +9449,7 @@ const struct ApprenticeTrainer gApprentices[16] =
         .speechLost = {(0xf << 9) | 0x22, (0x2 << 9) | 0x33, (0x1 << 9) | 0xe, (0x5 << 9) | 0x2, (0x8 << 9) | 0x1e, (0x6 << 9) | 0x0},
     },
     {
-        .name = {_("アキノリ"), _("DILLEN"), _("RENE"), _("INDRO"), _("DETLEF"), _("PEDRO")},
+        .name = {_("アキノリ"), _("Dillen"), _("RENE"), _("INDRO"), _("DETLEF"), _("PEDRO")},
         .otId = 0x469f,
         .facilityClass = 0x0,
         .species = {227, 76, 257, 323, 232, 89, 373, 357, 338, 112},
@@ -9441,7 +9457,7 @@ const struct ApprenticeTrainer gApprentices[16] =
         .speechLost = {(0x5 << 9) | 0x3d, (0x8 << 9) | 0x11, (0x7 << 9) | 0x1e, (0x10 << 9) | 0x1c, (0x6 << 9) | 0x4, 0xFFFF},
     },
     {
-        .name = {_("トウゾウ"), _("DALLAS"), _("BRUNO"), _("LEARCO"), _("ANSGAR"), _("MANOLO")},
+        .name = {_("トウゾウ"), _("Dallas"), _("BRUNO"), _("LEARCO"), _("ANSGAR"), _("MANOLO")},
         .otId = 0x71FC,
         .facilityClass = 0x2d,
         .species = {119, 121, 55, 73, 224, 368, 362, 321, 319, 230},
@@ -9449,7 +9465,7 @@ const struct ApprenticeTrainer gApprentices[16] =
         .speechLost = {(0x5 << 9) | 0x5, (0x3 << 9) | 0x6, (0xb << 9) | 0xe, (0x5 << 9) | 0x14, (0x6 << 9) | 0x0, 0xFFFF},
     },
     {
-        .name = {_("セイヤ"), _("FRANK"), _("FRANK"), _("OLINDO"), _("FRANK"), _("MAURO")},
+        .name = {_("セイヤ"), _("Frank"), _("FRANK"), _("OLINDO"), _("FRANK"), _("MAURO")},
         .otId = 0xA39E,
         .facilityClass = 0x3a,
         .species = {195, 121, 279, 342, 321, 130, 260, 171, 340, 213},
@@ -9457,7 +9473,7 @@ const struct ApprenticeTrainer gApprentices[16] =
         .speechLost = {(0x14 << 9) | 0xe, (0x8 << 9) | 0x3d, ((0x12 << 9) | 15), (0x5 << 9) | 0x14, (0xf << 9) | 0x23, (0x8 << 9) | 0x24},
     },
     {
-        .name = {_("リュウジ"), _("LAMONT"), _("XAV"), _("ORFEO"), _("JÜRGEN"), _("JORGE")},
+        .name = {_("リュウジ"), _("Lamont"), _("XAV"), _("ORFEO"), _("JÜRGEN"), _("JORGE")},
         .otId = 0xE590,
         .facilityClass = 0x19,
         .species = {359, 169, 295, 82, 319, 310, 376, 101, 299, 110},
@@ -9465,7 +9481,7 @@ const struct ApprenticeTrainer gApprentices[16] =
         .speechLost = {(0x8 << 9) | 0x20, (0x3 << 9) | 0x2e, (0x8 << 9) | 0xb, (0xf << 9) | 0x22, (0xf << 9) | 0xf, (0x8 << 9) | 0xb},
     },
     {
-        .name = {_("カツアキ"), _("TYRESE"), _("ANDY"), _("PARIDE"), _("DAVID"), _("CHICHO")},
+        .name = {_("カツアキ"), _("Tyrese"), _("ANDY"), _("PARIDE"), _("DAVID"), _("CHICHO")},
         .otId = 0xD018,
         .facilityClass = 0xa,
         .species = {257, 76, 68, 112, 297, 306, 308, 335, 288, 289},
@@ -9473,7 +9489,7 @@ const struct ApprenticeTrainer gApprentices[16] =
         .speechLost = {(0x5 << 9) | 0x29, (0x3 << 9) | 0x3a, (0x7 << 9) | 0x15, (0xa << 9) | 0x35, (0x8 << 9) | 0x34, (0x3 << 9) | 0x1e},
     },
     {
-        .name = {_("トシミツ"), _("DANTE"), _("DANTE"), _("RAOUL"), _("LOTHAR"), _("PABLO")},
+        .name = {_("トシミツ"), _("Dante"), _("DANTE"), _("RAOUL"), _("LOTHAR"), _("PABLO")},
         .otId = 0xBC75,
         .facilityClass = 0xe,
         .species = {254, 28, 330, 344, 348, 169, 346, 338, 337, 76},
@@ -9481,7 +9497,7 @@ const struct ApprenticeTrainer gApprentices[16] =
         .speechLost = {(0x5 << 9) | 0x1, (0x8 << 9) | 0x17, (0x9 << 9) | 0x43, (0xf << 9) | 0x22, (0x8 << 9) | 0xb, (0x14 << 9) | 0xf},
     },
     {
-        .name = {_("ローウェン"), _("ARTURO"), _("ARTURO"), _("ROMOLO"), _("BRIAN"), _("ARTURO")},
+        .name = {_("ローウェン"), _("Arturo"), _("ARTURO"), _("ROMOLO"), _("BRIAN"), _("ARTURO")},
         .otId = 0xFA02,
         .facilityClass = 0x20,
         .species = {359, 262, 65, 354, 38, 344, 89, 373, 365, 356},

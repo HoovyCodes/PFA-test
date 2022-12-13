@@ -2186,7 +2186,7 @@ Task_HandlePokedexAreaScreenInput:
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	bl	DoAreaGlow
-	ldr	r1, .L265
+	ldr	r1, .L264
 	lsl	r4, r5, #0x2
 	add	r0, r4, r5
 	lsl	r0, r0, #0x3
@@ -2196,21 +2196,21 @@ Task_HandlePokedexAreaScreenInput:
 	cmp	r2, #0x1
 	beq	.L249	@cond_branch
 	cmp	r2, #0x1
-	bgt	.L263	@cond_branch
+	bgt	.L262	@cond_branch
 	cmp	r2, #0
 	beq	.L247	@cond_branch
 	b	.L246
-.L266:
-	.align	2, 0
 .L265:
+	.align	2, 0
+.L264:
 	.word	gTasks
-.L263:
+.L262:
 	cmp	r2, #0x2
-	beq	.L259	@cond_branch
+	beq	.L258	@cond_branch
 	cmp	r2, #0x3
-	beq	.L260	@cond_branch
+	beq	.L259	@cond_branch
 .L246:
-	ldr	r0, .L267
+	ldr	r0, .L266
 	lsl	r1, r5, #0x2
 	add	r1, r1, r5
 	lsl	r1, r1, #0x3
@@ -2218,33 +2218,31 @@ Task_HandlePokedexAreaScreenInput:
 	mov	r0, #0x0
 	strh	r0, [r1, #0x8]
 .L247:
-	ldr	r0, .L267+0x4
+	ldr	r0, .L266+0x4
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.LCB2093
-	b	.L244	@long jump
-.LCB2093:
+	bne	.L244	@cond_branch
 	lsl	r4, r5, #0x2
 	b	.L245
-.L268:
-	.align	2, 0
 .L267:
+	.align	2, 0
+.L266:
 	.word	gTasks
 	.word	gPaletteFade
 .L249:
-	ldr	r1, .L269
+	ldr	r1, .L268
 	ldrh	r3, [r1, #0x2e]
 	mov	r0, #0x2
 	and	r0, r0, r3
 	cmp	r0, #0
 	beq	.L250	@cond_branch
 	strh	r2, [r6, #0xa]
-	b	.L264
-.L270:
-	.align	2, 0
+	b	.L263
 .L269:
+	.align	2, 0
+.L268:
 	.word	gMain
 .L250:
 	mov	r0, #0x20
@@ -2256,17 +2254,17 @@ Task_HandlePokedexAreaScreenInput:
 	and	r0, r0, r3
 	cmp	r0, #0
 	beq	.L252	@cond_branch
-	ldr	r0, .L271
+	ldr	r0, .L270
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x13]
 	cmp	r0, #0x1
 	bne	.L252	@cond_branch
 .L253:
 	strh	r2, [r6, #0xa]
-	b	.L264
-.L272:
-	.align	2, 0
+	b	.L263
 .L271:
+	.align	2, 0
+.L270:
 	.word	gSaveBlock2Ptr
 .L252:
 	ldrh	r1, [r1, #0x2e]
@@ -2279,48 +2277,29 @@ Task_HandlePokedexAreaScreenInput:
 	and	r0, r0, r1
 	cmp	r0, #0
 	beq	.L244	@cond_branch
-	ldr	r0, .L273
+	ldr	r0, .L272
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x13]
 	cmp	r0, #0x1
 	bne	.L244	@cond_branch
 .L256:
-	ldr	r0, .L273+0x4
-	ldr	r0, [r0]
-	ldrh	r0, [r0, #0xe]
-	bl	SpeciesToNationalPokedexNum
-	lsl	r0, r0, #0x10
-	lsr	r0, r0, #0x10
-	mov	r1, #0x1
-	bl	GetSetPokedexFlag
-	lsl	r0, r0, #0x18
-	cmp	r0, #0
-	bne	.L257	@cond_branch
-	mov	r0, #0x20
-	bl	PlaySE
-	b	.L244
-.L274:
-	.align	2, 0
-.L273:
-	.word	gSaveBlock2Ptr
-	.word	sPokedexAreaScreen
-.L257:
-	ldr	r1, .L275
+	ldr	r1, .L272+0x4
 	lsl	r4, r5, #0x2
 	add	r0, r4, r5
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
 	mov	r1, #0x2
 	strh	r1, [r0, #0xa]
-.L264:
+.L263:
 	mov	r0, #0x6d
 	bl	PlaySE
 	b	.L245
-.L276:
+.L273:
 	.align	2, 0
-.L275:
+.L272:
+	.word	gSaveBlock2Ptr
 	.word	gTasks
-.L259:
+.L258:
 	mov	r0, #0x15
 	neg	r0, r0
 	mov	r1, #0x0
@@ -2329,8 +2308,8 @@ Task_HandlePokedexAreaScreenInput:
 	mov	r3, #0x10
 	bl	BeginNormalPaletteFade
 	b	.L245
-.L260:
-	ldr	r0, .L277
+.L259:
+	ldr	r0, .L274
 	ldrb	r1, [r0, #0x7]
 	mov	r0, #0x80
 	and	r0, r0, r1
@@ -2339,7 +2318,7 @@ Task_HandlePokedexAreaScreenInput:
 	cmp	r7, #0
 	bne	.L244	@cond_branch
 	bl	DestroyAreaMarkerSprites
-	ldr	r4, .L277+0x4
+	ldr	r4, .L274+0x4
 	ldr	r0, [r4]
 	mov	r1, #0xdd
 	lsl	r1, r1, #0x3
@@ -2355,13 +2334,13 @@ Task_HandlePokedexAreaScreenInput:
 	bl	Free
 	str	r7, [r4]
 	b	.L244
-.L278:
+.L275:
 	.align	2, 0
-.L277:
+.L274:
 	.word	gPaletteFade
 	.word	sPokedexAreaScreen
 .L245:
-	ldr	r0, .L279
+	ldr	r0, .L276
 	add	r1, r4, r5
 	lsl	r1, r1, #0x3
 	add	r1, r1, r0
@@ -2373,9 +2352,9 @@ Task_HandlePokedexAreaScreenInput:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L280:
+.L277:
 	.align	2, 0
-.L279:
+.L276:
 	.word	gTasks
 .Lfe14:
 	.size	 Task_HandlePokedexAreaScreenInput,.Lfe14-Task_HandlePokedexAreaScreenInput
@@ -2415,32 +2394,32 @@ CreateAreaMarkerSprites:
 	mov	r6, r9
 	mov	r5, r8
 	push	{r5, r6, r7}
-	ldr	r0, .L289
+	ldr	r0, .L286
 	bl	LoadSpriteSheet
-	ldr	r0, .L289+0x4
+	ldr	r0, .L286+0x4
 	bl	LoadSpritePalette
-	ldr	r0, .L289+0x8
+	ldr	r0, .L286+0x8
 	mov	r1, #0x0
 	strh	r1, [r0]
-	ldr	r2, .L289+0xc
+	ldr	r2, .L286+0xc
 	strh	r1, [r2]
-	ldr	r1, .L289+0x10
+	ldr	r1, .L286+0x10
 	ldr	r0, [r1]
 	mov	r3, #0x89
 	lsl	r3, r3, #0x1
 	add	r0, r0, r3
 	ldrh	r0, [r0]
 	cmp	r0, #0
-	beq	.L284	@cond_branch
-	ldr	r5, .L289+0x14
+	beq	.L281	@cond_branch
+	ldr	r5, .L286+0x14
 	mov	sl, r1
 	add	r7, r2, #0
-	ldr	r0, .L289+0x18
+	ldr	r0, .L286+0x18
 	mov	r9, r0
-	ldr	r6, .L289+0x1c
-	ldr	r1, .L289+0x20
+	ldr	r6, .L286+0x1c
+	ldr	r1, .L286+0x20
 	mov	r8, r1
-.L286:
+.L283:
 	mov	r2, sl
 	ldr	r1, [r2]
 	mov	r3, #0x0
@@ -2496,14 +2475,14 @@ CreateAreaMarkerSprites:
 	ldrsh	r1, [r0, r2]
 	mov	r0, #0x0
 	ldrsh	r2, [r3, r0]
-	ldr	r0, .L289+0x24
+	ldr	r0, .L286+0x24
 	mov	r3, #0x0
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
 	cmp	r1, #0x40
-	beq	.L285	@cond_branch
-	ldr	r0, .L289+0x28
+	beq	.L282	@cond_branch
+	ldr	r0, .L286+0x28
 	lsl	r2, r1, #0x4
 	add	r2, r2, r1
 	lsl	r2, r2, #0x2
@@ -2516,7 +2495,7 @@ CreateAreaMarkerSprites:
 	strb	r0, [r3]
 	mov	r1, sl
 	ldr	r3, [r1]
-	ldr	r4, .L289+0x8
+	ldr	r4, .L286+0x8
 	ldrh	r1, [r4]
 	add	r0, r1, #0x1
 	strh	r0, [r4]
@@ -2527,7 +2506,7 @@ CreateAreaMarkerSprites:
 	add	r3, r3, r0
 	add	r3, r3, r1
 	str	r2, [r3]
-.L285:
+.L282:
 	ldrh	r0, [r7]
 	add	r0, r0, #0x1
 	strh	r0, [r7]
@@ -2540,11 +2519,11 @@ CreateAreaMarkerSprites:
 	add	r0, r0, r2
 	ldrh	r0, [r0]
 	cmp	r1, r0
-	blt	.L286	@cond_branch
-.L284:
-	ldr	r0, .L289+0x10
+	blt	.L283	@cond_branch
+.L281:
+	ldr	r0, .L286+0x10
 	ldr	r0, [r0]
-	ldr	r1, .L289+0x8
+	ldr	r1, .L286+0x8
 	ldrh	r1, [r1]
 	mov	r3, #0xdc
 	lsl	r3, r3, #0x3
@@ -2557,9 +2536,9 @@ CreateAreaMarkerSprites:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L290:
+.L287:
 	.align	2, 0
-.L289:
+.L286:
 	.word	sAreaMarkerSpriteSheet
 	.word	sAreaMarkerSpritePalette
 	.word	numSprites.52
@@ -2583,16 +2562,16 @@ DestroyAreaMarkerSprites:
 	mov	r0, #0x2
 	bl	FreeSpritePaletteByTag
 	mov	r4, #0x0
-	ldr	r1, .L303
+	ldr	r1, .L300
 	ldr	r0, [r1]
 	mov	r2, #0xdc
 	lsl	r2, r2, #0x3
 	add	r0, r0, r2
 	ldrh	r0, [r0]
 	cmp	r4, r0
-	bcs	.L293	@cond_branch
+	bcs	.L290	@cond_branch
 	add	r5, r1, #0
-.L295:
+.L292:
 	ldr	r0, [r5]
 	lsl	r1, r4, #0x2
 	mov	r2, #0xcc
@@ -2610,15 +2589,15 @@ DestroyAreaMarkerSprites:
 	add	r0, r0, r1
 	ldrh	r0, [r0]
 	cmp	r4, r0
-	bcc	.L295	@cond_branch
-.L293:
+	bcc	.L292	@cond_branch
+.L290:
 	mov	r0, #0x3
 	bl	FreeSpriteTilesByTag
 	mov	r0, #0x3
 	bl	FreeSpritePaletteByTag
 	mov	r4, #0x0
-.L300:
-	ldr	r0, .L303
+.L297:
+	ldr	r0, .L300
 	ldr	r0, [r0]
 	lsl	r1, r4, #0x2
 	mov	r2, #0xfb
@@ -2627,20 +2606,20 @@ DestroyAreaMarkerSprites:
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	cmp	r0, #0
-	beq	.L299	@cond_branch
+	beq	.L296	@cond_branch
 	bl	DestroySprite
-.L299:
+.L296:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
 	cmp	r4, #0x2
-	bls	.L300	@cond_branch
+	bls	.L297	@cond_branch
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L304:
+.L301:
 	.align	2, 0
-.L303:
+.L300:
 	.word	sPokedexAreaScreen
 .Lfe17:
 	.size	 DestroyAreaMarkerSprites,.Lfe17-DestroyAreaMarkerSprites
@@ -2650,25 +2629,25 @@ DestroyAreaMarkerSprites:
 LoadAreaUnknownGraphics:
 	push	{lr}
 	add	sp, sp, #-0x8
-	ldr	r0, .L306
+	ldr	r0, .L303
 	ldr	r1, [r0]
-	ldr	r0, .L306+0x4
+	ldr	r0, .L303+0x4
 	add	r1, r1, r0
 	str	r1, [sp]
-	ldr	r0, .L306+0x8
+	ldr	r0, .L303+0x8
 	str	r0, [sp, #0x4]
-	ldr	r0, .L306+0xc
+	ldr	r0, .L303+0xc
 	bl	LZ77UnCompWram
 	mov	r0, sp
 	bl	LoadSpriteSheet
-	ldr	r0, .L306+0x10
+	ldr	r0, .L303+0x10
 	bl	LoadSpritePalette
 	add	sp, sp, #0x8
 	pop	{r0}
 	bx	r0
-.L307:
+.L304:
 	.align	2, 0
-.L306:
+.L303:
 	.word	sPokedexAreaScreen
 	.word	0xfbc
 	.word	0x30600
@@ -2681,20 +2660,20 @@ LoadAreaUnknownGraphics:
 	.thumb_func
 CreateAreaUnknownSprites:
 	push	{r4, r5, r6, lr}
-	ldr	r1, .L323
+	ldr	r1, .L320
 	ldr	r0, [r1]
 	mov	r2, #0x88
 	lsl	r2, r2, #0x1
 	add	r0, r0, r2
 	ldr	r0, [r0]
 	cmp	r0, #0
-	beq	.L309	@cond_branch
+	beq	.L306	@cond_branch
 	mov	r4, #0x0
 	add	r5, r1, #0
 	mov	r3, #0xfb
 	lsl	r3, r3, #0x4
 	mov	r2, #0x0
-.L313:
+.L310:
 	ldr	r0, [r5]
 	lsl	r1, r4, #0x2
 	add	r0, r0, r3
@@ -2704,29 +2683,29 @@ CreateAreaUnknownSprites:
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
 	cmp	r4, #0x2
-	bls	.L313	@cond_branch
-	b	.L315
-.L324:
+	bls	.L310	@cond_branch
+	b	.L312
+.L321:
 	.align	2, 0
-.L323:
+.L320:
 	.word	sPokedexAreaScreen
-.L309:
+.L306:
 	mov	r4, #0x0
-	ldr	r5, .L325
-.L319:
+	ldr	r5, .L322
+.L316:
 	lsl	r1, r4, #0x15
 	mov	r6, #0xa0
 	lsl	r6, r6, #0x10
 	add	r1, r1, r6
 	asr	r1, r1, #0x10
-	ldr	r0, .L325+0x4
+	ldr	r0, .L322+0x4
 	mov	r2, #0x8c
 	mov	r3, #0x0
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x40
-	beq	.L320	@cond_branch
+	beq	.L317	@cond_branch
 	lsl	r3, r0, #0x4
 	add	r3, r3, r0
 	lsl	r3, r3, #0x2
@@ -2736,15 +2715,15 @@ CreateAreaUnknownSprites:
 	lsr	r0, r0, #0x16
 	lsl	r1, r4, #0x4
 	add	r0, r0, r1
-	ldr	r6, .L325+0x8
+	ldr	r6, .L322+0x8
 	add	r1, r6, #0
 	and	r0, r0, r1
-	ldr	r6, .L325+0xc
+	ldr	r6, .L322+0xc
 	add	r1, r6, #0
 	and	r2, r2, r1
 	orr	r2, r2, r0
 	strh	r2, [r3, #0x4]
-	ldr	r0, .L325+0x10
+	ldr	r0, .L322+0x10
 	ldr	r0, [r0]
 	lsl	r1, r4, #0x2
 	mov	r2, #0xfb
@@ -2752,17 +2731,17 @@ CreateAreaUnknownSprites:
 	add	r0, r0, r2
 	add	r0, r0, r1
 	str	r3, [r0]
-	b	.L318
-.L326:
+	b	.L315
+.L323:
 	.align	2, 0
-.L325:
+.L322:
 	.word	gSprites
 	.word	sAreaUnknownSpriteTemplate
 	.word	0x3ff
 	.word	-0x400
 	.word	sPokedexAreaScreen
-.L320:
-	ldr	r0, .L327
+.L317:
+	ldr	r0, .L324
 	ldr	r1, [r0]
 	lsl	r0, r4, #0x2
 	mov	r6, #0xfb
@@ -2771,19 +2750,19 @@ CreateAreaUnknownSprites:
 	add	r1, r1, r0
 	mov	r0, #0x0
 	str	r0, [r1]
-.L318:
+.L315:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x10
 	lsr	r4, r0, #0x10
 	cmp	r4, #0x2
-	bls	.L319	@cond_branch
-.L315:
+	bls	.L316	@cond_branch
+.L312:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L328:
+.L325:
 	.align	2, 0
-.L327:
+.L324:
 	.word	sPokedexAreaScreen
 .Lfe19:
 	.size	 CreateAreaUnknownSprites,.Lfe19-CreateAreaUnknownSprites

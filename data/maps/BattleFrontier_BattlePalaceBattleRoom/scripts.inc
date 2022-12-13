@@ -62,7 +62,7 @@ BattleFrontier_BattlePalaceBattleRoom_EventScript_NextOpponentEnter:: @ 824F8BF
 	addobject LOCALID_OPPONENT
 	applymovement LOCALID_OPPONENT, BattleFrontier_BattlePalaceBattleRoom_Movement_OpponentEnter
 	waitmovement 0
-	palace_getopponentintro
+	special getintro
 	msgbox gStringVar4, MSGBOX_DEFAULT
 	waitmessage
 	call BattleFrontier_BattlePalaceBattleRoom_EventScript_DoPalaceBattle
@@ -89,8 +89,6 @@ BattleFrontier_BattlePalaceBattleRoom_EventScript_DefeatedOpponent:: @ 824F911
 	special LoadPlayerParty
 	special SavePlayerParty
 	frontier_setpartyorder FRONTIER_PARTY_SIZE
-	playfanfare MUS_HEAL
-	waitfanfare
 	special HealPlayerParty
 BattleFrontier_BattlePalaceBattleRoom_EventScript_AskReadyForOpponent:: @ 824F98A
 	frontier_getbrainstatus
@@ -297,6 +295,9 @@ BattleFrontier_BattlePalaceBattleRoom_EventScript_DoPalaceBattle:: @ 824FDF7
 	closemessage
 	setvar VAR_TEMP_2, 0
 	frontier_set FRONTIER_DATA_RECORD_DISABLED, FALSE
+	frontier_get FRONTIER_DATA_BATTLE_NUM
+	compare VAR_RESULT, 6
+	call_if_eq BattleFrontier_BattlePalaceBattleRoom_EventScript_ChangeMusic
 	special HealPlayerParty
 	setvar VAR_0x8004, SPECIAL_BATTLE_PALACE
 	setvar VAR_0x8005, 0
@@ -306,7 +307,9 @@ BattleFrontier_BattlePalaceBattleRoom_EventScript_DoPalaceBattle:: @ 824FDF7
 	special HealPlayerParty
 	frontier_resetsketch
 	return
-
+BattleFrontier_BattlePalaceBattleRoom_EventScript_ChangeMusic::
+	setvar VAR_TEMP_8, 12
+	return
 BattleFrontier_BattlePalaceBattleRoom_OnWarp: @ 824FE34
 	map_script_2 VAR_TEMP_1, 0, BattleFrontier_BattlePalaceBattleRoom_EventScript_SetUpRoomObjects
 	.2byte 0
@@ -357,10 +360,10 @@ BattleFrontier_BattlePalaceBattleRoom_Movement_SetInvisible: @ 824FE90
 
 BattleFrontier_BattlePalaceBattleRoom_Movement_PlayerEnterRoom: @ 824FE92
 	set_visible
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 BattleFrontier_BattlePalaceBattleRoom_Movement_FaceRight: @ 824FE97
 	face_right
 	step_end
@@ -371,25 +374,25 @@ BattleFrontier_BattlePalaceBattleRoom_Movement_FaceUp: @ 824FE99
 
 BattleFrontier_BattlePalaceBattleRoom_Movement_PlayerReturnToChallenge: @ 824FE9B
 	set_visible
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 BattleFrontier_BattlePalaceBattleRoom_Movement_OpponentEnter: @ 824FEA1
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
 	face_left
 	step_end
 
 BattleFrontier_BattlePalaceBattleRoom_Movement_OpponentExit: @ 824FEA7
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 BattleFrontier_BattlePalaceBattleRoom_Movement_FaceDown: @ 824FEAC
@@ -432,9 +435,9 @@ BattleFrontier_BattlePalaceBattleRoom_Movement_DusclopsEnter: @ 824FEDF
 	delay_16
 	delay_16
 	set_visible
-	walk_down
-	walk_right
-	walk_down
+	walk_fast_down
+	walk_fast_right
+	walk_fast_down
 	walk_in_place_fastest_left
 	step_end
 
@@ -469,7 +472,7 @@ BattleFrontier_BattlePalaceBattleRoom_Movement_SpenserEnter: @ 824FEF2
 
 BattleFrontier_BattlePalaceBattleRoom_Text_LetMeRestoreYourMons: @ 824FF00
 	.string "Excellent…\n"
-	.string "Let me restore your POKéMON.$"
+	.string "Your Pokémon have been restored.$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_PreparedFor2ndOpponent: @ 824FF28
 	.string "The 2nd opponent is next.\n"
@@ -508,40 +511,40 @@ BattleFrontier_BattlePalaceBattleRoom_Text_SavingData: @ 825007E
 
 BattleFrontier_BattlePalaceBattleRoom_Text_RecordLastMatch: @ 825009E
 	.string "Do you wish to record your latest\n"
-	.string "match on your FRONTIER PASS?$"
+	.string "match on your Frontier Pass?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_ChallengingPalaceMaven: @ 82500DD
 	.string "And now…\p"
 	.string "By winning consistently, you have\n"
 	.string "earned the privilege of challenging\l"
-	.string "our master, the PALACE MAVEN…$"
+	.string "our master, the Palace Maven…$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_ReadyForPalaceMaven: @ 825014A
-	.string "I shall send for the PALACE MAVEN.\n"
+	.string "I shall send for the Palace Maven.\n"
 	.string "Are you ready?$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_AnnounceArrivalOfSpenser: @ 825017C
 	.string "Let great fanfare announce the arrival\n"
-	.string "of the PALACE MAVEN, SPENSER!$"
+	.string "of the Palace Maven, Spenser!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SpenserFirstIntro: @ 82501C1
-	.string "SPENSER: My physical being is with\n"
-	.string "POKéMON always!\p"
+	.string "Spenser: My physical being is with\n"
+	.string "Pokémon always!\p"
 	.string "My heart beats as one with\n"
-	.string "POKéMON always!\p"
-	.string "Young one of a TRAINER!\n"
-	.string "Do you believe in your POKéMON?\p"
+	.string "Pokémon always!\p"
+	.string "Young one of a Trainer!\n"
+	.string "Do you believe in your Pokémon?\p"
 	.string "Can you believe them through\n"
 	.string "and through?\p"
 	.string "If your bonds of trust are frail,\n"
 	.string "you will never beat my brethren!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_ProveYourBondWithMons: @ 82502C4
-	.string "The bond you share with your POKéMON!\n"
+	.string "The bond you share with your Pokémon!\n"
 	.string "Prove it to me here!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SpenserPostSilverBattle: @ 82502FF
-	.string "SPENSER: Gwahahah!\p"
+	.string "Spenser: Gwahahah!\p"
 	.string "Hah, you never fell for my bluster!\n"
 	.string "Sorry for trying that stunt!\p"
 	.string "Here!\n"
@@ -551,23 +554,23 @@ BattleFrontier_BattlePalaceBattleRoom_Text_LetsSeeFrontierPass: @ 825036D
 	.string "My, my, if only you could maintain that\n"
 	.string "facade of distinguished authority…\p"
 	.string "Here!\n"
-	.string "Let's see your FRONTIER PASS!$"
+	.string "Let's see your Frontier Pass!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_ReceivedSpiritsSymbol: @ 82503DC
 	.string "The Spirits Symbol was embossed on\n"
-	.string "the FRONTIER PASS!$"
+	.string "the Frontier Pass!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SpenserAwaitNextTime: @ 8250412
-	.string "SPENSER: Your POKéMON's eyes are \n"
+	.string "Spenser: Your Pokémon's eyes are \n"
 	.string "truly clear and unclouded.\p"
 	.string "I will eagerly await the next\n"
 	.string "opportunity to see you.$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SpenserThisTimeWontHoldBack: @ 8250485
-	.string "SPENSER: Gwahahah!\n"
+	.string "Spenser: Gwahahah!\n"
 	.string "You've battled your way up again?\p"
 	.string "You must have developed a truly\n"
-	.string "formidable bond with your POKéMON.\p"
+	.string "formidable bond with your Pokémon.\p"
 	.string "So be it!\p"
 	.string "This time, I won't bluster or hold back.\n"
 	.string "This time, there's no fooling around.\p"
@@ -578,7 +581,7 @@ BattleFrontier_BattlePalaceBattleRoom_Text_Kaaah: @ 8250572
 	.string "… … …Kaaah!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SpenserYourTeamIsAdmirable: @ 825057E
-	.string "SPENSER: Well, that was some display!\n"
+	.string "Spenser: Well, that was some display!\n"
 	.string "Even fully unleashed, my brethren\l"
 	.string "could not overpower you.\p"
 	.string "Your team spirit is truly admirable!\p"
@@ -589,13 +592,13 @@ BattleFrontier_BattlePalaceBattleRoom_Text_HurryWithFrontierPass: @ 8250629
 	.string "My, my, if only you could maintain\n"
 	.string "a certain level of decorum…\p"
 	.string "Gaaah, here!\n"
-	.string "Hurry with that FRONTIER PASS, you!$"
+	.string "Hurry with that Frontier Pass, you!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SpiritsSymbolTookGoldenShine: @ 8250699
 	.string "The Spirits Symbol took on\n"
 	.string "a golden shine!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_SpenserComeSeeMeAgain: @ 82506C4
-	.string "SPENSER: Gwahahah!\p"
+	.string "Spenser: Gwahahah!\p"
 	.string "Come see me time and again!\n"
 	.string "My brethren and I will be waiting!$"

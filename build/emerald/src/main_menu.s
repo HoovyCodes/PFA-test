@@ -3054,7 +3054,7 @@ Task_NewGameBirchSpeechSub_InitPokeBall:
 	mov	r5, #0x0
 	mov	r1, #0x64
 	strh	r1, [r2, #0x20]
-	mov	r1, #0x4b
+	mov	r1, #0x41
 	strh	r1, [r2, #0x22]
 	mov	r1, #0x3e
 	add	r1, r1, r2
@@ -4226,7 +4226,7 @@ Task_NewGameBirchSpeech_ReshowBirchLotad:
 	add	r0, r0, r5
 	mov	r1, #0x64
 	strh	r1, [r0, #0x20]
-	mov	r1, #0x4b
+	mov	r1, #0x41
 	strh	r1, [r0, #0x22]
 	add	r3, r0, #0
 	add	r3, r3, #0x3e
@@ -4981,13 +4981,12 @@ NewGameBirchSpeech_CreateLotadSprite:
 	lsr	r0, r0, #0x18
 	lsl	r1, r1, #0x18
 	lsr	r1, r1, #0x18
-	mov	r2, #0x87
-	lsl	r2, r2, #0x1
+	ldr	r2, .L519
 	str	r0, [sp]
 	str	r1, [sp, #0x4]
 	mov	r0, #0xe
 	str	r0, [sp, #0x8]
-	ldr	r0, .L519
+	ldr	r0, .L519+0x4
 	str	r0, [sp, #0xc]
 	add	r0, r2, #0
 	mov	r1, #0x8
@@ -5002,6 +5001,7 @@ NewGameBirchSpeech_CreateLotadSprite:
 .L520:
 	.align	2, 0
 .L519:
+	.word	0x271
 	.word	0xffff
 .Lfe53:
 	.size	 NewGameBirchSpeech_CreateLotadSprite,.Lfe53-NewGameBirchSpeech_CreateLotadSprite
@@ -5880,35 +5880,21 @@ MainMenu_FormatSavegameTime:
 	.type	 MainMenu_FormatSavegamePokedex,function
 	.thumb_func
 MainMenu_FormatSavegamePokedex:
-	push	{r4, r5, r6, r7, lr}
+	push	{r4, r5, r6, lr}
+	mov	r6, r8
+	push	{r6}
 	add	sp, sp, #-0x2c
-	ldr	r0, .L604
-	bl	FlagGet
-	lsl	r0, r0, #0x18
-	lsr	r0, r0, #0x18
-	cmp	r0, #0x1
-	bne	.L600	@cond_branch
-	bl	IsNationalPokedexEnabled
-	cmp	r0, #0
-	beq	.L601	@cond_branch
-	mov	r0, #0x1
-	bl	GetNationalPokedexCount
-	b	.L603
-.L605:
-	.align	2, 0
-.L604:
-	.word	0x861
-.L601:
-	mov	r0, #0x1
-	bl	GetHoennPokedexCount
-.L603:
-	lsl	r0, r0, #0x10
-	lsr	r7, r0, #0x10
-	ldr	r4, .L606
-	ldr	r1, .L606+0x4
+	ldr	r0, .L600
+	ldr	r0, [r0]
+	ldr	r1, .L600+0x4
+	add	r0, r0, r1
+	ldrh	r0, [r0]
+	mov	r8, r0
+	ldr	r4, .L600+0x8
+	ldr	r1, .L600+0xc
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
-	ldr	r6, .L606+0x8
+	ldr	r6, .L600+0x10
 	str	r6, [sp]
 	mov	r5, #0x1
 	neg	r5, r5
@@ -5920,7 +5906,7 @@ MainMenu_FormatSavegamePokedex:
 	mov	r3, #0x21
 	bl	AddTextPrinterParameterized3
 	add	r0, sp, #0xc
-	add	r1, r7, #0
+	mov	r1, r8
 	mov	r2, #0x0
 	mov	r3, #0x3
 	bl	ConvertIntToDecimalStringN
@@ -5939,14 +5925,17 @@ MainMenu_FormatSavegamePokedex:
 	mov	r1, #0x1
 	mov	r3, #0x21
 	bl	AddTextPrinterParameterized3
-.L600:
 	add	sp, sp, #0x2c
-	pop	{r4, r5, r6, r7}
+	pop	{r3}
+	mov	r8, r3
+	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L607:
+.L601:
 	.align	2, 0
-.L606:
+.L600:
+	.word	gSaveBlock2Ptr
+	.word	0xeb8
 	.word	gStringVar4
 	.word	gText_ContinueMenuPokedex
 	.word	sTextColor_MenuInfo
@@ -5959,27 +5948,27 @@ MainMenu_FormatSavegameBadges:
 	push	{r4, r5, r6, r7, lr}
 	add	sp, sp, #-0x2c
 	mov	r7, #0x0
-	ldr	r4, .L615
-.L612:
+	ldr	r4, .L609
+.L606:
 	lsl	r0, r4, #0x10
 	lsr	r0, r0, #0x10
 	bl	FlagGet
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L611	@cond_branch
+	beq	.L605	@cond_branch
 	add	r0, r7, #0x1
-	lsl	r0, r0, #0x18
-	lsr	r7, r0, #0x18
-.L611:
+	lsl	r0, r0, #0x10
+	lsr	r7, r0, #0x10
+.L605:
 	add	r4, r4, #0x1
-	ldr	r0, .L615+0x4
+	ldr	r0, .L609+0x4
 	cmp	r4, r0
-	bls	.L612	@cond_branch
-	ldr	r4, .L615+0x8
-	ldr	r1, .L615+0xc
+	bls	.L606	@cond_branch
+	ldr	r4, .L609+0x8
+	ldr	r1, .L609+0xc
 	add	r0, r4, #0
 	bl	StringExpandPlaceholders
-	ldr	r6, .L615+0x10
+	ldr	r6, .L609+0x10
 	str	r6, [sp]
 	mov	r5, #0x1
 	neg	r5, r5
@@ -5992,8 +5981,8 @@ MainMenu_FormatSavegameBadges:
 	bl	AddTextPrinterParameterized3
 	add	r0, sp, #0xc
 	add	r1, r7, #0
-	mov	r2, #0x2
-	mov	r3, #0x1
+	mov	r2, #0x0
+	mov	r3, #0x3
 	bl	ConvertIntToDecimalStringN
 	mov	r0, #0x1
 	add	r1, sp, #0xc
@@ -6014,11 +6003,11 @@ MainMenu_FormatSavegameBadges:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L616:
+.L610:
 	.align	2, 0
-.L615:
-	.word	0x867
-	.word	0x86e
+.L609:
+	.word	0x8c4
+	.word	0x8d1
 	.word	gStringVar4
 	.word	gText_ContinueMenuBadges
 	.word	sTextColor_MenuInfo
@@ -6035,7 +6024,7 @@ LoadMainMenuWindowFrameTiles:
 	lsr	r4, r4, #0x18
 	lsl	r5, r5, #0x10
 	lsr	r5, r5, #0x10
-	ldr	r6, .L618
+	ldr	r6, .L612
 	ldr	r0, [r6]
 	ldrb	r0, [r0, #0x14]
 	lsr	r0, r0, #0x3
@@ -6057,9 +6046,9 @@ LoadMainMenuWindowFrameTiles:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L619:
+.L613:
 	.align	2, 0
-.L618:
+.L612:
 	.word	gSaveBlock2Ptr
 .Lfe72:
 	.size	 LoadMainMenuWindowFrameTiles,.Lfe72-LoadMainMenuWindowFrameTiles
@@ -6329,7 +6318,7 @@ NewGameBirchSpeech_ClearGenderWindow:
 	lsr	r5, r0, #0x18
 	lsl	r4, r4, #0x18
 	lsr	r4, r4, #0x18
-	ldr	r1, .L625
+	ldr	r1, .L619
 	add	r0, r5, #0
 	bl	CallWindowFunction
 	add	r0, r5, #0
@@ -6338,17 +6327,17 @@ NewGameBirchSpeech_ClearGenderWindow:
 	add	r0, r5, #0
 	bl	ClearWindowTilemap
 	cmp	r4, #0x1
-	bne	.L624	@cond_branch
+	bne	.L618	@cond_branch
 	add	r0, r5, #0
 	mov	r1, #0x3
 	bl	CopyWindowToVram
-.L624:
+.L618:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L626:
+.L620:
 	.align	2, 0
-.L625:
+.L619:
 	.word	NewGameBirchSpeech_ClearGenderWindowTilemap
 .Lfe76:
 	.size	 NewGameBirchSpeech_ClearGenderWindow,.Lfe76-NewGameBirchSpeech_ClearGenderWindow
@@ -6428,22 +6417,22 @@ NewGameBirchSpeech_ShowPokeBallPrinterCallback:
 	sub	r0, r0, #0x2
 	ldrb	r0, [r0]
 	cmp	r0, #0x8
-	bne	.L629	@cond_branch
-	ldr	r1, .L630
+	bne	.L623	@cond_branch
+	ldr	r1, .L624
 	ldrb	r0, [r1]
 	cmp	r0, #0
-	bne	.L629	@cond_branch
+	bne	.L623	@cond_branch
 	mov	r0, #0x1
 	strb	r0, [r1]
-	ldr	r0, .L630+0x4
+	ldr	r0, .L624+0x4
 	mov	r1, #0x0
 	bl	CreateTask
-.L629:
+.L623:
 	pop	{r0}
 	bx	r0
-.L631:
+.L625:
 	.align	2, 0
-.L630:
+.L624:
 	.word	gUnknown_02022D04
 	.word	Task_NewGameBirchSpeechSub_InitPokeBall
 .Lfe78:
@@ -6518,7 +6507,7 @@ NewGameBirchSpeech_ShowDialogueWindow:
 	lsr	r5, r0, #0x18
 	lsl	r4, r4, #0x18
 	lsr	r4, r4, #0x18
-	ldr	r1, .L635
+	ldr	r1, .L629
 	add	r0, r5, #0
 	bl	CallWindowFunction
 	add	r0, r5, #0
@@ -6527,17 +6516,17 @@ NewGameBirchSpeech_ShowDialogueWindow:
 	add	r0, r5, #0
 	bl	PutWindowTilemap
 	cmp	r4, #0x1
-	bne	.L634	@cond_branch
+	bne	.L628	@cond_branch
 	add	r0, r5, #0
 	mov	r1, #0x3
 	bl	CopyWindowToVram
-.L634:
+.L628:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L636:
+.L630:
 	.align	2, 0
-.L635:
+.L629:
 	.word	NewGameBirchSpeech_CreateDialogueWindowBorder
 .Lfe80:
 	.size	 NewGameBirchSpeech_ShowDialogueWindow,.Lfe80-NewGameBirchSpeech_ShowDialogueWindow
@@ -6615,7 +6604,7 @@ NewGameBirchSpeech_CreateDialogueWindowBorder:
 	ldr	r2, [sp, #0xc]
 	add	r3, r5, #0
 	bl	FillBgTilemapBufferRect
-	ldr	r1, .L638
+	ldr	r1, .L632
 	ldr	r7, [sp, #0xc]
 	add	r7, r7, r9
 	sub	r0, r7, #0x1
@@ -6639,7 +6628,7 @@ NewGameBirchSpeech_CreateDialogueWindowBorder:
 	add	r2, r7, #0
 	add	r3, r5, #0
 	bl	FillBgTilemapBufferRect
-	ldr	r1, .L638+0x4
+	ldr	r1, .L632+0x4
 	str	r4, [sp]
 	mov	r5, #0x5
 	str	r5, [sp, #0x4]
@@ -6648,7 +6637,7 @@ NewGameBirchSpeech_CreateDialogueWindowBorder:
 	ldr	r2, [sp, #0x14]
 	mov	r3, sl
 	bl	FillBgTilemapBufferRect
-	ldr	r1, .L638+0x8
+	ldr	r1, .L632+0x8
 	mov	r0, r9
 	add	r0, r0, #0x1
 	lsl	r0, r0, #0x18
@@ -6669,7 +6658,7 @@ NewGameBirchSpeech_CreateDialogueWindowBorder:
 	add	r2, r7, #0
 	mov	r3, sl
 	bl	FillBgTilemapBufferRect
-	ldr	r1, .L638+0xc
+	ldr	r1, .L632+0xc
 	ldr	r2, [sp, #0x10]
 	add	sl, sl, r2
 	mov	r0, sl
@@ -6683,7 +6672,7 @@ NewGameBirchSpeech_CreateDialogueWindowBorder:
 	ldr	r2, [sp, #0x14]
 	mov	r3, sl
 	bl	FillBgTilemapBufferRect
-	ldr	r1, .L638+0x10
+	ldr	r1, .L632+0x10
 	str	r4, [sp]
 	str	r4, [sp, #0x4]
 	str	r6, [sp, #0x8]
@@ -6706,7 +6695,7 @@ NewGameBirchSpeech_CreateDialogueWindowBorder:
 	ldr	r2, [sp, #0xc]
 	mov	r3, sl
 	bl	FillBgTilemapBufferRect
-	ldr	r1, .L638+0x14
+	ldr	r1, .L632+0x14
 	str	r4, [sp]
 	str	r4, [sp, #0x4]
 	str	r6, [sp, #0x8]
@@ -6714,7 +6703,7 @@ NewGameBirchSpeech_CreateDialogueWindowBorder:
 	ldr	r2, [sp, #0x1c]
 	mov	r3, sl
 	bl	FillBgTilemapBufferRect
-	ldr	r1, .L638+0x18
+	ldr	r1, .L632+0x18
 	str	r4, [sp]
 	str	r4, [sp, #0x4]
 	str	r6, [sp, #0x8]
@@ -6730,9 +6719,9 @@ NewGameBirchSpeech_CreateDialogueWindowBorder:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L639:
+.L633:
 	.align	2, 0
-.L638:
+.L632:
 	.word	0x101
 	.word	0x103
 	.word	0x105
@@ -6749,7 +6738,7 @@ Task_NewGameBirchSpeech_ReturnFromNamingScreenShowTextbox:
 	push	{r4, lr}
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r2, .L642
+	ldr	r2, .L636
 	lsl	r1, r0, #0x2
 	add	r1, r1, r0
 	lsl	r1, r1, #0x3
@@ -6759,19 +6748,19 @@ Task_NewGameBirchSpeech_ReturnFromNamingScreenShowTextbox:
 	strh	r1, [r4, #0x16]
 	lsl	r0, r0, #0x10
 	cmp	r0, #0
-	bgt	.L641	@cond_branch
+	bgt	.L635	@cond_branch
 	mov	r0, #0x0
 	mov	r1, #0x1
 	bl	NewGameBirchSpeech_ShowDialogueWindow
-	ldr	r0, .L642+0x4
+	ldr	r0, .L636+0x4
 	str	r0, [r4]
-.L641:
+.L635:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L643:
+.L637:
 	.align	2, 0
-.L642:
+.L636:
 	.word	gTasks
 	.word	Task_NewGameBirchSpeech_SoItsPlayerName
 .Lfe82:

@@ -26,6 +26,7 @@
 #include "mail.h"
 #include "battle_records.h"
 #include "item.h"
+#include "constants/items.h"
 #include "pokedex.h"
 #include "apprentice.h"
 #include "frontier_util.h"
@@ -95,7 +96,7 @@ static void InitPlayerTrainerId(void)
 static void SetDefaultOptions(void)
 {
     gSaveBlock2Ptr->optionsTextSpeed = OPTIONS_TEXT_SPEED_FAST;
-    gSaveBlock2Ptr->optionsWindowFrameType = 0;
+    gSaveBlock2Ptr->optionsWindowFrameType = 2;
     gSaveBlock2Ptr->optionsSound = OPTIONS_SOUND_STEREO;
     gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SET;
     gSaveBlock2Ptr->optionsBattleSceneOff = TRUE;
@@ -128,7 +129,7 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void)
 {
-    SetWarpDestination(MAP_GROUP(BATTLE_FRONTIER_OUTSIDE_WEST), MAP_NUM(BATTLE_FRONTIER_OUTSIDE_WEST), -1, 19, 66);
+    SetWarpDestination(MAP_GROUP(BATTLE_FRONTIER_OUTSIDE_WEST), MAP_NUM(BATTLE_FRONTIER_RECEPTION_GATE), 0, 0, 0);
     WarpIntoMap();
 }
 
@@ -171,7 +172,7 @@ void NewGameInitData(void)
     ResetGabbyAndTy();
     ClearSecretBases();
     ClearBerryTrees();
-    SetMoney(&gSaveBlock1Ptr->money, 3000);
+    SetMoney(&gSaveBlock1Ptr->money, 0);
     SetCoins(0);
     ResetLinkContestBoolean();
     ResetGameStats();
@@ -184,8 +185,10 @@ void NewGameInitData(void)
     ResetPokemonStorageSystem();
     ClearRoamerData();
     ClearRoamerLocationData();
-    gSaveBlock1Ptr->registeredItem = 0;
     ClearBag();
+	AddBagItem(ITEM_ACRO_BIKE, 1);
+	AddBagItem(ITEM_MEGA_BRACELET, 1);
+	gSaveBlock1Ptr->registeredItem = ITEM_ACRO_BIKE;
     NewGameInitPCItems();
     ClearPokeblocks();
     ClearDecorationInventories();

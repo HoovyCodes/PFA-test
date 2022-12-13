@@ -1,6 +1,6 @@
-# 1 "src/field_weather.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/field_weather.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/field_weather.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -4169,6 +4169,43 @@ void ClearGpuRegBits(u8 regOffset, u16 mask);
 void EnableInterrupts(u16 mask);
 void DisableInterrupts(u16 mask);
 # 19 "src/field_weather.c" 2
+# 1 "include/field_camera.h" 1
+
+
+
+
+
+struct CameraObject
+{
+    void (*callback)(struct CameraObject *);
+    u32 spriteId;
+    s32 movementSpeedX;
+    s32 movementSpeedY;
+    s32 x;
+    s32 y;
+};
+
+
+extern struct CameraObject gFieldCamera;
+extern u16 gTotalCameraPixelOffsetX;
+extern u16 gTotalCameraPixelOffsetY;
+
+
+void DrawWholeMapView(void);
+void CurrentMapDrawMetatileAt(int x, int y);
+void sub_8089C08(s16 *a0, s16 *a1);
+void DrawDoorMetatileAt(int x, int y, u16 *arr);
+void ResetFieldCamera(void);
+void sub_8057A58(void);
+void ResetCameraUpdateInfo(void);
+u32 InitCameraUpdateCallback(u8 a);
+void CameraUpdate(void);
+void SetCameraPanningCallback(void (*a)(void));
+void SetCameraPanning(s16 a, s16 b);
+void InstallCameraPanAheadCallback(void);
+void UpdateCameraPanning(void);
+void FieldUpdateBgTilemapScroll(void);
+# 20 "src/field_weather.c" 2
 
 
 
@@ -4378,6 +4415,7 @@ static void Task_WeatherInit(u8 taskId)
 
     if (gWeatherPtr->readyForInit)
     {
+  UpdateCameraPanning();
         sWeatherFuncs[gWeatherPtr->currWeather].initAll();
         gTasks[taskId].func = Task_WeatherMain;
     }

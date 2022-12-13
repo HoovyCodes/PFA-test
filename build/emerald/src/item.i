@@ -1,6 +1,6 @@
-# 1 "src/item.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/item.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/item.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -4158,8 +4158,11 @@ extern const u8 gText_ChikoritaDoll80BP[];
 extern const u8 gText_TotodileDoll80BP[];
 
 extern const u8 gText_Dolls[];
-extern const u8 gText_Cushions[];
+extern const u8 gText_MatDesk[];
+extern const u8 gText_OrnaPost[];
+extern const u8 gText_ChairPlant[];
 extern const u8 gText_Contest[];
+extern const u8 gText_TMs[];
 extern const u8 gText_MegaC[];
 extern const u8 gText_MegaB[];
 extern const u8 gText_MegaA[];
@@ -4337,8 +4340,11 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Doll[];
-extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Cushion[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MatDesk[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_OrnaPost[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChairPlant[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Contest[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TM[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaC[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaB[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaA[];
@@ -6834,7 +6840,7 @@ static const u8 sDummyDesc[] = _(
 
 static const u8 sMasterBallDesc[] = _(
     "The best BALL that\n"
-    "catches a POKéMON\n"
+    "catches a Pokémon\n"
     "without fail.");
 
 static const u8 sUltraBallDesc[] = _(
@@ -6850,7 +6856,7 @@ static const u8 sGreatBallDesc[] = _(
 static const u8 sPokeBallDesc[] = _(
     "A tool used for\n"
     "catching wild\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 sSafariBallDesc[] = _(
     "A special BALL that\n"
@@ -6860,21 +6866,21 @@ static const u8 sSafariBallDesc[] = _(
 static const u8 sNetBallDesc[] = _(
     "A BALL that works\n"
     "well on WATER- and\n"
-    "BUG-type POKéMON.");
+    "BUG-type Pokémon.");
 
 static const u8 sDiveBallDesc[] = _(
     "A BALL that works\n"
-    "better on POKéMON\n"
+    "better on Pokémon\n"
     "on the ocean floor.");
 
 static const u8 sNestBallDesc[] = _(
     "A BALL that works\n"
     "better on weaker\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 sRepeatBallDesc[] = _(
     "A BALL that works\n"
-    "better on POKéMON\n"
+    "better on Pokémon\n"
     "caught before.");
 
 static const u8 sTimerBallDesc[] = _(
@@ -6884,7 +6890,7 @@ static const u8 sTimerBallDesc[] = _(
 
 static const u8 sLuxuryBallDesc[] = _(
     "A cozy BALL that\n"
-    "makes POKéMON\n"
+    "makes Pokémon\n"
     "more friendly.");
 
 static const u8 sPremierBallDesc[] = _(
@@ -6895,12 +6901,12 @@ static const u8 sPremierBallDesc[] = _(
 static const u8 sLevelBallDesc[] = _(
     "A Ball that works\n"
     "well on lower\n"
-    "level POKéMON.");
+    "level Pokémon.");
 
 static const u8 sLureBallDesc[] = _(
     "A Ball that works\n"
     "well on fished\n"
-    "up POKéMON.");
+    "up Pokémon.");
 
 static const u8 sMoonBallDesc[] = _(
     "A Ball that works\n"
@@ -6909,28 +6915,28 @@ static const u8 sMoonBallDesc[] = _(
 
 static const u8 sFriendBallDesc[] = _(
     "A Ball that makes\n"
-    "a POKéMON friendly\n"
+    "a Pokémon friendly\n"
     "when caught.");
 
 static const u8 sLoveBallDesc[] = _(
     "Works well on\n"
-    "POKéMON of the\n"
+    "Pokémon of the\n"
     "opposite gender.");
 
 static const u8 sHeavyBallDesc[] = _(
     "Works well on\n"
     "very heavy\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 sFastBallDesc[] = _(
     "Works well on\n"
     "very fast\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 sHealBallDesc[] = _(
     "A remedial Ball\n"
     "that restores\n"
-    "caught POKéMON.");
+    "caught Pokémon.");
 
 static const u8 sQuickBallDesc[] = _(
     "Works well if\n"
@@ -6968,61 +6974,61 @@ static const u8 sBeastBallDesc[] = _(
 
 static const u8 sPotionDesc[] = _(
     "Restores the HP of\n"
-    "a POKéMON by\n"
+    "a Pokémon by\n"
     "20 points.");
 
 static const u8 sAntidoteDesc[] = _(
     "Heals a poisoned\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 sBurnHealDesc[] = _(
-    "Heals POKéMON\n"
+    "Heals Pokémon\n"
     "of a burn.");
 
 static const u8 sIceHealDesc[] = _(
     "Defrosts a frozen\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 sAwakeningDesc[] = _(
     "Awakens a sleeping\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 sParalyzeHealDesc[] = _(
     "Heals a paralyzed\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 sFullRestoreDesc[] = _(
     "Fully restores the\n"
     "HP and status of a\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 sMaxPotionDesc[] = _(
     "Fully restores the\n"
-    "HP of a POKéMON.");
+    "HP of a Pokémon.");
 
 static const u8 sHyperPotionDesc[] = _(
     "Restores the HP of\n"
-    "a POKéMON by\n"
+    "a Pokémon by\n"
     "200 points.");
 
 static const u8 sSuperPotionDesc[] = _(
     "Restores the HP of\n"
-    "a POKéMON by\n"
+    "a Pokémon by\n"
     "50 points.");
 
 static const u8 sFullHealDesc[] = _(
     "Heals all the\n"
     "status problems of\n"
-    "one POKéMON.");
+    "one Pokémon.");
 
 static const u8 sReviveDesc[] = _(
     "Revives a fainted\n"
-    "POKéMON with half\n"
+    "Pokémon with half\n"
     "its HP.");
 
 static const u8 sMaxReviveDesc[] = _(
     "Revives a fainted\n"
-    "POKéMON with all\n"
+    "Pokémon with all\n"
     "its HP.");
 
 static const u8 sFreshWaterDesc[] = _(
@@ -7063,7 +7069,7 @@ static const u8 sHealPowderDesc[] = _(
 static const u8 sRevivalHerbDesc[] = _(
     "A very bitter herb\n"
     "that revives a\n"
-    "fainted POKéMON.");
+    "fainted Pokémon.");
 
 static const u8 sEtherDesc[] = _(
     "Restores the PP\n"
@@ -7081,7 +7087,7 @@ static const u8 sElixirDesc[] = _(
 
 static const u8 sMaxElixirDesc[] = _(
     "Fully restores the\n"
-    "PP of a POKéMON's\n"
+    "PP of a Pokémon's\n"
     "moves.");
 
 static const u8 sLavaCookieDesc[] = _(
@@ -7092,26 +7098,26 @@ static const u8 sLavaCookieDesc[] = _(
 static const u8 sBlueFluteDesc[] = _(
     "A glass flute that\n"
     "awakens sleeping\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 sYellowFluteDesc[] = _(
     "A glass flute that\n"
-    "snaps POKéMON\n"
+    "snaps Pokémon\n"
     "out of confusion.");
 
 static const u8 sRedFluteDesc[] = _(
     "A glass flute that\n"
-    "snaps POKéMON\n"
+    "snaps Pokémon\n"
     "out of attraction.");
 
 static const u8 sBlackFluteDesc[] = _(
     "A glass flute that\n"
     "keeps away wild\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 sWhiteFluteDesc[] = _(
     "A glass flute that\n"
-    "lures wild POKéMON.");
+    "lures wild Pokémon.");
 
 static const u8 sBerryJuiceDesc[] = _(
     "A 100% pure juice\n"
@@ -7126,17 +7132,17 @@ static const u8 sSweetHeartDesc[] = _(
 static const u8 sBigMalasadaDesc[] = _(
     "Heals all the\n"
     "status problems of\n"
-    "one POKéMON.");
+    "one Pokémon.");
 
 static const u8 sOldGateauDesc[] = _(
     "Heals all the\n"
     "status problems of\n"
-    "one POKéMON.");
+    "one Pokémon.");
 
 static const u8 sSacredAshDesc[] = _(
     "Fully revives and\n"
     "restores all\n"
-    "fainted POKéMON.");
+    "fainted Pokémon.");
 
 
 static const u8 sShoalSaltDesc[] = _(
@@ -7172,31 +7178,31 @@ static const u8 sGreenShardDesc[] = _(
 
 static const u8 sHPUpDesc[] = _(
     "Raises the base HP\n"
-    "of one POKéMON.");
+    "of one Pokémon.");
 
 static const u8 sProteinDesc[] = _(
     "Raises the base\n"
     "ATTACK stat of one\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 sIronDesc[] = _(
     "Raises the base\n"
     "DEFENSE stat of\n"
-    "one POKéMON.");
+    "one Pokémon.");
 
 static const u8 sCarbosDesc[] = _(
     "Raises the base\n"
     "SPEED stat of one\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 sCalciumDesc[] = _(
     "Raises the base\n"
     "SP. ATK stat of one\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 sRareCandyDesc[] = _(
     "Raises the level\n"
-    "of a POKéMON by\n"
+    "of a Pokémon by\n"
     "one.");
 
 static const u8 sPPUpDesc[] = _(
@@ -7207,7 +7213,7 @@ static const u8 sPPUpDesc[] = _(
 static const u8 sZincDesc[] = _(
     "Raises the base\n"
     "SP. DEF stat of one\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 sPPMaxDesc[] = _(
     "Raises the PP of a\n"
@@ -7258,22 +7264,22 @@ static const u8 sXSpecialDefenseDesc[] = _(
 static const u8 sPokeDollDesc[] = _(
     "Use to flee from\n"
     "any battle with\n"
-    "a wild POKéMON.");
+    "a wild Pokémon.");
 
 static const u8 sFluffyTailDesc[] = _(
     "Use to flee from\n"
     "any battle with\n"
-    "a wild POKéMON.");
+    "a wild Pokémon.");
 
 
 static const u8 sSuperRepelDesc[] = _(
     "Repels weak wild\n"
-    "POKéMON for 200\n"
+    "Pokémon for 200\n"
     "steps.");
 
 static const u8 sMaxRepelDesc[] = _(
     "Repels weak wild\n"
-    "POKéMON for 250\n"
+    "Pokémon for 250\n"
     "steps.");
 
 static const u8 sAbilityCapsuleDesc[] = _(
@@ -7287,58 +7293,58 @@ static const u8 sEscapeRopeDesc[] = _(
 
 static const u8 sRepelDesc[] = _(
     "Repels weak wild\n"
-    "POKéMON for 100\n"
+    "Pokémon for 100\n"
     "steps.");
 
 
 static const u8 sSunStoneDesc[] = _(
     "Makes certain\n"
-    "species of POKéMON\n"
+    "species of Pokémon\n"
     "evolve.");
 
 static const u8 sMoonStoneDesc[] = _(
     "Makes certain\n"
-    "species of POKéMON\n"
+    "species of Pokémon\n"
     "evolve.");
 
 static const u8 sFireStoneDesc[] = _(
     "Makes certain\n"
-    "species of POKéMON\n"
+    "species of Pokémon\n"
     "evolve.");
 
 static const u8 sThunderStoneDesc[] = _(
     "Makes certain\n"
-    "species of POKéMON\n"
+    "species of Pokémon\n"
     "evolve.");
 
 static const u8 sWaterStoneDesc[] = _(
     "Makes certain\n"
-    "species of POKéMON\n"
+    "species of Pokémon\n"
     "evolve.");
 
 static const u8 sLeafStoneDesc[] = _(
     "Makes certain\n"
-    "species of POKéMON\n"
+    "species of Pokémon\n"
     "evolve.");
 
 static const u8 sDawnStoneDesc[] = _(
     "Makes certain\n"
-    "species of POKéMON\n"
+    "species of Pokémon\n"
     "evolve.");
 
 static const u8 sDuskStoneDesc[] = _(
     "Makes certain\n"
-    "species of POKéMON\n"
+    "species of Pokémon\n"
     "evolve.");
 
 static const u8 sShinyStoneDesc[] = _(
     "Makes certain\n"
-    "species of POKéMON\n"
+    "species of Pokémon\n"
     "evolve.");
 
 static const u8 sIceStoneDesc[] = _(
     "Makes certain\n"
-    "species of POKéMON\n"
+    "species of Pokémon\n"
     "evolve.");
 
 
@@ -7421,22 +7427,22 @@ static const u8 sHeartScaleDesc[] = _(
 static const u8 sRedNectarDesc[] = _(
     "Flower nectar that\n"
     "changes the form\n"
-    "of certain POKéMON.");
+    "of certain Pokémon.");
 
 static const u8 sYellowNectarDesc[] = _(
     "Flower nectar that\n"
     "changes the form\n"
-    "of certain POKéMON.");
+    "of certain Pokémon.");
 
 static const u8 sPinkNectarDesc[] = _(
     "Flower nectar that\n"
     "changes the form\n"
-    "of certain POKéMON.");
+    "of certain Pokémon.");
 
 static const u8 sPurpleNectarDesc[] = _(
     "Flower nectar that\n"
     "changes the form\n"
-    "of certain POKéMON.");
+    "of certain Pokémon.");
 
 static const u8 sRareBoneDesc[] = _(
     "A very rare bone.\n"
@@ -7447,62 +7453,62 @@ static const u8 sRareBoneDesc[] = _(
 static const u8 sOrangeMailDesc[] = _(
     "A ZIGZAGOON-print\n"
     "MAIL to be held by\n"
-    "a POKéMON.");
+    "a Pokémon.");
 
 static const u8 sHarborMailDesc[] = _(
     "A WINGULL-print\n"
     "MAIL to be held by\n"
-    "a POKéMON.");
+    "a Pokémon.");
 
 static const u8 sGlitterMailDesc[] = _(
     "A PIKACHU-print\n"
     "MAIL to be held by\n"
-    "a POKéMON.");
+    "a Pokémon.");
 
 static const u8 sMechMailDesc[] = _(
     "A MAGNEMITE-print\n"
     "MAIL to be held by\n"
-    "a POKéMON.");
+    "a Pokémon.");
 
 static const u8 sWoodMailDesc[] = _(
     "A SLAKOTH-print\n"
     "MAIL to be held by\n"
-    "a POKéMON.");
+    "a Pokémon.");
 
 static const u8 sWaveMailDesc[] = _(
     "A WAILMER-print\n"
     "MAIL to be held by\n"
-    "a POKéMON.");
+    "a Pokémon.");
 
 static const u8 sBeadMailDesc[] = _(
     "MAIL featuring a\n"
     "sketch of the\n"
-    "holding POKéMON.");
+    "holding Pokémon.");
 
 static const u8 sShadowMailDesc[] = _(
     "A DUSKULL-print\n"
     "MAIL to be held by\n"
-    "a POKéMON.");
+    "a Pokémon.");
 
 static const u8 sTropicMailDesc[] = _(
     "A BELLOSSOM-print\n"
     "MAIL to be held by\n"
-    "a POKéMON.");
+    "a Pokémon.");
 
 static const u8 sDreamMailDesc[] = _(
     "MAIL featuring a\n"
     "sketch of the\n"
-    "holding POKéMON.");
+    "holding Pokémon.");
 
 static const u8 sFabMailDesc[] = _(
     "A gorgeous-print\n"
     "MAIL to be held\n"
-    "by a POKéMON.");
+    "by a Pokémon.");
 
 static const u8 sRetroMailDesc[] = _(
     "MAIL featuring the\n"
     "drawings of three\n"
-    "POKéMON.");
+    "Pokémon.");
 
 
 static const u8 sCheriBerryDesc[] = _(
@@ -7512,7 +7518,7 @@ static const u8 sCheriBerryDesc[] = _(
 
 static const u8 sChestoBerryDesc[] = _(
     "A hold item that\n"
-    "awakens POKéMON\n"
+    "awakens Pokémon\n"
     "in battle.");
 
 static const u8 sPechaBerryDesc[] = _(
@@ -7527,7 +7533,7 @@ static const u8 sRawstBerryDesc[] = _(
 
 static const u8 sAspearBerryDesc[] = _(
     "A hold item that\n"
-    "defrosts POKéMON\n"
+    "defrosts Pokémon\n"
     "in battle.");
 
 static const u8 sLeppaBerryDesc[] = _(
@@ -7552,157 +7558,129 @@ static const u8 sLumBerryDesc[] = _(
 
 static const u8 sSitrusBerryDesc[] = _(
     "A hold item that\n"
-    "restores 30 HP in\n"
-    "battle.");
+    "restores 1/4 of HP\n"
+    "in battle.");
 
 static const u8 sFigyBerryDesc[] = _(
     "A hold item that\n"
     "restores HP but\n"
-    "may confuse.");
+    "may be too spicy.");
 
 static const u8 sWikiBerryDesc[] = _(
     "A hold item that\n"
     "restores HP but\n"
-    "may confuse.");
+    "may be too dry.");
 
 static const u8 sMagoBerryDesc[] = _(
     "A hold item that\n"
     "restores HP but\n"
-    "may confuse.");
+    "may be too sweet.");
 
 static const u8 sAguavBerryDesc[] = _(
     "A hold item that\n"
     "restores HP but\n"
-    "may confuse.");
+    "may be too bitter.");
 
 static const u8 sIapapaBerryDesc[] = _(
     "A hold item that\n"
     "restores HP but\n"
-    "may confuse.");
+    "may be too sour.");
 
 static const u8 sRazzBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow RAZZ.");
+    "{POKEBLOCK} ingredient.");
 
 static const u8 sBlukBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow BLUK.");
+    "{POKEBLOCK} ingredient.");
 
 static const u8 sNanabBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow NANAB.");
+    "{POKEBLOCK} ingredient.");
 
 static const u8 sWepearBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow WEPEAR.");
+    "{POKEBLOCK} ingredient.");
 
 static const u8 sPinapBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow PINAP.");
+    "{POKEBLOCK} ingredient.");
 
 static const u8 sPomegBerryDesc[] = _(
-    "Makes a POKéMON\n"
+    "Makes a Pokémon\n"
     "friendly but lowers\n"
     "base HP.");
 
 static const u8 sKelpsyBerryDesc[] = _(
-    "Makes a POKéMON\n"
+    "Makes a Pokémon\n"
     "friendly but lowers\n"
     "base ATTACK.");
 
 static const u8 sQualotBerryDesc[] = _(
-    "Makes a POKéMON\n"
+    "Makes a Pokémon\n"
     "friendly but lowers\n"
     "base DEFENSE.");
 
 static const u8 sHondewBerryDesc[] = _(
-    "Makes a POKéMON\n"
+    "Makes a Pokémon\n"
     "friendly but lowers\n"
     "base SP. ATK.");
 
 static const u8 sGrepaBerryDesc[] = _(
-    "Makes a POKéMON\n"
+    "Makes a Pokémon\n"
     "friendly but lowers\n"
     "base SP. DEF.");
 
 static const u8 sTamatoBerryDesc[] = _(
-    "Makes a POKéMON\n"
+    "Makes a Pokémon\n"
     "friendly but lowers\n"
     "base SPEED.");
 
 static const u8 sCornnBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow CORNN.");
+    "{POKEBLOCK} ingredient.");
 
 static const u8 sMagostBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow MAGOST.");
+    "{POKEBLOCK} ingredient.");
 
 static const u8 sRabutaBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow RABUTA.");
+    "{POKEBLOCK} ingredient.");
 
 static const u8 sNomelBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow NOMEL.");
+    "{POKEBLOCK} ingredient.");
 
 static const u8 sSpelonBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow SPELON.");
+    "{POKEBLOCK} ingredient.");
 
 static const u8 sPamtreBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow PAMTRE.");
+    "{POKEBLOCK} ingredient.");
 
 static const u8 sWatmelBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow WATMEL.");
+    "{POKEBLOCK} ingredient.");
 
 static const u8 sDurinBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow DURIN.");
+    "{POKEBLOCK} ingredient.");
 
 static const u8 sBelueBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow BELUE.");
+    "{POKEBLOCK} ingredient.");
 
 static const u8 sLiechiBerryDesc[] = _(
     "A hold item that\n"
-    "raises ATTACK in\n"
+    "raises Attack in\n"
     "a pinch.");
 
 static const u8 sGanlonBerryDesc[] = _(
     "A hold item that\n"
-    "raises DEFENSE in\n"
+    "raises Defense in\n"
     "a pinch.");
 
 static const u8 sSalacBerryDesc[] = _(
     "A hold item that\n"
-    "raises SPEED in\n"
+    "raises Speed in\n"
     "a pinch.");
 
 static const u8 sPetayaBerryDesc[] = _(
     "A hold item that\n"
-    "raises SP. ATK in\n"
+    "raises Sp. Atk in\n"
     "a pinch.");
 
 static const u8 sApicotBerryDesc[] = _(
     "A hold item that\n"
-    "raises SP. DEF in\n"
+    "raises Sp. Def in\n"
     "a pinch.");
 
 static const u8 sLansatBerryDesc[] = _(
@@ -7721,9 +7699,7 @@ static const u8 sMicleBerryDesc[] = _(
     "move in a pinch.");
 
 static const u8 sEnigmaBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow a mystery.");
+    "{POKEBLOCK} ingredient.");
 
 static const u8 sOccaBerryDesc[] = _(
     "A hold item that\n"
@@ -7873,7 +7849,7 @@ static const u8 sSootheBellDesc[] = _(
 
 static const u8 sMentalHerbDesc[] = _(
     "A hold item that\n"
-    "snaps POKéMON out\n"
+    "snaps Pokémon out\n"
     "of infatuation.");
 
 static const u8 sChoiceBandDesc[] = _(
@@ -7899,7 +7875,7 @@ static const u8 sAmuletCoinDesc[] = _(
 static const u8 sCleanseTagDesc[] = _(
     "A hold item that\n"
     "helps repel wild\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 sSoulDewDesc[] = _(
     "Hold item: raises\n"
@@ -7919,7 +7895,7 @@ static const u8 sDeepSeaScaleDesc[] = _(
 static const u8 sSmokeBallDesc[] = _(
     "A hold item that\n"
     "assures fleeing\n"
-    "from wild POKéMON.");
+    "from wild Pokémon.");
 
 static const u8 sEverstoneDesc[] = _(
     "A wondrous hold\n"
@@ -7954,62 +7930,62 @@ static const u8 sLeftoversDesc[] = _(
 static const u8 sDragonScaleDesc[] = _(
     "A strange scale\n"
     "held by DRAGON-\n"
-    "type POKéMON.");
+    "type Pokémon.");
 
 static const u8 sOvalStoneDesc[] = _(
     "Helps a certain\n"
-    "POKéMON to evolve.\n"
+    "Pokémon to evolve.\n"
     "Looks like an egg.");
 
 static const u8 sProtectorDesc[] = _(
-    "A certain POKéMON\n"
+    "A certain Pokémon\n"
     "loves it. It's quite\n"
     "heavy.");
 
 static const u8 sElectirizerDesc[] = _(
-    "A certain POKéMON\n"
+    "A certain Pokémon\n"
     "loves it. It's full\n"
     "of electricity.");
 
 static const u8 sMagmarizerDesc[] = _(
-    "A certain POKéMON\n"
+    "A certain Pokémon\n"
     "loves it. It's full\n"
     "of magma energy.");
 
 static const u8 sDubiousDiscDesc[] = _(
-    "A certain POKéMON\n"
+    "A certain Pokémon\n"
     "loves it. It's over-\n"
     "flowing with data.");
 
 static const u8 sReaperClothDesc[] = _(
     "Loved by a certain\n"
-    "POKéMON. Imbued\n"
+    "Pokémon. Imbued\n"
     "with strong energy.");
 
 static const u8 sRazorClawDesc[] = _(
     "Helps a certain\n"
-    "POKéMON to evolve.\n"
+    "Pokémon to evolve.\n"
     "It's a sharp claw.");
 
 static const u8 sRazorFangDesc[] = _(
     "Helps a certain\n"
-    "POKéMON to evolve.\n"
+    "Pokémon to evolve.\n"
     "It's a sharp fang.");
 
 static const u8 sPrismScaleDesc[] = _(
     "A mysterious scale.\n"
     "It helps a certain\n"
-    "POKéMON to evolve.");
+    "Pokémon to evolve.");
 
 static const u8 sWhippedDreamDesc[] = _(
     "A soft and sweet\n"
     "treat loved by some\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 sSachetDesc[] = _(
     "A sachet filled with\n"
     "perfumes loved by\n"
-    "some POKéMON.");
+    "some Pokémon.");
 
 static const u8 sLightBallDesc[] = _(
     "A hold item that\n"
@@ -8173,7 +8149,7 @@ static const u8 sLuckIncenseDesc[] = _(
 static const u8 sPureIncenseDesc[] = _(
     "A hold item that\n"
     "helps repel wild\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 sLuckyPunchDesc[] = _(
     "A hold item that\n"
@@ -8187,8 +8163,8 @@ static const u8 sMetalPowderDesc[] = _(
 
 static const u8 sThickClubDesc[] = _(
     "A hold item that \n"
-    "raises CUBONE or\n"
-    "MAROWAK's ATTACK.");
+    "raises Cubone or\n"
+    "Marowak's Attack.");
 
 static const u8 sStickDesc[] = _(
     "A hold item that\n"
@@ -8197,28 +8173,28 @@ static const u8 sStickDesc[] = _(
 
 static const u8 sRedScarfDesc[] = _(
     "A hold item that\n"
-    "raises COOL in\n"
-    "CONTESTS.");
+    "raises Coolness in\n"
+    "Contests.");
 
 static const u8 sBlueScarfDesc[] = _(
     "A hold item that\n"
-    "raises BEAUTY in\n"
-    "CONTESTS.");
+    "raises Beauty in\n"
+    "Contests.");
 
 static const u8 sPinkScarfDesc[] = _(
     "A hold item that\n"
-    "raises CUTE in\n"
-    "CONTESTS.");
+    "raises Cuteness in\n"
+    "Contests.");
 
 static const u8 sGreenScarfDesc[] = _(
     "A hold item that\n"
-    "raises SMART in\n"
-    "CONTESTS.");
+    "raises Smartness in\n"
+    "Contests.");
 
 static const u8 sYellowScarfDesc[] = _(
     "A hold item that\n"
-    "raises TOUGH in\n"
-    "CONTESTS.");
+    "raises Tough in\n"
+    "Contests.");
 
 
 static const u8 sMachBikeDesc[] = _(
@@ -8228,7 +8204,7 @@ static const u8 sMachBikeDesc[] = _(
 
 static const u8 sCoinCaseDesc[] = _(
     "A case that holds\n"
-    "up to 9,999 COINS.");
+    "up to 9,999 Coins.");
 
 static const u8 sItemfinderDesc[] = _(
     "A device that\n"
@@ -8238,17 +8214,17 @@ static const u8 sItemfinderDesc[] = _(
 static const u8 sOldRodDesc[] = _(
     "Use by any body of\n"
     "water to fish for\n"
-    "wild POKéMON.");
+    "wild Pokémon.");
 
 static const u8 sGoodRodDesc[] = _(
     "A decent fishing\n"
     "rod for catching\n"
-    "wild POKéMON.");
+    "wild Pokémon.");
 
 static const u8 sSuperRodDesc[] = _(
     "The best fishing\n"
     "rod for catching\n"
-    "wild POKéMON.");
+    "wild Pokémon.");
 
 static const u8 sSSTicketDesc[] = _(
     "The ticket required\n"
@@ -8258,7 +8234,7 @@ static const u8 sSSTicketDesc[] = _(
 static const u8 sContestPassDesc[] = _(
     "The pass required\n"
     "for entering\n"
-    "POKéMON CONTESTS.");
+    "Pokémon CONTESTS.");
 
 static const u8 sWailmerPailDesc[] = _(
     "A tool used for\n"
@@ -8352,17 +8328,17 @@ static const u8 sStorageKeyDesc[] = _(
 static const u8 sRootFossilDesc[] = _(
     "A fossil of an\n"
     "ancient, seafloor-\n"
-    "dwelling POKéMON.");
+    "dwelling Pokémon.");
 
 static const u8 sClawFossilDesc[] = _(
     "A fossil of an\n"
     "ancient, seafloor-\n"
-    "dwelling POKéMON.");
+    "dwelling Pokémon.");
 
 static const u8 sDevonScopeDesc[] = _(
     "A device by DEVON\n"
     "that signals any\n"
-    "unseeable POKéMON.");
+    "unseeable Pokémon.");
 
 
 static const u8 sTM01Desc[] = _(
@@ -8413,7 +8389,7 @@ static const u8 sTM09Desc[] = _(
 static const u8 sTM10Desc[] = _(
     "The attack power\n"
     "varies among\n"
-    "different POKéMON.");
+    "different Pokémon.");
 
 static const u8 sTM11Desc[] = _(
     "Raises the power of\n"
@@ -8659,13 +8635,13 @@ static const u8 sHM08Desc[] = _(
 
 static const u8 sOaksParcelDesc[] = _(
     "A parcel for PROF.\n"
-    "OAK from a POKéMON\n"
+    "OAK from a Pokémon\n"
     "MART's clerk.");
 
 static const u8 sPokeFluteDesc[] = _(
     "A sweet-sounding\n"
     "flute that awakens\n"
-    "POKéMON.");
+    "Pokémon.");
 
 static const u8 sSecretKeyDesc[] = _(
     "The key to the\n"
@@ -8685,7 +8661,7 @@ static const u8 sGoldTeethDesc[] = _(
 static const u8 sOldAmberDesc[] = _(
     "A stone containing\n"
     "the genes of an\n"
-    "ancient POKéMON.");
+    "ancient Pokémon.");
 
 static const u8 sCardKeyDesc[] = _(
     "A card-type door\n"
@@ -8710,12 +8686,12 @@ static const u8 sSkullFossilDesc[] = _(
 static const u8 sHelixFossilDesc[] = _(
     "A piece of an\n"
     "ancient marine\n"
-    "POKéMON's seashell.");
+    "Pokémon's seashell.");
 
 static const u8 sDomeFossilDesc[] = _(
     "A piece of an\n"
     "ancient marine\n"
-    "POKéMON's shell.");
+    "Pokémon's shell.");
 
 static const u8 sCoverFossilDesc[] = _(
     "A piece of a\n"
@@ -8729,18 +8705,18 @@ static const u8 sPlumeFossilDesc[] = _(
 
 static const u8 sJawFossilDesc[] = _(
     "A piece of a prehis-\n"
-    "toric POKéMON's\n"
+    "toric Pokémon's\n"
     "large jaw.");
 
 static const u8 sSailFossilDesc[] = _(
     "A piece of a prehis-\n"
-    "toric POKéMON's\n"
+    "toric Pokémon's\n"
     "skin sail.");
 
 static const u8 sSilphScopeDesc[] = _(
     "SILPH CO's scope\n"
     "makes unseeable\n"
-    "POKéMON visible.");
+    "Pokémon visible.");
 
 static const u8 sBicycleDesc[] = _(
     "A folding bicycle\n"
@@ -9617,32 +9593,32 @@ static const u8 sHoneyDesc[] = _(
 static const u8 sHealthWingDesc[] = _(
     "An item that raises\n"
     "the base HP of\n"
-    "a POKéMON.");
+    "a Pokémon.");
 
 static const u8 sMuscleWingDesc[] = _(
     "An item that raises\n"
     "the base ATTACK of\n"
-    "a POKéMON.");
+    "a Pokémon.");
 
 static const u8 sResistWingDesc[] = _(
     "An item that raises\n"
     "the base DEFENSE\n"
-    "of a POKéMON.");
+    "of a Pokémon.");
 
 static const u8 sGeniusWingDesc[] = _(
     "An item that raises\n"
     "the base SP. ATK.\n"
-    "of a POKéMON.");
+    "of a Pokémon.");
 
 static const u8 sCleverWingDesc[] = _(
     "An item that raises\n"
     "the base SP. DEF.\n"
-    "of a POKéMON.");
+    "of a Pokémon.");
 
 static const u8 sSwiftWingDesc[] = _(
     "An item that raises\n"
     "the base SPEED of\n"
-    "a POKéMON.");
+    "a Pokémon.");
 
 static const u8 sPrettyWingDesc[] = _(
     "A beautiful yet\n"
@@ -11628,8 +11604,8 @@ const struct Item gItems[] =
         .name = _("Sitrus Berry"),
         .itemId = 153,
         .price = 20,
-        .holdEffect = 1,
-        .holdEffectParam = 30,
+        .holdEffect = 100,
+        .holdEffectParam = 25,
         .description = sSitrusBerryDesc,
         .pocket = 4,
         .type = 1,
@@ -13592,7 +13568,7 @@ const struct Item gItems[] =
 
     [468] =
     {
-        .name = _("{POKEBLOCK} CASE"),
+        .name = _("{POKEBLOCK} Case"),
         .itemId = 468,
         .price = 0,
         .description = sPokeblockCaseDesc,
@@ -13781,6 +13757,7 @@ const struct Item gItems[] =
         .itemId = 482,
         .price = 3000,
         .description = sTM01Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -13793,6 +13770,7 @@ const struct Item gItems[] =
         .itemId = 483,
         .price = 3000,
         .description = sTM02Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -13805,6 +13783,7 @@ const struct Item gItems[] =
         .itemId = 484,
         .price = 3000,
         .description = sTM03Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -13817,6 +13796,7 @@ const struct Item gItems[] =
         .itemId = 485,
         .price = 3000,
         .description = sTM04Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -13829,6 +13809,7 @@ const struct Item gItems[] =
         .itemId = 486,
         .price = 1000,
         .description = sTM05Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -13841,6 +13822,7 @@ const struct Item gItems[] =
         .itemId = 487,
         .price = 3000,
         .description = sTM06Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -13853,6 +13835,7 @@ const struct Item gItems[] =
         .itemId = 488,
         .price = 3000,
         .description = sTM07Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -13865,6 +13848,7 @@ const struct Item gItems[] =
         .itemId = 489,
         .price = 3000,
         .description = sTM08Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -13877,6 +13861,7 @@ const struct Item gItems[] =
         .itemId = 490,
         .price = 3000,
         .description = sTM09Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -13889,6 +13874,7 @@ const struct Item gItems[] =
         .itemId = 491,
         .price = 3000,
         .description = sTM10Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -13901,6 +13887,7 @@ const struct Item gItems[] =
         .itemId = 492,
         .price = 2000,
         .description = sTM11Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -13913,6 +13900,7 @@ const struct Item gItems[] =
         .itemId = 493,
         .price = 3000,
         .description = sTM12Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -13925,6 +13913,7 @@ const struct Item gItems[] =
         .itemId = 494,
         .price = 3000,
         .description = sTM13Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -13937,6 +13926,7 @@ const struct Item gItems[] =
         .itemId = 495,
         .price = 5500,
         .description = sTM14Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -13949,6 +13939,7 @@ const struct Item gItems[] =
         .itemId = 496,
         .price = 7500,
         .description = sTM15Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -13961,6 +13952,7 @@ const struct Item gItems[] =
         .itemId = 497,
         .price = 3000,
         .description = sTM16Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -13973,6 +13965,7 @@ const struct Item gItems[] =
         .itemId = 498,
         .price = 3000,
         .description = sTM17Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -13985,6 +13978,7 @@ const struct Item gItems[] =
         .itemId = 499,
         .price = 2000,
         .description = sTM18Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -13997,6 +13991,7 @@ const struct Item gItems[] =
         .itemId = 500,
         .price = 3000,
         .description = sTM19Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14009,6 +14004,7 @@ const struct Item gItems[] =
         .itemId = 501,
         .price = 3000,
         .description = sTM20Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14021,6 +14017,7 @@ const struct Item gItems[] =
         .itemId = 502,
         .price = 1000,
         .description = sTM21Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14033,6 +14030,7 @@ const struct Item gItems[] =
         .itemId = 503,
         .price = 3000,
         .description = sTM22Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14045,6 +14043,7 @@ const struct Item gItems[] =
         .itemId = 504,
         .price = 3000,
         .description = sTM23Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14057,6 +14056,7 @@ const struct Item gItems[] =
         .itemId = 505,
         .price = 3000,
         .description = sTM24Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14069,6 +14069,7 @@ const struct Item gItems[] =
         .itemId = 506,
         .price = 5500,
         .description = sTM25Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14081,6 +14082,7 @@ const struct Item gItems[] =
         .itemId = 507,
         .price = 3000,
         .description = sTM26Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14093,6 +14095,7 @@ const struct Item gItems[] =
         .itemId = 508,
         .price = 1000,
         .description = sTM27Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14105,6 +14108,7 @@ const struct Item gItems[] =
         .itemId = 509,
         .price = 2000,
         .description = sTM28Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14117,6 +14121,7 @@ const struct Item gItems[] =
         .itemId = 510,
         .price = 2000,
         .description = sTM29Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14129,6 +14134,7 @@ const struct Item gItems[] =
         .itemId = 511,
         .price = 3000,
         .description = sTM30Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14141,6 +14147,7 @@ const struct Item gItems[] =
         .itemId = 512,
         .price = 3000,
         .description = sTM31Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14153,6 +14160,7 @@ const struct Item gItems[] =
         .itemId = 513,
         .price = 2000,
         .description = sTM32Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14165,6 +14173,7 @@ const struct Item gItems[] =
         .itemId = 514,
         .price = 3000,
         .description = sTM33Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14177,6 +14186,7 @@ const struct Item gItems[] =
         .itemId = 515,
         .price = 3000,
         .description = sTM34Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14189,6 +14199,7 @@ const struct Item gItems[] =
         .itemId = 516,
         .price = 3000,
         .description = sTM35Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14201,6 +14212,7 @@ const struct Item gItems[] =
         .itemId = 517,
         .price = 1000,
         .description = sTM36Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14213,6 +14225,7 @@ const struct Item gItems[] =
         .itemId = 518,
         .price = 2000,
         .description = sTM37Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14225,6 +14238,7 @@ const struct Item gItems[] =
         .itemId = 519,
         .price = 5500,
         .description = sTM38Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14237,6 +14251,7 @@ const struct Item gItems[] =
         .itemId = 520,
         .price = 3000,
         .description = sTM39Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14249,6 +14264,7 @@ const struct Item gItems[] =
         .itemId = 521,
         .price = 3000,
         .description = sTM40Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14261,6 +14277,7 @@ const struct Item gItems[] =
         .itemId = 522,
         .price = 3000,
         .description = sTM41Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14273,6 +14290,7 @@ const struct Item gItems[] =
         .itemId = 523,
         .price = 3000,
         .description = sTM42Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14285,6 +14303,7 @@ const struct Item gItems[] =
         .itemId = 524,
         .price = 3000,
         .description = sTM43Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14297,6 +14316,7 @@ const struct Item gItems[] =
         .itemId = 525,
         .price = 3000,
         .description = sTM44Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14309,6 +14329,7 @@ const struct Item gItems[] =
         .itemId = 526,
         .price = 3000,
         .description = sTM45Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14321,6 +14342,7 @@ const struct Item gItems[] =
         .itemId = 527,
         .price = 3000,
         .description = sTM46Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14333,6 +14355,7 @@ const struct Item gItems[] =
         .itemId = 528,
         .price = 3000,
         .description = sTM47Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14345,6 +14368,7 @@ const struct Item gItems[] =
         .itemId = 529,
         .price = 3000,
         .description = sTM48Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14357,6 +14381,7 @@ const struct Item gItems[] =
         .itemId = 530,
         .price = 3000,
         .description = sTM49Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
@@ -14369,6 +14394,7 @@ const struct Item gItems[] =
         .itemId = 531,
         .price = 3000,
         .description = sTM50Desc,
+  .importance = 1,
         .pocket = 3,
         .type = 1,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,

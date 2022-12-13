@@ -1,6 +1,6 @@
-# 1 "src/battle_pyramid.c"
-# 1 "<built-in>"
-# 1 "<command-line>"
+# 0 "src/battle_pyramid.c"
+# 0 "<built-in>"
+# 0 "<command-line>"
 # 1 "src/battle_pyramid.c"
 # 1 "include/global.h" 1
 
@@ -1943,7 +1943,7 @@ struct PokemonSubstruct0
              u8 friendship;
              u8 pokeball:5;
              u8 unused0_A:3;
-             u8 unused0_B;
+             u8 hiddenNature:5;
 };
 
 struct PokemonSubstruct1
@@ -2284,7 +2284,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
 bool8 HealStatusConditions(struct Pokemon *mon, u32 battlePartyId, u32 healMask, u8 battlerId);
 u8 GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 u8 *UseStatIncreaseItem(u16 itemId);
-u8 GetNature(struct Pokemon *mon);
+u8 GetNature(struct Pokemon *mon, bool32 checkHidden);
 u8 GetNatureFromPersonality(u32 personality);
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u16 tradePartnerSpecies);
 u16 HoennPokedexNumToSpecies(u16 hoennNum);
@@ -3446,6 +3446,13 @@ void ClearIllusionMon(u32 battlerId);
 bool32 SetIllusionMon(struct Pokemon *mon, u32 battlerId);
 bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
 u8 GetBattleMoveSplit(u32 moveId);
+bool32 CanSleep(u8 battlerId);
+bool32 CanBePoisoned(u8 battlerId);
+bool32 CanBeBurned(u8 battlerId);
+bool32 CanBeParalyzed(u8 battlerId);
+bool32 CanBeFrozen(u8 battlerId);
+bool32 CanBeConfused(u8 battlerId);
+bool32 IsBattlerTerrainAffected(u8 battlerId, u32 terrainFlag);
 # 9 "include/battle.h" 2
 # 1 "include/battle_script_commands.h" 1
 # 9 "include/battle_script_commands.h"
@@ -4111,8 +4118,9 @@ struct BattleStruct
     u8 sameMoveTurns[4];
     u16 moveEffect2;
     u16 changedSpecies[6];
+ u8 abilityPopUpSpriteIds[4][2];
 };
-# 579 "include/battle.h"
+# 580 "include/battle.h"
 struct BattleScripting
 {
     s32 painSplitHp;
@@ -4148,6 +4156,7 @@ struct BattleScripting
     u16 moveEffect;
     u16 multihitMoveEffect;
     u8 illusionNickHack;
+    bool8 fixedPopup;
 };
 
 
@@ -4222,6 +4231,7 @@ struct BattleBarInfo
     s32 oldValue;
     s32 receivedValue;
     s32 currValue;
+ u8 oddFrame;
 };
 
 struct BattleSpriteData
@@ -5380,8 +5390,11 @@ extern const u8 gText_ChikoritaDoll80BP[];
 extern const u8 gText_TotodileDoll80BP[];
 
 extern const u8 gText_Dolls[];
-extern const u8 gText_Cushions[];
+extern const u8 gText_MatDesk[];
+extern const u8 gText_OrnaPost[];
+extern const u8 gText_ChairPlant[];
 extern const u8 gText_Contest[];
+extern const u8 gText_TMs[];
 extern const u8 gText_MegaC[];
 extern const u8 gText_MegaB[];
 extern const u8 gText_MegaA[];
@@ -5559,8 +5572,11 @@ extern const u8 BattleFrontier_ExchangeServiceCorner_Text_CyndaquilDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChikoritaDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TotodileDollDesc[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Doll[];
-extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Cushion[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MatDesk[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_OrnaPost[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_ChairPlant[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_Contest[];
+extern const u8 BattleFrontier_ExchangeServiceCorner_Text_TM[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaC[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaB[];
 extern const u8 BattleFrontier_ExchangeServiceCorner_Text_MegaA[];
@@ -8012,7 +8028,7 @@ void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
 
-bool8 CanLearnTutorMove(u16, u8);
+bool32 CanLearnTutorMove(u16, u8);
 # 12 "src/battle_pyramid.c" 2
 # 1 "include/palette.h" 1
 # 17 "include/palette.h"
@@ -10433,7 +10449,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round1[] =
         .moves = {86, 209, 227, 0}
     },
     {
-        .species = 312,
+        .species = 587,
         .lvl = 15,
         .abilityNum = 2,
         .moves = {86, 85, 98, 0}
@@ -10451,16 +10467,16 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round1[] =
         .moves = {9, 129, 103, 0}
     },
     {
-        .species = 45,
+        .species = 182,
         .lvl = 8,
         .abilityNum = 2,
         .moves = {78, 202, 182, 0}
     },
     {
-        .species = 310,
+        .species = 479,
         .lvl = 8,
         .abilityNum = 2,
-        .moves = {86, 87, 98, 0}
+        .moves = {86, 87, 466, 0}
     },
     {
         .species = 286,
@@ -10469,23 +10485,23 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round1[] =
         .moves = {78, 264, 202, 183}
     },
     {
-        .species = 135,
+        .species = 695,
         .lvl = 6,
         .abilityNum = 2,
-        .moves = {86, 87, 42, 98}
+        .moves = {86, 87, 523, 0}
     }
 };
 
 static const struct PyramidWildMon sOpenLevelWildMons_Round2[] =
 {
     {
-        .species = 316,
+        .species = 317,
         .lvl = 14,
         .abilityNum = 2,
         .moves = {92, 124, 182, 0}
     },
     {
-        .species = 315,
+        .species = 407,
         .lvl = 14,
         .abilityNum = 2,
         .moves = {92, 202, 345, 80}
@@ -10503,16 +10519,16 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round2[] =
         .moves = {305, 207, 242, 342}
     },
     {
-        .species = 227,
+        .species = 690,
         .lvl = 7,
         .abilityNum = 2,
-        .moves = {92, 19, 211, 0}
+        .moves = {92, 406, 0, 0}
     },
     {
-        .species = 272,
+        .species = 748,
         .lvl = 7,
         .abilityNum = 1,
-        .moves = {92, 182, 291, 240}
+        .moves = {92, 182, 55, 240}
     },
     {
         .species = 169,
@@ -10537,7 +10553,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round3[] =
         .moves = {172, 36, 0, 0}
     },
     {
-        .species = 37,
+        .species = 667,
         .lvl = 13,
         .abilityNum = 2,
         .moves = {261, 53, 0, 0}
@@ -10549,16 +10565,16 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round3[] =
         .moves = {53, 157, 182, 0}
     },
     {
-        .species = 38,
+        .species = 592,
         .lvl = 11,
         .abilityNum = 2,
-        .moves = {261, 98, 53, 0}
+        .moves = {261, 0, 503, 0}
     },
     {
-        .species = 308,
+        .species = 662,
         .lvl = 6,
         .abilityNum = 2,
-        .moves = {7, 136, 0, 0}
+        .moves = {52, 17, 0, 0}
     },
     {
         .species = 110,
@@ -10567,10 +10583,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round3[] =
         .moves = {261, 53, 182, 0}
     },
     {
-        .species = 356,
+        .species = 426,
         .lvl = 5,
         .abilityNum = 2,
-        .moves = {261, 109, 212, 325}
+        .moves = {261, 109, 212, 247}
     },
     {
         .species = 229,
@@ -10583,10 +10599,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round3[] =
 static const struct PyramidWildMon sOpenLevelWildMons_Round4[] =
 {
     {
-        .species = 206,
+        .species = 453,
         .lvl = 10,
         .abilityNum = 2,
-        .moves = {180, 92, 182, 0}
+        .moves = {180, 92, 398, 0}
     },
     {
         .species = 354,
@@ -10595,10 +10611,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round4[] =
         .moves = {288, 261, 101, 0}
     },
     {
-        .species = 200,
+        .species = 608,
         .lvl = 8,
         .abilityNum = 2,
-        .moves = {288, 180, 247, 0}
+        .moves = {52, 180, 247, 0}
     },
     {
         .species = 38,
@@ -10613,7 +10629,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round4[] =
         .moves = {44, 332, 247, 182}
     },
     {
-        .species = 356,
+        .species = 477,
         .lvl = 6,
         .abilityNum = 2,
         .moves = {261, 182, 92, 247}
@@ -10625,7 +10641,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round4[] =
         .moves = {288, 92, 180, 0}
     },
     {
-        .species = 94,
+        .species = 562,
         .lvl = 5,
         .abilityNum = 2,
         .moves = {288, 180, 101, 0}
@@ -10635,51 +10651,51 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round4[] =
 static const struct PyramidWildMon sOpenLevelWildMons_Round5[] =
 {
     {
-        .species = 93,
+        .species = 437,
         .lvl = 10,
-        .abilityNum = 2,
-        .moves = {101, 85, 188, 0}
+        .abilityNum = 0,
+        .moves = {473, 85, 0, 0}
     },
     {
         .species = 358,
         .lvl = 10,
-        .abilityNum = 2,
+        .abilityNum = 0,
         .moves = {38, 92, 94, 182}
     },
     {
         .species = 338,
         .lvl = 8,
-        .abilityNum = 2,
+        .abilityNum = 0,
         .moves = {89, 157, 126, 92}
     },
     {
-        .species = 200,
+        .species = 603,
         .lvl = 8,
-        .abilityNum = 2,
-        .moves = {94, 180, 247, 220}
+        .abilityNum = 0,
+        .moves = {85, 182, 0, 33}
     },
     {
         .species = 344,
         .lvl = 6,
-        .abilityNum = 2,
+        .abilityNum = 0,
         .moves = {89, 246, 120, 94}
     },
     {
-        .species = 110,
+        .species = 615,
         .lvl = 6,
-        .abilityNum = 2,
-        .moves = {188, 120, 182, 0}
+        .abilityNum = 0,
+        .moves = {58, 419, 182, 0}
     },
     {
         .species = 330,
         .lvl = 5,
-        .abilityNum = 2,
+        .abilityNum = 0,
         .moves = {89, 242, 337, 225}
     },
     {
-        .species = 94,
+        .species = 93,
         .lvl = 5,
-        .abilityNum = 2,
+        .abilityNum = 0,
         .moves = {85, 94, 202, 101}
     }
 };
@@ -10687,16 +10703,16 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round5[] =
 static const struct PyramidWildMon sOpenLevelWildMons_Round6[] =
 {
     {
-        .species = 50,
+        .species = 575,
         .lvl = 10,
-        .abilityNum = 2,
-        .moves = {157, 163, 91, 0}
+        .abilityNum = 1,
+        .moves = {60, 247, 0, 0}
     },
     {
-        .species = 328,
+        .species = 809 + 62,
         .lvl = 10,
-        .abilityNum = 2,
-        .moves = {157, 89, 202, 0}
+        .abilityNum = 0,
+        .moves = {157, 89, 15, 0}
     },
     {
         .species = 360,
@@ -10717,9 +10733,9 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round6[] =
         .moves = {157, 89, 202, 182}
     },
     {
-        .species = 360,
+        .species = 576,
         .lvl = 6,
-        .abilityNum = 0,
+        .abilityNum = 2,
         .moves = {68, 243, 194, 0}
     },
     {
@@ -10745,7 +10761,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round7[] =
         .moves = {58, 242, 182, 0}
     },
     {
-        .species = 215,
+        .species = 461,
         .lvl = 10,
         .abilityNum = 2,
         .moves = {58, 306, 180, 0}
@@ -10757,22 +10773,22 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round7[] =
         .moves = {59, 38, 57, 0}
     },
     {
-        .species = 221,
+        .species = 473,
         .lvl = 8,
         .abilityNum = 2,
         .moves = {58, 89, 92, 0}
     },
     {
-        .species = 124,
+        .species = 478,
         .lvl = 6,
         .abilityNum = 2,
-        .moves = {59, 142, 94, 0}
+        .moves = {59, 104, 247, 0}
     },
     {
-        .species = 91,
+        .species = 614,
         .lvl = 6,
         .abilityNum = 2,
-        .moves = {58, 57, 182, 0}
+        .moves = {419, 280, 0, 0}
     },
     {
         .species = 365,
@@ -10809,16 +10825,16 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round8[] =
         .moves = {194, 122, 247, 0}
     },
     {
-        .species = 76,
+        .species = 525,
         .lvl = 8,
         .abilityNum = 2,
-        .moves = {120, 182, 89, 0}
+        .moves = {120, 182, 350, 0}
     },
     {
-        .species = 204,
+        .species = 809 + 65,
         .lvl = 6,
         .abilityNum = 2,
-        .moves = {153, 38, 202, 0}
+        .moves = {153, 398, 0, 0}
     },
     {
         .species = 338,
@@ -10827,10 +10843,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round8[] =
         .moves = {153, 83, 149, 0}
     },
     {
-        .species = 205,
+        .species = 774,
         .lvl = 5,
         .abilityNum = 2,
-        .moves = {153, 92, 157, 0}
+        .moves = {153, 512, 0, 0}
     },
     {
         .species = 275,
@@ -10843,10 +10859,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round8[] =
 static const struct PyramidWildMon sOpenLevelWildMons_Round9[] =
 {
     {
-        .species = 202,
+        .species = 579,
         .lvl = 10,
         .abilityNum = 2,
-        .moves = {68, 243, 219, 194}
+        .moves = {60, 105, 219, 0}
     },
     {
         .species = 375,
@@ -10855,10 +10871,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round9[] =
         .moves = {89, 92, 188, 94}
     },
     {
-        .species = 103,
+        .species = 678,
         .lvl = 8,
         .abilityNum = 2,
-        .moves = {121, 94, 95, 0}
+        .moves = {149, 109, 95, 0}
     },
     {
         .species = 199,
@@ -10873,10 +10889,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round9[] =
         .moves = {109, 247, 94, 211}
     },
     {
-        .species = 65,
+        .species = 655,
         .lvl = 6,
         .abilityNum = 2,
-        .moves = {94, 7, 8, 92}
+        .moves = {94, 52, 0, 0}
     },
     {
         .species = 121,
@@ -10907,10 +10923,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round10[] =
         .moves = {231, 242, 89, 0}
     },
     {
-        .species = 139,
+        .species = 698,
         .lvl = 8,
         .abilityNum = 2,
-        .moves = {57, 341, 246, 0}
+        .moves = {58, 341, 88, 0}
     },
     {
         .species = 337,
@@ -10925,16 +10941,16 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round10[] =
         .moves = {92, 182, 35, 0}
     },
     {
-        .species = 348,
+        .species = 557,
         .lvl = 6,
         .abilityNum = 2,
-        .moves = {246, 182, 332, 0}
+        .moves = {450, 182, 91, 0}
     },
     {
-        .species = 346,
+        .species = 526,
         .lvl = 5,
         .abilityNum = 2,
-        .moves = {188, 202, 109, 0}
+        .moves = {350, 89, 249, 0}
     },
     {
         .species = 142,
@@ -10947,10 +10963,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round10[] =
 static const struct PyramidWildMon sOpenLevelWildMons_Round11[] =
 {
     {
-        .species = 62,
+        .species = 740,
         .lvl = 10,
         .abilityNum = 2,
-        .moves = {66, 264, 57, 0}
+        .moves = {66, 8, 0, 0}
     },
     {
         .species = 297,
@@ -10959,10 +10975,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round11[] =
         .moves = {252, 57, 264, 0}
     },
     {
-        .species = 286,
+        .species = 675,
         .lvl = 8,
         .abilityNum = 2,
-        .moves = {147, 264, 182, 0}
+        .moves = {492, 242, 280, 0}
     },
     {
         .species = 308,
@@ -10989,7 +11005,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round11[] =
         .moves = {224, 89, 264, 157}
     },
     {
-        .species = 68,
+        .species = 534,
         .lvl = 5,
         .abilityNum = 2,
         .moves = {157, 89, 264, 69}
@@ -11005,19 +11021,19 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round12[] =
         .moves = {240, 57, 182, 0}
     },
     {
-        .species = 357,
+        .species = 38,
         .lvl = 10,
         .abilityNum = 2,
-        .moves = {241, 76, 0, 0}
+        .moves = {241, 76, 52, 0}
     },
     {
-        .species = 247,
+        .species = 529,
         .lvl = 8,
         .abilityNum = 2,
         .moves = {201, 89, 157, 0}
     },
     {
-        .species = 131,
+        .species = 471,
         .lvl = 8,
         .abilityNum = 2,
         .moves = {258, 58, 0, 0}
@@ -11029,7 +11045,7 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round12[] =
         .moves = {201, 202, 76, 0}
     },
     {
-        .species = 136,
+        .species = 668,
         .lvl = 6,
         .abilityNum = 2,
         .moves = {241, 53, 182, 0}
@@ -11041,17 +11057,17 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round12[] =
         .moves = {258, 58, 0, 0}
     },
     {
-        .species = 130,
+        .species = 537,
         .lvl = 5,
         .abilityNum = 2,
-        .moves = {240, 87, 56, 0}
+        .moves = {240, 330, 0, 0}
     }
 };
 
 static const struct PyramidWildMon sOpenLevelWildMons_Round13[] =
 {
     {
-        .species = 204,
+        .species = 588,
         .lvl = 10,
         .abilityNum = 2,
         .moves = {153, 36, 0, 0}
@@ -11063,10 +11079,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round13[] =
         .moves = {92, 89, 182, 0}
     },
     {
-        .species = 49,
+        .species = 598,
         .lvl = 8,
         .abilityNum = 2,
-        .moves = {318, 77, 79, 94}
+        .moves = {438, 77, 79, 0}
     },
     {
         .species = 212,
@@ -11087,10 +11103,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round13[] =
         .moves = {153, 89, 182, 0}
     },
     {
-        .species = 348,
+        .species = 737,
         .lvl = 5,
         .abilityNum = 2,
-        .moves = {352, 182, 157, 0}
+        .moves = {351, 182, 450, 0}
     },
     {
         .species = 292,
@@ -11109,10 +11125,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round14[] =
         .moves = {101, 94, 332, 0}
     },
     {
-        .species = 215,
+        .species = 630,
         .lvl = 10,
         .abilityNum = 2,
-        .moves = {58, 269, 185, 98}
+        .moves = {355, 269, 185, 98}
     },
     {
         .species = 342,
@@ -11127,10 +11143,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round14[] =
         .moves = {153, 247, 332, 202}
     },
     {
-        .species = 332,
+        .species = 634,
         .lvl = 6,
         .abilityNum = 2,
-        .moves = {92, 202, 302, 0}
+        .moves = {406, 399, 373, 0}
     },
     {
         .species = 359,
@@ -11145,10 +11161,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round14[] =
         .moves = {315, 242, 247, 182}
     },
     {
-        .species = 197,
+        .species = 687,
         .lvl = 5,
         .abilityNum = 2,
-        .moves = {94, 247, 231, 98}
+        .moves = {94, 492, 35, 0}
     }
 };
 
@@ -11167,10 +11183,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round15[] =
         .moves = {352, 58, 29, 0}
     },
     {
-        .species = 279,
+        .species = 503,
         .lvl = 8,
         .abilityNum = 2,
-        .moves = {182, 48, 57, 0}
+        .moves = {57, 534, 210, 0}
     },
     {
         .species = 195,
@@ -11191,10 +11207,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round15[] =
         .moves = {94, 29, 207, 0}
     },
     {
-        .species = 121,
+        .species = 457,
         .lvl = 5,
         .abilityNum = 2,
-        .moves = {352, 85, 109, 59}
+        .moves = {352, 340, 318, 0}
     },
     {
         .species = 9,
@@ -11207,10 +11223,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round15[] =
 static const struct PyramidWildMon sOpenLevelWildMons_Round16[] =
 {
     {
-        .species = 355,
+        .species = 710,
         .lvl = 10,
         .abilityNum = 2,
-        .moves = {101, 261, 247, 182}
+        .moves = {101, 109, 247, 0}
     },
     {
         .species = 93,
@@ -11219,25 +11235,25 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round16[] =
         .moves = {92, 180, 95, 247}
     },
     {
-        .species = 354,
+        .species = 563,
         .lvl = 8,
         .abilityNum = 2,
         .moves = {247, 180, 261, 0}
     },
     {
-        .species = 200,
+        .species = 429,
         .lvl = 8,
         .abilityNum = 2,
         .moves = {195, 180, 212, 0}
     },
     {
-        .species = 302,
+        .species = 769,
         .lvl = 6,
         .abilityNum = 2,
         .moves = {247, 212, 91, 101}
     },
     {
-        .species = 356,
+        .species = 477,
         .lvl = 6,
         .abilityNum = 2,
         .moves = {261, 92, 247, 0}
@@ -11265,19 +11281,19 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round17[] =
         .moves = {242, 92, 58, 0}
     },
     {
-        .species = 82,
+        .species = 462,
         .lvl = 10,
         .abilityNum = 2,
         .moves = {85, 86, 0, 0}
     },
     {
-        .species = 208,
+        .species = 777,
         .lvl = 8,
         .abilityNum = 2,
-        .moves = {88, 38, 89, 0}
+        .moves = {609, 670, 33, 0}
     },
     {
-        .species = 212,
+        .species = 680,
         .lvl = 8,
         .abilityNum = 2,
         .moves = {232, 163, 0, 0}
@@ -11301,10 +11317,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round17[] =
         .moves = {89, 36, 57, 58}
     },
     {
-        .species = 376,
+        .species = 411,
         .lvl = 5,
         .abilityNum = 2,
-        .moves = {89, 94, 247, 280}
+        .moves = {89, 430, 0, 0}
     }
 };
 
@@ -11317,10 +11333,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round18[] =
         .moves = {86, 92, 58, 0}
     },
     {
-        .species = 329,
+        .species = 696,
         .lvl = 10,
         .abilityNum = 2,
-        .moves = {89, 225, 242, 211}
+        .moves = {89, 225, 242, 0}
     },
     {
         .species = 334,
@@ -11335,16 +11351,16 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round18[] =
         .moves = {89, 337, 126, 0}
     },
     {
-        .species = 142,
+        .species = 691,
         .lvl = 6,
         .abilityNum = 2,
-        .moves = {89, 157, 337, 0}
+        .moves = {482, 182, 337, 0}
     },
     {
-        .species = 130,
+        .species = 567,
         .lvl = 6,
         .abilityNum = 2,
-        .moves = {89, 57, 37, 44}
+        .moves = {457, 88, 37, 0}
     },
     {
         .species = 230,
@@ -11381,13 +11397,13 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round19[] =
         .moves = {87, 86, 21, 0}
     },
     {
-        .species = 134,
+        .species = 809 + 53,
         .lvl = 8,
         .abilityNum = 2,
-        .moves = {57, 58, 0, 0}
+        .moves = {85, 60, 0, 0}
     },
     {
-        .species = 135,
+        .species = 738,
         .lvl = 6,
         .abilityNum = 2,
         .moves = {85, 42, 0, 0}
@@ -11405,10 +11421,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round19[] =
         .moves = {53, 261, 182, 0}
     },
     {
-        .species = 121,
+        .species = 516,
         .lvl = 5,
         .abilityNum = 2,
-        .moves = {58, 57, 85, 94}
+        .moves = {58, 57, 503, 512}
     }
 };
 
@@ -11421,19 +11437,19 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round20[] =
         .moves = {63, 53, 57, 146}
     },
     {
-        .species = 277,
+        .species = 772,
         .lvl = 10,
         .abilityNum = 2,
-        .moves = {332, 63, 92, 0}
+        .moves = {36, 403, 0, 0}
     },
     {
-        .species = 217,
+        .species = 809 + 201,
         .lvl = 8,
         .abilityNum = 2,
-        .moves = {63, 89, 264, 182}
+        .moves = {63, 57, 369, 182}
     },
     {
-        .species = 233,
+        .species = 474,
         .lvl = 8,
         .abilityNum = 2,
         .moves = {60, 63, 247, 58}
@@ -11451,10 +11467,10 @@ static const struct PyramidWildMon sOpenLevelWildMons_Round20[] =
         .moves = {63, 19, 119, 182}
     },
     {
-        .species = 143,
+        .species = 780,
         .lvl = 5,
         .abilityNum = 2,
-        .moves = {63, 34, 247, 89}
+        .moves = {63, 406, 0, 126}
     },
     {
         .species = 289,
@@ -13142,7 +13158,7 @@ static bool8 SetPyramidObjectPositionsInAndNearSquare(u8 objType, u8 squareId)
 
         r7 &= 1;
     }
-
+    Free(floorLayoutOffsets);
 
     return (numObjects / 2) > numPlacedObjects;
 }

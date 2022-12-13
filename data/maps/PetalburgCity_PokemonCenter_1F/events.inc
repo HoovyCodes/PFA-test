@@ -10,8 +10,8 @@ PetalburgCity_PokemonCenter_1F_ObjectEvents:
 	object_event 5, OBJ_EVENT_GFX_WOMAN_5, 0, 5, 4, 3, MOVEMENT_TYPE_LOOK_AROUND, 1, 1, TRAINER_TYPE_NONE, 0, PetalburgCity_PokemonCenter_1F_EventScript_Woman, 0
 
 PetalburgCity_PokemonCenter_1F_MapWarps:
-	warp_def 7, 8, 3, 3, MAP_PETALBURG_CITY
-	warp_def 6, 8, 3, 3, MAP_PETALBURG_CITY
+	warp_def 7, 8, 3, 0, MAP_PETALBURG_CITY
+	warp_def 6, 8, 3, 0, MAP_PETALBURG_CITY
 	warp_def 1, 6, 4, 0, MAP_PETALBURG_CITY_POKEMON_CENTER_2F
 
 PetalburgCity_PokemonCenter_1F_MapEvents::

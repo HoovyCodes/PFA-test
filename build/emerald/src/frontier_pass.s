@@ -2324,6 +2324,7 @@ AllocateFrontierPassData:
 	strb	r0, [r2, #0xe]
 	bl	CountPlayerTrainerStars
 	ldr	r3, [r5]
+	add	r0, r0, #0x1
 	lsl	r0, r0, #0x4
 	ldrb	r2, [r3, #0xe]
 	mov	r1, #0xf
@@ -2638,9 +2639,9 @@ InitFrontierPass:
 	ldr	r0, [r0]
 	ldrh	r0, [r0, #0x4]
 	cmp	r0, #0xa
-	bls	.LCB642
+	bls	.LCB643
 	b	.L63	@long jump
-.LCB642:
+.LCB643:
 	lsl	r0, r0, #0x2
 	ldr	r1, .L83+0x4
 	add	r0, r0, r1
@@ -2773,9 +2774,9 @@ InitFrontierPass:
 	bl	FreeTempTileDataBuffersIfPossible
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.LCB800
+	beq	.LCB801
 	b	.L82	@long jump
-.LCB800:
+.LCB801:
 	mov	r5, #0x1e
 	str	r5, [sp]
 	mov	r4, #0x14
@@ -3383,13 +3384,13 @@ Task_HandleFrontierPassInput:
 	lsl	r0, r0, #0x18
 	lsr	r6, r0, #0x18
 	mov	r5, #0x0
-	ldr	r2, .L210
+	ldr	r2, .L211
 	ldrh	r1, [r2, #0x2c]
 	mov	r0, #0x40
 	and	r0, r0, r1
 	cmp	r0, #0
 	beq	.L193	@cond_branch
-	ldr	r0, .L210+0x4
+	ldr	r0, .L211+0x4
 	ldr	r4, [r0]
 	ldr	r1, [r4]
 	ldrh	r3, [r1, #0x22]
@@ -3414,7 +3415,7 @@ Task_HandleFrontierPassInput:
 	and	r0, r0, r1
 	cmp	r0, #0
 	beq	.L195	@cond_branch
-	ldr	r0, .L210+0x4
+	ldr	r0, .L211+0x4
 	ldr	r4, [r0]
 	ldr	r1, [r4]
 	ldrh	r3, [r1, #0x22]
@@ -3439,7 +3440,7 @@ Task_HandleFrontierPassInput:
 	and	r0, r0, r1
 	cmp	r0, #0
 	beq	.L197	@cond_branch
-	ldr	r0, .L210+0x4
+	ldr	r0, .L211+0x4
 	ldr	r4, [r0]
 	ldr	r1, [r4]
 	ldrh	r3, [r1, #0x20]
@@ -3464,7 +3465,7 @@ Task_HandleFrontierPassInput:
 	and	r0, r0, r1
 	cmp	r0, #0
 	beq	.L199	@cond_branch
-	ldr	r0, .L210+0x4
+	ldr	r0, .L211+0x4
 	ldr	r4, [r0]
 	ldr	r1, [r4]
 	ldrh	r3, [r1, #0x20]
@@ -3486,7 +3487,7 @@ Task_HandleFrontierPassInput:
 .L199:
 	cmp	r5, #0
 	bne	.L201	@cond_branch
-	ldr	r4, .L210+0x8
+	ldr	r4, .L211+0x8
 	ldr	r0, [r4]
 	ldrb	r3, [r0, #0xc]
 	cmp	r3, #0
@@ -3497,7 +3498,17 @@ Task_HandleFrontierPassInput:
 	cmp	r0, #0
 	beq	.L202	@cond_branch
 	cmp	r3, #0x3
-	bhi	.L203	@cond_branch
+	bls	.L203	@cond_branch
+	cmp	r3, #0x4
+	bne	.L202	@cond_branch
+	b	.L210
+.L212:
+	.align	2, 0
+.L211:
+	.word	gMain
+	.word	sPassGfx
+	.word	sPassData
+.L203:
 	mov	r0, #0x5
 	bl	PlaySE
 	ldr	r0, [r4]
@@ -3506,43 +3517,28 @@ Task_HandleFrontierPassInput:
 	bl	TryCallPassAreaFunction
 	cmp	r0, #0
 	bne	.L192	@cond_branch
-	b	.L202
-.L211:
-	.align	2, 0
-.L210:
-	.word	gMain
-	.word	sPassGfx
-	.word	sPassData
-.L203:
-	cmp	r3, #0x4
-	bne	.L202	@cond_branch
-	mov	r0, #0x3
-	bl	PlaySE
-	ldr	r0, .L212
-	bl	SetMainCallback2
-	add	r0, r6, #0
-	bl	DestroyTask
 .L202:
-	ldr	r0, .L212+0x4
+	ldr	r0, .L213
 	ldrh	r1, [r0, #0x2e]
 	mov	r0, #0x2
 	and	r0, r0, r1
 	cmp	r0, #0
 	beq	.L192	@cond_branch
+.L210:
 	mov	r0, #0x3
 	bl	PlaySE
-	ldr	r0, .L212
+	ldr	r0, .L213+0x4
 	bl	SetMainCallback2
 	add	r0, r6, #0
 	bl	DestroyTask
 	b	.L192
-.L213:
+.L214:
 	.align	2, 0
-.L212:
-	.word	CB2_HideFrontierPass
+.L213:
 	.word	gMain
+	.word	CB2_HideFrontierPass
 .L201:
-	ldr	r0, .L214
+	ldr	r0, .L215
 	ldr	r0, [r0]
 	ldr	r1, [r0]
 	ldrh	r0, [r1, #0x20]
@@ -3556,7 +3552,7 @@ Task_HandleFrontierPassInput:
 	bl	GetCursorAreaFromCoords
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
-	ldr	r4, .L214+0x4
+	ldr	r4, .L215+0x4
 	ldr	r0, [r4]
 	ldrb	r0, [r0, #0xc]
 	cmp	r0, r5
@@ -3576,9 +3572,9 @@ Task_HandleFrontierPassInput:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L215:
+.L216:
 	.align	2, 0
-.L214:
+.L215:
 	.word	sPassGfx
 	.word	sPassData
 .Lfe19:
@@ -3596,35 +3592,35 @@ Task_DoFadeEffect:
 	lsl	r0, r4, #0x2
 	add	r0, r0, r4
 	lsl	r5, r0, #0x3
-	ldr	r0, .L235
+	ldr	r0, .L236
 	mov	r8, r0
 	add	r6, r5, r0
-	ldr	r7, .L235+0x4
+	ldr	r7, .L236+0x4
 	ldr	r0, [r7]
 	ldrh	r0, [r0, #0x4]
 	cmp	r0, #0x1
-	beq	.L221	@cond_branch
+	beq	.L222	@cond_branch
 	cmp	r0, #0x1
-	bgt	.L233	@cond_branch
+	bgt	.L234	@cond_branch
 	cmp	r0, #0
-	beq	.L218	@cond_branch
-	b	.L217
-.L236:
+	beq	.L219	@cond_branch
+	b	.L218
+.L237:
 	.align	2, 0
-.L235:
+.L236:
 	.word	gTasks+0x8
 	.word	sPassData
-.L233:
+.L234:
 	cmp	r0, #0x2
-	bne	.LCB1876
-	b	.L226	@long jump
-.LCB1876:
-	b	.L217
-.L218:
+	bne	.LCB1871
+	b	.L227	@long jump
+.LCB1871:
+	b	.L218
+.L219:
 	mov	r1, #0x0
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0
-	bne	.L219	@cond_branch
+	bne	.L220	@cond_branch
 	mov	r0, #0x1
 	mov	r1, #0x0
 	bl	sub_80C5F58
@@ -3638,18 +3634,18 @@ Task_DoFadeEffect:
 	strh	r0, [r6, #0x8]
 	mov	r0, #0x1
 	neg	r0, r0
-	ldr	r1, .L237
+	ldr	r1, .L238
 	str	r1, [sp]
 	mov	r1, #0x0
 	mov	r2, #0x0
 	mov	r3, #0x10
 	bl	BeginNormalPaletteFade
-	b	.L220
-.L238:
+	b	.L221
+.L239:
 	.align	2, 0
-.L237:
+.L238:
 	.word	0x7fff
-.L219:
+.L220:
 	mov	r1, #0xfe
 	lsl	r1, r1, #0x1
 	add	r0, r1, #0
@@ -3671,11 +3667,11 @@ Task_DoFadeEffect:
 	mov	r0, #0x2
 	bl	ShowBg
 	bl	LoadCursorAndSymbolSprites
-	ldr	r0, .L239
+	ldr	r0, .L240
 	bl	SetVBlankCallback
 	mov	r5, #0x1
 	neg	r5, r5
-	ldr	r4, .L239+0x4
+	ldr	r4, .L240+0x4
 	add	r0, r5, #0
 	mov	r1, #0x10
 	add	r2, r4, #0
@@ -3686,8 +3682,8 @@ Task_DoFadeEffect:
 	mov	r2, #0x10
 	mov	r3, #0x0
 	bl	BeginNormalPaletteFade
-.L220:
-	ldr	r4, .L239+0x8
+.L221:
+	ldr	r4, .L240+0x8
 	ldr	r0, [r4]
 	add	r0, r0, #0x2c
 	mov	r1, #0x1
@@ -3702,14 +3698,14 @@ Task_DoFadeEffect:
 	bl	MathUtil_Inv16
 	ldr	r1, [r4]
 	strh	r0, [r1, #0x30]
-	b	.L217
-.L240:
+	b	.L218
+.L241:
 	.align	2, 0
-.L239:
+.L240:
 	.word	VblankCb_FrontierPass
 	.word	0x7fff
 	.word	sPassGfx
-.L221:
+.L222:
 	bl	UpdatePaletteFade
 	ldrh	r0, [r6, #0x6]
 	ldrh	r1, [r6, #0x2]
@@ -3722,7 +3718,7 @@ Task_DoFadeEffect:
 	mov	r1, #0x2
 	ldrsh	r0, [r6, r1]
 	bl	MathUtil_Inv16
-	ldr	r4, .L241
+	ldr	r4, .L242
 	ldr	r1, [r4]
 	strh	r0, [r1, #0x2e]
 	mov	r1, #0x4
@@ -3733,56 +3729,56 @@ Task_DoFadeEffect:
 	mov	r1, #0x0
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0
-	bne	.L222	@cond_branch
+	bne	.L223	@cond_branch
 	mov	r0, #0x2
 	ldrsh	r1, [r6, r0]
 	mov	r0, #0xfe
 	lsl	r0, r0, #0x1
 	cmp	r1, r0
-	ble	.L216	@cond_branch
-	b	.L217
-.L242:
+	ble	.L217	@cond_branch
+	b	.L218
+.L243:
 	.align	2, 0
-.L241:
+.L242:
 	.word	sPassGfx
-.L222:
+.L223:
 	mov	r0, #0x2
 	ldrsh	r1, [r6, r0]
 	mov	r0, #0x80
 	lsl	r0, r0, #0x1
 	cmp	r1, r0
-	bne	.L216	@cond_branch
-	b	.L217
-.L226:
-	ldr	r0, .L243
+	bne	.L217	@cond_branch
+	b	.L218
+.L227:
+	ldr	r0, .L244
 	ldr	r0, [r0]
 	add	r1, r0, #0
 	add	r1, r1, #0x2c
 	ldrb	r0, [r1]
 	cmp	r0, #0
-	beq	.L227	@cond_branch
+	beq	.L228	@cond_branch
 	mov	r0, #0x0
 	strb	r0, [r1]
-.L227:
+.L228:
 	bl	UpdatePaletteFade
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L216	@cond_branch
+	bne	.L217	@cond_branch
 	mov	r1, #0x0
 	ldrsh	r0, [r6, r1]
 	cmp	r0, #0
-	bne	.L229	@cond_branch
+	bne	.L230	@cond_branch
 	add	r0, r4, #0
 	bl	DestroyTask
-	ldr	r0, .L243+0x4
+	ldr	r0, .L244+0x4
 	bl	SetMainCallback2
-	b	.L230
-.L244:
+	b	.L231
+.L245:
 	.align	2, 0
-.L243:
+.L244:
 	.word	sPassGfx
 	.word	CB2_ShowFrontierPassFeature
-.L229:
+.L230:
 	mov	r0, #0x0
 	mov	r1, #0x0
 	bl	sub_80C5F58
@@ -3795,39 +3791,39 @@ Task_DoFadeEffect:
 	mov	r0, r8
 	sub	r0, r0, #0x8
 	add	r0, r5, r0
-	ldr	r1, .L245
+	ldr	r1, .L246
 	str	r1, [r0]
-.L230:
+.L231:
 	mov	r0, #0x2
 	mov	r1, #0x6
 	mov	r2, #0x0
 	bl	SetBgAttribute
-	ldr	r0, .L245+0x4
+	ldr	r0, .L246+0x4
 	ldr	r1, [r0]
 	mov	r0, #0x0
-	b	.L234
-.L246:
+	b	.L235
+.L247:
 	.align	2, 0
-.L245:
+.L246:
 	.word	Task_HandleFrontierPassInput
 	.word	sPassData
-.L217:
-	ldr	r0, .L247
+.L218:
+	ldr	r0, .L248
 	ldr	r1, [r0]
 	ldrh	r0, [r1, #0x4]
 	add	r0, r0, #0x1
-.L234:
+.L235:
 	strh	r0, [r1, #0x4]
-.L216:
+.L217:
 	add	sp, sp, #0x4
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L248:
+.L249:
 	.align	2, 0
-.L247:
+.L248:
 	.word	sPassData
 .Lfe20:
 	.size	 Task_DoFadeEffect,.Lfe20-Task_DoFadeEffect
@@ -3840,7 +3836,7 @@ ShowAndPrintWindows:
 	push	{r6}
 	add	sp, sp, #-0xc
 	mov	r4, #0x0
-.L253:
+.L254:
 	add	r0, r4, #0
 	bl	PutWindowTilemap
 	add	r0, r4, #0
@@ -3850,15 +3846,15 @@ ShowAndPrintWindows:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x4
-	bls	.L253	@cond_branch
-	ldr	r4, .L260
+	bls	.L254	@cond_branch
+	ldr	r4, .L261
 	mov	r0, #0x1
 	add	r1, r4, #0
 	mov	r2, #0x60
 	bl	GetStringCenterAlignXOffset
 	lsl	r2, r0, #0x18
 	lsr	r2, r2, #0x18
-	ldr	r6, .L260+0x4
+	ldr	r6, .L261+0x4
 	str	r6, [sp]
 	mov	r0, #0x0
 	mov	r8, r0
@@ -3867,7 +3863,7 @@ ShowAndPrintWindows:
 	mov	r1, #0x1
 	mov	r3, #0x5
 	bl	AddTextPrinterParameterized3
-	ldr	r4, .L260+0x8
+	ldr	r4, .L261+0x8
 	mov	r0, #0x1
 	add	r1, r4, #0
 	mov	r2, #0x60
@@ -3885,15 +3881,15 @@ ShowAndPrintWindows:
 	str	r6, [sp]
 	mov	r0, r8
 	str	r0, [sp, #0x4]
-	ldr	r0, .L260+0xc
+	ldr	r0, .L261+0xc
 	str	r0, [sp, #0x8]
 	mov	r0, #0x2
 	mov	r1, #0x8
 	mov	r2, #0x5
 	mov	r3, #0x4
 	bl	AddTextPrinterParameterized3
-	ldr	r4, .L260+0x10
-	ldr	r5, .L260+0x14
+	ldr	r4, .L261+0x10
+	ldr	r5, .L261+0x14
 	ldr	r0, [r5]
 	ldrh	r1, [r0, #0x6]
 	add	r0, r4, #0
@@ -3933,7 +3929,7 @@ ShowAndPrintWindows:
 	ldrb	r0, [r0, #0xc]
 	bl	PrintAreaDescription
 	mov	r4, #0x0
-.L258:
+.L259:
 	add	r0, r4, #0
 	mov	r1, #0x3
 	bl	CopyWindowToVram
@@ -3941,7 +3937,7 @@ ShowAndPrintWindows:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x4
-	bls	.L258	@cond_branch
+	bls	.L259	@cond_branch
 	mov	r0, #0x0
 	bl	CopyBgTilemapBufferToVram
 	add	sp, sp, #0xc
@@ -3950,9 +3946,9 @@ ShowAndPrintWindows:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L261:
+.L262:
 	.align	2, 0
-.L260:
+.L261:
 	.word	gText_SymbolsEarned
 	.word	sTextColors
 	.word	gText_BattleRecord
@@ -3973,18 +3969,18 @@ PrintAreaDescription:
 	mov	r1, #0x0
 	bl	FillWindowPixelBuffer
 	cmp	r4, #0x3
-	bne	.L263	@cond_branch
-	ldr	r0, .L266
+	bne	.L264	@cond_branch
+	ldr	r0, .L267
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0xe]
 	mov	r1, #0x1
 	and	r1, r1, r0
 	cmp	r1, #0
-	bne	.L263	@cond_branch
-	ldr	r0, .L266+0x4
+	bne	.L264	@cond_branch
+	ldr	r0, .L267+0x4
 	str	r0, [sp]
 	str	r1, [sp, #0x4]
-	ldr	r0, .L266+0x8
+	ldr	r0, .L267+0x8
 	ldr	r0, [r0]
 	str	r0, [sp, #0x8]
 	mov	r0, #0x3
@@ -3992,21 +3988,21 @@ PrintAreaDescription:
 	mov	r2, #0x2
 	mov	r3, #0x0
 	bl	AddTextPrinterParameterized3
-	b	.L264
-.L267:
+	b	.L265
+.L268:
 	.align	2, 0
-.L266:
+.L267:
 	.word	sPassData
 	.word	sTextColors+0x3
 	.word	sPassAreaDescriptions
-.L263:
+.L264:
 	cmp	r4, #0
-	beq	.L264	@cond_branch
-	ldr	r0, .L268
+	beq	.L265	@cond_branch
+	ldr	r0, .L269
 	str	r0, [sp]
 	mov	r0, #0x0
 	str	r0, [sp, #0x4]
-	ldr	r1, .L268+0x4
+	ldr	r1, .L269+0x4
 	lsl	r0, r4, #0x2
 	add	r0, r0, r1
 	ldr	r0, [r0]
@@ -4016,7 +4012,7 @@ PrintAreaDescription:
 	mov	r2, #0x2
 	mov	r3, #0x0
 	bl	AddTextPrinterParameterized3
-.L264:
+.L265:
 	mov	r0, #0x3
 	mov	r1, #0x3
 	bl	CopyWindowToVram
@@ -4026,9 +4022,9 @@ PrintAreaDescription:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L269:
+.L270:
 	.align	2, 0
-.L268:
+.L269:
 	.word	sTextColors+0x3
 	.word	sPassAreaDescriptions
 .Lfe22:
@@ -4045,24 +4041,24 @@ sub_80C5F58:
 	lsr	r2, r0, #0x18
 	lsl	r1, r1, #0x18
 	lsr	r7, r1, #0x18
-	ldr	r0, .L282
+	ldr	r0, .L283
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0xe]
 	lsl	r0, r0, #0x1c
 	lsr	r0, r0, #0x1d
 	cmp	r0, #0x1
-	beq	.L272	@cond_branch
-	cmp	r0, #0x2
-	beq	.L275	@cond_branch
-	b	.L270
-.L283:
-	.align	2, 0
-.L282:
-	.word	sPassData
-.L272:
-	cmp	r2, #0
 	beq	.L273	@cond_branch
-	ldr	r0, .L284
+	cmp	r0, #0x2
+	beq	.L276	@cond_branch
+	b	.L271
+.L284:
+	.align	2, 0
+.L283:
+	.word	sPassData
+.L273:
+	cmp	r2, #0
+	beq	.L274	@cond_branch
+	ldr	r0, .L285
 	ldr	r0, [r0]
 	ldr	r1, [r0, #0x20]
 	mov	r0, #0xc
@@ -4075,12 +4071,12 @@ sub_80C5F58:
 	mov	r2, #0x10
 	mov	r3, #0x3
 	bl	CopyToBgTilemapBufferRect_ChangePalette
-	b	.L271
-.L285:
+	b	.L272
+.L286:
 	.align	2, 0
-.L284:
+.L285:
 	.word	sPassGfx
-.L273:
+.L274:
 	mov	r0, #0xc
 	str	r0, [sp]
 	mov	r0, #0x7
@@ -4092,11 +4088,11 @@ sub_80C5F58:
 	mov	r2, #0x10
 	mov	r3, #0x3
 	bl	FillBgTilemapBufferRect
-	b	.L271
-.L275:
+	b	.L272
+.L276:
 	cmp	r2, #0
-	beq	.L276	@cond_branch
-	ldr	r0, .L286
+	beq	.L277	@cond_branch
+	ldr	r0, .L287
 	ldr	r0, [r0]
 	ldr	r1, [r0, #0x20]
 	add	r1, r1, #0x54
@@ -4110,12 +4106,12 @@ sub_80C5F58:
 	mov	r2, #0x10
 	mov	r3, #0xa
 	bl	CopyToBgTilemapBufferRect_ChangePalette
-	b	.L271
-.L287:
+	b	.L272
+.L288:
 	.align	2, 0
-.L286:
+.L287:
 	.word	sPassGfx
-.L276:
+.L277:
 	mov	r0, #0xc
 	str	r0, [sp]
 	mov	r0, #0x7
@@ -4127,11 +4123,11 @@ sub_80C5F58:
 	mov	r2, #0x10
 	mov	r3, #0xa
 	bl	FillBgTilemapBufferRect
-.L271:
+.L272:
 	mov	r0, #0x2
 	bl	CopyBgTilemapBufferToVram
 	cmp	r7, #0
-	beq	.L280	@cond_branch
+	beq	.L281	@cond_branch
 	mov	r4, #0xfe
 	lsl	r4, r4, #0x1
 	add	r0, r4, #0
@@ -4143,8 +4139,8 @@ sub_80C5F58:
 	bl	MathUtil_Inv16
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
-	ldr	r5, .L288
-	ldr	r1, .L288+0x4
+	ldr	r5, .L289
+	ldr	r1, .L289+0x4
 	ldr	r1, [r1]
 	ldrb	r4, [r1, #0xe]
 	lsl	r4, r4, #0x1c
@@ -4183,13 +4179,13 @@ sub_80C5F58:
 	str	r0, [sp, #0xc]
 	mov	r0, #0x2
 	bl	SetBgAffine
-	b	.L270
-.L289:
+	b	.L271
+.L290:
 	.align	2, 0
-.L288:
+.L289:
 	.word	gUnknown_085713E0
 	.word	sPassData
-.L280:
+.L281:
 	mov	r4, #0x80
 	lsl	r4, r4, #0x1
 	add	r0, r4, #0
@@ -4201,8 +4197,8 @@ sub_80C5F58:
 	bl	MathUtil_Inv16
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
-	ldr	r5, .L290
-	ldr	r1, .L290+0x4
+	ldr	r5, .L291
+	ldr	r1, .L291+0x4
 	ldr	r1, [r1]
 	ldrb	r4, [r1, #0xe]
 	lsl	r4, r4, #0x1c
@@ -4240,16 +4236,16 @@ sub_80C5F58:
 	str	r7, [sp, #0xc]
 	mov	r0, #0x2
 	bl	SetBgAffine
-.L270:
+.L271:
 	add	sp, sp, #0x10
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L291:
+.L292:
 	.align	2, 0
-.L290:
+.L291:
 	.word	gUnknown_085713E0
 	.word	sPassData
 .Lfe23:
@@ -4265,20 +4261,20 @@ sub_80C6104:
 	lsl	r1, r1, #0x18
 	lsr	r5, r1, #0x18
 	cmp	r5, #0x2
-	beq	.L295	@cond_branch
-	cmp	r5, #0x2
-	bgt	.L304	@cond_branch
-	cmp	r5, #0x1
-	beq	.L294	@cond_branch
-	b	.L301
-.L304:
-	cmp	r5, #0x3
 	beq	.L296	@cond_branch
+	cmp	r5, #0x2
+	bgt	.L305	@cond_branch
+	cmp	r5, #0x1
+	beq	.L295	@cond_branch
+	b	.L302
+.L305:
+	cmp	r5, #0x3
+	beq	.L297	@cond_branch
 	cmp	r5, #0x4
-	beq	.L300	@cond_branch
-	b	.L301
-.L294:
-	ldr	r0, .L318
+	beq	.L301	@cond_branch
+	b	.L302
+.L295:
+	ldr	r0, .L319
 	ldr	r0, [r0]
 	ldr	r1, [r0, #0x24]
 	mov	r0, #0xc
@@ -4291,13 +4287,13 @@ sub_80C6104:
 	mov	r2, #0x10
 	mov	r3, #0x3
 	bl	CopyToBgTilemapBufferRect_ChangePalette
-	b	.L293
-.L319:
+	b	.L294
+.L320:
 	.align	2, 0
-.L318:
+.L319:
 	.word	sPassGfx
-.L295:
-	ldr	r0, .L320
+.L296:
+	ldr	r0, .L321
 	ldr	r0, [r0]
 	ldr	r1, [r0, #0x24]
 	mov	r0, #0xa8
@@ -4311,20 +4307,20 @@ sub_80C6104:
 	str	r0, [sp, #0x8]
 	mov	r0, #0x1
 	mov	r2, #0x10
-	b	.L316
-.L321:
+	b	.L317
+.L322:
 	.align	2, 0
-.L320:
+.L321:
 	.word	sPassGfx
-.L296:
-	ldr	r0, .L322
+.L297:
+	ldr	r0, .L323
 	ldr	r0, [r0]
 	ldrb	r1, [r0, #0xe]
 	mov	r0, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L301	@cond_branch
-	ldr	r0, .L322+0x4
+	beq	.L302	@cond_branch
+	ldr	r0, .L323+0x4
 	ldr	r0, [r0]
 	ldr	r1, [r0, #0x28]
 	mov	r0, #0xc
@@ -4334,17 +4330,17 @@ sub_80C6104:
 	str	r0, [sp, #0x8]
 	mov	r0, #0x1
 	mov	r2, #0x2
-.L316:
+.L317:
 	mov	r3, #0xa
 	bl	CopyToBgTilemapBufferRect_ChangePalette
-	b	.L293
-.L323:
+	b	.L294
+.L324:
 	.align	2, 0
-.L322:
+.L323:
 	.word	sPassData
 	.word	sPassGfx
-.L300:
-	ldr	r1, .L324
+.L301:
+	ldr	r1, .L325
 	mov	r0, #0x9
 	str	r0, [sp]
 	mov	r0, #0x2
@@ -4355,33 +4351,33 @@ sub_80C6104:
 	mov	r2, #0x15
 	mov	r3, #0x0
 	bl	CopyToBgTilemapBufferRect_ChangePalette
-	b	.L293
-.L325:
+	b	.L294
+.L326:
 	.align	2, 0
-.L324:
+.L325:
 	.word	gUnknown_08DE3350
-.L301:
+.L302:
 	sub	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x3
-	bhi	.L292	@cond_branch
-.L293:
+	bhi	.L293	@cond_branch
+.L294:
 	cmp	r4, #0x2
-	beq	.L307	@cond_branch
-	cmp	r4, #0x2
-	bgt	.L315	@cond_branch
-	cmp	r4, #0x1
-	beq	.L306	@cond_branch
-	b	.L312
-.L315:
-	cmp	r4, #0x3
 	beq	.L308	@cond_branch
+	cmp	r4, #0x2
+	bgt	.L316	@cond_branch
+	cmp	r4, #0x1
+	beq	.L307	@cond_branch
+	b	.L313
+.L316:
+	cmp	r4, #0x3
+	beq	.L309	@cond_branch
 	cmp	r4, #0x4
-	beq	.L311	@cond_branch
-	b	.L312
-.L306:
-	ldr	r0, .L326
+	beq	.L312	@cond_branch
+	b	.L313
+.L307:
+	ldr	r0, .L327
 	ldr	r0, [r0]
 	ldr	r1, [r0, #0x24]
 	add	r1, r1, #0xa8
@@ -4395,13 +4391,13 @@ sub_80C6104:
 	mov	r2, #0x10
 	mov	r3, #0x3
 	bl	CopyToBgTilemapBufferRect_ChangePalette
-	b	.L305
-.L327:
+	b	.L306
+.L328:
 	.align	2, 0
-.L326:
+.L327:
 	.word	sPassGfx
-.L307:
-	ldr	r0, .L328
+.L308:
+	ldr	r0, .L329
 	ldr	r0, [r0]
 	ldr	r1, [r0, #0x24]
 	mov	r0, #0xfc
@@ -4415,20 +4411,20 @@ sub_80C6104:
 	str	r0, [sp, #0x8]
 	mov	r0, #0x1
 	mov	r2, #0x10
-	b	.L317
-.L329:
+	b	.L318
+.L330:
 	.align	2, 0
-.L328:
+.L329:
 	.word	sPassGfx
-.L308:
-	ldr	r0, .L330
+.L309:
+	ldr	r0, .L331
 	ldr	r0, [r0]
 	ldrb	r1, [r0, #0xe]
 	mov	r0, #0x1
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L292	@cond_branch
-	ldr	r0, .L330+0x4
+	beq	.L293	@cond_branch
+	ldr	r0, .L331+0x4
 	ldr	r0, [r0]
 	ldr	r1, [r0, #0x28]
 	add	r1, r1, #0x48
@@ -4439,17 +4435,17 @@ sub_80C6104:
 	str	r0, [sp, #0x8]
 	mov	r0, #0x1
 	mov	r2, #0x2
-.L317:
+.L318:
 	mov	r3, #0xa
 	bl	CopyToBgTilemapBufferRect_ChangePalette
-	b	.L305
-.L331:
+	b	.L306
+.L332:
 	.align	2, 0
-.L330:
+.L331:
 	.word	sPassData
 	.word	sPassGfx
-.L311:
-	ldr	r1, .L332
+.L312:
+	ldr	r1, .L333
 	mov	r0, #0x9
 	str	r0, [sp]
 	mov	r0, #0x2
@@ -4460,21 +4456,21 @@ sub_80C6104:
 	mov	r2, #0x15
 	mov	r3, #0x0
 	bl	CopyToBgTilemapBufferRect_ChangePalette
-	b	.L305
-.L333:
+	b	.L306
+.L334:
 	.align	2, 0
-.L332:
+.L333:
 	.word	gUnknown_08DE3374
-.L312:
+.L313:
 	sub	r0, r5, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
 	cmp	r0, #0x3
-	bhi	.L292	@cond_branch
-.L305:
+	bhi	.L293	@cond_branch
+.L306:
 	mov	r0, #0x1
 	bl	CopyBgTilemapBufferToVram
-.L292:
+.L293:
 	add	sp, sp, #0xc
 	pop	{r4, r5}
 	pop	{r0}
@@ -4486,12 +4482,12 @@ sub_80C6104:
 	.thumb_func
 sub_80C629C:
 	push	{r4, lr}
-	ldr	r1, .L335
+	ldr	r1, .L336
 	mov	r0, #0x1
 	mov	r2, #0x0
 	mov	r3, #0x0
 	bl	CopyToBgTilemapBuffer
-	ldr	r4, .L335+0x4
+	ldr	r4, .L336+0x4
 	ldr	r1, [r4]
 	ldrb	r0, [r1, #0xc]
 	ldrb	r1, [r1, #0xd]
@@ -4508,9 +4504,9 @@ sub_80C629C:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L336:
+.L337:
 	.align	2, 0
-.L335:
+.L336:
 	.word	gUnknown_08DE3060
 	.word	sPassData
 .Lfe25:
@@ -4527,16 +4523,16 @@ LoadCursorAndSymbolSprites:
 	mov	r5, #0x0
 	bl	FreeAllSpritePalettes
 	bl	ResetAffineAnimData
-	ldr	r0, .L344
+	ldr	r0, .L345
 	bl	LoadSpritePalettes
-	ldr	r4, .L344+0x4
+	ldr	r4, .L345+0x4
 	add	r0, r4, #0
 	bl	LoadCompressedSpriteSheet
 	add	r4, r4, #0x10
 	add	r0, r4, #0
 	bl	LoadCompressedSpriteSheet
-	ldr	r0, .L344+0x8
-	ldr	r1, .L344+0xc
+	ldr	r0, .L345+0x8
+	ldr	r1, .L345+0xc
 	ldr	r2, [r1]
 	mov	r3, #0x8
 	ldrsh	r1, [r2, r3]
@@ -4546,12 +4542,12 @@ LoadCursorAndSymbolSprites:
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
 	lsr	r0, r0, #0x18
-	ldr	r3, .L344+0x10
+	ldr	r3, .L345+0x10
 	ldr	r2, [r3]
 	lsl	r1, r0, #0x4
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
-	ldr	r0, .L344+0x14
+	ldr	r0, .L345+0x14
 	add	r1, r1, r0
 	str	r1, [r2]
 	ldrb	r2, [r1, #0x5]
@@ -4561,29 +4557,29 @@ LoadCursorAndSymbolSprites:
 	strb	r0, [r1, #0x5]
 	mov	r8, sp
 	mov	r9, r3
-.L341:
-	ldr	r0, .L344+0xc
+.L342:
+	ldr	r0, .L345+0xc
 	ldr	r0, [r0]
 	add	r0, r0, #0xf
 	add	r2, r0, r5
 	ldrb	r0, [r2]
 	add	r4, r5, #0x1
 	cmp	r0, #0
-	beq	.L340	@cond_branch
+	beq	.L341	@cond_branch
 	mov	r1, sp
-	ldr	r0, .L344+0x18
+	ldr	r0, .L345+0x18
 	ldmia	r0!, {r3, r6, r7}
 	stmia	r1!, {r3, r6, r7}
 	ldmia	r0!, {r3, r6, r7}
 	stmia	r1!, {r3, r6, r7}
 	mov	r7, r8
 	ldrh	r0, [r7, #0x2]
-	ldr	r1, .L344+0x1c
+	ldr	r1, .L345+0x1c
 	add	r0, r0, r1
 	ldrb	r2, [r2]
 	add	r0, r0, r2
 	strh	r0, [r7, #0x2]
-	ldr	r1, .L344+0x20
+	ldr	r1, .L345+0x20
 	add	r0, r5, #0x6
 	lsl	r0, r0, #0x3
 	add	r0, r0, r1
@@ -4609,7 +4605,7 @@ LoadCursorAndSymbolSprites:
 	lsl	r1, r0, #0x4
 	add	r1, r1, r0
 	lsl	r1, r1, #0x2
-	ldr	r0, .L344+0x14
+	ldr	r0, .L345+0x14
 	add	r1, r1, r0
 	str	r1, [r2]
 	ldrb	r2, [r1, #0x5]
@@ -4627,11 +4623,11 @@ LoadCursorAndSymbolSprites:
 	ldr	r0, [r0]
 	add	r1, r5, #0
 	bl	StartSpriteAnim
-.L340:
+.L341:
 	lsl	r0, r4, #0x18
 	lsr	r5, r0, #0x18
 	cmp	r5, #0x6
-	bls	.L341	@cond_branch
+	bls	.L342	@cond_branch
 	add	sp, sp, #0x18
 	pop	{r3, r4}
 	mov	r8, r3
@@ -4639,9 +4635,9 @@ LoadCursorAndSymbolSprites:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L345:
+.L346:
 	.align	2, 0
-.L344:
+.L345:
 	.word	sSpritePalettes
 	.word	sCursorSpriteSheets
 	.word	sSpriteTemplates_Cursors
@@ -4659,33 +4655,33 @@ LoadCursorAndSymbolSprites:
 FreeCursorAndSymbolSprites:
 	push	{r4, r5, r6, lr}
 	mov	r5, #0x0
-	ldr	r4, .L353
+	ldr	r4, .L354
 	ldr	r0, [r4]
 	ldr	r0, [r0]
 	bl	DestroySprite
 	ldr	r0, [r4]
 	str	r5, [r0]
 	add	r6, r4, #0
-.L350:
+.L351:
 	ldr	r0, [r6]
 	lsl	r4, r5, #0x2
 	add	r0, r0, #0x4
 	add	r0, r0, r4
 	ldr	r0, [r0]
 	cmp	r0, #0
-	beq	.L349	@cond_branch
+	beq	.L350	@cond_branch
 	bl	DestroySprite
 	ldr	r0, [r6]
 	add	r0, r0, #0x4
 	add	r0, r0, r4
 	mov	r1, #0x0
 	str	r1, [r0]
-.L349:
+.L350:
 	add	r0, r5, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	cmp	r5, #0x6
-	bls	.L350	@cond_branch
+	bls	.L351	@cond_branch
 	bl	FreeAllSpritePalettes
 	mov	r0, #0x2
 	bl	FreeSpriteTilesByTag
@@ -4694,9 +4690,9 @@ FreeCursorAndSymbolSprites:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L354:
+.L355:
 	.align	2, 0
-.L353:
+.L354:
 	.word	sPassGfx
 .Lfe27:
 	.size	 FreeCursorAndSymbolSprites,.Lfe27-FreeCursorAndSymbolSprites
@@ -4713,29 +4709,29 @@ SpriteCb_Dummy:
 ShowFrontierMap:
 	push	{r4, r5, lr}
 	add	r4, r0, #0
-	ldr	r5, .L358
+	ldr	r5, .L359
 	ldr	r0, [r5]
 	cmp	r0, #0
-	beq	.L357	@cond_branch
+	beq	.L358	@cond_branch
 	add	r0, r4, #0
 	bl	SetMainCallback2
-.L357:
-	ldr	r0, .L358+0x4
+.L358:
+	ldr	r0, .L359+0x4
 	bl	AllocZeroed
 	str	r0, [r5]
 	str	r4, [r0]
 	bl	ResetTasks
-	ldr	r0, .L358+0x8
+	ldr	r0, .L359+0x8
 	mov	r1, #0x0
 	bl	CreateTask
-	ldr	r0, .L358+0xc
+	ldr	r0, .L359+0xc
 	bl	SetMainCallback2
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-.L359:
+.L360:
 	.align	2, 0
-.L358:
+.L359:
 	.word	sMapData
 	.word	0x3014
 	.word	Task_HandleFrontierMap
@@ -4748,12 +4744,12 @@ ShowFrontierMap:
 FreeFrontierMap:
 	push	{r4, lr}
 	bl	ResetTasks
-	ldr	r4, .L361
+	ldr	r4, .L362
 	ldr	r0, [r4]
 	ldr	r0, [r0]
 	bl	SetMainCallback2
 	ldr	r0, [r4]
-	ldr	r2, .L361+0x4
+	ldr	r2, .L362+0x4
 	mov	r1, #0x0
 	bl	memset
 	ldr	r0, [r4]
@@ -4763,9 +4759,9 @@ FreeFrontierMap:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-.L362:
+.L363:
 	.align	2, 0
-.L361:
+.L362:
 	.word	sMapData
 	.word	0x3014
 .Lfe30:
@@ -4776,68 +4772,68 @@ FreeFrontierMap:
 InitFrontierMap:
 	push	{r4, r5, lr}
 	add	sp, sp, #-0x8
-	ldr	r0, .L380
+	ldr	r0, .L381
 	ldr	r0, [r0]
 	ldrh	r0, [r0, #0x4]
 	cmp	r0, #0x7
-	bls	.LCB3266
-	b	.L364	@long jump
-.LCB3266:
+	bls	.LCB3261
+	b	.L365	@long jump
+.LCB3261:
 	lsl	r0, r0, #0x2
-	ldr	r1, .L380+0x4
+	ldr	r1, .L381+0x4
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
+.L382:
+	.align	2, 0
 .L381:
-	.align	2, 0
-.L380:
 	.word	sPassData
-	.word	.L375
+	.word	.L376
 	.align	2, 0
 	.align	2, 0
-.L375:
-	.word	.L365
+.L376:
 	.word	.L366
 	.word	.L367
 	.word	.L368
 	.word	.L369
 	.word	.L370
-	.word	.L372
+	.word	.L371
 	.word	.L373
-.L365:
+	.word	.L374
+.L366:
 	mov	r0, #0x0
 	bl	SetVBlankCallback
 	bl	ScanlineEffect_Stop
 	bl	SetVBlankHBlankCallbacksToNull
-	b	.L364
-.L366:
-	bl	ResetGpuRegsAndBgs
-	b	.L364
+	b	.L365
 .L367:
+	bl	ResetGpuRegsAndBgs
+	b	.L365
+.L368:
 	bl	ResetSpriteData
 	bl	FreeAllSpritePalettes
 	bl	ResetPaletteFade
 	bl	ResetTempTileDataBuffers
-	b	.L364
-.L368:
+	b	.L365
+.L369:
 	mov	r0, #0x0
 	bl	ResetBgsAndClearDma3BusyFlags
-	ldr	r1, .L382
+	ldr	r1, .L383
 	mov	r0, #0x0
 	mov	r2, #0x3
 	bl	InitBgsFromTemplates
-	ldr	r4, .L382+0x4
+	ldr	r4, .L383+0x4
 	ldr	r1, [r4]
 	add	r1, r1, #0x12
 	mov	r0, #0x0
 	bl	SetBgTilemapBuffer
 	ldr	r1, [r4]
-	ldr	r0, .L382+0x8
+	ldr	r0, .L383+0x8
 	add	r1, r1, r0
 	mov	r0, #0x1
 	bl	SetBgTilemapBuffer
 	ldr	r1, [r4]
-	ldr	r0, .L382+0xc
+	ldr	r0, .L383+0xc
 	add	r1, r1, r0
 	mov	r0, #0x2
 	bl	SetBgTilemapBuffer
@@ -4868,38 +4864,38 @@ InitFrontierMap:
 	bl	CopyBgTilemapBufferToVram
 	mov	r0, #0x1
 	bl	CopyBgTilemapBufferToVram
-	b	.L378
-.L383:
+	b	.L379
+.L384:
 	.align	2, 0
-.L382:
+.L383:
 	.word	sMapBgTemplates
 	.word	sMapData
 	.word	0x1012
 	.word	0x2012
-.L369:
-	ldr	r0, .L384
+.L370:
+	ldr	r0, .L385
 	bl	InitWindows
 	bl	DeactivateAllTextPrinters
 	bl	PrintOnFrontierMap
-	ldr	r1, .L384+0x4
+	ldr	r1, .L385+0x4
 	mov	r0, #0x0
 	str	r0, [sp]
 	mov	r0, #0x1
 	mov	r2, #0x0
 	mov	r3, #0x0
 	bl	DecompressAndCopyTileDataToVram
-	b	.L364
-.L385:
+	b	.L365
+.L386:
 	.align	2, 0
-.L384:
+.L385:
 	.word	sMapWindowTemplates
 	.word	gUnknown_0856FBBC
-.L370:
+.L371:
 	bl	FreeTempTileDataBuffersIfPossible
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L379	@cond_branch
-	ldr	r0, .L386
+	bne	.L380	@cond_branch
+	ldr	r0, .L387
 	mov	r2, #0xd0
 	lsl	r2, r2, #0x1
 	mov	r1, #0x0
@@ -4909,21 +4905,21 @@ InitFrontierMap:
 	mov	r1, #0xf0
 	mov	r2, #0x20
 	bl	LoadPalette
-	ldr	r1, .L386+0x4
+	ldr	r1, .L387+0x4
 	mov	r0, #0x2
 	mov	r2, #0x0
 	mov	r3, #0x0
 	bl	CopyToBgTilemapBuffer
-.L378:
+.L379:
 	mov	r0, #0x2
 	bl	CopyBgTilemapBufferToVram
-	b	.L364
-.L387:
+	b	.L365
+.L388:
 	.align	2, 0
-.L386:
+.L387:
 	.word	gUnknown_08DE07C8
 	.word	gUnknown_08570E00
-.L372:
+.L373:
 	mov	r1, #0x82
 	lsl	r1, r1, #0x5
 	mov	r0, #0x0
@@ -4935,11 +4931,11 @@ InitFrontierMap:
 	mov	r0, #0x2
 	bl	ShowBg
 	bl	InitFrontierMapSprites
-	ldr	r0, .L388
+	ldr	r0, .L389
 	bl	SetVBlankCallback
 	mov	r5, #0x1
 	neg	r5, r5
-	ldr	r4, .L388+0x4
+	ldr	r4, .L389+0x4
 	add	r0, r5, #0
 	mov	r1, #0x10
 	add	r2, r4, #0
@@ -4950,43 +4946,43 @@ InitFrontierMap:
 	mov	r2, #0x10
 	mov	r3, #0x0
 	bl	BeginNormalPaletteFade
-	b	.L364
-.L389:
+	b	.L365
+.L390:
 	.align	2, 0
-.L388:
+.L389:
 	.word	VblankCb_FrontierPass
 	.word	0x7fff
-.L373:
+.L374:
 	bl	UpdatePaletteFade
 	lsl	r0, r0, #0x18
 	lsr	r1, r0, #0x18
 	cmp	r1, #0
-	bne	.L379	@cond_branch
-	ldr	r0, .L390
+	bne	.L380	@cond_branch
+	ldr	r0, .L391
 	ldr	r0, [r0]
 	strh	r1, [r0, #0x4]
 	mov	r0, #0x1
-	b	.L377
-.L391:
+	b	.L378
+.L392:
 	.align	2, 0
-.L390:
+.L391:
 	.word	sPassData
-.L364:
-	ldr	r0, .L392
+.L365:
+	ldr	r0, .L393
 	ldr	r1, [r0]
 	ldrh	r0, [r1, #0x4]
 	add	r0, r0, #0x1
 	strh	r0, [r1, #0x4]
-.L379:
+.L380:
 	mov	r0, #0x0
-.L377:
+.L378:
 	add	sp, sp, #0x8
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-.L393:
+.L394:
 	.align	2, 0
-.L392:
+.L393:
 	.word	sPassData
 .Lfe31:
 	.size	 InitFrontierMap,.Lfe31-InitFrontierMap
@@ -4996,49 +4992,49 @@ InitFrontierMap:
 ExitFrontierMap:
 	push	{r4, lr}
 	add	sp, sp, #-0x4
-	ldr	r0, .L410
+	ldr	r0, .L411
 	ldr	r0, [r0]
 	ldrh	r0, [r0, #0x4]
 	cmp	r0, #0x5
-	bhi	.L395	@cond_branch
+	bhi	.L396	@cond_branch
 	lsl	r0, r0, #0x2
-	ldr	r1, .L410+0x4
+	ldr	r1, .L411+0x4
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
+.L412:
+	.align	2, 0
 .L411:
-	.align	2, 0
-.L410:
 	.word	sPassData
-	.word	.L406
+	.word	.L407
 	.align	2, 0
 	.align	2, 0
-.L406:
-	.word	.L396
+.L407:
 	.word	.L397
-	.word	.L399
+	.word	.L398
 	.word	.L400
-	.word	.L404
+	.word	.L401
 	.word	.L405
-.L396:
+	.word	.L406
+.L397:
 	mov	r0, #0x1
 	neg	r0, r0
-	ldr	r1, .L412
+	ldr	r1, .L413
 	str	r1, [sp]
 	mov	r1, #0x0
 	mov	r2, #0x0
 	mov	r3, #0x10
 	bl	BeginNormalPaletteFade
-	b	.L395
-.L413:
+	b	.L396
+.L414:
 	.align	2, 0
-.L412:
+.L413:
 	.word	0x7fff
-.L397:
+.L398:
 	bl	UpdatePaletteFade
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	bne	.L409	@cond_branch
+	bne	.L410	@cond_branch
 	mov	r0, #0x0
 	mov	r1, #0x0
 	bl	SetGpuReg
@@ -5048,83 +5044,83 @@ ExitFrontierMap:
 	bl	HideBg
 	mov	r0, #0x2
 	bl	HideBg
-	b	.L395
-.L399:
+	b	.L396
+.L400:
 	mov	r0, #0x0
 	bl	SetVBlankCallback
 	bl	ScanlineEffect_Stop
 	bl	SetVBlankHBlankCallbacksToNull
-	b	.L395
-.L400:
-	ldr	r4, .L414
+	b	.L396
+.L401:
+	ldr	r4, .L415
 	ldr	r0, [r4]
 	ldr	r0, [r0, #0x4]
 	cmp	r0, #0
-	beq	.L401	@cond_branch
+	beq	.L402	@cond_branch
 	bl	DestroySprite
 	mov	r0, #0x0
 	bl	FreeSpriteTilesByTag
-.L401:
+.L402:
 	ldr	r0, [r4]
 	ldr	r0, [r0, #0xc]
 	cmp	r0, #0
-	beq	.L402	@cond_branch
+	beq	.L403	@cond_branch
 	bl	DestroySprite
 	mov	r0, #0x1
 	bl	FreeSpriteTilesByTag
-.L402:
+.L403:
 	ldr	r0, [r4]
 	ldr	r0, [r0, #0x8]
 	cmp	r0, #0
-	beq	.L403	@cond_branch
+	beq	.L404	@cond_branch
 	bl	DestroySprite
 	mov	r0, #0x4
 	bl	FreeSpriteTilesByTag
-.L403:
-	bl	FreeAllWindowBuffers
-	b	.L395
-.L415:
-	.align	2, 0
-.L414:
-	.word	sMapData
 .L404:
+	bl	FreeAllWindowBuffers
+	b	.L396
+.L416:
+	.align	2, 0
+.L415:
+	.word	sMapData
+.L405:
 	bl	ResetGpuRegsAndBgs
 	bl	ResetSpriteData
 	bl	FreeAllSpritePalettes
-	b	.L395
-.L405:
+	b	.L396
+.L406:
 	mov	r0, #0x0
 	bl	UnsetBgTilemapBuffer
 	mov	r0, #0x1
 	bl	UnsetBgTilemapBuffer
 	mov	r0, #0x2
 	bl	UnsetBgTilemapBuffer
-	ldr	r0, .L416
+	ldr	r0, .L417
 	ldr	r1, [r0]
 	mov	r0, #0x0
 	strh	r0, [r1, #0x4]
 	mov	r0, #0x1
-	b	.L408
-.L417:
+	b	.L409
+.L418:
 	.align	2, 0
-.L416:
+.L417:
 	.word	sPassData
-.L395:
-	ldr	r0, .L418
+.L396:
+	ldr	r0, .L419
 	ldr	r1, [r0]
 	ldrh	r0, [r1, #0x4]
 	add	r0, r0, #0x1
 	strh	r0, [r1, #0x4]
-.L409:
+.L410:
 	mov	r0, #0x0
-.L408:
+.L409:
 	add	sp, sp, #0x4
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-.L419:
+.L420:
 	.align	2, 0
-.L418:
+.L419:
 	.word	sPassData
 .Lfe32:
 	.size	 ExitFrontierMap,.Lfe32-ExitFrontierMap
@@ -5138,158 +5134,158 @@ Task_HandleFrontierMap:
 	lsl	r0, r2, #0x2
 	add	r0, r0, r2
 	lsl	r0, r0, #0x3
-	ldr	r1, .L448
+	ldr	r1, .L449
 	add	r4, r0, r1
 	mov	r1, #0x0
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x5
-	bls	.LCB3692
-	b	.L421	@long jump
-.LCB3692:
+	bls	.LCB3687
+	b	.L422	@long jump
+.LCB3687:
 	lsl	r0, r0, #0x2
-	ldr	r1, .L448+0x4
+	ldr	r1, .L449+0x4
 	add	r0, r0, r1
 	ldr	r0, [r0]
 	mov	pc, r0
+.L450:
+	.align	2, 0
 .L449:
-	.align	2, 0
-.L448:
 	.word	gTasks+0x8
+	.word	.L444
+	.align	2, 0
+	.align	2, 0
+.L444:
+	.word	.L423
+	.word	.L425
+	.word	.L435
+	.word	.L438
+	.word	.L441
 	.word	.L443
-	.align	2, 0
-	.align	2, 0
-.L443:
-	.word	.L422
-	.word	.L424
-	.word	.L434
-	.word	.L437
-	.word	.L440
-	.word	.L442
-.L422:
+.L423:
 	bl	InitFrontierMap
-	b	.L445
-.L424:
-	ldr	r0, .L450
+	b	.L446
+.L425:
+	ldr	r0, .L451
 	ldrh	r1, [r0, #0x2e]
 	mov	r2, #0x2
 	add	r0, r2, #0
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L425	@cond_branch
+	beq	.L426	@cond_branch
 	mov	r0, #0x3
 	bl	PlaySE
 	mov	r0, #0x4
-	b	.L446
-.L451:
+	b	.L447
+.L452:
 	.align	2, 0
-.L450:
+.L451:
 	.word	gMain
-.L425:
+.L426:
 	mov	r0, #0x80
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L427	@cond_branch
-	ldr	r0, .L452
+	beq	.L428	@cond_branch
+	ldr	r0, .L453
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x10]
 	cmp	r0, #0x5
-	bls	.L428	@cond_branch
+	bls	.L429	@cond_branch
 	mov	r0, #0x0
 	bl	HandleFrontierMapCursorMove
-	b	.L420
-.L453:
+	b	.L421
+.L454:
 	.align	2, 0
-.L452:
+.L453:
 	.word	sMapData
-.L428:
+.L429:
 	strh	r2, [r4]
-	b	.L420
-.L427:
+	b	.L421
+.L428:
 	mov	r0, #0x40
 	and	r0, r0, r1
 	cmp	r0, #0
-	beq	.L420	@cond_branch
-	ldr	r0, .L454
+	beq	.L421	@cond_branch
+	ldr	r0, .L455
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x10]
 	cmp	r0, #0
-	bne	.L432	@cond_branch
+	bne	.L433	@cond_branch
 	mov	r0, #0x1
 	bl	HandleFrontierMapCursorMove
-	b	.L420
-.L455:
+	b	.L421
+.L456:
 	.align	2, 0
-.L454:
+.L455:
 	.word	sMapData
-.L432:
+.L433:
 	mov	r0, #0x3
-	b	.L446
-.L434:
+	b	.L447
+.L435:
 	mov	r1, #0x2
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x3
-	ble	.L435	@cond_branch
+	ble	.L436	@cond_branch
 	mov	r0, #0x0
 	bl	HandleFrontierMapCursorMove
 	mov	r0, #0x0
 	strh	r0, [r4, #0x2]
 	mov	r0, #0x1
-	b	.L446
-.L435:
-	ldr	r0, .L456
+	b	.L447
+.L436:
+	ldr	r0, .L457
 	ldr	r0, [r0]
 	ldr	r1, [r0, #0x4]
 	ldrh	r0, [r1, #0x22]
 	add	r0, r0, #0x4
-	b	.L447
-.L457:
+	b	.L448
+.L458:
 	.align	2, 0
-.L456:
+.L457:
 	.word	sMapData
-.L437:
+.L438:
 	mov	r1, #0x2
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0x3
-	ble	.L438	@cond_branch
+	ble	.L439	@cond_branch
 	mov	r0, #0x1
 	bl	HandleFrontierMapCursorMove
 	mov	r0, #0x0
 	strh	r0, [r4, #0x2]
 	mov	r0, #0x1
-	b	.L446
-.L438:
-	ldr	r0, .L458
+	b	.L447
+.L439:
+	ldr	r0, .L459
 	ldr	r0, [r0]
 	ldr	r1, [r0, #0x4]
 	ldrh	r0, [r1, #0x22]
 	sub	r0, r0, #0x4
-.L447:
+.L448:
 	strh	r0, [r1, #0x22]
 	ldrh	r0, [r4, #0x2]
 	add	r0, r0, #0x1
 	strh	r0, [r4, #0x2]
-	b	.L420
-.L459:
+	b	.L421
+.L460:
 	.align	2, 0
-.L458:
+.L459:
 	.word	sMapData
-.L440:
+.L441:
 	bl	ExitFrontierMap
-.L445:
+.L446:
 	cmp	r0, #0
-	bne	.L421	@cond_branch
-	b	.L420
-.L442:
+	bne	.L422	@cond_branch
+	b	.L421
+.L443:
 	add	r0, r2, #0
 	bl	DestroyTask
 	bl	FreeFrontierMap
-	b	.L420
-.L421:
+	b	.L421
+.L422:
 	ldrh	r0, [r4]
 	add	r0, r0, #0x1
-.L446:
+.L447:
 	strh	r0, [r4]
-.L420:
+.L421:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
@@ -5302,81 +5298,81 @@ MapNumToFrontierFacilityId:
 	push	{lr}
 	lsl	r0, r0, #0x10
 	lsr	r1, r0, #0x10
-	ldr	r2, .L477
+	ldr	r2, .L478
 	add	r0, r0, r2
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x3
-	bls	.L462	@cond_branch
+	bls	.L463	@cond_branch
 	add	r0, r1, #0
 	sub	r0, r0, #0xf
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x2
-	bhi	.L461	@cond_branch
-.L462:
+	bhi	.L462	@cond_branch
+.L463:
 	mov	r0, #0x1
-	b	.L476
-.L478:
+	b	.L477
+.L479:
 	.align	2, 0
-.L477:
+.L478:
 	.word	-0x50000
-.L461:
+.L462:
 	add	r0, r1, #0
 	sub	r0, r0, #0x12
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x3
-	bhi	.L464	@cond_branch
+	bhi	.L465	@cond_branch
 	mov	r0, #0x2
-	b	.L476
-.L464:
+	b	.L477
+.L465:
 	add	r0, r1, #0
 	sub	r0, r0, #0x16
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x2
-	bhi	.L466	@cond_branch
+	bhi	.L467	@cond_branch
 	mov	r0, #0x3
-	b	.L476
-.L466:
+	b	.L477
+.L467:
 	add	r0, r1, #0
 	sub	r0, r0, #0x1c
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x2
-	bhi	.L468	@cond_branch
+	bhi	.L469	@cond_branch
 	mov	r0, #0x4
-	b	.L476
-.L468:
+	b	.L477
+.L469:
 	add	r0, r1, #0
 	sub	r0, r0, #0x1f
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x2
-	bhi	.L470	@cond_branch
+	bhi	.L471	@cond_branch
 	mov	r0, #0x5
-	b	.L476
-.L470:
+	b	.L477
+.L471:
 	add	r0, r1, #0
 	sub	r0, r0, #0x22
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x5
-	bhi	.L472	@cond_branch
+	bhi	.L473	@cond_branch
 	mov	r0, #0x6
-	b	.L476
-.L472:
+	b	.L477
+.L473:
 	add	r0, r1, #0
 	sub	r0, r0, #0x19
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	cmp	r0, #0x2
-	bls	.L474	@cond_branch
+	bls	.L475	@cond_branch
 	mov	r0, #0x0
-	b	.L476
-.L474:
+	b	.L477
+.L475:
 	mov	r0, #0x7
-.L476:
+.L477:
 	pop	{r1}
 	bx	r1
 .Lfe34:
@@ -5392,14 +5388,14 @@ InitFrontierMapSprites:
 	add	sp, sp, #-0x18
 	mov	r7, #0x0
 	bl	FreeAllSpritePalettes
-	ldr	r0, .L497
+	ldr	r0, .L498
 	bl	LoadSpritePalettes
-	ldr	r6, .L497+0x4
+	ldr	r6, .L498+0x4
 	add	r0, r6, #0
 	bl	LoadCompressedSpriteSheet
-	ldr	r0, .L497+0x8
+	ldr	r0, .L498+0x8
 	mov	r8, r0
-	ldr	r4, .L497+0xc
+	ldr	r4, .L498+0xc
 	ldr	r0, [r4]
 	ldrb	r2, [r0, #0x10]
 	lsl	r2, r2, #0x4
@@ -5414,7 +5410,7 @@ InitFrontierMapSprites:
 	lsl	r1, r3, #0x4
 	add	r1, r1, r3
 	lsl	r1, r1, #0x2
-	ldr	r2, .L497+0x10
+	ldr	r2, .L498+0x10
 	mov	r9, r2
 	add	r1, r1, r9
 	str	r1, [r0, #0x4]
@@ -5440,7 +5436,7 @@ InitFrontierMapSprites:
 	bl	LoadCompressedSpriteSheet
 	mov	r3, #0x18
 	add	r8, r8, r3
-	ldr	r6, .L497+0x14
+	ldr	r6, .L498+0x14
 	ldr	r0, [r4]
 	ldrb	r0, [r0, #0x10]
 	lsl	r0, r0, #0x4
@@ -5474,22 +5470,22 @@ InitFrontierMapSprites:
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	cmp	r5, #0x3a
-	beq	.L481	@cond_branch
+	beq	.L482	@cond_branch
 	cmp	r5, #0xca
-	beq	.LCB4096
-	b	.L480	@long jump
-.LCB4096:
-.L481:
-	ldr	r4, .L497+0x18
+	beq	.LCB4091
+	b	.L481	@long jump
+.LCB4091:
+.L482:
+	ldr	r4, .L498+0x18
 	ldr	r2, [r4]
 	mov	r0, #0x5
 	ldrsb	r0, [r2, r0]
 	cmp	r0, #0x4
-	beq	.L483	@cond_branch
+	beq	.L484	@cond_branch
 	cmp	r0, #0xe
-	bne	.L482	@cond_branch
+	bne	.L483	@cond_branch
 	mov	r7, #0x37
-.L483:
+.L484:
 	lsl	r0, r7, #0x10
 	asr	r0, r0, #0x10
 	ldrh	r6, [r2]
@@ -5498,24 +5494,24 @@ InitFrontierMapSprites:
 	lsl	r0, r0, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0
-	bge	.L484	@cond_branch
+	bge	.L485	@cond_branch
 	add	r0, r0, #0x7
-.L484:
+.L485:
 	lsl	r0, r0, #0xd
 	lsr	r7, r0, #0x10
 	lsl	r0, r4, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0
-	bge	.L485	@cond_branch
+	bge	.L486	@cond_branch
 	add	r0, r0, #0x7
-.L485:
+.L486:
 	lsl	r0, r0, #0xd
 	lsr	r4, r0, #0x10
 	mov	r5, #0x0
-	b	.L486
-.L498:
+	b	.L487
+.L499:
 	.align	2, 0
-.L497:
+.L498:
 	.word	sSpritePalettes
 	.word	sCursorSpriteSheets
 	.word	sSpriteTemplates_Cursors
@@ -5523,21 +5519,21 @@ InitFrontierMapSprites:
 	.word	gSprites
 	.word	sMapLandmarks
 	.word	gSaveBlock1Ptr
-.L482:
+.L483:
 	lsl	r0, r0, #0x10
 	lsr	r0, r0, #0x10
 	bl	MapNumToFrontierFacilityId
 	lsl	r0, r0, #0x18
 	lsr	r5, r0, #0x18
 	cmp	r5, #0
-	beq	.L487	@cond_branch
+	beq	.L488	@cond_branch
 	sub	r0, r5, #0x1
 	lsl	r0, r0, #0x4
 	add	r0, r0, r6
 	ldrh	r7, [r0, #0x8]
 	ldrh	r4, [r0, #0xa]
-	b	.L486
-.L487:
+	b	.L487
+.L488:
 	ldr	r1, [r4]
 	add	r0, r1, #0
 	add	r0, r0, #0x25
@@ -5545,63 +5541,63 @@ InitFrontierMapSprites:
 	lsl	r0, r0, #24
 	asr	r0, r0, #24
 	cmp	r0, #0xe
-	bne	.L489	@cond_branch
+	bne	.L490	@cond_branch
 	ldrh	r0, [r1, #0x28]
 	add	r0, r0, #0x37
 	lsl	r0, r0, #0x10
 	lsr	r7, r0, #0x10
-	b	.L490
-.L489:
-	ldrh	r7, [r1, #0x28]
+	b	.L491
 .L490:
-	ldr	r0, .L499
+	ldrh	r7, [r1, #0x28]
+.L491:
+	ldr	r0, .L500
 	ldr	r0, [r0]
 	ldrh	r4, [r0, #0x2a]
 	lsl	r0, r7, #0x10
-	asr	r0, r0, #0x10
-	cmp	r0, #0
-	bge	.L491	@cond_branch
-	add	r0, r0, #0x7
-.L491:
-	lsl	r0, r0, #0xd
-	lsr	r7, r0, #0x10
-	lsl	r0, r4, #0x10
 	asr	r0, r0, #0x10
 	cmp	r0, #0
 	bge	.L492	@cond_branch
 	add	r0, r0, #0x7
 .L492:
 	lsl	r0, r0, #0xd
+	lsr	r7, r0, #0x10
+	lsl	r0, r4, #0x10
+	asr	r0, r0, #0x10
+	cmp	r0, #0
+	bge	.L493	@cond_branch
+	add	r0, r0, #0x7
+.L493:
+	lsl	r0, r0, #0xd
 	lsr	r4, r0, #0x10
-.L486:
-	ldr	r0, .L499+0x4
+.L487:
+	ldr	r0, .L500+0x4
 	bl	LoadCompressedSpriteSheet
 	mov	r1, sp
-	ldr	r0, .L499+0x8
+	ldr	r0, .L500+0x8
 	ldmia	r0!, {r2, r3, r6}
 	stmia	r1!, {r2, r3, r6}
 	ldmia	r0!, {r2, r3, r6}
 	stmia	r1!, {r2, r3, r6}
 	mov	r1, sp
-	ldr	r0, .L499+0xc
+	ldr	r0, .L500+0xc
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x8]
 	add	r0, r0, #0x4
 	strh	r0, [r1, #0x2]
 	cmp	r5, #0
-	beq	.L493	@cond_branch
+	beq	.L494	@cond_branch
 	lsl	r1, r7, #0x10
 	asr	r1, r1, #0x10
 	lsl	r2, r4, #0x10
-	b	.L496
-.L500:
+	b	.L497
+.L501:
 	.align	2, 0
-.L499:
+.L500:
 	.word	gSaveBlock1Ptr
 	.word	sHeadsSpriteSheet
 	.word	sSpriteTemplate_Head
 	.word	gSaveBlock2Ptr
-.L493:
+.L494:
 	lsl	r1, r7, #0x13
 	lsl	r2, r4, #0x13
 	mov	r0, #0xa0
@@ -5611,19 +5607,19 @@ InitFrontierMapSprites:
 	mov	r3, #0x90
 	lsl	r3, r3, #0xe
 	add	r2, r2, r3
-.L496:
+.L497:
 	asr	r2, r2, #0x10
 	mov	r0, sp
 	mov	r3, #0x0
 	bl	CreateSprite
 	lsl	r0, r0, #0x18
 	lsr	r3, r0, #0x18
-	ldr	r4, .L501
+	ldr	r4, .L502
 	ldr	r2, [r4]
 	lsl	r1, r3, #0x4
 	add	r1, r1, r3
 	lsl	r1, r1, #0x2
-	ldr	r0, .L501+0x4
+	ldr	r0, .L502+0x4
 	add	r1, r1, r0
 	str	r1, [r2, #0x8]
 	ldrb	r2, [r1, #0x5]
@@ -5631,16 +5627,16 @@ InitFrontierMapSprites:
 	neg	r0, r0
 	and	r0, r0, r2
 	strb	r0, [r1, #0x5]
-	ldr	r0, .L501+0x8
+	ldr	r0, .L502+0x8
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x8]
 	cmp	r0, #0
-	beq	.L480	@cond_branch
+	beq	.L481	@cond_branch
 	ldr	r0, [r4]
 	ldr	r0, [r0, #0x8]
 	mov	r1, #0x1
 	bl	StartSpriteAnim
-.L480:
+.L481:
 	add	sp, sp, #0x18
 	pop	{r3, r4}
 	mov	r8, r3
@@ -5648,9 +5644,9 @@ InitFrontierMapSprites:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-.L502:
+.L503:
 	.align	2, 0
-.L501:
+.L502:
 	.word	sMapData
 	.word	gSprites
 	.word	gSaveBlock2Ptr
@@ -5663,7 +5659,7 @@ PrintOnFrontierMap:
 	push	{r4, r5, r6, lr}
 	add	sp, sp, #-0xc
 	mov	r4, #0x0
-.L507:
+.L508:
 	add	r0, r4, #0
 	bl	PutWindowTilemap
 	add	r0, r4, #0
@@ -5673,21 +5669,21 @@ PrintOnFrontierMap:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x2
-	bls	.L507	@cond_branch
+	bls	.L508	@cond_branch
 	mov	r4, #0x0
 	mov	r6, #0x0
-	ldr	r5, .L521
-.L512:
-	ldr	r0, .L521+0x4
+	ldr	r5, .L522
+.L513:
+	ldr	r0, .L522+0x4
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x10]
 	cmp	r4, r0
-	bne	.L513	@cond_branch
+	bne	.L514	@cond_branch
 	lsl	r1, r4, #0x4
 	add	r3, r1, #0x1
 	lsl	r3, r3, #0x18
 	lsr	r3, r3, #0x18
-	ldr	r0, .L521+0x8
+	ldr	r0, .L522+0x8
 	str	r0, [sp]
 	str	r6, [sp, #0x4]
 	add	r1, r1, r5
@@ -5697,19 +5693,19 @@ PrintOnFrontierMap:
 	mov	r1, #0x7
 	mov	r2, #0x4
 	bl	AddTextPrinterParameterized3
-	b	.L511
-.L522:
+	b	.L512
+.L523:
 	.align	2, 0
-.L521:
+.L522:
 	.word	sMapLandmarks
 	.word	sMapData
 	.word	sTextColors+0x6
-.L513:
+.L514:
 	lsl	r1, r4, #0x4
 	add	r3, r1, #0x1
 	lsl	r3, r3, #0x18
 	lsr	r3, r3, #0x18
-	ldr	r0, .L523
+	ldr	r0, .L524
 	str	r0, [sp]
 	str	r6, [sp, #0x4]
 	add	r1, r1, r5
@@ -5719,18 +5715,18 @@ PrintOnFrontierMap:
 	mov	r1, #0x7
 	mov	r2, #0x4
 	bl	AddTextPrinterParameterized3
-.L511:
+.L512:
 	add	r0, r4, #0x1
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x6
-	bls	.L512	@cond_branch
-	ldr	r0, .L523+0x4
+	bls	.L513	@cond_branch
+	ldr	r0, .L524+0x4
 	str	r0, [sp]
 	mov	r0, #0x0
 	str	r0, [sp, #0x4]
-	ldr	r1, .L523+0x8
-	ldr	r0, .L523+0xc
+	ldr	r1, .L524+0x8
+	ldr	r0, .L524+0xc
 	ldr	r0, [r0]
 	ldrb	r0, [r0, #0x10]
 	lsl	r0, r0, #0x4
@@ -5744,7 +5740,7 @@ PrintOnFrontierMap:
 	mov	r3, #0x0
 	bl	AddTextPrinterParameterized3
 	mov	r4, #0x0
-.L519:
+.L520:
 	add	r0, r4, #0
 	mov	r1, #0x3
 	bl	CopyWindowToVram
@@ -5752,16 +5748,16 @@ PrintOnFrontierMap:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x2
-	bls	.L519	@cond_branch
+	bls	.L520	@cond_branch
 	mov	r0, #0x0
 	bl	CopyBgTilemapBufferToVram
 	add	sp, sp, #0xc
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L524:
+.L525:
 	.align	2, 0
-.L523:
+.L524:
 	.word	sTextColors+0x3
 	.word	sTextColors
 	.word	sMapLandmarks
@@ -5778,22 +5774,22 @@ HandleFrontierMapCursorMove:
 	add	sp, sp, #-0xc
 	lsl	r0, r0, #0x18
 	cmp	r0, #0
-	beq	.L526	@cond_branch
-	ldr	r0, .L534
+	beq	.L527	@cond_branch
+	ldr	r0, .L535
 	ldr	r4, [r0]
 	ldrb	r5, [r4, #0x10]
 	add	r0, r5, #0x6
-	b	.L533
-.L535:
+	b	.L534
+.L536:
 	.align	2, 0
-.L534:
+.L535:
 	.word	sMapData
-.L526:
-	ldr	r0, .L536
+.L527:
+	ldr	r0, .L537
 	ldr	r4, [r0]
 	ldrb	r5, [r4, #0x10]
 	add	r0, r5, #0x1
-.L533:
+.L534:
 	mov	r1, #0x7
 	bl	__modsi3
 	strb	r0, [r4, #0x10]
@@ -5801,12 +5797,12 @@ HandleFrontierMapCursorMove:
 	add	r3, r0, #0x1
 	lsl	r3, r3, #0x18
 	lsr	r3, r3, #0x18
-	ldr	r6, .L536+0x4
+	ldr	r6, .L537+0x4
 	str	r6, [sp]
 	mov	r1, #0x0
 	mov	r8, r1
 	str	r1, [sp, #0x4]
-	ldr	r4, .L536+0x8
+	ldr	r4, .L537+0x8
 	add	r0, r0, r4
 	ldr	r0, [r0]
 	str	r0, [sp, #0x8]
@@ -5814,7 +5810,7 @@ HandleFrontierMapCursorMove:
 	mov	r1, #0x7
 	mov	r2, #0x4
 	bl	AddTextPrinterParameterized3
-	ldr	r5, .L536
+	ldr	r5, .L537
 	ldr	r1, [r5]
 	ldrb	r3, [r1, #0x10]
 	lsl	r3, r3, #0x4
@@ -5879,7 +5875,7 @@ HandleFrontierMapCursorMove:
 	mov	r3, #0x0
 	bl	AddTextPrinterParameterized3
 	mov	r4, #0x0
-.L531:
+.L532:
 	add	r0, r4, #0
 	mov	r1, #0x3
 	bl	CopyWindowToVram
@@ -5887,7 +5883,7 @@ HandleFrontierMapCursorMove:
 	lsl	r0, r0, #0x18
 	lsr	r4, r0, #0x18
 	cmp	r4, #0x2
-	bls	.L531	@cond_branch
+	bls	.L532	@cond_branch
 	mov	r0, #0x0
 	bl	CopyBgTilemapBufferToVram
 	mov	r0, #0x6c
@@ -5898,9 +5894,9 @@ HandleFrontierMapCursorMove:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-.L537:
+.L538:
 	.align	2, 0
-.L536:
+.L537:
 	.word	sMapData
 	.word	sTextColors+0x3
 	.word	sMapLandmarks

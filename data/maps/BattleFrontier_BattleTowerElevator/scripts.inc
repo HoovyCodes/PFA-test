@@ -58,27 +58,27 @@ BattleFrontier_BattleTowerElevator_EventScript_WarpToPartnerRoom:: @ 8241A7C
 	return
 
 BattleFrontier_BattleTowerElevator_Movement_AttendantEnter: @ 8241A86
-	walk_up
-	walk_right
+	walk_fast_up
+	walk_fast_right
 	face_down
 	step_end
 
 BattleFrontier_BattleTowerElevator_Movement_PlayerEnter: @ 8241A8A
-	walk_up
-	walk_up
+	walk_fast_up
+	walk_fast_up
 	face_down
 	step_end
 
 BattleFrontier_BattleTowerElevator_Movement_AttendantExit: @ 8241A8E
-	walk_down
-	walk_down
+	walk_fast_down
+	walk_fast_down
 	set_invisible
 	step_end
 
 BattleFrontier_BattleTowerElevator_Movement_PlayerExit: @ 8241A92
-	walk_right
-	walk_down
-	walk_down
+	walk_fast_right
+	walk_fast_down
+	walk_fast_down
 	step_end
 
 BattleFrontier_BattleTowerElevator_OnWarp: @ 8241A96

@@ -145,7 +145,7 @@ void MovePlayerOnBike(u8 direction, u16 newKeys, u16 heldKeys)
             gPlayerAvatar.flags += PLAYER_AVATAR_FLAG_MACH_BIKE;
             SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_MACH_BIKE);
         }
-        PlaySE(SE_BIKE_HOP);
+        PlaySE(SE_BIKE_BELL);
     }
 }
 
@@ -1072,7 +1072,7 @@ void Bike_HandleBumpySlopeJump(void)
 
 bool32 IsRunningDisallowed(u8 metatile)
 {
-    if (IsRunningDisallowedByMetatile(metatile) == TRUE)
+    if (/*!(gMapHeader.flags & MAP_ALLOW_RUNNING) || */IsRunningDisallowedByMetatile(metatile) == TRUE)
         return TRUE;
     else
         return FALSE;

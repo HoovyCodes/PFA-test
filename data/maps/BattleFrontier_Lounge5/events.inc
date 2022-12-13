@@ -9,8 +9,8 @@ BattleFrontier_Lounge5_ObjectEvents:
 	object_event 4, OBJ_EVENT_GFX_LITTLE_BOY, 0, 11, 7, 0, MOVEMENT_TYPE_LOOK_AROUND, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_Lounge5_EventScript_LittleBoy, 0
 
 BattleFrontier_Lounge5_MapWarps:
-	warp_def 1, 7, 0, 7, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
-	warp_def 2, 7, 0, 7, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
+	warp_def 1, 7, 0, 0, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
+	warp_def 2, 7, 0, 0, MAP_BATTLE_FRONTIER_OUTSIDE_EAST
 
 BattleFrontier_Lounge5_MapEvents::
 	map_events BattleFrontier_Lounge5_ObjectEvents, BattleFrontier_Lounge5_MapWarps, 0x0, 0x0

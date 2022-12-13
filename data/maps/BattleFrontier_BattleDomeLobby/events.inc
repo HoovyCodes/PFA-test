@@ -11,8 +11,8 @@ BattleFrontier_BattleDomeLobby_ObjectEvents:
 	object_event 6, OBJ_EVENT_GFX_TEALA, 0, 17, 10, 0, MOVEMENT_TYPE_FACE_DOWN, 1, 1, TRAINER_TYPE_NONE, 0, BattleFrontier_BattleDomeLobby_EventScript_DoublesAttendant, 0
 
 BattleFrontier_BattleDomeLobby_MapWarps:
-	warp_def 11, 16, 0, 1, MAP_BATTLE_FRONTIER_OUTSIDE_WEST
-	warp_def 12, 16, 0, 1, MAP_BATTLE_FRONTIER_OUTSIDE_WEST
+	warp_def 11, 16, 0, 0, MAP_BATTLE_FRONTIER_OUTSIDE_WEST
+	warp_def 12, 16, 0, 0, MAP_BATTLE_FRONTIER_OUTSIDE_WEST
 
 BattleFrontier_BattleDomeLobby_MapBGEvents:
 	bg_event 4, 10, 0, BG_EVENT_PLAYER_FACING_ANY, BattleFrontier_BattleDomeLobby_EventScript_ShowSinglesResults
